@@ -1,0 +1,147 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	padding: rem(23) rem(52);
+	line-height: 1;
+	// width: rem(220);
+	color: #fff;
+	background-color: $mainHighlightColor;
+	border-radius: rem(40);
+	border: rem(2) solid $mainHighlightColor;
+	font-weight: 500;
+	text-align: center;
+	transition: 0.3s all ease;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #AA9DFA;
+		}
+	}
+	&:focus {
+		background-color: #AA9DFA;
+		border-color: #4F28A5;
+		outline: none;
+	}
+	&:active {
+		background-color: #4F28A5;
+		// border-color: #4F28A5;
+	}
+	&:disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+		background-color: $mainAdditionalColor;
+	}
+	&._fw {
+		width: 100%;
+	}
+	&-standart {
+		padding: rem(10) rem(54);
+		font-size: rem(16);
+		// border-radius: rem(30);
+		color: #121723;
+		background-color: transparent;
+		border: rem(2) solid #121723;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #AA9DFA;
+				border-color: #AA9DFA;
+			}
+		}
+		&:focus {
+			color: #fff;
+			background-color: #AA9DFA;
+			border-color: #6D31EE;
+		}
+		&:active {
+			color: #fff;
+			background-color: #6D31EE;
+		}
+	}
+	&-violet {
+		padding: rem(10) rem(19);
+		color: #AA9DFA;
+		background-color: transparent;
+		border: 2px solid  #AA9DFA;
+		font-size: rem(16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #AA9DFA;
+			}
+		}
+		&:focus {
+			color: #fff;
+			background-color: #6D31EE;
+			border-color: #6D31EE;
+		}
+		&:active {
+			color: #fff;
+			background-color: #4F28A5;
+			border-color: #4F28A5;
+		}
+		@media (max-width:$tablet){
+			padding: rem(10) rem(18);
+		}
+	}
+	&-buy {
+		padding: rem(23) rem(11);
+		color: #F0D288;
+		background-color: transparent;
+		border: 2px solid #F0D288;
+		font-size: rem(20);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #121723;
+				background-color: #F0D288;
+				svg {
+					path {
+						&:first-child{
+							fill: #121723;
+						}
+						&:nth-child(2) {
+							fill: #F0D288;
+						}
+					}
+					
+				}
+			}
+		}
+		&:focus {
+			color: #121723;
+			background-color: #BB973E;
+			border-color: #F0D288;
+			svg {
+				path {
+					&:first-child{
+						
+						fill: #F0D288;
+					}
+					&:nth-child(2) {
+						fill: #121723;
+					}
+				}
+				
+			}
+		}
+		&:active {
+			color: #121723;
+			background-color: #BB973E;
+			border-color: #BB973E;
+			svg {
+				path {
+					&:first-child{
+						
+						fill: #121723;
+					}
+					&:nth-child(2) {
+						fill: #BB973E;
+					}
+				}
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+section.about
+	.about__container
+		.about-top
+			.about-top__content.about-content
+				h2.about-content__title О нас
+				span.about-content__text Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
+				p.about-content__desc Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся!:)
+			picture
+					source(srcset="@img/about/shape-2.svg", media="(max-width: 768px)")
+					source(srcset="@img/about/shape-1.svg", media="(max-width: 1024px)")
+					source(srcset="@img/about/shape.svg")
+					img(src="@img/about/shape.svg", alt="shape").about-top__img
+		ul.about-list
+			li.about-list__item.list-item 
+				.list-item__poster
+				.list-item__title Дмитрий Гутенберг
+				.list-item__text Эксперт (ну, почти) по всем вопросам (почти)
+			li.about-list__item.list-item 
+				.list-item__poster
+				.list-item__title Анна Васильева
+				.list-item__text Как я здесь оказалась? А главное — зачем?
+			li.about-list__item.list-item 
+				.list-item__poster
+				.list-item__title Пётр Дмитриевский
+				.list-item__text Господа! Внимание! Благодарю за внимание!
+			li.about-list__item.list-item 
+				.list-item__poster
+				.list-item__title Татьяна Флеганова
+				.list-item__text Одна я в пальто стою красивая, а вокруг…
+		form(method="post", action="/sendmail", data-dev).form-list
+			textarea#saysomething(name="saysomething", cols="30", rows="10", placeholder="Что скажете?", required).form-list__text
+			input(type="text", placeholder="Имя", required).form-list__name
+			.form-list__wrapper
+				input#email(type="email", name="email", placeholder="Email", data-required="email", data-error="Введен не верный E-mail", required).form-list__email
+			button.button.form-list__button(type="submit") Отправить
+			hr
+			.form-list__chx.chx
+				input#chx-1(type="checkbox", name="agree", checked).chx__input
+				label(for="chx-1").chx__label Согласен на обработку персональных данных
+

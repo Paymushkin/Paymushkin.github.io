@@ -1,0 +1,23 @@
+header.header
+	.header__container
+		.header__top
+			picture
+				source(srcset="@img/logo-1.svg", media="(max-width: 320px)")
+				source(srcset="@img/logo.svg")
+				img(src="@img/logo.svg", alt="w-wave logo").header__logo
+			nav.header__menu.menu-nav(data-da=".header__bottom, 1024.98, first")
+				ul.menu-nav.menu-nav__list
+					li.menu-nav__item
+						a(data-goto=".podcasts", data-goto-speed="1000").menu-nav__link Подкасты
+					li.menu-nav__item
+						a(data-goto=".shows", data-goto-speed="1000").menu-nav__link Передачи
+					li.menu-nav__item
+						a(data-goto=".guests", data-goto-speed="1000").menu-nav__link Гости
+					li.menu-nav__item
+						a(data-goto=".playlists", data-goto-speed="1000").menu-nav__link Плейлисты
+					li.menu-nav__item
+						a(data-goto=".about", data-goto-speed="1000").menu-nav__link О нас
+			svg(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg", tabindex="0").header__search
+				path(d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z", stroke="#6D31EE", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+				path(d="M21 21L16.65 16.65", stroke="#6D31EE", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+		.header__bottom
