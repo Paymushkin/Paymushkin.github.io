@@ -1242,7 +1242,7 @@ nav ul li a:active {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 3.75rem 3.6875rem;
-  background-image: url("/img/hero/hero-1.jpg");
+  background-image: url("../img/hero/hero-1.jpg");
 }
 .hero-list__item--2x2::after {
   content: "#мастеркласс";
@@ -1267,19 +1267,19 @@ nav ul li a:active {
 @media (max-width: 64.06125em) {
   .hero-list__item--2x2 {
     padding: 1.875rem;
-    background-image: url("/img/hero/hero-1-1024.jpg");
+    background-image: url("../img/hero/hero-1-1024.jpg");
   }
 }
 @media (max-width: 48.06125em) {
   .hero-list__item--2x2 {
-    background-image: url("/img/hero/hero-1-768.jpg");
+    background-image: url("../img/hero/hero-1-768.jpg");
   }
 }
 @media (max-width: 36.06125em) {
   .hero-list__item--2x2 {
     grid-column: 1/5;
     grid-row: 1/2;
-    background-image: url("/img/hero/hero-1-320.jpg");
+    background-image: url("../img/hero/hero-1-320.jpg");
   }
 }
 .hero-list__item--2x1 {
@@ -1350,16 +1350,16 @@ nav ul li a:active {
   flex: 1 1 auto;
   background-size: cover;
   background-position: center;
-  background-image: url("/img/hero/hero-2.jpg");
+  background-image: url("../img/hero/hero-2.jpg");
 }
 @media (max-width: 64.06125em) {
   .hero-list .item__bg {
-    background-image: url("/img/hero/hero-2-1024.jpg");
+    background-image: url("../img/hero/hero-2-1024.jpg");
   }
 }
 @media (max-width: 48.06125em) {
   .hero-list .item__bg {
-    background-image: url("/img/hero/hero-2-768.jpg");
+    background-image: url("../img/hero/hero-2-768.jpg");
   }
 }
 .hero-list .item__button {
@@ -1384,11 +1384,11 @@ nav ul li a:active {
   }
 }
 .hero-list .item--1x1 {
-  background-image: url("/img/hero/hero-3.jpg");
+  background-image: url("../img/hero/hero-3.jpg");
 }
 @media (max-width: 64.06125em) {
   .hero-list .item--1x1 {
-    background-image: url("/img/hero/hero-3-1024.jpg");
+    background-image: url("../img/hero/hero-3-1024.jpg");
   }
 }
 @media (max-width: 36.06125em) {
@@ -1403,11 +1403,11 @@ nav ul li a:active {
   }
 }
 .hero-list .item--1x1:last-child {
-  background-image: url("/img/hero/hero-4.jpg");
+  background-image: url("../img/hero/hero-4.jpg");
 }
 @media (max-width: 64.06125em) {
   .hero-list .item--1x1:last-child {
-    background-image: url("/img/hero/hero-4-1024.jpg");
+    background-image: url("../img/hero/hero-4-1024.jpg");
   }
 }
 
@@ -1561,13 +1561,13 @@ nav ul li a:active {
 }
 @media (max-width: 64.06125em) {
   .content-form__img {
-    background-image: url("/img/about/about-1-1024.png");
+    background-image: url("../img/about/about-1-1024.png");
     height: 20.75rem;
   }
 }
 @media (max-width: 48.06125em) {
   .content-form__img {
-    background-image: url("/img/about/about-1-768.png");
+    background-image: url("../img/about/about-1-768.png");
     height: 35.5625rem;
   }
 }
@@ -1576,7 +1576,7 @@ nav ul li a:active {
     flex: 0 1 auto;
     width: 100%;
     height: 17.375rem;
-    background-image: url("/img/about/about-1-320.png");
+    background-image: url("../img/about/about-1-320.png");
   }
 }
 .content-form__form {
@@ -1681,47 +1681,47 @@ nav ul li a:active {
   }
 }
 .list-item--1 .list-item__img {
-  background-image: url("/img/projects/item-1.png");
+  background-image: url("../img/projects/item-1.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--1 .list-item__img {
-    background-image: url("/img/projects/item-1-1024.png");
+    background-image: url("../img/projects/item-1-1024.png");
   }
 }
 @media (max-width: 36.06125em) {
   .list-item--1 .list-item__img {
-    background-image: url("/img/projects/item-1-320.png");
+    background-image: url("../img/projects/item-1-320.png");
   }
 }
 .list-item--2 .list-item__img {
-  background-image: url("/img/projects/item-2.png");
+  background-image: url("../img/projects/item-2.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--2 .list-item__img {
-    background-image: url("/img/projects/item-2-1024.png");
+    background-image: url("../img/projects/item-2-1024.png");
   }
 }
 @media (max-width: 36.06125em) {
   .list-item--2 .list-item__img {
-    background-image: url("/img/projects/item-2-320.png");
+    background-image: url("../img/projects/item-2-320.png");
   }
 }
 .list-item--3 .list-item__img {
-  background-image: url("/img/projects/item-3.png");
+  background-image: url("../img/projects/item-3.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--3 .list-item__img {
-    background-image: url("/img/projects/item-3-1024.png");
+    background-image: url("../img/projects/item-3-1024.png");
   }
 }
 @media (max-width: 48.06125em) {
   .list-item--3 .list-item__img {
-    background-image: url("/img/projects/item-3-768.png");
+    background-image: url("../img/projects/item-3-768.png");
   }
 }
 @media (max-width: 36.06125em) {
   .list-item--3 .list-item__img {
-    background-image: url("/img/projects/item-3-320.png");
+    background-image: url("../img/projects/item-3-320.png");
   }
 }
 @media (max-width: 64.06125em) {
@@ -1840,24 +1840,24 @@ nav ul li a:active {
   }
 }
 .list-item--4 .list-item__img {
-  background-image: url("/img/projects/item-4.png");
+  background-image: url("../img/projects/item-4.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--4 .list-item__img {
-    background-image: url("/img/projects/item-4-1024.png");
+    background-image: url("../img/projects/item-4-1024.png");
   }
 }
 @media (max-width: 48.06125em) {
   .list-item--4 .list-item__img {
-    background-image: url("/img/projects/item-4-768.png");
+    background-image: url("../img/projects/item-4-768.png");
   }
 }
 .list-item--5 .list-item__img {
-  background-image: url("/img/projects/item-5.png");
+  background-image: url("../img/projects/item-5.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--5 .list-item__img {
-    background-image: url("/img/projects/item-5-1024.png");
+    background-image: url("../img/projects/item-5-1024.png");
   }
 }
 .list-item--6, .list-item--7 {
@@ -1883,29 +1883,29 @@ nav ul li a:active {
   text-overflow: ellipsis;
 }
 .list-item--6 .list-item__img {
-  background-image: url("/img/projects/item-6.png");
+  background-image: url("../img/projects/item-6.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--6 .list-item__img {
-    background-image: url("/img/projects/item-6-1024.png");
+    background-image: url("../img/projects/item-6-1024.png");
   }
 }
 @media (max-width: 36.06125em) {
   .list-item--6 .list-item__img {
-    background-image: url("/img/projects/item-6-320.png");
+    background-image: url("../img/projects/item-6-320.png");
   }
 }
 .list-item--7 .list-item__img {
-  background-image: url("/img/projects/item-7.png");
+  background-image: url("../img/projects/item-7.png");
 }
 @media (max-width: 64.06125em) {
   .list-item--7 .list-item__img {
-    background-image: url("/img/projects/item-7-1024.png");
+    background-image: url("../img/projects/item-7-1024.png");
   }
 }
 @media (max-width: 36.06125em) {
   .list-item--7 .list-item__img {
-    background-image: url("/img/projects/item-7-320.png");
+    background-image: url("../img/projects/item-7-320.png");
   }
 }
 .list-item__label {
@@ -2017,11 +2017,11 @@ nav ul li a:active {
   }
   .list-item--4 .list-item__img {
     aspect-ratio: 278/422;
-    background-image: url("/img/projects/item-4-320.png");
+    background-image: url("../img/projects/item-4-320.png");
   }
   .list-item--5 .list-item__img {
     aspect-ratio: 278/422;
-    background-image: url("/img/projects/item-5-320.png");
+    background-image: url("../img/projects/item-5-320.png");
   }
   .list-item--5 .list-item__text {
     margin-bottom: 1.375rem;
