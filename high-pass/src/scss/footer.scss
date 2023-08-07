@@ -1,0 +1,119 @@
+.footer {
+	background-color: $mainColor;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding-top: rem(24);
+		padding-bottom: rem(25);
+		gap: rem(20);
+		@media (max-width:$mobile){
+			padding: rem(24) rem(27) rem(25); 
+		}
+		@media (max-width:$mobileSmall){
+			flex-direction: column-reverse;
+			padding: 0;
+			gap: 0;
+		}
+	}
+	&-left {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 auto;
+		@media (max-width:$tablet){
+			margin-top: rem(1	);
+		}
+		@media (max-width:$mobileSmall){
+			padding: rem(14) 0;
+			align-items: center;
+			background-color: $darkColor-1;
+			.header__logo {
+				margin-right: 0;
+				height: rem(18);
+			}
+		}
+		&__logo {
+			margin-top: rem(2);
+			margin-bottom: rem(8);
+			@media (max-width:$tablet){
+				margin-top: rem(5);
+			}
+			@media (max-width:$mobileSmall){
+				 display: flex; 
+				 justify-content: center;
+				 margin: 0 0 rem(5);
+			}
+		}
+		&__text {
+			color: $lightColor-1;
+			font-size: rem(14);
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(2);
+				font-size: rem(10); 
+			}
+		}
+	}
+	&-center {
+		display: flex;
+		margin-right: rem(138);
+		
+		@media (max-width:$tablet){
+			flex: 1 1 auto;
+			justify-content: flex-end;
+			margin-right: rem(58);
+		}
+		&__text {
+			max-width: rem(600);
+			color: $lightColor-2;
+			font-family: "Roboto";
+			line-height: math.div(22, 16);
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
+	}
+	&-right {
+		flex: 0 0 auto;
+		@media (max-width:$mobileSmall){
+			padding: rem(31) rem(10) rem(29); 
+		}
+		&__text {
+			margin-bottom: rem(8);
+			color: $lightColor-2;
+			font-family: "Roboto";
+			line-height: math.div(22, 16);
+			@media (max-width:$mobileSmall){
+				 text-align: center; 
+			}
+		}
+		&__list {
+			display: flex;
+			justify-content: center;
+			gap: rem(20);
+		}
+		&__item {
+			a {
+				outline: none;
+				&:focus {
+					svg path {
+						fill: $focusColor
+					}
+				}
+				&:active {
+					svg path {
+						fill: $activeColor
+					}
+				}
+			}
+			svg path {
+				transition: fill 0.3s ease;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					svg path {
+						fill: $highlightColor;
+					}
+				}
+			}
+		}
+	}
+}

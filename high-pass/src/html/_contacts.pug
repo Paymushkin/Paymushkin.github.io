@@ -1,0 +1,27 @@
+section.contacts#contacts
+	.contacts__container
+		h3.contacts__title Контакты
+		.contacts__content 
+			.contacts__map.map 
+				.map__inner#map
+				.map__info
+					button.map__close
+						svg(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 20 20' fill='none')
+							circle(cx='10' cy='10' r='10' fill='#999999')
+							rect(x='6.20715' y='5.5' width='12' height='1' transform='rotate(45 6.20715 5.5)' fill='white')
+							rect(x='5.59143' y='13.9854' width='12' height='1' transform='rotate(-45 5.59143 13.9854)' fill='white')
+					.map-info 
+						.map-info__title Студия «High pass»
+						address.map-info__address 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+							a(href="tel:+749542423532").map-info__tel
+								svg(width='22' height='22' viewbox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M18.3425 14.0983C17.215 14.0983 16.1242 13.915 15.1067 13.585C14.7858 13.475 14.4283 13.5575 14.1808 13.805L12.7417 15.6108C10.1475 14.3733 7.71833 12.0358 6.42583 9.35L8.21333 7.82833C8.46083 7.57167 8.53417 7.21417 8.43333 6.89333C8.09417 5.87583 7.92 4.785 7.92 3.6575C7.92 3.1625 7.5075 2.75 7.0125 2.75H3.84083C3.34583 2.75 2.75 2.97 2.75 3.6575C2.75 12.1733 9.83583 19.25 18.3425 19.25C18.9933 19.25 19.25 18.6725 19.25 18.1683V15.0058C19.25 14.5108 18.8375 14.0983 18.3425 14.0983Z' fill='#FF6E30')
+								| +7 495 424-23-532
+			.contacts__application
+				form.application-form
+					h3.application-form__title Оставить заявку
+					p.application-form__desc Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+					input(autocomplete="off",type="text",placeholder="Имя").input.application-form__input
+					input(autocomplete="on",type="email",placeholder="Email").input.application-form__input
+					textarea(cols="20", rows="10", placeholder="Комментарии").application-form__text
+					button.button.application-form__button(type="submit") Отправить

@@ -1,0 +1,36 @@
+div(aria-hidden="true")#login.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close._icon-close
+			.body 
+
+					.login-wrapper
+						h3 Log In with
+						ul
+							li
+								a(href="auth/facebook")
+									img(src="https://cdn.meyou.id/landing/fb-black.svg?_v=20230308150414" alt="")
+									span Facebook
+							li
+								a(href="auth/google")
+									img(src="https://cdn.meyou.id/landing/google-black.svg?_v=20230308150414" alt="")
+									span Google
+							li
+								a(href="auth/linkedin")
+									img(src="https://cdn.meyou.id/landing/linkedin-black.svg?_v=20230308150414" alt="")
+									span LinkedIn
+						.login-line
+							span or with
+						ul.extra-login
+							li
+								a(href="auth/apple")
+									img(src="https://cdn.meyou.id/landing/apple-white.svg?_v=20230308150414" alt="")
+							li
+								a(href="auth/vk")
+									img(src="https://cdn.meyou.id/landing/vk-white.svg?_v=20230308150414" alt="")
+							li
+								a(href="auth/yandex")
+									img(src="https://cdn.meyou.id/landing/yandex-white.svg?_v=20230308150414" alt="")
+						p.policy 
+							| We do not publish anything on social networks, we do not collect phone numbers or emails. By logging in, you agree to
+						a.terms(href="/terms") terms of service and security policy

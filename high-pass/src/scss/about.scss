@@ -1,0 +1,152 @@
+.about {
+	background-color: $mainColor;
+	&__container {
+		padding-top: rem(30);
+		padding-bottom: rem(70);
+		@media (max-width:$tablet){
+			padding-bottom: rem(82);
+		}
+		@media (max-width:$mobile){
+			padding: rem(30) rem(27) rem(62); 
+		}
+		@media (max-width:$mobileSmall){
+			padding: rem(32) rem(21) rem(60);
+		}
+	}
+	&__title {
+		margin: rem(4) 0 rem(8);
+		color: $textColor;
+		font-size: rem(24);
+		font-weight: 700;
+		@media (max-width:$mobileSmall){
+			margin-bottom: rem(6);
+			font-size: rem(18);
+		}
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: rem(30);
+		@media (max-width:$mobileSmall){
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
+			row-gap: rem(25);
+		}
+	}
+}
+
+.about {
+	&-content {
+		&__text {
+			color: $lightColor-2;
+			line-height: 1.75;
+			font-family: "Roboto";
+			@media (max-width:$mobileSmall){
+				font-size: rem(14);
+				line-height: math.div(25, 14);
+			}
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+			gap: rem(25);
+			margin-top: -2px;
+			@media (max-width:$tablet){
+				margin-top: rem(-3);
+				gap: rem(24);
+			}
+			@media (max-width:$mobileSmall){
+				 gap: rem(30); 
+			}
+			.form {
+				width: 100%;
+				&__title {
+					margin-bottom: rem(16);
+					color: $textColor;
+					font-size: rem(24);
+					line-height: math.div(22, 24);
+					@media (max-width:$mobileSmall){
+						margin-bottom: rem(17);
+						font-size: rem(18);
+						line-height: math.div(18, 22);
+					}
+				}
+				&__wrapper {
+					display: flex;
+					flex-wrap: wrap;
+					gap: rem(30);
+					@media (any-hover: hover){
+						&:hover{
+							input::placeholder {
+								color: $highlightColor;
+							}
+						}
+					}
+					@media (max-width:$tablet){
+						gap: rem(21);
+					}
+					@media (max-width:$mobileSmall){
+						gap: rem(20);
+					}
+				}
+				&__input {
+					flex: 1 1 auto;
+					padding: rem(15) rem(23);
+					color: $textColor;
+					background-color: $darkColor-1;
+					font-family: "Roboto";
+					border-radius: 0;
+					outline: rem(1) solid transparent;
+					transition: outline-color 0.3s ease;
+					&::placeholder {
+						color: $lightColor-2;
+						transition: color 0.3s ease;
+					}
+					&:focus {
+						outline-color: $highlightColor;
+					}
+					@media (max-width:$tablet){
+						flex: 0 1 rem(342);
+						// width: rem(342);
+						max-width: 100%;
+					}
+					@media (max-width:$mobileSmall){
+						padding: rem(12) rem(23) rem(11);
+						font-size: rem(14);
+					}
+				}
+				&__button {
+	
+				}
+			}
+		}
+	}
+}
+
+.content-form {
+	&__img {
+		flex: 0 1 auto;
+		min-height: rem(255);
+		background-image: url("../img/about/about-1.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		@media (max-width:$tablet){
+			background-image: url("/img/about/about-1-1024.png");
+			height: rem(332);
+		}
+		@media (max-width:$mobile){
+			background-image: url("/img/about/about-1-768.png");
+			height: rem(569);
+		}
+		@media (max-width:$mobileSmall){
+			flex: 0 1 auto;
+			width: 100%;
+			height: rem(278);
+			background-image: url("/img/about/about-1-320.png");
+		}
+	}
+	&__form {
+		flex: 0 0 auto;
+	}
+}

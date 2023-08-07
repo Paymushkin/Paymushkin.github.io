@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body 
+		.wrapper
+			include html/_header
+			main.main-content
+				include html/_hero
+				include html/_about
+				include html/_projects
+				include html/_contacts
+			include html/_footer
+		//- яндекс карты
+		script(src="https://api-maps.yandex.ru/2.1/?apikey=97da097a-d3ca-4bb5-a48b-9341fd3d4b00&lang=ru_RU")
+		script(src="js/app.min.js")
+	

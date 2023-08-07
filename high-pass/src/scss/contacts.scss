@@ -1,0 +1,320 @@
+.contacts {
+	&__container {
+		padding-bottom: rem(68);
+		@media (max-width:$tablet){
+			padding-bottom: rem(68);
+		}
+		@media (max-width:$mobile){
+			padding: rem(0) rem(27) rem(68); 
+		}
+		@media (max-width:$mobileSmall){
+			padding: 0 0 rem(50);
+		}
+	}
+	&__title {
+		margin-bottom: rem(15);
+		color: $mainColor;
+		font-size: rem(24);
+		line-height: math.div(31, 24);
+		font-weight: 700;
+		@media (max-width:$mobile){
+			margin-bottom: rem(22); 
+		}
+		@media (max-width:$mobileSmall){
+			margin-bottom: rem(14);
+			padding: 0 rem(21); 
+			font-size: rem(18);
+		}
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr rem(410);
+		column-gap: rem(30);
+		@media (max-width:$tablet){
+			grid-template-columns: 1fr rem(342);  
+		}
+		@media (max-width:$mobile){
+			grid-template-columns: 1fr;
+			grid-template-rows: rem(460) 1fr;
+			row-gap: rem(24);
+		}
+		@media (max-width:$mobileSmall){
+			grid-template-rows: rem(472) 1fr;  
+		}
+	}
+}
+.map {
+	position: relative;
+	margin-top: rem(6);
+	overflow: hidden;
+	max-height: calc(100% - rem(7));
+	@media (max-width:$tablet){
+		margin-top: rem(8);
+	}
+	@media (max-width:$mobile){
+		margin-top: 0;
+		max-height: unset; 
+	}
+	&__inner {
+		width: 100%;
+		height: 100%;
+		filter: grayscale(1);
+	}
+	&__info {
+		display: grid;
+		place-items: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		padding: rem(25) rem(30);
+		min-width: percent(410, 850);
+		background: rgba(32, 32, 32, 0.85);
+		@media (max-width:$tablet){
+			top: unset;
+			right: 0;
+			width: 100%;
+			padding: rem(15) rem(20);
+			place-items: unset;
+		}
+		@media (max-width:$mobile){
+			padding: rem(24) rem(30) rem(21);
+		}
+		@media (max-width:$mobileSmall){
+			padding: rem(26) rem(19) rem(12);
+		}
+	}
+	&__close {
+		position: absolute;
+		top: rem(20);
+		right: rem(20);
+		background-color: transparent;
+		outline: none;
+		svg circle {
+			transition: fill 0.3s ease;
+		}
+		&:hover{
+			svg circle {
+				fill: $highlightColor;
+				background-color: transparent;
+			}
+		}
+		&:focus {
+			color: $focusColor;
+			svg circle {
+				fill: $focusColor;
+			}
+		}
+		&:active {
+			color: $activeColor;
+			svg circle {
+				fill: $activeColor;
+			}
+		}
+	}
+	&-info {
+		display: flex;
+		flex-direction: column;
+		padding-left: rem(29);
+		@media (max-width:$tablet){
+			padding-left: rem(10);
+			flex-wrap: wrap;
+		}
+		@media (max-width:$mobile){
+			 padding-left: 0; 
+		}
+		// justify-content: center;
+		// align-items: center;
+		&__title {
+			margin-top: rem(25);
+			margin-bottom: rem(5);
+			color: $textColor;
+			font-size: rem(24);
+			@media (max-width:$tablet){
+				margin-top: rem(10);
+				margin-bottom: rem(4);
+			}
+			@media (max-width:$mobile){
+				margin-top: rem(0);
+				margin-bottom: rem(5);
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(10);
+				font-size: rem(18);
+				line-height: math.div(22, 18); 
+			}
+		}
+		&__address {
+			margin-bottom: rem(3);
+			width: rem(320);
+			max-width: calc(100% - rem(20));
+			color: $lightColor-2;
+			font-family: "Roboto";
+			line-height: math.div(28, 16);
+			font-style: normal;
+			@media (max-width:$mobile){
+				width: rem(436);
+				line-height: 1.76;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(0);
+				width: rem(285);
+				font-size: rem(14);
+				line-height: math.div(18, 14); 
+			}
+		}
+		&__tel {
+			display: flex;
+			margin-top: rem(2);
+			align-items: center;
+			color: $highlightColor;
+			font-family: "TT Firs Neue";
+			line-height: math.div(21, 16);
+			outline: none;
+			transition: color 0.3s ease;
+			@media (any-hover: hover){
+				&:hover{
+					color: $activeColor;
+					svg path {
+						fill: $activeColor;
+					}
+				}
+			}
+			svg path {
+				transition: fill 0.3s ease;
+			}
+			&:focus {
+				color: $focusColor;
+				svg path {
+					fill: $focusColor;
+				}
+			}
+			&:active {
+				color: $activeColor;
+				svg path {
+					fill: $activeColor;
+				}
+			}
+			@media (max-width:$tablet) and (min-width:$mobile) {
+				display: inline-flex;
+				margin-top: rem(0);
+				margin-left: rem(11);
+				align-items: baseline;
+				svg {
+					transform: translateY(5px);
+				}
+			}
+			@media (max-width:$mobile){
+				 margin-top: rem(1); 
+			}
+			@media (max-width:$mobileSmall){
+				line-height: math.div(18, 14);
+				margin-top: rem(10);
+			}
+		}
+	}
+}
+.application {
+	&-form {	
+		@media (max-width:$mobile){
+			width: rem(466);
+			max-width: 100%;
+		}
+		@media (max-width:$mobileSmall){
+			padding: 0 rem(21);
+			width: 100%;
+		}
+		&__title {
+			margin-bottom: rem(4);
+			color: $mainColor;
+			font-size: rem(24);
+			font-weight: normal;
+			@media (max-width:$mobile){
+				  font-weight: normal;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(11);
+				font-size: rem(18);
+			}
+		}
+		&__desc {
+			margin-bottom: rem(13);
+			color: $lightColor-3;
+			font-family: "Roboto";
+			// font-size: rem(16);
+			line-height: math.div(22, 16);
+			@media (max-width:$tablet){
+				margin-bottom: rem(12);
+			}
+			@media (max-width:$mobile){
+				 margin-bottom: rem(13); 
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(15);
+				font-size: rem(14);
+				line-height: math.div(18, 14);
+			}
+		}
+		&__input {
+			margin-bottom: rem(19.360);
+			padding: rem(15) rem(23);
+			color: $mainColor;
+			background-color: $lightColor-1;
+			font-family: "Roboto";
+			outline: rem(1) solid transparent;
+			&::placeholder {
+				color: $lightColor-3;
+				transition: color 0.3s ease;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					&::placeholder {
+						color: $highlightColor;
+					}
+				}
+			}
+			&:focus {
+				outline-color: $highlightColor;
+			}
+			@media (max-width:$mobileSmall){
+				padding: rem(11) rem(23) rem(10);
+				font-size: rem(14); 
+			}
+		}
+		&__text {
+			margin-bottom: rem(20);
+			padding: rem(15) rem(23);
+			height: rem(150);
+			width: 100%;
+			color: $mainColor;
+			background-color: $lightColor-1;
+			border-radius: 0;
+			font-family: "Roboto";
+			outline: rem(1) solid transparent;
+			transition: color 0.3s ease;
+			&::placeholder {
+				color: $lightColor-3;
+				transition: color 0.3s ease;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					color: $highlightColor;
+					&::placeholder {
+						color: $highlightColor;
+					}
+				}
+			}
+			&:focus {
+				outline-color: $highlightColor;
+			}
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(21);
+				padding: rem(12) rem(23);
+				font-size: rem(14); 
+			}
+		}
+		&__button {
+
+		}
+	}
+}
