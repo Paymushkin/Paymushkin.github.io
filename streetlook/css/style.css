@@ -577,7 +577,7 @@ h1, h2, h3, h4, p, span, small, button, a, div {
   padding: 0;
 }
 .hero__slide {
-  min-height: calc(100vh - 4.25rem);
+  min-height: calc(100vh - 4.6875rem);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
