@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>High Pass</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body> 
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container">
+          <nav class="header__nav">
+            <ul>
+              <li class="menu" id="menu"><span></span><span></span><span></span></li>
+              <li><a href="" data-goto="#about">В магазин</a></li>
+              <li><a href="" data-goto="#projects">Доставка и оплата</a></li>
+              <li><a href="#" data-goto="#services">Контакты</a></li>
+              <li><a href="#" data-popup="#classes">О нас</a></li>
+            </ul>
+          </nav>
+          <div class="header__logo"><img src="img/header/logo.svg" alt="logo"/></div>
+          <div class="header__btns">
+            <ul>
+              <li> 
+                <button class="btn-lang" id="lang"> <span id="current-lang">RU </span><img src="img/header/arrow-down.svg" alt="lang"/>
+                  <ul class="lang-list">
+                    <li> <a href="/?lang=EN">EN</a></li>
+                    <li> <a href="/?lang=RU">RU </a></li>
+                    <li> <a href="/?lang=ES">ES</a></li>
+                  </ul>
+                </button>
+              </li>
+              <li class="btn-search" id="search">
+                <button><img src="img/header/search.svg" alt="search"/></button>
+              </li>
+              <li class="btn-close" id="close">
+                <button><img src="img/header/close.svg" alt="close"/></button>
+              </li>
+              <li><a href="/account"><img src="img/header/account.svg" alt="account"/></a></li>
+              <li><a href="/cart"><img src="img/header/cart.svg" alt="cart"/></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__menu">
+          <ul> 
+            <li> <a href="/all">Весь каталог</a></li>
+            <li> <a href="/new">Новинки</a></li>
+            <li> <a href="/bestsellers">Бестселлеры</a></li>
+            <li> <a href="/sets">Сеты</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/Outerwear">Верхняя одежда</a></li>
+            <li> <a href="/jackets">Жакеты / пиджаки</a></li>
+            <li> <a href="/shirts">Рубашки</a></li>
+            <li> <a href="/t-shirts">Футболки</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/pants">Брюки</a></li>
+            <li> <a href="/jeans">Джинсы</a></li>
+            <li> <a href="/dress">Платья</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/shoes">Обувь</a></li>
+            <li> <a href="/accessories">Аксессуары</a></li>
+          </ul>
+        </div>
+        <div class="header__search search">
+          <input class="input" autocomplete="off" type="text" placeholder="Поиск"/><span class="search__text">Возможно, вы ищете</span>
+          <ul class="search__hints">
+            <li>Брюки</li>
+            <li>Брюки</li>
+            <li>Брюки</li>
+            <li>Брюки</li>
+          </ul>
+        </div>
+      </header>
+      <main class="main-content">
+        <section class="hero"> 
+          <div class="hero__container">
+            <div class="hero__slider swiper">
+              <div class="hero__wrapper swiper-wrapper">
+                <div class="hero__slide slide swiper-slide" style="background-image: url(../img/hero/hero-1.png)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(../img/hero/hero-2.png)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(../img/hero/hero-3.png)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(../img/hero/hero-4.png)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
