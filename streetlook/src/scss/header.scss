@@ -1,6 +1,6 @@
 .header {
 	width: 100%;
-	max-height: rem(68);
+	min-height: rem(68);
 	background-color: $bgColor;
 
 	&__container {
