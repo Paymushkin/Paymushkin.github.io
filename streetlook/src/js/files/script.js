@@ -34,5 +34,5 @@ currentLang.textContent = siteLang || "RU";
 document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		loader.remove()
-	}, 500);
+	}, 2500);
 })
