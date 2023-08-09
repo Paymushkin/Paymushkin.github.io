@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>StreeLook</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="loader__spinner">
+        <div class="loader__icon">
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container">
+          <nav class="header__nav">
+            <ul>
+              <li class="menu" id="menu"><span></span><span></span><span></span></li>
+              <li><a href="" data-goto="#about">В магазин</a></li>
+              <li><a href="" data-goto="#projects">Доставка и оплата</a></li>
+              <li><a href="#" data-goto="#services">Контакты</a></li>
+              <li><a href="#" data-popup="#classes">О нас</a></li>
+            </ul>
+          </nav>
+          <div class="header__logo"><span>쇼룸</span><span>STREETLOOK</span></div>
+          <div class="header__btns">
+            <ul>
+              <li> 
+                <button class="btn-lang" id="lang"> <span id="current-lang">RU </span><img src="img/header/arrow-down.svg" alt="lang"/>
+                  <ul class="lang-list">
+                    <li> <a href="?lang=EN">EN</a></li>
+                    <li> <a href="?lang=RU">RU </a></li>
+                    <li> <a href="?lang=ES">ES</a></li>
+                  </ul>
+                </button>
+              </li>
+              <li class="btn-search" id="search">
+                <button><img src="img/header/search.svg" alt="search"/></button>
+              </li>
+              <li class="btn-close" id="close">
+                <button><img src="img/header/close.svg" alt="close"/></button>
+              </li>
+              <li><a href="/account"><img src="img/header/account.svg" alt="account"/></a></li>
+              <li><a href="/cart"><img src="img/header/cart.svg" alt="cart"/></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__menu">
+          <ul> 
+            <li> <a href="/all">Весь каталог</a></li>
+            <li> <a href="/new">Новинки</a></li>
+            <li> <a href="/bestsellers">Бестселлеры</a></li>
+            <li> <a href="/sets">Сеты</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/Outerwear">Верхняя одежда</a></li>
+            <li> <a href="/jackets">Жакеты / пиджаки</a></li>
+            <li> <a href="/shirts">Рубашки</a></li>
+            <li> <a href="/t-shirts">Футболки</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/pants">Брюки</a></li>
+            <li> <a href="/jeans">Джинсы</a></li>
+            <li> <a href="/dress">Платья</a></li>
+          </ul>
+          <ul> 
+            <li> <a href="/shoes">Обувь</a></li>
+            <li> <a href="/accessories">Аксессуары</a></li>
+          </ul>
+        </div>
+        <div class="header__search search">
+          <input class="input" autocomplete="off" type="text" placeholder="Поиск..."/><span class="search__text">Возможно, вы ищете</span>
+          <ul class="search__hints">
+            <li>Брюки</li>
+            <li>Брюки</li>
+            <li>Брюки</li>
+            <li>Брюки</li>
+          </ul>
+        </div>
+      </header>
+      <main class="main-content">
+        <section class="hero"> 
+          <div class="hero__container">
+            <div class="hero__slider swiper">
+              <div class="hero__wrapper swiper-wrapper">
+                <div class="hero__slide slide swiper-slide" style="background-image: url(img/hero/hero-1.webp)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(img/hero/hero-2.webp)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(img/hero/hero-3.webp)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="hero__slide slide swiper-slide" style="background-image: url(img/hero/hero-4.webp)"><span class="slide__decor">회사 소개</span>
+                  <h2 class="slide__title">Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="catalog"> 
+          <div class="catalog__container">
+            <h3 class="catalog__title">Новинки лета 2023</h3><span class="catalog__title-decor">참신함</span><a class="catalog__link" href="/new">Смотреть все ></a>
+            <ul class="catalog__list">
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-1.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-2.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-3.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-4.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-5.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+              <li class="catalog__list-item item-list"><a href="#">
+                  <article class="item-list__image-ibg item-list__ibg"><img src="img/catalog/item-6.webp" loading="lazy" alt="product"/></article>
+                  <div class="item-list__body item-body">
+                    <h4 class="item-body__text">Название товара</h4><span class="item-body__price">20 000₽</span>
+                  </div><span class="item-list__desc">цвет/размер</span></a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="offer"> 
+          <div class="offer__container">
+            <div class="offer__left">
+              <h3 class="offer__title">Покупки с нашим стилистом</h3><span class="offer__title-decor">참신함</span>
+            </div>
+            <div class="offer__right">
+              <p>Персональный стилист может преобразить ваш гардероб, экономя ваше время и усилия и помогая вам раскрыть вашу уникальную модную индивидуальность.</p><a class="button button-small" href="/consult">Получить консультацию ></a>
+            </div>
+          </div>
+        </section>
+        <section class="special"> 
+          <div class="special__container">
+            <div class="special__slider swiper">
+              <div class="special__wrapper swiper-wrapper">
+                <div class="special__slide slide swiper-slide" style="background-image: url(img/special/item-1.webp)">
+                  <h2 class="slide__title">Бестселлеры и рекомендации Streetlook для вас</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="special__slide slide swiper-slide" style="background-image: url(img/special/item-2.webp)">
+                  <h2 class="slide__title">Бестселлеры и рекомендации Streetlook для вас</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="special__slide slide swiper-slide" style="background-image: url(img/special/item-3.webp)">
+                  <h2 class="slide__title">Бестселлеры и рекомендации Streetlook для вас</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+                <div class="special__slide slide swiper-slide" style="background-image: url(img/special/item-4.webp)">
+                  <h2 class="slide__title">Бестселлеры и рекомендации Streetlook для вас</h2><a class="button slide__button" href="/catalog">Перейти в каталог</a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="about"> 
+          <div class="about__container"> 
+            <div class="about__body"> 
+              <h3 class="about__title">О нас</h3>
+              <p class="about__text">В нашем магазине мы воспеваем суть корейской уличной моды. Откройте для себя потрясающий ассортимент одежды, аксессуаров и обуви, в которых комфорт легко сочетается со смелыми, вызывающими образами.</p><a class="about__link" href="/about">Читать полностью  ></a>
+              <div class="about__decor">쇼룸</div>
+            </div>
+            <div class="about__img"><a class="about__image-ibg about__ibg" href=""><img src="img/about/item-1.webp" loading="lazy" alt=""/></a></div>
+          </div>
+        </section>
+        <section class="interests">
+          <div class="interests__container">
+            <form action="#" method=""> 
+              <div class="interests__left">
+                <h3 class="interests__title">Расскажите нам, что вам нравится</h3>
+                <div class="interests__btns">
+                  <input class="interests__bnt" id="cb-1" type="checkbox" name="cb-1" checked="checked"/>
+                  <label for="cb-1">Оверсайз</label>
+                  <input class="interests__bnt" id="cb-2" type="checkbox" name="cb-2" checked="checked"/>
+                  <label for="cb-2">Скинни</label>
+                  <input class="interests__bnt" id="cb-3" type="checkbox" name="cb-3" checked="checked"/>
+                  <label for="cb-3">Новинки</label>
+                  <input class="interests__bnt" id="cb-4" type="checkbox" name="cb-4"/>
+                  <label for="cb-4">Минимализм</label>
+                  <input class="interests__bnt" id="cb-5" type="checkbox" name="cb-5"/>
+                  <label for="cb-5">Яркие принты</label>
+                  <input class="interests__bnt" id="cb-6" type="checkbox" name="cb-6"/>
+                  <label for="cb-6">Деним</label>
+                  <input class="interests__bnt" id="cb-7" type="checkbox" name="cb-7" checked="checked"/>
+                  <label for="cb-7">Натуральные материалы</label>
+                  <input class="interests__bnt" id="cb-8" type="checkbox" name="cb-8" checked="checked"/>
+                  <label for="cb-8">Кожа</label>
+                  <input class="interests__bnt" id="cb-9" type="checkbox" name="cb-9" checked="checked"/>
+                  <label for="cb-9">Анималистичные принты</label>
+                  <input class="interests__bnt" id="cb-10" type="checkbox" name="cb-10"/>
+                  <label for="cb-10">Мини</label>
+                </div>
+              </div>
+              <div class="interests__right">
+                <div class="interests__text">Расскажите нам, что вам интересно, и мы подберем товары, которые вам понравятся, и будем оповещать о новинках.</div>
+                <button class="button button-small" type="submit">Запомнить ></button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"> 
+        <div class="footer__container"> 
+          <div class="footer-left">
+            <div class="footer-left__text">Наши коллекции сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.</div>
+            <div class="footer-left__copy"> <span>쇼룸 </span><span>© 2023 Streetlook</span></div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-right__menu footer-menu"> 
+              <h4 class="footer-menu__title">Меню</h4>
+              <ul>
+                <li><a href="/account">Личный кабинет</a></li>
+                <li><a href="/delivery"> Оплата и доставка</a></li>
+                <li><a href="/return">Возврат и гарантии</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/confidentiality">Конфиденциальность</a></li>
+              </ul>
+            </div>
+            <div class="footer-right__contacts footer-contacts">
+              <h4 class="footer-menu__title">Контакты</h4>
+              <ul>
+                <li><a href="tel:+79999999999">+7 999 999 9999</a></li>
+                <li><a href="mailto:info@streetlook.com">info@streetlook.com</a></li>
+                <li><a href="vk.com">VKontakte </a></li>
+                <li><a href="instagram.com">Intagram</a></li>
+                <li><a href="t.me">Telegram</a></li>
+                <li><a href="">Рассылка</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
