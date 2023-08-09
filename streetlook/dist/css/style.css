@@ -709,6 +709,12 @@ h1, h2, h3, h4, p, span, small, button, a, div {
   margin-bottom: 2.0625rem;
   align-self: flex-end;
   align-items: flex-end;
+  transition: 0.3s ease opacity;
+}
+@media (any-hover: hover) {
+  .catalog__link:hover {
+    opacity: 0.75;
+  }
 }
 .catalog__list {
   display: grid;
