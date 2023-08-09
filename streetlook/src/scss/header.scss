@@ -1,6 +1,5 @@
 .header {
 	width: 100%;
-	min-height: rem(68);
 	background-color: $bgColor;
 
 	&__container {
@@ -21,7 +20,9 @@
 		font-weight: 500;
 
 		span {
+			font-size: rem(17);
 			&:first-child{
+				font-size: rem(24.17);
 				font-weight: bold;
 			}
 		}
