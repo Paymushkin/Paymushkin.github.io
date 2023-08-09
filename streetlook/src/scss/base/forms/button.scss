@@ -1,0 +1,46 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	padding: rem(14.08) rem(35.21);
+	// width: rem(220);
+	color: $bgColor;
+	background-color: $mainColor;
+	border-radius: rem(47.26);
+	font-size: rem(14);
+	// font-weight: 700;
+	// font-family: "Roboto";
+	// line-height: math.div(28, 20);
+	text-align: center;
+	// border: rem(3) solid $highlightColor;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.75;
+		} 
+	}
+	&:focus {
+		// border-color: $activeColor;
+		outline: none;
+	}
+	&:active {
+		// background-color: $activeColor;
+	}
+	&:disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+		// background-color: $mainAdditionalColor;
+	}
+	&._fw {
+		width: 100%;
+	}
+	&-small {
+		padding: rem(10) rem(25);
+		font-size: rem(12);
+	}
+}

@@ -1,0 +1,43 @@
+.about {
+	&__container {
+		display: flex;
+		padding: rem(61) rem(25) rem(25) rem(53);
+	}
+
+	&__body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 50%;
+	}
+
+	&__title {
+		margin-left: 0;
+	}
+
+	&__text {
+		margin-bottom: rem(30);
+		width: rem(477);
+		line-height: math.div(22.4, 16);
+	}
+
+	&__link {
+		line-height: math.div(22.4, 16);
+	}
+
+	&__decor {
+		position: absolute;
+		bottom: rem(31.8);
+	}
+
+	&__img {
+		flex: 0 0 50%;
+	}
+
+	&__ibg {
+		display: block;
+		margin-bottom: rem(22.4);
+		padding-bottom: percent(683, 601);
+		max-height: rem(1030);
+	}
+}
