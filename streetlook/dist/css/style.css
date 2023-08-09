@@ -580,7 +580,7 @@ h1, h2, h3, h4, p, span, small, button, a, div {
   gap: 2.5rem;
 }
 @media (any-hover: hover) {
-  .header__btns ul li:hover button, .header__btns ul li:hover a {
+  .header__btns ul li:hover button:not(.btn-lang), .header__btns ul li:hover a {
     opacity: 0.5;
   }
 }
