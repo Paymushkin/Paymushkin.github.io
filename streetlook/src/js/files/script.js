@@ -31,8 +31,8 @@ headerLang.addEventListener("click", ()=> {
 
 currentLang.textContent = siteLang || "RU";
 
-document.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		loader.remove()
-	}, 300);
+	}, 500);
 })
