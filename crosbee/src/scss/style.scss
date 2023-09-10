@@ -12,30 +12,32 @@
 
 // Подключение иконочных шрифтов========================================================
 // Подключить если есть файл иконочного шрифта
-// @import "fonts/icons";
+@import "base/forms/select";
 
 @import "base/swiper";
 
 
 // Шрифт по умолчанию
-$fontFamily: "Inter", sans-serif;
+$fontFamily: "Gilroy", sans-serif;
 $fontSize: rem(16); // где 14px - размер шрифта по умолчанию из макета
 
 // Основные цвета
-$mainColor: #231F20; // Цвет шрифта по умолчанию
+$mainColor: #383838; // Цвет шрифта по умолчанию
 $bgColor: #ffffff; // Цвет фона
-$highlightColor: #EFF5F6; // Цвет акцентов
+$highlightColor: #2e6f6e; // Цвет акцентов
 $decorColor: #849496; // Цвет деталей
 $decorColor2: #96B2BA;
-$addColor: #6B6B6B;
+$addColor: #e8e8e8;
+$addColorGreen: #f5faf9;
+$textColor: #333333;
  
 // Настройки ===========================================================================
 // Минимальная ширина страницы
 $minWidth: 320;
 // Ширина полотна (макета)
-$maxWidth: 10%0;
+$maxWidth: 1440;
 // Ширина ограничивающего контайнера (0 = нет ограничения)
-$maxWidthContainer: 0;
+$maxWidthContainer: 1310;
 // Общий отступ у контейнера
 // 30 = по 15px слева и справа, 0 = нет отступа
 $containerPadding: 48;
@@ -162,17 +164,17 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "header";
-@import "hero";
+// @import "hero";
 @import "catalog";
-@import "offer";
-@import "special";
-@import "about";
-@import "interests";
+@import "product";
+// @import "special";
+// @import "about";
+// @import "interests";
 @import "footer";
 
 
 // Подключение стилей отдельных страниц
-@import "animation";
+// @import "animation";
 
 // @import "libs/tippy"; 
 // @import "base/swiper"; 

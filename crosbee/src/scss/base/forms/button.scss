@@ -1,0 +1,100 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	padding: rem(10) rem(22);
+	// width: rem(220);
+	// color: $highlightColor;
+	// background-color: $addColorGreen;
+	background-color: transparent;
+	border-radius: rem(12);
+	font-size: rem(14);
+	font-weight: 500;
+	// font-family: "Roboto";
+	// line-height: math.div(28, 20);
+	text-align: center;
+	// border: rem(3) solid $highlightColor;
+	overflow: hidden;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	&::before{
+		content:'';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $addColorGreen;
+		border-radius: rem(12);
+		z-index: 0;
+	}
+	&::after{
+		content:'';
+		position: absolute;
+		bottom: rem(-50);
+		width: rem(50);
+		height: rem(50);
+		border-radius: 50%;
+		background-color: $highlightColor;
+		transition: transform 0.3s ease;
+		z-index: 1;
+	}
+	span {
+		z-index: 2;
+		color: $highlightColor;
+		transition: 0.3s ease color;
+	}
+
+	@media (any-hover: hover){
+		&:hover{
+			span {
+				color: $addColorGreen;
+			}
+			&::after{
+				transform: scale(4);
+			}
+		}
+	}
+	&:focus {
+		// border-color: $activeColor;
+		outline: none;
+	}
+	&:active {
+		// background-color: $activeColor;
+	}
+	&:disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+		// background-color: $mainAdditionalColor;
+	}
+	&._fw {
+		width: 100%;
+	}
+	&-highlight {
+		color: $addColor;
+		background-color: $highlightColor;
+		background-color: transparent;
+		&::before{
+			background-color: $highlightColor;
+		}
+		&::after{
+			background-color: $addColorGreen;
+		}
+		span {
+			color: $addColorGreen;
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+				span {
+					color: $highlightColor;
+				}
+			}
+		}
+	}
+}

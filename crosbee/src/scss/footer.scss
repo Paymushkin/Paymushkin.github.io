@@ -1,0 +1,76 @@
+.footer {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding: rem(102) rem(114) rem(146) rem(44);
+	}
+
+	&-left {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&__text {
+			max-width: rem(621);
+			font-size: rem(30);
+		}
+
+		&__copy {
+			display: flex;
+			align-items: center;
+			gap: rem(8.45);
+
+			span {
+				font-size: rem(12);
+				line-height: math.div(19.5, 12);
+				letter-spacing: 0.5px;
+				&:first-child{
+					font-size: rem(22);
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	&-right {
+		display: flex;
+		gap: rem(155);
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: rem(10);
+
+			li {
+				font-size: rem(14);
+				line-height: math.div(19.5, 14);
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+
+				@media (any-hover: hover){
+					&:hover{
+						a {
+							opacity: 0.5;
+						}
+					}
+				}
+
+				a {
+					transition: opacity ease 0.3s;
+				}
+			}
+		}
+
+	}
+
+	&-menu {
+
+		&__title {
+			margin-left: 0;
+			margin-bottom: rem(31);
+			font-size: rem(24);
+			line-height: math.div(19.5, 24);
+			letter-spacing: 0.5px;
+		}
+	}
+}

@@ -1,0 +1,155 @@
+h1, h2, h3, h4, p, span, small, button, a, div {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.poster {
+	display: flex;
+	align-items: center;
+	padding: rem(52);
+	width: 100%;
+	height: rem(300);
+	border-radius: rem(25);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__title {
+		color: $addColorGreen;
+		font-size: rem(40);
+		font-weight: 500;
+	}
+}
+
+.filters {
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__list {
+		display: flex;
+		gap: rem(54);
+		li {
+
+		}
+	}
+}
+
+.paggination {
+	display: flex;
+	justify-content: center;
+	margin-bottom: rem(150);
+	width: 100%;
+	&__list {
+		display: flex;
+		justify-content: rem(8);
+
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		background-color: transparent;
+		transition: all 0.3s ease;
+		&.active {
+			color: #ffffff;
+			background-color: $highlightColor;
+		}
+	}
+}
+
+// slider
+
+.slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: rem(56);
+	gap: rem(70);
+	min-height: 100vh;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.hero & {
+		min-height: calc(100vh - rem(68));
+	}
+
+	.special & {
+		justify-content: flex-start;
+		padding-top: rem(233);
+	}
+
+	&__decor {
+		color: $decorColor;
+		font-size: rem(20);
+	}
+
+	&__title {
+		max-width: rem(900);
+		font-size: rem(48);
+		line-height: math.div(64.77, 48);
+	}
+
+	&__button {
+
+	}
+}
+
+// end slider
+
+// site loader
+
+.loader {
+	position: fixed;
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: $bgColor;
+	overflow: hidden;
+	z-index: 9;
+}
+
+.loader__icon div {
+	position: absolute;
+	animation: loader 1s linear infinite;
+	width: 160px;
+	height: 160px;
+	top: 20px;
+	left: 20px;
+	border-radius: 50%;
+	box-shadow: 0 4px 0 0 #849496;
+	transform-origin: 80px 82px;
+}
+
+.loader__spinner {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	overflow: hidden;
+	background: #ffffff;
+}
+.loader__icon {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform: translateZ(0) scale(1);
+	backface-visibility: hidden;
+	transform-origin: 0 0; /* see note above */
+}
+.loader__icon div { 
+	box-sizing: content-box; 
+}
+
+// end site loader
