@@ -18,7 +18,12 @@
 		}
 
 		&__link {
-
+			transition: color 0.3s ease;
+			@media (any-hover: hover){
+				&:hover{
+					color: $highlightColor;
+				}
+			}
 		}
 	}
 
@@ -35,10 +40,16 @@
 
 .product {
 	border-radius: rem(15);
-	transition: background-color 0.3s ease;
+	transition: all 0.3s ease;
+	img {
+		transition: transform 0.3s ease;
+	}
 	@media (any-hover: hover){
 		&:hover{
 			background-color: $addColorGreen;
+			img {
+				transform: scale(1.1);
+			}
 		}
 	}
 	&__inner {

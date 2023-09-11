@@ -36,3 +36,11 @@ import { flsModules } from "./modules.js";
 // 		loader.remove()
 // 	}, 2500);
 // })
+
+
+const searchBtn = document.getElementById("search-btn"),
+	  searchContainer = document.getElementById("search")
+
+searchBtn.addEventListener("click", ()=> {
+	searchContainer.classList.toggle("active")
+})

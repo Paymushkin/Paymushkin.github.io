@@ -25,7 +25,15 @@
 			// text-transform: uppercase;
 
 			li {
-				display: flex;				
+				display: flex;
+				
+				&.active {
+
+					a {
+						color: $highlightColor;
+					}
+					
+				}
 				
 				a {
 					position: relative;

@@ -14,7 +14,7 @@
         <div class="header__logo"><img src="img/header/logo.svg" alt="Logo"/></div>
         <nav class="header__nav">
           <ul>
-            <li><a href="" data-goto="#catalog">Каталог</a></li>
+            <li class="active"><a href="" data-goto="#catalog">Каталог</a></li>
             <li><a href="" data-goto="#projects">О нас</a></li>
             <li><a href="#" data-goto="#services">Кейсы</a></li>
             <li><a href="#" data-popup="#classes">Как мы работаем</a></li>
@@ -68,7 +68,17 @@
                   </select>
                 </li>
               </ul>
-              <div class="filters__search"> <img src="img/search.svg" alt="search"/></div>
+              <div class="filters__search search active" id="search">
+                <form action="" method="post">
+                  <input class="search__input" id="search-input" type="text" name="search-input" placeholder="Игровой комплекс"/>
+                  <svg id="search-btn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Search_icon">
+                      <path id="Vector" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path id="Vector_2" d="M13 13L19 19" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+                </form>
+              </div>
             </form>
           </div>
           <div class="products">

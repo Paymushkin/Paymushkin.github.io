@@ -39,6 +39,54 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 
 		}
 	}
+	&__search {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(10);
+		padding: rem(9) rem(20);
+		background-color: transparent;
+		border-radius: rem(12);
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		&.active {
+			flex: 1 1 auto;
+			background-color: #fff;
+		}
+		svg {
+			path {
+				transition: 0.3s ease stroke;
+			}
+
+		}
+		@media (any-hover: hover){
+			&:hover{
+				svg path {
+					stroke: $highlightColor;
+				}
+			}
+		}
+	}
+	
+	.search {
+		&__input {
+			display: none;
+			font-size: rem(14);
+			font-weight: 500;
+			line-height: math.div(17, 14);
+			outline: none;
+			&::placeholder {
+				color: #cfcfcf;
+			}
+		}
+
+		&.active {
+			.search__input {
+				display: flex;
+				flex: 1 1 auto;
+			}
+		}
+	}
 }
 
 .paggination {
@@ -60,9 +108,20 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 		border-radius: 50%;
 		background-color: transparent;
 		transition: all 0.3s ease;
+		cursor: pointer;
 		&.active {
 			color: #ffffff;
 			background-color: $highlightColor;
+			@media (any-hover: hover){
+				&:hover{
+					color: #ffffff;
+				}
+			}
+		}
+		@media (any-hover: hover){
+			&:hover{
+				color: $highlightColor;
+			}
 		}
 	}
 }

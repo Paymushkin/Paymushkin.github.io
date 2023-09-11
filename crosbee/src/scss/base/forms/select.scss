@@ -2,6 +2,14 @@
 // Снипет (HTML): sel
 .select {
 	position: relative;
+
+	@media (any-hover: hover){
+		&:hover{
+			.select__title {
+				color: $highlightColor;
+			}
+		}
+	}
 	// .select__body
 	&__body {
 		position: relative;
