@@ -1,9 +1,14 @@
 .product-item {
 	&__title {
+		display: flex;
+		gap: rem(20);
 		margin-bottom: rem(30);
 		font-size: rem(40);
 		line-height: math.div(49, 40);
 		font-weight: 500;
+		span {
+			color: $highlightColor;
+		}
 	}
 	&__grid {
 		display: grid;
