@@ -1,2 +1,5 @@
 .section__poster.poster(style=link)
-	h1.poster__title= title
+	if category
+		h1.poster__title._category= title
+	else
+		h1.poster__title= title

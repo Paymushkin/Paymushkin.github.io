@@ -29,6 +29,10 @@ ol, ul {
 		font-size: rem(40);
 		line-height: math.div(49, 40);
 		font-weight: 500;
+
+		&._category {
+			color: $textColor;
+		}
 	}
 }
 

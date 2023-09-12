@@ -504,6 +504,9 @@ ol, ul {
   line-height: 1.225;
   font-weight: 500;
 }
+.poster__title._category {
+  color: #333333;
+}
 
 .filters__form {
   display: flex;
