@@ -11,11 +11,33 @@ html(lang="ru")
 			include html/_header
 			main.main-content
 				//- include html/_hero
-				include html/_catalog
+				- var link = "background-image:url(@img/catalog/poster/all.png)"
+				- var title = "Каталог"
+				- const condition = true
+					include html/_poster
+
+					include html/_filters
+
+					- var categoryTitle = "Игровые комплексы размера XL"
+					- var categoryLink = "/category.html"
+					- var categoryImg = "/size-xl"
+						include html/_products
+
+					- var categoryTitle = "Игровые комплексы размера L"
+					- var categoryLink = "/category.html"
+					- var categoryImg = "/size-xl"
+						include html/_products
+
+					- var categoryTitle = "Игровые комплексы размера M"
+					- var categoryLink = "/category.html"
+					- var categoryImg = "/size-m"
+						include html/_products
+
+					include html/_paggination
 				//- include html/_offer
 				//- include html/_special
 				//- include html/_about
 				//- include html/_interests
-			//- include html/_footer
+		include html/_footer
 		script(src="js/app.min.js")
 	

@@ -41,6 +41,8 @@ import { flsModules } from "./modules.js";
 const searchBtn = document.getElementById("search-btn"),
 	  searchContainer = document.getElementById("search")
 
-searchBtn.addEventListener("click", ()=> {
-	searchContainer.classList.toggle("active")
-})
+if (searchBtn) {
+	searchBtn.addEventListener("click", ()=> {
+		searchContainer.classList.toggle("active")
+	})
+}

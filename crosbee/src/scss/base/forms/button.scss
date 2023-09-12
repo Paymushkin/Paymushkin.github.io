@@ -86,7 +86,16 @@
 			background-color: $addColorGreen;
 		}
 		span {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
 			color: $addColorGreen;
+			i {
+				font-style: normal;
+				font-size: rem(60);
+				font-weight: 250;
+				line-height: 34.5%;
+			}
 		}
 
 		@media (any-hover: hover){
@@ -94,6 +103,15 @@
 				span {
 					color: $highlightColor;
 				}
+			}
+		}
+		&._with-icon {
+			font-size: rem(20);
+			line-height: 145%;
+			&::after{
+				bottom: rem(-80);
+				width: rem(80);
+				height: rem(80);
 			}
 		}
 	}

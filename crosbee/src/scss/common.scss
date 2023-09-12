@@ -8,6 +8,10 @@ h1, h2, h3, h4, p, span, small, button, a, div {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+ol, ul {
+	list-style: none;
+}
+
 .poster {
 	display: flex;
 	align-items: center;
@@ -20,8 +24,10 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 	background-size: cover;
 
 	&__title {
+		max-width: rem(390);
 		color: $addColorGreen;
 		font-size: rem(40);
+		line-height: math.div(49, 40);
 		font-weight: 500;
 	}
 }
@@ -128,42 +134,19 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 
 // slider
 
-.slide {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	padding: rem(56);
-	gap: rem(70);
-	min-height: 100vh;
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	.hero & {
-		min-height: calc(100vh - rem(68));
-	}
-
-	.special & {
-		justify-content: flex-start;
-		padding-top: rem(233);
-	}
-
-	&__decor {
-		color: $decorColor;
-		font-size: rem(20);
-	}
-
-	&__title {
-		max-width: rem(900);
-		font-size: rem(48);
-		line-height: math.div(64.77, 48);
-	}
-
-	&__button {
-
+.swiper {
+	border-radius: rem(25);
+	overflow: hidden;
+	&-slide {
+		width: 100%;
+		aspect-ratio: 1280 / 620;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
 	}
 }
+
+
 
 // end slider
 

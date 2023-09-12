@@ -13,7 +13,7 @@
 // Подключение иконочных шрифтов========================================================
 // Подключить если есть файл иконочного шрифта
 
-@import "base/swiper";
+// @import "base/swiper";
 
 
 // Шрифт по умолчанию
@@ -38,7 +38,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1440;
 // Ширина ограничивающего контайнера (0 = нет ограничения)
-$maxWidthContainer: 1310;
+$maxWidthContainer: 1280;
 // Общий отступ у контейнера
 // 30 = по 15px слева и справа, 0 = нет отступа
 $containerPadding: 48;
@@ -168,11 +168,11 @@ body {
 // @import "hero";
 @import "catalog";
 @import "product";
-// @import "special";
-// @import "about";
-// @import "interests";
+@import "products";
+@import "breadcrumbs";
 @import "footer";
 
+@import "base/swiper";
 
 // Подключение стилей отдельных страниц
 // @import "animation";

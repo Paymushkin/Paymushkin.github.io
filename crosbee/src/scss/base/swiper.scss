@@ -36,47 +36,54 @@
 	display: none !important;
 }
 .navigation {
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	display: flex;
-	gap: rem(10);
-	transform: translateX(-50%);
-	img {
-		transition: opacity 0.3s ease;
+	img, svg {
 		cursor: pointer;
 	}
 	.swiper-button-disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
+	svg {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		path {
+			transition: 0.3s ease stroke;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				path {
+					stroke: $highlightColor;
+				}
+			}
+		}
+		
+	}
+	.prev {
+		left: rem(33);
+		transform: rotate(-180deg);
+	}
+	.next {
+		right: rem(33);
+	}
 }
 .swiper-pagination {
 	position: absolute;
-	left: rem(56);
-	bottom: rem(90);
+	left: rem(40);
+	bottom: rem(33.5);
 	display: flex;
 	gap: rem(14);
 	cursor: pointer;
 	&-bullet {
 		position: relative;
-		width: rem(6);
-		height: rem(6);
+		width: rem(20);
+		height: rem(20);
 		border-radius: 50%;
-		background-color: #231F20;
-		
+		background-color: #ffffff;
+		transition: 0.3s ease background-color;
 
 		&-active {
-			&::before{
-				content:'';
-				position: absolute;
-				top: rem(-7);
-				left: rem(-7);
-				width: rem(20);
-				height: rem(20);
-				border: rem(2) solid #231F20;
-				border-radius: 50%;
-			}
+			background-color: $highlightColor;
 		}
 	}
 	.swiper-pagination-total {

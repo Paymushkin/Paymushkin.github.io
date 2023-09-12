@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: rem(23) rem(15) rem(19.32);
+	padding: rem(23) 0 rem(19.32);
 	width: 100%;
 	min-height: rem(85);
 	background-color: $bgColor;		
@@ -14,6 +14,7 @@
 
 	&__nav {
 		flex: 0 1 auto;
+		margin-right: rem(10);
 
 		ul {
 			display: flex;

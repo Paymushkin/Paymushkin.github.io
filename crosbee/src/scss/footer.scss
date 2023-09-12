@@ -1,51 +1,52 @@
 .footer {
+	background-color: $highlightColor;
 	&__container {
-		display: flex;
-		justify-content: space-between;
-		padding: rem(102) rem(114) rem(146) rem(44);
+		padding: rem(99) rem(15) rem(63);
 	}
-
-	&-left {
+	&-top {
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: rem(40);
+		padding-bottom: rem(89);
+		border-bottom: rem(1) solid $addColorGreen;
 
 		&__text {
-			max-width: rem(621);
-			font-size: rem(30);
+			font-size: rem(40);
+			line-height: math.div(49, 40);
+			font-weight: 500;
+			color: #ffffff;
 		}
 
-		&__copy {
+		&__btns {
 			display: flex;
-			align-items: center;
-			gap: rem(8.45);
-
-			span {
-				font-size: rem(12);
-				line-height: math.div(19.5, 12);
-				letter-spacing: 0.5px;
-				&:first-child{
-					font-size: rem(22);
-					font-weight: bold;
-				}
-			}
+			gap: rem(20);
+			padding: rem(12) 0;
 		}
 	}
 
-	&-right {
+	&-center {
 		display: flex;
-		gap: rem(155);
+		justify-content: space-between;
+		gap: rem(16);
+		margin-bottom: rem(111);
+		color: #ffffff;
+
+		&__wrapper {
+			display: flex;
+			flex: 1 1 auto;
+		}
 
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: rem(10);
+			gap: rem(16);
+			
 
 			li {
 				font-size: rem(14);
-				line-height: math.div(19.5, 14);
-				text-transform: uppercase;
-				letter-spacing: 0.5px;
+				line-height: math.div(16, 14);
+				font-weight: 500;
 
 				@media (any-hover: hover){
 					&:hover{
@@ -63,14 +64,61 @@
 
 	}
 
+	&-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		&__contacts {
+			display: flex;
+			flex-direction: column;
+			gap: rem(24);
+			color: #ffffff;
+			font-size: rem(40);
+			line-height: math.div(49, 40);
+			font-weight: 500;
+			a {
+				cursor: pointer;
+				transition: 0.3s ease opacity;
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+
 	&-menu {
+		flex: 0 1 rem(290);
+		&:last-child{
+		}
 
 		&__title {
-			margin-left: 0;
-			margin-bottom: rem(31);
-			font-size: rem(24);
-			line-height: math.div(19.5, 24);
-			letter-spacing: 0.5px;
+			// margin-left: 0;
+			margin-bottom: rem(16);
+			font-size: rem(18);
+			line-height: math.div(22, 18);
+			font-weight: 600;
 		}
+	}
+
+	&-nav {
+		flex: 0 1 rem(180);
+		ul {
+			gap: rem(24);
+			h4 {
+				font-size: rem(18);
+				line-height: math.div(22, 18);
+				font-weight: 600;
+				cursor: pointer;
+				transition: 0.3s ease opacity;
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+
 	}
 }
