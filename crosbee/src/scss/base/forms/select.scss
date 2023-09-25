@@ -24,6 +24,7 @@
 		// border: 1px solid #d9d9d9;
 		border-radius: 4px;
 		font-size: rem(14);
+		font-weight: 500;
 		line-height: math.div(17 , 14);
 		cursor: pointer;
 	}
@@ -71,14 +72,11 @@
 		position: absolute;
 		top: rem(29);
 		left: 0;
-		padding: 10px 0px 5px 0px;
+		padding: rem(30) rem(16);
 		min-width: 100%;
 		color: #000;
-		background-color: #fff;
-		border-radius: 0 0 4px 4px;
-		border-top: 0;
-		border: 1px solid #d9d9d9;
-		border-top: 0;
+		background-color: $addColorGreen;
+		border-radius: 0 0 rem(15) rem(15);
 		font-size: rem(14);
 		
 	}
@@ -97,17 +95,21 @@
 	}
 	// .select__option
 	&__option {
+		padding: 9px 0;
 		width: 100%;
+		border-bottom: 1px solid #E6ECEC;
+		color: inherit;
+		font-weight: 500;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 10px;
-		color: inherit;
+		transition: all 0.3s ease;
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				color: $highlightColor;
+				border-color: $highlightColor;
 			}
 		}
 	}

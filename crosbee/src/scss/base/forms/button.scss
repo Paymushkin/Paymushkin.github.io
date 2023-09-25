@@ -77,7 +77,6 @@
 	}
 	&-highlight {
 		color: $addColor;
-		background-color: $highlightColor;
 		background-color: transparent;
 		&::before{
 			background-color: $highlightColor;

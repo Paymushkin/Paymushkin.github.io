@@ -3,29 +3,34 @@
 			ul.filters__list 
 				li
 					select(name="form[]").form
-						option(value="1", selected) Все категории
-						option(value="2")  Игровые комплексы размера XL
-						option(value="3") Игровые комплексы размера L
-						option(value="4") Игровые комплексы размера M
+						option(value="all", selected) Все категории
+						option(value="size-xl") Комплексы XL
+						option(value="size-l") Комплексы L
+						option(value="size-m") Комплексы M
+						option(value="size-s") Комплексы S
+						option(value="balance") Балансиры
+						option(value="swing") Качели
+						option(value="carousels") Карусели
+						option(value="springs") Пружины
+						option(value="sport") Спортивное оборудование
+						option(value="city") Городская инфраструктура
 				li
 					select(name="form[]").form
-						option(value="1", selected) Материал
-						option(value="2") Материал 1
-						option(value="3") Материал 2
-						option(value="4") Материал 3
+						option(value="0", selected) Материал
+						option(value="metall") Металл
+						option(value="no-metall") Не металл
+						option(value="all") Все
 				li
 					select(name="form[]").form
-						option(value="1", selected) Назначение
-						option(value="2")  Назначение 1
-						option(value="3") Назначение 2
-						option(value="4") Назначение 3
+						option(value="0", selected) Назначение
+						option(value="public-places") Общественные территории
+						option(value="kindergartens") Детские сады
+						option(value="all") Все
 				li
 					select(name="form[]").form
-						option(value="1", selected) Сортировать
-						option(value="2") По размеру (сначала маленькие)
-						option(value="3") По размеру (сначала большие)
-						option(value="4") По цене (сначала дешевые)
-						option(value="5") По цене (сначала дорогие)
+						option(value="all", selected) Сортировать
+						option(value="popularity") По популярности
+						option(value="price") По цене
 			#search.filters__search.search
 				form(action="", method="post")
 					input#search-input.search__input(type="text", name="search-input" placeholder="Игровой комплекс")

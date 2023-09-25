@@ -52,7 +52,7 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Pagination, Autoplay, Navigation],
+			modules: [Autoplay, Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -70,19 +70,19 @@ function initSliders() {
 			
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			
 
 			// Пагинация
 			
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-				// type: "fraction",
-			},
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	clickable: true,
+			// 	type: "fraction",
+			// },
 			
 
 			// Скроллбар

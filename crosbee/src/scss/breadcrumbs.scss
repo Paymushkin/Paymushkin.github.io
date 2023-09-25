@@ -1,7 +1,12 @@
 .breadcrumb {
+	display: flex;
 	margin-bottom: rem(30);
+	padding: rem(12) rem(25);
+	background-color: $addColorGreen;
+	border-radius: rem(10);
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		gap: rem(6);
 	}
 	&__item {
@@ -9,7 +14,7 @@
 		display: flex;
 		align-items: center;
 		gap: rem(6);
-		color: #a7a7a7;
+		color: #C4D3D0;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
 		transition: 0.3s ease color;
@@ -42,5 +47,9 @@
 	}
 	&__link {
 
+	}
+	&__search-form {
+		flex: 1 1 auto;
+		display: flex;
 	}
 }

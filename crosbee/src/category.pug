@@ -23,7 +23,10 @@ html(lang="ru")
 					- const condition = false
 						include html/_products
 
-					include html/_paggination
+					.page-bottom
+						a.products-header__link(href=categoryLink)
+							span Смотреть еще
+					//- include html/_paggination
 				//- include html/_offer
 				//- include html/_special
 				//- include html/_about
