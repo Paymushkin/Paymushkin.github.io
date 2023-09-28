@@ -105,8 +105,10 @@
 			}
 		}
 		&._with-icon {
+			padding: rem(20) rem(30);
 			font-size: rem(20);
 			line-height: 145%;
+			border-radius: rem(20);
 			&::after{
 				bottom: rem(-80);
 				width: rem(80);

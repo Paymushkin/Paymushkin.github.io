@@ -353,8 +353,10 @@ h6 {
   }
 }
 .button-highlight._with-icon {
+  padding: 1.25rem 1.875rem;
   font-size: 1.25rem;
   line-height: 145%;
+  border-radius: 1.25rem;
 }
 .button-highlight._with-icon::after {
   bottom: -5rem;
@@ -546,7 +548,6 @@ ol, ul {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 145%;
-  border-left: 0.0625rem solid #4f4f4f;
   outline: none;
 }
 .search__input::placeholder {
@@ -894,12 +895,11 @@ ol, ul {
   border-bottom: 0.0625rem solid #cfcfcf;
 }
 .info-list__item {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.45;
   font-weight: 500;
 }
 .info-list__value {
-  font-size: 0.875rem;
   line-height: 1.1428571429;
   font-weight: 500;
 }
