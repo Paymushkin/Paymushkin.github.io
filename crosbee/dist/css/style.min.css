@@ -939,6 +939,7 @@ ol, ul {
   display: inline-flex;
   justify-content: center;
   padding: 0.625rem 1.375rem;
+  min-height: 2.3125rem;
   background-color: transparent;
   border-radius: 0.75rem;
   border: 0.0625rem solid #333333;
@@ -954,7 +955,7 @@ ol, ul {
 .products-header__link span {
   z-index: 2;
   color: #333333;
-  transition: 0.3s ease color;
+  transition: 0.3s ease;
 }
 .products-header__link::before {
   content: "";
@@ -970,23 +971,37 @@ ol, ul {
 .products-header__link::after {
   content: "";
   position: absolute;
-  bottom: -3.125rem;
-  width: 3.125rem;
-  height: 3.125rem;
+  left: -100%;
+  bottom: 3.125rem;
+  width: 6.25rem;
+  height: 6.25rem;
   border-radius: 50%;
   background-color: #2e6f6e;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
   z-index: 1;
+}
+.products-header__link svg {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s ease opacity;
+  z-index: 99;
 }
 @media (any-hover: hover) {
   .products-header__link:hover {
     border-color: #2e6f6e;
   }
   .products-header__link:hover span {
-    color: #fff;
+    opacity: 0;
+    color: transparent;
   }
   .products-header__link:hover::after {
-    transform: scale(4);
+    transform: scale(6);
+  }
+  .products-header__link:hover svg {
+    opacity: 1;
   }
 }
 .products__list {

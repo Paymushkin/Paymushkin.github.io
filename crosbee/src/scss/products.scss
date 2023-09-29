@@ -23,6 +23,7 @@
 			display: inline-flex;
 			justify-content: center;
 			padding: rem(10) rem(22);
+			min-height: rem(37);
 			background-color: transparent;
 			border-radius: rem(12);
 			border: rem(1) solid $textColor;
@@ -38,11 +39,11 @@
 			span {
 				z-index: 2;
 				color: $textColor;
-				transition: 0.3s ease color;
+				transition: 0.3s ease ;
 			}
 
 			&::before{
-				content:'';
+				content: '';
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -55,23 +56,37 @@
 			&::after{
 				content:'';
 				position: absolute;
-				bottom: rem(-50);
-				width: rem(50);
-				height: rem(50);
+				left: -100%;
+				bottom: rem(50);
+				width: rem(100);
+				height: rem(100);
 				border-radius: 50%;
 				background-color: $highlightColor;
-				transition: transform 0.3s ease;
+				transition: transform 0.5s ease;
 				z-index: 1;
+			}
+			svg {
+				position: absolute;
+				top: 50%;
+				right: rem(12);
+				transform: translateY(-50%);
+				opacity: 0;
+				transition: 0.3s ease opacity;
+				z-index: 99;
 			}
 
 			@media (any-hover: hover){
 				&:hover{
 					border-color: $highlightColor;
 					span {
-						color: #fff;
+						opacity: 0;
+						color: transparent;
 					}
 					&::after{
-						transform: scale(4);
+						transform: scale(6);
+					}
+					svg {
+						opacity: 1;
 					}
 				}
 			}
