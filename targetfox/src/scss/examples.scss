@@ -35,7 +35,7 @@
 			
 			@media (min-width:$tablet){
 				transform: translateX(rem(-120));
-				animation: scrolling-2 20s linear infinite;  
+				animation: scrolling-2 40s linear infinite;  
 			}
 			
 		}
@@ -43,7 +43,7 @@
 			
 			@media (min-width:$tablet){
 				transform: translateX(calc(-75% + rem(120)));
-				animation: scrolling-3 20s linear infinite;  
+				animation: scrolling-3 40s linear infinite;  
 			}
 		}
 	}
