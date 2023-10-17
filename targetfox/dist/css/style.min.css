@@ -1954,6 +1954,11 @@ details[open] summary:before {
     font-size: 0.875rem;
   }
 }
+.cases__list .grid-item__mobile-link {
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.3125rem;
+}
 
 .quick-start {
   margin-bottom: 1.3125rem;
@@ -2220,7 +2225,6 @@ details[open] summary:before {
   }
 }
 .quick-start .timeline__point.point-6 .timeline__button {
-  position: relative;
   right: 0;
   padding: 0.75rem 1.875rem;
 }
