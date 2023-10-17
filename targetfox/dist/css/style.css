@@ -23,7 +23,7 @@
 @font-face {
   font-family: Manrope;
   font-display: swap;
-  src: url("../fonts/Manrope-Semibold.woff2") format("woff2"), url("../fonts/Manrope-Semibold.woff") format("woff");
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -1958,6 +1958,11 @@ details[open] summary:before {
   position: absolute;
   top: 0.3125rem;
   right: 0.3125rem;
+}
+@media (min-width: 67.49875em) {
+  .cases__list .grid-item__mobile-link {
+    display: none;
+  }
 }
 
 .quick-start {
