@@ -1,0 +1,102 @@
+.cases {
+	@include adaptiveValue("padding-top", 79, 58, 1920, 1024, 1);
+	@include adaptiveValue("padding-bottom", 79, 58, 1920, 1024, 1);
+	@media (max-width:$mobileSmall){
+		 padding-top: 0; 
+	}
+	&__container {
+		
+	}
+
+	&__title {
+		margin-bottom: rem(58);
+		@media (max-width:$tablet){
+			margin-bottom: rem(21);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(20);
+		@media (max-width:$mobile){
+			 gap: rem(8); 
+		}
+
+		.grid-item {
+			position: relative;
+			flex: 1 1 calc((100% - rem(20)) / 2);
+			display: flex;
+			gap: rem(15);
+			padding: rem(5);
+			background-color: #fff;
+			border-radius: rem(25);
+			overflow: hidden;
+
+			@media (max-width:$tablet){
+				border-radius: rem(13);
+			}
+			@media (max-width:$mobileSmall){
+				flex: 1 1 100%; 
+			}
+
+			&__label {
+				position: absolute;
+				top: 0;
+				right: rem(20);
+				@media (max-width:$tablet){
+					right: unset;
+					left: rem(15);
+				}
+			}
+
+			&__img {
+				height: 100%;
+				aspect-ratio: 1 / 1;
+				background-image: url(../img/cases/item.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			&__button {
+				@media (max-width:$tablet){
+					display: none;
+				}
+			}
+
+			&__body {
+				@media (max-width:$tablet){
+					padding: rem(15) 0;
+				}
+				@media (max-width:$mobile){
+					padding: rem(10) rem(30) rem(10) rem(0);
+				}
+			}
+
+			&__title {
+				margin-bottom: rem(12);
+				color: $textColor;
+				// font-size: rem(20);
+				@include adaptiveValue("font-size", 20, 12, 1920, 656, 1);
+				font-weight: 700;
+				line-height: math.div(31, 20);
+				@media (max-width:$tablet){
+					margin-bottom: rem(5);
+					line-height: 1;
+				}
+				@media (max-width:$mobileSmall){
+					font-size: rem(16); 
+				}
+			}
+			&__text {
+				margin-bottom: rem(37);
+				max-width: rem(312);
+				@include adaptiveValue("font-size", 16, 10, 1920, 656, 1);
+				@media (max-width:$mobileSmall){
+					font-size: rem(14); 
+				}
+			}
+		}
+	}
+
+}

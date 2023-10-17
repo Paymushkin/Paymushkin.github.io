@@ -1,0 +1,45 @@
+header.header#header
+	.header__container
+
+		nav(hidden).menu
+			button(type="button").menu__icon.icon-menu
+				span
+			.menu__body.menu-body
+				.menu-body__top
+				.menu-body__footer
+					ul.menu-body__media-list
+						li 
+							a(href="vc.ru") 
+								img(src="@img/header/vcru.svg", alt="vc.ru")
+						li 
+							a(href="telegram.ru") 
+								img(src="@img/header/telegram.svg", alt="t.me")
+						li 
+							a(href="youtube.ru") 
+								img(src="@img/header/youtube.svg", alt="youtube.com")
+					.menu-body__copy 
+						span © 2012-2023 All Rights Reserved 
+							a(href="#") Privacy policy
+
+		.header__logo
+			img(src="@img/header/header-logo.svg", alt="Logo")
+
+		nav.header__nav
+			ul.header__list(data-da=".menu-body__top, 1079.98, 1")
+				li
+					a(href="#" data-goto="#audience") Аудитории
+				li
+					a(href="#" data-goto="#about") О нас
+				li
+					a(href="#" data-goto="knowledge") Знания
+				li
+					a(href="#" data-goto="#cases") Кейсы
+				li
+					a(href="#" data-goto="#quick-start") Быстрый старт
+				li
+					a(href="#" data-goto="#contacts") Контакты
+
+		button.button(data-da=".menu-body__top, 1079.98, 1") Связаться
+			.flare
+			//- button.button.button-white 
+			//- 	p.gradient-text Связаться

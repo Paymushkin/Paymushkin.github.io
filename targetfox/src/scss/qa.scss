@@ -1,0 +1,78 @@
+.qa {
+	// padding: rem(107) 0 rem(87);
+	@include adaptiveValue("padding-top", 186, 38, 1920, 1024, 1);
+	@include adaptiveValue("padding-bottom", 87, 38, 1920, 1024, 1);
+	margin-bottom: rem(21);
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: rem(36);
+	}
+
+	&__accordion {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		padding: rem(46) rem(70);
+		width: 100%;
+		background-color: #fff;
+		border-radius: rem(30);
+		@media (max-width:$tablet){
+			padding: rem(46) rem(40);
+		}
+	}
+
+	.accordion {
+
+		&__details {
+			border-bottom: rem(1) solid #9FB4C9;
+			cursor: pointer;
+			transition: all .3s ease;
+			padding: rem(28) 0;
+			outline: none;
+			// &:not(:first-child) {
+			// 	margin-top: rem(28);
+			// }
+			summary {
+				display: flex;
+				align-items: center;
+				// padding-top: rem(28);
+				// height: rem(40);
+				color: $textColor;
+				font-size: rem(20);
+				line-height: math.div(31, 20);
+				font-weight: 700;
+				outline: none;
+				transition: all .3s ease;
+				@media (max-width:$tablet){
+					font-size: rem(16);
+				}
+			}
+			p {
+				padding-right: rem(40);
+				// padding-bottom: rem(28);
+				color: $textColor;
+				transition:all .3s ease;
+				@media (max-width:$tablet){
+					font-size: rem(14);
+				}
+			}
+			&[open] {
+				&:not(:first-child) {
+					// margin-top: rem(10);
+				}
+				summary {
+					// height: auto;
+					// padding-bottom: rem(10);
+				}
+				p {
+					animation: appear 0.3s ease;
+				}
+			}
+		}
+	}
+}

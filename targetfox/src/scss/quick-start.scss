@@ -1,0 +1,253 @@
+.quick-start {
+	margin-bottom: rem(21);
+	@media (min-width:$mobileSmall){
+		@include adaptiveValue("padding-top", 158, 88, 1920, 1024, 1);
+		@include adaptiveValue("padding-bottom", 158, 88, 1920, 1024, 1);
+		background: $gradient;
+	}
+
+	&__container {
+		@media (max-width:$mobileSmall){
+			margin: 0 rem(15);
+			padding: rem(38) rem(33) rem(60);
+			background: $gradient;
+			border-radius: rem(30);
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(58);
+		color: #fff;
+		@media (max-width:$mobileSmall){
+			margin-bottom: rem(28);
+			margin-left: rem(-10);
+		}
+	}
+
+	&__timeline {
+		position: relative;
+		margin: rem(150) 0;
+		width: 100%;
+		height: rem(2);
+		background-color: #fff;
+		@media (max-width:$mobileSmall){
+			margin: 0;
+			width: rem(2);
+			height: rem(574);
+		}
+	}
+
+	.timeline {
+
+		&__point {
+			position: absolute;
+			top: 50%;
+			width: rem(20);
+			height: rem(20);
+			background-color: #fff;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			&::after{
+				content:'';
+				position: absolute;
+				top: -100%;
+				left: 50%;
+				width: rem(2);
+				height: rem(40);
+				background-color: #fff;
+				@media (max-width:$mobileSmall){
+					top: 10px;
+					left: 50%;
+					width: rem(40);
+					height: rem(2);  
+				}
+			}
+			&::before{
+				content:'';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: rem(10);
+				height: rem(10);
+				background: $gradient;
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+			}
+			&:nth-child(odd) {
+				.timeline__text {
+					position: absolute;
+					bottom: rem(53);
+					@media (max-width:$mobileSmall){
+						 bottom: unset;
+						 top: 50%;
+						 transform: translateY(-50%);
+						 left: rem(100);
+					}
+				}
+			}
+			&:nth-child(even) {
+				.timeline__text, .timeline__button {
+					position: absolute;
+					top: rem(53);
+					@media (max-width:$mobileSmall){
+						top: 50%;
+					    transform: translateY(-50%);
+						left: rem(100);
+				   }
+				}
+
+				&::after{
+					top: unset;
+					bottom: -100%;
+					@media (max-width:$mobileSmall){
+						top: 10px;
+						left: 50%;
+					}
+				}
+			}
+			&.point-1 {
+				@media (max-width:$mobileSmall){
+					top: 0;
+					left: rem(-10);
+				}
+				.timeline__text {
+					width: rem(210);
+					@media (max-width:1280px){
+						max-width: rem(172);
+					}
+					@media (max-width:$mobileSmall){
+						max-width: calc(100vw - 170px);
+						top: 100%;
+					}
+				}
+			}
+			&.point-2 {
+				left: calc(100% / 5 - rem(10));
+				@media (max-width:$mobileSmall){
+					top:  calc(100% / 5 - rem(10));
+					left: rem(-10);
+				}
+				.timeline__text {
+					left: 50%;
+					width: rem(235);
+					transform: translateX(-50%);
+					@media (max-width:$mobileSmall){
+						left: rem(100);
+						max-width: calc(100vw - 170px);
+						transform: translateY(-50%);
+					}
+				}
+			}
+			&.point-3 {
+				left: calc(100% / 5 * 2 - rem(10));
+				@media (max-width:$mobileSmall){
+					top:  calc(100% / 5 * 2 - rem(10));
+					left: rem(-10);
+				}
+				.timeline__text {
+					left: 50%;
+					width: rem(246);
+					transform: translateX(-50%);
+					@media (max-width:1280px){
+						max-width: rem(138);
+					}
+					@media (max-width:$mobile){
+						padding-left: rem(20); 
+					}
+					@media (max-width:$mobileSmall){
+						left: rem(100);
+						padding-left: 0;
+						max-width: calc(100vw - 170px);
+						transform: translateY(-50%);
+					}
+				}
+			}
+			&.point-4 {
+				left: calc(100% / 5 * 3 - rem(10));
+				@media (max-width:$mobileSmall){
+					top:  calc(100% / 5 * 3 - rem(10));
+					left: rem(-10);
+				}
+				.timeline__text {
+					left: 50%;
+					width: rem(240);
+					transform: translateX(-50%);
+					@media (max-width:1280px){
+						max-width: rem(207);
+					}
+					@media (max-width:$mobileSmall){
+						left: rem(100);
+						max-width: calc(100vw - 170px);
+						transform: translateY(-50%);
+					}
+				}
+			}
+			&.point-5 {
+				left: calc(100% / 5 * 4 - rem(10));
+				@media (max-width:$mobileSmall){
+					top:  calc(100% / 5 * 4 - rem(10));
+					left: rem(-10);
+				}
+				.timeline__text {
+					left: 50%;
+					width: rem(485);
+					transform: translateX(-50%);
+					@media (max-width:1280px){
+						max-width: rem(253);
+					}
+					@media (max-width:$mobileSmall){
+						left: rem(100);
+						max-width: calc(100vw - 170px);
+						transform: translateY(-50%);
+					}
+				}
+			}
+			&.point-6 {
+				left: calc(100% - rem(20));
+				@media (max-width:$mobileSmall){
+					top: 100%;
+					left: rem(-10);
+				}
+				.timeline__button {
+					position: relative;
+					right: 0;
+					padding: rem(12) rem(30);
+					@media (max-width:$mobileSmall){
+						 padding: rem(16) rem(50); 
+					}
+					p {
+						position: relative;
+						&::after{
+							content:'';
+							position: absolute;
+							left: 0;
+							top: 0;
+							height: rem(1);
+							width: 100%;
+							background-color: #fff;
+						}
+						&::before {
+							content:'';
+							position: absolute;
+							right: -1px;
+							top: 0;
+							height: 100%;
+							width: rem(2);
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		&__text {
+			color: #fff;
+			@include adaptiveValue("font-size", 16, 12);
+			line-height: math.div(21, 16);
+			@media (max-width:$mobileSmall){
+				font-size: rem(16);
+			}
+		}
+	}
+}

@@ -1,0 +1,102 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	padding: rem(11.5) rem(60);
+	color: #fff;
+	background: $gradient;
+	border-radius: rem(46);
+	font-size: rem(20);
+	line-height: math.div(27, 20);
+	font-weight: 600;
+	text-align: center;
+	overflow: hidden;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	cursor: pointer;
+	@media (max-width:$mobile){
+		font-size: rem(16); 
+	}
+	@media (max-width:$mobileSmall){
+		font-size: rem(20); 
+	}
+
+	p, span {
+		@media (max-width:$mobile){
+			font-size: rem(16); 
+		}
+		@media (max-width:$mobileSmall){
+			font-size: rem(20); 
+		}
+	}
+
+	.flare {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 114%;
+		transform: skewX(-45deg); // Наклон
+		animation: flareAnimation;
+		left: -120%;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+		transition: 0.5s ease left;
+		// animation: flareAnimation 3s infinite linear; // Время и тип анимации можно менять
+	}
+	@media (any-hover: hover){
+		&:hover{
+			.flare {
+				left: -5%;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+	&:active {
+	}
+	&:disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&._big {
+		padding: rem(20) rem(60);
+	}
+	&-white {
+		background: #fff;
+		.flare {
+			background: $gradient;
+			opacity: 0.1;
+		}
+		@media (any-hover: hover){
+			&:hover{
+
+			}
+		}
+	}
+	&._border {
+		padding: rem(16) rem(60);
+		font-size: rem(16);
+		line-height: math.div(22, 16);
+		&::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: rem(46); 
+			border: 2px solid transparent;
+			background: $gradient border-box;
+			-webkit-mask:
+			  linear-gradient(#fff 0 0) padding-box, 
+			  linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+		}
+	}
+}

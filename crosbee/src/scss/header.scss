@@ -6,7 +6,80 @@
 	padding: rem(23) 0 rem(19.32);
 	width: 100%;
 	min-height: rem(85);
-	background-color: $bgColor;		
+	background-color: $bgColor;
+
+	.menu {
+		// .menu__body
+		&__body {
+			@media(max-width: $tablet) {
+				position: fixed;
+				top: rem(70);
+				left: -100%;
+				padding: rem(30) rem(15) rem(50);
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: #fff;
+				z-index: 4;
+				transition: 0.3s left ease;
+				.menu-open & {
+					left: 0;
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+			flex: 0 1 auto;
+			justify-content: flex-end;
+		}
+	}
+	// Burger ================================================
+	.icon-menu {
+		@media (max-width: $tablet) {
+			display: block;
+			position: relative;
+			flex: 0 0 24px;
+			width: 40px;
+			height: 16px;
+			cursor: pointer;
+			z-index: 10;
+			span,
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: rem(2);
+				background-color: #383838;
+				border-radius: rem(10);
+				transition: all 0.3s ease 0s;
+			}
+			&::before {
+				top: 0px;
+			}
+			&::after {
+				bottom: 0px;
+			}
+			span {
+				top: calc(50% - 1px);
+				width: 75%;
+			}
+			.menu-open & {
+				span {
+					transform: scale(0);
+				}
+				&::before {
+					top: calc(50% - 1px);
+					transform: rotate(-45deg);
+				}
+				&::after {
+					bottom: calc(50% - 1px);
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
 
 	&__logo {
 		@include adaptiveValue("margin-right", 51, 10);
@@ -15,6 +88,10 @@
 	&__nav {
 		flex: 0 1 auto;
 		margin-right: rem(10);
+
+		@media (max-width:$tablet){
+			 display: none; 
+		}
 
 		ul {
 			display: flex;
@@ -130,6 +207,12 @@
 	&__btns {
 		display: flex;
 		gap: rem(10);
+	}
+
+	&__card {
+		@media (min-width:$tablet){
+			 display: none; 
+		}
 	}
 
 // 	&__search,

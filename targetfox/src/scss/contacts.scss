@@ -1,0 +1,103 @@
+.contacts {
+	// padding: rem(77) 0 rem(147);
+	@include adaptiveValue("padding-top", 77, 58, 1920, 1024, 1);
+	@include adaptiveValue("padding-bottom", 147, 58, 1920, 1024, 1);
+	// background: $gradient;
+	background-image: url(../img/contacts/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 75% 50%;
+	@media (max-width:$tablet){
+		background-position: 60% 50%;
+	}
+
+	&__container {
+		position: relative;
+		// &::before{
+		// 	content:url(../img/contacts/bullhorn.png);
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	z-index: 0;
+		// }
+	}
+	&__title {
+		margin-bottom: rem(58);
+		color: #fff;
+		@media (max-width:$tablet){
+			margin-bottom: rem(21);
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1 1 auto;
+		gap: rem(20);
+		padding: rem(30);
+		max-width: rem(620);
+		background-color: #FF6C01;
+		border-radius: rem(24);
+		z-index: 2;
+		@media (max-width:$tablet){
+			padding: rem(21) rem(10);
+			max-width: 48.632%;
+		}
+		@media (max-width:$mobileSmall){
+			 max-width: 100%; 
+		}
+	}
+
+	.form-contacts {
+		&__select {
+			width: 100%;
+		}
+	
+		&__textarea, &__input {
+			padding: rem(13) rem(21);
+			width: 100%;
+			color: $textColor;
+			background-color: #fff;
+			border-radius: rem(12);
+			border: rem(2) solid transparent;
+			outline: none;
+			transition: 0.3s ease border-color;
+			&:focus, &:active {
+				border-color: #ffa807;
+			}
+			&::placeholder {
+				color: $textColor;;
+			}
+		}
+		&__textarea {
+			resize: none;
+		}
+		&__text {
+			color: #fff;
+			font-size: rem(14);
+		}
+		&__link {
+			color: #FFD260;
+		}
+		&__button {
+			padding: rem(20) rem(60);
+			font-size: rem(20);
+			font-weight: 600;
+			p.gradient-text {
+				display: none;
+			}
+			@media (max-width:$tablet){
+				margin-top: -1px;
+				padding: rem(16) rem(60);
+				background: #fff;
+				p:not(.gradient-text) {
+					display: none;
+				}
+				p.gradient-text {
+					display: inherit;
+				}
+
+			}
+		}
+	}
+}

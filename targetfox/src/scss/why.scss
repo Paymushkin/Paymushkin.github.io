@@ -1,0 +1,159 @@
+.why {
+
+	&__container {
+		padding-top: rem(49);
+		padding-bottom: rem(89);
+	}
+
+	&__title {
+		margin-bottom: rem(58);
+		@media (max-width:$tablet){
+			margin-bottom: rem(36);
+		}
+	}
+
+	&__grid {
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr; 
+		// grid-template-rows: 1fr 1fr 1fr 1fr; 
+		gap: rem(10); 
+		grid-template-areas: 
+			"grid-why__item-1 grid-why__item-2 grid-why__item-3"
+			"grid-why__item-4 grid-why__item-2 grid-why__item-3"
+			"grid-why__item-5 grid-why__item-6 grid-why__item-6"
+			"grid-why__item-7 grid-why__item-8 grid-why__item-9";
+
+		@media (max-width:$tablet){
+			grid-template-columns: 1fr 1fr; 
+			// grid-template-rows: repeat(6, rem(115)); 
+			grid-template-areas: 
+				"grid-why__item-1 grid-why__item-2"
+				"grid-why__item-4 grid-why__item-2"
+				"grid-why__item-6 grid-why__item-6"
+				"grid-why__item-3 grid-why__item-5"
+				"grid-why__item-3 grid-why__item-7"
+				"grid-why__item-8 grid-why__item-9";
+		}
+		@media (max-width:$mobileSmall){
+			grid-template-columns: 1fr; 
+			// grid-template-rows: repeat(6, rem(115)); 
+			grid-template-areas: 
+				"grid-why__item-1"
+				"grid-why__item-4"
+				"grid-why__item-5"
+				"grid-why__item-2"
+				"grid-why__item-6"
+				"grid-why__item-3"
+				"grid-why__item-7"
+				"grid-why__item-8"
+				"grid-why__item-9";
+		}
+	}
+	
+	.grid-why {
+
+		&__item {
+			position: relative;
+			padding: rem(28) rem(40) rem(28) rem(30);
+			background-color: #fff;
+			border-radius: rem(30);
+			@media (max-width:$tablet){
+				padding-right: rem(10);
+			}
+
+			&._highlight {
+				background: $gradient;
+
+				h4 {
+					color: #fff;
+				}
+				p {
+					color: #fff;
+				}
+			}
+
+			h4 {
+				margin-bottom: rem(8);
+				line-height: 1;
+			}
+
+			p {
+				@include adaptiveValue("font-size", 18, 16);
+			}
+		}
+
+		&__item-1 { grid-area: grid-why__item-1; }
+		&__item-2 {
+			grid-area: grid-why__item-2;
+			@media (max-width:$mobileSmall){
+				padding-bottom: rem(95); 
+			}
+			&::after{
+				content:url(../img/why/heart.png);
+				position: absolute;
+				bottom: -27%;
+				right: -3%;
+				z-index: 2;
+				animation: zoom 2s ease-in-out infinite alternate;
+				@media (max-width:$tablet){
+					right: -20%;
+				}
+				@media (max-width:$mobileSmall){
+					right: 0%;
+					bottom: -10%; 
+				}
+			} 
+		}
+		&__item-3 { 
+			grid-area: grid-why__item-3;
+			@media (max-width:$mobileSmall){
+				padding-bottom: rem(95);
+			}
+			&::after {
+				content:url(../img/why/rhombus.png);
+				position: absolute;
+				bottom: -45%;
+				right: -20%;
+				z-index: 2;
+				animation: zoom2 2s ease-in-out infinite alternate;
+				@media (max-width:$tablet){
+					bottom: -35%;
+					right: -35%;
+					animation: zoom3 2s ease-in-out infinite alternate;
+				}
+				@media (max-width:$mobileSmall){
+					right: -10%;
+					bottom: -50%;
+					animation: zoom2 2s ease-in-out infinite alternate;
+				}
+			}
+
+		}
+		&__item-4 { grid-area: grid-why__item-4; }
+		&__item-5 { grid-area: grid-why__item-5; }
+		&__item-6 { 
+			grid-area: grid-why__item-6;
+			@media (max-width:$mobileSmall){
+				padding: rem(40) rem(31) rem(28);
+				p {
+					max-width: rem(298);
+				}
+			}
+			&::after{
+				content:url(../img/why/trophy.png);
+				position: absolute;
+				bottom: -60%;
+				right: 10%;
+				z-index: 2;
+				animation: move 2s ease-in-out infinite alternate;
+				@media (max-width:$mobileSmall){
+					right: -5%;
+				}
+			}
+		}
+		&__item-7 { grid-area: grid-why__item-7; }
+		&__item-8 { grid-area: grid-why__item-8; }
+		&__item-9 { grid-area: grid-why__item-9; }
+
+	}
+}
