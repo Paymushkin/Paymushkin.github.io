@@ -9,11 +9,15 @@
 	align-items: center;
 	justify-content: space-around;
 	gap: rem(92);
-	width: 450vw;
+	// width: 450vw;
 	animation: scrolling 20s linear infinite;
 	@media (max-width:$tablet){
 		gap: rem(27);
+		width: 300vw;
 		animation-duration: 15s; 
+	}
+	@media (max-width:$mobile){
+		width: 350vw; 
 	}
 }
 

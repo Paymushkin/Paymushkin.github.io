@@ -99,7 +99,7 @@
 					right: -20%;
 				}
 				@media (max-width:$mobileSmall){
-					right: 0%;
+					right: -10%;
 					bottom: -10%; 
 				}
 			} 
@@ -122,8 +122,8 @@
 					animation: zoom3 2s ease-in-out infinite alternate;
 				}
 				@media (max-width:$mobileSmall){
-					right: -10%;
-					bottom: -50%;
+					right: -20%;
+					bottom: -40%;
 					animation: zoom2 2s ease-in-out infinite alternate;
 				}
 			}
@@ -147,7 +147,7 @@
 				z-index: 2;
 				animation: move 2s ease-in-out infinite alternate;
 				@media (max-width:$mobileSmall){
-					right: -5%;
+					right: -28%;
 				}
 			}
 		}

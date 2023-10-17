@@ -976,13 +976,18 @@ details[open] summary:before {
   align-items: center;
   justify-content: space-around;
   gap: 5.75rem;
-  width: 450vw;
   animation: scrolling 20s linear infinite;
 }
 @media (max-width: 67.49875em) {
   .marquee-content {
     gap: 1.6875rem;
+    width: 300vw;
     animation-duration: 15s;
+  }
+}
+@media (max-width: 41.06125em) {
+  .marquee-content {
+    width: 350vw;
   }
 }
 
@@ -999,7 +1004,8 @@ details[open] summary:before {
   padding: 6.6875rem 0;
 }
 .about .shape-1 {
-  left: 0;
+  left: -8%;
+  animation: rotate 8s ease-in-out infinite alternate-reverse;
 }
 @supports (top: clamp( 3.75rem , 86.25rem  +  -68.75vw , 31.25rem )) {
   .about .shape-1 {
@@ -1024,6 +1030,7 @@ details[open] summary:before {
 .about .shape-2 {
   top: 0;
   right: 0;
+  animation: rotate 8s ease-in-out infinite alternate-reverse;
 }
 @supports (top: clamp( -6.25rem , -9.4936709185rem  +  7.9113924842vw , 0.0000000625rem )) {
   .about .shape-2 {
@@ -1053,6 +1060,7 @@ details[open] summary:before {
 .about .shape-4 {
   bottom: 0;
   left: 0;
+  animation: rotate 8s ease-in-out infinite alternate-reverse;
 }
 @media (min-width: 1710px) {
   .about .shape-4 {
@@ -1321,6 +1329,7 @@ details[open] summary:before {
 .audience__body .shape-3 {
   top: -30%;
   right: -5%;
+  animation: rotate 8s ease-in-out infinite alternate-reverse;
 }
 @media (max-width: 1280px) {
   .audience__body .shape-3 {
@@ -1330,6 +1339,7 @@ details[open] summary:before {
 .audience__body .shape-4 {
   bottom: -20%;
   left: -25%;
+  animation: rotate 8s ease-in-out infinite alternate-reverse;
 }
 @supports (left: clamp( -18.75rem , 8.0357142857rem  +  -22.3214285714vw , -6.25rem )) {
   .audience__body .shape-4 {
@@ -1508,12 +1518,12 @@ details[open] summary:before {
   color: #fff;
 }
 @media (min-width: 67.49875em) {
-  .audience .block-audience button {
+  .audience .block-audience a {
     margin-left: 2.4375rem;
   }
 }
 @media (max-width: 36.06125em) {
-  .audience .block-audience button {
+  .audience .block-audience a {
     align-self: center;
   }
 }
@@ -1608,7 +1618,7 @@ details[open] summary:before {
 }
 @media (max-width: 36.06125em) {
   .why .grid-why__item-2::after {
-    right: 0%;
+    right: -10%;
     bottom: -10%;
   }
 }
@@ -1637,8 +1647,8 @@ details[open] summary:before {
 }
 @media (max-width: 36.06125em) {
   .why .grid-why__item-3::after {
-    right: -10%;
-    bottom: -50%;
+    right: -20%;
+    bottom: -40%;
     animation: zoom2 2s ease-in-out infinite alternate;
   }
 }
@@ -1669,7 +1679,7 @@ details[open] summary:before {
 }
 @media (max-width: 36.06125em) {
   .why .grid-why__item-6::after {
-    right: -5%;
+    right: -28%;
   }
 }
 .why .grid-why__item-7 {
@@ -2007,12 +2017,11 @@ details[open] summary:before {
 }
 .quick-start .timeline__point {
   position: absolute;
-  top: 50%;
+  top: -10px;
   width: 1.25rem;
   height: 1.25rem;
   background-color: #fff;
   border-radius: 50%;
-  transform: translateY(-50%);
 }
 .quick-start .timeline__point::after {
   content: "";
@@ -2579,10 +2588,10 @@ details[open] summary:before {
 }
 @keyframes zoom2 {
   0% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
   100% {
-    transform: scale(0.95);
+    transform: scale(0.7);
   }
 }
 @keyframes zoom3 {
@@ -2591,6 +2600,14 @@ details[open] summary:before {
   }
   100% {
     transform: scale(0.7);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  100% {
+    transform: rotate(180deg) scale(0.8);
   }
 }
 #www {

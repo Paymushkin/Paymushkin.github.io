@@ -16,6 +16,7 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Targetfox</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.min.css"/>
   </head>
   <body>
@@ -46,21 +47,19 @@
               <li><a href="#" data-goto="#quick-start">Быстрый старт</a></li>
               <li><a href="#" data-goto="#contacts">Контакты</a></li>
             </ul>
-          </nav>
-          <button class="button" data-da=".menu-body__top, 1079.98, 1">Связаться
-            <div class="flare"></div>
-          </button>
+          </nav><a class="button" href="#" data-goto="#contact-form" data-da=".menu-body__top, 1079.98, 1">Связаться
+            <div class="flare"></div></a>
         </div>
       </header>
       <main class="main-content">
         <section class="hero"> 
           <div class="hero__container">
             <div class="hero__body hero-body">
-              <div class="hero-body__content">
+              <div class="hero-body__content" data-aos="fade-right">
                 <h1 class="hero-body__title">Готовые 
                   <p class="gradient-text">аудитории </p> для рекламных кампаний
                 </h1>
-                <p class="hero-body__text">Уникальные сегменты для решения любых маркетинговых задач по фотографиям</p><a class="button _big">Связаться
+                <p class="hero-body__text">Уникальные сегменты для решения любых маркетинговых задач по фотографиям</p><a class="button _big" href="#" data-goto="#contact-form">Связаться
                   <div class="flare"></div></a>
               </div>
               <div class="hero-body__img"></div>
@@ -95,14 +94,14 @@
           <div class="about__container">
             <h2 class="about__title">Для кого актуально?</h2>
             <ul class="about__list about-list"> 
-              <li class="about-list__item list-item"> <img class="list-item__img" src="img/about/image-1.png" alt=""/>
+              <li class="about-list__item list-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><img class="list-item__img" src="img/about/image-1.png" alt=""/>
                 <div class="list-item__title gradient-text">Маркетологам</div>
                 <div class="list-item__text">
                   Организовать первичный сбор и анализ аудитории<br>Увеличить ROAS, ROI и CTR
 <br>Управлять клиентами
                 </div>
               </li>
-              <li class="about-list__item list-item"> <img class="list-item__img" src="img/about/image-2.png" alt=""/>
+              <li class="about-list__item list-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100"><img class="list-item__img" src="img/about/image-2.png" alt=""/>
                 <div class="list-item__title gradient-text">Аналитикам</div>
                 <div class="list-item__text">
                   Структурировать данные<br>Исключать пересечения в аудиторных сегментах
@@ -110,7 +109,7 @@
 <br>качественные данные
                 </div>
               </li>
-              <li class="about-list__item list-item"> <img class="list-item__img" src="img/about/image-3.png" alt=""/>
+              <li class="about-list__item list-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200"><img class="list-item__img" src="img/about/image-3.png" alt=""/>
                 <div class="list-item__title gradient-text">Владельцам бизнеса</div>
                 <div class="list-item__text">
                   Внедрить data-first <br>стратегию
@@ -121,7 +120,7 @@
 <br>Стать технологичной компанией
                 </div>
               </li>
-              <li class="about-list__item list-item"> <img class="list-item__img" src="img/about/image-4.png" alt=""/>
+              <li class="about-list__item list-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300"><img class="list-item__img" src="img/about/image-4.png" alt=""/>
                 <div class="list-item__title gradient-text">Рекламным агентсвам</div>
                 <div class="list-item__text">
                   Формировать решения, основанные на данных<br>Увеличивать шансы на победу в тендерах
@@ -139,7 +138,7 @@
             <h2 class="examples__title">Примеры уникальных сегментов</h2>
           </div>
           <div class="examples__body">
-            <ul class="examples__list examples-list">
+            <ul class="examples__list examples-list" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
               <li class="examples-list__item"><a class="examples-list__link" href="#">
                   <div class="examples-list__img" style="background-image:url(img/examples/fox-1.png)"></div>
                   <div class="examples-list__title">Очки для зрения</div>
@@ -189,7 +188,7 @@
                   <div class="examples-list__title">Военные</div>
                   <div class="examples-list__count"><img src="img/examples/users.svg" alt="icon"/><span class="gradient-text">1 000 000</span></div></a></li>
             </ul>
-            <ul class="examples__list examples-list">
+            <ul class="examples__list examples-list" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
               <li class="examples-list__item"><a class="examples-list__link" href="#">
                   <div class="examples-list__img" style="background-image:url(img/examples/fox-7.png)"></div>
                   <div class="examples-list__title">Свадьба</div>
@@ -244,39 +243,35 @@
         <section class="audience" id="audience">
           <div class="audience__container">
             <div class="audience__body"><img class="shape shape-4" src="img/common/shape-2.png" alt="shape"/><img class="shape shape-3" src="img/common/shape-3.png" alt="shape"/>
-              <div class="audience__title" data-da=".audience__container, 576.98, 0"> 
+              <div class="audience__title" data-da=".audience__container, 576.98, 0" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                 <h2>С чего начать?</h2>
                 <p>
                   Сформируйте пиксель и установите его на сайт.<br>Или сразу начните использовать готовые аудитории.</p>
               </div>
-              <div class="audience__lines">
+              <div class="audience__lines" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
                 <div class="audience__line"></div>
                 <div class="audience__line-2"></div>
               </div>
               <div class="audience__content">
-                <div class="audience__block block-audience"> 
+                <div class="audience__block block-audience" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                   <div class="block-audience__body">
                     <h3>Готовые аудитории</h3>
                     <p>Зарегистрируйтесь в личном кабинете, оплатите выбранный тариф, перейдите в раздел «Таксономия» и с помощью конструктора создайте нужную аудиторию, пересекая или объединяя сегменты.<br><br></p>
                     <p>Затем эти сегменты вы можете пошерить в личный кабинет рекламной площадки и использовать при настройке рекламных кампаний.</p>
-                  </div>
-                  <button class="button button-white">
-                    <p class="gradient-text">Связаться</p><span class="flare"></span>
-                  </button>
+                  </div><a class="button button-white" href="#" data-goto="#contact-form">
+                    <p class="gradient-text">Связаться</p><span class="flare"></span></a>
                 </div>
                 <div class="audience__lines-2">
                   <div class="line"> </div><span>Или</span>
                   <div class="line"></div>
                 </div>
-                <div class="audience__block block-audience">
+                <div class="audience__block block-audience" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                   <div class="block-audience__body">
                     <h3>Собственные данные</h3>
                     <p>Создайте пиксель, установите на сайт. И начните собирать собственные данные.<br><br></p>
                     <p>Их вы сможете сегментировать, объединять с аудиториями AiData и использовать в рекламных кампаниях. А также формировать подробные отчеты об аффинитивности ваших пользователей.</p>
-                  </div>
-                  <button class="button button-white">
-                    <p class="gradient-text">Связаться</p><span class="flare"></span>
-                  </button>
+                  </div><a class="button button-white" href="#" data-goto="#contact-form">
+                    <p class="gradient-text">Связаться</p><span class="flare"></span></a>
                 </div>
               </div>
             </div>
@@ -285,40 +280,40 @@
         <section class="why"> 
           <div class="why__container">
             <h2 class="why__title">Почему нам можно доверять?</h2>
-            <div class="why__grid grid-why"> 
-              <div class="grid-why__item grid-why__item-1">
+            <div class="why__grid grid-why">
+              <div class="grid-why__item grid-why__item-1" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                 <h4 class="gradient-text">12 МЛН +</h4>
                 <p>Клиентских профилей</p>
               </div>
-              <div class="grid-why__item grid-why__item-2">
+              <div class="grid-why__item grid-why__item-2" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                 <h4 class="gradient-text">Инструмент персонализации</h4>
                 <p>Такая рекламная<br>коммуникация<br>гарантированно<br>поднимает CTR</p>
               </div>
-              <div class="grid-why__item grid-why__item-3">
+              <div class="grid-why__item grid-why__item-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                 <h4 class="gradient-text">Непрерывное обновление</h4>
                 <p>Сегменты постоянно<br>пополняются<br>и обновляются</p>
               </div>
-              <div class="grid-why__item grid-why__item-4">
+              <div class="grid-why__item grid-why__item-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
                 <h4 class="gradient-text">1 200 МЛН +</h4>
                 <p>Распознаваемых изображений</p>
               </div>
-              <div class="grid-why__item grid-why__item-5">
+              <div class="grid-why__item grid-why__item-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
                 <h4 class="gradient-text">> 90%</h4>
                 <p>Активных профилей из РФ города 500К +</p>
               </div>
-              <div class="grid-why__item grid-why__item-6 _highlight">
+              <div class="grid-why__item grid-why__item-6 _highlight" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
                 <h4>Уникальная разработка</h4>
                 <p>250+ сформированных уникальных сегментов</p>
               </div>
-              <div class="grid-why__item grid-why__item-7">
+              <div class="grid-why__item grid-why__item-7" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
                 <h4 class="gradient-text">250 +</h4>
                 <p>Готовых сегментов</p>
               </div>
-              <div class="grid-why__item grid-why__item-8">
+              <div class="grid-why__item grid-why__item-8" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
                 <h4 class="gradient-text">2 000 +</h4>
                 <p>Распознаваемых объектов на фото</p>
               </div>
-              <div class="grid-why__item grid-why__item-9">
+              <div class="grid-why__item grid-why__item-9" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
                 <h4 class="gradient-text">+ 30% к CTR</h4>
                 <p>Минимальный прирост эффективности</p>
               </div>
@@ -328,14 +323,13 @@
         <section class="video"> 
           <div class="video__container">
             <div class="video__body video-body"> 
-              <div class="video-body__content">
+              <div class="video-body__content" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <h2 class="video-body__title gradient-text" data-da=".video__container, 1079.98, first">За 13 минут в этом видео мы расскажем:</h2>
                 <ul class="video-body__list"> 
                   <li>Что такое аудиторные сегменты</li>
                   <li>Как они формируются</li>
                   <li>Как их использовать в рекламных кампаниях, чтобы увеличить конверсию в лиды</li>
-                </ul>
-                <button class="button">Связаться<span class="flare"></span></button>
+                </ul><a class="button" href="#" data-goto="#contact-form">Связаться<span class="flare"></span></a>
               </div>
               <div class="video-body__video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/rMkdsoIgYdg?si=ehKUx1OUv1S1rQ8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
@@ -345,7 +339,7 @@
           <div class="cases__container"> 
             <h2 class="cases__title">Кейсы</h2>
             <ul class="cases__list grid">
-              <li class="grid-item"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
+              <li class="grid-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
                 <div class="grid-item__img"> </div>
                 <div class="grid-item__body"> 
                   <h5 class="grid-item__title">Готовые аудитории</h5>
@@ -353,7 +347,7 @@
                     <p class="gradient-text">Читать</p><span class="flare"></span></a>
                 </div>
               </li>
-              <li class="grid-item"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
+              <li class="grid-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
                 <div class="grid-item__img"> </div>
                 <div class="grid-item__body"> 
                   <h5 class="grid-item__title">Готовые аудитории</h5>
@@ -361,7 +355,7 @@
                     <p class="gradient-text">Читать</p><span class="flare"></span></a>
                 </div>
               </li>
-              <li class="grid-item"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
+              <li class="grid-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200"><img class="grid-item__label" src="img/cases/label.svg" alt="vc.ru"/>
                 <div class="grid-item__img"> </div>
                 <div class="grid-item__body"> 
                   <h5 class="grid-item__title">Готовые аудитории</h5>
@@ -376,26 +370,23 @@
           <div class="quick-start__container">
             <h2 class="quick-start__title">Быстрый старт</h2>
             <div class="quick-start__timeline timeline">
-              <div class="timeline__point point-1">
+              <div class="timeline__point point-1" data-aos="zoom-in">
                 <div class="timeline__text">Выберите актуальную тему или точный сегмент</div>
               </div>
-              <div class="timeline__point point-2">
+              <div class="timeline__point point-2" data-aos="zoom-in" data-aos-delay="100">
                 <div class="timeline__text">Укажите рекламную площадку</div>
               </div>
-              <div class="timeline__point point-3">
+              <div class="timeline__point point-3" data-aos="zoom-in" data-aos-delay="200">
                 <div class="timeline__text">Введите email и оставьте заявку</div>
               </div>
-              <div class="timeline__point point-4">
+              <div class="timeline__point point-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="timeline__text">Мы свяжемся с вами и уточним организационные моменты</div>
               </div>
-              <div class="timeline__point point-5">
+              <div class="timeline__point point-5" data-aos="zoom-in" data-aos-delay="400">
                 <div class="timeline__text">Загрузите аудиторные сегменты в личный кабинет.<br>Потом они будут доступны для настройки рекламных кампаний</div>
               </div>
-              <div class="timeline__point point-6">
-                <button class="button button-white timeline__button">
-                  <p class="gradient-text">Начать</p><span class="flare"></span>
-                </button>
-              </div>
+              <div class="timeline__point point-6" data-aos="zoom-in" data-aos-delay="500"><a class="button button-white timeline__button" href="#" data-goto="#contact-form">
+                  <p class="gradient-text">Начать</p><span class="flare"></span></a></div>
             </div>
           </div>
         </section>
@@ -403,23 +394,23 @@
           <div class="qa__container"> 
             <h2 class="qa__title">Самые актуальные вопросы</h2>
             <div class="qa__accordion accordion">
-              <details class="accordion__details" open="open">
+              <details class="accordion__details" open="open" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                 <summary>Что такое готовые аудитории?</summary>
                 <p>Готовые аудитории - это пользователи, а точнее их рекламные идентификаторы, которые объединены в сегменты по разному количеству параметров. На эти идентификаторы можно настроить таргетированную рекламу в VK Рекламе, Яндекс. Директ, Mytarget, Getintent и др. Эти идентификаторы вы сможете увидеть у себя в рекламном кабинете в обезличенном виде, поэтому никакие другие действия, как звонок или отправку смс, вы совершить не сможете. Другими словами, готовые аудиторию с минимальными затратами помогут выстроить и точнее найти свою целевую аудиторию в интернете.</p>
               </details>
-              <details class="accordion__details">
+              <details class="accordion__details" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                 <summary>В каких целях можно использовать готовые аудитории?</summary>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
               </details>
-              <details class="accordion__details">
+              <details class="accordion__details" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
                 <summary>Вдруг я не смогу разобраться, как этим пользоваться?</summary>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
               </details>
-              <details class="accordion__details">
+              <details class="accordion__details" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
                 <summary>Как сформировать прогноз от использования готовых аудиторий?</summary>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
               </details>
-              <details class="accordion__details">
+              <details class="accordion__details" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
                 <summary>Если я куплю самый дешевый тариф, не подорожает ли он<br>в следующем месяце?</summary>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
               </details>
@@ -429,7 +420,7 @@
         <section class="contacts" id="contacts">
           <div class="contacts__container">
             <h2 class="contacts__title">Контакты</h2>
-            <form class="contacts__form form-contacts" action="#" method="post">
+            <form class="contacts__form form-contacts" id="contact-form" action="#" method="post" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
               <div class="form-field">
                 <label>Темы</label>
                 <select class="form form-contacts__select" name="form[]">
@@ -478,6 +469,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -2,7 +2,9 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
+AOS.init({
+	duration: 1000
+});
 // const menuOpenClose = document.getElementById("menu"),
 // 	headerContainer = document.getElementById("header"),
 // 	headerSearchOpen = document.getElementById("search"),

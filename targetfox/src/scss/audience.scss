@@ -25,6 +25,7 @@
 		.shape-3 {
 			top: -30%;
 			right: -5%;
+			animation: rotate 8s ease-in-out infinite alternate-reverse;
 			@media (max-width:1280px){
 				display: none;
 			}
@@ -34,6 +35,7 @@
 			bottom: -20%;
 			left: -25%;
 			@include adaptiveValue("left", -300, -100, 1920, 1024, 1);
+			animation: rotate 8s ease-in-out infinite alternate-reverse;
 			@media (max-width:1280px){
 				left: unset;
 				right: -5%;
@@ -171,7 +173,7 @@
 			color: #fff;
 		}
 
-		button {
+		a {
 			@media (min-width:$tablet){
 				margin-left: rem(39);  
 			}

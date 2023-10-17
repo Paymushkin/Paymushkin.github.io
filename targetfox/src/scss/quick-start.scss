@@ -41,12 +41,12 @@
 
 		&__point {
 			position: absolute;
-			top: 50%;
+			top: -10px;
 			width: rem(20);
 			height: rem(20);
 			background-color: #fff;
 			border-radius: 50%;
-			transform: translateY(-50%);
+			// transform: translateY(-50%);
 			&::after{
 				content:'';
 				position: absolute;
