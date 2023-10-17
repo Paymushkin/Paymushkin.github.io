@@ -214,7 +214,8 @@
 					right: 0;
 					padding: rem(12) rem(30);
 					@media (max-width:$mobileSmall){
-						 padding: rem(16) rem(50); 
+						position: relative;
+						padding: rem(16) rem(50); 
 					}
 					p {
 						position: relative;

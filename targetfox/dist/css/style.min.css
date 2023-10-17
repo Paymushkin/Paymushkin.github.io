@@ -2230,6 +2230,7 @@ details[open] summary:before {
 }
 @media (max-width: 36.06125em) {
   .quick-start .timeline__point.point-6 .timeline__button {
+    position: relative;
     padding: 1rem 3.125rem;
   }
 }
