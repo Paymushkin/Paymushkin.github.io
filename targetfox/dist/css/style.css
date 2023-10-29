@@ -240,9 +240,15 @@ h6 {
   display: none;
 }
 
-body {
-  overflow-y: scroll;
+html {
+  overflow-x: hidden;
+  overscroll-behavior: none;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  scroll-behavior: auto;
   background-color: #F1F5F9;
 }
 .lock body {

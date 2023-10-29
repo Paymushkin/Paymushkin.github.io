@@ -2,7 +2,28 @@
 	background-color: $highlightColor;
 	&__container {
 		padding: rem(99) rem(15) rem(63);
+		@media (max-width:$tablet){
+			padding: rem(85) rem(20) rem(89);
+		}
 	}
+
+	&__contacts {
+		display: none;
+		flex-direction: column;
+		margin-bottom: rem(87);
+		@media (max-width:$tablet){
+			display: flex;
+		}
+		a {
+			display: flex;
+			justify-content: space-between;
+			padding: rem(20) 0;
+			color: #f2f2f2;
+			border-bottom: rem(1) solid $addColorGreen;
+			font-size: rem(22);
+		}
+	}
+
 	&-top {
 		display: flex;
 		justify-content: space-between;
@@ -10,18 +31,34 @@
 		margin-bottom: rem(40);
 		padding-bottom: rem(89);
 		border-bottom: rem(1) solid $addColorGreen;
+		@media (max-width:$tablet){
+			margin-bottom: 0;
+			padding-bottom: rem(41);
+		}
 
 		&__text {
 			font-size: rem(40);
 			line-height: math.div(49, 40);
 			font-weight: 500;
 			color: #ffffff;
+
+			@media (max-width:$tablet){
+				display: flex;
+				flex-direction: column;
+				gap: rem(16);
+				color: #73A9A8;
+				font-size: rem(36);
+				line-height: math.div(44, 36);
+			}
 		}
 
 		&__btns {
 			display: flex;
 			gap: rem(20);
 			padding: rem(12) 0;
+			@media (max-width:$tablet){
+				display: none;
+			}
 		}
 	}
 
@@ -29,12 +66,17 @@
 		display: flex;
 		justify-content: space-between;
 		gap: rem(16);
-		margin-bottom: rem(111);
 		color: #ffffff;
+		@media (min-width:$tablet){
+			margin-bottom: rem(111);  
+		}
 
 		&__wrapper {
 			display: flex;
 			flex: 1 1 auto;
+			@media (max-width:$tablet){
+				display: none;
+			}
 		}
 
 		ul {
@@ -68,6 +110,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		@media (max-width:$tablet){
+			display: none;
+		}
 		&__contacts {
 			display: flex;
 			flex-direction: column;
@@ -103,9 +148,14 @@
 	}
 
 	&-nav {
-		flex: 0 1 rem(180);
+		@media (min-width:$tablet){
+			flex: 0 1 rem(180);  
+		}
 		ul {
 			gap: rem(24);
+			@media (max-width:$tablet){
+				gap: rem(20);
+			}
 			h4 {
 				font-size: rem(18);
 				line-height: math.div(22, 18);
@@ -116,6 +166,11 @@
 					&:hover{
 						opacity: 0.5;
 					}
+				}
+				@media (max-width:$tablet){
+					color: #73A9A8;
+					font-size: rem(16);
+					line-height: math.div(18, 16);
 				}
 			}
 		}

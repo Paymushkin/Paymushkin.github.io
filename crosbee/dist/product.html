@@ -13,11 +13,46 @@
       <header class="header" id="header">
         <nav class="menu" hidden="hidden">
           <button class="menu__icon icon-menu" type="button"><span></span></button>
-          <div class="menu__body"></div>
+          <div class="menu__body mobile-menu"> 
+            <div class="mobile-menu__contacts"><a class="contacts__tel" href="tel:+74951207776">+7(495) 120 77 76</a><a href="mailto:info@crosbee">info@crosbee.ru</a></div>
+            <ul class="mobile-menu__catalog">
+              <li><a href="/catalog.html">Весь каталог</a></li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+            </ul><a class="mobile-menu__link"><span>Скачать каталог</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="download" clip-path="url(#clip0_649_3014)">
+                  <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path id="Vector_2" d="M5 8.33325L10 13.3333L15 8.33325" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path id="Vector_3" d="M10 13.3333V0.833252" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_649_3014">
+                    <rect width="20" height="20" fill="white"></rect>
+                  </clippath>
+                </defs>
+              </svg></a><span class="mobile-menu__copy">Crosbee 2023. Все права защищены</span>
+          </div>
         </nav>
         <div class="header__logo"><img src="img/header/logo.svg" alt="Logo"/></div>
         <nav class="header__nav">
-          <ul data-da=".menu__body, 1023.98, first">
+          <ul class="nav-list" data-da=".menu__body, 1023.98, 2">
             <li class="active"><a href="catalog.html">Каталог</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Кейсы</a></li>
@@ -25,19 +60,17 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div class="header__btns" data-da=".menu__body, 1023.98, last">
+        <div class="header__btns">
           <button class="button"> <span>Скачать каталог</span></button>
-          <button class="button button-highlight" data-text="Помогите мне"><span>Помогите мне</span></button>
+          <button class="button button-highlight" data-text="Помогите мне"><span>Помогите мне</span></button><a class="header__card icon-card"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg></a>
         </div>
-        <button class="header__card icon-card"> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
       </header>
-      <main class="main-content">
+      <main class="main-content scroll">
         <div class="breadcrumb" id="breadcrumb">
           <ol class="breadcrumb__list"> 
             <li class="breadcrumb__item"><a class="breadcrumb__link" href="/catalog"> Каталог</a></li>
@@ -62,7 +95,7 @@
         </div>
         <article class="product-item"> 
           <h1 class="product-item__title">Спортивный комплекс<span>К1197</span></h1>
-          <div class="product-item__colors colors-wrapper"><span class="colors-wrapper__title">Возможные цвета</span>
+          <div class="product-item__colors colors-wrapper" data-da=".product-item__mob-colors, 768.98, first"><span class="colors-wrapper__title">Возможные цвета</span>
             <ul class="colors-wrapper__list"> 
               <li> <a href="#" style="background-color:#3262ad"></a></li>
               <li class="current"> <a href="#" style="background-color:#eb3b2d"></a></li>
@@ -81,13 +114,13 @@
               <div class="item-grid__item product-ibg_contain"><img src="img/product/k1197-3.png" loading="lazy" alt="k1197"/></div>
             </div>
           </div>
+          <div class="product-item__mob-colors"></div>
           <div class="product-item__info item-info">
             <div class="item-info__specifications">
               <h3 class="item-info__title">Характеристики</h3>
               <ul class="item-info__list info-list"> 
                 <li><span class="info-list__item">Размеры</span><span class="info-list__value">6 500 x 5 340 x 3 500</span></li>
                 <li><span class="info-list__item">Зона безопасности</span><span class="info-list__value">9 500 x 8 340</span></li>
-                <li><span class="info-list__item">Комплектация</span><span class="info-list__value">1 шт</span></li>
                 <li><span class="info-list__item">Материалы</span><span class="info-list__value">Металл, ПНД, нерж. сталь, HDPE</span></li>
                 <li><span class="info-list__item">Возраст</span><span class="info-list__value">от 5 до 12 лет</span></li>
                 <li><span class="info-list__item">Тип</span><span class="info-list__value">Спортивный объект</span></li>
@@ -96,7 +129,7 @@
                 <button class="button button-highlight _with-icon"> <span>Добавить в заказ <i>+</i></span></button>
               </div>
             </div>
-            <div class="item-info__scheme"><img src="img/product/k1197-scheme.png" alt="scheme"/><a href="files/k1197-scheme.pdf" download="download">Скачать схему (DVG)
+            <div class="item-info__scheme" data-da=".product-desc__scheme, 768.98, first"><img src="img/product/k1197-scheme.png" alt="scheme"/><a href="files/k1197-scheme.pdf" download="download">Скачать схему (DVG)
                 <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M4.5 0C4.72593 0 4.90909 0.191878 4.90909 0.428571V7.53677L6.25618 6.12553C6.41594 5.95816 6.67497 5.95816 6.83473 6.12553C6.99449 6.29289 6.99449 6.56425 6.83473 6.73162L4.78927 8.87447C4.62951 9.04184 4.37049 9.04184 4.21073 8.87447L2.16527 6.73162C2.00551 6.56425 2.00551 6.29289 2.16527 6.12553C2.32503 5.95816 2.58406 5.95816 2.74382 6.12553L4.09091 7.53677V0.428571C4.09091 0.191878 4.27407 0 4.5 0ZM1.43182 4.28571C1.26907 4.28571 1.11299 4.35344 0.997912 4.474C0.882833 4.59456 0.818182 4.75808 0.818182 4.92857V10.5C0.818182 10.6705 0.882833 10.834 0.997912 10.9546C1.11299 11.0751 1.26907 11.1429 1.43182 11.1429H7.56818C7.73093 11.1429 7.88701 11.0751 8.00209 10.9546C8.11717 10.834 8.18182 10.6705 8.18182 10.5V4.92857C8.18182 4.75808 8.11717 4.59456 8.00209 4.474C7.88701 4.35344 7.73093 4.28571 7.56818 4.28571H6.54545C6.31952 4.28571 6.13636 4.09384 6.13636 3.85714C6.13636 3.62045 6.31952 3.42857 6.54545 3.42857H7.56818C7.94792 3.42857 8.31211 3.58661 8.58063 3.86791C8.84915 4.14922 9 4.53075 9 4.92857V10.5C9 10.8978 8.84915 11.2794 8.58063 11.5607C8.31211 11.842 7.94792 12 7.56818 12H1.43182C1.05208 12 0.687888 11.842 0.41937 11.5607C0.150852 11.2794 0 10.8978 0 10.5V4.92857C0 4.53075 0.150852 4.14922 0.41937 3.86791C0.687888 3.58661 1.05208 3.42857 1.43182 3.42857H2.45455C2.68048 3.42857 2.86364 3.62045 2.86364 3.85714C2.86364 4.09384 2.68048 4.28571 2.45455 4.28571H1.43182Z" fill="white"></path>
                 </svg></a></div>
@@ -127,7 +160,84 @@
               <h3 class="product-desc__title">Описание</h3>
               <p class="product-desc__text">
                 Crosbee предлагает широкий ассортимент игровых систем и элементов благоустройства городской среды. Каталог компании разнообразен и уникален, малые архитектурные формы представлены в категориях: унифицированные конструкции для детей широкой возрастной группы. <br><br>Комплексы для самых маленьких и требовательных, уличные спортивные тренажеры, элементы благоустройства дворовых территорий, а также специализированные решения для игровых парков.</p>
+              <div class="product-desc__scheme"></div>
+              <ul class="product-desc__links">
+                <li> <a href="#"> <span>Скачать схему (DWG)</span>
+                    <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="download" clip-path="url(#clip0_649_3014)">
+                        <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path id="Vector_2" d="M5 8.33325L10 13.3333L15 8.33325" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path id="Vector_3" d="M10 13.3333V0.833252" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </g>
+                      <defs>
+                        <clippath id="clip0_649_3014">
+                          <rect width="20" height="20" fill="383838"></rect>
+                        </clippath>
+                      </defs>
+                    </svg></a></li>
+                <li> 
+                  <button><span>Поделиться ссылкой</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                      <path d="M9 10.4503C9.32361 10.894 9.73648 11.2612 10.2106 11.5269C10.6847 11.7926 11.209 11.9505 11.7479 11.9901C12.2868 12.0297 12.8277 11.95 13.3339 11.7563C13.8401 11.5626 14.2998 11.2596 14.6817 10.8677L16.9424 8.54902C17.6287 7.82019 18.0084 6.84404 17.9999 5.83081C17.9913 4.81758 17.595 3.84834 16.8965 3.13185C16.1979 2.41536 15.2529 2.00895 14.265 2.00015C13.2771 1.99134 12.3254 2.38085 11.6148 3.08478L10.3187 4.4064" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11 9.5497C10.6764 9.10597 10.2635 8.73881 9.78939 8.47313C9.31527 8.20745 8.79098 8.04946 8.25209 8.00987C7.7132 7.97029 7.17231 8.05004 6.66611 8.24371C6.15991 8.43738 5.70024 8.74045 5.31828 9.13235L3.05764 11.451C2.37132 12.1798 1.99156 13.156 2.00014 14.1692C2.00873 15.1824 2.40497 16.1517 3.10354 16.8681C3.80211 17.5846 4.7471 17.991 5.73498 17.9999C6.72287 18.0087 7.6746 17.6192 8.3852 16.9152L9.67376 15.5936" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div class="product-item__recommendation"> 
+            <div class="products__header products-header">
+              <h2 class="products-header__title">Игровые комплексы XL</h2>
+            </div>
+            <ul class="products__list">
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="products__item product"><a href="product.html">
+                  <div class="product__inner">
+                    <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                    <div class="product__body product-body">
+                      <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    </div>
+                  </div></a></li>
+              <li class="product _to-category" style="background-image: url(img/catalog/size-xl/poster-mobile.jpg)"><a href="category.html"><span>Смотреть все
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="13" viewbox="0 0 36 13" fill="none">
+                      <path opacity="0.9" d="M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z" fill="#383838"></path>
+                    </svg></span></a></li>
+            </ul>
           </div>
         </article>
       </main>
@@ -135,12 +245,35 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer-top">
-          <div class="footer-top__text">Crosbee<br>реализует в жизнь детские мечты</div>
+          <div class="footer-top__text"> <span>Crosbee 2023</span></div>
           <div class="footer-top__btns"> 
             <button class="button"> <span>Скачать каталог</span></button>
-            <button class="button"> <span>Позвоните мне</span></button>
+            <button class="button"> <span>Заказать звонок</span></button>
           </div>
         </div>
+        <div class="footer__contacts"> <a href="#"> <span>Заказать звонок</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_649_3009)">
+                <path d="M12.1492 4.44035C12.9909 4.60425 13.7644 5.01511 14.3708 5.62033C14.9772 6.22556 15.3888 6.99761 15.5531 7.83769M12.1492 1C13.8979 1.19389 15.5286 1.97549 16.7735 3.21645C18.0184 4.45741 18.8035 6.08398 19 7.82909M18.1383 14.6926V17.2728C18.1392 17.5124 18.0901 17.7495 17.9939 17.969C17.8978 18.1884 17.7568 18.3854 17.5799 18.5474C17.4031 18.7093 17.1943 18.8326 16.967 18.9093C16.7396 18.9861 16.4987 19.0146 16.2597 18.993C13.608 18.7054 11.0608 17.8011 8.82292 16.3526C6.74082 15.032 4.97557 13.2701 3.65252 11.192C2.19617 8.94824 1.28985 6.3936 1.00699 3.73508C0.98546 3.49723 1.01378 3.25752 1.09015 3.0312C1.16652 2.80488 1.28927 2.59691 1.45059 2.42054C1.6119 2.24416 1.80824 2.10324 2.02711 2.00675C2.24598 1.91026 2.48258 1.86031 2.72185 1.86009H5.30705C5.72525 1.85598 6.13069 2.00379 6.44778 2.27597C6.76487 2.54815 6.97198 2.92612 7.03051 3.33944C7.13963 4.16518 7.34199 4.97595 7.63373 5.75628C7.74967 6.06413 7.77476 6.39869 7.70603 6.72034C7.63731 7.04198 7.47764 7.33722 7.24595 7.57106L6.15155 8.66337C7.37827 10.8166 9.16456 12.5995 11.322 13.8239L12.4164 12.7316C12.6506 12.5003 12.9465 12.341 13.2687 12.2724C13.591 12.2038 13.9262 12.2288 14.2346 12.3445C15.0164 12.6357 15.8288 12.8377 16.6561 12.9466C17.0747 13.0055 17.457 13.216 17.7303 13.5379C18.0035 13.8598 18.1488 14.2708 18.1383 14.6926Z" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_649_3009">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a><a href="#"> <span>Скачать каталог</span>
+            <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="download" clip-path="url(#clip0_649_3014)">
+                <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="Vector_2" d="M5 8.33325L10 13.3333L15 8.33325" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="Vector_3" d="M10 13.3333V0.833252" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_649_3014">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a></div>
         <div class="footer-center">
           <div class="footer-center__wrapper">
             <div class="footer-center__menu footer-menu"> 
@@ -186,11 +319,14 @@
               <li> 
                 <h4>Контакты</h4>
               </li>
+              <li> 
+                <h4>Политика конфиденциальности</h4>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="footer-bottom">
-          <div class="footer-bottom__contacts contacts"><a class="contacts__tel" href="tel:+74951207776">+7(495) 120 77 76</a><a href="mailto:info@crosbee">info@crosbee.ru </a></div>
+          <div class="footer-bottom__contacts contacts"><a class="contacts__tel" href="tel:+74951207776" data-da=".footer-top__text, 1023.98, last">+7(495) 120 77 76</a><a href="mailto:info@crosbee" data-da=".footer-top__text, 1023.98, last">info@crosbee.ru </a></div>
           <div class="footer-bottom__logo"><img src="img/footer/logo.svg" alt="logo"/></div>
         </div>
       </div>

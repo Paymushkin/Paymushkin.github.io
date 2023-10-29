@@ -13,11 +13,46 @@
       <header class="header" id="header">
         <nav class="menu" hidden="hidden">
           <button class="menu__icon icon-menu" type="button"><span></span></button>
-          <div class="menu__body"></div>
+          <div class="menu__body mobile-menu"> 
+            <div class="mobile-menu__contacts"><a class="contacts__tel" href="tel:+74951207776">+7(495) 120 77 76</a><a href="mailto:info@crosbee">info@crosbee.ru</a></div>
+            <ul class="mobile-menu__catalog">
+              <li><a href="/catalog.html">Весь каталог</a></li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+              <li> 
+                <details> 
+                  <summary>Детские площадки</summary>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </details>
+              </li>
+            </ul><a class="mobile-menu__link"><span>Скачать каталог</span>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="download" clip-path="url(#clip0_649_3014)">
+                  <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path id="Vector_2" d="M5 8.33325L10 13.3333L15 8.33325" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path id="Vector_3" d="M10 13.3333V0.833252" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_649_3014">
+                    <rect width="20" height="20" fill="white"></rect>
+                  </clippath>
+                </defs>
+              </svg></a><span class="mobile-menu__copy">Crosbee 2023. Все права защищены</span>
+          </div>
         </nav>
         <div class="header__logo"><img src="img/header/logo.svg" alt="Logo"/></div>
         <nav class="header__nav">
-          <ul data-da=".menu__body, 1023.98, first">
+          <ul class="nav-list" data-da=".menu__body, 1023.98, 2">
             <li class="active"><a href="catalog.html">Каталог</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Кейсы</a></li>
@@ -25,23 +60,83 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div class="header__btns" data-da=".menu__body, 1023.98, last">
+        <div class="header__btns">
           <button class="button"> <span>Скачать каталог</span></button>
-          <button class="button button-highlight" data-text="Помогите мне"><span>Помогите мне</span></button>
+          <button class="button button-highlight" data-text="Помогите мне"><span>Помогите мне</span></button><a class="header__card icon-card"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg></a>
         </div>
-        <button class="header__card icon-card"> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
       </header>
-      <main class="main-content">
+      <main class="main-content scroll">
         <div class="section__poster poster" style="background-image:url(img/catalog/poster/all.png)">
           <h1 class="poster__title">Каталог</h1>
         </div>
         <div class="section__filters filters">
+          <div class="filters__icon-mobile" id="show-filters">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewbox="0 0 25 20" fill="none">
+              <path d="M19.5303 0.46967C19.2374 0.176777 18.7626 0.176777 18.4697 0.46967L13.6967 5.24264C13.4038 5.53553 13.4038 6.01041 13.6967 6.3033C13.9896 6.59619 14.4645 6.59619 14.7574 6.3033L19 2.06066L23.2426 6.3033C23.5355 6.59619 24.0104 6.59619 24.3033 6.3033C24.5962 6.01041 24.5962 5.53553 24.3033 5.24264L19.5303 0.46967ZM18.25 19C18.25 19.4142 18.5858 19.75 19 19.75C19.4142 19.75 19.75 19.4142 19.75 19H18.25ZM18.25 1V19H19.75V1H18.25Z" fill="#383838"></path>
+              <path d="M6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303L0.696699 14.7574C0.403806 14.4645 0.403806 13.9896 0.696699 13.6967C0.989593 13.4038 1.46447 13.4038 1.75736 13.6967L6 17.9393L10.2426 13.6967C10.5355 13.4038 11.0104 13.4038 11.3033 13.6967C11.5962 13.9896 11.5962 14.4645 11.3033 14.7574L6.53033 19.5303ZM5.25 1C5.25 0.585791 5.58579 0.250004 6 0.250004C6.41421 0.250004 6.75 0.585791 6.75 1H5.25ZM5.25 19V1H6.75V19H5.25Z" fill="#383838"></path>
+            </svg>
+          </div>
+          <form class="mobile-filters" action="" method="post" id="mobile-filters">
+            <div class="mobile-filters__title">
+              <div id="hide-filters">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20" fill="none">
+                  <path d="M1.36401 1L19.3639 18.9998" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1.36401 19L19.3639 1.00015" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div><span>Сортировать товары</span>
+            </div>
+            <div class="mobile-filters__filter options">
+              <div class="options__item">
+                <input class="options__input" id="o-1_1" hidden="" type="radio" value="1" name="option-1"/>
+                <label class="options__label" for="o-1_1"><span class="options__text">Цена по возрастанию</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-1_2" hidden="" type="radio" value="2" name="option-1"/>
+                <label class="options__label" for="o-1_2"><span class="options__text">Цена по убыванию</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-1_3" hidden="" checked="" type="radio" value="3" name="option-1"/>
+                <label class="options__label" for="o-1_3"><span class="options__text">По алфавиту</span></label>
+              </div>
+            </div>
+            <div class="mobile-filters__filter options">
+              <div class="options__item">
+                <input class="options__input" id="o-2_1" hidden="" type="radio" value="1" name="option-2"/>
+                <label class="options__label" for="o-2_1"><span class="options__text">Общественные территории</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-2_2" hidden="" type="radio" value="2" name="option-2"/>
+                <label class="options__label" for="o-2_2"><span class="options__text">Детские сады</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-2_3" hidden="" checked="" type="radio" value="3" name="option-2"/>
+                <label class="options__label" for="o-2_3"><span class="options__text">Все</span></label>
+              </div>
+            </div>
+            <div class="mobile-filters__filter options">
+              <div class="options__item">
+                <input class="options__input" id="o-3_1" hidden="" type="radio" value="1" name="option-3"/>
+                <label class="options__label" for="o-3_1"><span class="options__text">Металл</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-3_2" hidden="" type="radio" value="2" name="option-3"/>
+                <label class="options__label" for="o-3_2"><span class="options__text">Композит</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="o-3_3" hidden="" checked="" type="radio" value="3" name="option-3"/>
+                <label class="options__label" for="o-3_3"><span class="options__text">Все</span></label>
+              </div>
+            </div>
+            <div class="mobile-filters__btns"> 
+              <button class="button-black" type="submit" id="submit-filters">Применить</button>
+              <button class="button-white" type="reset" id="reset-filters">Сбросить</button>
+            </div>
+          </form>
           <form class="filters__form" action="" method="post">
             <ul class="filters__list"> 
               <li>
@@ -85,7 +180,7 @@
             </ul>
             <div class="filters__search search" id="search">
               <form action="" method="post">
-                <input class="search__input" id="search-input" type="text" name="search-input" placeholder="Игровой комплекс"/>
+                <input class="search__input" id="search-input" type="text" name="search-input" placeholder="Что найти"/>
                 <svg id="search-btn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Search_icon">
                     <path id="Vector" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -98,310 +193,329 @@
         </div>
         <div class="products">
           <div class="products__header products-header">
-            <h2 class="products-header__title">Игровые комплексы размера XL</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="63" height="20" viewBox="0 0 63 20" fill="none">
-<path d="M53.1226 18.5472L61.8962 9.77358M61.8962 9.77358L53.1226 1M61.8962 9.77358H1.5" stroke="white" stroke-width="1.69811" stroke-linecap="round" stroke-linejoin="round"/>
+            <h2 class="products-header__title">Игровые комплексы размера XL</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+<path d="M4.5 9.5L7.5 6.5L4.5 3.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
           </div>
           <ul class="products__list">
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                      <li style="background-color:#e751d8"></li>
-                      <li style="background-color:#3262ad"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="product _to-category" style="background-image: url(img/catalog/size-xl/poster-mobile.jpg)"><a href="category.html"><span>Смотреть все
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="13" viewbox="0 0 36 13" fill="none">
+                    <path opacity="0.9" d="M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z" fill="#383838"></path>
+                  </svg></span></a></li>
           </ul>
         </div>
         <div class="products">
           <div class="products__header products-header">
-            <h2 class="products-header__title">Игровые комплексы размера L</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="63" height="20" viewBox="0 0 63 20" fill="none">
-<path d="M53.1226 18.5472L61.8962 9.77358M61.8962 9.77358L53.1226 1M61.8962 9.77358H1.5" stroke="white" stroke-width="1.69811" stroke-linecap="round" stroke-linejoin="round"/>
+            <h2 class="products-header__title">Игровые комплексы размера L</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+<path d="M4.5 9.5L7.5 6.5L4.5 3.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
           </div>
           <ul class="products__list">
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                      <li style="background-color:#e751d8"></li>
-                      <li style="background-color:#3262ad"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-xl/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="product _to-category" style="background-image: url(img/catalog/size-xl/poster-mobile.jpg)"><a href="category.html"><span>Смотреть все
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="13" viewbox="0 0 36 13" fill="none">
+                    <path opacity="0.9" d="M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z" fill="#383838"></path>
+                  </svg></span></a></li>
           </ul>
         </div>
         <div class="products">
           <div class="products__header products-header">
-            <h2 class="products-header__title">Игровые комплексы размера M</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="63" height="20" viewBox="0 0 63 20" fill="none">
-<path d="M53.1226 18.5472L61.8962 9.77358M61.8962 9.77358L53.1226 1M61.8962 9.77358H1.5" stroke="white" stroke-width="1.69811" stroke-linecap="round" stroke-linejoin="round"/>
+            <h2 class="products-header__title">Игровые комплексы размера M</h2><a class="products-header__link" href="category.html"><span>Смотреть еще</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+<path d="M4.5 9.5L7.5 6.5L4.5 3.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
           </div>
           <ul class="products__list">
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <ul class="product-body__colors colors-list">
-                      <li style="background-color:#3262ad"></li>
-                      <li style="background-color:#eb3b2d"></li>
-                      <li style="background-color:#df601b"></li>
-                      <li style="background-color:#e9ef55"></li>
-                      <li style="background-color:#82d33f"></li>
-                      <li style="background-color:#1db147"></li>
-                      <li style="background-color:#3fc9c6"></li>
-                      <li style="background-color:#7459af"></li>
-                      <li style="background-color:#e751d8"></li>
-                      <li style="background-color:#3262ad"></li>
-                    </ul>
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
-            <li class="produsts__item product"><a href="product.html">
+            <li class="products__item product"><a href="product.html">
                 <div class="product__inner">
                   <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
                   <div class="product__body product-body">
-                    <h4 class="product-body__text">Игровой комплекс K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
                   </div>
                 </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="products__item product"><a href="product.html">
+                <div class="product__inner">
+                  <article class="product__card item-ibg_contain"><img src="img/catalog/size-m/item-1.png" loading="lazy" alt="product"/></article>
+                  <div class="product__body product-body">
+                    <h4 class="product-body__text">K1012</h4><span class="product-body__size">14 500 x 13 000 x 3 900</span><span class="product-body__price">27 500 000 р.</span>
+                  </div>
+                </div></a></li>
+            <li class="product _to-category" style="background-image: url(img/catalog/size-m/poster-mobile.jpg)"><a href="category.html"><span>Смотреть все
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="13" viewbox="0 0 36 13" fill="none">
+                    <path opacity="0.9" d="M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z" fill="#383838"></path>
+                  </svg></span></a></li>
           </ul>
         </div>
-        <div class="page-bottom"><a class="products-header__link" href="category.html"><span>Смотреть еще</span></a></div>
       </main>
     </div>
     <footer class="footer">
       <div class="footer__container">
         <div class="footer-top">
-          <div class="footer-top__text">Crosbee<br>реализует в жизнь детские мечты</div>
+          <div class="footer-top__text"> <span>Crosbee 2023</span></div>
           <div class="footer-top__btns"> 
             <button class="button"> <span>Скачать каталог</span></button>
-            <button class="button"> <span>Позвоните мне</span></button>
+            <button class="button"> <span>Заказать звонок</span></button>
           </div>
         </div>
+        <div class="footer__contacts"> <a href="#"> <span>Заказать звонок</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_649_3009)">
+                <path d="M12.1492 4.44035C12.9909 4.60425 13.7644 5.01511 14.3708 5.62033C14.9772 6.22556 15.3888 6.99761 15.5531 7.83769M12.1492 1C13.8979 1.19389 15.5286 1.97549 16.7735 3.21645C18.0184 4.45741 18.8035 6.08398 19 7.82909M18.1383 14.6926V17.2728C18.1392 17.5124 18.0901 17.7495 17.9939 17.969C17.8978 18.1884 17.7568 18.3854 17.5799 18.5474C17.4031 18.7093 17.1943 18.8326 16.967 18.9093C16.7396 18.9861 16.4987 19.0146 16.2597 18.993C13.608 18.7054 11.0608 17.8011 8.82292 16.3526C6.74082 15.032 4.97557 13.2701 3.65252 11.192C2.19617 8.94824 1.28985 6.3936 1.00699 3.73508C0.98546 3.49723 1.01378 3.25752 1.09015 3.0312C1.16652 2.80488 1.28927 2.59691 1.45059 2.42054C1.6119 2.24416 1.80824 2.10324 2.02711 2.00675C2.24598 1.91026 2.48258 1.86031 2.72185 1.86009H5.30705C5.72525 1.85598 6.13069 2.00379 6.44778 2.27597C6.76487 2.54815 6.97198 2.92612 7.03051 3.33944C7.13963 4.16518 7.34199 4.97595 7.63373 5.75628C7.74967 6.06413 7.77476 6.39869 7.70603 6.72034C7.63731 7.04198 7.47764 7.33722 7.24595 7.57106L6.15155 8.66337C7.37827 10.8166 9.16456 12.5995 11.322 13.8239L12.4164 12.7316C12.6506 12.5003 12.9465 12.341 13.2687 12.2724C13.591 12.2038 13.9262 12.2288 14.2346 12.3445C15.0164 12.6357 15.8288 12.8377 16.6561 12.9466C17.0747 13.0055 17.457 13.216 17.7303 13.5379C18.0035 13.8598 18.1488 14.2708 18.1383 14.6926Z" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_649_3009">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a><a href="#"> <span>Скачать каталог</span>
+            <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="download" clip-path="url(#clip0_649_3014)">
+                <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="Vector_2" d="M5 8.33325L10 13.3333L15 8.33325" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path id="Vector_3" d="M10 13.3333V0.833252" stroke="#73A9A8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_649_3014">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a></div>
         <div class="footer-center">
           <div class="footer-center__wrapper">
             <div class="footer-center__menu footer-menu"> 
@@ -447,11 +561,14 @@
               <li> 
                 <h4>Контакты</h4>
               </li>
+              <li> 
+                <h4>Политика конфиденциальности</h4>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="footer-bottom">
-          <div class="footer-bottom__contacts contacts"><a class="contacts__tel" href="tel:+74951207776">+7(495) 120 77 76</a><a href="mailto:info@crosbee">info@crosbee.ru </a></div>
+          <div class="footer-bottom__contacts contacts"><a class="contacts__tel" href="tel:+74951207776" data-da=".footer-top__text, 1023.98, last">+7(495) 120 77 76</a><a href="mailto:info@crosbee" data-da=".footer-top__text, 1023.98, last">info@crosbee.ru </a></div>
           <div class="footer-bottom__logo"><img src="img/footer/logo.svg" alt="logo"/></div>
         </div>
       </div>

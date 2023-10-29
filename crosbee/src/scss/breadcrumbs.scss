@@ -51,5 +51,9 @@
 	&__search-form {
 		flex: 1 1 auto;
 		display: flex;
+
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 }

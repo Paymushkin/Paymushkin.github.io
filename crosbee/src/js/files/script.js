@@ -46,3 +46,19 @@ if (searchBtn) {
 		searchContainer.classList.toggle("active")
 	})
 }
+
+const showFilters = document.getElementById("show-filters")
+const hideFilters = document.getElementById("hide-filters")
+const mobileFilters = document.getElementById("mobile-filters")
+
+if (showFilters) {
+	showFilters.addEventListener("click", ()=> {
+		mobileFilters.classList.add("active")
+	})
+}
+
+if (hideFilters) {
+	hideFilters.addEventListener("click", ()=> {
+		mobileFilters.classList.remove("active")
+	})
+}

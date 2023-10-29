@@ -116,4 +116,19 @@
 			}
 		}
 	}
+	&-black {
+		padding: rem(10) rem(22);
+		border-radius: rem(5);
+		min-width: rem(140);
+		color: #fff;
+		background-color: $textColor;
+	}
+	&-white {
+		padding: rem(10) rem(22);
+		border-radius: rem(5);
+		min-width: rem(140);
+		color: $textColor;
+		background-color: #fff;
+		border: 1px solid $textColor;
+	}
 }

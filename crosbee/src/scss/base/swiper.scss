@@ -61,10 +61,16 @@
 	}
 	.prev {
 		left: rem(33);
-		transform: rotate(-180deg);
+		transform: translateY(-50%) rotate(-180deg);
+		@media (max-width:$mobileSmall){
+			left: rem(10); 
+		}
 	}
 	.next {
 		right: rem(33);
+		@media (max-width:$mobileSmall){
+			right: rem(10); 
+		}
 	}
 }
 .swiper-pagination {

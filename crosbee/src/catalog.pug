@@ -9,7 +9,7 @@ html(lang="ru")
 
 		.wrapper.wrapper__container
 			include html/_header
-			main.main-content
+			main.main-content.scroll
 				//- include html/_hero
 				- var link = "background-image:url(@img/catalog/poster/all.png)"
 				- var title = "Каталог"
@@ -33,9 +33,9 @@ html(lang="ru")
 					- var categoryImg = "size-m"
 						include html/_products
 
-					.page-bottom
-						a.products-header__link(href=categoryLink)
-							span Смотреть еще
+					//- .page-bottom
+					//- 	a.products-header__link(href=categoryLink)
+					//- 		span Смотреть еще
 					//- include html/_paggination
 				//- include html/_offer
 				//- include html/_special

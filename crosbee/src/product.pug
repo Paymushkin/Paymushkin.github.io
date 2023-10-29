@@ -4,12 +4,12 @@ html(lang="ru")
 	body
 		.wrapper.wrapper__container
 			include html/_header
-			main.main-content
+			main.main-content.scroll
 				include html/_breadcrumbs
 				article.product-item 
 					h1.product-item__title Спортивный комплекс
 						span К1197
-					.product-item__colors.colors-wrapper
+					.product-item__colors.colors-wrapper(data-da=".product-item__mob-colors, 768.98, first")
 						span.colors-wrapper__title Возможные цвета
 						ul.colors-wrapper__list 
 							li 
@@ -30,6 +30,7 @@ html(lang="ru")
 						.item-grid__inner
 							.item-grid__item.product-ibg_contain
 								img(src='@img/product/k1197-3.png' loading="lazy", alt="k1197")
+					.product-item__mob-colors
 					.product-item__info.item-info
 						.item-info__specifications
 							h3.item-info__title Характеристики
@@ -40,9 +41,9 @@ html(lang="ru")
 								li
 									span.info-list__item Зона безопасности
 									span.info-list__value 9 500 x 8 340
-								li
-									span.info-list__item Комплектация
-									span.info-list__value 1 шт
+								//- li
+								//- 	span.info-list__item Комплектация
+								//- 	span.info-list__value 1 шт
 								li
 									span.info-list__item Материалы
 									span.info-list__value Металл, ПНД, нерж. сталь, HDPE
@@ -56,7 +57,7 @@ html(lang="ru")
 								button.button.button-highlight._with-icon 
 									span Добавить в заказ 
 										i +
-						.item-info__scheme
+						.item-info__scheme(data-da=".product-desc__scheme, 768.98, first")
 							img(src="@img/product/k1197-scheme.png", alt="scheme")
 							a(href="files/k1197-scheme.pdf", download) Скачать схему (DVG)
 								svg(width="9", height="12", viewBox="0 0 9 12", fill="none", xmlns="http://www.w3.org/2000/svg")
@@ -83,5 +84,90 @@ html(lang="ru")
 							p.product-desc__text Crosbee предлагает широкий ассортимент игровых систем и элементов благоустройства городской среды. Каталог компании разнообразен и уникален, малые архитектурные формы представлены в категориях: унифицированные конструкции для детей широкой возрастной группы. 
 								<br><br>
 								| Комплексы для самых маленьких и требовательных, уличные спортивные тренажеры, элементы благоустройства дворовых территорий, а также специализированные решения для игровых парков.
+							
+							.product-desc__scheme
+							ul.product-desc__links
+								li 
+									a(href="#") 
+										span Скачать схему (DWG)
+										svg(width='20' height='20' viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+											g#download(clip-path='url(#clip0_649_3014)')
+												path#Vector(d='M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333' stroke='#383838' stroke-linecap='round' stroke-linejoin='round')
+												path#Vector_2(d='M5 8.33325L10 13.3333L15 8.33325' stroke='#383838' stroke-linecap='round' stroke-linejoin='round')
+												path#Vector_3(d='M10 13.3333V0.833252' stroke='#383838' stroke-linecap='round' stroke-linejoin='round')
+											defs
+												clippath#clip0_649_3014
+													rect(width='20' height='20' fill='383838')
+								li 
+									button
+										span Поделиться ссылкой
+										svg(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 20 20' fill='none')
+											path(d='M9 10.4503C9.32361 10.894 9.73648 11.2612 10.2106 11.5269C10.6847 11.7926 11.209 11.9505 11.7479 11.9901C12.2868 12.0297 12.8277 11.95 13.3339 11.7563C13.8401 11.5626 14.2998 11.2596 14.6817 10.8677L16.9424 8.54902C17.6287 7.82019 18.0084 6.84404 17.9999 5.83081C17.9913 4.81758 17.595 3.84834 16.8965 3.13185C16.1979 2.41536 15.2529 2.00895 14.265 2.00015C13.2771 1.99134 12.3254 2.38085 11.6148 3.08478L10.3187 4.4064' stroke='#4F4F4F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+											path(d='M11 9.5497C10.6764 9.10597 10.2635 8.73881 9.78939 8.47313C9.31527 8.20745 8.79098 8.04946 8.25209 8.00987C7.7132 7.97029 7.17231 8.05004 6.66611 8.24371C6.15991 8.43738 5.70024 8.74045 5.31828 9.13235L3.05764 11.451C2.37132 12.1798 1.99156 13.156 2.00014 14.1692C2.00873 15.1824 2.40497 16.1517 3.10354 16.8681C3.80211 17.5846 4.7471 17.991 5.73498 17.9999C6.72287 18.0087 7.6746 17.6192 8.3852 16.9152L9.67376 15.5936' stroke='#4F4F4F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+					.product-item__recommendation 
+						.products__header.products-header
+							h2.products-header__title Игровые комплексы XL
+						ul.products__list
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.products__item.product
+								a(href="product.html")
+									.product__inner
+										article.product__card.item-ibg_contain
+											img(src=`@img/catalog/size-xl/item-1.png` loading="lazy", alt="product")
+										.product__body.product-body
+											h4.product-body__text K1012
+											span.product-body__size 14 500 x 13 000 x 3 900
+											span.product-body__price 27 500 000 р.
+							li.product._to-category(style=`background-image: url(@img/catalog/size-xl/poster-mobile.jpg)`)
+								a(href="category.html")
+									span Смотреть все
+										svg(xmlns='http://www.w3.org/2000/svg' width='36' height='13' viewbox='0 0 36 13' fill='none')
+											path(opacity='0.9' d='M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z' fill='#383838')
+
+									
 		include html/_footer
 		script(src="js/app.min.js")
