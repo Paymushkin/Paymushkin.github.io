@@ -75,11 +75,66 @@
           <h1 class="poster__title">Каталог</h1>
         </div>
         <div class="section__filters filters">
-          <div class="filters__icon-mobile" id="show-filters">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewbox="0 0 25 20" fill="none">
-              <path d="M19.5303 0.46967C19.2374 0.176777 18.7626 0.176777 18.4697 0.46967L13.6967 5.24264C13.4038 5.53553 13.4038 6.01041 13.6967 6.3033C13.9896 6.59619 14.4645 6.59619 14.7574 6.3033L19 2.06066L23.2426 6.3033C23.5355 6.59619 24.0104 6.59619 24.3033 6.3033C24.5962 6.01041 24.5962 5.53553 24.3033 5.24264L19.5303 0.46967ZM18.25 19C18.25 19.4142 18.5858 19.75 19 19.75C19.4142 19.75 19.75 19.4142 19.75 19H18.25ZM18.25 1V19H19.75V1H18.25Z" fill="#383838"></path>
-              <path d="M6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303L0.696699 14.7574C0.403806 14.4645 0.403806 13.9896 0.696699 13.6967C0.989593 13.4038 1.46447 13.4038 1.75736 13.6967L6 17.9393L10.2426 13.6967C10.5355 13.4038 11.0104 13.4038 11.3033 13.6967C11.5962 13.9896 11.5962 14.4645 11.3033 14.7574L6.53033 19.5303ZM5.25 1C5.25 0.585791 5.58579 0.250004 6 0.250004C6.41421 0.250004 6.75 0.585791 6.75 1H5.25ZM5.25 19V1H6.75V19H5.25Z" fill="#383838"></path>
-            </svg>
+          <div class="filters__wrapper">
+            <div class="filters__icon-mobile" id="show-filters">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewbox="0 0 25 20" fill="none">
+                <path d="M19.5303 0.46967C19.2374 0.176777 18.7626 0.176777 18.4697 0.46967L13.6967 5.24264C13.4038 5.53553 13.4038 6.01041 13.6967 6.3033C13.9896 6.59619 14.4645 6.59619 14.7574 6.3033L19 2.06066L23.2426 6.3033C23.5355 6.59619 24.0104 6.59619 24.3033 6.3033C24.5962 6.01041 24.5962 5.53553 24.3033 5.24264L19.5303 0.46967ZM18.25 19C18.25 19.4142 18.5858 19.75 19 19.75C19.4142 19.75 19.75 19.4142 19.75 19H18.25ZM18.25 1V19H19.75V1H18.25Z" fill="#383838"></path>
+                <path d="M6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303L0.696699 14.7574C0.403806 14.4645 0.403806 13.9896 0.696699 13.6967C0.989593 13.4038 1.46447 13.4038 1.75736 13.6967L6 17.9393L10.2426 13.6967C10.5355 13.4038 11.0104 13.4038 11.3033 13.6967C11.5962 13.9896 11.5962 14.4645 11.3033 14.7574L6.53033 19.5303ZM5.25 1C5.25 0.585791 5.58579 0.250004 6 0.250004C6.41421 0.250004 6.75 0.585791 6.75 1H5.25ZM5.25 19V1H6.75V19H5.25Z" fill="#383838"></path>
+              </svg>
+            </div>
+            <form class="filters__form" action="" method="post">
+              <ul class="filters__list"> 
+                <li>
+                  <select class="form" name="form[]">
+                    <option value="all" selected="selected">Все категории</option>
+                    <option value="size-xl">Комплексы XL</option>
+                    <option value="size-l">Комплексы L</option>
+                    <option value="size-m">Комплексы M</option>
+                    <option value="size-s">Комплексы S</option>
+                    <option value="balance">Балансиры</option>
+                    <option value="swing">Качели</option>
+                    <option value="carousels">Карусели</option>
+                    <option value="springs">Пружины</option>
+                    <option value="sport">Спортивное оборудование</option>
+                    <option value="city">Городская инфраструктура</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="form" name="form[]">
+                    <option value="0" selected="selected">Материал</option>
+                    <option value="metall">Металл</option>
+                    <option value="no-metall">Не металл</option>
+                    <option value="all">Все</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="form" name="form[]">
+                    <option value="0" selected="selected">Назначение</option>
+                    <option value="public-places">Общественные территории</option>
+                    <option value="kindergartens">Детские сады</option>
+                    <option value="all">Все</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="form" name="form[]">
+                    <option value="all" selected="selected">Сортировать</option>
+                    <option value="popularity">По популярности</option>
+                    <option value="price">По цене</option>
+                  </select>
+                </li>
+              </ul>
+              <div class="filters__search search" id="search">
+                <form action="" method="post">
+                  <input class="search__input" id="search-input" type="text" name="search-input" placeholder="Что найти"/>
+                  <svg id="search-btn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Search_icon">
+                      <path id="Vector" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path id="Vector_2" d="M13 13L19 19" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+                </form>
+              </div>
+            </form>
           </div>
           <form class="mobile-filters" action="" method="post" id="mobile-filters">
             <div class="mobile-filters__title">
@@ -135,59 +190,6 @@
             <div class="mobile-filters__btns"> 
               <button class="button-black" type="submit" id="submit-filters">Применить</button>
               <button class="button-white" type="reset" id="reset-filters">Сбросить</button>
-            </div>
-          </form>
-          <form class="filters__form" action="" method="post">
-            <ul class="filters__list"> 
-              <li>
-                <select class="form" name="form[]">
-                  <option value="all" selected="selected">Все категории</option>
-                  <option value="size-xl">Комплексы XL</option>
-                  <option value="size-l">Комплексы L</option>
-                  <option value="size-m">Комплексы M</option>
-                  <option value="size-s">Комплексы S</option>
-                  <option value="balance">Балансиры</option>
-                  <option value="swing">Качели</option>
-                  <option value="carousels">Карусели</option>
-                  <option value="springs">Пружины</option>
-                  <option value="sport">Спортивное оборудование</option>
-                  <option value="city">Городская инфраструктура</option>
-                </select>
-              </li>
-              <li>
-                <select class="form" name="form[]">
-                  <option value="0" selected="selected">Материал</option>
-                  <option value="metall">Металл</option>
-                  <option value="no-metall">Не металл</option>
-                  <option value="all">Все</option>
-                </select>
-              </li>
-              <li>
-                <select class="form" name="form[]">
-                  <option value="0" selected="selected">Назначение</option>
-                  <option value="public-places">Общественные территории</option>
-                  <option value="kindergartens">Детские сады</option>
-                  <option value="all">Все</option>
-                </select>
-              </li>
-              <li>
-                <select class="form" name="form[]">
-                  <option value="all" selected="selected">Сортировать</option>
-                  <option value="popularity">По популярности</option>
-                  <option value="price">По цене</option>
-                </select>
-              </li>
-            </ul>
-            <div class="filters__search search" id="search">
-              <form action="" method="post">
-                <input class="search__input" id="search-input" type="text" name="search-input" placeholder="Что найти"/>
-                <svg id="search-btn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="Search_icon">
-                    <path id="Vector" d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path id="Vector_2" d="M13 13L19 19" stroke="#383838" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                </svg>
-              </form>
             </div>
           </form>
         </div>

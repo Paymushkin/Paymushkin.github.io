@@ -50,10 +50,13 @@ ol, ul {
 }
 
 .filters {
-	display: flex;
-	align-items: stretch;
-	@media (max-width:1279.98px) {
-		gap: rem(3);
+
+	&__wrapper {
+		display: flex;
+		align-items: stretch;
+		@media (max-width:1279.98px) {
+			gap: rem(3);
+		}
 	}
 
 	&__icon-mobile {
@@ -100,7 +103,9 @@ ol, ul {
 }
 
 .mobile-filters {
-	position: absolute;
+	position: relative;
+	display: none;
+	margin-top: rem(-61);
 	padding: rem(16) rem(16) rem(20);
 	border-radius: rem(15);
 	color: $textColor;
@@ -108,15 +113,16 @@ ol, ul {
 	font-size: rem(18);
 	line-height: math.div(22, 18);
 	box-shadow: 0 0 5px 3px #eee;
-	transform: translateX(-150%);
-	transition: transform 0.3s ease;
-	z-index: 1;
+	// transform: translateX(-150%);
+	transition: height 0.3s ease;
+	z-index: 2;
 	@media (min-width:1279.98px){
 		display: none;
 	}
 
 	&.active {
-		transform: translateX(0);
+		display: block;
+		// transform: translateX(0);
 	}
 
 	&__title {
