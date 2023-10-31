@@ -23,13 +23,13 @@ html(lang="ru")
 								a(href="#", style="background-color:#e9ef55")
 					.item-grid__wrapper
 						.product-item__grid.item-grid
-							.item-grid__inner
+							.item-grid__inner(data-popup="#image-popup")
 								.item-grid__item.product-ibg_contain
 									img(src='@img/product/k1197-1.png' loading="lazy", alt="k1197")
-							.item-grid__inner
+							.item-grid__inner(data-popup="#image-popup")
 								.item-grid__item.product-ibg_contain
 									img(src='@img/product/k1197-2.png' loading="lazy", alt="k1197")
-							.item-grid__inner
+							.item-grid__inner(data-popup="#image-popup")
 								.item-grid__item.product-ibg_contain
 									img(src='@img/product/k1197-3.png' loading="lazy", alt="k1197")
 					.product-item__mob-colors
@@ -201,7 +201,15 @@ html(lang="ru")
 									span Смотреть все
 										svg(xmlns='http://www.w3.org/2000/svg' width='36' height='13' viewbox='0 0 36 13' fill='none')
 											path(opacity='0.9' d='M35.5303 5.96967C35.8232 6.26256 35.8232 6.73744 35.5303 7.03033L30.7574 11.8033C30.4645 12.0962 29.9896 12.0962 29.6967 11.8033C29.4038 11.5104 29.4038 11.0355 29.6967 10.7426L33.9393 6.5L29.6967 2.25736C29.4038 1.96447 29.4038 1.48959 29.6967 1.1967C29.9896 0.903806 30.4645 0.903806 30.7574 1.1967L35.5303 5.96967ZM1 7.25C0.585786 7.25 0.25 6.91421 0.25 6.5C0.25 6.08579 0.585786 5.75 1 5.75V7.25ZM35 7.25H1V5.75H35V7.25Z' fill='#383838')
-
-									
+		
 		include html/_footer
+		#image-popup(aria-hidden="true").popup
+			.popup__wrapper
+				.popup__content
+					button(data-close type="button").popup__close 
+						svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+							path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+							path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+					img(src="@img/product/k1197-1.png", alt="img")
 		script(src="js/app.min.js")

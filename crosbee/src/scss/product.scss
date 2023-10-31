@@ -114,8 +114,11 @@
 .item-grid {
 
 	&__wrapper {
-		margin-right: rem(-20);
-		margin-left: rem(-20)
+		@media (max-width:$mobile){
+			margin-right: rem(-20);
+			margin-left: rem(-20) 
+		}
+		
 	}
 	
 	&__inner {

@@ -32,6 +32,7 @@ $textColor: #333333;
 
 @import "base/forms/select";
 @import "base/forms/radio";
+@import "base/popup";
  
 // Настройки ===========================================================================
 // Минимальная ширина страницы
@@ -88,6 +89,7 @@ body {
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
+		padding-right: 0!important;
 	}
 	// Сайт загружен
 	.loaded & {

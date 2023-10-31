@@ -177,6 +177,7 @@ ol, ul {
 
 	.search-active & {
 		padding-left: 0;
+		flex: 1 1 auto;
 	}
 
 	@media (max-width:1279.98px){
