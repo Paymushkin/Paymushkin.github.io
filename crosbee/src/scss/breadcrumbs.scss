@@ -31,14 +31,14 @@
 			a {
 				cursor: default;
 			}
-			&::after{
-				content:'';
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				height: rem(1);
-				background-color: $highlightColor;
-			}
+			// &::after{
+			// 	content:'';
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	width: 100%;
+			// 	height: rem(1);
+			// 	background-color: $highlightColor;
+			// }
 		}
 		&:not(:last-child) {
 			&::after {

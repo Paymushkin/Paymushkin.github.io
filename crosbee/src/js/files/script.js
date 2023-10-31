@@ -39,13 +39,14 @@ import { flsModules } from "./modules.js";
 
 
 const searchBtn = document.getElementById("search-btn"),
-	  searchContainer = document.getElementById("search")
+	  formFilters = document.getElementById("filters")
 
 if (searchBtn) {
 	searchBtn.addEventListener("click", ()=> {
-		searchContainer.classList.toggle("active")
+		formFilters.classList.toggle("search-active")
 	})
 }
+
 
 const showFilters = document.getElementById("show-filters")
 const hideFilters = document.getElementById("hide-filters")

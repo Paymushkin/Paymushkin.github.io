@@ -1,18 +1,33 @@
 .product-item {
 	&__title {
 		display: flex;
+		flex-wrap: wrap;
 		gap: rem(20);
-		margin-bottom: rem(30);
+		margin-bottom: rem(15);
 		font-size: rem(40);
 		line-height: math.div(49, 40);
 		font-weight: 500;
 
 		@media (max-width:$mobile){
+			margin-bottom: rem(10);
 			font-size: rem(24);
-			line-height: math.div(28, 24); 
+			line-height: math.div(28, 24);
+			gap: rem(8);
 		}
 		span {
 			color: $highlightColor;
+		}
+	}
+	&__price {
+		display: inline-block;
+		margin-bottom: rem(30);
+		font-size: rem(20);
+		line-height: 1.45;
+		font-weight: 500;
+
+		@media (max-width:$mobile){
+			margin-bottom: rem(17);
+			font-size: rem(16);
 		}
 	}
 	&__grid {
@@ -22,12 +37,24 @@
 		gap: rem(20);
 		margin-bottom: rem(70);
 		@media (max-width:$mobile){
-			grid-template-columns: repeat(auto-fill, rem(300));
-			grid-template-rows: rem(300);
+			grid-template-columns: repeat(auto-fill, rem(400));
+			grid-template-rows: rem(400);
 			grid-auto-flow: column;
+			gap: rem(5);
 			margin-bottom: rem(34);
 			overflow: auto hidden;
 			width: auto;
+		}
+
+		@media (max-width:$mobileSmall){
+			grid-template-columns: repeat(auto-fill, rem(300));
+			grid-template-rows: rem(300);
+		}
+
+		.scroll & {
+			@media (max-width:$mobile){
+				padding: 0 rem(20);
+			}
 		}
 	}
 	&__slider {
@@ -55,16 +82,41 @@
 	&__button {
 		button {
 			@media (max-width:$mobileSmall){
-				width: 100%; 
+				width: 100%;
+				span {
+					justify-content: space-between;
+					width: 100%;
+				}
+				&::after{
+					bottom: -15rem!important;
+					width: 15rem!important;
+					height: 15rem!important;
+				}
 			}
 		}
 	}
 	&__recommendation  {
 		margin-bottom: rem(34);
+		margin-right: rem(-20);
+		margin-left: rem(-20);
+		h2 {
+			padding-left: rem(20);
+		}
+		a {
+			cursor: pointer;
+		}
+		ul {
+			padding: 0 rem(20);
+		}
 	}
 }
 
 .item-grid {
+
+	&__wrapper {
+		margin-right: rem(-20);
+		margin-left: rem(-20)
+	}
 	
 	&__inner {
 		padding: rem(45) rem(30) rem(31);
@@ -81,6 +133,10 @@
 		@media (max-width:$mobile){
 			padding: rem(10);
 			aspect-ratio: 1 / 1;
+			width: rem(400);
+			height: rem(400); 
+		}
+		@media (max-width:$mobileSmall){
 			width: rem(300);
 			height: rem(300); 
 		}
@@ -118,7 +174,7 @@
 		flex: 1 1 50%;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: center;
 		gap: rem(30);
 		img {
@@ -167,6 +223,12 @@
 		gap: rem(10);
 		padding: rem(8) 0;
 		border-bottom: rem(1) solid #cfcfcf;
+		a {
+			display: flex;
+			justify-content: space-between;
+			gap: rem(10);
+			width: 100%;
+		}
 	}
 	&__item {
 		font-size: rem(16);

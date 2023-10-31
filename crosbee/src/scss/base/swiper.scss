@@ -47,14 +47,11 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		path {
-			transition: 0.3s ease stroke;
-		}
+		transition: 0.3s ease transform;
+		transform-origin: center;
 		@media (any-hover: hover){
 			&:hover{
-				path {
-					stroke: $highlightColor;
-				}
+				transform: translateY(-50%) scale(1.25);
 			}
 		}
 		
@@ -64,6 +61,11 @@
 		transform: translateY(-50%) rotate(-180deg);
 		@media (max-width:$mobileSmall){
 			left: rem(10); 
+		}
+		@media (any-hover: hover){
+			&:hover{
+				transform: translateY(-50%) scale(1.25) rotate(-180deg);
+			}
 		}
 	}
 	.next {

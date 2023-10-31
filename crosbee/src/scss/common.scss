@@ -65,6 +65,7 @@ ol, ul {
 		padding: rem(12) rem(20);
 		background-color: $addColorGreen;
 		border-radius: rem(10);
+		cursor: pointer;
 		@media (min-width:1279.98px){
 			display: none;
 		}
@@ -79,6 +80,7 @@ ol, ul {
 		align-items: center;
 		flex: 1 1 auto;
 		padding: rem(7) rem(20);
+		min-height: rem(64);
 		background-color: $addColorGreen;
 		border-radius: rem(10);
 		@media (max-width:$mobile){
@@ -91,28 +93,34 @@ ol, ul {
 	&__list {
 		display: flex;
 		gap: rem(54);
+		flex: 1 1 auto;
+
+		.search-active & {
+			display: none;
+		}
 		@media (max-width:1279.98px){
 			display: none;
 		}
 		li {
-
+			flex: 1 1 calc((100% - rem(40)) /4);
 		}
 	}
 	&__search {
 	}
+	
 }
 
 .mobile-filters {
 	position: relative;
 	display: none;
-	margin-top: rem(-61);
-	padding: rem(16) rem(16) rem(20);
+	margin-top: rem(-64);
+	padding: rem(16) rem(20) rem(20);
 	border-radius: rem(15);
 	color: $textColor;
-	background-color: #ffffff;
+	background-color: #F5FAF9;
 	font-size: rem(18);
 	line-height: math.div(22, 18);
-	box-shadow: 0 0 5px 3px #eee;
+	// box-shadow: 0 0 5px 3px #eee;
 	// transform: translateX(-150%);
 	transition: height 0.3s ease;
 	z-index: 2;
@@ -129,11 +137,13 @@ ol, ul {
 		display: flex;
 		align-items: center;
 		gap: rem(19);
-		padding-bottom: rem(19);
-		button {
+		padding: rem(5) 0 rem(19);
+		div {
 			display: flex;
 			align-items: center;
+			cursor: pointer;
 		}
+
 	}
 	&__filter {
 		padding: rem(23) 0;
@@ -152,7 +162,7 @@ ol, ul {
 // search
 
 .search {
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -162,7 +172,15 @@ ol, ul {
 	border-radius: rem(12);
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+
+	
+
+	.search-active & {
+		padding-left: 0;
+	}
+
 	@media (max-width:1279.98px){
+		flex: 1 1 auto;
 		padding-left: 0;
 	}
 	// &.active {
@@ -171,20 +189,18 @@ ol, ul {
 	// }
 	svg {
 		path {
-			transition: 0.3s ease stroke;
+			transition: 0.3s ease fill;
 		}
 
 	}
 	@media (any-hover: hover){
 		&:hover{
 			svg path {
-				stroke: $highlightColor;
+				fill: $highlightColor;
 			}
 		}
 	}
 	&__input {
-		// display: none;
-		display: flex;
 		flex: 1 1 auto;
 		padding-left: rem(23);
 		background-color: transparent;
@@ -193,8 +209,15 @@ ol, ul {
 		line-height: 145%;
 		// border-left: rem(1) solid #4f4f4f;
 		outline: none;
+		.search-active & {
+			display: flex;
+			padding-left: 0;
+		}
 		&::placeholder {
 			color: #C4D3D0;
+		}
+		@media (min-width:1279.98px){
+			display: none; 
 		}
 		@media (max-width:1279.98px){
 			padding-left: 0;
@@ -344,7 +367,10 @@ ol, ul {
 	border-radius: rem(25);
 	overflow: hidden;
 	@media (max-width:$mobileSmall){
-		border-radius: 0; 
+		border-radius: 0;
+		margin: 0 rem(-20);
+		width: calc(100% + rem(40))!important;
+
 	}
 	&-slide {
 		width: 100%;

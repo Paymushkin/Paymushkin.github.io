@@ -222,7 +222,7 @@
 			font-size: rem(22);
 			font-weight: 500;
 
-			li {
+			li.catalog-item {
 				padding: rem(30) 0;
 				border-bottom: rem(1) solid #73A9A8;
 			}
@@ -245,10 +245,21 @@
 				position: absolute;
 				right: 0;
 				transition: 0.3s ease transform;
+				cursor: pointer;
 			  }
 			  
 			  details[open] summary:before {
 				transform: rotate(-45deg);
+			  }
+
+			  ul {
+				display: flex;
+				flex-direction: column;
+				gap: rem(26);
+				padding-top: rem(26);
+				li {
+					color: #73A9A8;
+				}
 			  }
 		}
 

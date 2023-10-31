@@ -1,7 +1,8 @@
 .products
 	if condition
 		.products__header.products-header
-			h2.products-header__title=categoryTitle
+			a(href=categoryLink) 
+				h2.products-header__title=categoryTitle
 			a.products-header__link(href=categoryLink)
 				span Смотреть еще
 				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">

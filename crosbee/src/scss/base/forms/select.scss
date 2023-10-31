@@ -78,7 +78,10 @@
 		background-color: $addColorGreen;
 		border-radius: 0 0 rem(15) rem(15);
 		font-size: rem(14);
-		
+		._first & {
+			left: rem(-20);
+			padding: rem(30) rem(16) rem(30) rem(36);
+		}
 	}
 	// .select__scroll
 	&__scroll {
