@@ -61,8 +61,10 @@ ol, ul {
 
 	&__icon-mobile {
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		padding: rem(12) rem(20);
+		padding: rem(16) rem(20);
+		min-width: rem(64);
 		background-color: $addColorGreen;
 		border-radius: rem(10);
 		cursor: pointer;
@@ -70,7 +72,7 @@ ol, ul {
 			display: none;
 		}
 		@media (max-width:$mobileSmall){
-			padding: rem(12); 
+			padding: rem(16); 
 		}
 	}
 
@@ -173,6 +175,10 @@ ol, ul {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 
+	.breadcrumb & {
+		flex: 1 1 auto;
+	}
+
 	
 
 	.search-active & {
@@ -225,6 +231,11 @@ ol, ul {
 		}
 		@media (max-width:$mobileSmall){
 			width: calc(100% - rem(125));
+		}
+		.breadcrumb & {
+			@media (min-width:1279.98px){
+				display: flex; 
+			}
 		}
 	}
 

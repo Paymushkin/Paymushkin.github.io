@@ -226,7 +226,7 @@
 		gap: rem(10);
 		padding: rem(8) 0;
 		border-bottom: rem(1) solid #cfcfcf;
-		a {
+		a, button {
 			display: flex;
 			justify-content: space-between;
 			gap: rem(10);
@@ -240,6 +240,7 @@
 		@media (max-width:$mobile){
 			font-size: rem(14);
 			line-height: math.div(18, 14);
+			font-weight: 400;
 		}
 
 	}
