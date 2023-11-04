@@ -4,7 +4,9 @@
 	align-items: flex-start;
 	// .options__item
 	&__item {
+		flex: 1 1 auto;
 		position: relative;
+		width: 100%;
 		cursor: pointer;
 		&:not(:last-child) {
 			margin-bottom: em(5);
@@ -26,11 +28,17 @@
 		&:checked + .options__label:after {
 			transform: scale(1);
 		}
+		&:checked + .options__label span {
+			font-weight: 600;
+		}
 	}
 	// .options__label
 	&__label {
-		display: inline-flex;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
 		align-items: center;
+		width: 100%;
 		cursor: pointer;
 		gap: 10px;
 		&:before {
@@ -39,7 +47,7 @@
 			width: 20px;
 			height: 20px;
 			flex: 0 0 20px;
-			border-radius: 50%;
+			border-radius: rem(5);
 			border: 1.25px solid #73A9A8;
 		}
 		&:after {
@@ -50,7 +58,7 @@
 			height: 20px;
 			border-radius: 50%;
 			position: absolute;
-			left: 3px;
+			right: -3px;
 			top: 1px;
 		}
 	}

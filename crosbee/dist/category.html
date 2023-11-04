@@ -76,7 +76,7 @@
             <li><a href="#">О нас</a></li>
             <li><a href="#">Кейсы</a></li>
             <li><a href="#">Как мы работаем</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#" data-goto=".footer">Контакты</a></li>
           </ul>
         </nav>
         <div class="header__btns">
@@ -105,22 +105,10 @@
               <ul class="filters__list"> 
                 <li class="_first">
                   <select class="form" name="form[]">
-                    <option value="all" selected="selected">Все категории</option>
-                    <option value="size-xl">Комплексы XL</option>
-                    <option value="size-l">Комплексы L</option>
-                    <option value="size-m">Комплексы M</option>
-                    <option value="size-s">Комплексы S</option>
-                    <option value="balance">Балансиры</option>
-                    <option value="swing">Качели</option>
-                    <option value="carousels">Карусели</option>
-                    <option value="springs">Пружины</option>
-                    <option value="workout">Воркаут площадки</option>
-                    <option value="trainers">Тренажеры</option>
-                    <option value="courts">Спортивные площадки</option>
-                    <option value="sheds">Теневые навесы</option>
-                    <option value="furniture">Парковая мебель</option>
-                    <option value="borders">Заборы и ограждения</option>
-                    <option value="containers">Контейнерные площадки</option>
+                    <option value="all" selected="selected">Весь каталог</option>
+                    <option value="kids">Детские площадки</option>
+                    <option value="sports-eq">Спортивное оборудование</option>
+                    <option value="city">Городская инфраструктура</option>
                   </select>
                 </li>
                 <li>
@@ -160,13 +148,11 @@
             </form>
           </div>
           <form class="mobile-filters" action="" method="post" id="mobile-filters">
-            <div class="mobile-filters__title">
-              <div id="hide-filters">
-                <svg id="search-btn" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z" fill="#383838"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z" fill="#383838"></path>
-                </svg>
-              </div><span>Сортировать товары</span>
+            <div class="mobile-filters__title" id="hide-filters">
+              <svg id="search-btn" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z" fill="#383838"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z" fill="#383838"></path>
+              </svg>
             </div>
             <div class="mobile-filters__filter options">
               <div class="options__item">
@@ -210,10 +196,7 @@
                 <label class="options__label" for="o-3_3"><span class="options__text">Все</span></label>
               </div>
             </div>
-            <div class="mobile-filters__btns"> 
-              <button class="button-black" type="submit" id="submit-filters">Применить</button>
-              <button class="button-white" type="reset" id="reset-filters">Сбросить</button>
-            </div>
+            <button class="mobile-filters__btn button-black" type="submit" id="submit-filters">Применить</button>
           </form>
         </div>
         <div class="products">
@@ -373,14 +356,13 @@
               <li> 
                 <h4>Контакты</h4>
               </li>
-              <li> 
-                <h4>Политика конфиденциальности</h4>
-              </li>
             </ul>
           </nav>
         </div>
         <div class="footer-bottom">
-          <div class="footer-bottom__text" data-da=".footer-top__contacts, 1023.98, last"><span>Crosbee 2023</span></div>
+          <div class="footer-bottom__text"><span data-da=".footer-top__contacts, 1023.98, last">Crosbee 2023</span>
+            <p>ООО «ПостПрофит»<br>Дмитровка Б., д. 32 стр. 4, этаж/помещ. 3/VIII, ком. 10,11,12<br><a href="">Политика конфиденциальности</a></p>
+          </div>
         </div>
       </div>
     </footer>

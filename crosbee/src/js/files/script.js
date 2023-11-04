@@ -20,11 +20,13 @@ const mobileFilters = document.getElementById("mobile-filters")
 if (showFilters) {
 	showFilters.addEventListener("click", ()=> {
 		mobileFilters.classList.add("active")
+		document.querySelector('body').classList.add("mob-filters-active")
 	})
 }
 
 if (hideFilters) {
 	hideFilters.addEventListener("click", ()=> {
 		mobileFilters.classList.remove("active")
+		document.querySelector('body').classList.remove("mob-filters-active")
 	})
 }

@@ -9,22 +9,26 @@
 			ul.filters__list 
 				li._first
 					select(name="form[]").form
-						option(value="all", selected) Все категории
-						option(value="size-xl") Комплексы XL
-						option(value="size-l") Комплексы L
-						option(value="size-m") Комплексы M
-						option(value="size-s") Комплексы S
-						option(value="balance") Балансиры
-						option(value="swing") Качели
-						option(value="carousels") Карусели
-						option(value="springs") Пружины
-						option(value="workout") Воркаут площадки
-						option(value="trainers") Тренажеры
-						option(value="courts") Спортивные площадки
-						option(value="sheds") Теневые навесы
-						option(value="furniture") Парковая мебель
-						option(value="borders") Заборы и ограждения
-						option(value="containers") Контейнерные площадки
+						option(value="all", selected) Весь каталог
+						option(value="kids") Детские площадки
+						option(value="sports-eq") Спортивное оборудование
+						option(value="city") Городская инфраструктура
+
+						//- option(value="size-xl") Комплексы XL
+						//- option(value="size-l") Комплексы L
+						//- option(value="size-m") Комплексы M
+						//- option(value="size-s") Комплексы S
+						//- option(value="balance") Балансиры
+						//- option(value="swing") Качели
+						//- option(value="carousels") Карусели
+						//- option(value="springs") Пружины
+						//- option(value="workout") Воркаут площадки
+						//- option(value="trainers") Тренажеры
+						//- option(value="courts") Спортивные площадки
+						//- option(value="sheds") Теневые навесы
+						//- option(value="furniture") Парковая мебель
+						//- option(value="borders") Заборы и ограждения
+						//- option(value="containers") Контейнерные площадки
 				li
 					select(name="form[]").form
 						option(value="0", selected) Материал
@@ -51,12 +55,11 @@
 						path(fill-rule='evenodd' clip-rule='evenodd' d='M13.8029 13.803C14.0958 13.5101 14.5707 13.5101 14.8636 13.803L21.5302 20.4696C21.8231 20.7625 21.8231 21.2374 21.5302 21.5303C21.2374 21.8232 20.7625 21.8232 20.4696 21.5303L13.8029 14.8636C13.51 14.5707 13.51 14.0959 13.8029 13.803Z' fill='#383838')
 
 	form(action="" method="post").mobile-filters#mobile-filters
-		.mobile-filters__title
-			#hide-filters
-				svg#search-btn(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
-					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
-					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
-			span Сортировать товары
+			
+		#hide-filters.mobile-filters__title
+			svg#search-btn(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
 
 		.mobile-filters__filter.options
 			.options__item
@@ -100,7 +103,6 @@
 				label.options__label(for='o-3_3')
 					span.options__text Все
 		
-		.mobile-filters__btns 
-			button.button-black(type="submit")#submit-filters Применить
-			button.button-white(type="reset")#reset-filters Сбросить
+		button.mobile-filters__btn.button-black(type="submit")#submit-filters Применить
+			//- button.button-white(type="reset")#reset-filters Сбросить
 		
