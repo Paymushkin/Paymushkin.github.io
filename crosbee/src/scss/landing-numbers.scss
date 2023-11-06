@@ -1,0 +1,29 @@
+.landing-numbers {
+	margin-bottom: rem(30);
+	padding: rem(55) 0 rem(63);
+	h2 {
+		margin-bottom: rem(73);
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(44);
+		li {
+			flex: 0 0 calc((100% - rem(88)) / 3);
+			display: flex;
+			gap: rem(25);
+			align-items: center;
+		}
+		span {
+			font-size: rem(80);
+			font-weight: 500;
+		}
+		p {
+			display: block;
+			max-width: rem(184);
+			font-size: rem(20);
+			line-height: math.div(23, 20);
+		}
+	}
+}

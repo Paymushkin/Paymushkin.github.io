@@ -1,0 +1,57 @@
+.landing-hero {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: rem(510) rem(173);
+	grid-auto-rows: auto;
+	gap: rem(10);
+	margin-bottom: rem(30);
+	
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		background-color: #e0e0e0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		border-radius: rem(25.5);
+
+		a {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			background-color: #f2f2f2;
+			font-weight: 500;
+		}
+
+		&._big {
+			grid-column: 1 / 4;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: rem(61) rem(52);
+
+			a {
+				padding: rem(15) rem(25);
+				border-radius: rem(31);
+			}
+		}
+
+		&._small {
+			align-items: center;
+			gap: rem(15);
+			padding: rem(51) rem(30);
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-width: rem(51);
+				min-height: rem(51);
+				border-radius: 50%;
+			}
+
+			p {
+				max-width: rem(200);
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.landing-about {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: rem(30);
+	padding: rem(54) 0;
+	&__content {
+		flex: 0 0 percent(688, 1280);
+		h2 {
+			margin-bottom: rem(20);
+		}
+		p {
+			margin-bottom: rem(20);
+			font-size: rem(20);
+			line-height: math.div(23, 20);
+		}
+	}
+
+	&__img {
+		flex: 0 0 percent(417, 1280);
+		border-radius: rem(25);
+		background-color: #e0e0e0;
+	}
+}

@@ -2,20 +2,15 @@
 html(lang="ru")
 	include html/_head
 	body
-		.loader#loader
-			.loader__spinner
-				.loader__icon
-					div
-
-		.wrapper
+		.wrapper.wrapper__container
 			include html/_header
 			main.main-content
-				//- include html/_hero
-				//- include html/_catalog
-				//- include html/_offer
-				//- include html/_special
-				//- include html/_about
-				//- include html/_interests
-			include html/_footer
+				include html/_landing-hero
+				include html/_landing-manager
+				include html/_landing-about
+				include html/_landing-numbers
+				include html/_landing-objects
+				include html/_landing-how
+		include html/_footer
 		script(src="js/app.min.js")
 	

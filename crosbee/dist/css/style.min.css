@@ -523,6 +523,18 @@ h6 {
   background-color: #fff;
   border: 1px solid #333333;
 }
+.button-standart {
+  color: #f2f2f2;
+  background-color: #4f4f4f;
+  border-radius: 3.125rem;
+}
+.button-standart._small {
+  padding: 0.78125rem 1.1875rem;
+  font-size: 0.625rem;
+}
+.button-standart::before, .button-standart::after {
+  display: none;
+}
 
 input[type=text],
 input[type=email],
@@ -658,6 +670,20 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 
 ol, ul {
   list-style: none;
+}
+
+h1 {
+  max-width: 30.9375rem;
+  color: #333;
+  font-size: 3.25rem;
+  line-height: 1.1730769231;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.175;
+  font-weight: 500;
 }
 
 .poster {
@@ -1327,6 +1353,183 @@ ol, ul {
   color: #73A9A8;
   font-size: 1rem;
   line-height: 1.125;
+}
+
+.landing-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 31.875rem 10.8125rem;
+  grid-auto-rows: auto;
+  gap: 0.625rem;
+  margin-bottom: 1.875rem;
+}
+.landing-hero__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1.59375rem;
+}
+.landing-hero__item a {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+.landing-hero__item._big {
+  grid-column: 1/4;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3.8125rem 3.25rem;
+}
+.landing-hero__item._big a {
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 1.9375rem;
+}
+.landing-hero__item._small {
+  align-items: center;
+  gap: 0.9375rem;
+  padding: 3.1875rem 1.875rem;
+}
+.landing-hero__item._small a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 3.1875rem;
+  min-height: 3.1875rem;
+  border-radius: 50%;
+}
+.landing-hero__item._small p {
+  max-width: 12.5rem;
+}
+
+.landing-manager {
+  margin-bottom: 1.875rem;
+  padding: 4.1875rem 4.625rem;
+  background-color: #f2f2f2;
+}
+.landing-manager h2 {
+  margin-bottom: 1.25rem;
+}
+.landing-manager p {
+  display: block;
+  margin-bottom: 1.25rem;
+  max-width: 43.125rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.landing-about {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+  padding: 3.375rem 0;
+}
+.landing-about__content {
+  flex: 0 0 53.75%;
+}
+.landing-about__content h2 {
+  margin-bottom: 1.25rem;
+}
+.landing-about__content p {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.landing-about__img {
+  flex: 0 0 32.578125%;
+  border-radius: 1.5625rem;
+  background-color: #e0e0e0;
+}
+
+.landing-numbers {
+  margin-bottom: 1.875rem;
+  padding: 3.4375rem 0 3.9375rem;
+}
+.landing-numbers h2 {
+  margin-bottom: 4.5625rem;
+}
+.landing-numbers__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.75rem;
+}
+.landing-numbers__list li {
+  flex: 0 0 calc((100% - 5.5rem) / 3);
+  display: flex;
+  gap: 1.5625rem;
+  align-items: center;
+}
+.landing-numbers__list span {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.landing-numbers__list p {
+  display: block;
+  max-width: 11.5rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+
+.landing-objects {
+  margin: 3.375rem 0 4.5625rem;
+  padding: 3.375rem 0 4.5625rem;
+}
+.landing-objects h2 {
+  margin-bottom: 4.1875rem;
+}
+.landing-objects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 3.4375rem 3.125rem;
+}
+.landing-objects .item-objects__img {
+  margin-bottom: 0.9375rem;
+  width: 100%;
+  aspect-ratio: 382/199;
+  background-color: #e0e0e0;
+  border-radius: 0.9375rem;
+}
+.landing-objects .item-objects__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.landing-objects .item-objects__text h4 {
+  margin-bottom: 0.1875rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.landing-objects .item-objects__text p {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.landing-how {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+  padding: 3.375rem 0;
+}
+.landing-how__content {
+  flex: 0 0 53.75%;
+}
+.landing-how__content h2 {
+  margin-bottom: 1.25rem;
+}
+.landing-how__content p {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.landing-how__img {
+  flex: 0 0 32.578125%;
+  border-radius: 1.5625rem;
+  background-color: #e0e0e0;
 }
 
 .section__poster {

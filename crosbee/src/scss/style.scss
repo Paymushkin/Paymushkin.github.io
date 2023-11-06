@@ -168,7 +168,12 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "header";
-// @import "hero";
+@import "landing-hero";
+@import "landing-manager";
+@import "landing-about";
+@import "landing-numbers";
+@import "landing-objects";
+@import "landing-how";
 @import "catalog";
 @import "product";
 @import "products";

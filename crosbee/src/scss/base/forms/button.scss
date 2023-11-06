@@ -131,4 +131,17 @@
 		background-color: #fff;
 		border: 1px solid $textColor;
 	}
+
+	&-standart {
+		color: #f2f2f2;
+		background-color: #4f4f4f;
+		border-radius: rem(50);
+		&._small {
+			padding: rem(12.5) rem(19);
+			font-size: rem(10);
+		}
+		&::before, &::after{
+			display: none;
+		}
+	}
 }

@@ -12,6 +12,20 @@ ol, ul {
 	list-style: none;
 }
 
+h1 {
+	max-width: rem(495);
+	color: #333;
+	font-size: rem(52);
+	line-height: math.div(61, 52);
+	font-weight: 500;
+}
+
+h2 {
+	font-size: rem(40);
+	line-height: math.div(47, 40);
+	font-weight: 500;
+}
+
 .poster {
 	display: flex;
 	align-items: center;

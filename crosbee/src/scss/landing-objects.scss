@@ -1,0 +1,43 @@
+.landing-objects {
+	margin: rem(54) 0 rem(73);
+	padding: rem(54) 0 rem(73);
+	h2 {
+		margin-bottom: rem(67);
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		gap: rem(55) rem(50);
+	}
+
+	.item-objects {
+
+		&__img {
+			margin-bottom: rem(15);
+			width: 100%;
+			aspect-ratio: 382 / 199;
+			background-color: #e0e0e0;
+			border-radius: rem(15);
+		}
+
+		&__content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: rem(10);
+		}
+
+		&__text {
+			h4 {
+				margin-bottom: rem(3);
+				font-size: rem(18);
+				font-weight: 500;
+			}
+			p {
+				font-size: rem(14);
+				font-weight: 500;
+			}
+		}
+	}
+}
