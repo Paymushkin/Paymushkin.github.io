@@ -1427,10 +1427,16 @@ h2 {
   background-color: #F5FAF9;
 }
 .landing-hero__item._small::before {
-  content: url(/img/landing/poster-item-1.png);
+  content: "";
   position: absolute;
-  bottom: -1.0625rem;
-  right: -1.0625rem;
+  bottom: -30%;
+  right: -5%;
+  width: 65%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/landing/poster-item-1.png);
 }
 .landing-hero__item._small a {
   display: flex;

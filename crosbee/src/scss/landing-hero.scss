@@ -50,11 +50,16 @@
 			background-color: #F5FAF9;
 
 			&::before{
-				content:url(/img/landing/poster-item-1.png);
+				content: "";
 				position: absolute;
-				bottom: rem(-17);
-				right: rem(-17);
-				
+				bottom: -30%;
+				right: -5%;
+				width: 65%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url(../img/landing/poster-item-1.png);
 			}
 
 			a {
