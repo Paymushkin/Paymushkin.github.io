@@ -1623,6 +1623,7 @@ h2 {
   max-width: 48.4375%;
   font-size: 1.25rem;
   font-weight: 500;
+  line-height: 1.45;
 }
 @media (max-width: 64.06125em) {
   .case__text {

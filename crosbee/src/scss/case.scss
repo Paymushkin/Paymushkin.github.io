@@ -18,6 +18,7 @@
 		max-width: percent(620, 1280);
 		font-size: rem(20);
 		font-weight: 500;
+		line-height: 1.45;
 		@media (max-width:$tablet){
 			max-width: 100%;
 		}
