@@ -10922,6 +10922,8 @@ p.lead {
 .contact ul {
 	list-style: none;
 	padding: 0;
+	padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 .contact a {
 	font-size: 1.5rem;
@@ -10931,6 +10933,11 @@ p.lead {
 }
 .contact a:hover {
 	opacity: 0.5;
+}
+
+address {
+	font-size: 1.5rem;
+	margin: 0;
 }
 
 @media (max-width: 767.98px) {
