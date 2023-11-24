@@ -1,0 +1,49 @@
+.advantages {
+	margin-bottom: rem(116);
+	@media (max-width:$mobileSmall){
+		margin-bottom: rem(11); 
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		@media (max-width:$mobileSmall){
+			flex-direction: column; 
+	   }
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(21);
+	}
+
+	.item-advantages {
+		flex: 0 0 calc((100% - rem(42)) / 3);
+		padding: rem(25) rem(17) rem(25);
+		background-color: $mainColor;
+		border-radius: rem(25);
+		&__title {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: rem(34);
+			margin-bottom: rem(20);
+			span {
+				color: $textColor;
+				font-family: "Passion Conflict";
+				font-size: rem(128);
+				line-height: math.div(70, 128);
+				// transform: translateY(-45px);
+			}
+			h3 {
+				color: $textColor;
+				transform: translateY(15px);
+			}
+		}
+		&__text {
+			color: $textColor;
+		}
+	}
+
+}

@@ -1,0 +1,100 @@
+.contacts {
+	padding: rem(108) 0 rem(116);
+	// @include adaptiveValue("padding-top", 77, 58, 1920, 1024, 1);
+	// @include adaptiveValue("padding-bottom", 147, 58, 1920, 1024, 1);
+	// background: $gradient;
+	background-color: $bgColorHighlight;
+	@media (max-width:$tablet){
+		
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__content {
+		max-width: rem(536);
+	}
+
+	&__title {
+		margin-bottom: rem(33);
+		color: $textColor;
+		font-size: rem(46.5);
+		font-weight: 400;
+		text-transform: uppercase;
+		// @media (max-width:$tablet){
+		// 	margin-bottom: rem(21);
+		// }
+	}
+
+	&__text {
+		color: $textColor;
+		max-width: rem(287);
+		font-family: "Myriad Pro";
+	}
+
+	&__media-list {
+		display: flex;
+		gap: rem(43);
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1 1 auto;
+		gap: rem(58);
+		padding: rem(11) rem(30);
+		max-width: rem(479);
+		// background-color: #FF6C01;
+		border-radius: rem(24);
+		z-index: 2;
+		// @media (max-width:$tablet){
+		// 	padding: rem(21) rem(10);
+		// 	max-width: 48.632%;
+		// }
+		// @media (max-width:$mobileSmall){
+		// 	 max-width: 100%; 
+		// }
+	}
+
+	.form-contacts {
+		label {
+			color: rgba(225, 223, 222, 0.60);
+			font-family: "Myriad Pro";
+		}
+	
+		&__textarea, &__input {
+			padding: rem(13) 0;
+			min-width: 100%;
+			color: $highlightColor;
+			background-color: transparent;
+			border-radius: 0;
+			border-bottom: rem(1) solid $textColor;
+			outline: none;
+			transition: 0.3s ease border-color;
+			&:focus, &:active {
+				border-color: $highlightColor;
+			}
+			&::placeholder {
+				color: $textColor;;
+			}
+		}
+		&__textarea {
+			resize: none;
+		}
+		&__button {
+			padding: rem(12) rem(97);
+			font-size: rem(20);
+			font-weight: 600;
+		}
+	}
+}

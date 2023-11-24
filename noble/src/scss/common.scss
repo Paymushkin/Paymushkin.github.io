@@ -1,0 +1,90 @@
+h1, h2, h3, h4, p, span, small, button, a, div {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+ol, ul {
+	list-style: none;
+}
+
+h1 {
+	color: $textColor;
+	// font-size: rem(60);
+	@include adaptiveValue("font-size", 78, 24, 1920, 656, 1);
+	font-weight: 700;
+	line-height: 110%;
+}
+
+h2 {
+	color: $textColor;
+	// font-size: rem(40);
+	@include adaptiveValue("font-size", 46, 22, 1920, 656, 1);
+	line-height: 1.3;
+	font-weight: 700;
+}
+
+h3 {
+	// font-size: rem(40);
+	@include adaptiveValue("font-size", 32, 22, 1920, 656, 1);
+	line-height: math.div(38, 32);
+	font-weight: 600;
+}
+
+h4 {
+	// font-size: rem(40);
+	@include adaptiveValue("font-size", 22, 22, 1920, 656, 1);
+	font-weight: 700;
+	// margin: -1px;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.form-field {
+	width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+details {
+	position: relative;
+}
+
+details summary::-webkit-details-marker {
+	display: none
+}
+
+details > summary {
+	list-style: none;
+	padding-right: rem(32);
+}
+
+details summary:before {
+	content: url(../img/arrow.svg);
+	position: absolute;
+	left: rem(-70);
+	width: rem(40);
+	height: rem(40);
+	transition: 0.3s ease transform;
+}
+
+details[open] summary:before {
+	transform: rotate(-90deg);
+}
+
+.separator {
+	width: 100%;
+	height: rem(18);
+	background-color: $bgColorHighlight;
+}

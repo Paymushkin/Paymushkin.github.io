@@ -1,0 +1,61 @@
+.footer {
+	// background: linear-gradient(90deg, #FF6D18 0%, #FFAE05 100%);
+	&__container {
+		padding: rem(83) rem(15);
+		// @include adaptiveValue("padding-top", 51, 22, 1920, 1024, 1);
+		// @include adaptiveValue("padding-bottom", 51, 16, 1920, 1024, 1);
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width:$tablet){
+			flex-direction: column;
+		}
+	}
+
+	&-body {
+		display: flex;
+		align-items: flex-start;
+
+		&__contacts {
+			display: flex;
+			flex-direction: column;
+			gap: rem(22);
+
+			a {
+				font-family: "Myriad Pro";
+				color: $mainColor;
+			}
+		}
+
+		&__copy {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: rem(22);
+			line-height: math.div(14, 20);
+			@media (max-width:$tablet) {
+				margin-bottom: rem(28);
+			}
+			span {
+				color: $mainColor;
+			}
+			
+		}
+
+		&__media-list {
+			display: flex;
+			gap: rem(20);
+
+			li {
+				transition: 0.3s ease opacity;
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 0.75;
+					}
+				}
+			}
+		}
+	}
+}

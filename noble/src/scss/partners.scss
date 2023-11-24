@@ -1,0 +1,30 @@
+.partners {
+	// padding: rem(107) 0;
+	@include adaptiveValue("padding-top", 86, 15, 1920, 656, 1);
+	@include adaptiveValue("padding-bottom", 86, 0, 1920, 656, 1);
+}
+
+.marquee-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: rem(92);
+	// width: 450vw;
+	animation: scrolling 20s linear infinite;
+	@media (max-width:$tablet){
+		gap: rem(27);
+		width: 300vw;
+		animation-duration: 15s; 
+	}
+	@media (max-width:$mobile){
+		width: 350vw; 
+	}
+}
+
+.marquee-item {
+	@media (max-width:$tablet){
+		img {
+			max-height: rem(20);
+		}	
+	}
+}
