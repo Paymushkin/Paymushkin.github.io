@@ -1,4 +1,23 @@
 .footer {
+
+	._highlight & {
+		background-color: $bgColorHighlight;
+
+		svg path {
+			fill: $highlightColor;
+		}
+
+		span, a {
+			color: $highlightColor;
+		}
+	}
+
+	svg {
+		path {
+			fill: $mainColor;
+		}
+	}
+
 	// background: linear-gradient(90deg, #FF6D18 0%, #FFAE05 100%);
 	&__container {
 		padding: rem(83) rem(15);

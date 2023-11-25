@@ -7,6 +7,7 @@
 	display: inline-flex;
 	justify-content: center;
 	padding: rem(10) rem(53);
+	min-width: rem(348);
 	color: $mainColor;
 	background: $highlightColor;
 	border-radius: rem(46);
@@ -50,8 +51,9 @@
 		pointer-events: none;
 		cursor: not-allowed;
 	}
-	&._big {
-		padding: rem(20) rem(60);
+	&-highlight {
+		color: $highlightColor;
+		background-color: $mainColor;
 	}
 	&-standart {
 		color: $mainColor;
@@ -62,27 +64,6 @@
 				color: $highlightColor;
 				background-color: $bgColorHighlight;
 			}
-		}
-	}
-	&._border {
-		padding: rem(16) rem(60);
-		font-size: rem(16);
-		line-height: math.div(22, 16);
-		&::before{
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			border-radius: rem(46); 
-			border: 2px solid transparent;
-			background: #000;
-			-webkit-mask:
-			  linear-gradient(#fff 0 0) padding-box, 
-			  linear-gradient(#fff 0 0);
-			-webkit-mask-composite: destination-out;
-			mask-composite: exclude;
 		}
 	}
 }

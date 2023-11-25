@@ -1,0 +1,38 @@
+section.feedback 
+	.feedback__container 
+		h2.feedback__title FEEDBACK FROM OUR CUSTOMERS
+		.feedback__wrapper
+			.feedback__slider.swiper
+				.feedback__wrapper.swiper-wrapper
+					.feedback__slide.swiper-slide.feedback-slide
+						.feedback-slide__top 
+							.feedback-slide__avatar(style="background-image: url(@img/feedback/item-1.png)")
+							h4.feedback-slide__name Alice Hopkins
+						p.feedback-slide__text
+							| Everything is great, thanks
+							| to the service for the quick
+							| execution of services.
+					.feedback__slide.swiper-slide.feedback-slide
+						.feedback-slide__top 
+							.feedback-slide__avatar(style="background-image: url(@img/feedback/item-1.png)")
+							h4.feedback-slide__name Antonio Bruno 
+						p.feedback-slide__text
+							| Everything is great, thanks
+							| to the service for the quick
+							| execution of services.
+					.feedback__slide.swiper-slide.feedback-slide
+						.feedback-slide__top 
+							.feedback-slide__avatar(style="background-image: url(@img/feedback/item-1.png)")
+							h4.feedback-slide__name Caroline Vandal
+						p.feedback-slide__text
+							| Everything is great, thanks
+							| to the service for the quick
+							| execution of services.
+			.navigation
+				img(src="@img/feedback/arrow-l.svg", alt="").prev
+				img(src="@img/feedback/arrow-r.svg", alt="").next 
+					
+		h2.feedback__title DO YOU WANT TO LEAVE A REVIEW?
+		form.feedback__form(action="", method="post") 
+			textarea#feedback(name="feedback", cols="30", rows="9", placeholder="Your feedback...").feedback__textarea
+			button(type="submit").button.button-highlight Send

@@ -43,28 +43,16 @@
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
-	svg {
+
+	.prev {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
-		path {
-			transition: 0.3s ease stroke;
-		}
-		@media (any-hover: hover){
-			&:hover{
-				path {
-					stroke: #000;
-				}
-			}
-		}
-		
-	}
-	.prev {
-		left: rem(33);
-		transform: rotate(-180deg);
+		left: rem(-38);
 	}
 	.next {
-		right: rem(33);
+		position: absolute;
+		top: 50%;
+		right: rem(-38);
 	}
 }
 .swiper-pagination {

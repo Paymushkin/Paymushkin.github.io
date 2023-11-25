@@ -26,6 +26,14 @@ h2 {
 	@include adaptiveValue("font-size", 46, 22, 1920, 656, 1);
 	line-height: 1.3;
 	font-weight: 700;
+
+	&.document__title {
+		margin-bottom: rem(73);
+		width: 100%;
+		text-align: center;
+		color: $mainColor;
+		text-transform: uppercase;
+	}
 }
 
 h3 {
@@ -44,6 +52,12 @@ h4 {
 
 p {
 	line-height: 1.5;
+}
+
+section {
+	&.document {
+		padding: rem(65) 0;
+	}
 }
 
 .form-field {
@@ -87,4 +101,81 @@ details[open] summary:before {
 	width: 100%;
 	height: rem(18);
 	background-color: $bgColorHighlight;
+}
+
+.grid-item {
+	display: flex;
+	min-height: rem(589);
+	&:nth-child(even){
+		flex-direction: row-reverse;
+	}
+
+	&__img {
+		flex: 0 0 percent(1052, 1920);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		padding: rem(101) rem(117);
+		border-top: rem(1) solid $highlightColor;
+		border-bottom: rem(1) solid $highlightColor;
+
+		.about & {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			padding-right: rem(133);
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(38);
+		color: $textColor;
+		text-transform: uppercase;
+		text-align: left;
+		.about & {
+			margin-bottom: rem(32);
+			max-width: rem(468);
+			font-family: "Patrick Oklahoma";
+			color: $mainColor;
+			font-size: rem(62);
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+		// font-size: rem(20);
+		// @include adaptiveValue("font-size", 20, 12, 1920, 656, 1);
+		// font-weight: 700;
+		// line-height: math.div(31, 20);
+		// @media (max-width:$tablet){
+		// 	margin-bottom: rem(5);
+		// 	line-height: 1;
+		// }
+		// @media (max-width:$mobileSmall){
+		// 	font-size: rem(16); 
+		// }
+	}
+	&__text {
+		max-width: rem(350);
+		color: rgba(255, 255, 255, 0.60);
+		line-height: 1.25;
+
+		.about & {
+			max-width: rem(445);
+			color: $mainColor;
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+
+		// margin-bottom: rem(37);
+		// max-width: rem(312);
+		// @include adaptiveValue("font-size", 16, 10, 1920, 656, 1);
+		// @media (max-width:$mobileSmall){
+		// 	font-size: rem(14); 
+		// }
+	}
+
 }
