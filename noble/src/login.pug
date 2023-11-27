@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		//- .loader#loader
+		//- 	.loader__spinner
+		//- 		.loader__icon
+		//- 			div
+
+		.wrapper._highlight
+			include html/_header
+			main.main-content
+				section.login
+					.login__container
+						form(action="", method="post", name="login").login__form
+							.login__avatar(style="background-image: url(@img/avatar.png)")
+							h2.login__title CUSTOMER LOGIN
+							.form-field
+								label.login__label
+									svg(width='18' height='19' viewbox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M11.41 9.45001C12.98 8.60001 14.04 6.93997 14.04 5.02997C14.04 2.25997 11.79 0 9.01001 0C6.24001 0 3.98004 2.25997 3.98004 5.02997C3.98004 6.93997 5.05005 8.60001 6.61005 9.45001C2.81005 10.5 0 13.99 0 18.12V18.59H18V18.12C18.02 13.99 15.22 10.5 11.41 9.45001ZM4.92999 5.02997C4.92999 2.76997 6.77002 0.940002 9.02002 0.940002C11.28 0.940002 13.11 2.77997 13.11 5.02997C13.11 7.28997 11.27 9.12 9.02002 9.12C6.76002 9.13 4.92999 7.28997 4.92999 5.02997ZM0.970032 17.66C1.21003 13.43 4.73002 10.06 9.02002 10.06C13.31 10.06 16.83 13.43 17.07 17.66H0.970032Z' fill='#E1DFDE')
+									span Name
+								input#login-name(autocomplete="on",type="text",name="form[login]",placeholder="").input.login__input
+							
+							.form-field
+								label.login__label
+									svg(width='18' height='12' viewbox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M8.92023 5.95001L1.2002 0H16.6702L8.92023 5.95001Z' fill='#E1DFDE')
+										path(d='M6.24005 5.45013L0 10.5402V0.640137L6.24005 5.45013Z' fill='#E1DFDE')
+										path(d='M7.25012 6.23016L8.92017 7.51013L10.6801 6.16016L16.7802 11.2302H1.12012L7.25012 6.23016Z' fill='#E1DFDE')
+										path(d='M11.6899 5.39014L17.8699 0.640137V10.5302L11.6899 5.39014Z' fill='#E1DFDE')
+									span Email ID
+								input#login-email(type="email", name="email").input.login__input
+
+							.form-field
+								label.login__label
+									svg(width='17' height='22' viewbox='0 0 17 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M15.11 6.95996H13.83V5.35999C13.83 2.40999 11.43 0 8.46997 0C5.51997 0 3.10999 2.39999 3.10999 5.35999V6.95996H1.82001C0.820007 6.95996 0 7.77997 0 8.77997V19.21C0 20.23 0.820007 21.05 1.82001 21.05H15.1C16.12 21.05 16.94 20.23 16.94 19.21V8.77997C16.95 7.78997 16.13 6.95996 15.11 6.95996ZM5.53003 5.35999C5.53003 3.73999 6.84997 2.41998 8.46997 2.41998C10.09 2.41998 11.41 3.73999 11.41 5.35999V6.95996H5.53998V5.35999H5.53003ZM9.46002 16.23V18.89C9.46002 19 9.36 19.08 9.25 19.08H7.96997C7.86997 19.08 7.78003 19 7.78003 18.89V16.23C6.91003 15.89 6.28003 15.05 6.28003 14.05C6.28003 12.76 7.33 11.71 8.62 11.71C9.91 11.71 10.96 12.76 10.96 14.05C10.96 15.05 10.33 15.89 9.46002 16.23Z' fill='#E1DFDE')
+									span Password
+								input#login-pass(type="password", name="password").input.login__input
+
+							.login__additional
+								.checkbox
+									input#c_1(type="checkbox" value="1" name="form[login]").checkbox__input
+									label(for="c_1").checkbox__label
+										span.checkbox__text Remember me
+								
+								a(href="#").login__forgot Forgot Password? 
+							
+							button(type="submit").button.login__button LOGIN
+								
+
+			include html/_footer
+		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="js/app.min.js")

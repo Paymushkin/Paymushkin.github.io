@@ -29,8 +29,6 @@ $highlightColor: #FFE79F; // Цвет акцентов
 $textColor: #E1DFDE;
 $bgColor: #E1DFDE;
 // $gradient: linear-gradient(90deg, #FF6D18 0%, #FFAE05 100%);
-
-// @import "base/forms/select";
  
 // Настройки ===========================================================================
 // Минимальная ширина страницы
@@ -170,6 +168,7 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+@import "base/forms/checkbox";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -177,17 +176,18 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "hero";
-// @import "partners";
+@import "login";
 @import "about";
 @import "services-list";
 @import "advantages";
 @import "feedback";
-// @import "video";
+@import "profile";
 @import "services";
 @import "service";
 @import "news";
 @import "qa";
 @import "contacts";
+@import "chat";
 @import "footer";
 
 @import "base/swiper";

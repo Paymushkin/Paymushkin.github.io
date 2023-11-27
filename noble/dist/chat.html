@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+    <title>Noble</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body id="chat">
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container"> 
+          <div class="header__logo"><a href="/"> <img src="img/logo.svg" alt="Logo"/></a></div>
+          <div class="header__interface interface-header"> 
+            <button class="interface-header__chat">
+               <svg xmlns="http://www.w3.org/2000/svg" width="33" height="30" viewBox="0 0 33 30" fill="none">
+<path d="M31.02 0H1.98C1.45487 0 0.951251 0.206189 0.579929 0.573209C0.208607 0.940228 0 1.43801 0 1.95706V22.8323C0 23.3514 0.208607 23.8492 0.579929 24.2162C0.951251 24.5832 1.45487 24.7894 1.98 24.7894H11.7926C11.9065 24.7894 12.0185 24.8185 12.1177 24.8739C12.2169 24.9294 12.2998 25.0093 12.3585 25.1058L14.7989 29.0525C14.975 29.3416 15.2237 29.5807 15.5209 29.7467C15.8181 29.9128 16.1537 30 16.4951 30C16.8364 30 17.172 29.9128 17.4692 29.7467C17.7664 29.5807 18.0151 29.3416 18.1912 29.0525L20.6382 25.096C20.6969 24.9995 20.7798 24.9196 20.879 24.8641C20.9782 24.8087 21.0902 24.7796 21.2041 24.7796H31.02C31.5451 24.7796 32.0487 24.5734 32.4201 24.2064C32.7914 23.8394 33 23.3416 33 22.8226V1.95706C33 1.43801 32.7914 0.940228 32.4201 0.573209C32.0487 0.206189 31.5451 0 31.02 0ZM31.68 22.8323C31.68 23.0054 31.6105 23.1713 31.4867 23.2936C31.3629 23.416 31.195 23.4847 31.02 23.4847H21.2075C20.8665 23.4848 20.5314 23.572 20.2345 23.7377C19.9376 23.9034 19.6891 24.1421 19.5129 24.4306L17.066 28.3871C17.0075 28.4845 16.9245 28.5651 16.8249 28.6211C16.7254 28.6771 16.6129 28.7066 16.4984 28.7066C16.3838 28.7066 16.2713 28.6771 16.1718 28.6211C16.0722 28.5651 15.9892 28.4845 15.9308 28.3871L13.4888 24.4371C13.3133 24.1472 13.0648 23.907 12.7676 23.7401C12.4703 23.5732 12.1344 23.4852 11.7926 23.4847H1.98C1.80496 23.4847 1.63708 23.416 1.51331 23.2936C1.38954 23.1713 1.32 23.0054 1.32 22.8323V1.95706C1.32 1.78404 1.38954 1.61812 1.51331 1.49578C1.63708 1.37344 1.80496 1.30471 1.98 1.30471H31.02C31.195 1.30471 31.3629 1.37344 31.4867 1.49578C31.6105 1.61812 31.68 1.78404 31.68 1.95706V22.8323ZM22.44 9.78529C22.44 9.95831 22.3705 10.1242 22.2467 10.2466C22.1229 10.3689 21.955 10.4376 21.78 10.4376H11.22C11.045 10.4376 10.8771 10.3689 10.7533 10.2466C10.6295 10.1242 10.56 9.95831 10.56 9.78529C10.56 9.61228 10.6295 9.44635 10.7533 9.32401C10.8771 9.20167 11.045 9.13294 11.22 9.13294H21.78C21.955 9.13294 22.1229 9.20167 22.2467 9.32401C22.3705 9.44635 22.44 9.61228 22.44 9.78529ZM22.44 15.0041C22.44 15.1771 22.3705 15.3431 22.2467 15.4654C22.1229 15.5877 21.955 15.6565 21.78 15.6565H11.22C11.045 15.6565 10.8771 15.5877 10.7533 15.4654C10.6295 15.3431 10.56 15.1771 10.56 15.0041C10.56 14.8311 10.6295 14.6652 10.7533 14.5428C10.8771 14.4205 11.045 14.3518 11.22 14.3518H21.78C21.955 14.3518 22.1229 14.4205 22.2467 14.5428C22.3705 14.6652 22.44 14.8311 22.44 15.0041Z" fill="#FFE79F"/>
+</svg>
+            </button>
+            <div class="interface-header__search">
+              <input id="header-search" type="search" name="search" placeholder="Search"/><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+<path d="M6.71997 13.31C3.11997 13.31 0.189941 10.38 0.189941 6.78C0.189941 3.18 3.11997 0.25 6.71997 0.25C10.32 0.25 13.26 3.18 13.26 6.78C13.26 10.37 10.32 13.31 6.71997 13.31ZM6.71997 0.699997C3.36997 0.699997 0.650024 3.42 0.650024 6.77C0.650024 10.12 3.36997 12.84 6.71997 12.84C10.07 12.84 12.79 10.12 12.79 6.77C12.79 3.43 10.07 0.699997 6.71997 0.699997Z" fill="#FFE79F"/>
+<path d="M6.72009 13.39C3.07009 13.39 0.100098 10.42 0.100098 6.77002C0.100098 3.12002 3.07009 0.150024 6.72009 0.150024C10.3701 0.150024 13.3401 3.12002 13.3401 6.77002C13.3401 10.42 10.3701 13.39 6.72009 13.39ZM6.72009 0.320023C3.16009 0.320023 0.270142 3.21002 0.270142 6.77002C0.270142 10.33 3.16009 13.22 6.72009 13.22C10.2701 13.22 13.1702 10.33 13.1702 6.77002C13.1702 3.22002 10.2801 0.320023 6.72009 0.320023ZM6.72009 12.93C3.33009 12.93 0.570068 10.17 0.570068 6.77002C0.570068 3.38002 3.33009 0.610023 6.72009 0.610023C10.1101 0.610023 12.8801 3.37002 12.8801 6.77002C12.8801 10.16 10.1201 12.93 6.72009 12.93ZM6.72009 0.790024C3.42009 0.790024 0.740112 3.47002 0.740112 6.77002C0.740112 10.07 3.42009 12.75 6.72009 12.75C10.0201 12.75 12.7001 10.07 12.7001 6.77002C12.7001 3.47002 10.0201 0.790024 6.72009 0.790024Z" fill="#FFE79F"/>
+<path d="M14.95 17.46C14.88 17.46 14.8201 17.43 14.7701 17.38L10.2301 12.04C10.1501 11.94 10.1601 11.79 10.2601 11.71C10.3601 11.63 10.5101 11.64 10.5901 11.74L15.1301 17.08C15.2101 17.18 15.2001 17.33 15.1001 17.41C15.0601 17.44 15 17.46 14.95 17.46Z" fill="#FFE79F"/>
+<path d="M14.9503 17.54C14.8603 17.54 14.7703 17.5 14.7103 17.43L10.1704 12.09C10.0604 11.96 10.0703 11.75 10.2103 11.64C10.3503 11.53 10.5504 11.54 10.6604 11.68L15.2003 17.02C15.3103 17.16 15.3004 17.36 15.1604 17.47C15.1004 17.52 15.0303 17.54 14.9503 17.54ZM10.4104 11.73C10.3804 11.73 10.3403 11.74 10.3203 11.76C10.2603 11.81 10.2504 11.9 10.3004 11.97L14.8403 17.31C14.8903 17.37 14.9904 17.38 15.0504 17.33C15.1104 17.28 15.1203 17.19 15.0703 17.12L10.5304 11.78C10.4904 11.75 10.4504 11.73 10.4104 11.73Z" fill="#FFE79F"/>
+</svg>
+            </div><a class="interface-header__profile" href="profile.html">
+               <svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" viewBox="0 0 19 30" fill="none">
+<path d="M12.3 14.13C14.8 12.99 16.55 10.47 16.55 7.54004C16.55 3.54004 13.3 0.290039 9.30005 0.290039C5.30005 0.290039 2.05005 3.54004 2.05005 7.54004C2.05005 10.52 3.85995 13.09 6.44995 14.2C2.81995 15.46 0.209961 18.9 0.209961 22.95V28.97C0.209961 29.27 0.46001 29.52 0.76001 29.52H18.1801C18.4801 29.52 18.73 29.27 18.73 28.97V22.95C18.73 18.83 16.03 15.33 12.3 14.13ZM9.30005 13.69C5.91005 13.69 3.15002 10.93 3.15002 7.54004C3.15002 4.15004 5.91005 1.40004 9.30005 1.40004C12.69 1.40004 15.4399 4.16004 15.4399 7.54004C15.4399 10.93 12.69 13.69 9.30005 13.69ZM9.46997 14.79C13.97 14.79 17.63 18.45 17.63 22.95V28.42H1.31006V22.95C1.31006 18.45 4.96997 14.79 9.46997 14.79Z" fill="#FFE79F"/>
+</svg></a>
+            <nav class="menu">
+              <button class="menu__icon icon-menu" type="button"><span></span></button>
+              <div class="menu__body menu-body">
+                <div class="menu-body__wrapper">
+                  <div class="menu-body__logo"><img src="img/menu-logo.svg" alt="Logo"/></div>
+                  <ul class="header__list">
+                    <li class="header__list-item"><a class="header__list-link" href="profile.html">Personal account</a></li>
+                    <li class="active header__list-item" id="service"><span>Services</span>
+                      <ul class="service-menu" id="service-menu">
+                        <li> <a href="services.html#boking-air-tickets">• Booking of air tickets</a></li>
+                        <li> <a href="services.html#booking-hotels">• Booking of hotels/apartments/villas</a></li>
+                        <li> <a href="services.html#transfer">• Transfer</a></li>
+                        <li> <a href="services.html#car-rental">• Car rental</a></li>
+                        <li> <a href="services.html#restaurant-reservations">• Restaurant reservations</a></li>
+                        <li> <a href="services.html#yacht-rentals">• Yacht rentals</a></li>
+                        <li> <a href="services.html#leisure-activities">• Leisure activities</a></li>
+                        <li> <a href="services.html#events">• Organization of evenings and events</a></li>
+                        <li> <a href="services.html#shopping-support">• Shopping support</a></li>
+                        <li> <a href="services.html#travel-organization">• Travel organization</a></li>
+                        <li> <a href="#">• Other services</a></li>
+                      </ul>
+                    </li>
+                    <li class="header__list-item">
+                      <button>Chat</button>
+                    </li>
+                    <li class="header__list-item"><a class="header__list-link" href="about.html">About the company</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="reviews.html">Reviews</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="#" data-goto="#blog">The blog</a></li>
+                  </ul>
+                  <ul class="menu-body__media-list">
+                    <li> <a href="#"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.82 33.89" width="35" height="35">
+<g id="Layer_1-2" data-name="Layer 1">
+<path fill="#132237" d="M16.91,0C7.57,0,0,7.58,0,16.94s7.57,16.94,16.91,16.94,16.91-7.58,16.91-16.94c0-9.36-7.56-16.94-16.91-16.94Zm0,32.34c-8.49,0-15.38-6.89-15.38-15.41S8.41,1.52,16.91,1.52s15.38,6.89,15.38,15.41-6.88,15.41-15.38,15.41Zm-.36-22.46c2.24,0,2.5,.01,3.39,.05,.82,.04,1.26,.17,1.56,.29,.39,.15,.67,.33,.96,.63,.29,.29,.47,.57,.63,.96,.11,.3,.25,.74,.29,1.56,.04,.88,.05,1.15,.05,3.4s-.01,2.5-.05,3.39c-.04,.82-.17,1.26-.29,1.56-.15,.39-.33,.67-.63,.96-.29,.29-.57,.47-.96,.63-.3,.12-.74,.25-1.56,.29-.88,.04-1.15,.05-3.39,.05s-2.5-.01-3.39-.05c-.82-.04-1.26-.17-1.56-.29-.39-.15-.67-.33-.96-.63-.29-.29-.47-.57-.63-.96-.11-.3-.25-.74-.29-1.56-.04-.88-.05-1.15-.05-3.39s0-2.5,.05-3.4c.04-.82,.17-1.26,.29-1.56,.15-.39,.33-.67,.63-.96,.29-.29,.57-.47,.96-.63,.3-.11,.74-.25,1.56-.29,.89-.04,1.15-.05,3.39-.05Zm0-1.51c-2.28,0-2.56,.01-3.45,.05-.89,.04-1.5,.18-2.03,.39-.55,.21-1.02,.5-1.48,.97-.47,.47-.75,.93-.97,1.48-.21,.53-.35,1.14-.39,2.03-.04,.89-.05,1.18-.05,3.46s0,2.56,.05,3.46c.04,.89,.18,1.5,.39,2.03,.21,.55,.5,1.02,.97,1.48,.47,.47,.93,.75,1.48,.97,.53,.21,1.14,.35,2.03,.39,.89,.04,1.18,.05,3.45,.05s2.56-.01,3.45-.05c.89-.04,1.5-.18,2.03-.39,.55-.21,1.02-.5,1.48-.97,.47-.47,.75-.93,.97-1.48,.21-.53,.35-1.14,.39-2.03,.04-.89,.05-1.18,.05-3.46s-.01-2.57-.05-3.46c-.04-.89-.18-1.5-.39-2.03-.21-.55-.5-1.02-.97-1.48-.47-.47-.93-.75-1.48-.97-.53-.21-1.14-.35-2.03-.39-.89-.04-1.18-.05-3.45-.05Zm0,4.08c-2.38,0-4.3,1.93-4.3,4.31s1.93,4.31,4.3,4.31,4.3-1.93,4.3-4.31-1.93-4.31-4.3-4.31Zm0,7.11c-1.54,0-2.79-1.25-2.79-2.8s1.25-2.8,2.79-2.8,2.79,1.25,2.79,2.8-1.25,2.8-2.79,2.8Zm5.47-7.28c0-.56-.45-1.01-1.01-1.01s-1.01,.45-1.01,1.01,.45,1.01,1.01,1.01,1.01-.45,1.01-1.01Z"/>
+</g>
+</svg></a></li>
+                    <li> <a href="#"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.82 33.89" width="35" height="35">
+<g id="Layer_1-2" data-name="Layer 1">
+<g>
+<path fill="#132237" d="M16.91,0C7.57,0,0,7.58,0,16.94s7.57,16.94,16.91,16.94,16.91-7.58,16.91-16.94c.01-9.36-7.57-16.94-16.91-16.94Zm0,32.34c-8.49,0-15.38-6.89-15.38-15.41S8.41,1.52,16.91,1.52s15.38,6.89,15.38,15.41-6.88,15.41-15.38,15.41Z"/>
+<path fill="#132237" d="M17.65,27.1v-9.27h3.11l.47-3.62h-3.57v-2.3c0-1.04,.29-1.76,1.79-1.76h1.91v-3.23c-.33-.04-1.46-.14-2.78-.14-2.75,0-4.64,1.68-4.64,4.78v2.67h-3.11v3.62h3.11v9.27h3.71Z"/>
+</g>
+</g>
+</svg>		</a></li>
+                    <li> <a href="#"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.82 33.89" width="35" height="35">
+<g id="Layer_1-2" data-name="Layer 1">
+<g>
+<path fill="#132237" d="M16.91,0C7.57,0,0,7.58,0,16.94s7.57,16.94,16.91,16.94,16.91-7.58,16.91-16.94S26.25,0,16.91,0Zm0,32.34c-8.49,0-15.38-6.89-15.38-15.41S8.41,1.52,16.91,1.52s15.38,6.89,15.38,15.41-6.89,15.41-15.38,15.41Z"/>
+<path fill="#132237" d="M14.2,25.15c6.71,0,10.39-5.57,10.39-10.41,0-.16,0-.32,0-.47,.71-.52,1.33-1.16,1.82-1.89-.65,.29-1.36,.49-2.1,.57,.75-.45,1.33-1.17,1.6-2.02-.71,.42-1.49,.72-2.32,.89-.67-.71-1.61-1.15-2.66-1.15-2.02,0-3.65,1.63-3.65,3.66,0,.29,.03,.57,.09,.83-3.03-.15-5.72-1.61-7.52-3.82-.31,.54-.49,1.17-.49,1.83,0,1.27,.64,2.38,1.62,3.05-.6-.02-1.16-.18-1.65-.46v.05c0,1.77,1.26,3.25,2.93,3.59-.31,.08-.63,.13-.96,.13-.24,0-.46-.02-.69-.07,.46,1.45,1.81,2.51,3.41,2.54-1.25,.98-2.82,1.56-4.53,1.56-.29,0-.58-.02-.87-.05,1.61,1.04,3.53,1.64,5.59,1.64Z"/>
+</g>
+</g>
+</svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main-content"> 
+        <section class="chat">
+          <div class="chat-header"> 
+            <div class="chat__container">
+              <div class="chat-header__profile"> 
+                <div class="chat-header__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div>
+                <div class="chat-header__name">Alex's Manager</div>
+              </div>
+            </div>
+          </div>
+          <div class="chat__container chat-history__wrapper">
+            <ul class="chat-history">
+              <li class="message user-message">
+                <div class="message__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message my-message">
+                <div class="message__avatar" style="background-image: url(img/chat/user-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message my-message">
+                <div class="message__avatar" style="background-image: url(img/chat/user-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message user-message">
+                <div class="message__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message user-message">
+                <div class="message__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message my-message">
+                <div class="message__avatar" style="background-image: url(img/chat/user-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message my-message">
+                <div class="message__avatar" style="background-image: url(img/chat/user-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message user-message">
+                <div class="message__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+              <li class="message user-message">
+                <div class="message__avatar" style="background-image: url(img/chat/manager-avatar.svg)"> </div><span class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="chat-footer">
+            <div class="chat__container"> 
+              <form class="chat-footer__form" id="send-message" action="#" method="post">
+                <textarea class="chat-footer__textarea" id="text" name="text" cols="30" rows="1" placeholder="Write a message..."></textarea>
+                <button class="chat-footer__button" type="submit"><img src="img/chat/send.svg" alt="send"/></button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

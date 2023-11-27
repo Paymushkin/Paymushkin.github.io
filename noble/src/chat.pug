@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body#chat
+		//- .loader#loader
+		//- 	.loader__spinner
+		//- 		.loader__icon
+		//- 			div
+
+		.wrapper
+			include html/_header
+			main.main-content 
+				section.chat
+					.chat-header 
+						.chat__container
+							.chat-header__profile 
+								.chat-header__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								.chat-header__name Alex's Manager
+					.chat__container.chat-history__wrapper
+						ul.chat-history
+							li.message.user-message
+								.message__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.my-message
+								.message__avatar(style="background-image: url(@img/chat/user-avatar.svg)")  
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.my-message
+								.message__avatar(style="background-image: url(@img/chat/user-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.user-message
+								.message__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+							
+							li.message.user-message
+								.message__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.my-message
+								.message__avatar(style="background-image: url(@img/chat/user-avatar.svg)")  
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.my-message
+								.message__avatar(style="background-image: url(@img/chat/user-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.user-message
+								.message__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+							li.message.user-message
+								.message__avatar(style="background-image: url(@img/chat/manager-avatar.svg)") 
+								span.message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora veritatis laudantium temporibus repellat assumenda sunt enim dolor. Vitae sunt, nihil unde harum earum officiis sequi nisi quae incidunt dolore.
+
+					.chat-footer
+						.chat__container 
+							form#send-message(action="#", method="post").chat-footer__form
+								textarea#text.chat-footer__textarea(name="text", cols="30", rows="1", placeholder="Write a message...")
+								button(type="submit").chat-footer__button
+									img(src="@img/chat/send.svg", alt="send")
+
+		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="js/app.min.js")

@@ -1,0 +1,339 @@
+.profile {
+	display: grid;
+    -ms-grid-columns: minmax(auto,18.75rem) 1fr;
+    grid-template-columns: minmax(auto,18.75rem) 1fr;
+    -ms-grid-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside section__wrapper";
+    height: 100%;
+
+	.header {
+		grid-area: header;
+		padding: rem(39) rem(77) rem(39) rem(145);
+		min-height: rem(112);
+		background-color: $bgColor;
+		border-bottom: rem(2) solid $mainColor;
+
+		&__nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-right: 0;
+		}
+
+		&__btns {
+			display: flex;
+			align-items: center;
+			gap: rem(48);
+			
+			button {
+				display: flex;
+			}
+		}
+
+		&__back {
+			display: flex;
+			align-items: center;
+			gap: rem(22.5);
+			font-weight: 700;
+		}
+
+		&__avatar {
+			width: rem(33);
+			height: rem(33);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.aside {
+		grid-area: aside;
+		display: flex;
+		flex-direction: column;
+		background-color: $bgColorHighlight;
+
+		&__top {
+			padding: rem(39);
+			min-height: rem(112);
+			color: $highlightColor;
+			border-bottom: rem(2) solid $highlightColor;
+			font-weight: 700;
+
+			span {
+				line-height: math.div(34, 22);
+			}
+		}
+
+		.nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex: 1 1 auto;
+			padding: rem(39) 0;
+
+			&__list {
+				display: flex;
+				flex-direction: column;
+				gap: rem(10);
+
+				li {
+					display: flex;
+					align-items: center;
+					gap: rem(20);
+					padding: rem(15) rem(39);
+					transition: 0.3s ease background-color;
+					cursor: pointer;
+
+					&._active {
+						background-color: $bgColor;
+
+						span {
+							color: $mainColor;
+						}
+
+						svg path {
+							fill: $mainColor;
+						}
+					}
+
+					@media (any-hover: hover){
+						&:hover{
+							background-color: rgba(225, 222, 222, 0.7);
+
+							span {
+								color: $mainColor;
+							}
+	
+							svg path {
+								fill: $mainColor;
+							}
+						}
+					}
+				}
+			}
+
+			&__text {
+				color: $textColor;
+				transition: 0.3s ease color;
+			}
+
+			svg {
+				path {
+					transition: 0.3s ease fill;
+				}
+			}
+
+			&__logout {
+				display: flex;
+				align-items: center;
+				gap: rem(20);
+				padding: rem(15) rem(39);
+				transition: 0.3s ease background-color;
+				cursor: pointer;
+
+				span {
+					color: $textColor;
+					transition: 0.3s ease color;
+				}
+
+				@media (any-hover: hover){
+					&:hover{
+						background-color: rgba(225, 222, 222, 0.7);
+
+						span {
+							color: $mainColor;
+						}
+						
+						svg path {
+							fill: $mainColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.section__wrapper {
+		grid-area: section__wrapper;
+	}
+
+	.section {
+		display: none;
+		flex-direction: column;
+		min-height: 100%;
+
+		&._active {
+			display: flex;
+		}
+
+		&-account {
+			// background-color: orange;
+		}
+
+		&-services {
+			// background-color: red;
+		}
+
+		&-history {
+			// background-color: blue;
+		}
+
+		&-payment {
+			// background-color: green;
+		}
+	}
+
+	.body-account {
+		display: flex;
+		gap: rem(120);
+		padding: rem(167) rem(143);
+
+		&__avatar {
+			width: rem(280);
+			height: rem(280);
+			border-radius: 50%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(10);
+		}
+
+		&__icon {
+			max-height: rem(40);
+		}
+
+		&__name {
+			padding: rem(12) 0;
+			color: $mainColor;
+			background-color: transparent;
+			border: none;
+			border-bottom: rem(1) solid $mainColor;
+			outline: none;
+			font-weight: 700;
+		}
+
+		&__email {
+			padding: rem(12) 0;
+			color: $mainColor;
+			background-color: transparent;
+			border: none;
+			border-bottom: rem(1) solid $mainColor;
+			outline: none;
+			font-weight: 700;
+		}
+	}
+
+	.body-services {
+		padding: rem(65) rem(54);
+
+		&__icon {
+			margin-bottom: rem(65);
+		}
+
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: rem(20) rem(28);
+			max-width: rem(1280);
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: rem(38) rem(45);
+			width: rem(380);
+			border: 1px solid $mainColor;
+			border-radius: rem(25);
+			transition: 0.3s ease background-color;
+			cursor: pointer;
+
+			@media (any-hover: hover){
+				&:hover{
+					background-color: $mainColor;
+
+					svg path {
+						fill: $bgColor;
+					}
+
+					.body-services__text {
+						color: $textColor;
+					}
+				}
+			}
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			gap: rem(35);
+		}
+
+		&__text {
+			line-height: math.div(24, 22);
+			transition: 0.3s ease color;
+		}
+
+		svg path {
+			transition: 0.3s ease fill;
+		}
+	}
+
+	.body-history {
+		padding: rem(60) rem(154);
+
+		&__icon {
+			margin-bottom: rem(65);
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: rem(20) rem(28);
+			max-width: rem(1080);
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: rem(38) rem(45);
+			width: 100%;
+			border: 1px solid $mainColor;
+			border-radius: rem(25);
+			transition: 0.3s ease background-color;
+			cursor: pointer;
+
+			@media (any-hover: hover){
+				&:hover{
+					background-color: $mainColor;
+
+					.body-history__text {
+						color: $textColor;
+					}
+				}
+			}
+		}
+
+		&__text {
+			line-height: math.div(24, 22);
+			transition: 0.3s ease color;
+		}
+	}
+
+	.body-payment {
+		padding: rem(60) rem(154);
+
+		&__icon {
+			margin-bottom: rem(65);
+		}
+	}
+}
