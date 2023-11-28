@@ -4,6 +4,7 @@
 		flex-wrap: wrap;
 		gap: rem(20);
 		margin-bottom: rem(15);
+		max-width: unset;
 		font-size: rem(40);
 		line-height: math.div(49, 40);
 		font-weight: 500;
