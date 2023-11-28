@@ -1271,10 +1271,31 @@ h2 {
   }
 }
 .header__card {
+  position: relative;
   display: flex;
   align-items: center;
   transition: 0.3s ease stroke;
   cursor: pointer;
+}
+.header__card::after {
+  content: attr(data-count);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  padding: 0 0.3125rem;
+  width: 1rem;
+  height: 1rem;
+  color: #96B2BA;
+  background-color: #2e6f6e;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.header__card[data-count="0"]::after {
+  display: none;
 }
 @media (any-hover: hover) {
   .header__card:hover path {
