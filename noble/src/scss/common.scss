@@ -108,6 +108,13 @@ details[open] summary:before {
 	min-height: rem(589);
 	&:nth-child(even){
 		flex-direction: row-reverse;
+
+		.grid-item__content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			text-align: right;
+		}
 	}
 
 	&__img {

@@ -203,7 +203,7 @@ body {
   font-weight: 600;
   text-align: center;
   overflow: hidden;
-  transition-property: opacity, color, background-color;
+  transition-property: opacity, color, background-color, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
@@ -253,6 +253,7 @@ body {
   .button-standart:hover {
     color: #FFE79F;
     background-color: #132237;
+    border-color: #132237;
   }
 }
 
@@ -543,6 +544,12 @@ details[open] summary:before {
 }
 .grid-item:nth-child(even) {
   flex-direction: row-reverse;
+}
+.grid-item:nth-child(even) .grid-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 }
 .grid-item__img {
   flex: 0 0 54.7916666667%;
