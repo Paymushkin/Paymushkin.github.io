@@ -46,6 +46,7 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
+			cursor: pointer;
 		}
 	}
 
@@ -192,6 +193,7 @@
 		padding: rem(167) rem(143);
 
 		&__avatar {
+			position: relative;
 			width: rem(280);
 			height: rem(280);
 			border-radius: 50%;
@@ -199,6 +201,27 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 
+			&::after{
+				content: url(/img/profile/camera.svg);
+				position: absolute;
+				right: 12%;
+				bottom: 3%;
+				width: rem(50);
+				height: rem(50);
+			}
+		}
+
+		&__input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			width: 100%;
+			z-index: 2;
+			cursor: pointer;
+			opacity: 0;
 		}
 
 		&__info {
@@ -234,7 +257,7 @@
 	}
 
 	.body-services {
-		padding: rem(65) rem(54);
+		padding: rem(65) rem(48);
 
 		&__icon {
 			margin-bottom: rem(65);
@@ -289,7 +312,7 @@
 	}
 
 	.body-history {
-		padding: rem(60) rem(154);
+		padding: rem(65) rem(48);
 
 		&__icon {
 			margin-bottom: rem(65);
@@ -330,7 +353,7 @@
 	}
 
 	.body-payment {
-		padding: rem(60) rem(154);
+		padding: rem(65) rem(48);
 
 		&__icon {
 			margin-bottom: rem(65);

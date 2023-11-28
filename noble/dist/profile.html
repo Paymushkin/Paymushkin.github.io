@@ -75,7 +75,9 @@
         <div class="section__wrapper" id="sections">
           <section class="section section-account" data-section="account">
             <div class="section-account__body body-account"> 
-              <div class="body-account__avatar" style="background-image: url(img/profile/avatar.png)"></div>
+              <div class="body-account__avatar" style="background-image: url(img/profile/avatar.png)">
+                <input class="body-account__input" type="file" accept=".jpg,.jpeg,.png"/>
+              </div>
               <form class="body-account__info" action="#" method="post" name="edit-profile"><img class="body-account__icon" src="img/profile/pen.svg" alt="Edit"/>
                 <input class="input body-account__name" id="profile-name" autocomplete="on" type="text" name="form[edit-profile]" placeholder="Name"/>
                 <input class="input input body-account__email" id="profile-email" autocomplete="on" type="email" name="form[edit-profile]" placeholder="Email"/>

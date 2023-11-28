@@ -63,6 +63,7 @@ html(lang="ru")
 					section.section.section-account(data-section="account")
 						.section-account__body.body-account 
 							.body-account__avatar(style="background-image: url(@img/profile/avatar.png)")
+								input(type="file", class="body-account__input", accept=".jpg,.jpeg,.png")
 							form(action="#", method="post", name="edit-profile").body-account__info
 								img(src="@img/profile/pen.svg", alt="Edit").body-account__icon
 								input#profile-name(autocomplete="on",type="text", name="form[edit-profile]",placeholder="Name").input.body-account__name
@@ -181,7 +182,6 @@ html(lang="ru")
 											path(d='M15.4869 10.9196C14.2281 9.66854 12.1828 9.67047 10.9241 10.9235C9.66334 12.1823 9.66334 14.2314 10.9241 15.4921L22.9124 27.4786C23.5197 28.0897 24.3312 28.427 25.1968 28.427C26.0604 28.427 26.8719 28.0897 27.4772 27.4824C28.0883 26.8733 28.4257 26.0617 28.4257 25.1981C28.4257 24.3326 28.0883 23.5229 27.4792 22.9138L15.4869 10.9196Z' fill='#132237')
 										p.body-services__text Other services
 								
-
 					section.section.section-history(data-section="history")._active
 						.section-history__body.body-history
 							.body-history__icon
