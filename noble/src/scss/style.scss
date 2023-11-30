@@ -49,7 +49,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: em($containerWidth); // ПК, ноутбука, некоторые планшеты в гор. положении
 $tablet: em(1079.98); // Планшеты, некоторые телефоны в гор.положении
-$mobile: em(656.98); // Телефоны L 
+$mobile: em(768.98); // Телефоны L 
 $mobileSmall: em(576.98); // Телефоны S 
 
 // Обнуление и общие параметры

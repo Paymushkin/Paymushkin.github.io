@@ -299,17 +299,21 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		column-gap: rem(120);
-		padding: 0 rem(143);
-
-		.body__title {
-			margin-bottom: rem(60);
-		}
+		padding: 0 rem(143) rem(30);
 
 		@media (max-width:$tablet){
 			flex-direction: column;
 			align-items: center;
-			gap: rem(65);
-			padding: rem(38) rem(20);
+			gap: rem(40);
+			padding: 0 rem(20) rem(30);
+		}
+
+
+		.body__title {
+			margin-bottom: rem(60);
+			@media (max-width:$tablet){
+				margin-bottom: rem(30);
+			}
 		}
 
 		&__avatar {
@@ -412,7 +416,7 @@
 	.body-services {
 		padding: 0 rem(48) rem(30);
 		@media (max-width:$tablet){
-			padding: rem(38) rem(20);
+			padding: 0 rem(20) rem(30);
 		}
 
 		&__icon {
@@ -426,6 +430,9 @@
 			gap: rem(20);
 			padding-top: rem(60);
 			max-width: rem(1280);
+			@media (max-width:$tablet){
+				padding-top: rem(30);
+			}
 			@media (max-width:$mobile){
 				 justify-content: center;
 				 align-items: stretch; 
@@ -444,12 +451,20 @@
 			cursor: pointer;
 
 			@media (max-width:$tablet){
-				width: rem(300);
-				// width: calc((100% - rem(40)) / 3 );
+				// max-width: rem(250);
+				width: calc((100% - rem(40)) / 3 );
+				min-height: ren	174;
 			}
 
 			@media (max-width:$mobile){
-				width: rem(250);
+				max-width: rem(250);
+				width: calc((100% - rem(40)) / 2 );
+				min-height: rem(126);
+			}
+
+			@media (max-width:$mobile){
+				max-width: rem(250);
+				width: 100%;
 				min-height: rem(126);
 			}
 
@@ -474,6 +489,8 @@
 			gap: rem(35);
 			padding: rem(38) rem(45);
 			@media (max-width:$tablet){
+				// flex-wrap: wrap;
+				// justify-content: center;
 				padding: rem(29) rem(32);
 				gap: rem(23);
 			}
@@ -499,7 +516,7 @@
 	.body-history {
 		padding: 0 rem(48) rem(30);
 		@media (max-width:$tablet){
-			padding: rem(38) rem(20);
+			padding: 0 rem(20) rem(30);
 		}
 
 		&__text {
@@ -511,7 +528,7 @@
 	.body-payment {
 		padding: 0 rem(48) rem(30);
 		@media (max-width:$tablet){
-			padding: rem(38) rem(20);
+			padding:0 rem(20) rem(30);
 		}
 
 		&__icon {
@@ -529,7 +546,8 @@
 			width: 100%;
 	
 			@media (max-width:$tablet){
-				margin-bottom: rem(30);
+				padding-top: rem(30);
+				// margin-bottom: rem(30);
 			}
 	
 			h2 {
