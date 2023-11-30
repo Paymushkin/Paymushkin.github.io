@@ -14,18 +14,31 @@ ol, ul {
 
 h1 {
 	color: $textColor;
-	// font-size: rem(60);
-	@include adaptiveValue("font-size", 78, 24, 1920, 656, 1);
+	font-size: rem(78);
+	// @include adaptiveValue("font-size", 78, 24, 1920, 320, 1);
 	font-weight: 700;
 	line-height: 110%;
+	@media (max-width:$tablet){
+		font-size: rem(32);
+	}
 }
 
 h2 {
+	padding: rem(60) rem(75);
 	color: $textColor;
-	// font-size: rem(40);
-	@include adaptiveValue("font-size", 46, 22, 1920, 656, 1);
+	font-size: rem(46);
 	line-height: 1.3;
 	font-weight: 700;
+
+	@media (max-width:$tablet){
+		padding: rem(30) 0;
+		font-size: rem(32);
+		font-weight: 400;
+	}
+
+	@media (max-width:$mobile){
+		font-size: rem(30); 
+	}
 
 	&.document__title {
 		margin-bottom: rem(73);
@@ -37,17 +50,21 @@ h2 {
 }
 
 h3 {
-	// font-size: rem(40);
-	@include adaptiveValue("font-size", 32, 22, 1920, 656, 1);
+	font-size: rem(32);
+	// @include adaptiveValue("font-size", 32, 22, 1920, 656, 1);
 	line-height: math.div(38, 32);
 	font-weight: 600;
+	@media (max-width:$tablet){
+		font-size: rem(16);
+	}
 }
 
 h4 {
-	// font-size: rem(40);
-	@include adaptiveValue("font-size", 22, 22, 1920, 656, 1);
+	// @include adaptiveValue("font-size", 22, 22, 1920, 656, 1);
 	font-weight: 700;
-	// margin: -1px;
+	@media (max-width:$tablet){
+		font-size: rem(16);
+	}
 }
 
 p {
@@ -105,23 +122,54 @@ details[open] summary:before {
 
 .grid-item {
 	display: flex;
-	min-height: rem(589);
+	@media (min-width:$tablet){
+		min-height: rem(589); 
+	}
 	&:nth-child(even){
 		flex-direction: row-reverse;
 
-		.grid-item__content {
-			display: flex;
+		@media (max-width:$mobile){
 			flex-direction: column;
-			align-items: flex-end;
-			text-align: right;
+		}
+
+		.grid-item__content {
+			@media (min-width:$mobile){
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				text-align: right;
+			}
 		}
 	}
+	&:last-child {
+
+		@media (max-width:$mobile){
+			.grid-item__content {
+				border-bottom: none;
+			}
+		}
+		
+	}
+
+	// @media (max-width:$mobile){
+	// 	flex-direction: column;
+	// 	width: 100%;
+	// }
 
 	&__img {
 		flex: 0 0 percent(1052, 1920);
+		min-height: 30vw;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@media (max-width:$tablet){
+			// max-height: rem(312);
+		}
+
+		@media (max-width:$mobile){
+			flex: 1 1 rem(210);
+		}
 	}
 
 	&__content {
@@ -130,19 +178,12 @@ details[open] summary:before {
 		border-top: rem(1) solid $highlightColor;
 		border-bottom: rem(1) solid $highlightColor;
 
-		.about & {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			padding-right: rem(133);
+		@media (max-width:$tablet){
+			padding: rem(53) rem(60);
 		}
 
-		.service & {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding: rem(65) rem(100) 0;
-			border: none;
+		@media (max-width:$mobile){
+			 padding: rem(40);
 		}
 	}
 
@@ -152,38 +193,15 @@ details[open] summary:before {
 		text-transform: uppercase;
 		text-align: left;
 
-		&._with-icon {
-			display: flex;
-			svg {
-				padding-left: rem(60);
-			}
+		@media (max-width:$mobileSmall){
+			margin-bottom: rem(12);
+			font-size: rem(15);
 		}
 
-		.service & {
-			margin-bottom: rem(25);
-			color: $mainColor;
-			font-size: rem(33);
+		@media (max-width:$mobileSmall){
+			font-size: rem(12);
 		}
-		.about & {
-			margin-bottom: rem(32);
-			max-width: rem(468);
-			font-family: "Patrick Oklahoma";
-			color: $mainColor;
-			font-size: rem(62);
-			font-weight: 400;
-			text-transform: capitalize;
-		}
-		// font-size: rem(20);
-		// @include adaptiveValue("font-size", 20, 12, 1920, 656, 1);
-		// font-weight: 700;
-		// line-height: math.div(31, 20);
-		// @media (max-width:$tablet){
-		// 	margin-bottom: rem(5);
-		// 	line-height: 1;
-		// }
-		// @media (max-width:$mobileSmall){
-		// 	font-size: rem(16); 
-		// }
+		
 	}
 
 	&__subtitle {
@@ -195,20 +213,25 @@ details[open] summary:before {
 		max-width: rem(350);
 		color: rgba(255, 255, 255, 0.60);
 		line-height: 1.25;
-
-		.about & {
-			max-width: rem(445);
-			color: $mainColor;
-			&:not(:last-child) {
-				margin-bottom: rem(30);
-			}
+		@media (max-width:$tablet){
+			font-size: rem(12);
+		}
+		@media (max-width:$mobile){
+			// color: #fff;
+			// max-width: 100%;
+			// font-size: rem(16);
+		}
+		@media (max-width:$mobileSmall){
+			// color: #fff;
+			// max-width: 100%;
+			
 		}
 
-		.service & {
-			display: flex;
-			flex: 1 1 auto;
-			color: $mainColor;
-		}
+		// .service & {
+		// 	display: flex;
+		// 	flex: 1 1 auto;
+		// 	color: $mainColor;
+		// }
 
 		// margin-bottom: rem(37);
 		// max-width: rem(312);
@@ -231,8 +254,11 @@ details[open] summary:before {
 	grid-template-areas: "item-1 item-1 item-2 item-3" 
 						 "item-1 item-1 item-4 item-4" ;
 	margin: 0 auto rem(139);
-	width: calc(100% - rem(48));
+	width: calc(100% - rem(38));
 	max-width: rem(1876);
+	@media (max-width:$tablet){
+		gap: rem(10);
+	}
 	// grid-template-rows: auto;
 
 	&__item {
@@ -257,4 +283,62 @@ details[open] summary:before {
 
 #chat {
 	max-height: 100vh;
+}
+
+table {
+	width: 100%;
+	// border-collapse: collapse;
+	border-spacing: 0 rem(33);
+	thead {
+		th {
+			padding: 0 rem(20) 0 rem(20);
+			color: $mainColor;
+			font-weight: 700;
+			text-align: left;
+
+			@media (max-width:$tablet){
+				font-size: rem(16);
+			}
+		}
+	}
+	tbody {
+		tr {
+			// border: 2px solid $mainColor;
+			transition: .3s all ease;
+			cursor: pointer;
+
+			&.awaiting {
+				background-color: $bgColorHighlight;
+				color: $textColor;
+			}
+
+			&:not(:last-child) {
+				padding-bottom: rem(20);
+			}
+
+			td {
+				padding: rem(30) rem(10) rem(30) rem(70);
+				border-top: 1px solid $mainColor;
+				border-bottom: 1px solid $mainColor;
+
+				@media (max-width:$tablet){
+					padding: rem(25) rem(20) rem(25) rem(20);
+					font-size: rem(16);
+				}
+
+
+				&:first-child{
+					border-left: 1px solid $mainColor;
+					border-radius: rem(10) 0 0 rem(10);
+					max-width: rem(200);
+				}
+
+				&:last-child{
+					border-right: 1px solid $mainColor;
+					border-radius: 0 rem(10) rem(10) 0;
+				}
+			}
+
+		}
+	}
 }

@@ -84,6 +84,18 @@
 			transition: 0.3s ease opacity;
 		}
 
+		@media (max-width:$tablet){
+			width: rem(8);
+			height: rem(8);
+
+			&::after{
+				top: rem(-4);
+				left: rem(-4);
+				width: calc(100% + rem(8));
+				height: calc(100% + rem(8));
+			}
+		}
+
 		&-active {
 			&::after{
 				opacity: 1;

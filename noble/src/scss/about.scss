@@ -1,3 +1,50 @@
 .about {
 
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding-right: rem(133);
+
+		@media (max-width:$tablet){
+			padding: rem(30);
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(32);
+		max-width: rem(468);
+		font-family: "Patrick Oklahoma";
+		color: $mainColor;
+		font-size: rem(62);
+		font-weight: 400;
+		text-transform: capitalize;
+
+		@media (max-width:$tablet){
+			width: 100%;
+			max-width: rem(280);
+			font-size: rem(32);
+			text-align: left;
+		}
+		
+	}
+
+	&__text {
+		max-width: rem(445);
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+		@media (max-width:$tablet){
+			max-width: rem(280);
+			// font-size: rem(12);
+		}
+	}
+
+	&__img {
+		@media (max-width:$tablet){
+			flex: 0 0 percent(602, 1024);
+		}
+		
+	}
 }

@@ -1,5 +1,8 @@
 .news {
-	padding: rem(70) 0 rem(98);
+	padding: 0 rem(19) rem(100);
+	@media (max-width:$tablet){
+		padding-bottom: rem(30);
+	}
 	@media (min-width:$mobileSmall){
 		// @include adaptiveValue("padding-top", 158, 88, 1920, 1024, 1);
 		// @include adaptiveValue("padding-bottom", 158, 88, 1920, 1024, 1);
@@ -15,14 +18,16 @@
 		}
 	}
 
+	// &__slider {
+	// 	width: auto;
+	// }
+
 	&__title {
-		margin-bottom: rem(76);
 		width: 100%;
 		color: $mainColor;
 		text-align: center;
 		@media (max-width:$mobileSmall){
-			margin-bottom: rem(28);
-			margin-left: rem(-10);
+
 		}
 	}
 
@@ -33,22 +38,33 @@
 
 		&__item {
 			display: flex;
-			gap: rem(122);
-			padding: 0 rem(20) rem(34) 0;
+			gap: rem(50);
+			padding-bottom: rem(34);
+			@media (max-width:$tablet){
+				padding-bottom: rem(32);
+			}
 			&:not(:last-child) {
 				border-bottom: rem(1) solid $mainColor;
 			}
 		}
 
 		&__img {
-			flex: 0 0 rem(379);
-			height: rem(254);
+			flex: 0 0 percent(380, 1179);
+			min-height: rem(254);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+			@media (max-width:$tablet){
+				flex: 0 0 percent(250, 780);
+				min-height: rem(209);
+			}
+			@media (max-width:$mobile){
+				flex: 0 0 percent(254, 1000);
+			}
 		}
 
 		&__content {
+			flex: 1 1 percent(678, 1179);
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -61,7 +77,11 @@
 		&__text {
 			flex: 1 1 auto;
 			margin-bottom: rem(46);
-			max-width: rem(570);
+			padding-right: rem(20);
+			@media (max-width:$tablet){
+				font-size: rem(18);
+			}
+			// max-width: rem(570);
 		}
 	}
 

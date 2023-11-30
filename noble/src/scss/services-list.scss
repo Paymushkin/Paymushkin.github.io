@@ -1,10 +1,13 @@
 .services-list {
-	padding: rem(60) 0 rem(75);
+	padding: 0 rem(19) rem(75);
+
+	@media (max-width:$tablet){
+		padding-bottom: rem(30);
+	}
 
 	&__container {}
 
 	&__title {
-		margin-bottom: rem(75);
 		width: 100%;
 		color: $mainColor;
 		text-align: center;
@@ -18,10 +21,22 @@
 		gap: rem(40);
 		width: 100%;
 
+		@media (max-width:$tablet){
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: rem(25);
+		}
+
 		&__item {
 			width: 100%;
 			border-radius: rem(25);
+			overflow: hidden;
 			transition: 0.3s ease background-color;
+
+			@media (max-width:$tablet){
+				width: calc( (100% - rem(25)) / 2);
+				border-radius: 0;
+			}
 
 			@media (any-hover: hover){
 				&:hover{
@@ -38,11 +53,23 @@
 			display: flex;
 			align-items: stretch;
 			width: 100%;
+
+			@media (max-width:$tablet){
+				flex-direction: column;
+			}
 		}
 
 		&__img {
 			flex: 0 0 percent(380, 1280);
 			min-height: rem(238);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+
+			@media (max-width:$tablet){
+				flex: 0 0 percent(295, 615);
+				min-height: rem(183);
+			}
 		}
 
 		&__content {
@@ -50,6 +77,11 @@
 			border-radius: 0 rem(25) rem(25) 0;
 			border: rem(1) solid $mainColor;
 			border-left: none;
+
+			@media (max-width:$tablet){
+				padding: rem(10) rem(20) 0;
+				border: none;
+			}
 		}
 
 		&__title {
@@ -58,11 +90,21 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			transition: 0.3s ease color;
+
+			@media (max-width:$tablet){
+				margin-bottom: rem(0);
+				font-size: rem(16);
+				text-align: center;
+			}
 		}
 
 		&__text {
 			opacity: 0.6;
 			transition: 0.3s ease color;
+
+			@media (max-width:$tablet){
+				display: none;
+			}
 		}
 	}
 }

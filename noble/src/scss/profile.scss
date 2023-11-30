@@ -1,20 +1,46 @@
 .profile {
 	display: grid;
-    -ms-grid-columns: minmax(auto,18.75rem) 1fr;
     grid-template-columns: minmax(auto,18.75rem) 1fr;
-    -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "aside header"
         "aside section__wrapper";
     height: 100%;
 
+	@media (max-width:$tablet){
+		grid-template-columns: auto 1fr;
+	}
+
 	.header {
 		grid-area: header;
-		padding: rem(39) rem(77) rem(39) rem(145);
-		min-height: rem(112);
+		padding: rem(39) rem(45);
+		height: rem(112);
 		background-color: $bgColor;
 		border-bottom: rem(2) solid $mainColor;
+		@media (max-width:$tablet){
+			padding: rem(24) rem(22);
+			height: rem(79);
+			background-color: $bgColorHighlight;
+
+			svg {
+				height: rem(25.3);
+
+				path {
+					fill: $highlightColor;
+				}
+			}
+
+			.header__avatar {
+				svg path.no-stroke {
+					fill: transparent;
+					stroke: $highlightColor;
+				}
+				svg path.stroke {
+					stroke: $highlightColor;
+					fill: $highlightColor;
+				}
+			}
+		}
 
 		&__nav {
 			display: flex;
@@ -28,7 +54,7 @@
 			align-items: center;
 			gap: rem(48);
 			
-			button {
+			button,a {
 				display: flex;
 			}
 		}
@@ -38,6 +64,18 @@
 			align-items: center;
 			gap: rem(22.5);
 			font-weight: 700;
+
+			span {
+				@media (max-width:$tablet){
+					display: none;
+				}
+			}
+		}
+
+		&__menu-open {
+			@media (min-width:$tablet){
+				 display: none; 
+			}
 		}
 
 		&__avatar {
@@ -46,7 +84,13 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
+			background-image: url("/img/profile/header-avatar-dark.png");
 			cursor: pointer;
+			@media (max-width:$tablet){
+				height: rem(25);
+				width: rem(25);
+				background-image: url("/img/profile/header-avatar-gold.png");
+			}
 		}
 	}
 
@@ -56,12 +100,48 @@
 		flex-direction: column;
 		background-color: $bgColorHighlight;
 
+		@media (max-width:$tablet){
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			height: 100dvh;
+		}
+
+		&._active {
+			@media (max-width:$tablet){
+				display: flex;
+			}
+		}
+
+		@media (max-width:$tablet){
+			display: none;
+		}
+
+		.aside__menu-close {
+			@media (min-width:$tablet){
+				 display: none; 
+			}
+		}
+
 		&__top {
 			padding: rem(39);
-			min-height: rem(112);
+			height: rem(112);
 			color: $highlightColor;
 			border-bottom: rem(2) solid $highlightColor;
 			font-weight: 700;
+
+			@media (max-width:$tablet){
+				padding: rem(24) rem(22);
+				height: rem(79);
+				border-bottom: none;
+				// background-color: $bgColorHighlight;
+
+				span {
+					// font-size: rem(16);
+					display: none;
+				}
+			}
 
 			span {
 				line-height: math.div(34, 22);
@@ -119,11 +199,20 @@
 			&__text {
 				color: $textColor;
 				transition: 0.3s ease color;
+
+				@media (max-width:$tablet){
+					color: $highlightColor;
+					font-size: rem(16);
+				}
 			}
 
 			svg {
 				path {
 					transition: 0.3s ease fill;
+
+					@media (max-width:$tablet){
+						fill: $highlightColor;
+					}
 				}
 			}
 
@@ -134,6 +223,10 @@
 				padding: rem(15) rem(39);
 				transition: 0.3s ease background-color;
 				cursor: pointer;
+
+				@media (max-width:$tablet){
+					display: none;
+				}
 
 				span {
 					color: $textColor;
@@ -165,6 +258,18 @@
 		display: none;
 		flex-direction: column;
 		min-height: 100%;
+		height: calc(100vh - rem(112));
+		overflow: auto;
+
+		.aside-open & {
+			transform: translateX(240px);
+		}
+
+		@media (max-width:$tablet){
+			height: calc(100vh - rem(79));
+			height: 100%;
+		}
+		// max-height: ;
 
 		&._active {
 			display: flex;
@@ -189,17 +294,31 @@
 
 	.body-account {
 		display: flex;
-		gap: rem(120);
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: rem(120);
 		padding: rem(167) rem(143);
+
+		@media (max-width:$tablet){
+			flex-direction: column;
+			align-items: center;
+			gap: rem(65);
+			padding: rem(38) rem(20);
+		}
 
 		&__avatar {
 			position: relative;
-			width: rem(280);
-			height: rem(280);
+			min-width: rem(280);
+			min-height: rem(280);
 			border-radius: 50%;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+
+			@media (max-width:$tablet){
+				min-width: rem(164);
+				min-height: rem(164);
+			}
 
 			&::after{
 				content: url(/img/profile/camera.svg);
@@ -208,6 +327,12 @@
 				bottom: 3%;
 				width: rem(50);
 				height: rem(50);
+
+				@media (max-width:$tablet){
+					right: 0;
+					bottom: 0;
+					transform: scale(0.6);
+				}
 			}
 		}
 
@@ -225,14 +350,20 @@
 		}
 
 		&__info {
+			align-self: center;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			gap: rem(10);
+			@media (max-width:$tablet){
+				width: rem(295);
+			}
 		}
 
-		&__icon {
-			max-height: rem(40);
+		input {
+			@media (max-width:$tablet){
+				font-size: rem(16);
+			}
 		}
 
 		&__name {
@@ -254,10 +385,29 @@
 			outline: none;
 			font-weight: 700;
 		}
+
+		&__logout {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			padding: rem(8) rem(16);
+			background-color: rgba(208, 211, 217, 0.90);
+			font-size: rem(16);
+			border-radius: rem(38);
+			@media (min-width:$tablet){
+				 display: none; 
+			}
+			svg path {
+				fill: $mainColor;
+			}
+		}
 	}
 
 	.body-services {
 		padding: rem(65) rem(48);
+		@media (max-width:$tablet){
+			padding: rem(38) rem(20);
+		}
 
 		&__icon {
 			margin-bottom: rem(65);
@@ -266,19 +416,35 @@
 		&__list {
 			display: flex;
 			flex-wrap: wrap;
-			gap: rem(20) rem(28);
+			justify-content: flex-start;
+			gap: rem(20);
 			max-width: rem(1280);
+			@media (max-width:$mobile){
+				 justify-content: center;
+				 align-items: stretch; 
+			}
+
 		}
 
 		&__item {
 			display: flex;
 			align-items: center;
-			padding: rem(38) rem(45);
+			// width: calc((100% - rem(40)) / 3 );
 			width: rem(380);
 			border: 1px solid $mainColor;
 			border-radius: rem(25);
 			transition: 0.3s ease background-color;
 			cursor: pointer;
+
+			@media (max-width:$tablet){
+				width: rem(300);
+				// width: calc((100% - rem(40)) / 3 );
+			}
+
+			@media (max-width:$mobile){
+				width: rem(250);
+				min-height: rem(126);
+			}
 
 			@media (any-hover: hover){
 				&:hover{
@@ -299,11 +465,23 @@
 			display: flex;
 			align-items: center;
 			gap: rem(35);
+			padding: rem(38) rem(45);
+			@media (max-width:$tablet){
+				padding: rem(29) rem(32);
+				gap: rem(23);
+			}
+			@media (max-width:$mobile){
+				padding: rem(15) rem(20);
+				gap: rem(15);
+			}
 		}
 
 		&__text {
 			line-height: math.div(24, 22);
 			transition: 0.3s ease color;
+			@media (max-width:$tablet){
+				font-size: rem(16);
+			}
 		}
 
 		svg path {
@@ -313,37 +491,8 @@
 
 	.body-history {
 		padding: rem(65) rem(48);
-
-		&__icon {
-			margin-bottom: rem(65);
-		}
-
-		&__list {
-			display: flex;
-			flex-direction: column;
-			gap: rem(20) rem(28);
-			max-width: rem(1080);
-		}
-
-		&__item {
-			display: flex;
-			align-items: center;
-			padding: rem(38) rem(45);
-			width: 100%;
-			border: 1px solid $mainColor;
-			border-radius: rem(25);
-			transition: 0.3s ease background-color;
-			cursor: pointer;
-
-			@media (any-hover: hover){
-				&:hover{
-					background-color: $mainColor;
-
-					.body-history__text {
-						color: $textColor;
-					}
-				}
-			}
+		@media (max-width:$tablet){
+			padding: rem(38) rem(20);
 		}
 
 		&__text {
@@ -357,6 +506,39 @@
 
 		&__icon {
 			margin-bottom: rem(65);
+		}
+	}
+
+	.body {
+		&__title {
+			display: flex;
+			align-items: center;
+			gap: rem(20);
+			margin-bottom: rem(65);
+			width: 100%;
+	
+			@media (max-width:$tablet){
+				margin-bottom: rem(30);
+			}
+	
+			h2 {
+				width: 100%;
+				color: $mainColor;
+				font-weight: 700;
+				&.center {
+					text-align: center;
+				}
+				@media (max-width:$tablet){
+					font-size: rem(30);
+				}
+			}
+	
+			img {
+				@media (max-width:$tablet){
+					width: rem(30);
+					height: rem(30);
+				}
+			}
 		}
 	}
 }

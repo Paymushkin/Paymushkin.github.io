@@ -1,7 +1,7 @@
 .services {
 	display: flex;
 	flex-direction: column;
-	padding: rem(70) 0;
+	padding-bottom: rem(70);
 	justify-content: center;
 	background-color: $bgColorHighlight;
 	// @include adaptiveValue("padding-top", 79, 58, 1920, 1024, 1);
@@ -9,24 +9,35 @@
 	// @media (max-width:$mobileSmall){
 	// 	 padding-top: 0; 
 	// }
+	@media (max-width:$tablet){
+		// padding: rem(30) 0;
+	}
+	@media (max-width:$mobile){
+		 padding: rem(40) 0; 
+	}
 	&__container {
 		
 	}
 
 	&__title {
-		margin-bottom: rem(70);
 		width: 100%;
 		color: $highlightColor;
 		text-align: center;
 		text-transform: uppercase;
 		@media (max-width:$tablet){
-			margin-bottom: rem(21);
+			// margin-bottom: rem(30);
 		}
 	}
 
 	&__button {
 		margin: 0 auto;
 		min-width: rem(538);
+		@media (max-width:$tablet){
+			min-width: rem(180);
+		}
+		@media (max-width:$mobile){
+			// min-width: calc(100% - rem(80));
+		}
 	}
 
 	&__list {
@@ -36,7 +47,9 @@
 		gap: rem(45);
 		margin-bottom: rem(70);
 		@media (max-width:$mobile){
-			 gap: rem(8); 
+			// align-items: center;
+			// gap: rem(40); 
+			// margin-bottom: rem(0);
 		}
 	}
 

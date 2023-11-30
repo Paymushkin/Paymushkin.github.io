@@ -32,7 +32,11 @@ section.feedback
 				img(src="@img/feedback/arrow-l.svg", alt="").prev
 				img(src="@img/feedback/arrow-r.svg", alt="").next 
 					
-		h2.feedback__title DO YOU WANT TO LEAVE A REVIEW?
+		h2.feedback__title.__bottom DO YOU WANT TO LEAVE A REVIEW?
 		form.feedback__form(action="", method="post") 
 			textarea#feedback(name="feedback", cols="30", rows="9", placeholder="Your feedback...").feedback__textarea
-			button(type="submit").button.button-highlight Send
+			button(type="submit").button.button__tablet.button-highlight Send
+			button(type="submit").button__mobile
+				svg(xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewbox='0 0 20 18' fill='none')
+					path(d='M2.35896 6.26092L3.02585 7.44843C3.45051 8.20624 3.66207 8.58437 3.66207 9C3.66207 9.41563 3.45051 9.79375 3.02585 10.55L2.35896 11.7391C0.46102 15.125 -0.487951 16.8172 0.250989 17.6579C0.991462 18.4969 2.7453 17.7157 6.24989 16.1532L15.8714 11.8625C18.6233 10.6359 20 10.0219 20 9C20 7.97812 18.6233 7.36405 15.8714 6.13748L6.24989 1.84683C2.7453 0.284326 0.991462 -0.496928 0.250989 0.34214C-0.487951 1.18121 0.46102 2.8734 2.35896 6.26092Z' fill='#132237')
+

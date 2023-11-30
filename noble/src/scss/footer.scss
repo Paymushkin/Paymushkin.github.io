@@ -1,4 +1,9 @@
 .footer {
+	padding: 0 rem(19) rem(83);
+
+	@media (max-width:$tablet){
+		padding: rem(25) rem(19) rem(30);
+	}
 
 	._highlight & {
 		background-color: $bgColorHighlight;
@@ -20,7 +25,6 @@
 
 	// background: linear-gradient(90deg, #FF6D18 0%, #FFAE05 100%);
 	&__container {
-		padding: rem(83) rem(15);
 		// @include adaptiveValue("padding-top", 51, 22, 1920, 1024, 1);
 		// @include adaptiveValue("padding-bottom", 51, 16, 1920, 1024, 1);
 	}
@@ -28,9 +32,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@media (max-width:$tablet){
-			flex-direction: column;
-		}
+		// @media (max-width:$tablet){
+		// 	flex-direction: column;
+		// }
 	}
 
 	&-body {
@@ -42,9 +46,16 @@
 			flex-direction: column;
 			gap: rem(22);
 
+			@media (max-width:$tablet){
+				gap: rem(12.5);
+			}
+
 			a {
 				font-family: "Myriad Pro";
 				color: $mainColor;
+				@media (max-width:$tablet){
+					font-size: rem(12);
+				}
 			}
 		}
 
@@ -55,10 +66,20 @@
 			gap: rem(22);
 			line-height: math.div(14, 20);
 			@media (max-width:$tablet) {
-				margin-bottom: rem(28);
+				margin-bottom: 0;
+				gap: rem(30);
+			}
+			svg {
+				@media (max-width:$tablet){
+					height: rem(35);
+				}
 			}
 			span {
+				line-height: 1;
 				color: $mainColor;
+				@media (max-width:$tablet){
+					font-size: rem(12);
+				}
 			}
 			
 		}
@@ -67,11 +88,22 @@
 			display: flex;
 			gap: rem(20);
 
+			@media (max-width:$tablet){
+				gap: rem(17);
+			}
+
 			li {
 				transition: 0.3s ease opacity;
 				@media (any-hover: hover){
 					&:hover{
 						opacity: 0.75;
+					}
+				}
+
+				@media (max-width:$tablet){
+					svg {
+						width: rem(21.6);
+						height: rem(21.6);
 					}
 				}
 			}

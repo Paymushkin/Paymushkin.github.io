@@ -35,6 +35,22 @@ if(document.querySelector("#account")) {
 	const sections = document.querySelectorAll('section');
 	const navBtns = document.querySelectorAll('[data-nav]');
 
+	const menuOpen = document.getElementById("menu-open");
+	const menuClose = document.getElementById("menu-close");
+	const aside = document.getElementById("aside");
+
+	menuOpen.addEventListener("click", ()=> {
+	  aside.classList.add("_active")
+	  document.body.classList.add("aside-open")
+	  menuOpen.style.display = 'none';
+	})
+
+	menuClose.addEventListener("click", ()=> {
+	  aside.classList.remove("_active")
+	  document.body.classList.remove("aside-open")
+	  menuOpen.style.display = 'block';
+	})
+
 	navBtns.forEach(element => {
 		element.addEventListener("click", ()=> {
 			navBtns.forEach(element => {
@@ -47,6 +63,9 @@ if(document.querySelector("#account")) {
 			const dataSection = element.getAttribute("data-nav")
 			const currentSection = document.querySelector(`[data-section="${dataSection}"]`)
 			currentSection.classList.add("_active");
+			aside.classList.remove("_active")
+	  		document.body.classList.remove("aside-open")
+			menuOpen.style.display = 'block';
 			
 			console.log(currentSection)
 		})
@@ -55,4 +74,20 @@ if(document.querySelector("#account")) {
 	console.log(sections, navBtns)
 }
 
+// if(document.querySelector("#aside")) {
+// 	const menuOpen = document.getElementById("menu-open"),
+// 		  menuClose = document.getElementById("menu-close"),
+// 		  aside = document.getElementById("aside")
 
+// 		  menuOpen.addEventListener("click", ()=> {
+// 			aside.classList.add("_active")
+// 			document.body.classList.add("aside-open")
+// 			menuOpen.style.display = 'none';
+// 		  })
+
+// 		  menuClose.addEventListener("click", ()=> {
+// 			aside.classList.remove("_active")
+// 			document.body.classList.remove("aside-open")
+// 			menuOpen.style.display = 'block';
+// 		  })
+// }

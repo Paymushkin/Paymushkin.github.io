@@ -1,8 +1,14 @@
 .chat {
 	display: flex;
 	flex-direction: column;
+	padding: 0 rem(19);
 	max-height: calc(100vh - rem(148));
 	overflow: hidden;
+
+	@media (max-width:$tablet){
+		max-height: calc(100vh - rem(79));
+		max-height: calc(100dvh - rem(79));
+	}
 
 	&__container {
 		width: 100%;
@@ -10,8 +16,12 @@
 
 	&-header {
 		flex: 0 0 auto;
-		padding: rem(29) 0 rem(13);
+		padding: rem(30) 0;
 		border-bottom: rem(1)solid $mainColor;
+
+		@media (max-width:$tablet){
+			padding: rem(20) 0;
+		}
 
 		&__profile {
 			display: flex;
@@ -25,10 +35,19 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
+
+			@media (max-width:$tablet){
+				width: rem(30);
+				height: rem(30);
+			}
 		}
 
 		&__name {
 			font-weight: 700;
+
+			@media (max-width:$tablet){
+				font-size: rem(16);
+			}
 		}
 
 	}
@@ -54,6 +73,11 @@
 		gap: rem(37);
 		max-width: 80%;
 
+		@media (max-width:$tablet){
+			gap: rem(15);
+			font-size: rem(16);
+		}
+
 		&.my-message {
 			flex-direction: row-reverse;
 			align-self: flex-end;
@@ -76,6 +100,11 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
+
+			@media (max-width:$tablet){
+				width: rem(30);
+				height: rem(30);
+			}
 		}
 
 		&__text {
@@ -85,6 +114,10 @@
 			background-color: $bgColorHighlight;
 			border-radius: rem(25);
 			border: 1px solid $mainColor;
+
+			@media (max-width:$tablet){
+				border-radius: rem(15);
+			}
 		}
 	}
 
@@ -94,12 +127,20 @@
 		padding: rem(20) 0 rem(81);
 		width: 100%;
 
+		@media (max-width:$tablet){
+			padding-bottom: rem(40);
+		}
+
 		&__form {
 			display: flex;
 			align-items: center;
 			gap: rem(36);
 			flex: 1 1 auto;
 			width: 100%;
+
+			@media (max-width:$tablet){
+				gap: rem(14);
+			}
 		}
 
 		&__textarea {
@@ -109,9 +150,21 @@
 			border-radius: rem(25);
 			resize: none;
 
+			@media (max-width:$tablet){
+				padding: rem(14) rem(22);
+				font-size: rem(16);
+				border: 1px solid $mainColor;
+			}
+
 			&::placeholder {
 				
 				color: rgba(19, 34, 55, 0.60);
+			}
+		}
+
+		&__button {
+			img {
+				height: rem(23);
 			}
 		}
 	}

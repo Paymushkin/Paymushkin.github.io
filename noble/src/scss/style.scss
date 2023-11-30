@@ -36,14 +36,14 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920px;
 // Ширина ограничивающего контайнера (0 = нет ограничения)
-$maxWidthContainer: 1182;
+$maxWidthContainer: 1220;
 // Общий отступ у контейнера
 // 30 = по 15px слева и справа, 0 = нет отступа
 $containerPadding: 38;
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейк-поинтов)
 // 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
-$responsiveType: 1;
+$responsiveType: 0;
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
@@ -65,7 +65,7 @@ $mobileSmall: em(576.98); // Телефоны S
 	background: $bgColor;        /* цвет дорожки */	
 }
 *::-webkit-scrollbar-thumb {
-	background-color: $highlightColor;    /* цвет плашки */
+	background-color: $mainColor;    /* цвет плашки */
 	border-radius: 20px;       /* закругления плашки */
 	border: 1px solid $bgColor; 
 }
@@ -154,7 +154,7 @@ body {
             max-width: rem(970);
         }
         @media (max-width: $tablet) {
-            max-width: rem(750);
+            max-width: rem(768);
         }
         @media (max-width: $mobile) {
             max-width: none;
@@ -176,6 +176,7 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "hero";
+@import "about";
 @import "login";
 @import "about";
 @import "services-list";
@@ -190,7 +191,6 @@ body {
 @import "contacts";
 @import "chat";
 @import "footer";
-
 @import "base/swiper";
 
 // Подключение стилей отдельных страниц

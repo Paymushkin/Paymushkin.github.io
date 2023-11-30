@@ -1,17 +1,21 @@
 .contacts {
-	padding: rem(108) 0 rem(116);
+	padding: rem(108) rem(19) rem(116);
 	// @include adaptiveValue("padding-top", 77, 58, 1920, 1024, 1);
 	// @include adaptiveValue("padding-bottom", 147, 58, 1920, 1024, 1);
 	// background: $gradient;
 	background-color: $bgColorHighlight;
 	@media (max-width:$tablet){
-		
+		padding: rem(35) rem(19);
 	}
 
 	&__container {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width:$tablet){
+			flex-direction: column;
+		}
 	}
 
 	&__wrapper {
@@ -22,28 +26,41 @@
 
 	&__content {
 		max-width: rem(536);
+
+		@media (max-width:$tablet){
+			margin-bottom: rem(65);
+		}
 	}
 
 	&__title {
+		display: block;
 		margin-bottom: rem(33);
 		color: $textColor;
 		font-size: rem(46.5);
 		font-weight: 400;
 		text-transform: uppercase;
-		// @media (max-width:$tablet){
-		// 	margin-bottom: rem(21);
-		// }
+		@media (max-width:$tablet){
+			margin-bottom: rem(10);
+			font-size: rem(40);
+			line-height: math.div(48, 40);
+		}
 	}
 
 	&__text {
 		color: $textColor;
 		max-width: rem(287);
 		font-family: "Myriad Pro";
+		@media (max-width:$tablet){
+			line-height: math.div(26, 22);
+		}
 	}
 
 	&__media-list {
 		display: flex;
 		gap: rem(43);
+		@media (max-width:$tablet){
+			display: none;
+		}
 	}
 
 	&__form {
@@ -57,10 +74,10 @@
 		// background-color: #FF6C01;
 		border-radius: rem(24);
 		z-index: 2;
-		// @media (max-width:$tablet){
-		// 	padding: rem(21) rem(10);
-		// 	max-width: 48.632%;
-		// }
+		@media (max-width:$tablet){
+			padding: 0;
+			gap: rem(30);
+		}
 		// @media (max-width:$mobileSmall){
 		// 	 max-width: 100%; 
 		// }
@@ -70,6 +87,9 @@
 		label {
 			color: rgba(225, 223, 222, 0.60);
 			font-family: "Myriad Pro";
+			@media (max-width:$tablet){
+				font-size: rem(12);
+			}
 		}
 	
 		&__textarea, &__input {
@@ -87,14 +107,23 @@
 			&::placeholder {
 				color: $textColor;;
 			}
+			@media (max-width:$tablet){
+				font-size: rem(12);
+			}
 		}
 		&__textarea {
 			resize: none;
 		}
 		&__button {
-			padding: rem(12) rem(97);
+			padding: rem(12) rem(24);
+			min-width: rem(348);
 			font-size: rem(20);
 			font-weight: 600;
+
+			@media (max-width:$tablet){
+				min-width: rem(180);
+				font-size: rem(12);
+			}
 		}
 	}
 }

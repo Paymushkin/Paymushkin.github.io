@@ -20,11 +20,16 @@
 	transition-duration: 0.3s;
 	transition-timing-function: ease;
 	cursor: pointer;
+	@media (max-width:$tablet){
+		padding: rem(7) rem(29);
+		min-width: rem(180);
+		font-size: rem(12);
+	}
 	@media (max-width:$mobile){
-		font-size: rem(16); 
+		font-size: rem(15); 
 	}
 	@media (max-width:$mobileSmall){
-		font-size: rem(20); 
+		// font-size: rem(20); 
 	}
 
 	p, span {
@@ -59,6 +64,9 @@
 		color: $mainColor;
 		background: transparent;
 		border: rem(1) solid currentColor; 
+		@media (max-width:$tablet){
+			font-size: rem(12);
+		}
 		@media (any-hover: hover){
 			&:hover{
 				color: $highlightColor;

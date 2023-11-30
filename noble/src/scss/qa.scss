@@ -1,8 +1,11 @@
 .qa {
-	padding: rem(54) 0 rem(86);
+	padding: 0 rem(19) rem(86);
 	// @include adaptiveValue("padding-top", 186, 38, 1920, 1024, 1);
 	// @include adaptiveValue("padding-bottom", 87, 38, 1920, 1024, 1);
 	margin-bottom: rem(21);
+	@media (max-width:$tablet){
+		// padding: rem(30) 0;
+	}
 
 	&__container {
 		display: flex;
@@ -13,10 +16,13 @@
 	}
 
 	&__title {
-		margin-bottom: rem(36);
+		padding-bottom: rem(32);
 		width: 100%;
 		color: $mainColor;
 		text-align: center;
+		@media (max-width:$tablet){
+			padding-bottom: rem(10);
+		}
 	}
 
 	&__accordion {
@@ -30,7 +36,7 @@
 		// background-color: #fff;
 		border-radius: rem(30);
 		@media (max-width:$tablet){
-			padding: rem(46) rem(40);
+			padding-left: rem(70);
 		}
 	}
 

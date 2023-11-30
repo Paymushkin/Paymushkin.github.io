@@ -1,51 +1,104 @@
 .feedback {
+	padding: 0 rem(19) rem(100);
+	
+	@media (max-width:$tablet){
+		padding-bottom: rem(60);
+	}
+
+	@media (max-width:$mobile){
+		 padding-bottom: rem(40); 
+	}
 
 	&__container {
-		padding-top: rem(49);
-		padding-bottom: rem(89);
 	}
 
 	&__wrapper {
 		position: relative;
+		margin: 0 auto;
+		width: calc(100% - rem(80));
+		height: auto!important;
 	}
 
 	&__title {
-		margin-bottom: rem(73);
 		width: 100%;
 		text-align: center;
 		color: $mainColor;
-		font-size: rem(63);
 		font-weight: 400;
+
+		&.__bottom {
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
 	}
 
 	&__slider {
 		margin-bottom: rem(73);
+		@media (max-width:$mobile){
+			 margin-bottom: rem(135); 
+		}
 	}
 
 	&__slide {
 		padding: rem(38) rem(57);
 		background-color: $mainColor;
 		border-radius: rem(25);
+		height: auto;
+
+		@media (max-width:$tablet){
+			padding: rem(32) rem(19);
+		}
 	}
 
 	&__form {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		gap: rem(73);
+		@media (max-width:$tablet){
+			gap: rem(30);
+		}
 	}
 
 	&__textarea {
 		padding: rem(34) rem(100);
 		width: 100%;
+		height: rem(306);
 		background-color: transparent;
 		border: rem(1) solid $mainColor;
 		border-radius: rem(25);
 		resize: none;
 		outline: none;
 
+		@media (max-width:$tablet){
+			height: rem(155);
+			font-size: rem(12);
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: rem(13) rem(60) rem(13) rem(25);
+			height: rem(45);
+		}
+
 		&::placeholder {
 			color: rgba(19, 34, 55, 0.60);
+		}
+	}
+
+	.button__tablet {
+		@media (max-width:$mobile){
+			display: none;
+		}
+	}
+
+	.button__mobile {
+		position: absolute;
+		top: 50%;
+		right: rem(10);
+		transform: translateY(-50%);
+		@media (min-width:$mobile){
+			display: none;
 		}
 	}
 
@@ -56,6 +109,9 @@
 			align-items: center;
 			gap: rem(29.5);
 			margin-bottom: rem(49.5);
+			@media (max-width:$tablet){
+				margin-bottom: rem(28);
+			}
 		}
 
 		&__avatar {
@@ -72,6 +128,12 @@
 
 		&__text {
 			color: $textColor;
+			@media (max-width:$tablet){
+				font-size: rem(12);
+			}
+			@media (max-width:$mobile){
+				 font-size: rem(16); 
+			}
 		}
 	}
 

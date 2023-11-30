@@ -1,6 +1,10 @@
 .header {
-	max-height: rem(148);
+	padding: 0 rem(19);
+	height: rem(148);
 	background-color: $bgColorHighlight;
+	@media (max-width:$tablet){
+		height: rem(77);
+	}
 
 	&__container {
 		position: relative;
@@ -12,9 +16,23 @@
 		// width: 100%;
 		// max-width: rem(1440);
 		// min-height: rem(110);
+		@media (max-width:$tablet){
+			padding-top: rem(20);
+			padding-bottom: rem(20);
+		}
 		@media (max-width:$mobile){
 			padding-top: rem(15);
 			padding-bottom: rem(15);
+		}
+	}
+
+	&__logo {
+
+		img {
+			max-height: 100%;
+			@media (max-width:$tablet){
+				height: rem(37);
+			}
 		}
 	}
 
@@ -22,12 +40,22 @@
 		display: flex;
 		align-items: center;
 		gap: rem(40);
+
+		@media (max-width:$tablet){
+			gap: rem(27.5);
+		}
 	}
 
 	.interface-header {
 
 		&__chat {
 			display: flex;
+			svg {
+				max-height: 100%;
+			}
+			@media (max-width:$tablet){
+				height: rem(20);
+			}
 		}
 
 		&__search {
@@ -39,22 +67,46 @@
 			border: rem(1) solid $highlightColor;
 			border-radius: rem(20);
 
+			@media (max-width:$tablet){
+				min-width: rem(100);
+				padding: rem(1.5) rem(8);
+			}
+
 			input {
+				flex: 1 1 auto;
 				color: $highlightColor;
 				background-color: transparent;
 				font-size: rem(15);
 				line-height: math.div(18, 15);
 				outline: none;
 
+				@media (max-width:$tablet){
+					font-size: rem(12);
+					line-height: math.div(10, 8);
+				}
+
 				&::placeholder {
 					color: #FFE79F99;
-					
+				}
+			}
+
+			svg {
+
+				@media (max-width:$tablet){
+					height: rem(12);
 				}
 			}
 		}
 
 		&__profile {
 			display: flex;
+
+			svg {
+				max-height: 100%;
+			}
+			@media (max-width:$tablet){
+				height: rem(20);
+			}
 		}
 	}
 
@@ -75,6 +127,12 @@
 			background-color: rgba(0, 0, 0, 0.40);
 			z-index: 4;
 			transition: 0.3s right ease;
+			@media (max-width:1919.98px){
+				top: rem(148);
+			}
+			@media (max-width:$tablet){
+				top: rem(77);
+			}
 
 			.menu-open & {
 				right: 0;
@@ -84,6 +142,11 @@
 				flex-direction: column;
 				gap: rem(21);
 				margin-bottom: rem(45);
+
+				@media (max-width:$tablet){
+					gap: rem(15);
+					margin-bottom: rem(30);
+				}
 
 				&-item {
 					transition: 0.3s all ease;
@@ -121,8 +184,8 @@
 					position: relative;
 					font-size: rem(22);
 					font-weight: 300;
-					&.active {
-
+					@media (max-width:$tablet){
+						font-size: rem(16);
 					}
 				}
 			}
@@ -132,19 +195,41 @@
 					width: rem(345);
 					height: 100%;
 					background-color: #fff;
+
+					@media (max-width:$tablet){
+						padding: rem(25) rem(15) rem(25) rem(38);
+						width: rem(232);
+					}
 				}
 				&__logo {
 					margin-bottom: rem(41);
+					@media (max-width:$tablet){
+						margin-bottom: rem(30);
+					}
+
+					img {
+						@media (max-width:$tablet){
+							height: rem(44);
+						}
+					}
 				}
 				&__media-list {
 					display: flex;
-					// justify-content: center;
 					gap: rem(40);
 					margin-bottom: rem(55);
+					@media (max-width:$tablet){
+						gap: rem(17);
+					}
 					li {
-						path {
-							transition: 0.3s opacity ease;
+						svg {
+							@media (max-width:$tablet){
+								height: rem(23);
+							}
+							path {
+								transition: 0.3s opacity ease;
+							}
 						}
+						
 						@media (any-hover: hover){
 							&:hover{
 								path {
@@ -166,9 +251,14 @@
 		position: relative;
 		flex: 0 0 24px;
 		width: 40px;
-		height: 16px;
+		height: 30px;
 		cursor: pointer;
 		z-index: 10;
+
+		@media (max-width:$tablet){
+			width: rem(30);
+			height: rem(20);
+		}
 		span,
 		&::before,
 		&::after {
@@ -180,6 +270,9 @@
 			background-color: $highlightColor;
 			border-radius: rem(10);
 			transition: all 0.3s ease 0s;
+			@media (max-width:$tablet){
+				height: rem(1);
+			}
 		}
 		&::before {
 			top: 0px;
@@ -189,19 +282,32 @@
 		}
 		span {
 			top: calc(50% - 1px);
+			@media (max-width:$tablet){
+				// top: calc(50% - 2px);
+			}
 			// width: 75%;
 		}
 		.menu-open & {
 			span {
 				transform: scale(0);
+				@media (max-width:$tablet){
+					width: rem(20);
+				}
 			}
 			&::before {
 				top: calc(50% - 1px);
 				transform: rotate(-45deg);
+				@media (max-width:$tablet){
+					top: 50%;
+					width: rem(20);
+				}
 			}
 			&::after {
 				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
+				@media (max-width:$tablet){
+					width: rem(20);
+				}
 			}
 		}
 		
