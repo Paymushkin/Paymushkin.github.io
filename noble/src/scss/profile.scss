@@ -54,7 +54,7 @@
 			align-items: center;
 			gap: rem(48);
 			
-			button,a {
+			button:not(#menu-open),a {
 				display: flex;
 			}
 		}
@@ -76,6 +76,8 @@
 			@media (min-width:$tablet){
 				 display: none; 
 			}
+
+
 		}
 
 		&__avatar {
@@ -297,7 +299,11 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		column-gap: rem(120);
-		padding: rem(167) rem(143);
+		padding: 0 rem(143);
+
+		.body__title {
+			margin-bottom: rem(60);
+		}
 
 		@media (max-width:$tablet){
 			flex-direction: column;
@@ -404,7 +410,7 @@
 	}
 
 	.body-services {
-		padding: rem(65) rem(48);
+		padding: 0 rem(48) rem(30);
 		@media (max-width:$tablet){
 			padding: rem(38) rem(20);
 		}
@@ -418,6 +424,7 @@
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			gap: rem(20);
+			padding-top: rem(60);
 			max-width: rem(1280);
 			@media (max-width:$mobile){
 				 justify-content: center;
@@ -490,7 +497,7 @@
 	}
 
 	.body-history {
-		padding: rem(65) rem(48);
+		padding: 0 rem(48) rem(30);
 		@media (max-width:$tablet){
 			padding: rem(38) rem(20);
 		}
@@ -502,7 +509,10 @@
 	}
 
 	.body-payment {
-		padding: rem(65) rem(48);
+		padding: 0 rem(48) rem(30);
+		@media (max-width:$tablet){
+			padding: rem(38) rem(20);
+		}
 
 		&__icon {
 			margin-bottom: rem(65);
@@ -514,7 +524,8 @@
 			display: flex;
 			align-items: center;
 			gap: rem(20);
-			margin-bottom: rem(65);
+			padding-top: rem(60);
+			// margin-bottom: rem(65);
 			width: 100%;
 	
 			@media (max-width:$tablet){
@@ -522,8 +533,10 @@
 			}
 	
 			h2 {
+				padding: 0;
 				width: 100%;
 				color: $mainColor;
+				font-size: rem(40);
 				font-weight: 700;
 				&.center {
 					text-align: center;

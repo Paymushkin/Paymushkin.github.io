@@ -42,13 +42,13 @@ if(document.querySelector("#account")) {
 	menuOpen.addEventListener("click", ()=> {
 	  aside.classList.add("_active")
 	  document.body.classList.add("aside-open")
-	  menuOpen.style.display = 'none';
+	//   menuOpen.style.display = 'none';
 	})
 
 	menuClose.addEventListener("click", ()=> {
 	  aside.classList.remove("_active")
 	  document.body.classList.remove("aside-open")
-	  menuOpen.style.display = 'block';
+	//   menuOpen.style.display = 'block';
 	})
 
 	navBtns.forEach(element => {
@@ -65,7 +65,7 @@ if(document.querySelector("#account")) {
 			currentSection.classList.add("_active");
 			aside.classList.remove("_active")
 	  		document.body.classList.remove("aside-open")
-			menuOpen.style.display = 'block';
+			// menuOpen.style.display = 'block';
 			
 			console.log(currentSection)
 		})

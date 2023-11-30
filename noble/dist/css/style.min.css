@@ -1729,7 +1729,7 @@ table tbody tr td:last-child {
   align-items: center;
   gap: 3rem;
 }
-.profile .header__btns button, .profile .header__btns a {
+.profile .header__btns button:not(#menu-open), .profile .header__btns a {
   display: flex;
 }
 .profile .header__back {
@@ -1927,7 +1927,10 @@ table tbody tr td:last-child {
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 7.5rem;
-  padding: 10.4375rem 8.9375rem;
+  padding: 0 8.9375rem;
+}
+.profile .body-account .body__title {
+  margin-bottom: 3.75rem;
 }
 @media (max-width: 67.49875em) {
   .profile .body-account {
@@ -2032,7 +2035,7 @@ table tbody tr td:last-child {
   fill: #132237;
 }
 .profile .body-services {
-  padding: 4.0625rem 3rem;
+  padding: 0 3rem 1.875rem;
 }
 @media (max-width: 67.49875em) {
   .profile .body-services {
@@ -2047,6 +2050,7 @@ table tbody tr td:last-child {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1.25rem;
+  padding-top: 3.75rem;
   max-width: 80rem;
 }
 @media (max-width: 41.06125em) {
@@ -2117,7 +2121,7 @@ table tbody tr td:last-child {
   transition: 0.3s ease fill;
 }
 .profile .body-history {
-  padding: 4.0625rem 3rem;
+  padding: 0 3rem 1.875rem;
 }
 @media (max-width: 67.49875em) {
   .profile .body-history {
@@ -2129,7 +2133,12 @@ table tbody tr td:last-child {
   transition: 0.3s ease color;
 }
 .profile .body-payment {
-  padding: 4.0625rem 3rem;
+  padding: 0 3rem 1.875rem;
+}
+@media (max-width: 67.49875em) {
+  .profile .body-payment {
+    padding: 2.375rem 1.25rem;
+  }
 }
 .profile .body-payment__icon {
   margin-bottom: 4.0625rem;
@@ -2138,7 +2147,7 @@ table tbody tr td:last-child {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 4.0625rem;
+  padding-top: 3.75rem;
   width: 100%;
 }
 @media (max-width: 67.49875em) {
@@ -2147,8 +2156,10 @@ table tbody tr td:last-child {
   }
 }
 .profile .body__title h2 {
+  padding: 0;
   width: 100%;
   color: #132237;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .profile .body__title h2.center {
@@ -2790,7 +2801,7 @@ table tbody tr td:last-child {
 }
 
 .footer {
-  padding: 0 1.1875rem 5.1875rem;
+  padding: 5.6875rem 1.1875rem 4.6875rem;
 }
 @media (max-width: 67.49875em) {
   .footer {
