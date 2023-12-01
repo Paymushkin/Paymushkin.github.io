@@ -21,7 +21,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: bottom center;
-		background-image: url("../img/hero/hero-bg.png");
+		background-image: url("../img/hero/hero-bg.png?12345");
 		// height: rem(990);
 		height: calc(100vh - rem(148));
 		@media (max-width:$tablet){
@@ -34,7 +34,7 @@
 		@media (max-width:$mobileSmall){
 			height: calc(100vh - rem(77));
 			height: calc(100dvh - rem(77));
-			background-image: url("../img/hero/hero-bg-mob.png");  
+			background-image: url("../img/hero/hero-bg-mob.png?12345");  
 		}
 	}
 	

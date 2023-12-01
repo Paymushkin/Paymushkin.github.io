@@ -35,7 +35,7 @@
 		width: rem(98);
 		height: rem(98);
 		border-radius: 50%;
-		background-image: url(/img/avatar.png);
+		background-image: url(/img/avatar.png?12345);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -46,7 +46,7 @@
 		}
 
 		@media (max-width:$mobile){
-			background-image: url(/img/login/profile-mob.png); 
+			background-image: url(/img/login/profile-mob.png?12345); 
 		}
 	}
 

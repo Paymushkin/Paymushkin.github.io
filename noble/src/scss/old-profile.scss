@@ -87,12 +87,12 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
-			background-image: url("/img/profile/header-avatar-dark.png");
+			background-image: url("/img/profile/header-avatar-dark.png?12345");
 			cursor: pointer;
 			@media (max-width:$tablet){
 				height: rem(25);
 				width: rem(25);
-				background-image: url("/img/profile/header-avatar-gold.png");
+				background-image: url("/img/profile/header-avatar-gold.png?12345");
 			}
 		}
 	}

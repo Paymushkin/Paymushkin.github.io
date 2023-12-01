@@ -1279,7 +1279,7 @@ table tbody tr.awaiting {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  background-image: url("../img/hero/hero-bg.png");
+  background-image: url("../img/hero/hero-bg.png?12345");
   height: calc(100vh - 9.25rem);
 }
 @media (max-width: 67.49875em) {
@@ -1291,7 +1291,7 @@ table tbody tr.awaiting {
   .hero__slide {
     height: calc(100vh - 4.8125rem);
     height: calc(100dvh - 4.8125rem);
-    background-image: url("../img/hero/hero-bg-mob.png");
+    background-image: url("../img/hero/hero-bg-mob.png?12345");
   }
 }
 .hero__body {
@@ -1445,7 +1445,7 @@ table tbody tr.awaiting {
   width: 6.125rem;
   height: 6.125rem;
   border-radius: 50%;
-  background-image: url(/img/avatar.png);
+  background-image: url(/img/avatar.png?12345);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1458,7 +1458,7 @@ table tbody tr.awaiting {
 }
 @media (max-width: 48.06125em) {
   .login__avatar {
-    background-image: url(/img/login/profile-mob.png);
+    background-image: url(/img/login/profile-mob.png?12345);
   }
 }
 .login__title {
@@ -2153,14 +2153,14 @@ table tbody tr.awaiting {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/profile/header-avatar-dark.png");
+  background-image: url("../img/profile/header-avatar-dark.png?12345");
   cursor: pointer;
 }
 @media (max-width: 67.49875em) {
   .profile .header__avatar {
     height: 1.5625rem;
     width: 1.5625rem;
-    background-image: url("../img/profile/header-avatar-gold.png");
+    background-image: url("../img/profile/header-avatar-gold.png?12345");
   }
 }
 @media (max-width: 48.06125em) {
