@@ -2860,6 +2860,11 @@ table tbody tr.awaiting {
     gap: 1.75rem;
   }
 }
+@media (max-width: 36.06125em) {
+  .news .list-news:not(.swiper-wrapper) {
+    flex-direction: column;
+  }
+}
 .news .list-news__item {
   display: flex;
   gap: 3.125rem;
@@ -2874,6 +2879,11 @@ table tbody tr.awaiting {
 @media (max-width: 36.06125em) {
   .news .list-news__item {
     flex-direction: column;
+  }
+}
+@media (max-width: 36.06125em) {
+  .news .list-news__item:not(.swiper-wrapper) {
+    padding-bottom: 2.5rem;
   }
 }
 @media (min-width: 36.06125em) {
@@ -2936,6 +2946,7 @@ table tbody tr.awaiting {
 }
 @media (max-width: 36.06125em) {
   .news .list-news__link {
+    padding: 0.5625rem;
     min-width: 100%;
     font-size: 1rem;
     color: #E1DFDE;

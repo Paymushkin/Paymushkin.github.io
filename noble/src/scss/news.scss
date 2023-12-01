@@ -43,6 +43,12 @@
 			gap: rem(28);
 		}
 
+		&:not(.swiper-wrapper) {
+			@media (max-width:$mobileSmall){
+				flex-direction: column;
+			}
+		}
+
 		&__item {
 			display: flex;
 			gap: rem(50);
@@ -53,6 +59,12 @@
 			}
 			@media (max-width:$mobileSmall){
 				flex-direction: column; 
+			}
+			
+			&:not(.swiper-wrapper) {
+				@media (max-width:$mobileSmall){
+					padding-bottom: rem(40);
+				}
 			}
 			&:not(:last-child) {
 				@media (min-width:$mobileSmall){
@@ -111,6 +123,7 @@
 		}
 		&__link {
 			@media (max-width:$mobileSmall){
+				padding: rem(9);
 				min-width: 100%;
 				font-size: rem(16);
 				color: $textColor;
