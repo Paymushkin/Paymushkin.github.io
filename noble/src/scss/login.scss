@@ -56,6 +56,7 @@
 		color: $textColor;
 		font-size: rem(35);
 		font-weight: 300;
+		text-transform: uppercase;
 		@media (max-width:$tablet){
 			margin-bottom: rem(25);
 			font-size: rem(22);
@@ -122,6 +123,17 @@
 		@media (max-width:$mobile){
 			color: $mainColor; 
 	   }
+
+
+	}
+
+	&__text {
+		margin-bottom: rem(150);
+		color: $textColor;
+		font-size: rem(16);
+		@media (max-width:$mobile){
+			 color: $mainColor; 
+		}
 	}
 
 	&__forgot {
@@ -138,6 +150,7 @@
 	&__button {
 		padding-top: rem(13);
 		padding-bottom: rem(13);
+		text-transform: uppercase;
 
 		@media (max-width:$mobile){
 			min-width: 100%;

@@ -20,6 +20,10 @@
 		@media (max-width:$tablet){
 			flex-direction: column;
 		}
+		@media (max-width:$mobile){
+			 align-items: center;
+			 max-width: rem(497); 
+		}
 	}
 
 	&__wrapper {
@@ -88,6 +92,10 @@
 		@media (max-width:$tablet){
 			padding: 0;
 			gap: rem(30);
+		}
+		@media (max-width:$mobile){
+			width: 100%;
+			max-width: 100%;
 		}
 		// @media (max-width:$mobileSmall){
 		// 	 max-width: 100%; 

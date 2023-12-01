@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		//- .loader#loader
+		//- 	.loader__spinner
+		//- 		.loader__icon
+		//- 			div
+
+		.wrapper._highlight
+			include html/_header
+			main.main-content
+				section.login
+					.login__container
+						form(action="", method="post", name="login").login__form
+							.login__avatar
+							h2.login__title Password reset
+							
+							.form-field
+								label.login__label
+									svg(width='18' height='12' viewbox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M8.92023 5.95001L1.2002 0H16.6702L8.92023 5.95001Z' fill='#E1DFDE')
+										path(d='M6.24005 5.45013L0 10.5402V0.640137L6.24005 5.45013Z' fill='#E1DFDE')
+										path(d='M7.25012 6.23016L8.92017 7.51013L10.6801 6.16016L16.7802 11.2302H1.12012L7.25012 6.23016Z' fill='#E1DFDE')
+										path(d='M11.6899 5.39014L17.8699 0.640137V10.5302L11.6899 5.39014Z' fill='#E1DFDE')
+									span Email ID
+								input#login-email(type="email", name="email", required="").input.login__input
+
+							.login__additional
+								p.login__text An email will be sent to your account with a link to reset your password
+							
+							button(type="submit").button.login__button Send an E-mail
+								
+
+			include html/_footer
+		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="js/app.min.js")

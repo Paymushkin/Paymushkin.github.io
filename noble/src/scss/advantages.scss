@@ -56,8 +56,11 @@
 			align-items: flex-start;
 			gap: rem(34);
 			margin-bottom: rem(20);
+			@media (max-width: 1280px){
+				  gap: rem(15);
+			}
 			@media (max-width:$tablet){
-				 margin-bottom: rem(7); 
+				 margin-bottom: rem(7);
 			}
 			span {
 				color: $textColor;
