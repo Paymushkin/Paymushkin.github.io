@@ -1290,7 +1290,6 @@ table tbody tr.awaiting {
 @media (max-width: 36.06125em) {
   .hero__slide {
     height: calc(100vh - 4.8125rem);
-    height: calc(100dvh - 4.8125rem);
     background-image: url("../img/hero/hero-bg-mob.png?12345");
   }
 }
