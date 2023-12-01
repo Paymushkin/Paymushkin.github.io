@@ -28,9 +28,13 @@
 			height: rem(462);
 		}
 		@media (max-width:$mobile){
+			
+			
+		}
+		@media (max-width:$mobileSmall){
 			height: calc(100vh - rem(77));
 			height: calc(100dvh - rem(77));
-			background-image: url("../img/hero/hero-bg-mob.png");
+			background-image: url("../img/hero/hero-bg-mob.png");  
 		}
 	}
 	

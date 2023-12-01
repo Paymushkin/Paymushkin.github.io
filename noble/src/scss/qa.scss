@@ -61,6 +61,9 @@
 			// 	margin-top: rem(28);
 			// }
 			@media (max-width:$mobile){
+				padding: rem(15) 0 
+			}
+			@media (max-width:$mobileSmall){
 				padding: rem(10) 0;  
 			}
 			summary {
@@ -89,6 +92,9 @@
 					line-height: math.div(18, 14);
 				}
 				@media (max-width:$mobile){
+					font-size: rem(16);
+				}
+				@media (max-width:$mobileSmall){
 					font-size: rem(12);
 				}
 			}

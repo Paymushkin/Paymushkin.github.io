@@ -3,14 +3,17 @@
 	@media (max-width:$tablet){
 		padding-bottom: rem(30);
 	}
-	@media (min-width:$mobileSmall){
+	@media (max-width:$mobileSmall){
+		padding: 0;
 		// @include adaptiveValue("padding-top", 158, 88, 1920, 1024, 1);
 		// @include adaptiveValue("padding-bottom", 158, 88, 1920, 1024, 1);
 		// background: $gradient;
 	}
 
 	&__container {
+		position: relative;
 		@media (max-width:$mobileSmall){
+			padding: 0 rem(40);
 			// margin: 0 rem(15);
 			// padding: rem(38) rem(33) rem(60);
 			// background: $gradient;
@@ -32,9 +35,13 @@
 	}
 
 	.list-news {
-		display: flex;
-		flex-direction: column;
-		gap: rem(28);
+
+
+		@media (min-width:$mobileSmall){
+			display: flex;
+			flex-direction: column;
+			gap: rem(28);
+		}
 
 		&__item {
 			display: flex;
@@ -42,9 +49,15 @@
 			padding-bottom: rem(34);
 			@media (max-width:$tablet){
 				padding-bottom: rem(32);
+				gap: rem(30);
+			}
+			@media (max-width:$mobileSmall){
+				flex-direction: column; 
 			}
 			&:not(:last-child) {
-				border-bottom: rem(1) solid $mainColor;
+				@media (min-width:$mobileSmall){
+					border-bottom: rem(1) solid $mainColor;  
+				}
 			}
 		}
 
@@ -55,11 +68,15 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			@media (max-width:$tablet){
-				flex: 0 0 percent(250, 780);
+				flex: 0 0 percent(300, 780);
 				min-height: rem(209);
 			}
 			@media (max-width:$mobile){
-				flex: 0 0 percent(254, 1000);
+				// flex: 0 0 percent(254, 1000);
+			}
+			@media (max-width:$mobileSmall){
+				flex: 1 1 100%;
+				max-height: rem(200); 
 			}
 		}
 
@@ -68,10 +85,16 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			@media (max-width:$mobile){
+				 flex: 1 1 percent(400, 780); 
+			}
 		}
 
 		&__title {
 			margin-bottom: rem(25);
+			@media (max-width:$mobileSmall){
+				 font-size: rem(12); 
+			}
 		}
 
 		&__text {
@@ -79,9 +102,39 @@
 			margin-bottom: rem(46);
 			padding-right: rem(20);
 			@media (max-width:$tablet){
-				font-size: rem(18);
+				font-size: rem(16);
+			}
+			@media (max-width:$mobileSmall){
+				 font-size: rem(12); 
 			}
 			// max-width: rem(570);
+		}
+		&__link {
+			@media (max-width:$mobileSmall){
+				min-width: 100%;
+				font-size: rem(16);
+				color: $textColor;
+				background-color: $mainColor;
+			}
+		}
+	}
+
+	.navigation {
+		z-index: 2;
+		.prev, .next {
+			top: 200px;
+		}
+		.prev {
+			left: rem(10);
+			z-index: 9;
+		}
+		.next {
+			right: rem(10);
+			z-index: 9;
+		}
+
+		@media (min-width:$mobileSmall){
+			display: none;
 		}
 	}
 

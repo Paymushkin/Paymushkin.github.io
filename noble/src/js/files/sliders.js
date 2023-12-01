@@ -185,8 +185,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.navigation .prev',
-				nextEl: '.navigation .next',
+				prevEl: '.feedback .navigation .prev',
+				nextEl: '.feedback .navigation .next',
 			},
 
 			// Брейкпоинты
@@ -196,10 +196,14 @@ function initSliders() {
 					spaceBetween: 0,
 					autoHeight: true,
 				},
-				768: {
+				576: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
+				// 768: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20,
+				// },
 				1024: {
 					slidesPerView: 2,
 					spaceBetween: 20,
@@ -225,18 +229,18 @@ function initSliders() {
 		});
 	}
 
-	if (window.innerWidth <= 1000) {
+	if (window.innerWidth <= 576) {
 
-		if (document.querySelector('.news__swiper') ) { // Указываем скласс нужного слайдера
+		if (document.querySelector('.news__slider') ) { // Указываем скласс нужного слайдера
 			// Создаем слайдер
-			new Swiper('.news__swiper', { // Указываем скласс нужного слайдера
+			new Swiper('.news__slider', { // Указываем скласс нужного слайдера
 				// Подключаем модули слайдера
 				// для конкретного случая
-				modules: [Navigation],
+				modules: [Autoplay, Navigation],
 				observer: true,
 				observeParents: true,
 				slidesPerView: 1,
-				spaceBetween: 20,
+				spaceBetween: 0,
 				// autoHeight: true,
 				speed: 800,
 	
@@ -249,11 +253,11 @@ function initSliders() {
 	
 				
 				// Эффекты
-				// effect: 'fade',
-				// autoplay: {
-				// 	delay: 3000,
-				// 	disableOnInteraction: false,
-				// },
+				effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
 				
 	
 				// Пагинация
@@ -275,8 +279,8 @@ function initSliders() {
 	
 				// Кнопки "влево/вправо"
 				navigation: {
-					prevEl: '.navigation .prev',
-					nextEl: '.navigation .next',
+					prevEl: '.news .navigation .prev',
+					nextEl: '.news .navigation .next',
 				},
 	
 				// Брейкпоинты

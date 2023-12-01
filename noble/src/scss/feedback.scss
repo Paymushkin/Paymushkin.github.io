@@ -76,6 +76,11 @@
 			font-size: rem(12);
 		}
 
+		@media (max-width:$mobile){
+			padding: rem(13) rem(60) rem(13) rem(25);
+			height: rem(75);
+		}
+
 		@media (max-width:$mobileSmall){
 			padding: rem(13) rem(60) rem(13) rem(25);
 			height: rem(45);
@@ -112,6 +117,10 @@
 			@media (max-width:$tablet){
 				margin-bottom: rem(28);
 			}
+			@media (max-width:$mobile){
+				margin-bottom: rem(15);
+				gap: rem(20);
+			}
 		}
 
 		&__avatar {
@@ -131,7 +140,7 @@
 			@media (max-width:$tablet){
 				font-size: rem(12);
 			}
-			@media (max-width:$mobile){
+			@media (max-width:$mobileSmall){
 				 font-size: rem(16); 
 			}
 		}
