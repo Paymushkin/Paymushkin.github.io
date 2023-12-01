@@ -5,6 +5,10 @@
 		padding-bottom: rem(30);
 	}
 
+	@media (max-width:$mobileSmall){
+		padding: 0;
+	}
+
 	&__container {}
 
 	&__title {
@@ -38,14 +42,21 @@
 				border-radius: 0;
 			}
 
-			@media (any-hover: hover){
-				&:hover{
-					background-color: $bgColorHighlight;
+			@media (max-width:$mobile){
+				width: 100%;
+			}
 
-					h4, p {
-						color: $highlightColor;
-					}
+			@media (any-hover: hover){
+				@media (min-width:$tablet){
+					&:hover{
+						background-color: $bgColorHighlight;
+
+						h4, p {
+							color: $highlightColor;
+						}
+					}  
 				}
+				
 			}
 		}
 
@@ -95,6 +106,10 @@
 				margin-bottom: rem(0);
 				font-size: rem(16);
 				text-align: center;
+			}
+
+			@media (max-width:$mobile){
+				font-weight: 300; 
 			}
 		}
 

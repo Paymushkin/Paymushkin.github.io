@@ -13,7 +13,7 @@
 		// padding: rem(30) 0;
 	}
 	@media (max-width:$mobile){
-		 padding: rem(40) 0; 
+		padding-bottom: rem(40);
 	}
 	&__container {
 		
@@ -36,7 +36,7 @@
 			min-width: rem(180);
 		}
 		@media (max-width:$mobile){
-			// min-width: calc(100% - rem(80));
+			min-width: calc(100% - rem(80));
 		}
 	}
 
@@ -47,9 +47,7 @@
 		gap: rem(45);
 		margin-bottom: rem(70);
 		@media (max-width:$mobile){
-			// align-items: center;
-			// gap: rem(40); 
-			// margin-bottom: rem(0);
+			margin-bottom: 0;
 		}
 	}
 

@@ -8,6 +8,10 @@
 		padding: rem(35) rem(19);
 	}
 
+	@media (max-width:$tablet){
+		padding: rem(40) rem(19);
+	}
+
 	&__container {
 		position: relative;
 		display: flex;
@@ -30,6 +34,10 @@
 		@media (max-width:$tablet){
 			margin-bottom: rem(65);
 		}
+
+		@media (max-width:$mobile){
+			margin-bottom: rem(40); 
+		}
 	}
 
 	&__title {
@@ -43,6 +51,9 @@
 			margin-bottom: rem(10);
 			font-size: rem(40);
 			line-height: math.div(48, 40);
+		}
+		@media (max-width:$mobile){
+			 margin-bottom: rem(50); 
 		}
 	}
 
@@ -115,6 +126,7 @@
 			resize: none;
 		}
 		&__button {
+		margin-top: rem(20);
 			padding: rem(12) rem(24);
 			min-width: rem(348);
 			font-size: rem(20);
@@ -123,6 +135,10 @@
 			@media (max-width:$tablet){
 				min-width: rem(180);
 				font-size: rem(12);
+			}
+
+			@media (max-width:$mobile){
+				 min-width: 100%; 
 			}
 		}
 	}

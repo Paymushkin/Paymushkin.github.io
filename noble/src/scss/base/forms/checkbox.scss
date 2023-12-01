@@ -14,7 +14,11 @@
 			box-shadow: 0 0 5px #000;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			background: #79808a;
+			border-color: #79808a;
+		}
+		&:checked + .checkbox__label:after {
+			opacity: 1;
 		}
 	}
 	// .checkbox__label
@@ -32,11 +36,25 @@
 			height: 14px;
 			border: 1px solid #E1DFDE;
 		}
+		&::after{
+			content: url(../img/login/mark.svg);
+			position: absolute;
+			top: 0;
+			left: rem(4);
+			height: rem(8);
+			width: rem(8);
+			opacity: 0;
+			transition: .3s opacity ease;
+		}
 	}
 	// .checkbox__text
 	&__text {
 		color: $textColor;
 		font-size: rem(12);
 		line-height: math.div(14, 12);
+
+		@media (max-width:$mobile){
+			color: $mainColor; 
+	   }
 	}
 }

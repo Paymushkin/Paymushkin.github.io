@@ -1,19 +1,21 @@
 .advantages {
-	margin-bottom: rem(116);
-	padding: 0 rem(19);
+	padding: rem(60) 0;
 	@media (max-width:$tablet){
-		margin-bottom: rem(38);
+		padding: rem(40) 0 
 	}
 	@media (max-width:$mobileSmall){
-		margin-bottom: rem(11); 
+		margin-bottom: rem(11);; 
 	}
 
 	&__container {
 		display: flex;
 		justify-content: center;
 		@media (max-width:$mobileSmall){
-			flex-direction: column; 
-	   }
+			
+			justify-content: flex-end;
+			padding: 0;
+			width: 100%;
+	    }
 	}
 
 	&__list {
@@ -26,7 +28,7 @@
 		}
 
 		@media (max-width:$mobileSmall){
-			transform: translateX(10%);
+			max-width: 85%;
 	    }
 	}
 
@@ -44,8 +46,8 @@
 
 		@media (max-width:$mobileSmall){
 			flex: 1 1 100%;
-			padding: rem(10) rem(48) rem(10);
-			// display: flex;
+			padding: rem(10) rem(20) rem(10) rem(50);
+			border-radius: rem(25) 0 0 rem(25);
 		}
 
 		&__title {
@@ -94,7 +96,7 @@
 				}
 
 				@media (max-width:$mobileSmall){
-					font-size: rem(15);
+					font-size: rem(16);
 				}
 			}
 		}
@@ -107,7 +109,7 @@
 			}
 			
 			@media (max-width:$mobile){
-				font-size: rem(14);
+				font-size: rem(12);
 			}
 
 			@media (max-width:$mobileSmall){

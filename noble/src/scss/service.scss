@@ -4,10 +4,18 @@
 		@media (max-width:$tablet){
 			 margin-bottom: rem(45); 
 		}
+		@media (max-width:$mobile){
+			margin-bottom: rem(0); 
+		}
+
 	}
 
 	&__item {
 		width: 100%;
+
+		@media (max-width:$mobile){
+			flex-direction: column; 
+	   }
 	}
 
 	&__content {
@@ -20,12 +28,20 @@
 		@media (max-width:$tablet){
 			padding: rem(30) rem(20) 0 rem(20);
 		}
+		@media (max-width:$mobile){
+			 padding: rem(40); 
+		}
 	}
 
 	&__img {
 		@media (max-width:$tablet){
 			flex: 0 0 percent(502, 1024);
 			max-width: percent(502, 1024);
+		}
+		@media (max-width:$mobile){
+			 flex: 1 1 100%;
+			 max-width: 100%;
+			 min-height: rem(337);
 		}
 	}
 
@@ -54,6 +70,10 @@
 		@media (max-width:$tablet){
 			font-size: rem(30);
 		}
+
+		@media (max-width:$mobile){
+			 margin-bottom: rem(30); 
+		}
 	}
 
 	&__subtitle {
@@ -67,6 +87,16 @@
 		flex: 1 1 auto;
 		margin-bottom: rem(20);
 		color: $mainColor;
+
+		@media (max-width:$mobile){
+			 font-size: rem(16); 
+		}
+	}
+
+	&__button {
+		@media (max-width:$mobile){
+			 min-width: 100%; 
+		}
 	}
 
 	&__text {
@@ -79,6 +109,10 @@
 		@media (max-width:$tablet){
 			margin-bottom: rem(45);
 			font-size: rem(12);
+		}
+
+		@media (max-width:$mobile){
+			margin-bottom: rem(40); 
 		}
 	}
 
