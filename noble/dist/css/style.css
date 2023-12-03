@@ -708,6 +708,8 @@ table tbody tr.awaiting {
 }
 
 .header__logo img {
+  width: 12.51875rem;
+  height: 4.375rem;
   max-height: 100%;
 }
 
@@ -868,6 +870,12 @@ table tbody tr.awaiting {
 
 .header .menu__body .menu-body__logo {
   margin-bottom: 2.5625rem;
+}
+
+.header .menu__body .menu-body__logo img {
+  width: 11.75rem;
+  height: 4.114375rem;
+  max-height: 100%;
 }
 
 .header .menu__body .menu-body__media-list {
@@ -2822,7 +2830,9 @@ table tbody tr.awaiting {
   }
 
   .header__logo img {
-    height: 2.3125rem;
+    width: 8.383125rem;
+    height: 2.9296875rem;
+    max-height: 100%;
   }
 
   .header__interface {
@@ -2875,7 +2885,9 @@ table tbody tr.awaiting {
   }
 
   .header .menu__body .menu-body__logo img {
-    height: 2.75rem;
+    width: 7.8928125rem;
+    height: 2.75875rem;
+    max-height: 100%;
   }
 
   .header .menu__body .menu-body__media-list {

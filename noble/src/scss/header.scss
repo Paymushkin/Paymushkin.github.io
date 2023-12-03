@@ -29,9 +29,13 @@
 	&__logo {
 
 		img {
+			width: rem(200.3);
+			height: rem(70);
 			max-height: 100%;
 			@media (max-width:$tablet){
-				height: rem(37);
+				width: rem(134.13);
+				height: rem(46.875);
+				max-height: 100%;
 			}
 		}
 	}
@@ -253,8 +257,13 @@
 					}
 
 					img {
+						width: rem(188);
+						height: rem(65.83);
+						max-height: 100%;
 						@media (max-width:$tablet){
-							height: rem(44);
+							width: rem(126.285);
+							height: rem(44.14);
+							max-height: 100%;
 						}
 					}
 				}
