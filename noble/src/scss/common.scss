@@ -41,7 +41,7 @@ h2 {
 	}
 
 	&.document__title {
-		margin-bottom: rem(73);
+		// margin-bottom: rem(73);
 		width: 100%;
 		text-align: center;
 		color: $mainColor;
@@ -69,11 +69,17 @@ h4 {
 
 p {
 	line-height: 1.5;
+
+	&.document__text {
+		@media (max-width:$mobile){
+			 font-size: rem(12); 
+		}
+	}
 }
 
 section {
 	&.document {
-		padding: rem(65) 0;
+		// padding: rem(65) 0;
 	}
 }
 
