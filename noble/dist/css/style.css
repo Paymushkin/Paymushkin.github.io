@@ -581,6 +581,13 @@ details[open] summary:before {
   background-repeat: no-repeat;
 }
 
+.grid-item__img img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .grid-item__content {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -621,12 +628,6 @@ details[open] summary:before {
   max-width: 117.25rem;
 }
 
-.service-grid__item {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .service-grid__item._item-1 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
@@ -652,6 +653,13 @@ details[open] summary:before {
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-area: item-4;
+}
+
+.service-grid__item img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #chat {
@@ -1249,6 +1257,13 @@ table tbody tr.awaiting {
   -webkit-transition: 0.3s ease background-color;
   -o-transition: 0.3s ease background-color;
   transition: 0.3s ease background-color;
+}
+
+.services-list .list-services__item img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .services-list .list-services__link {
@@ -1961,6 +1976,13 @@ table tbody tr.awaiting {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.news .list-news__img img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .news .list-news__content {
@@ -3556,6 +3578,11 @@ table tbody tr.awaiting {
         flex: 1 1 13.125rem;
   }
 
+  .grid-item__img img {
+    width: 100%;
+    height: 100%;
+  }
+
   .grid-item__content {
     padding: 2.5rem;
     border-top: none;
@@ -3791,6 +3818,11 @@ table tbody tr.awaiting {
     width: 100%;
   }
 
+  .services-list .list-services__item img {
+    max-height: 100%;
+    width: 100%;
+  }
+
   .services-list .list-services__title {
     font-weight: 300;
   }
@@ -3941,8 +3973,6 @@ table tbody tr.awaiting {
   }
 
   .service__img {
-    -ms-flex: 1 1 100%;
-        flex: 1 1 100%;
     max-width: 100%;
     min-height: 21.0625rem;
   }
@@ -3961,6 +3991,11 @@ table tbody tr.awaiting {
 
   .service__text {
     margin-bottom: 2.5rem;
+  }
+
+  .news .list-news__img img {
+    max-height: 100%;
+    width: 100%;
   }
 
   .news .list-news__content {
@@ -4191,7 +4226,8 @@ table tbody tr.awaiting {
   .news .list-news__img {
     -ms-flex: 1 1 100%;
         flex: 1 1 100%;
-    max-height: 12.5rem;
+    min-height: unset;
+    max-height: unset;
   }
 
   .news .list-news__title {

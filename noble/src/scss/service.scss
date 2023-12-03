@@ -42,7 +42,7 @@
 			max-width: percent(502, 1024);
 		}
 		@media (max-width:$mobile){
-			 flex: 1 1 100%;
+			//  flex: 1 1 100%;
 			 max-width: 100%;
 			 min-height: rem(337);
 		}
