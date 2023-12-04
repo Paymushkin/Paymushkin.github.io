@@ -31,7 +31,45 @@ if (hideFilters) {
 	})
 }
 
+// изменение размера скроллбара
 const scrollbar = document.querySelector(".scrollbar-hover")
 scrollbar.addEventListener("mouseover", ()=> {
 	document.body.classList.toggle("scrollbar-zoom")
 })
+
+// копирование ссылки 
+const linkButton = document.querySelector('button[data-link]');
+console.log(linkButton.dataset.link)
+
+const text = document.getElementById("info-text");
+// console.log(text)
+linkButton.addEventListener("click", ()=> {
+		const copyText = linkButton.dataset.link
+
+		// function copyTextToClipboard(copyText) {
+		// 	if (!navigator.clipboard) {
+		// 	  fallbackCopyTextToClipboard(copyText);
+		// 	  return;
+		// 	}
+		// 	navigator.clipboard.writeText(copyText).then(function() {
+		// 	  console.log('Async: Copying to clipboard was successful!');
+		// 	}, function(err) {
+		// 	  console.error('Async: Could not copy text: ', err);
+		// 	});
+		//   }
+
+
+		// try {
+			navigator.clipboard.writeText(copyText);
+			text.textContent = "Скопировано!"
+			text.classList.add("active")
+		// } catch (err) {
+		// 	text.textContent = "Не скопировалось"
+		// 	text.classList.add("active")
+		// }
+
+
+		setTimeout(() => {
+			text.classList.remove("active")
+		}, 2000);
+	})

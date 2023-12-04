@@ -29,10 +29,6 @@ $decorColor2: #96B2BA;
 $addColor: #e8e8e8;
 $addColorGreen: #f5faf9;
 $textColor: #333333;
-
-@import "base/forms/select";
-@import "base/forms/radio";
-@import "base/popup";
  
 // Настройки ===========================================================================
 // Минимальная ширина страницы
@@ -58,6 +54,10 @@ $mobileSmall: em(576.98); // Телефоны S
 
 // Обнуление и общие параметры
 @import "base/null";
+
+@import "base/forms/select";
+@import "base/forms/radio";
+@import "base/popup";
 
 // кастомный скроллбар
 

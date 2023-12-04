@@ -490,7 +490,6 @@ h2 {
 
 // end site loader
 
-
 .button-link {
 	display: flex;
 	align-items: center;
@@ -513,4 +512,51 @@ h2 {
 body.scrollbar-zoom::-webkit-scrollbar {
 	width: 15px;
 	height: 15px;
+}
+
+.sharing-list {
+	display: flex;
+	gap: rem(15);
+	margin-bottom: rem(30);
+	// background-color: red;
+
+	&__item {
+		a {
+			display: flex;
+		}
+
+		svg {
+			path {
+				transition: 0.3s ease fill;
+			}
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+				svg {
+					path {
+						fill: $highlightColor;
+					}
+				}
+			}
+		}
+	}
+
+	&__img {
+		padding: 0;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(12) rem(15);
+		min-width: 100%;
+		color: $highlightColor;
+		background-color: $addColorGreen;
+		font-size: rem(18);
+		font-weight: 500;
+		border-radius: rem(10);
+		cursor: pointer;
+	}
 }
