@@ -1,19 +1,23 @@
 .landing-about {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: rem(70);
+	margin-bottom: rem(100);
 	// padding: 0 0 rem(70);
 	&__content {
-		flex: 0 0 percent(620, 1280);
+		flex: 0 0 percent(897, 1280);
 		h2 {
 			margin-bottom: rem(20);
 		}
 		p {
-			font-size: rem(20);
+			font-size: rem(40);
 			line-height: math.div(23, 20);
 			font-weight: 500;
 			&:not(:last-child) {
 				margin-bottom: rem(20);
+			}
+			i {
+				color: $highlightColor;
+				font-style: normal;
 			}
 		}
 	}

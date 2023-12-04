@@ -218,9 +218,29 @@
 					padding: rem(15) rem(39);
 					transition: 0.3s ease background-color;
 					cursor: pointer;
-
-					@media (max-width:$mobile){
-						 padding: rem(15) rem(20); 
+	
+					span {
+						position: relative;
+						&::after{
+							content:'';
+							position: absolute;
+							top: 50%;
+							right: rem(-25);
+							width: rem(10);
+							height: rem(10);
+							border-radius: 50%;
+							background-color: $textColor;
+							opacity: 0;
+							transform: translateY(-50%);
+							transition: 0.3s background-color ease;
+						}
+					}
+					&.invoice {
+						span {
+							&::after{
+								opacity: 1;
+							}
+						}
 					}
 
 					&._active {
@@ -228,6 +248,9 @@
 							background-color: $bgColor; 
 							span {
 								color: $mainColor;
+								&::after{
+									background-color: $mainColor;
+								}
 							}
 	
 							svg path {
@@ -242,11 +265,24 @@
 							background-color: rgba(225, 222, 222, 0.7);
 
 							span {
-								color: $mainColor;
+								color: $highlightColor;
+								&::after{
+									background-color: $mainColor;
+								}
 							}
 	
 							svg path {
 								fill: $mainColor;
+							}
+						}
+					}
+
+					@media (max-width:$mobile){
+						padding: rem(15) rem(20);
+
+						span {
+							&::after{
+								background-color: $highlightColor;
 							}
 						}
 					}
@@ -617,6 +653,44 @@
 
 		&__icon {
 			margin-bottom: rem(65);
+		}
+
+		&__title {
+			margin-bottom: rem(60);
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+		}
+
+		&__item {
+			padding: rem(32);
+			width: rem(380);
+			max-width: 100%;
+			border: rem(1) solid currentColor;
+			border-radius: rem(10);
+			transition: 0.3s all ease;
+
+			@media (any-hover: hover){
+				&:hover{
+					color: $textColor;
+					background-color: $bgColorHighlight;
+					
+				}
+			}
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+			}
+
+			span {
+				font-weight: 700;
+			}
 		}
 	}
 

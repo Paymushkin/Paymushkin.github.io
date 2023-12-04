@@ -9,6 +9,7 @@
 		display: flex;
 		justify-content: space-between;
 		gap: rem(44);
+		margin-bottom: rem(100);
 		li {
 			flex: 0 0 calc((100% - rem(88)) / 3);
 			display: flex;

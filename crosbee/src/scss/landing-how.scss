@@ -23,4 +23,8 @@
 		border-radius: rem(25);
 		background-color: #e0e0e0;
 	}
+
+	&__link.products-header__link {
+		padding: rem(10) 0;
+	}
 }
