@@ -1,5 +1,4 @@
 section.landing-numbers
-	h2 Достижения/цифры
 	ul.landing-numbers__list
 		li
 			span 128K
@@ -10,3 +9,18 @@ section.landing-numbers
 		li
 			span 456
 			p Разных товаров на любые цели
+	
+	.product-item__slider.swiper
+		.product-item__wrapper.swiper-wrapper
+			.product-item__slide.swiper-slide(style="background-image: url(@img/landing/slide-1.png)")
+			.product-item__slide.swiper-slide(style="background-image: url(@img/landing/slide-1.png)")
+			.product-item__slide.swiper-slide(style="background-image: url(@img/landing/slide-1.png)")
+		//- .swiper-pagination
+		.navigation
+			svg.prev(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+				g
+					path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="white", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+			svg.next(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+				g
+					path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="white", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+					

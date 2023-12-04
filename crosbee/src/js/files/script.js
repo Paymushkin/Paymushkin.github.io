@@ -38,38 +38,24 @@ scrollbar.addEventListener("mouseover", ()=> {
 })
 
 // копирование ссылки 
-const linkButton = document.querySelector('button[data-link]');
-console.log(linkButton.dataset.link)
-
-const text = document.getElementById("info-text");
-// console.log(text)
-linkButton.addEventListener("click", ()=> {
-		const copyText = linkButton.dataset.link
-
-		// function copyTextToClipboard(copyText) {
-		// 	if (!navigator.clipboard) {
-		// 	  fallbackCopyTextToClipboard(copyText);
-		// 	  return;
-		// 	}
-		// 	navigator.clipboard.writeText(copyText).then(function() {
-		// 	  console.log('Async: Copying to clipboard was successful!');
-		// 	}, function(err) {
-		// 	  console.error('Async: Could not copy text: ', err);
-		// 	});
-		//   }
+if(document.querySelector('button[data-link]')) {
+	const linkButton = document.querySelector('button[data-link]');
+	const text = document.getElementById("info-text");
+	// console.log(text)
+	linkButton.addEventListener("click", ()=> {
+			const copyText = linkButton.dataset.link
+			try {
+				navigator.clipboard.writeText(copyText);
+				text.textContent = "Скопировано!"
+				text.classList.add("active")
+			} catch (err) {
+				text.textContent = "Не скопировалось"
+				text.classList.add("active")
+			}
 
 
-		// try {
-			navigator.clipboard.writeText(copyText);
-			text.textContent = "Скопировано!"
-			text.classList.add("active")
-		// } catch (err) {
-		// 	text.textContent = "Не скопировалось"
-		// 	text.classList.add("active")
-		// }
-
-
-		setTimeout(() => {
-			text.classList.remove("active")
-		}, 2000);
-	})
+			setTimeout(() => {
+				text.classList.remove("active")
+			}, 2000);
+		})
+}

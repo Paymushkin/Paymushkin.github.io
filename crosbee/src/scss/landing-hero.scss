@@ -4,7 +4,7 @@
 	grid-template-rows: rem(510) rem(193);
 	grid-auto-rows: auto;
 	gap: rem(20);
-	margin-bottom: rem(70);
+	margin-bottom: rem(200);
 
 	h1 {
 		color: #fff;
@@ -35,9 +35,12 @@
 
 			a {
 				padding: rem(20) rem(30);
-				border-radius: rem(20);
+				color: #fff;
+				background-color: transparent;
 				font-size: rem(20);
 				font-weight: 500;
+				border: rem(1) solid currentColor;
+				border-radius: rem(20);
 			}
 		}
 
@@ -59,7 +62,24 @@
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: center;
-				background-image: url(../img/landing/poster-item-1.png);
+			}
+
+			&:nth-child(2) {
+				&::before{
+					background-image: url(../img/landing/poster-item-1.png);
+				}
+			}
+
+			&:nth-child(3) {
+				&::before{
+					background-image: url(../img/landing/poster-item-2.png);
+				}
+			}
+
+			&:nth-child(4) {
+				&::before{
+					background-image: url(../img/landing/poster-item-3.png);
+				}
 			}
 
 			a {
@@ -67,8 +87,9 @@
 				justify-content: center;
 				align-items: center;
 				padding: rem(10) rem(15);
-				background-color: #E8F4F2;
-				border-radius: rem(12);
+				background-color: transparent;
+				border: rem(2) solid $textColor;
+				border-radius: rem(30);
 				font-size: rem(14);
 			}
 

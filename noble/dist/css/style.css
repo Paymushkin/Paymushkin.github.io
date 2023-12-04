@@ -1621,6 +1621,32 @@ table tbody tr.awaiting {
   cursor: pointer;
 }
 
+.profile .aside .nav__list li span {
+  position: relative;
+}
+
+.profile .aside .nav__list li span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1.5625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #E1DFDE;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.3s background-color ease;
+  -o-transition: 0.3s background-color ease;
+  transition: 0.3s background-color ease;
+}
+
+.profile .aside .nav__list li.invoice span::after {
+  opacity: 1;
+}
+
 .profile .aside .nav__text {
   color: #E1DFDE;
   -webkit-transition: 0.3s ease color;
@@ -1850,6 +1876,44 @@ table tbody tr.awaiting {
 
 .profile .body-payment__icon {
   margin-bottom: 4.0625rem;
+}
+
+.profile .body-payment__title {
+  margin-bottom: 3.75rem;
+}
+
+.profile .body-payment__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 1.25rem;
+}
+
+.profile .body-payment__item {
+  padding: 2rem;
+  width: 23.75rem;
+  max-width: 100%;
+  border: 0.0625rem solid currentColor;
+  border-radius: 0.625rem;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.profile .body-payment__item a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.profile .body-payment__item span {
+  font-weight: 700;
 }
 
 .profile .body__title {
@@ -2721,6 +2785,10 @@ table tbody tr.awaiting {
 
   .profile .aside .nav__list li._active span {
     color: #132237;
+  }
+
+  .profile .aside .nav__list li._active span::after {
+    background-color: #132237;
   }
 
   .profile .aside .nav__list li._active svg path {
@@ -3962,6 +4030,10 @@ table tbody tr.awaiting {
     padding: 0.9375rem 1.25rem;
   }
 
+  .profile .aside .nav__list li span::after {
+    background-color: #FFE79F;
+  }
+
   .aside-open .profile .section {
     -webkit-transform: translate(0, 16.5625rem);
         -ms-transform: translate(0, 16.5625rem);
@@ -4377,7 +4449,11 @@ table tbody tr.awaiting {
   }
 
   .profile .aside .nav__list li:hover span {
-    color: #132237;
+    color: #FFE79F;
+  }
+
+  .profile .aside .nav__list li:hover span::after {
+    background-color: #132237;
   }
 
   .profile .aside .nav__list li:hover svg path {
@@ -4394,6 +4470,11 @@ table tbody tr.awaiting {
 
   .profile .body-services__item:hover .body-services__text {
     color: #E1DFDE;
+  }
+
+  .profile .body-payment__item:hover {
+    color: #E1DFDE;
+    background-color: #132237;
   }
 
   .footer-body__media-list li:hover {
