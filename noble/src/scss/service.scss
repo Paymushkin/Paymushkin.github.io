@@ -71,7 +71,12 @@
 		span {
 			flex: 1 1 auto;
 			display: inline-block;
+			font-size: rem(32);
 			line-height: 1.25;
+
+			@media (max-width:$mobile){
+				font-size: rem(30); 
+			}
 		}
 
 		svg {

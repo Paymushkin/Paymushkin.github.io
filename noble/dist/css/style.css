@@ -1943,6 +1943,7 @@ table tbody tr.awaiting {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   display: inline-block;
+  font-size: 2rem;
   line-height: 1.25;
 }
 
@@ -4007,6 +4008,10 @@ table tbody tr.awaiting {
   .service__img {
     max-width: 100%;
     min-height: 21.0625rem;
+  }
+
+  .service__title span {
+    font-size: 1.875rem;
   }
 
   .service__title {
