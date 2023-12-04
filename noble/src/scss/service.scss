@@ -38,11 +38,12 @@
 
 	&__img {
 		@media (max-width:$tablet){
-			flex: 0 0 percent(502, 1024);
 			max-width: percent(502, 1024);
 		}
+		@media (min-width:$tablet){
+			flex: 0 0 percent(502, 1024);
+		}
 		@media (max-width:$mobile){
-			//  flex: 1 1 100%;
 			 max-width: 100%;
 			 min-height: rem(337);
 		}
@@ -52,27 +53,37 @@
 		display: flex;
 		gap: rem(5);
 		margin-bottom: rem(25);
+		width: 100%;
 		color: $mainColor;
 		font-size: rem(32);
+		cursor: pointer;
+
+		&.selected {
+			svg {
+				
+				path {
+					fill: $mainColor;
+					transition: 0.3s all ease;
+				}
+			}
+		}
 
 		span {
 			flex: 1 1 auto;
 			display: inline-block;
+			line-height: 1.25;
 		}
 
 		svg {
 			flex: 0 0 auto;
-			&.selected {
-				fill: $mainColor;
-			}
 			path {
-
+				fill: #E1DFDE;
+				stroke: $mainColor;
 			}
 		}
 
 		@media (max-width:$tablet){
 			align-items: center;
-			width: 100%;
 			font-size: rem(30);
 		}
 
@@ -94,13 +105,15 @@
 		color: $mainColor;
 
 		@media (max-width:$mobile){
-			 font-size: rem(16); 
+			margin-bottom: rem(30);
+			font-size: rem(16); 
 		}
 	}
 
 	&__button {
 		@media (max-width:$mobile){
-			 min-width: 100%; 
+			padding: rem(17) rem(29);
+			min-width: 100%; 
 		}
 	}
 

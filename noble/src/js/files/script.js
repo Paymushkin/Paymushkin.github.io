@@ -74,6 +74,13 @@ if(document.querySelector("#account")) {
 	console.log(sections, navBtns)
 }
 
+if (document.querySelector(".service__title._with-icon")) {
+	const bookmark = document.querySelector(".service__title._with-icon")
+	bookmark.addEventListener("click", ()=> {
+		bookmark.classList.toggle("selected")
+	})
+}
+
 // if(document.querySelector("#aside")) {
 // 	const menuOpen = document.getElementById("menu-open"),
 // 		  menuClose = document.getElementById("menu-close"),

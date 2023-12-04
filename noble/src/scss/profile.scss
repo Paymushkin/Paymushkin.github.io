@@ -460,15 +460,17 @@
 		}
 
 		&__logout {
+			align-self: flex-end;
 			display: flex;
 			align-items: center;
 			gap: rem(10);
+			margin: auto rem(45) rem(45);
 			padding: rem(8) rem(16);
 			background-color: rgba(208, 211, 217, 0.90);
 			font-size: rem(16);
 			border-radius: rem(38);
-			@media (min-width:$tablet){
-				 display: none; 
+			@media (max-width:$tablet){
+				align-self: center;
 			}
 			svg path {
 				fill: $mainColor;
