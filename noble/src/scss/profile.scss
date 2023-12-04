@@ -555,10 +555,13 @@
 		}
 
 		&__link {
+			position: relative;
 			display: flex;
 			align-items: center;
 			gap: rem(35);
 			padding: rem(38) rem(45);
+			width: 100%;
+			height: 100%;
 			@media (max-width:$tablet){
 				// flex-wrap: wrap;
 				// justify-content: center;
@@ -585,6 +588,12 @@
 			path {
 				transition: 0.3s ease fill;
 			}
+		}
+
+		&__bin {
+			position: absolute;
+			top: rem(16);
+			right: rem(20);
 		}
 	}
 

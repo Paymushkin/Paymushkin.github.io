@@ -1796,12 +1796,15 @@ table tbody tr.awaiting {
 }
 
 .profile .body-services__link {
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   gap: 2.1875rem;
   padding: 2.375rem 2.8125rem;
+  width: 100%;
+  height: 100%;
 }
 
 .profile .body-services__text {
@@ -1820,6 +1823,12 @@ table tbody tr.awaiting {
   -webkit-transition: 0.3s ease fill;
   -o-transition: 0.3s ease fill;
   transition: 0.3s ease fill;
+}
+
+.profile .body-services__bin {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
 }
 
 .profile .body-history {
@@ -2748,6 +2757,12 @@ table tbody tr.awaiting {
   .services-list .list-services__item:hover h4,
   .services-list .list-services__item:hover p {
     color: #FFE79F;
+  }
+}
+
+@media (min-width: 1280px) {
+  .service__content {
+    max-width: 45.3125rem;
   }
 }
 
@@ -4288,6 +4303,12 @@ table tbody tr.awaiting {
 
   .qa .accordion__details p {
     font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1430px) and (max-width: 1280px) {
+  .service__content {
+    padding: 4.0625rem 3.125rem 0;
   }
 }
 
