@@ -225,6 +225,7 @@ details[open] summary:before {
 		color: $textColor;
 		text-transform: uppercase;
 		text-align: left;
+		line-height: 1.25;
 
 		@media (max-width:$mobileSmall){
 			margin-bottom: rem(12);
@@ -232,7 +233,7 @@ details[open] summary:before {
 		}
 
 		@media (max-width:$mobileSmall){
-			font-size: rem(12);
+			// font-size: rem(12);
 		}
 		
 	}

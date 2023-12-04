@@ -603,6 +603,7 @@ details[open] summary:before {
   color: #E1DFDE;
   text-transform: uppercase;
   text-align: left;
+  line-height: 1.25;
 }
 
 .grid-item__subtitle {
@@ -4165,10 +4166,6 @@ table tbody tr.awaiting {
   .grid-item__title {
     margin-bottom: 0.75rem;
     font-size: 0.9375rem;
-  }
-
-  .grid-item__title {
-    font-size: 0.75rem;
   }
 
   .no-webp .hero__slide{
