@@ -358,6 +358,8 @@ h6 {
 *::-webkit-scrollbar {
   width: 5px;
   height: 5px;
+  transition: 0.3s all ease;
+  cursor: grab;
 }
 
 *::-webkit-scrollbar-track {
@@ -1122,6 +1124,21 @@ h2 {
   color: #333;
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+.scrollbar-hover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+body.scrollbar-zoom::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
 }
 
 .header {

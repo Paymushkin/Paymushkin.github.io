@@ -352,6 +352,10 @@ table {
 			font-weight: 700;
 			text-align: left;
 
+			@media (min-width:$tablet){
+				padding: 0 rem(10) 0 rem(70); 
+			}
+
 			@media (max-width:$tablet){
 				font-size: rem(16);
 			}

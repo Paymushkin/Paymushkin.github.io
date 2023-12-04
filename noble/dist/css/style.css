@@ -134,6 +134,8 @@ h6 {
 *::-webkit-scrollbar {
   width: 5px;
   height: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 *::-webkit-scrollbar-track {
@@ -2735,6 +2737,10 @@ table tbody tr.awaiting {
     min-height: 36.8125rem;
   }
 
+  table thead th {
+    padding: 0 0.625rem 0 4.375rem;
+  }
+
   .profile .header__menu-open {
     display: none;
   }
@@ -4099,6 +4105,23 @@ table tbody tr.awaiting {
 
   .contacts .form-contacts__button {
     min-width: 100%;
+  }
+
+  .chat__container {
+    padding: 0;
+  }
+
+  .chat-header {
+    padding: 0.625rem 0;
+  }
+
+  .chat .message {
+    gap: 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  .chat .message__text {
+    padding: 0.3125rem 0.625rem;
   }
 
   .footer {

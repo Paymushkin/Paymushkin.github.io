@@ -499,3 +499,18 @@ h2 {
 	font-size: rem(14);
 	font-weight: 500;
 }
+
+.scrollbar-hover {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 10px;
+	background-color: transparent;
+	opacity: 0.5;
+}
+
+body.scrollbar-zoom::-webkit-scrollbar {
+	width: 15px;
+	height: 15px;
+}

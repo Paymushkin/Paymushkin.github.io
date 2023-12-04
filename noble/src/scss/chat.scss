@@ -12,6 +12,9 @@
 
 	&__container {
 		width: 100%;
+		@media (max-width:$mobile){
+			padding: 0; 
+		}
 	}
 
 	&-header {
@@ -21,6 +24,9 @@
 
 		@media (max-width:$tablet){
 			padding: rem(20) 0;
+		}
+		@media (max-width:$mobile){
+			padding: rem(10) 0;
 		}
 
 		&__profile {
@@ -78,6 +84,11 @@
 			font-size: rem(16);
 		}
 
+		@media (max-width:$mobile){
+			gap: rem(10);
+			font-size: rem(12); 
+		}
+
 		&.my-message {
 			flex-direction: row-reverse;
 			align-self: flex-end;
@@ -117,6 +128,9 @@
 
 			@media (max-width:$tablet){
 				border-radius: rem(15);
+			}
+			@media (max-width:$mobile){
+				padding: rem(5) rem(10); 
 			}
 		}
 	}

@@ -30,3 +30,8 @@ if (hideFilters) {
 		document.querySelector('body').classList.remove("mob-filters-active")
 	})
 }
+
+const scrollbar = document.querySelector(".scrollbar-hover")
+scrollbar.addEventListener("mouseover", ()=> {
+	document.body.classList.toggle("scrollbar-zoom")
+})

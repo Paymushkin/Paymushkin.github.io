@@ -64,6 +64,8 @@ $mobileSmall: em(576.98); // Телефоны S
 *::-webkit-scrollbar {
 	width: 5px;
 	height: 5px;
+	transition: 0.3s all ease;
+	cursor: grab;
 }
 *::-webkit-scrollbar-track {
 	background: $bgColor;        /* цвет дорожки */	
