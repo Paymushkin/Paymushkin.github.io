@@ -1025,7 +1025,7 @@ table tbody tr.awaiting {
   padding: 2.625rem 1.3125rem;
   position: absolute;
   right: calc(100% + 5rem);
-  top: 0;
+  top: -11.6875rem;
   min-width: 26.6875rem;
   background-color: #D9D9D9;
   border-radius: 1.5625rem;
@@ -1290,7 +1290,7 @@ table tbody tr.awaiting {
 .services-list .list-services__img {
   -ms-flex: 0 0 29.6875%;
       flex: 0 0 29.6875%;
-  min-height: 14.875rem;
+  height: 14.875rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
