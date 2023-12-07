@@ -1,5 +1,5 @@
 .footer {
-	padding: rem(91) rem(19) rem(75);
+	padding: rem(34) rem(19) rem(31);
 
 	@media (max-width:$tablet){
 		padding: rem(25) rem(19) rem(30);
@@ -16,7 +16,7 @@
 			fill: $highlightColor;
 		}
 
-		span, a {
+		span, a, address {
 			color: $highlightColor;
 		}
 	}
@@ -36,6 +36,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		width: 100%;
+		@media (max-width:$mobile){
+		}
 		@media (max-width:$mobile){
 			flex-direction: column;
 			align-items: center;
@@ -44,87 +47,144 @@
 
 	&-body {
 
-		&__contacts {
-			display: flex;
-			flex-direction: column;
-			gap: rem(22);
-
-			@media (max-width:$tablet){
-				gap: rem(12.5);
-			}
-
-			@media (max-width:$mobile){
-				align-items: center;
-				order: 1;
-				margin-bottom: rem(37);
-			}
-
-			a {
-				font-family: "Myriad Pro";
-				color: $mainColor;
-				@media (max-width:$tablet){
-					font-size: rem(12);
-				}
-				@media (max-width:$mobile){
-					 font-size: rem(16); 
-				}
-			}
-
-			span {
-				padding-top: rem(67);
-				font-size: rem(16);
-				@media (min-width:$mobile){
-					 display: none; 
-				}
-			}
-		}
-
 		&__copy {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			// align-items: center;
+			max-width: rem(220);
 			gap: rem(22);
 			line-height: math.div(14, 20);
 			@media (max-width:$tablet) {
 				margin-bottom: 0;
-				gap: rem(30);
+				gap: rem(12);
+				max-width: rem(135);
 			}
 			@media (max-width:$mobile){
-				 margin-bottom: rem(32); 
+				margin-bottom: rem(7);
+				max-width: unset;
 			}
 
 			svg {
 				@media (max-width:$tablet){
-					height: rem(35);
+					width: rem(98.47);
+					height: rem(34.4);
 				}
 				@media (max-width:$mobile){
+					width: rem(188);
 					height: rem(65); 
 				}
 			}
 			span {
-				line-height: 1;
 				color: $mainColor;
-				@media (max-width:$tablet){
-					font-size: rem(12);
-				}
+				font-size: rem(16);
+				line-height: math.div(18, 16);
+				font-weight: 300;
+				// @media (max-width:$tablet){
+				// 	font-size: rem(16);
+				// }
 
 				@media (max-width:$mobile){
-					display: none; 
+					// font-size: rem(12);
+					// display: none; 
 				}
 			}
 			
+		}
+
+		&__contacts {
+			display: flex;
+			flex-direction: column;
+			padding-left: rem(20);
+			max-width: rem(352);
+			// gap: rem(22);
+
+			@media (max-width:$tablet){
+				// gap: rem(12.5);
+				max-width: rem(190);
+			}
+
+			@media (max-width:$mobile){
+				align-items: center;
+				// order: 1;
+				margin-bottom: rem(17);
+				padding-left: 0;
+				max-width: rem(315);
+			}
+
+			a {
+				position: relative;
+				font-size: rem(22);
+				// font-family: "Myriad Pro";
+				color: $mainColor;
+				transition: 0.3s opacity ease;
+
+				@media (any-hover: hover){
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+				@media (max-width:$tablet){
+					font-size: rem(16);
+				}
+				@media (max-width:$mobile){
+					 font-size: rem(16); 
+				}
+				svg {
+					position: absolute;
+					top: 50%;
+					left: rem(-25);
+					transform: translateY(-50%);
+
+					@media (max-width:$mobile){
+						display: none; 
+				  	 }				
+				}
+				
+			}
+
+			address {
+				position: relative;
+				font-size: rem(22);
+				font-style: normal;
+
+				@media (max-width:$tablet){
+					font-size: rem(16);
+				}
+
+				@media (max-width:$mobile){
+					text-align: center; 
+				}
+				
+				svg {
+					position: absolute;
+					top: 0;
+					left: rem(-28);
+					@media (max-width:$mobile){
+						 display: none; 
+					}
+				}
+			}
+
+			span {
+				@media (max-width:$tablet){
+					font-size: rem(16);
+				}
+			}
 		}
 
 		&__media-list {
 			display: flex;
 			gap: rem(20);
 
-			@media (max-width:$tablet){
+			@media (max-width:1279.98px){
+				margin-top: rem(16);
 				gap: rem(17);
 			}
 
 			@media (max-width:$mobile){
-				 order: 2; 
+				//  order: 2;
+				 gap: rem(40);
+				 margin-bottom: rem(18); 
 			}
 
 			li {
@@ -148,6 +208,46 @@
 						height: rem(33);
 					}
 				}
+			}
+		}
+
+		&__policy {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+
+			@media (max-width:$mobile){
+				align-items: center; 
+			}
+
+			li {
+				font-size: rem(22);
+				line-height: 1;
+				@media (max-width:$tablet){
+					 font-size: rem(16); 
+				}
+			}
+			// max-width: rem(400);
+			a {
+				color: rgba(19, 34, 55);
+				// opacity: 0.6;
+				transition: 0.3s opacity ease;
+
+				@media (max-width:$tablet){
+					font-size: rem(16);
+				}
+
+				@media (any-hover: hover){
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+
+		.copyright {
+			@media (max-width:$mobile){
+				 font-size: rem(12); 
 			}
 		}
 	}
