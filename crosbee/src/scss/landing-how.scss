@@ -20,8 +20,13 @@
 
 	&__img {
 		flex: 0 0 percent(417, 1280);
+		max-height: rem(540);
 		border-radius: rem(25);
 		background-color: #e0e0e0;
+	}
+
+	&__text {
+		margin-bottom: rem(50);
 	}
 
 	&__link.products-header__link {

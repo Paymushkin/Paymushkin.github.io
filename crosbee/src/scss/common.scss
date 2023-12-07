@@ -26,6 +26,13 @@ h2 {
 	font-weight: 500;
 }
 
+h1, h2 {
+	i {
+		color: $highlightColor;
+		font-style: normal;
+	}
+}
+
 .policy {
 	padding: rem(20) 0 rem(70);
 	h2 {
@@ -558,5 +565,156 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		font-weight: 500;
 		border-radius: rem(10);
 		cursor: pointer;
+	}
+}
+
+.about-hero {
+	position: relative;
+	margin-bottom: rem(100);
+
+	&__body {
+		margin-bottom: rem(160);
+		padding: rem(88) rem(41);
+		border-radius: rem(25);
+		background-color: $addColorGreen;
+	}
+
+	h1 {
+		max-width: rem(625);
+		font-size: rem(40);
+	}
+
+	&__img {
+		position: absolute;
+		top: rem(40);
+		right: 0;
+		max-width: percent(772, 1280);
+	}
+
+	&__text {
+		max-width: 50%;
+		p {
+			font-size: rem(20);
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+}
+
+.about-points {
+	margin-bottom: rem(100);
+
+	&__list {
+		display: flex;
+		gap: rem(10);
+	}
+
+	.item-points {
+		padding: rem(20) rem(17);
+		width: calc((100% - rem(20) / 3));
+		background-color: $addColorGreen;
+		border-radius: rem(15);
+
+		&._highlight {
+			background-color: $highlightColor;
+			
+			h3 {
+				margin-bottom: rem(26);
+				color: #F8FAFE;
+			}
+
+			p {
+				color: #F8FAFE;
+			}
+		}
+
+		&__count {
+			display: inline-block;
+			margin-bottom: rem(89);
+			color: #8AA4B1;
+			font-size: rem(96);
+			font-weight: 250;
+		}
+
+		&__title {
+			margin-bottom: rem(118);
+			font-size: rem(34);
+			font-weight: 500;
+		}
+
+		&__text {
+			font-size: rem(20);
+		}
+	}
+
+	&__text {
+		margin-bottom: rem(100);
+		max-width: 50%;
+		font-size: rem(20);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+}
+
+.about-description  {
+	margin-bottom: rem(100);
+
+	&__body {
+		margin-bottom: rem(100);
+
+		h2 {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__text {
+		max-width: rem(688);
+		font-size: rem(20);
+	}
+
+	&__img	{
+		margin-bottom: rem(100);
+		width: 100%;
+		max-height: rem(602);
+
+		img {
+			width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.case-hero {
+
+	&__body {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(100);
+		padding: rem(52);
+		min-height: rem(300);
+		background-image: url(../img/case/hero-bg.png);
+		background-position: center;
+		background-size: cover;
+		border-radius: rem(25);
+		h2 {
+			color: #fff;
+			font-size: rem(40);
+		}
+	}
+
+	&__text {
+		margin-bottom: rem(100);
+		max-width: 50%;
+		font-size: rem(20);
+	}
+
+	&__list {
+		margin-bottom: rem(100);
 	}
 }

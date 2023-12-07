@@ -15,10 +15,6 @@
 			&:not(:last-child) {
 				margin-bottom: rem(20);
 			}
-			i {
-				color: $highlightColor;
-				font-style: normal;
-			}
 		}
 	}
 
