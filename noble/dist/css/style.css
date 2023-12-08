@@ -3113,6 +3113,7 @@ table tbody tr.awaiting {
   .header ul.service-menu {
     gap: 0.625rem;
     padding: 1.25rem 0.9375rem;
+    top: -6.25rem;
     right: calc(100% + 3.125rem);
     min-width: 18.75rem;
     border-radius: 0.9375rem;
