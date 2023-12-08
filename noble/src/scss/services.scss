@@ -32,6 +32,9 @@
 	&__button {
 		margin: 0 auto;
 		min-width: rem(538);
+		@media (max-width:$mac){
+			min-width: rem(350);
+		}
 		@media (max-width:$tablet){
 			min-width: rem(180);
 		}

@@ -1,6 +1,6 @@
 .advantages {
 	padding: rem(60) 0;
-	@media (max-width:$tablet){
+	@media (max-width:$mac){
 		padding: rem(40) 0 
 	}
 	@media (max-width:$mobileSmall){
@@ -39,6 +39,10 @@
 		background-color: $mainColor;
 		border-radius: rem(25);
 
+		@media (max-width:$mac){
+			padding: rem(15) rem(12) rem(20);
+		}
+
 		@media (max-width:$tablet){
 			flex: 0 0 calc((100% - rem(20)) / 2); 
 			padding: rem(10) rem(48) rem(18);
@@ -56,6 +60,7 @@
 			align-items: flex-start;
 			gap: rem(34);
 			margin-bottom: rem(20);
+			font-size: rem(18);
 			@media (max-width: 1280px){
 				  gap: rem(15);
 			}
@@ -65,7 +70,7 @@
 			span {
 				color: $textColor;
 				font-family: "Passion Conflict";
-				font-size: rem(128);
+				font-size: rem(100);
 				line-height: math.div(70, 128);
 
 				@media (max-width:$tablet){
@@ -105,6 +110,7 @@
 		}
 		&__text {
 			color: $textColor;
+			font-size: rem(18);
 
 			@media (max-width:$tablet){
 				font-size: rem(12);

@@ -48,6 +48,7 @@ $responsiveType: 0;
 $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: em($containerWidth); // ПК, ноутбука, некоторые планшеты в гор. положении
+$mac: em(1440.98);
 $tablet: em(1079.98); // Планшеты, некоторые телефоны в гор.положении
 $mobile: em(768.98); // Телефоны L 
 $mobileSmall: em(576.98); // Телефоны S 
@@ -151,6 +152,9 @@ body {
             @if ($containerPadding > 0) {
                 padding: 0 rem(math.div($containerPadding, 2));
             }
+        }
+		@media (max-width: $mac) {
+            max-width: rem(1024);
         }
         @media (max-width: $pc) {
             max-width: rem(970);

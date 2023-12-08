@@ -48,9 +48,12 @@
 		display: block;
 		margin-bottom: rem(33);
 		color: $textColor;
-		font-size: rem(46.5);
+		font-size: rem(46);
 		font-weight: 400;
 		text-transform: uppercase;
+		@media (max-width:$mac){
+			font-size: rem(38);
+		}
 		@media (max-width:$tablet){
 			margin-bottom: rem(10);
 			font-size: rem(40);
@@ -126,6 +129,9 @@
 			&::placeholder {
 				color: rgba(225, 223, 222, 0.60);
 			}
+			@media (max-width:$mac){
+				font-size: rem(18);
+			}
 			@media (max-width:$tablet){
 				font-size: rem(12);
 			}
@@ -139,6 +145,11 @@
 			min-width: rem(348);
 			font-size: rem(20);
 			font-weight: 600;
+
+			@media (max-width:$mac){
+				min-width: rem(220);
+				font-size: rem(16);
+			}
 
 			@media (max-width:$tablet){
 				min-width: rem(180);

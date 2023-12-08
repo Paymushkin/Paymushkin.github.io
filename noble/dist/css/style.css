@@ -506,8 +506,8 @@ h2.document__title {
 }
 
 h3 {
-  font-size: 2rem;
-  line-height: 1.1875;
+  font-size: 1.75rem;
+  line-height: 1.2142857143;
   font-weight: 600;
 }
 
@@ -1357,12 +1357,13 @@ table tbody tr.awaiting {
       align-items: flex-start;
   gap: 2.125rem;
   margin-bottom: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .advantages .item-advantages__title span {
   color: #E1DFDE;
   font-family: "Passion Conflict";
-  font-size: 8rem;
+  font-size: 6.25rem;
   line-height: 0.546875;
 }
 
@@ -1375,6 +1376,7 @@ table tbody tr.awaiting {
 
 .advantages .item-advantages__text {
   color: #E1DFDE;
+  font-size: 1.125rem;
 }
 
 .feedback {
@@ -2290,7 +2292,7 @@ table tbody tr.awaiting {
   display: block;
   margin-bottom: 2.0625rem;
   color: #E1DFDE;
-  font-size: 2.90625rem;
+  font-size: 2.875rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -2597,7 +2599,7 @@ table tbody tr.awaiting {
 
 .footer-body__copy span {
   color: #132237;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.125;
   font-weight: 300;
 }
@@ -2963,43 +2965,35 @@ table tbody tr.awaiting {
   }
 }
 
-@media (max-width: 78.625em) {
+@media (max-width: 90.06125em) {
   [class*=__container] {
-    max-width: 60.625rem;
-  }
-}
-
-@media (max-width: 67.49875em) {
-  [class*=__container] {
-    max-width: 48rem;
-  }
-
-  .button {
-    padding: 0.4375rem 1.8125rem;
-    min-width: 11.25rem;
-    font-size: 0.75rem;
-  }
-
-  .button-standart {
-    font-size: 0.75rem;
+    max-width: 64rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   h2 {
-    padding: 1.875rem 0;
-    font-size: 2rem;
-    font-weight: 400;
-  }
-
-  h3 {
-    font-size: 1rem;
+    font-size: 2.375rem;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.375rem;
+  }
+
+  .grid-item {
+    min-height: 25rem;
+  }
+
+  .grid-item__img {
+    -ms-flex: 0 0 46.875%;
+        flex: 0 0 46.875%;
+    min-height: unset;
+  }
+
+  .grid-item__img img {
+    width: 100%;
   }
 
   .grid-item__content {
@@ -3007,20 +3001,7 @@ table tbody tr.awaiting {
   }
 
   .grid-item__text {
-    font-size: 1rem;
-  }
-
-  .service-grid {
-    gap: 0.625rem;
-  }
-
-  table thead th {
-    font-size: 1rem;
-  }
-
-  table tbody tr td {
-    padding: 1.5625rem 1.25rem 1.5625rem 1.25rem;
-    font-size: 1rem;
+    max-width: 85%;
   }
 
   .header {
@@ -3135,6 +3116,158 @@ table tbody tr.awaiting {
     right: calc(100% + 3.125rem);
     min-width: 18.75rem;
     border-radius: 0.9375rem;
+  }
+
+  .hero__slide {
+    height: calc(100vh - 4.8125rem);
+  }
+
+  .hero__subtitle {
+    font-size: 4rem;
+  }
+
+  .advantages {
+    padding: 2.5rem 0;
+  }
+
+  .advantages .item-advantages {
+    padding: 0.9375rem 0.75rem 1.25rem;
+  }
+
+  .services__button {
+    min-width: 21.875rem;
+  }
+
+  .news .list-news__img {
+    -ms-flex: 0 0 29.296875%;
+        flex: 0 0 29.296875%;
+    min-height: 13.75rem;
+  }
+
+  .news .list-news__text {
+    max-width: 31.25rem;
+    font-size: 1rem;
+  }
+
+  .news .list-news__link {
+    min-width: 11.25rem;
+    font-size: 1rem;
+  }
+
+  .contacts__title {
+    font-size: 2.375rem;
+  }
+
+  .contacts .form-contacts__textarea,
+  .contacts .form-contacts__input {
+    font-size: 1.125rem;
+  }
+
+  .contacts .form-contacts__button {
+    min-width: 13.75rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1.5625rem 1.1875rem 1.875rem;
+  }
+
+  .footer-body__copy {
+    font-size: 1.125rem;
+  }
+
+  .footer-body__copy svg {
+    width: 6.154375rem;
+    height: 2.15rem;
+  }
+
+  .footer-body__contacts {
+    max-width: 11.875rem;
+  }
+
+  .footer-body__contacts a {
+    font-size: 1.125rem;
+  }
+
+  .footer-body__contacts address {
+    font-size: 1.125rem;
+  }
+
+  .footer-body__contacts span {
+    font-size: 1.125rem;
+  }
+
+  .footer-body__policy li {
+    font-size: 1rem;
+  }
+
+  .footer-body__policy a {
+    font-size: 1.125rem;
+  }
+
+  .footer-body .copyright {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 78.625em) {
+  [class*=__container] {
+    max-width: 60.625rem;
+  }
+}
+
+@media (max-width: 67.49875em) {
+  [class*=__container] {
+    max-width: 48rem;
+  }
+
+  .button {
+    padding: 0.4375rem 1.8125rem;
+    min-width: 11.25rem;
+    font-size: 0.75rem;
+  }
+
+  .button-standart {
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    padding: 1.875rem 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .grid-item__content {
+    padding: 3.3125rem 3.75rem;
+  }
+
+  .grid-item__text {
+    font-size: 1rem;
+  }
+
+  .service-grid {
+    gap: 0.625rem;
+  }
+
+  table thead th {
+    font-size: 1rem;
+  }
+
+  table tbody tr td {
+    padding: 1.5625rem 1.25rem 1.5625rem 1.25rem;
+    font-size: 1rem;
   }
 
   .hero {
@@ -3258,10 +3391,6 @@ table tbody tr.awaiting {
 
   .services-list .list-services__text {
     display: none;
-  }
-
-  .advantages {
-    padding: 2.5rem 0;
   }
 
   .advantages .item-advantages {
@@ -3539,10 +3668,6 @@ table tbody tr.awaiting {
     min-height: 13.0625rem;
   }
 
-  .news .list-news__text {
-    font-size: 1rem;
-  }
-
   .single-news {
     padding-bottom: 1.875rem;
   }
@@ -3667,23 +3792,10 @@ table tbody tr.awaiting {
     border-radius: 0.9375rem;
   }
 
-  .footer {
-    padding: 1.5625rem 1.1875rem 1.875rem;
-  }
-
   .footer-body__copy {
     margin-bottom: 0;
     gap: 0.75rem;
     max-width: 8.4375rem;
-  }
-
-  .footer-body__copy svg {
-    width: 6.154375rem;
-    height: 2.15rem;
-  }
-
-  .footer-body__contacts {
-    max-width: 11.875rem;
   }
 
   .footer-body__contacts a {
@@ -3701,14 +3813,6 @@ table tbody tr.awaiting {
   .footer-body__media-list li svg {
     width: 1.375rem;
     height: 1.375rem;
-  }
-
-  .footer-body__policy li {
-    font-size: 1rem;
-  }
-
-  .footer-body__policy a {
-    font-size: 1rem;
   }
 
   .swiper-pagination-bullet {
@@ -4488,7 +4592,6 @@ table tbody tr.awaiting {
   .news .list-news__link {
     padding: 0.5625rem;
     min-width: 100%;
-    font-size: 1rem;
     color: #E1DFDE;
     background-color: #132237;
   }

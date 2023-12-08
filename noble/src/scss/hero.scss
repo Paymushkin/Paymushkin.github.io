@@ -24,6 +24,9 @@
 		background-image: url("../img/hero/hero-bg.png?12345");
 		// height: rem(990);
 		height: calc(100vh - rem(148));
+		@media (max-width:$mac){
+			height: calc(100vh - rem(77));	
+		}
 		@media (max-width:$tablet){
 			height: rem(462);
 		}
@@ -65,6 +68,9 @@
 		font-size: rem(78);
 		line-height: math.div(147, 78);
 		font-family: "Patrick Oklahoma";
+		@media (max-width:$mac){
+			font-size: rem(64);	
+		}
 		@media (max-width:$tablet){
 			font-size: rem(32);
 		}

@@ -2,7 +2,7 @@
 	padding: 0 rem(19);
 	height: rem(148);
 	background-color: $bgColorHighlight;
-	@media (max-width:$tablet){
+	@media (max-width:$mac){
 		height: rem(77);
 	}
 
@@ -16,7 +16,7 @@
 		// width: 100%;
 		// max-width: rem(1440);
 		// min-height: rem(110);
-		@media (max-width:$tablet){
+		@media (max-width:$mac){
 			padding-top: rem(20);
 			padding-bottom: rem(20);
 		}
@@ -32,7 +32,7 @@
 			width: rem(200.3);
 			height: rem(70);
 			max-height: 100%;
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				width: rem(134.13);
 				height: rem(46.875);
 				max-height: 100%;
@@ -45,7 +45,7 @@
 		align-items: center;
 		gap: rem(40);
 
-		@media (max-width:$tablet){
+		@media (max-width:$mac){
 			gap: rem(27.5);
 		}
 	}
@@ -57,7 +57,7 @@
 			svg {
 				max-height: 100%;
 			}
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				height: rem(20);
 			}
 
@@ -80,7 +80,7 @@
 			border: rem(1) solid $highlightColor;
 			border-radius: rem(20);
 
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				min-width: rem(100);
 				padding: rem(1.5) rem(8);
 			}
@@ -100,7 +100,7 @@
 				line-height: math.div(18, 15);
 				outline: none;
 
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					font-size: rem(12);
 					line-height: math.div(10, 8);
 				}
@@ -120,7 +120,7 @@
 
 			svg {
 
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					height: rem(12);
 				}
 
@@ -140,7 +140,7 @@
 			svg {
 				max-height: 100%;
 			}
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				height: rem(20);
 			}
 		}
@@ -166,7 +166,7 @@
 			@media (max-width:1919.98px){
 				top: rem(148);
 			}
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				top: rem(77);
 			}
 
@@ -180,7 +180,7 @@
 				gap: rem(21);
 				margin-bottom: rem(45);
 
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					gap: rem(15);
 					margin-bottom: rem(30);
 				}
@@ -231,7 +231,7 @@
 					position: relative;
 					font-size: rem(22);
 					font-weight: 300;
-					@media (max-width:$tablet){
+					@media (max-width:$mac){
 						font-size: rem(16);
 					}
 				}
@@ -245,14 +245,14 @@
 					height: 100%;
 					background-color: #fff;
 
-					@media (max-width:$tablet){
+					@media (max-width:$mac){
 						padding: rem(25) rem(15) rem(25) rem(38);
 						width: rem(232);
 					}
 				}
 				&__logo {
 					margin-bottom: rem(41);
-					@media (max-width:$tablet){
+					@media (max-width:$mac){
 						margin-bottom: rem(30);
 					}
 
@@ -260,7 +260,7 @@
 						width: rem(188);
 						height: rem(65.83);
 						max-height: 100%;
-						@media (max-width:$tablet){
+						@media (max-width:$mac){
 							width: rem(126.285);
 							height: rem(44.14);
 							max-height: 100%;
@@ -272,12 +272,12 @@
 					display: flex;
 					gap: rem(40);
 					margin-bottom: rem(55);
-					@media (max-width:$tablet){
+					@media (max-width:$mac){
 						gap: rem(17);
 					}
 					li {
 						svg {
-							@media (max-width:$tablet){
+							@media (max-width:$mac){
 								height: rem(23);
 							}
 							path {
@@ -310,7 +310,7 @@
 		cursor: pointer;
 		z-index: 10;
 
-		@media (max-width:$tablet){
+		@media (max-width:$mac){
 			width: rem(30);
 			height: rem(20);
 		}
@@ -325,7 +325,7 @@
 			background-color: $highlightColor;
 			border-radius: rem(10);
 			transition: all 0.3s ease 0s;
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				height: rem(1);
 			}
 		}
@@ -337,7 +337,7 @@
 		}
 		span {
 			top: calc(50% - 1px);
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				// top: calc(50% - 2px);
 			}
 			// width: 75%;
@@ -345,14 +345,14 @@
 		.menu-open & {
 			span {
 				transform: scale(0);
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					width: rem(20);
 				}
 			}
 			&::before {
 				top: calc(50% - 1px);
 				transform: rotate(-45deg);
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					top: 50%;
 					width: rem(20);
 				}
@@ -360,7 +360,7 @@
 			&::after {
 				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
-				@media (max-width:$tablet){
+				@media (max-width:$mac){
 					width: rem(20);
 				}
 			}
@@ -378,7 +378,7 @@
 		flex: 0 1 auto;
 		margin-right: rem(10);
 
-		@media (max-width:$tablet){
+		@media (max-width:$mac){
 			 display: none; 
 		}
 
@@ -449,7 +449,7 @@
 		background-color: #D9D9D9;
 		border-radius: rem(25);
 
-		@media (max-width:$tablet){
+		@media (max-width:$mac){
 			gap: rem(10);
 			padding: rem(20) rem(15);
 			right: calc(100% + rem(50));
