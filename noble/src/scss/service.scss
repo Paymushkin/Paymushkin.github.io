@@ -26,6 +26,10 @@
 		min-height: 100%;
 		border: none;
 
+		@media (max-width:$mac) {
+			padding: rem(40) rem(60) 0;
+		}
+
 		@media (min-width: 1280px){
 			max-width: rem(725); 
 		}
@@ -118,6 +122,10 @@
 		margin-bottom: rem(20);
 		color: $mainColor;
 
+		@media (max-width:$mac) {
+			font-size: rem(18);
+		}
+
 		@media (max-width:$mobile){
 			margin-bottom: rem(30);
 			font-size: rem(16); 
@@ -137,6 +145,10 @@
 		padding: 0 rem(19);
 		max-width: rem(750);
 		color: $mainColor;
+
+		@media (max-width:$mac) {
+			font-size: rem(18);
+		}
 
 		@media (max-width:$tablet){
 			margin-bottom: rem(45);

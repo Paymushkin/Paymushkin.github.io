@@ -34,6 +34,9 @@
 
 	&__slider {
 		margin-bottom: rem(73);
+		@media (max-width:$mac){
+			margin-bottom: rem(20);
+		}
 		@media (max-width:$mobile){
 			 margin-bottom: rem(135); 
 		}
@@ -44,6 +47,10 @@
 		background-color: $mainColor;
 		border-radius: rem(25);
 		height: auto;
+
+		@media (max-width:$mac){
+			padding: rem(32) rem(30);
+		}
 
 		@media (max-width:$tablet){
 			padding: rem(32) rem(19);
@@ -70,6 +77,10 @@
 		border-radius: rem(25);
 		resize: none;
 		outline: none;
+
+		@media (max-width:$mac){
+			height: rem(200);
+		}
 
 		@media (max-width:$tablet){
 			height: rem(155);
@@ -114,7 +125,7 @@
 			align-items: center;
 			gap: rem(29.5);
 			margin-bottom: rem(49.5);
-			@media (max-width:$tablet){
+			@media (max-width:$mac){
 				margin-bottom: rem(28);
 			}
 			@media (max-width:$mobile){
@@ -124,11 +135,16 @@
 		}
 
 		&__avatar {
-			width: rem(58);
-			height: rem(58);
+			min-width: rem(58);
+			min-height: rem(58);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+
+			@media (max-width:$mac){
+				min-width: rem(40);
+				min-height: rem(40);
+			}
 		}
 
 		&__name {
@@ -137,6 +153,9 @@
 
 		&__text {
 			color: $textColor;
+			@media (max-width:$mac){
+				font-size: rem(18);
+			}
 			@media (max-width:$tablet){
 				font-size: rem(12);
 			}

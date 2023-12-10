@@ -1,6 +1,9 @@
 .landing-numbers {
 	margin-bottom: rem(45);
 	// padding: rem(55) 0 rem(63);
+	@media (max-width:$mobile){
+		 margin-bottom: rem(60); 
+	}
 	h2 {
 		margin-bottom: rem(45);
 	}
@@ -8,24 +11,99 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
-		gap: rem(44);
+		flex-wrap: wrap;
+		gap: rem(5);
 		margin-bottom: rem(100);
+
+		@media (max-width:$tablet){
+			margin-bottom: rem(60);
+		}
+
+		@media (max-width:$mobile){
+			gap: rem(30) rem(10);
+		}
 		li {
-			flex: 0 0 calc((100% - rem(88)) / 3);
+			flex: 0 0 calc((100% - rem(88)) / 4);
 			display: flex;
-			gap: rem(25);
+			gap: rem(5);
 			align-items: center;
+
+			@media (max-width:$tablet){
+				flex-direction: column;
+				align-items: flex-start;
+				gap: rem(10);
+			}
+
+			@media (max-width:$mobile){
+				flex: 0 0 calc((100% - rem(20)) / 2);
+				justify-content: center;
+				align-items: center;
+				gap: rem(10);
+			}
+
+			@media (max-width:$mobileSmall){
+				flex: 1 1 100%;
+				align-items: flex-start; 
+				gap: 0;
+			}
 		}
 		span {
-			font-size: rem(80);
+			font-size: rem(65);
 			font-weight: 500;
+
+			@media (max-width:$tablet){
+				font-size: rem(70);
+			}
+
+			@media (max-width:$mobileSmall){
+				font-size: rem(85);
+				line-height: math.div(100, 85);
+			}
 		}
 		p {
 			display: block;
 			max-width: rem(184);
-			font-size: rem(20);
+			font-size: rem(18);
 			line-height: math.div(23, 20);
 			font-weight: 500;
+
+			@media (max-width:$tablet){
+				font-size: rem(14);
+			}
+
+			@media (max-width:$mobile){
+				max-width: 100%;
+				font-size: rem(20);
+				text-align: center;
+			}
+
+			@media (max-width:$mobileSmall){
+				font-size: rem(14); 
+			}
+		}
+	}
+
+	.product-item__slider {
+		@media (max-width:$tablet){
+			border-radius: rem(15);
+
+			.navigation {
+				display: none;
+			}
+		}
+		@media (max-width:$mobileSmall){
+			border-radius: 0; 
+		}
+	}
+
+	.product-item__slide {
+		@media (max-width:$tablet){
+			border-radius: rem(15);
+			height: rem(165);
+		}
+		@media (max-width:$mobileSmall){
+			height: rem(360);
+			border-radius: 0;  
 		}
 	}
 }

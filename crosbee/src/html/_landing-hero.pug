@@ -1,21 +1,23 @@
 section.landing-hero
 	.landing-hero__item._big(style="background-image: url(@img/landing/hero-poster.png)")
-		h1.landing-hero__title CrosBee реализует в жизнь детские мечты!
-		a(href="/catalog.html") Перейти в каталог
-			svg(xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewbox='0 0 12 12' fill='none')
+		h1.landing-hero__title(data-da=".landing-hero, 576.98, first") CrosBee реализует в жизнь детские мечты!
+		a.landing-hero__link(href="/catalog.html", data-da=".landing-hero, 576.98, 2") Перейти в каталог
+			svg.arrow(xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewbox='0 0 12 12' fill='none')
 				path(d='M6.12783 11L11 6M11 6L6.12783 1M11 6H1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-
-	.landing-hero__item._small
+			svg.chevron(xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none")
+				path(d="M4.5 9.5L7.5 6.5L4.5 3.5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round")
+				
+	.landing-hero__item._item-1._small
 		p Детские игровые площадки
 		a(href="") 
 			svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewbox='0 0 13 12' fill='none')
 				path(d='M6.62783 11L11.5 6M11.5 6L6.62783 1M11.5 6H1.5' stroke='#2E2E30' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-	.landing-hero__item._small
+	.landing-hero__item._item-2._small
 		p Спортивные площадки и оборудование
 		a(href="") 
 			svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewbox='0 0 13 12' fill='none')
 				path(d='M6.62783 11L11.5 6M11.5 6L6.62783 1M11.5 6H1.5' stroke='#2E2E30' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-	.landing-hero__item._small
+	.landing-hero__item._item-3._small
 		p Городские пространства и инфраструктура
 		a(href="") 
 			svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewbox='0 0 13 12' fill='none')

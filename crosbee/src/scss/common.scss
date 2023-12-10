@@ -605,16 +605,37 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .about-points {
 	margin-bottom: rem(100);
 
+	&__title {
+		margin-bottom: rem(30);
+		font-size: rem(40);
+	}
+
 	&__list {
 		display: flex;
 		gap: rem(10);
 	}
 
 	.item-points {
-		padding: rem(20) rem(17);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: rem(55) rem(20);
 		width: calc((100% - rem(20) / 3));
+		min-height: rem(550);
 		background-color: $addColorGreen;
 		border-radius: rem(15);
+
+		&:first-child{
+			background-image: url(../img/about/item-1.png);
+		}
+
+		&:nth-child(2){
+			background-image: url(../img/about/item-2.png);
+		}
+
+		&:nth-child(3){
+			background-image: url(../img/about/item-3.png);
+		}
 
 		&._highlight {
 			background-color: $highlightColor;
@@ -635,10 +656,17 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			color: #8AA4B1;
 			font-size: rem(96);
 			font-weight: 250;
+
+			&._small {
+				margin-bottom: rem(0);
+				color: $textColor;
+				font-size: rem(18);
+				font-weight: 500;
+			}
 		}
 
 		&__title {
-			margin-bottom: rem(118);
+			// margin-bottom: rem(118);
 			font-size: rem(34);
 			font-weight: 500;
 		}
@@ -662,10 +690,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .about-description  {
-	margin-bottom: rem(100);
+	margin-bottom: rem(20);
 
 	&__body {
-		margin-bottom: rem(100);
+		margin-bottom: rem(40);
 
 		h2 {
 			margin-bottom: rem(30);
@@ -675,6 +703,13 @@ body.scrollbar-zoom::-webkit-scrollbar {
 	&__text {
 		max-width: rem(688);
 		font-size: rem(20);
+
+		p {
+			line-height: 1.45;
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
 	}
 
 	&__img	{
