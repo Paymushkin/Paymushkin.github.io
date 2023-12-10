@@ -78,7 +78,9 @@
 			}
 
 			@media (max-width:$mobileSmall){
+				max-width: rem(140);
 				font-size: rem(14); 
+				text-align: left;
 			}
 		}
 	}

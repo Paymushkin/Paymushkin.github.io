@@ -48,7 +48,7 @@
 	&__btns {
 		display: flex;
 		align-items: center;
-		gap: rem(11);
+		gap: rem(30);
 		@media (max-width:$mobileSmall){
 			 flex: 1 1 auto;
 			 display: flex;
@@ -59,12 +59,23 @@
 	&__btn {
 		border-radius: rem(60);
 		span {
+			color: $textColor;
 			font-size: rem(14);
 			line-height: math.div(17, 14);
 		}
 
 		@media (max-width:$mobileSmall){
 			//  align-self: flex-end; 
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		span {
+			color: #fff;
+			font-size: rem(14);
+			font-weight: 500;
 		}
 	}
 }

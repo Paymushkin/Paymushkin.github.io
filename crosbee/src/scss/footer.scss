@@ -14,7 +14,7 @@
 		@media (max-width:$tablet){
 			display: flex;
 		}
-		a {
+		a, button {
 			display: flex;
 			justify-content: space-between;
 			padding: rem(20) 0;
@@ -60,7 +60,7 @@
 
 		&__btns {
 			display: flex;
-			gap: rem(20);
+			gap: rem(64);
 			padding: rem(12) 0;
 			@media (max-width:$tablet){
 				display: none;
@@ -130,6 +130,21 @@
 			align-items: flex-end;
 			width: 100%;
 
+			@media (max-width:$tablet){
+				display: flex;
+				// flex-direction: column;
+				// align-items: flex-start;
+				gap: rem(16);
+				color: #73A9A8;
+				font-size: rem(36);
+				line-height: math.div(44, 36);
+			}
+
+			@media (max-width:$mobile){
+				flex-direction: column;
+				align-items: flex-start; 
+			}
+
 			span {
 				font-size: rem(40);
 				line-height: math.div(49, 40);
@@ -137,22 +152,16 @@
 				color: #9ED6D5;
 			}
 
-			@media (max-width:$tablet){
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: rem(16);
-				color: #73A9A8;
-				font-size: rem(36);
-				line-height: math.div(44, 36);
-			}
-
 			p {
+				color: #73A9A8;
 				font-size: rem(18);
 				line-height: math.div(22, 18);
-				color: #73A9A8;
+				text-align: right;
 				@media (max-width:$tablet){
 					font-size: rem(16);
+				}
+				@media (max-width:$mobile){
+					 text-align: left; 
 				}
 			}
 		}
