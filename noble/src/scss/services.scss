@@ -1,7 +1,7 @@
 .services {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: rem(70);
+	padding-bottom: rem(60);
 	justify-content: center;
 	background-color: $bgColorHighlight;
 	// @include adaptiveValue("padding-top", 79, 58, 1920, 1024, 1);
@@ -9,8 +9,8 @@
 	// @media (max-width:$mobileSmall){
 	// 	 padding-top: 0; 
 	// }
-	@media (max-width:$tablet){
-		// padding: rem(30) 0;
+	@media (max-width:$mac){
+		padding-bottom: rem(40);
 	}
 	@media (max-width:$mobile){
 		padding-bottom: rem(40);
@@ -49,6 +49,9 @@
 		flex-wrap: nowrap;
 		gap: rem(45);
 		margin-bottom: rem(70);
+		@media (max-width:$mac){
+			margin-bottom: rem(40);
+		}
 		@media (max-width:$mobile){
 			margin-bottom: 0;
 		}

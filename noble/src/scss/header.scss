@@ -85,7 +85,7 @@
 				padding: rem(1.5) rem(8);
 			}
 
-			@media (max-width:$mobile){
+			@media (max-width:$mobileSmall){
 				 order: 1;
 				 margin-bottom: rem(35);
 				 padding: rem(5) rem(5) rem(5) rem(15);
@@ -105,14 +105,14 @@
 					line-height: math.div(10, 8);
 				}
 
-				@media (max-width:$mobile){
+				@media (max-width:$mobileSmall){
 					width: 100%;
 					color: $mainColor; 
 				}
 
 				&::placeholder {
 					color: #FFE79F99;
-					@media (max-width:$mobile){
+					@media (max-width:$mobileSmall){
 						 color: $mainColor; 
 					}
 				}
@@ -125,7 +125,7 @@
 				}
 
 				path {
-					@media (max-width:$mobile){
+					@media (max-width:$mobileSmall){
 						fill: $mainColor; 
 					}
 				}

@@ -75,7 +75,7 @@
 
 		&__img {
 			flex: 0 0 percent(380, 1179);
-			min-height: rem(254);
+			height: rem(254);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -85,15 +85,15 @@
 			}
 			@media (max-width:$tablet){
 				flex: 0 0 percent(300, 780);
-				min-height: rem(209);
+				height: rem(209);
 			}
 			@media (max-width:$mobile){
 				// flex: 0 0 percent(254, 1000);
 			}
 			@media (max-width:$mobileSmall){
 				flex: 1 1 100%;
-				min-height: unset;
-				max-height: unset; 
+				height: unset;
+				height: unset; 
 			}
 
 			img {
