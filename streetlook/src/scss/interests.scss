@@ -20,9 +20,13 @@
 
 	&__left {
 		flex: 0 0 percent(950, 1920);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__text {
+		margin-bottom: rem(38);
 		max-width: rem(380);
 		line-height: 1.5;
 		letter-spacing: 0.5px;

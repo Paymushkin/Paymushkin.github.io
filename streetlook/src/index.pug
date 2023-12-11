@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="ru")
+html(lang="ru").lock
 	include html/_head
 	body
 		.loader#loader
@@ -11,7 +11,8 @@ html(lang="ru")
 			include html/_header
 			main.main-content
 				include html/_hero
-				include html/_catalog
+				- var categoryTitle = "Новинки лета 2023"
+					include html/_catalog
 				include html/_offer
 				include html/_special
 				include html/_about

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+html(lang="ru").lock
+	include html/_head
+	body
+		.loader#loader
+			.loader__spinner
+				.loader__icon
+					div
+
+		.wrapper
+			include html/_header
+			main.main-content
+				section.catalog 
+					.catalog__container
+						h3.catalog__title Обувь
+						span.catalog__title-decor 참신함
+						button.catalog__filter 
+							span Фильтры
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M4 17.2857C4 17.0963 4.07526 16.9146 4.20921 16.7806C4.34316 16.6467 4.52485 16.5714 4.71429 16.5714H9C9.18944 16.5714 9.37112 16.6467 9.50508 16.7806C9.63903 16.9146 9.71429 17.0963 9.71429 17.2857C9.71429 17.4752 9.63903 17.6568 9.50508 17.7908C9.37112 17.9247 9.18944 18 9 18H4.71429C4.52485 18 4.34316 17.9247 4.20921 17.7908C4.07526 17.6568 4 17.4752 4 17.2857ZM4 13C4 12.8106 4.07526 12.6289 4.20921 12.4949C4.34316 12.361 4.52485 12.2857 4.71429 12.2857H14.7143C14.9037 12.2857 15.0854 12.361 15.2194 12.4949C15.3533 12.6289 15.4286 12.8106 15.4286 13C15.4286 13.1894 15.3533 13.3711 15.2194 13.5051C15.0854 13.639 14.9037 13.7143 14.7143 13.7143H4.71429C4.52485 13.7143 4.34316 13.639 4.20921 13.5051C4.07526 13.3711 4 13.1894 4 13ZM4 8.71429C4 8.52485 4.07526 8.34316 4.20921 8.20921C4.34316 8.07526 4.52485 8 4.71429 8H20.4286C20.618 8 20.7997 8.07526 20.9336 8.20921C21.0676 8.34316 21.1429 8.52485 21.1429 8.71429C21.1429 8.90373 21.0676 9.08541 20.9336 9.21936C20.7997 9.35332 20.618 9.42857 20.4286 9.42857H4.71429C4.52485 9.42857 4.34316 9.35332 4.20921 9.21936C4.07526 9.08541 4 8.90373 4 8.71429Z" fill="black"/>
+							</svg>
+
+						ul.catalog__list
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-1.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-2.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-3.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-4.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-5.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+							li.catalog__list-item.item-list
+								a(href="#")
+									article.item-list__image-ibg.item-list__ibg
+										img(src="@img/catalog/item-6.webp" loading="lazy", alt="product")
+									.item-list__body.item-body
+										h4.item-body__text Название товара
+										span.item-body__price 20 000₽
+									span.item-list__desc цвет/размер
+			
+				section.interests
+					.interests__container
+						form(action="#", method="") 
+							.interests__left
+								h3.interests__title Покупки с нашим стилистом
+								span.interests__title-decor 참신함
+							.interests__right
+								p.interests__text 
+									| Персональный стилист может преобразить ваш&nbsp;гардероб, экономя ваше время 
+									| и&nbsp;усилия и&nbsp;помогая вам&nbsp;раскрыть вашу уникальную модную индивидуальность.
+								button(type="submit").button.button-small Получить консультацию >
+			include html/_footer
+		script(src="js/app.min.js")
+	

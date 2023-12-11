@@ -67,6 +67,8 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 
 .loader {
 	position: fixed;
+	top: 0;
+	bottom: 0;
 	display: grid;
 	place-items: center;
 	width: 100vw;

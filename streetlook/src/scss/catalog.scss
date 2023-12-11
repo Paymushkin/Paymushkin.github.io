@@ -20,6 +20,14 @@
 		}
 	}
 
+	&__filter {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		align-self: flex-end;
+		margin-bottom: rem(33);
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
