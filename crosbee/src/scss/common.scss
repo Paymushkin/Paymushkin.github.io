@@ -582,6 +582,11 @@ body.scrollbar-zoom::-webkit-scrollbar {
 	h1 {
 		max-width: rem(635);
 		font-size: rem(40);
+
+		@media (max-width:$tablet){
+			max-width: rem(357);
+			font-size: rem(24); 
+		}
 	}
 
 	&__img {
@@ -589,6 +594,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		top: rem(40);
 		right: 0;
 		max-width: percent(772, 1280);
+
+		@media (max-width:$tablet){
+			  
+		}
 	}
 
 	&__text {
@@ -632,6 +641,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		background-position: center top;
 		border-radius: rem(15);
 		overflow: hidden;
+		transition: 0.5s background-position-y ease-in-out;
 		cursor: pointer;
 
 		@media (max-width:$mobileSmall){
@@ -678,6 +688,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 		@media (any-hover: hover) {
 			&:hover{
+				background-position-y: -600px;
 				.animation__wrapper {
 					transform: translateY(0);
 					.item-points__text {

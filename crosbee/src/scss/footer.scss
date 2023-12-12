@@ -21,6 +21,18 @@
 			color: #f2f2f2;
 			border-bottom: rem(1) solid #73A9A8;
 			font-size: rem(22);
+			font-weight: 500;
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			
+			span {
+				font-size: rem(22);
+				font-weight: 500;
+			}
 		}
 	}
 
@@ -159,9 +171,10 @@
 				text-align: right;
 				@media (max-width:$tablet){
 					font-size: rem(16);
+					text-align: left; 
 				}
 				@media (max-width:$mobile){
-					 text-align: left; 
+					 
 				}
 			}
 		}

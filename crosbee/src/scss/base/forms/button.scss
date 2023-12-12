@@ -31,6 +31,7 @@
 		right: 0;
 		background-color: $addColorGreen;
 		border-radius: rem(12);
+		transition: background-color 0.3s ease;
 		z-index: 0;
 	}
 	&::after{
@@ -57,6 +58,9 @@
 			}
 			&::after{
 				transform: scale(4);
+			}
+			&::before{
+				background-color: transparent;
 			}
 		}
 	}

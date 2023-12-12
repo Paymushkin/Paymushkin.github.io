@@ -2,9 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 	gap: rem(15);
-	margin-bottom: rem(107);
+	margin-bottom: rem(150);
 	@media (max-width:$tablet){
-		margin-bottom: rem(60);
+		margin-bottom: rem(100);
 	}
 	// padding: rem(54) 0;
 	&__content {
@@ -47,6 +47,10 @@
 			flex: 0 0 percent(350, 768);
 			max-height: rem(314);
 		}
+		@media (max-width:$mobile){
+			flex: 1 1 auto;
+			max-height: rem(230); 
+		}
 		@media (max-width:$mobileSmall){
 			display: none; 
 		}
@@ -57,9 +61,11 @@
 		@media (max-width:$tablet){
 			margin-bottom: rem(20);
 		}
-
-		@media (max-width:$mobileSmall){
-			 font-size: rem(14); 
+		P {
+			@media (max-width:$mobileSmall){
+				font-size: rem(16);
+				line-height: 1.5;
+			}
 		}
 	}
 

@@ -4,18 +4,19 @@
 	grid-template-rows: rem(510) rem(193);
 	grid-auto-rows: auto;
 	gap: rem(20);
+	margin-top: rem(15);
 	margin-bottom: rem(150);
 
 	@media (max-width:$tablet){
 		grid-template-rows: rem(330) rem(320);
 		gap: rem(60) rem(10);
-		margin-bottom: rem(60);
+		margin-bottom: rem(100);
 	}
 
-	@media (max-width:$mobile){
+	@media (max-width:$mobileSmall){
 		display: flex;
 		flex-direction: column;
-		gap: 0;
+		gap: rem(20);
 	}
 
 	&__title {
@@ -131,6 +132,25 @@
 			padding: rem(30) rem(30) rem(23);
 			background-color: #F5FAF9;
 
+			@media (any-hover: hover){
+				&:hover{
+					&::after{
+						transform: scale(1.1);
+					}
+					span {
+						// background-color: $textColor;
+					}
+					
+					svg	{
+						transform: translateX(5px);
+
+						// path {
+						// 	stroke: #fff;
+						// }
+					}
+				}
+			}
+
 			@media (min-width:$tablet){
 				justify-content: space-between;
 			}
@@ -160,6 +180,7 @@
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: center;
+				transition: transform 0.3s ease;
 
 				@media (max-width:$tablet){
 					top: -8%;
@@ -235,8 +256,8 @@
 
 			&._item-3 {
 				&::after{
-					bottom: -4%;
-					right: -2%;
+					bottom: -15%;
+					right: 3%;
 					width: 43%;
 					height: 86%;
 					background-image: url(../img/landing/poster-item-3.png);
@@ -261,7 +282,7 @@
 				}
 			}
 
-			a {
+			span {
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -270,6 +291,7 @@
 				border: rem(2) solid $textColor;
 				border-radius: rem(30);
 				font-size: rem(14);
+				transition: background-color 0.3s ease;
 
 				@media (max-width:$tablet){
 					align-self: flex-end;
@@ -277,6 +299,13 @@
 
 				@media (max-width:$mobileSmall){
 					font-size: rem(18); 
+				}
+
+				svg {
+					transition: transform 0.3s ease;
+					// path {
+					// 	transition: stroke 0.3s ease;
+					// }
 				}
 
 				// @media (max-width:$mobile){
@@ -287,13 +316,14 @@
 			p {
 				font-size: rem(18.6);
 				font-weight: 500;
+				line-height: 1.2;
 
 				@media (min-width:$tablet){
 					max-width: rem(230);
 				}
 
 				@media (max-width:$mobile){
-					font-size: rem(18);
+					font-size: rem(16);
 				}
 
 				@media (max-width:$mobileSmall){
