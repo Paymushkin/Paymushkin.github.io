@@ -2066,9 +2066,32 @@ body.scrollbar-zoom::-webkit-scrollbar {
   margin-bottom: 9.375rem;
 }
 
+.landing-hero__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 3.8125rem 3.25rem;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.landing-hero__slider {
+  height: 100%;
+}
+
 .landing-hero__title {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 4.375rem;
+  max-width: 49.375rem;
 }
 
 .landing-hero__item {
@@ -2096,12 +2119,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .landing-hero__item._big {
+  position: relative;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
   -ms-flex-align: start;
       align-items: flex-start;
-  padding: 3.8125rem 3.25rem;
 }
 
 .landing-hero__item._big a {
@@ -3755,6 +3778,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
     margin-bottom: 6.25rem;
   }
 
+  .landing-hero__body {
+    padding: 1.875rem;
+  }
+
   .landing-hero__title {
     max-width: 19.5rem;
     font-size: 1.5rem;
@@ -3763,10 +3790,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
   .landing-hero__item {
     -ms-flex-order: 2;
         order: 2;
-  }
-
-  .landing-hero__item._big {
-    padding: 1.875rem;
   }
 
   .landing-hero__item._big a {
@@ -4122,6 +4145,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
     width: auto;
   }
 
+  .landing-hero__body {
+    height: 20rem;
+  }
+
   .landing-hero__title {
     -ms-flex-order: 0;
         order: 0;
@@ -4137,10 +4164,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
   .landing-hero a.landing-hero__link .arrow {
     display: none;
-  }
-
-  .landing-hero__item._big {
-    height: 20rem;
   }
 
   .landing-hero__item._small {
@@ -4308,7 +4331,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
     width: calc(100% - 7.8125rem);
   }
 
-  .swiper {
+  .swiper:not(.landing-hero__slider) {
     border-radius: 0;
     margin: 0 -1.25rem;
     width: calc(100% + 2.5rem) !important;
@@ -4461,6 +4484,11 @@ body.scrollbar-zoom::-webkit-scrollbar {
     gap: 1.25rem;
   }
 
+  .landing-hero__body {
+    border-radius: 1.5625rem;
+    margin-bottom: 6.875rem;
+  }
+
   .landing-hero__title {
     max-width: 100%;
     color: #333333;
@@ -4473,8 +4501,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .landing-hero__item._big {
-    border-radius: 1.5625rem;
-    margin-bottom: 6.875rem;
+    margin-bottom: 6.25rem;
   }
 
   .landing-hero__item._small {

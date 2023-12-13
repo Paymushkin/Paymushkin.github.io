@@ -430,12 +430,16 @@ h1, h2 {
 .swiper {
 	border-radius: rem(25);
 	overflow: hidden;
-	@media (max-width:$mobileSmall){
-		border-radius: 0;
-		margin: 0 rem(-20);
-		width: calc(100% + rem(40))!important;
 
+	&:not(.landing-hero__slider) {
+		@media (max-width:$mobileSmall){
+			border-radius: 0;
+			margin: 0 rem(-20);
+			width: calc(100% + rem(40))!important;
+	
+		}
 	}
+
 	&-slide {
 		width: 100%;
 		aspect-ratio: 1280 / 620;
