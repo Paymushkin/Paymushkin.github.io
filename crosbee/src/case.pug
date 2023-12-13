@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.scrollbar-hover
+		.wrapper.wrapper__container
+			include html/_header
+			main.main-content
+				section#single-case.case-hero.scroll
+					.case-hero__body._single-case 
+						.case-hero__poster 
+							img(src="@img/case/case-1.png", alt="")
+						
+						//- 	h2 Этапы выполнения <br>вашего заказа
+						h2.case-hero__text._single-case
+							| Москва, 1-й&nbsp;Смоленский пер., 13<br>7&nbsp;МАФ, 18х10м
+						.case-hero__description
+							p
+								| Конструкторский отдел нашей компании способен рассчитать 
+								| и&nbsp;реализовать практически любой замысел заказчика. 
+								| Мы&nbsp;используем наш&nbsp;опыт и&nbsp;ресурсы для&nbsp;оперативного расчета 
+								| индивидуальных пожеланий, сделаем дизайн-макет 
+								| и&nbsp;предложим решения для оптимизации стоимости нового проекта. 
+								| Нам&nbsp;поступает большое количество запросов на особые 
+								| и&nbsp;индивидуальные решения для&nbsp;игровых зон. 
+								| В&nbsp;большинстве случаев мы находим оптимальное решение 
+								| и&nbsp;помогаем претворить его&nbsp;в&nbsp;жизнь.
+							p
+								| Последние годы дизайн-студия Crosbee создала ряд проектов, 
+								| активно использующих ландшафт местности, 
+								| эффективно задействовала естественные перепады высот, 
+								| водные пространства и&nbsp;растительность. 
+								| У&nbsp;нас&nbsp;большой опыт в&nbsp;применении традиционных 
+								| и&nbsp;инновационных материалов, большая библиотека 
+								| проверенных узловых устройств и&nbsp;механизмов, 
+								| дает конструкторам широкую свободу действий. 
+								| Мы&nbsp;готовы предложить большой ассортимент малых архитектурных форм, 
+								| а&nbsp;также услуги по&nbsp;расчету и&nbsp;визуализации индивидуальных пожеланий заказчика.
+
+					.case-hero__poster 
+						img(src="@img/case/case-1.png", alt="")
+					
+					.case-hero__products
+						h3 На объекте установлено
+
+						- var categoryTitle = "Игровые комплексы размера XL"
+						- var categoryLink = "size-xl"
+						- var categoryImg = "/size-xl"
+						- const condition = false
+							include html/_products
+							
+		include html/_footer
+		script(src="js/app.min.js")

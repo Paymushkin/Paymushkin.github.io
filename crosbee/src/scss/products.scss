@@ -147,7 +147,7 @@
 	}
 
 	&__item {
-		.scroll & {
+		.scroll:not(#single-case) & {
 			&:nth-child(n+9) {
 				display: none;
 			}
@@ -167,6 +167,11 @@
 		@media (max-width:$tablet) {
 			width: unset;
 		}
+	}
+}
+
+#single-case {
+	.product {
 		&._to-category {
 			display: none;
 		}

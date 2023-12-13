@@ -1604,12 +1604,50 @@ body.scrollbar-zoom::-webkit-scrollbar {
   margin-bottom: 6.25rem;
 }
 
+.case-hero__body._single-case {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.case-hero__poster {
+  margin-bottom: 6.25rem;
+  height: 38.75rem;
+  border-radius: 1.5625rem;
+  overflow: hidden;
+}
+
 .case-hero__text {
   margin-bottom: 6.25rem;
   max-width: 70.078125%;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.case-hero__text._single-case {
+  margin-bottom: 1.875rem;
+}
+
+.case-hero__description p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.case-hero__description p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.case-hero__products {
+  margin-bottom: 6.25rem;
+}
+
+.case-hero__products h3 {
+  margin-bottom: 1.875rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .case-objects {
@@ -1736,6 +1774,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .item-objects__img img {
+  width: 100%;
   -webkit-transition: 0.3s ease transform;
   -o-transition: 0.3s ease transform;
   transition: 0.3s ease transform;
@@ -2780,11 +2819,11 @@ body.scrollbar-zoom::-webkit-scrollbar {
   row-gap: 1.25rem;
 }
 
-.scroll .products__item:nth-child(n+9) {
+.scroll:not(#single-case) .products__item:nth-child(n+9) {
   display: none;
 }
 
-#category .product._to-category {
+#single-case .product._to-category {
   display: none;
 }
 
@@ -3242,6 +3281,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
     right: 1.25rem;
   }
 
+  .item-objects__img img {
+    max-width: 100%;
+  }
+
   .landing-hero a.landing-hero__link .chevron {
     display: none;
   }
@@ -3281,6 +3324,14 @@ body.scrollbar-zoom::-webkit-scrollbar {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+  }
+
+  .case-hero__text._single-case {
+    max-width: 48.4375%;
+  }
+
+  .case-hero__description {
+    max-width: 53.75%;
   }
 
   .how-points .item-points .animation__wrapper {
@@ -3546,6 +3597,32 @@ body.scrollbar-zoom::-webkit-scrollbar {
     height: 30rem;
   }
 
+  .case-hero__body._single-case {
+    margin-bottom: 1.875rem;
+  }
+
+  .case-hero__poster {
+    margin-bottom: 1.875rem;
+    height: 20.625rem;
+  }
+
+  .case-hero__text {
+    font-size: 1.5rem;
+  }
+
+  .case-hero__text._single-case {
+    -ms-flex-order: -1;
+        order: -1;
+  }
+
+  .case-hero__products {
+    margin-bottom: 3.75rem;
+  }
+
+  .case-hero__products h3 {
+    font-size: 1.5rem;
+  }
+
   .how-points {
     margin-bottom: 6.25rem;
   }
@@ -3803,9 +3880,8 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .landing-objects__grid {
-    grid-template-columns: repeat(auto-fill, 19.5rem);
-    grid-auto-flow: column;
-    overflow: auto hidden;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .landing-how {
@@ -3903,7 +3979,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
             column-gap: 1.25rem;
   }
 
-  .scroll .products__item:nth-child(n+6) {
+  .scroll:not(#single-case) .products__item:nth-child(n+6) {
     display: none;
   }
 
@@ -4026,12 +4102,24 @@ body.scrollbar-zoom::-webkit-scrollbar {
     height: 20.625rem;
   }
 
+  .case-hero__products {
+    margin-bottom: 2.125rem;
+  }
+
+  .case-objects {
+    margin: 3.375rem -1.25rem 3.75rem -1.25rem;
+  }
+
   .how-points {
     margin-bottom: 3.125rem;
   }
 
   .how-points .item-points {
     height: 26.0625rem;
+  }
+
+  .item-objects__img img {
+    width: auto;
   }
 
   .landing-hero__title {
@@ -4097,6 +4185,21 @@ body.scrollbar-zoom::-webkit-scrollbar {
   .landing-numbers__list p {
     max-width: 100%;
     font-size: 1.25rem;
+  }
+
+  .landing-objects {
+    margin: 3.375rem -1.25rem 3.75rem -1.25rem;
+  }
+
+  .landing-objects__title {
+    padding: 0 1.8125rem;
+  }
+
+  .landing-objects__grid {
+    grid-template-columns: repeat(auto-fill, 19.5rem);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+    padding: 0 1.25rem;
   }
 
   .landing-how__img {
@@ -4305,6 +4408,18 @@ body.scrollbar-zoom::-webkit-scrollbar {
     height: 100%;
   }
 
+  .case-hero__poster {
+    height: 14.75rem;
+  }
+
+  .case-hero__description p {
+    font-size: 0.875rem;
+  }
+
+  .case-objects {
+    padding-right: 1.25rem;
+  }
+
   .no-webp .how-points .item-points:first-child{
     background-image: url(../img/how/item-mob-1.png); }
 
@@ -4468,7 +4583,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .landing-objects {
-    margin: 3.375rem -1.25rem 3.75rem 0;
+    margin: 3.375rem -1.25rem 3.75rem -1.25rem;
   }
 
   .landing-objects__grid {
