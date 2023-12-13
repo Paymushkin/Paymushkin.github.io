@@ -33,6 +33,15 @@ h1, h2 {
 	}
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
 .policy {
 	padding: rem(20) 0 rem(70);
 	h2 {

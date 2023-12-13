@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="scrollbar-hover"></div>
-    <div class="wrapper wrapper__container">
+    <div class="wrapper wrapper__container _sticky">
       <header class="header" id="header">
         <nav class="menu" hidden="hidden">
           <button class="menu__icon icon-menu" type="button"><span></span></button>
@@ -90,184 +90,198 @@
         </div>
       </header>
       <main class="main-content">
-        <section class="about-hero">
-          <div class="about-hero__body"> 
-            <h1>
-               Crosbee работает в&nbsp;сфере
-              детских развлечений с&nbsp;1997&nbsp;года, а&nbsp;с&nbsp;1999&nbsp;года производит 
-              линейку малых архитектурных форм. 
-              Производственные мощности компании расположены 
-              в&nbsp;Российской Федерации и&nbsp;КНР. 
-            </h1>
-            <div class="about-hero__img"></div>
-          </div>
-          <div class="about-hero__text">
-            <p>
-              Продукция нашей марки представляет симбиоз проверенного 
-              климатом качества, оригинальных дизайнерских решений
-              и&nbsp;оптимальных ценовых предложений.
-            </p>
-            <p>
-               Конструктивной особенностью нашей продукции является проверенная годами надежность 
-              в&nbsp;условиях суровых климатических зон. 
-              Конструкции и&nbsp;материалы, изначально проектировались под&nbsp;условия 
-              северных регионов, имеющих схожий с&nbsp;Россией, 
-              а&nbsp;порой суровее, температурный перепад.
-            </p>
-            <p>
-               Инженеры компании, имея возможность проводить длительные ресурсные испытания, 
-              внесли ряд конструктивных изменений в&nbsp;элементы, 
-              в&nbsp;частности, был модифицирован пластик, 
-              несколько дополнений внесены в&nbsp;крепежные системы. 
-              Все вышеперечисленное позволяет нам гарантировать, 
-              что&nbsp;малые архитектурные формы, поставляемые нашей компанией, 
-              выдержат суровые российские зимы и&nbsp;будут радовать ваших детей долгие годы
-            </p>
-            <p>
-               Постоянное сотрудничество с&nbsp;европейскими компаниями, 
-              обязывает компанию работать с&nbsp;лучшими дизайнерскими бюро. 
-              Разнообразие цветовой гаммы нашей линейки, 
-              большой ассортимент декоративных элементов позволяет быть уверенными, 
-              что&nbsp;каждый заказчик найдет в&nbsp;каталоге компании интересное решение.
-            </p>
-          </div>
-        </section>
-        <section class="about-points">
-          <h2 class="about-points__title">Наши преимущества</h2>
-          <ul class="about-points__list">
-            <li class="about-points__item item-points"><span class="item-points__count _small">01</span>
-              <div class="animation__wrapper">
-                <h3 class="item-points__title">Всегда соблюдаем<br>аявленные сроки</h3>
-                <div class="item-points__text">
-                  <p>Мы знаем как важны сроки именно в&nbsp;нашей сфере для&nbsp;наших Заказчиков. </p>
-                  <p>Мы не&nbsp;только знаем, но&nbsp;умеем их&nbsp;соблюдать и&nbsp;решать проблемы, которые могут помешать выполнению в&nbsp;заданное время. </p>
-                  <p>На&nbsp;нас можно положиться при&nbsp;соблюдении сроков контракта.</p>
+        <section class="cart">
+          <div class="cart__content">
+            <h2 class="cart__title">Корзина</h2>
+            <ul class="cart__products-wrapper">
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
                 </div>
-              </div>
-            </li>
-            <li class="about-points__item item-points"><span class="item-points__count _small">02</span>
-              <div class="animation__wrapper">
-                <h3 class="item-points__title">Обеспечиваем<br>безопасность</h3>
-                <div class="item-points__text">
-                  <p>
-                    Вся наша продукция имеет обязательную сертификацию по&nbsp;техническому 
-                    регламенту Евразийского экономического союза ТР&nbsp;ЕАЭС&nbsp;042/2017. 
-                  </p>
-                  <p>
-                    Регламент устанавливает требования к&nbsp;безопасности 
-                    оборудования и&nbsp;(или)&nbsp;покрытия для&nbsp;детских игровых площадок и&nbsp;процессам
-                    проектирования, производства, монтажа, эксплуатации, хранения, перевозки и&nbsp;утилизации.
-                  </p>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-01" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="about-points__item item-points"><span class="item-points__count _small">03</span>
-              <div class="animation__wrapper">
-                <h3 class="item-points__title">Гарантируем<br>качество</h3>
-                <div class="item-points__text">
-                  <p>
-                    Технический регламент также контролирует качество производимой продукции. 
-                    Наше производство ежегодно посещают технические инспекторы для&nbsp;проверки всех этапов производства.  
-                  </p>
-                  <p>
-                    Многолетний опыт наших технологов, конструкторов, работников цеха, большая библиотека уникальных 
-                    и&nbsp;многократно проверенных узлов и&nbsp;конструкций гарантируют качество.
-                  </p>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
                 </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-02" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-01" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-02" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-01" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-02" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-01" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+              <li class="cart__product product-cart">
+                <div class="product-cart__body">
+                  <div class="product-cart__image"><picture><source srcset="img/cart/cart-1.webp" type="image/webp"><img src="img/cart/cart-1.png?_v=20231213202316" alt="image"/></picture></div><a class="product-cart__title" href="product.html"> 
+                    <h4>Игровой комплекс K1012</h4><span>6 500 x 5 340 x 3 500</span></a>
+                </div>
+                <div class="product-cart__counter">
+                  <div class="input-counter__wrapper"> 
+                    <button class="input-counter__btn _minus">-</button>
+                    <input id="product-count-02" type="number" name="product-count-01" value="0"/>
+                    <button class="input-counter__btn _plus">+</button>
+                  </div>
+                </div>
+                <div class="product-cart__price"><span>27 500 000 р.</span></div>
+                <div class="product-cart__delete">
+                  <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+<path d="M1 10.5L10.5 1" stroke="#333333" stroke-linecap="round"/>
+<path d="M1 1.30762L10.5 10.8076" stroke="#333333" stroke-linecap="round"/>
+</svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div class="cart__total"> <span class="cart__total-text">Общая сумма</span><span class="cart__total-sum">0 р.</span></div>
+          </div>
+          <aside class="cart__aside">
+            <form class="form-aside" action="#" method="post">
+              <h2 class="form-aside__title">Заполните данные, чтобы мы могли составить для вас коммерческое предложение</h2>
+              <div class="form-aside__fields">
+                <input id="name" type="text" name="name" placeholder="ФИО" required="required"/>
+                <input id="phone" type="tel" name="phone" placeholder="+7" required="required"/>
+                <input id="email" type="email" name="email" placeholder="Email" required="required"/>
+                <input id="company" type="text" name="company" placeholder="Название организации" required="required"/>
+                <input id="address" type="text" name="address" placeholder="Адрес вашего объекта"/>
               </div>
-            </li>
-          </ul>
-        </section>
-        <section class="about-description"> 
-          <div class="about-description__body">
-            <h2>Дизайн-студия</h2>
-            <div class="about-description__text"> 
-              <p>
-                 Конструкторский отдел нашей компании способен рассчитать и&nbsp;реализовать практически любой замысел заказчика. 
-                Мы используем наш опыт и&nbsp;ресурсы для&nbsp;оперативного расчета индивидуальных пожеланий, 
-                сделаем дизайн-макет и&nbsp;предложим решения для&nbsp;оптимизации стоимости нового проекта. 
-                Нам поступает большое количество запросов на&nbsp;особые и&nbsp;индивидуальные решения для&nbsp;игровых зон. 
-                В большинстве случаев мы&nbsp;находим оптимальное решение и&nbsp;помогаем претворить его&nbsp;в&nbsp;жизнь.
-              </p>
-              <p>
-                 Последние годы дизайн-студия Crosbee создала ряд проектов, активно использующих ландшафт местности, 
-                эффективно задействовала естественные перепады высот, водные пространства и&nbsp;растительность. 
-                У&nbsp;нас&nbsp;большой опыт в&nbsp;применении традиционных и&nbsp;инновационных материалов, 
-                большая библиотека проверенных узловых устройств и&nbsp;механизмов, 
-                дает конструкторам широкую свободу действий. Мы&nbsp;готовы предложить большой ассортимент малых архитектурных форм, 
-                а&nbsp;также услуги по&nbsp;расчету и&nbsp;визуализации индивидуальных пожеланий заказчика.
-              </p>
-            </div>
-          </div>
-          <div class="about-description__img _design"></div>
-          <div class="about-description__body">
-            <h2>Монтаж</h2>
-            <div class="about-description__text"> 
-              <p>
-                 Последняя стадия производства детского игрового комплекса –&nbsp;его&nbsp;установка на&nbsp;месте у&nbsp;заказчика. 
-                От&nbsp;того, насколько качественно она&nbsp;будет сделана, зависит безопасность посетителей, 
-                а&nbsp;также срок эксплуатации комплекса. Наша компания предлагает услуги квалифицированного монтажа детского игрового оборудования 
-                и&nbsp;паркового оборудования. 
-              </p>
-              <p>
-                 Профессионалы знают точно параметры и&nbsp;требования к&nbsp;малым архитектурным формам. 
-                При&nbsp;монтаже важно учесть множество деталей, таких&nbsp;как: удобное расположение детских игровых 
-                и&nbsp;спортивных площадок для&nbsp;наблюдения родителями, возраст детей, которые будут играть на&nbsp;этой&nbsp;площадке,
-                основание, на&nbsp;чем&nbsp;будет производиться установка, окружающие зеленые насаждения.
-              </p>
-            </div>
-          </div>
-          <div class="about-description__body">
-            <h2>Шеф-монтаж</h2>
-            <div class="about-description__text"> 
-              <p>
-                 Даже опытная строительная бригада будет испытывать затруднения при&nbsp;сборке такого специфичного оборудования, 
-                как&nbsp;детский игровой комплекс. В&nbsp;случае, если&nbsp;заказчик рассчитывает на&nbsp;собственные силы, но&nbsp;остаются сомнения в&nbsp;квалификации, 
-                CrosBee предоставит услуги по&nbsp;шеф-монтажу. 
-                Опытный мастер компании проведет на&nbsp;монтажном участке обучение, 
-                а&nbsp;в&nbsp;ходе монтажа поможет ценным советом и&nbsp;проверит качество сборки. 
-              </p>
-              <p>
-                 Также будут даны рекомендации по&nbsp;правильной эксплуатации и&nbsp;уходу, 
-                выполняя которые, заказчик продлит срок службы приобретенного оборудования и&nbsp;использует 
-                его&nbsp;возможности в&nbsp;полной мере, в&nbsp;течение многих лет.
-              </p>
-            </div>
-          </div>
-          <div class="about-description__img _assembly"></div>
-          <div class="about-description__body">
-            <h2>Производство и склад</h2>
-            <div class="about-description__text"> 
-              <p>
-                 Новые технические требования, последние тренды дизайна
-                обязывают современные производственные компании постоян но&nbsp;совершенствоваться и&nbsp;прогрессировать.
-              </p>
-              <p>
-                 В&nbsp;наших продуктах мы&nbsp;используем как&nbsp;проверенные временем
-                материалы и&nbsp;конструкционные узлы, так&nbsp;и&nbsp;инновационные
-                технологии. Новинки позволяют внедрять в&nbsp;производство идеи,
-                ранее недоступные для&nbsp;воплощения или&nbsp;снимающие ограничения в&nbsp;технических и&nbsp;дизайнерских решениях.
-              </p>
-              <p>
-                 В&nbsp;малых архитектурных формах мы&nbsp;используем широкий спектр
-                высококачественных материалов, среди которых преобладают:<br><br>
-                — гальванизированная сталь<br>
-                — полиэтилен низкого давления<br>
-                — HDPE (полиэтилен высокой плотности),<br>
-                — HPL (ламинат высокого давления)<br>
-                — нержавеющая сталь<br>
-                — резина различных спецификаций<br>
-                — композитные материалы<br>
-                — дерево<br>
-              </p>
-              <p>
-                 Основой большинства конструкций являются гальванизированные трубы различного сечения (от&nbsp;32&nbsp;до&nbsp;114&nbsp;мм) с толщиной
-                стенок&nbsp;2,5&nbsp;мм. На металлические конструкции наносится лако красочный слой методом порошкового напыления. 
-                В&nbsp;наших по&nbsp;красочных камерах мы&nbsp;используем материалы мирового лидера ЛКП&nbsp;AkzoNobel.
-              </p>
-            </div>
-          </div>
-          <div class="about-description__img _production"></div>
+              <button class="button button-highlight form-aside__button" type="submit"> <span>Отправить запрос</span></button>
+              <div class="checkbox form-aside__checkbox">
+                <input class="checkbox__input" id="c_1" type="checkbox" value="1" name="form[]"/>
+                <label class="checkbox__label" for="c_1"> <span> <a class="checkbox__text" href="#" target="_blank">Согласие </a>на обработку персональных данных</span></label>
+              </div>
+            </form>
+          </aside>
         </section>
       </main>
     </div>

@@ -56,6 +56,7 @@ $mobileSmall: em(576.98); // Телефоны S
 @import "base/null";
 
 @import "base/forms/select";
+@import "base/forms/checkbox";
 @import "base/forms/radio";
 @import "base/popup";
 
@@ -112,6 +113,9 @@ body {
 	// Фикс для слайдеров
 	> * {
 		min-width: 0;
+	}
+	&._sticky {
+		overflow: unset;
 	}
 }
 
@@ -182,6 +186,7 @@ body {
 @import "product";
 @import "products";
 @import "breadcrumbs";
+@import "cart";
 @import "footer";
 
 @import "base/swiper";
