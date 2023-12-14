@@ -187,27 +187,25 @@ html(lang="ru")
 						.cart__total 
 							span.cart__total-text Общая сумма
 							span.cart__total-sum 0 р.
+					
 					aside.cart__aside
-						form(action="#", method="post").form-aside
-							h2.form-aside__title Заполните данные, чтобы мы могли составить для вас коммерческое предложение
-							.form-aside__fields
-								input#name(type="text", name="name", placeholder="ФИО", required)
-								input#phone(type="tel", name="phone", placeholder="+7", required)
-								input#email(type="email", name="email", placeholder="Email", required)
-								input#company(type="text", name="company", placeholder="Название организации", required)
-								input#address(type="text", name="address", placeholder="Адрес вашего объекта")
-							button(type="submit").button.button-highlight.form-aside__button 
-								span Отправить запрос
-							.checkbox.form-aside__checkbox
-								input#c_1(type="checkbox" value="1" name="form[]").checkbox__input
-								label(for="c_1").checkbox__label 
-									span 
-										a(href="#", target="_blank").checkbox__text Согласие 
-										| на обработку персональных данных
-
-							 
-
-
+						.cart__aside-wrapper
+							form(action="#", method="post").form-aside
+								h2.form-aside__title Заполните данные, чтобы мы могли составить для вас коммерческое предложение
+								.form-aside__fields
+									input#name(type="text", name="name", placeholder="ФИО", required)
+									input#phone(type="tel", name="phone", placeholder="+7", required)
+									input#email(type="email", name="email", placeholder="Email", required)
+									input#company(type="text", name="company", placeholder="Название организации", required)
+									input#address(type="text", name="address", placeholder="Адрес вашего объекта")
+								button(type="submit").button.button-highlight.form-aside__button 
+									span Отправить запрос
+								.checkbox.form-aside__checkbox
+									input#c_1(type="checkbox" value="1" name="form[]").checkbox__input
+									label(for="c_1").checkbox__label 
+										span 
+											a(href="#", target="_blank").checkbox__text Согласие 
+											| на обработку персональных данных
 
 		include html/_footer
 		script(src="js/app.min.js")

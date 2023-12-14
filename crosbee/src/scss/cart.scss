@@ -46,6 +46,12 @@
 		flex: 1 1 percent(434, 1280);
 		position: sticky;
 		top: 30px;
+
+		&-wrapper {
+			padding: rem(30);
+			background-color: $addColorGreen;
+			border-radius: rem(25);
+		}
 	}
 
 	&__total {
@@ -253,13 +259,13 @@
 	}
 }
 
+
 .form-aside {
 	display: flex;
 	flex-direction: column;
 	gap: rem(30);
-	padding: rem(30);
-	background-color: $addColorGreen;
-	border-radius: rem(25);
+	// background-color: $addColorGreen;
+	// border-radius: rem(25);
 
 	&__title {
 		font-size: rem(24);

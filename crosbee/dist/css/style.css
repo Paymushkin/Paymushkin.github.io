@@ -2560,7 +2560,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   font-size: 2.5rem;
 }
 
-.landing-catalog a {
+.landing-catalog button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -3089,6 +3089,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
   top: 30px;
 }
 
+.cart__aside-wrapper {
+  padding: 1.875rem;
+  background-color: #f5faf9;
+  border-radius: 1.5625rem;
+}
+
 .cart__total {
   display: -ms-flexbox;
   display: flex;
@@ -3231,9 +3237,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
   -ms-flex-direction: column;
       flex-direction: column;
   gap: 1.875rem;
-  padding: 1.875rem;
-  background-color: #f5faf9;
-  border-radius: 1.5625rem;
 }
 
 .form-aside__title {
@@ -4296,7 +4299,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
     font-size: 1.5rem;
   }
 
-  .landing-catalog a {
+  .landing-catalog button {
     padding: 0.875rem 1.25rem;
     font-size: 0.875rem;
     border-radius: 0.875rem;
@@ -5014,7 +5017,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
     background-size: 75vw;
   }
 
-  .landing-catalog a {
+  .landing-catalog button {
     border-radius: 1.25rem;
   }
 

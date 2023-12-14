@@ -87,9 +87,9 @@ header.header#header
 				a(href="#" data-goto=".footer") Контакты
 
 	.header__btns
-		button.button 
-			span Скачать каталог
-		button.button.button-highlight(data-text="Помогите мне")
+		button.button(data-popup="#catalog-request")
+			span Запросить каталог
+		button.button.button-highlight(data-text="Помогите мне", data-popup="#call-request")
 			span Позвоните мне
 
 		a(href="cart.html").header__card.icon-card(data-count="1")
