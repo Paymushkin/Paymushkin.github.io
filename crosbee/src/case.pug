@@ -9,11 +9,12 @@ html(lang="ru")
 				section#single-case.case-hero.scroll
 					.case-hero__body._single-case 
 						.case-hero__poster 
-							img(src="@img/case/case-1.png", alt="")
+							//- img(src="@img/case/case-1.png", alt="")
+							img(srcset="@img/case/case-1.png 768w" src="picture.jpg" alt="Картинка")
 						
 						//- 	h2 Этапы выполнения <br>вашего заказа
 						h2.case-hero__text._single-case
-							| Москва, 1-й&nbsp;Смоленский пер., 13<br>7&nbsp;МАФ, 18х10м
+							| Москва, 1-й&nbsp;Смоленский пер.,&nbsp;13<br>7МАФ, 18х10м
 						.case-hero__description
 							p
 								| Конструкторский отдел нашей компании способен рассчитать 
@@ -37,8 +38,8 @@ html(lang="ru")
 								| Мы&nbsp;готовы предложить большой ассортимент малых архитектурных форм, 
 								| а&nbsp;также услуги по&nbsp;расчету и&nbsp;визуализации индивидуальных пожеланий заказчика.
 
-					.case-hero__poster 
-						img(src="@img/case/case-1.png", alt="")
+					//- .case-hero__poster 
+					//- 	img(src="@img/case/case-1.png", alt="")
 					
 					.case-hero__products
 						h3 На объекте установлено

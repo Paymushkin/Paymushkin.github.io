@@ -1688,9 +1688,16 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 .case-hero__poster {
   margin-bottom: 6.25rem;
-  height: 38.75rem;
+  height: 50.25rem;
   border-radius: 1.5625rem;
   overflow: hidden;
+}
+
+.case-hero__poster img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .case-hero__text {
@@ -4497,6 +4504,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
   .about-description__img {
     margin-bottom: 3.125rem;
     height: 20.625rem;
+  }
+
+  .case-hero__text {
+    max-width: 100%;
   }
 
   .case-hero__products {

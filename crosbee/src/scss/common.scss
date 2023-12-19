@@ -1072,7 +1072,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 	&__poster {
 		margin-bottom: rem(100);
-		height: rem(620);
+		height: rem(804);
 		border-radius: rem(25);
 		overflow: hidden;
 		@media (max-width:$tablet){
@@ -1081,6 +1081,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 		@media (max-width:$mobileSmall){
 			height: rem(236); 
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
@@ -1093,6 +1099,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 		@media (max-width:$tablet){
 			font-size: rem(24); 
+		}
+
+		@media (max-width:$mobile){
+			 max-width: 100%; 
 		}
 
 		&._single-case {
