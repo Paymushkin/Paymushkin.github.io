@@ -28,6 +28,7 @@
 	&__body {
 		position: relative;
 		display: flex;
+		align-items: flex-start;
 		gap: rem(63);
 		z-index: 2;
 	}
@@ -36,7 +37,7 @@
 .body-about {
 
 	&__img {
-		
+		align-self: flex-end;
 	}
 
 	&__title {

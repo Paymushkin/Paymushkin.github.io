@@ -1077,8 +1077,15 @@ details[open] summary:before {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
   gap: 3.9375rem;
   z-index: 2;
+}
+
+.body-about__img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .body-about__title {
