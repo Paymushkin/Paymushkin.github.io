@@ -1,0 +1,126 @@
+.programs  {
+	background-color: #fff;
+
+	&__container {
+
+	}
+
+	&__body {
+		padding: rem(90) rem(35) rem(77);
+		background-color: $bgColor;
+		border-radius: rem(40);
+
+	}
+
+	&__title {
+		margin-bottom: rem(50);
+	}
+
+}
+
+.programs-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: rem(40) rem(6) rem(60);
+	background-color: #fff;
+	border-radius: rem(15);
+	opacity: 0.7;
+	transform: scale(percent(30,39));
+	transition: 0.3s transform ease-in-out;
+
+	&._slide {
+
+		&_1 {
+			.programs-slide__img {
+				background-image: url(../img/programs/program-1-1.png);
+				animation: slideShow-1 20s ease-in-out 5s infinite alternate-reverse;
+			}
+					
+		}
+
+		&_2 {
+			.programs-slide__img {
+				background-image: url(../img/programs/program-2-1.png);
+				animation: slideShow-2 20s ease-in-out 5s infinite alternate-reverse;
+			}
+			
+		}
+
+		&_3 {
+			.programs-slide__img {
+				background-image: url(../img/programs/program-3-1.png);
+				animation: slideShow-3 20s ease-in-out 5s infinite alternate-reverse;
+			}
+			
+		}
+
+		&_4 {
+			.programs-slide__img {
+				background-image: url(../img/programs/program-4-1.png);
+				animation: slideShow-4 20s ease-in-out 5s infinite alternate-reverse;
+			}
+			
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(15);
+		color: $textColorHighlight;
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 1.5;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: rem(23);
+		font-size: rem(11);
+		text-align: center;
+	}
+
+	&__img {
+		margin-bottom: rem(40);
+		width: rem(280);
+		height: rem(185);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__price {
+		margin-bottom: rem(20);
+		color: $textColorHighlight;
+		font-size: rem(23);
+		font-weight: 700;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	&__button {
+		padding: rem(22);
+		width: rem(280);
+		height: rem(60);
+	}
+
+	&.swiper-slide-next {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.programs__navigation {
+	.prev, .next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.prev {
+		left: 0;
+	}
+	.next {
+		right: 0;
+	}
+}

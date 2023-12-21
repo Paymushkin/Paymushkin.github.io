@@ -1,0 +1,54 @@
+.about {
+	background-color: #fff;
+
+	&__container {
+		
+	}
+
+	&__title {
+	}
+
+	&__body {
+		display: flex;
+		gap: rem(63);
+	}
+}
+
+.body-about {
+
+	&__img {
+		
+	}
+
+	&__title {
+		margin-bottom: rem(10);
+		padding-top: rem(20);
+		color: $textColorHighlight;
+		font-family: "Azkia", sans-serif;
+		font-size: rem(60);
+		line-height: math.div(93, 60);
+		letter-spacing: rem(3);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		margin-bottom: rem(83);
+		padding-left: rem(45);
+
+		li {
+			position: relative;
+			color: $textColor;
+			font-size: rem(17);
+			line-height: 1.5;
+
+			&::before{
+				content: url(../img/check.svg);
+				position: absolute;
+				left: rem(-34);
+
+			}
+		}
+	}
+}

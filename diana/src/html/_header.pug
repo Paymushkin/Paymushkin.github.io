@@ -1,0 +1,40 @@
+header.header#header
+	.header__container
+		.header__menu 
+			ul.nav-list
+				li
+					a(href="#", data-goto="#about") ОБО МНЕ
+				li
+					a(href="#", data-goto="#programs") ПРОГРАММЫ
+				li
+					a(href="#", data-goto="feedbacks") ОТЗЫВЫ
+				li
+					a(href="#", data-goto="contacts") КОНТАКТЫ
+			.contacts
+				a(href="tel:+79119145730") +7 (911) 914 57 30
+				button Связаться со мной
+
+			nav.menu
+				button(type="button").menu__icon.icon-menu
+					span
+				.menu__body.menu-body
+					ul.header__list
+		.header__body 
+			h1.header__title Обучение фигурному катанию
+			h2.header__subtitle в Санкт-Петербурге
+			.header__content
+				.header__text
+					svg(xmlns='http://www.w3.org/2000/svg' width='34' height='12' viewbox='0 0 34 12' fill='none')
+						circle(cx='28' cy='6' r='5.5' stroke='#326BB1')
+						circle(cx='14.5' cy='6' r='4' stroke='#326BB1' stroke-opacity='0.3')
+						circle(cx='3.5' cy='6' r='3' stroke='#326BB1' stroke-opacity='0.1')
+					p Благодаря <b>индивидуальному</b> подходу, каждый занимающийся достигнет своего <b>максимума</b>
+
+				.header__text
+					svg(xmlns='http://www.w3.org/2000/svg' width='34' height='12' viewbox='0 0 34 12' fill='none')
+						circle(cx='28' cy='6' r='5.5' stroke='#326BB1')
+						circle(cx='14.5' cy='6' r='4' stroke='#326BB1' stroke-opacity='0.3')
+						circle(cx='3.5' cy='6' r='3' stroke='#326BB1' stroke-opacity='0.1')
+					p Уже после <b>первого</b> занятия вы будете <b>увереннее</b> чувствовать себя <b>на льду</b>
+			
+			button.header__button.button._with-decor записаться на тренировку 

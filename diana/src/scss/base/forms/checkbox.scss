@@ -1,0 +1,60 @@
+.checkbox {
+	position: relative;
+	font-size: rem(12);
+	&:not(:last-child) {
+		// margin-bottom: em(5);
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus + .checkbox__label:before {
+			box-shadow: 0 0 5px #000;
+		}
+		&:checked + .checkbox__label:before {
+			background: #79808a;
+			border-color: #79808a;
+		}
+		&:checked + .checkbox__label:after {
+			opacity: 1;
+		}
+	}
+	// .checkbox__label
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		gap: 5px;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 14px;
+			width: 14px;
+			height: 14px;
+			border: 1px solid #E1DFDE;
+		}
+		&::after{
+			content: url(../img/login/mark.svg);
+			position: absolute;
+			top: 0;
+			left: rem(4);
+			height: rem(8);
+			width: rem(8);
+			opacity: 0;
+			transition: .3s opacity ease;
+		}
+	}
+	// .checkbox__text
+	&__text {
+		color: $textColor;
+		font-size: rem(12);
+		line-height: math.div(14, 12);
+
+		@media (max-width:$mobile){
+			color: $mainColor; 
+	   }
+	}
+}

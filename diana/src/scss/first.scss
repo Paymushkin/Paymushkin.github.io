@@ -1,0 +1,89 @@
+.first {
+	position: relative;
+	padding: rem(100);
+	min-height: rem(880);
+	background-color: #fff;
+	background-image: url(../img/first/bg-2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	// &::after{
+	// 	content:url(../img/first/cloud-top.png);
+	// 	position: absolute;
+	// 	top: -200px;
+	// 	left: 0;
+	// 	right: 0;
+	// 	width: 100%;
+	// }
+
+	// &::before{
+	// 	content:url(../img/first/cloud-bottom.png);
+	// 	position: absolute;
+	// 	bottom: -160px;
+	// 	left: 0;
+	// 	right: 0;
+	// 	width: 100%;
+	// }
+
+	&__container {
+		display: flex;
+		gap: rem(100);
+	}
+
+	&__title {
+		text-align: left;
+	}
+
+	&__form {
+		position: relative;
+		padding: rem(50) rem(40) rem(50) rem(60);
+		width: rem(400);
+		border-radius: 15px;
+		background: #F7F7F7;
+		box-shadow: 0px 34px 94px 0px #D8E4F3;
+
+		&::before{
+			content: url(../img/first/person.png);
+			position: absolute;
+			top: -3%;
+			left: -70%;
+		}
+	}
+}
+
+.form-first {
+
+	&__title {
+		margin-bottom: rem(20);
+		font-size: rem(16);
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__radio {
+		margin-bottom: rem(40);
+	}
+
+	.form-field {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		margin-bottom: rem(30);
+		padding: rem(20) rem(30);
+		border-radius: rem(10);
+		color: #3E3E3E;
+		background-color: #fff;
+		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20) inset;
+		input {
+			padding: rem(5) 0;
+			font-size: rem(13);
+			outline: none;
+
+			&::placeholder {
+				color: #3E3E3E;
+				opacity: 0.6;
+			}
+		}
+	}
+}
