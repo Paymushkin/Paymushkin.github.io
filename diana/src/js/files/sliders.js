@@ -78,10 +78,10 @@ function initSliders() {
 			// 	slideShadows: true,
 			//   },
 			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			
 
 			// Пагинация
