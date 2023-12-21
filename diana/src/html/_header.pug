@@ -7,12 +7,12 @@ header.header#header
 				li
 					a(href="#", data-goto="#programs") ПРОГРАММЫ
 				li
-					a(href="#", data-goto="feedbacks") ОТЗЫВЫ
+					a(href="#", data-goto="#feedback") ОТЗЫВЫ
 				li
-					a(href="#", data-goto="contacts") КОНТАКТЫ
+					a(href="#", data-goto="#contacts") КОНТАКТЫ
 			.contacts
 				a(href="tel:+79119145730") +7 (911) 914 57 30
-				button Связаться со мной
+				button(data-popup="#form") Связаться со мной
 
 			nav.menu
 				button(type="button").menu__icon.icon-menu
@@ -37,4 +37,4 @@ header.header#header
 						circle(cx='3.5' cy='6' r='3' stroke='#326BB1' stroke-opacity='0.1')
 					p Уже после <b>первого</b> занятия вы будете <b>увереннее</b> чувствовать себя <b>на льду</b>
 			
-			button.header__button.button._with-decor записаться на тренировку 
+			button.header__button.button._with-decor(data-popup="#form") записаться на тренировку 

@@ -1,5 +1,22 @@
 .about {
+	position: relative;
 	background-color: #fff;
+
+	&::after{
+		content:url(../img/feedback/snowflake-right.png);
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+	}
+
+	&::before{
+		content:url(../img/feedback/snowflake-left.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
 
 	&__container {
 		
@@ -9,8 +26,10 @@
 	}
 
 	&__body {
+		position: relative;
 		display: flex;
 		gap: rem(63);
+		z-index: 2;
 	}
 }
 

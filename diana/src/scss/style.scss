@@ -84,7 +84,7 @@ $mobileSmall: em(576.98); // Телефоны S
 }
 
 html {
-	overflow-x:hidden; 
+	// overflow-x:hidden; 
 	overscroll-behavior: none;
 	scroll-behavior: smooth;
 	-webkit-overflow-scrolling: touch;
@@ -93,7 +93,7 @@ html {
 body {
 	// overflow-y: scroll;
 	scroll-behavior: auto;
-	background-color: $bgColor;
+	// background-color: $bgColor;
 	font-feature-settings: "pnum" on, "lnum" on;
 	// Скролл заблокирован
 	.lock & {
@@ -175,6 +175,7 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 @import "base/forms/radio";
+@import "base/forms/select";
 
 // Подключение стилей общих элементов проекта
 @import "common";

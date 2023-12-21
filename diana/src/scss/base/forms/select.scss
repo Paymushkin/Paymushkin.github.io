@@ -2,11 +2,12 @@
 // Снипет (HTML): sel
 .select {
 	position: relative;
+	width: 100%;
 
 	@media (any-hover: hover){
 		&:hover{
 			.select__title {
-				color: $highlightColor;
+				// color: $highlightColor;
 			}
 		}
 	}
@@ -17,15 +18,17 @@
 	}
 	// .select__title
 	&__title {
-		padding: rem(13) rem(21) rem(13) rem(19);
+		padding: rem(13) rem(21) rem(13) rem(60);
 		width: 100%;
 		color: inherit;
 		text-align: left;
+		color: #3E3E3E;
+		opacity: 0.6;
 		background-color: #fff;
 		// border: 1px solid #d9d9d9;
 		border-radius: 12px;
-		font-size: rem(16);
-		font-weight: 500;
+		font-size: rem(13);
+		// font-weight: 500;
 		line-height: 1;
 		cursor: pointer;
 	}
@@ -40,7 +43,7 @@
 			flex: 1 1 auto;
 		}
 		&:after {
-			content: url(../img/chevron-down.svg);
+			content: url(../img/arrow-down.svg);
 			// align-self: stretch;
 			flex: 0 0 10px;
 			transform: translateY(2px);
@@ -71,13 +74,15 @@
 	// .select__options
 	&__options {
 		position: absolute;
-		top: rem(42);
-		right: rem(10);
-		padding: rem(10) rem(16) rem(20);
-		width: calc(100% - 20px);
+		top: rem(70);
+		right: 0;
+		padding: rem(10) rem(16) rem(5) rem(52);
+		width: 100%;
 		color: $textColor;
 		background: #fff;
-		border: rem(2) solid #FF6C01;
+		// border: rem(2) solid #FF6C01;
+		// box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20) inset;
+
 		border-radius: rem(12);
 		font-size: rem(14);
 		
@@ -97,21 +102,35 @@
 	}
 	// .select__option
 	&__option {
+		position: relative;
 		padding: 9px 0;
 		width: 100%;
-		border-bottom: 1px solid #E6ECEC;
+		// border-bottom: 1px solid #E6ECEC;
 		color: inherit;
-		font-weight: 500;
+		font-size: rem(12);
+		font-weight: 700;
 		text-align: left;
+		opacity: 0.6;
 		cursor: pointer;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease;
 		&._select-selected {
 			background-color: #eee;
 		}
+		&::before{
+			content: url(../img/line.svg);
+			position: absolute;
+			top: 5px;
+			left: -30px;
+			opacity: 0;
+			transition: 0.3s ease opacity;
+		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: #FF6C01;
-				border-color: #FF6C01;
+				opacity: 1;
+				&::before{
+					opacity: 1;
+				}
+				
 			}
 		}
 	}

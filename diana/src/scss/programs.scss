@@ -1,15 +1,42 @@
 .programs  {
+	position: relative;
+	padding-top: rem(80);
 	background-color: #fff;
+
+	&::after{
+		content:url(../img/feedback/snowflake-right.png);
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+	}
+
+	&::before{
+		content:url(../img/feedback/snowflake-left.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
 
 	&__container {
 
 	}
 
 	&__body {
+		position: relative;
 		padding: rem(90) rem(35) rem(77);
 		background-color: $bgColor;
 		border-radius: rem(40);
+		z-index: 2;
 
+		&::before{
+			content:url(../img/programs/decor.png);
+			position: absolute;
+			top: rem(-71);
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&__title {

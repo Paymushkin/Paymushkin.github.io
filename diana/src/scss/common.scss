@@ -105,24 +105,32 @@ details > summary {
 }
 
 details summary:before {
-	content: url(../img/arrow.svg);
+	content: "";
 	position: absolute;
 	left: rem(-70);
-	width: rem(40);
-	height: rem(40);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(45);
+	height: rem(45);
+	background-color: #D5BC9F;
+	background-image: url(../img/accordion-icon-close.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	// background-size: contain;
+	border-radius: 50%;
 	transition: 0.3s ease transform;
 
-	@media (max-width:$mobile){
-		left: rem(-50);
-		transform: scale(0.75);
-		// max-width: rem(30);
-		// max-height: rem(30); 
-	}
+	// @media (max-width:$mobile){
+	// 	left: rem(-50);
+	// 	transform: scale(0.75);
+	// 	// max-width: rem(30);
+	// 	// max-height: rem(30); 
+	// }
 }
 
 details[open] summary:before {
+	content: "";
+	background-image: url(../img/accordion-icon-open.svg);
 	transform: rotate(-90deg);
-	@media (max-width:$mobile){
-		transform: rotate(-90deg) scale(0.75);
-	}
 }

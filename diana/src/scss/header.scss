@@ -47,6 +47,7 @@
 		font-size: rem(80);
 		line-height: math.div(126,80);
 		letter-spacing: rem(4);
+		font-weight: 400;
 	}
 
 	&__content {
@@ -115,8 +116,19 @@
 		}
 
 		button {
+			position: relative;
 			color: #8D97A6;
 			font-size: rem(13);
+
+			&::after{
+				content:'';
+				position: absolute;
+				bottom: rem(-6);
+				left: 0;
+				width: 100%;
+				height: rem(1);
+				background-color: currentColor;
+			}
 		}
 		
 	}

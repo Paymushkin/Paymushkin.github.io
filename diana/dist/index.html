@@ -24,11 +24,11 @@
             <ul class="nav-list">
               <li><a href="#" data-goto="#about">ОБО МНЕ</a></li>
               <li><a href="#" data-goto="#programs">ПРОГРАММЫ</a></li>
-              <li><a href="#" data-goto="feedbacks">ОТЗЫВЫ</a></li>
-              <li><a href="#" data-goto="contacts">КОНТАКТЫ</a></li>
+              <li><a href="#" data-goto="#feedback">ОТЗЫВЫ</a></li>
+              <li><a href="#" data-goto="#contacts">КОНТАКТЫ</a></li>
             </ul>
             <div class="contacts"><a href="tel:+79119145730">+7 (911) 914 57 30</a>
-              <button>Связаться со мной</button>
+              <button data-popup="#form">Связаться со мной</button>
             </div>
             <nav class="menu">
               <button class="menu__icon icon-menu" type="button"><span></span></button>
@@ -58,7 +58,7 @@
                 <p>Уже после <b>первого</b> занятия вы будете <b>увереннее</b> чувствовать себя <b>на льду</b></p>
               </div>
             </div>
-            <button class="header__button button _with-decor">записаться на тренировку </button>
+            <button class="header__button button _with-decor" data-popup="#form">записаться на тренировку </button>
           </div>
         </div>
       </header>
@@ -78,7 +78,7 @@
                   <li>На занятиях с лёгкостью нахожу подход как к ребёнку, так и ко взрослому</li>
                   <li>Являюсь действующим магистрантом спортивной психологии. Неспроста ученики отмечают мою лёгкость и комфорт в общении</li>
                 </ul>
-                <button class="body-about__button button">связаться со мной</button>
+                <button class="body-about__button button" data-popup="#form">связаться со мной</button>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                       Длительность программы: 1,5&nbsp;часа
                     </p>
                     <div class="programs-slide__img"> </div><span class="programs-slide__price">от&nbsp;10.000&nbsp;₽</span>
-                    <button class="button programs-slide__button">записаться</button>
+                    <button class="button programs-slide__button" data-popup="#form-1">записаться</button>
                   </div>
                   <div class="programs__slide swiper-slide programs-slide _slide_2">
                     <div class="programs-slide__title">Индивидуальное<br>занятие</div>
@@ -108,7 +108,7 @@
                       и&nbsp;званий. Всё&nbsp;зависит от&nbsp;вашей цели! 
                     </p>
                     <div class="programs-slide__img"> </div><span class="programs-slide__price">2.000&nbsp;₽</span>
-                    <button class="button programs-slide__button">записаться</button>
+                    <button class="button programs-slide__button" data-popup="#form-2">записаться</button>
                   </div>
                   <div class="programs__slide swiper-slide programs-slide _slide_3">
                     <div class="programs-slide__title">Групповые<br>занятия</div>
@@ -119,7 +119,7 @@
                       (формируем расписание исходя из&nbsp;запроса группы)
                     </p>
                     <div class="programs-slide__img"> </div><span class="programs-slide__price">от 700&nbsp;₽</span>
-                    <button class="button programs-slide__button">записаться</button>
+                    <button class="button programs-slide__button" data-popup="#form-3">записаться</button>
                   </div>
                   <div class="programs__slide swiper-slide programs-slide _slide_4">
                     <div class="programs-slide__title">Абонемент<br>на&nbsp;4&nbsp;занятия</div>
@@ -129,10 +129,10 @@
                       Длительность: 4&nbsp;занятия -&nbsp;4&nbsp;часа.  
                     </p>
                     <div class="programs-slide__img"> </div><span class="programs-slide__price">6.000&nbsp;₽</span>
-                    <button class="button programs-slide__button">записаться</button>
+                    <button class="button programs-slide__button" data-popup="#form-4">записаться</button>
                   </div>
                 </div>
-                <div class="feedback__navigation navigation">
+                <div class="programs__navigation navigation">
                   <button class="prev">
                     <svg width="31" height="56" viewbox="0 0 31 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M23.7412 2.15625L1.95605 25.3125C1.34668 26.0742 0.889648 26.9883 0.889648 27.75C0.889648 28.6641 1.34668 29.5781 1.95605 30.3398L23.7412 53.4961C25.1123 55.0195 27.3975 55.0195 28.9209 53.6484C30.4443 52.2773 30.4443 49.9922 29.0732 48.4688L9.57324 27.75L29.0732 7.18359C30.4443 5.66016 30.4443 3.375 28.9209 2.00391C27.3975 0.632812 25.1123 0.632812 23.7412 2.15625Z" fill="#326BB1"></path>
@@ -202,12 +202,11 @@
                   <path opacity="0.6" d="M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z" fill="#3E3E3E"></path>
                 </svg>
                 <input id="name" type="tel" name="name" placeholder="Номер телефона"/>
-              </div>
-              <button class="button _with-decor-2">оставить заявку</button>
+              </div><a class="button _with-decor-2" href="">оставить заявку</a>
             </div>
           </div>
         </section>
-        <section class="feedback"> 
+        <section class="feedback" id="feedback"> 
           <div class="feedback__container"> 
             <div class="feedback__slider swiper">
               <div class="feedback__wrapper swiper-wrapper">
@@ -556,44 +555,217 @@
         </section>
         <section class="qa"> 
           <div class="qa__container"> 
-            <h2 class="qa__title">Часто - задаваемые вопросы</h2>
+            <h2 class="qa__title">Часто - задаваемые<br>вопросы</h2>
             <div class="qa__accordion accordion">
               <details class="accordion__details" open="open">
-                <summary>What services does your concierge service offer?</summary>
-                <p>We offer a wide range of services, including booking tickets for events, booking tables in restaurants, organizing transport, selection and delivery of gifts, assistance in household matters and much more</p>
+                <summary>Что необходимо брать с собой на занятия? </summary>
+                <ul> 
+                  <li>Коньки</li>
+                  <li>Воду</li>
+                  <li>Перчатки</li>
+                  <li>Шапку/повязку</li>
+                  <li>Тренировочный костюм</li>
+                  <li>Несколько пар носков (желательно длинных, чтобы не натереть ногу в коньке)</li>
+                  <li>Жёсткие чехлы на лезвия (чтобы передвигаться вне льда)</li>
+                  <li>Мягкие чехлы на лезвия (чтобы переносить в сумке коньки)</li>
+                  <li>Тряпочку для лезвий (чтобы протирать лезвия от лишней влаги после занятия).</li>
+                </ul>
               </details>
               <details class="accordion__details">
-                <summary>Is your service available 24/7?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Со скольки лет можно отдать ребёнка на каток?</summary>
+                <p>Начинать заниматься можно с 3,5 лет</p>
               </details>
               <details class="accordion__details">
-                <summary>How can I contact your support team?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Какие коньки лучше купить начинающему фигуристу?  </summary>
+                <p>
+                   Рекомендую выбирать из следующих фирм: Risport, Riedell, WIFA, Jackson, Edea.
+                  Ботинки следует выбирать средней жёсткости, чтобы нога была хорошо зафиксирована.
+                </p>
               </details>
               <details class="accordion__details">
-                <summary>What languages do your employees speak?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Сколько времени длится 1 занятие? </summary>
+                <p>Занятие длится 1 час.</p>
               </details>
               <details class="accordion__details">
-                <summary>What are the restrictions on the services provided?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Сколько раз в неделю нужно заниматься? </summary>
+                <p>
+                   Всё зависит от цели, которую вы ставите на занятия, ну и конечно
+                  от вашего свободного времени. Любителям достаточно 1-2 раз в неделю,
+                  в то время как профессионалы занимаются от 4 до 6 раз в неделю.
+                </p>
               </details>
               <details class="accordion__details">
-                <summary>What is a personal concierge?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Тренируете ли вы зимой на открытых катках?</summary>
+                <p>Да, зимой с желающими мы занимаемся на открытых катках.</p>
               </details>
               <details class="accordion__details">
-                <summary>How secure is my personal data?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Не поздно ли мне учиться заниматься в 30+?</summary>
+                <p>
+                  Конечно не поздно, всегда можно начать заниматься, если этого действительно хотеть.
+                  Единственное, что может остановить, так это наличие медицинских противопоказаний. 
+                  Если вы здоровы, то рада буду видеть вас на занятиях. 
+                </p>
               </details>
               <details class="accordion__details">
-                <summary>How secure is my personal data?</summary>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere odio iste facilis, non illum deleniti, voluptate tenetur quo, ex sit? Rem eos qui nisi hic consequuntur sit, necessitatibus ad!</p>
+                <summary>Можно ли арендовать коньки на ледовой арене? </summary>
+                <p>
+                   Да, в основном на ледовых аренах есть прокат коньков. Редко бывает такое,
+                  что проката нет, в таком случае мы выберем другую ледовую арену. 
+                  Рекомендую не оттягивать с покупкой коньков, т.к. в прокате коньки разношены
+                  и не приспособлены для регулярных тренировок.
+                </p>
               </details>
             </div>
           </div>
         </section>
       </main>
+      <footer class="footer" id="contacts">
+        <div class="footer__container">
+          <div class="footer__body">
+            <h2 class="footer__title">КОНТАКТНЫЕ ДАННЫЕ</h2>
+            <p class="footer__text">По всем оставшимся вопросам вы всегда<br>можете мне написать в любой удобный мессенджер:</p>
+            <h3 class="footer__name">Моторина Диана Игоревна</h3>
+            <ul class="footer__contacts"> 
+              <li> <a href="https://www.instagram.com/di.motorina" target="_blank">
+                  <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5 5.60938C14.4531 5.60938 16.8906 8.04688 16.8906 11C16.8906 14 14.4531 16.3906 11.5 16.3906C8.5 16.3906 6.10938 14 6.10938 11C6.10938 8.04688 8.5 5.60938 11.5 5.60938ZM11.5 14.5156C13.4219 14.5156 14.9688 12.9688 14.9688 11C14.9688 9.07812 13.4219 7.53125 11.5 7.53125C9.53125 7.53125 7.98438 9.07812 7.98438 11C7.98438 12.9688 9.57812 14.5156 11.5 14.5156ZM18.3438 5.42188C18.3438 6.125 17.7812 6.6875 17.0781 6.6875C16.375 6.6875 15.8125 6.125 15.8125 5.42188C15.8125 4.71875 16.375 4.15625 17.0781 4.15625C17.7812 4.15625 18.3438 4.71875 18.3438 5.42188ZM21.9062 6.6875C22 8.42188 22 13.625 21.9062 15.3594C21.8125 17.0469 21.4375 18.5 20.2188 19.7656C19 20.9844 17.5 21.3594 15.8125 21.4531C14.0781 21.5469 8.875 21.5469 7.14062 21.4531C5.45312 21.3594 4 20.9844 2.73438 19.7656C1.51562 18.5 1.14062 17.0469 1.04688 15.3594C0.953125 13.625 0.953125 8.42188 1.04688 6.6875C1.14062 5 1.51562 3.5 2.73438 2.28125C4 1.0625 5.45312 0.6875 7.14062 0.59375C8.875 0.5 14.0781 0.5 15.8125 0.59375C17.5 0.6875 19 1.0625 20.2188 2.28125C21.4375 3.5 21.8125 5 21.9062 6.6875ZM19.6562 17.1875C20.2188 15.8281 20.0781 12.5469 20.0781 11C20.0781 9.5 20.2188 6.21875 19.6562 4.8125C19.2812 3.92188 18.5781 3.17188 17.6875 2.84375C16.2812 2.28125 13 2.42188 11.5 2.42188C9.95312 2.42188 6.67188 2.28125 5.3125 2.84375C4.375 3.21875 3.67188 3.92188 3.29688 4.8125C2.73438 6.21875 2.875 9.5 2.875 11C2.875 12.5469 2.73438 15.8281 3.29688 17.1875C3.67188 18.125 4.375 18.8281 5.3125 19.2031C6.67188 19.7656 9.95312 19.625 11.5 19.625C13 19.625 16.2812 19.7656 17.6875 19.2031C18.5781 18.8281 19.3281 18.125 19.6562 17.1875Z" fill="#D5BC9F"></path>
+                  </svg><span>di.motorina</span></a></li>
+              <li> <a href="https://t.me/dimotorina" target="_blank">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.625 0.375C18 0.375 23.25 5.625 23.25 12C23.25 18.4219 18 23.625 11.625 23.625C5.20312 23.625 0 18.4219 0 12C0 5.625 5.20312 0.375 11.625 0.375ZM16.9688 8.29688C17.0156 8.15625 17.0156 8.01562 16.9688 7.82812C16.9688 7.73438 16.875 7.59375 16.8281 7.54688C16.6875 7.40625 16.4531 7.40625 16.3594 7.40625C15.9375 7.40625 15.2344 7.64062 12 9C10.875 9.46875 8.625 10.4062 5.25 11.9062C4.6875 12.1406 4.40625 12.3281 4.35938 12.5625C4.3125 12.9375 4.92188 13.0781 5.625 13.3125C6.23438 13.5 7.03125 13.7344 7.45312 13.7344C7.82812 13.7344 8.25 13.5938 8.71875 13.2656C11.8594 11.1094 13.5 10.0312 13.5938 10.0312C13.6875 10.0312 13.7812 9.98438 13.8281 10.0312C13.9219 10.125 13.9219 10.2188 13.875 10.2656C13.8281 10.5 10.875 13.2188 10.6875 13.4062C10.0312 14.0625 9.28125 14.4844 10.4531 15.2344C11.4375 15.8906 12 16.3125 13.0312 16.9688C13.6875 17.3906 14.2031 17.9062 14.8594 17.8594C15.1875 17.8125 15.5156 17.5312 15.6562 16.6406C16.0781 14.625 16.8281 10.125 16.9688 8.29688Z" fill="#D5BC9F"></path>
+                  </svg><span>dimotorina</span></a></li>
+              <li> <a href="mailto:mdi419@mail.ru" target="_blank">
+                  <svg width="24" height="18" viewbox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5312 5.95312C23.7188 5.8125 24 5.95312 24 6.1875V15.75C24 17.0156 22.9688 18 21.75 18H2.25C0.984375 18 0 17.0156 0 15.75V6.1875C0 5.95312 0.234375 5.8125 0.421875 5.95312C1.5 6.79688 2.85938 7.82812 7.64062 11.2969C8.625 12 10.3125 13.5469 12 13.5469C13.6406 13.5469 15.375 12 16.3125 11.2969C21.0938 7.82812 22.4531 6.79688 23.5312 5.95312ZM12 12C10.875 12.0469 9.32812 10.6406 8.53125 10.0781C2.29688 5.57812 1.82812 5.15625 0.421875 4.03125C0.140625 3.84375 0 3.51562 0 3.14062V2.25C0 1.03125 0.984375 0 2.25 0H21.75C22.9688 0 24 1.03125 24 2.25V3.14062C24 3.51562 23.8125 3.84375 23.5312 4.03125C22.125 5.15625 21.6562 5.57812 15.4219 10.0781C14.625 10.6406 13.0781 12.0469 12 12Z" fill="#D5BC9F"></path>
+                  </svg><span>mdi419@mail.ru</span></a></li>
+              <li> <a href="tel:+79119145730" target="_blank">
+                  <svg width="21" height="22" viewbox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.8125 3.59375C19.7812 5.5625 21 8.14062 21 10.9531C21 16.6719 16.2188 21.3594 10.4531 21.3594C8.71875 21.3594 7.03125 20.8906 5.48438 20.0938L0 21.5L1.45312 16.1094C0.5625 14.5625 0.046875 12.7812 0.046875 10.9062C0.046875 5.1875 4.73438 0.5 10.4531 0.5C13.2656 0.5 15.8906 1.625 17.8125 3.59375ZM10.4531 19.5781C15.2344 19.5781 19.2188 15.6875 19.2188 10.9531C19.2188 8.60938 18.2344 6.45312 16.5938 4.8125C14.9531 3.17188 12.7969 2.28125 10.5 2.28125C5.71875 2.28125 1.82812 6.17188 1.82812 10.9062C1.82812 12.5469 2.29688 14.1406 3.14062 15.5469L3.375 15.875L2.48438 19.0625L5.76562 18.1719L6.04688 18.3594C7.40625 19.1562 8.90625 19.5781 10.4531 19.5781ZM15.2344 13.1094C15.4688 13.25 15.6562 13.2969 15.7031 13.4375C15.7969 13.5312 15.7969 14.0469 15.5625 14.6562C15.3281 15.2656 14.2969 15.8281 13.8281 15.875C12.9844 16.0156 12.3281 15.9688 10.6875 15.2188C8.0625 14.0938 6.375 11.4688 6.23438 11.3281C6.09375 11.1406 5.20312 9.92188 5.20312 8.60938C5.20312 7.34375 5.85938 6.73438 6.09375 6.45312C6.32812 6.17188 6.60938 6.125 6.79688 6.125C6.9375 6.125 7.125 6.125 7.26562 6.125C7.45312 6.125 7.64062 6.07812 7.875 6.59375C8.0625 7.10938 8.625 8.375 8.67188 8.51562C8.71875 8.65625 8.76562 8.79688 8.67188 8.98438C8.20312 9.96875 7.64062 9.92188 7.92188 10.3906C8.95312 12.125 9.9375 12.7344 11.4844 13.4844C11.7188 13.625 11.8594 13.5781 12.0469 13.4375C12.1875 13.25 12.7031 12.6406 12.8438 12.4062C13.0312 12.125 13.2188 12.1719 13.4531 12.2656C13.6875 12.3594 14.9531 12.9688 15.2344 13.1094Z" fill="#D5BC9F"></path>
+                  </svg><span>+7 911 914 - 57 - 30</span></a></li>
+            </ul>
+            <button class="footer__button button _with-decor" data-popup="#form">записаться на тренировку</button>
+          </div>
+        </div>
+      </footer>
+      <div class="popup" aria-hidden="true" id="form">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close _icon-close" data-close="data-close" type="button"></button>
+            <div class="body">
+              <div class="request__form form-request">
+                <div class="form-request__title">Оставьте заявку</div>
+                <div class="form-request__text">
+                   Диана вам перезвони<br>
+                  и запишет вас на удобное время
+                </div>
+                <div class="form-field">
+                  <svg width="11" height="13" viewbox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z" fill="#3E3E3E"></path>
+                  </svg>
+                  <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                </div>
+                <div class="form-field _with-select">
+                  <select class="form" name="form[]">
+                    <option value="1" selected="selected">Выберите услугу</option>
+                    <option value="2">Индивидуальные занятия</option>
+                    <option value="3">Абонемент на 4 занятия</option>
+                    <option value="4">Групповые занятия</option>
+                    <option value="5">День рождения на катке</option>
+                  </select>
+                </div><a class="button form-button" href="">ОТПРАВИТЬ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" aria-hidden="true" id="form-1">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close _icon-close" data-close="data-close" type="button"></button>
+            <div class="body">
+              <div class="request__form form-request">
+                <div class="form-request__title">День рождения на катке</div>
+                <div class="form-request__text">
+                   Диана вам перезвони<br>
+                  и запишет вас на удобное время
+                </div>
+                <div class="form-field">
+                  <svg width="11" height="13" viewbox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z" fill="#3E3E3E"></path>
+                  </svg>
+                  <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                </div><a class="button form-button" href="" data-text="день рождения на катке">ОТПРАВИТЬ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" aria-hidden="true" id="form-2">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close _icon-close" data-close="data-close" type="button"></button>
+            <div class="body">
+              <div class="request__form form-request">
+                <div class="form-request__title">Индивидуальное занятие</div>
+                <div class="form-request__text">
+                   Диана вам перезвони<br>
+                  и запишет вас на удобное время
+                </div>
+                <div class="form-field">
+                  <svg width="11" height="13" viewbox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z" fill="#3E3E3E"></path>
+                  </svg>
+                  <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                </div><a class="button form-button" href="" data-text="индивидуальное занятие">ОТПРАВИТЬ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" aria-hidden="true" id="form-3">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close _icon-close" data-close="data-close" type="button"></button>
+            <div class="body">
+              <div class="request__form form-request">
+                <div class="form-request__title">Групповые занятия</div>
+                <div class="form-request__text">
+                   Диана вам перезвони<br>
+                  и запишет вас на удобное время
+                </div>
+                <div class="form-field">
+                  <svg width="11" height="13" viewbox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z" fill="#3E3E3E"></path>
+                  </svg>
+                  <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                </div><a class="button form-button" href="" data-text="групповое занятие">ОТПРАВИТЬ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" aria-hidden="true" id="form-4">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close _icon-close" data-close="data-close" type="button"></button>
+            <div class="body">
+              <div class="request__form form-request">
+                <div class="form-request__title">Абонемент на 4 занятия</div>
+                <div class="form-request__text">
+                   Диана вам перезвони<br>
+                  и запишет вас на удобное время
+                </div>
+                <div class="form-field">
+                  <svg width="11" height="13" viewbox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" d="M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z" fill="#3E3E3E"></path>
+                  </svg>
+                  <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+                </div><a class="button form-button" href="" data-text="абонемент на 4 занятия">ОТПРАВИТЬ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/app.min.js"></script>
   </body>
