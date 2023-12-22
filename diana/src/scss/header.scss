@@ -1,9 +1,13 @@
 .header {
 	padding: rem(40) rem(19);
-	min-height: rem(800);
 	background-image: url(../img/hero/bg-2.png);
 	background-position: top center;
 	background-size: cover;
+
+	@media (max-width:$mobileSmall){
+		padding: rem(20) rem(10);
+		background-image: url(../img/hero/bg-2-mob.png);  
+	}
 
 	&__container {
 		position: relative;
@@ -12,13 +16,20 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: rem(48);
-		@media (max-width:$mac){
-			padding-top: rem(20);
-			padding-bottom: rem(20);
-		}
-		@media (max-width:$mobile){
-			padding-top: rem(15);
-			padding-bottom: rem(15);
+		min-height: rem(800);
+		// @media (max-width:$mac){
+		// 	padding-top: rem(20);
+		// 	padding-bottom: rem(20);
+		// }
+		// @media (max-width:$mobile){
+		// 	padding-top: rem(15);
+		// 	padding-bottom: rem(15);
+		// }
+		@media (max-width:$mobileSmall){
+			justify-content: flex-start;
+			gap: rem(5);
+			min-height: calc(100vh - rem(35));
+			min-height: calc(100svh - rem(35));
 		}
 	}
 
@@ -34,10 +45,18 @@
 	}
 
 	&__title {
+		align-self: center;
 		color: $textColor;
 		font-family: "Le-murmure";
 		font-size: rem(69);
 		letter-spacing: rem(2);
+		text-transform: uppercase;
+
+		@media (max-width:$mobileSmall){
+			max-width: rem(265);
+			font-size: rem(42);
+			text-align: center; 
+		}
 	}
 
 	&__subtitle {
@@ -48,6 +67,12 @@
 		line-height: math.div(126,80);
 		letter-spacing: rem(4);
 		font-weight: 400;
+
+		@media (max-width:$mobileSmall){
+			margin-top: rem(-10);
+			font-size: rem(42);
+			text-align: center; 
+		}
 	}
 
 	&__content {
@@ -58,8 +83,13 @@
 		display: flex;
 		gap: rem(15);
 		margin-bottom: rem(25);
+
 		&:not(:last-child) {
 			margin-bottom: rem(25);
+
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(10); 
+			}
 		}
 		svg {
 			transform: translateY(5px);
@@ -68,11 +98,21 @@
 			max-width: rem(468);
 			font-size: rem(17);
 			line-height: 1.5;
+			@media (max-width:$mobileSmall){
+				font-size: rem(12); 
+			}
 		}
 	}
 
 	&__button {
 		align-self: flex-start;
+
+		@media (max-width:$mobileSmall){
+			 position: absolute; 
+			 bottom: rem(0);
+			 left: 50%;
+			 transform: translateX(-50%);
+		}
 	}
 
 	.nav-list {
@@ -82,6 +122,15 @@
 		align-items: flex-start;
 		gap: rem(20);
 
+		@media (max-width:$mobileSmall){
+			flex: 1 1 60%;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: rem(100) rem(42) rem(20);
+			max-width: 60%;
+			background-color: #fff;
+		}
+
 		li {
 			font-weight: 700;
 
@@ -89,6 +138,10 @@
 				position: relative;
 				color: $textColorHighlight;
 				line-height: math.div(23, 15);
+
+				@media (max-width:$mobileSmall){
+					 font-size: rem(12); 
+				}
 
 				&::after{
 					content:'';
@@ -109,6 +162,10 @@
 		flex-direction: column;
 		align-items: flex-end;
 		gap: rem(12);
+
+		@media (max-width:$mobileSmall){
+			display: none; 
+		}
 		a 	{
 			color: $textColorHighlight;
 			font-size: rem(20);
@@ -135,34 +192,39 @@
 
 
 	.menu {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 		@media (min-width:$mobileSmall){
 			 display: none; 
+		}
+
+		&__wrapper {
+			padding: rem(12);
+			width: rem(43);
+			height: rem(43);
+			background-color: #fff;
+			border-radius: rem(5);
 		}
 		// .menu__body
 		&__body {
 			display: flex;
 			// flex-direction: column;
-			justify-content: flex-end;
+			// justify-content: flex-end;
 			// align-items: flex-start;
 			position: fixed;
 			top: 0;
-			right: -100%;
+			left: -100%;
 			// padding: rem(38) rem(57);
 			width: 100%;
 			height: 100%;
 			overflow: auto;
 			background-color: rgba(0, 0, 0, 0.40);
 			z-index: 4;
-			transition: 0.3s right ease;
-			@media (max-width:1919.98px){
-				top: rem(148);
-			}
-			@media (max-width:$mac){
-				top: rem(77);
-			}
+			transition: 0.3s left ease;
 
 			.menu-open & {
-				right: 0;
+				left: 0;
 			}
 			.header__list {
 				order: 2;
@@ -228,23 +290,27 @@
 				}
 			}
 		}
+
+		.menu-wa {
+			position: absolute;
+			left: rem(42);
+			bottom: rem(60);
+		}
 	}
 	// Burger ================================================
 	.icon-menu {
 		display: block;
 		position: relative;
-		padding: rem(12);
-		flex: 0 0 24px;
-		width: 40px;
-		height: 30px;
-		background-color: #fff;
+		flex: 0 0 19px;
+		width: 19px;
+		height: 18px;
 		cursor: pointer;
 		z-index: 10;
 
-		@media (max-width:$mac){
-			width: rem(30);
-			height: rem(20);
-		}
+		// @media (max-width:$mac){
+		// 	width: rem(30);
+		// 	height: rem(20);
+		// }
 		span,
 		&::before,
 		&::after {
@@ -256,20 +322,18 @@
 			background-color: $textColorHighlight;
 			border-radius: rem(10);
 			transition: all 0.3s ease 0s;
-			@media (max-width:$mac){
-				height: rem(1);
-			}
+
 		}
 		&::before {
 			top: 0px;
 		}
 		&::after {
 			bottom: 0px;
-			width: 33%;
+			width: 40%;
 		}
 		span {
 			top: calc(50% - 1px);
-			width: 66%;
+			width: 60%;
 			@media (max-width:$mac){
 				// top: calc(50% - 2px);
 			}
@@ -278,24 +342,16 @@
 		.menu-open & {
 			span {
 				transform: scale(0);
-				@media (max-width:$mac){
-					width: rem(20);
-				}
 			}
 			&::before {
 				top: calc(50% - 1px);
 				transform: rotate(-45deg);
-				@media (max-width:$mac){
-					top: 50%;
-					width: rem(20);
-				}
+				width: 100%;
 			}
 			&::after {
 				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
-				@media (max-width:$mac){
-					width: rem(20);
-				}
+				width: 100%;
 			}
 		}
 		

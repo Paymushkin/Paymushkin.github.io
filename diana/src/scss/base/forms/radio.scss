@@ -8,6 +8,11 @@
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20) inset;
 	background-color: rgba(227, 208, 183, 0.40);
 	border-radius: rem(10);
+
+	@media (max-width:$mobileSmall){
+		justify-content: center;
+		gap: rem(30);
+	}
 	// .options__item
 	&__item {
 		position: relative;
@@ -42,6 +47,10 @@
 		transition: 0.3s background-color ease-in-out;
 		// gap: 10px;
 		cursor: pointer;
+
+		@media (max-width:$mobileSmall){
+			 padding: rem(8) rem(15); 
+		}
 		
 		// &:before {
 		// 	content: "";
@@ -67,5 +76,9 @@
 	}
 	// .options__text
 	&__text {
+
+		@media (max-width:$mobileSmall){
+			font-size: rem(10); 
+	   }
 	}
 }

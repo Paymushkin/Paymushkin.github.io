@@ -37,6 +37,10 @@ h2 {
 	font-weight: 600;
 	text-align: center;
 
+	@media (max-width:$mobileSmall){
+		 font-size: rem(42); 
+	}
+
 	// @media (max-width:$mac){
 	// 	font-size: rem(38);
 	// 	padding: rem(35);
@@ -53,15 +57,15 @@ h2 {
 	// }
 }
 
-h3 {
-	font-size: rem(28);
-	// @include adaptiveValue("font-size", 32, 22, 1920, 656, 1);
-	line-height: math.div(34, 28);
-	font-weight: 600;
-	@media (max-width:$tablet){
-		font-size: rem(16);
-	}
-}
+// h3 {
+// 	font-size: rem(28);
+// 	// @include adaptiveValue("font-size", 32, 22, 1920, 656, 1);
+// 	line-height: math.div(34, 28);
+// 	font-weight: 600;
+// 	@media (max-width:$tablet){
+// 		font-size: rem(16);
+// 	}
+// }
 
 h4 {
 	// @include adaptiveValue("font-size", 22, 22, 1920, 656, 1);
@@ -121,6 +125,13 @@ details summary:before {
 	border-radius: 50%;
 	transition: 0.3s ease transform;
 
+	@media (max-width:$mobileSmall){
+		left: rem(-50);
+		width: rem(30);
+		height: rem(30);
+		background-size: 66% 66%;
+	}
+
 	// @media (max-width:$mobile){
 	// 	left: rem(-50);
 	// 	transform: scale(0.75);
@@ -130,7 +141,10 @@ details summary:before {
 }
 
 details[open] summary:before {
-	content: "";
 	background-image: url(../img/accordion-icon-open.svg);
 	transform: rotate(-90deg);
+
+	// @media (max-width:$mobileSmall){
+	// 	background-size: 66%;
+	// }
 }

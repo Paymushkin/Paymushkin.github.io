@@ -15,7 +15,7 @@
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	border-radius: 15px 15px 15px 15px / 35px 35px 35px 35px;
+	border-radius: 15px / 35px;
 	font-size: rem(13);
 	// line-height: math.div(26, 22);
 	font-weight: 700;
@@ -31,31 +31,61 @@
 	z-index: 1;
 	cursor: pointer;
 
-
-
+	@media (max-width:$mobileSmall){
+		padding: rem(28) rem(20) rem(25) rem(20);
+		width: rem(300);
+		height: rem(70);
+		font-size: rem(11);
+		border-radius: 12px / 20px;
+	}
 
 	&._with-decor {
 		padding-right: rem(100);
+		@media (max-width:$mobileSmall){
+			padding-right: rem(69);
+		}
+
+		@media (max-width:$mobileSmall){
+			background-image: url(../img/button-mob.png);
+		}
 
 		&::after{
 			content: url(../img/skates.png);
 			position: absolute;
-			bottom: rem(-45);
-			right: rem(-35);
+			bottom: -15px;
+			right: -7px;
+
+			@media (max-width:$mobileSmall){
+				content: url(../img/skates-mob.png);
+			}
 		}
 	}
 
 	&._with-decor-2 {
+		padding: rem(35) rem(100) rem(35) rem(30);
 		width: rem(300);
 		height: rem(90);
-		padding: rem(35) rem(100) rem(35) rem(30);
 		background-image: url(../img/button-2.png);
+
+		@media (max-width:$mobileSmall){
+			padding: rem(23) rem(80) rem(21) rem(30);
+			width: rem(260);
+			height: rem(60);
+			background-image: url(../img/button-2-mob.png);
+			font-size: rem(11);
+		}
 
 		&::after{
 			content: url(../img/tablet.png);
 			position: absolute;
 			bottom: rem(-20);
 			right: rem(-35);
+
+			@media (max-width:$mobileSmall){
+				content: url(../img/tablet-mob.png);
+				bottom: rem(-17);
+				right: rem(-15);
+			}
 		}
 	}
 

@@ -8,6 +8,13 @@
 	background-repeat: no-repeat;
 	overflow: hidden;
 
+	@media (max-width:$mobileSmall){
+		padding: 0 0 rem(50);
+		min-height: rem(702);
+		background-image: url(../img/first/bg-mob.png);
+		background: 100%;
+	}
+
 	// &::after{
 	// 	content:url(../img/first/cloud-top.png);
 	// 	position: absolute;
@@ -29,10 +36,21 @@
 	&__container {
 		display: flex;
 		gap: rem(100);
+
+		@media (max-width:$mobileSmall){
+			flex-direction: column;
+			align-items: center;
+			gap: rem(30);
+		}
 	}
 
 	&__title {
 		text-align: left;
+
+		@media (max-width:$mobileSmall){
+			 text-align: center;
+			 z-index: 2;
+		}
 	}
 
 	&__form {
@@ -42,23 +60,44 @@
 		border-radius: 15px;
 		background: #F7F7F7;
 		box-shadow: 0px 34px 94px 0px #D8E4F3;
+		
+		@media (max-width:$mobileSmall){
+			 max-width: rem(320);
+			 box-shadow: 0 0 200px 13px #D8E4F3; 
+		}
+
+		@media (max-width:$mobileSmall){
+			 padding: rem(30) rem(10); 
+		}
 
 		&::before{
 			content: url(../img/first/person.png);
 			position: absolute;
 			top: -3%;
 			left: -70%;
+
+			@media (max-width:$mobileSmall){
+				display: none; 
+			}
 		}
 	}
 }
 
 .form-first {
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	&__title {
 		margin-bottom: rem(20);
 		font-size: rem(16);
 		font-weight: 700;
 		text-align: center;
+
+		@media (max-width:$mobileSmall){
+			font-size: rem(13); 
+		}
 	}
 
 	&__radio {
@@ -84,6 +123,13 @@
 				color: #3E3E3E;
 				opacity: 0.6;
 			}
+		}
+	}
+
+	.form-button {
+		@media (max-width:$mobileSmall){
+			margin: 0 auto;
+			align-self: center; 
 		}
 	}
 }

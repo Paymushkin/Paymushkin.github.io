@@ -30,38 +30,68 @@
 		border-radius: rem(40);
 		z-index: 2;
 
+		@media (max-width:$mobileSmall){
+			padding: 0 rem(10);
+			background-color: transparent;
+		}
+
 		&::before{
 			content:url(../img/programs/decor.png);
 			position: absolute;
 			top: rem(-71);
 			left: 50%;
 			transform: translateX(-50%);
+
+			@media (max-width:$mobileSmall){
+				 display: none; 
+			}
 		}
 	}
 
 	&__title {
 		margin-bottom: rem(50);
+		text-transform: uppercase;
+
+		@media (max-width:$mobileSmall){
+			 margin-bottom: rem(30); 
+		}
 	}
 
 }
 
+.programs__wrapper {
+	@media (max-width:$mobileSmall){
+		padding-bottom: rem(50); 
+	}
+}
+
 .programs-slide {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: rem(40) rem(6) rem(60);
 	background-color: #fff;
 	border-radius: rem(15);
-	opacity: 0.7;
-	transform: scale(percent(30,39));
 	transition: 0.3s transform ease-in-out;
+
+	@media (min-width:$mobileSmall){
+		opacity: 0.7;
+		transform: scale(percent(30,39)); 
+	}
+
+	@media (max-width:$mobileSmall){
+		padding: rem(24) rem(15) rem(44);
+		background-color: #E2EAF4;
+		overflow-y: visible;
+	}
 
 	&._slide {
 
 		&_1 {
 			.programs-slide__img {
 				background-image: url(../img/programs/program-1-1.png);
-				animation: slideShow-1 20s ease-in-out 5s infinite alternate-reverse;
+				animation: slideShow-1 20s ease-in-out 5s infinite ;
 			}
 					
 		}
@@ -69,7 +99,7 @@
 		&_2 {
 			.programs-slide__img {
 				background-image: url(../img/programs/program-2-1.png);
-				animation: slideShow-2 20s ease-in-out 5s infinite alternate-reverse;
+				animation: slideShow-2 20s ease-in-out 5s infinite;
 			}
 			
 		}
@@ -77,7 +107,7 @@
 		&_3 {
 			.programs-slide__img {
 				background-image: url(../img/programs/program-3-1.png);
-				animation: slideShow-3 20s ease-in-out 5s infinite alternate-reverse;
+				animation: slideShow-3 20s ease-in-out 5s infinite ;
 			}
 			
 		}
@@ -85,7 +115,7 @@
 		&_4 {
 			.programs-slide__img {
 				background-image: url(../img/programs/program-4-1.png);
-				animation: slideShow-4 20s ease-in-out 5s infinite alternate-reverse;
+				animation: slideShow-4 20s ease-in-out 5s infinite;
 			}
 			
 		}
@@ -99,12 +129,19 @@
 		line-height: 1.5;
 		text-align: center;
 		text-transform: uppercase;
+
+		font-size: rem(14);
 	}
 
 	&__text {
 		margin-bottom: rem(23);
 		font-size: rem(11);
 		text-align: center;
+		
+		@media (max-width:$mobileSmall){
+			font-size: rem(10);
+			line-height: 1.3;
+		}
 	}
 
 	&__img {
@@ -114,6 +151,10 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		@media (max-width:$mobileSmall){
+			 margin-bottom: rem(24); 
+		}
 	}
 
 	&__price {
@@ -123,17 +164,30 @@
 		font-weight: 700;
 		line-height: 1.5;
 		text-transform: uppercase;
+
+		@media (max-width:$mobileSmall){
+			margin-bottom: 0;
+			font-size: rem(16); 
+		}
 	}
 
 	&__button {
 		padding: rem(22);
 		width: rem(280);
 		height: rem(60);
+
+		@media (max-width:$mobileSmall){
+			position: absolute;
+			bottom: rem(-35);
+		}
 	}
 
 	&.swiper-slide-next {
-		opacity: 1;
-		transform: scale(1);
+
+		@media (min-width:$mobileSmall){
+			opacity: 1;
+			transform: scale(1); 
+		}
 	}
 }
 
@@ -142,12 +196,27 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+
+		svg {
+			@media (max-width:$mobileSmall){
+				width: rem(10);
+				height: rem(18); 
+			}
+		}
 	}
 
 	.prev {
 		left: 0;
+
+		@media (max-width:$mobileSmall){
+			 left: rem(4) 
+		}
 	}
 	.next {
 		right: 0;
+
+		@media (max-width:$mobileSmall){
+			right: rem(4) 
+	   }
 	}
 }

@@ -8,6 +8,10 @@
 		top: 0;
 		right: 0;
 		z-index: 0;
+
+		@media (max-width:$mobileSmall){
+			display: none; 
+	   }
 	}
 
 	&::before{
@@ -16,22 +20,41 @@
 		top: 0;
 		left: 0;
 		z-index: 0;
+
+		@media (max-width:$mobileSmall){
+			 display: none; 
+		}
 	}
 
 	&__container {
 		padding-bottom: rem(100);
+
+		@media (max-width:$mobileSmall){
+			padding-bottom: rem(60); 
+		}
 	}
 
 	&__title {
 		margin-bottom: rem(70);
 
+		@media (max-width:$mobileSmall){
+			margin-bottom: rem(40); 
+		}
+
 	}
 
 	&__slider.swiper {
 		position: relative;
-		margin: 0 rem(-20);
 		padding: rem(130) rem(20) rem(20);
 		z-index: 2;
+
+		@media (min-width:$mobileSmall){
+			margin: 0 rem(-20); 
+		}
+
+		@media (max-width:$mobileSmall){
+			 padding-top: rem(100); 
+		}
 		// overflow: hidden visible;
 	}
 
@@ -44,6 +67,10 @@
 	background-color: #fff;
 	border-radius: rem(20);
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+
+	@media (max-width:$mobileSmall){
+		padding: rem(15) rem(10); 
+	}
 
 	&__top {
 		display: flex;
@@ -59,12 +86,21 @@
 		background-position: center;
 		border-radius: 50%;
 		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+
+		@media (max-width:$mobileSmall){
+			width: rem(60);
+			height: rem(60); 
+		}
 	}
 
 	&__info {
 		display: flex;
 		flex-direction: column;
 		gap: rem(10);
+
+		@media (max-width:$mobileSmall){
+			 gap: rem(5); 
+		}
 	}
 
 	&__raiting {
@@ -75,17 +111,29 @@
 	&__name {
 		font-size: rem(18);
 		font-weight: 700;
+
+		@media (max-width:$mobileSmall){
+			 font-size: rem(12); 
+		}
 	}
 
 	&__date {
 		color: rgba(62, 62, 62, 0.60);
 		font-size: rem(13);
+
+		@media (max-width:$mobileSmall){
+			font-size: rem(10); 
+		}
 	}
 
 	&__bottom {
 		p {
 			font-size: rem(13);
 			line-height: math.div(16, 13);
+
+			@media (max-width:$mobileSmall){
+				 font-size: rem(12); 
+			}
 		}
 	}
 }
@@ -98,6 +146,10 @@
 	justify-content: space-between;
 	width: rem(360);
 	transform: translateX(-50%);
+
+	@media (max-width:$mobileSmall){
+		width: rem(280);
+	}
 	.prev, .next {
 
 	}
