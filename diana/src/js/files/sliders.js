@@ -78,10 +78,10 @@ function initSliders() {
 			// 	slideShadows: true,
 			//   },
 			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// 	disableOnInteraction: false,
+			// },
 			
 
 			// Пагинация
@@ -149,7 +149,7 @@ function initSliders() {
 		new Swiper('.feedback__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Autoplay, Navigation],
+			modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -167,10 +167,10 @@ function initSliders() {
 			
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			
 
 			// Пагинация
