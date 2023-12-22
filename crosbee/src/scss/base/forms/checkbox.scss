@@ -1,54 +1,47 @@
-.checkbox {
-	position: relative;
-	&:not(:last-child) {
-		margin-bottom: em(5);
-	}
-	// .checkbox__input
-	&__input {
-		position: absolute;
-		width: 0;
-		height: 0;
-		opacity: 0;
-		&:focus + .checkbox__label:before {
-			// box-shadow: 0 0 5px #000;
-		}
-		&:checked + .checkbox__label:before {
-			background: #000;
-		}
-		&:checked + .checkbox__label:after {
-			transform: scale(1);
-		}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-regular.eot');
+	src: local('Open Sans'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
 
-	}
-	// .checkbox__label
-	&__label {
-		cursor: pointer;
-		display: inline-flex;
-		align-items: center;
-		position: relative;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #333;
-			border-radius: rem(5);
-		}
-		&::after{
-			content: url(../img/check.svg);
-			width: rem(20);
-			height: rem(20);
-			position: absolute;
-			left: rem(3);
-			top: rem(2);
-			transform: scale(0);
-			transition: all 0.3s ease;
-			
-		}
-	}
-	// .checkbox__text
-	&__text {
-	}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-regular.eot');
+	src: local('Open Sans'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-regular.eot');
+	src: local('Open Sans'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-light.eot');
+	src: local('Open Sans Light'), url('/bitrix/js/ui/fonts/opensans/opensans-light.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-semibold.eot');
+	src: local('Open Sans Semibold'), url('/bitrix/js/ui/fonts/opensans/opensans-semibold.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-semibold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('/bitrix/js/ui/fonts/opensans/opensans-bold.eot');
+	src: local('Open Sans Bold'), url('/bitrix/js/ui/fonts/opensans/opensans-bold.woff') format('woff'), url('/bitrix/js/ui/fonts/opensans/opensans-bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
 }

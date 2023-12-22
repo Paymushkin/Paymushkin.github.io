@@ -233,9 +233,11 @@
 	.icon-menu {
 		display: block;
 		position: relative;
+		padding: rem(12);
 		flex: 0 0 24px;
 		width: 40px;
 		height: 30px;
+		background-color: #fff;
 		cursor: pointer;
 		z-index: 10;
 
@@ -251,7 +253,7 @@
 			left: 0;
 			width: 100%;
 			height: rem(2);
-			background-color: $highlightColor;
+			background-color: $textColorHighlight;
 			border-radius: rem(10);
 			transition: all 0.3s ease 0s;
 			@media (max-width:$mac){
@@ -263,9 +265,11 @@
 		}
 		&::after {
 			bottom: 0px;
+			width: 33%;
 		}
 		span {
 			top: calc(50% - 1px);
+			width: 66%;
 			@media (max-width:$mac){
 				// top: calc(50% - 2px);
 			}

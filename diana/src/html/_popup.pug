@@ -1,184 +1,106 @@
-div(aria-hidden="true")#form.popup
+div(aria-hidden="true", data-type="name-service")#form.send-request.popup
 	.popup__wrapper
 		.popup__content
-			button(data-close type="button").popup__close._icon-close
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
 			.body
 				.request__form.form-request
 					.form-request__title Оставьте заявку
 					.form-request__text 
 						| Диана вам перезвони<br>
 						| и запишет вас на удобное время
-					//- .form-request__radio 
-					//- 	.options
-					//- 		.options__item
-					//- 			input#o_1.options__input(hidden='' checked='' type='radio' value='1' name='option')
-					//- 			label.options__label(for='o_1')
-					//- 				span.options__text Индивидуально
-					//- 		.options__item
-					//- 			input#o_2.options__input(hidden='' type='radio' value='2' name='option')
-					//- 			label.options__label(for='o_2')
-					//- 				span.options__text В группе
 					.form-field
 						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
-						input#name(type="text", name="name", placeholder="Ваше имя")
+						input.name(type="text", name="name", placeholder="Ваше имя")
 					.form-field._with-select
-						select(name="form[]").form
-							option(value="1", selected) Выберите услугу
-							option(value="2") Индивидуальные занятия
-							option(value="3") Абонемент на 4 занятия
-							option(value="4") Групповые занятия
-							option(value="5") День рождения на катке
-					//- .form-field
-					//- 	svg(width='13' height='13' viewbox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
-					//- 		path(opacity='0.6' d='M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z' fill='#3E3E3E')
-					//- 	input#name(type="tel", name="name", placeholder="Номер телефона")
+						select(name="service-type").form
+							option(value="", selected) Выберите услугу
+							option(value="индивидуальные занятия") Индивидуальные занятия
+							option(value="абонемент на 4 занятия") Абонемент на 4 занятия
+							option(value="групповые занятия") Групповые занятия
+							option(value="день рождения на катке") День рождения на катке
 					a(href="").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true")#form-1.popup
+div(aria-hidden="true", data-type="name-class", data-class="День рождения на катке")#form-1.send-request.popup
 	.popup__wrapper
 		.popup__content
-			button(data-close type="button").popup__close._icon-close
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
 			.body
 				.request__form.form-request
 					.form-request__title День рождения на катке
 					.form-request__text 
 						| Диана вам перезвони<br>
 						| и запишет вас на удобное время
-					//- .form-request__radio 
-					//- 	.options
-					//- 		.options__item
-					//- 			input#o_1.options__input(hidden='' checked='' type='radio' value='1' name='option')
-					//- 			label.options__label(for='o_1')
-					//- 				span.options__text Индивидуально
-					//- 		.options__item
-					//- 			input#o_2.options__input(hidden='' type='radio' value='2' name='option')
-					//- 			label.options__label(for='o_2')
-					//- 				span.options__text В группе
 					.form-field
 						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
-						input#name(type="text", name="name", placeholder="Ваше имя")
-					//- .form-field._with-select
-					//- 	select(name="form[]").form
-					//- 		option(value="1", selected) Выберите услугу
-					//- 		option(value="2") Индивидуальные занятия
-					//- 		option(value="3") Абонемент на 4 занятия
-					//- 		option(value="4") Групповые занятия
-					//- 		option(value="5") День рождения на катке
-					//- .form-field
-					//- 	svg(width='13' height='13' viewbox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
-					//- 		path(opacity='0.6' d='M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z' fill='#3E3E3E')
-					//- 	input#name(type="tel", name="name", placeholder="Номер телефона")
+						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="день рождения на катке").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true")#form-2.popup
+div(aria-hidden="true", data-type="name-class", data-class="Индивидуальное занятие")#form-2.send-request.popup
 	.popup__wrapper
 		.popup__content
-			button(data-close type="button").popup__close._icon-close
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
 			.body
 				.request__form.form-request
 					.form-request__title Индивидуальное занятие
 					.form-request__text 
 						| Диана вам перезвони<br>
 						| и запишет вас на удобное время
-					//- .form-request__radio 
-					//- 	.options
-					//- 		.options__item
-					//- 			input#o_1.options__input(hidden='' checked='' type='radio' value='1' name='option')
-					//- 			label.options__label(for='o_1')
-					//- 				span.options__text Индивидуально
-					//- 		.options__item
-					//- 			input#o_2.options__input(hidden='' type='radio' value='2' name='option')
-					//- 			label.options__label(for='o_2')
-					//- 				span.options__text В группе
 					.form-field
 						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
-						input#name(type="text", name="name", placeholder="Ваше имя")
-					//- .form-field._with-select
-					//- 	select(name="form[]").form
-					//- 		option(value="1", selected) Выберите услугу
-					//- 		option(value="2") Индивидуальные занятия
-					//- 		option(value="3") Абонемент на 4 занятия
-					//- 		option(value="4") Групповые занятия
-					//- 		option(value="5") День рождения на катке
-					//- .form-field
-					//- 	svg(width='13' height='13' viewbox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
-					//- 		path(opacity='0.6' d='M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z' fill='#3E3E3E')
-					//- 	input#name(type="tel", name="name", placeholder="Номер телефона")
+						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="индивидуальное занятие").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true")#form-3.popup
+div(aria-hidden="true", data-type="name-class", data-class="Групповое занятие")#form-3.send-request.popup
 	.popup__wrapper
 		.popup__content
-			button(data-close type="button").popup__close._icon-close
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
 			.body
 				.request__form.form-request
 					.form-request__title Групповые занятия
 					.form-request__text 
 						| Диана вам перезвони<br>
 						| и запишет вас на удобное время
-					//- .form-request__radio 
-					//- 	.options
-					//- 		.options__item
-					//- 			input#o_1.options__input(hidden='' checked='' type='radio' value='1' name='option')
-					//- 			label.options__label(for='o_1')
-					//- 				span.options__text Индивидуально
-					//- 		.options__item
-					//- 			input#o_2.options__input(hidden='' type='radio' value='2' name='option')
-					//- 			label.options__label(for='o_2')
-					//- 				span.options__text В группе
 					.form-field
 						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
-						input#name(type="text", name="name", placeholder="Ваше имя")
-					//- .form-field._with-select
-					//- 	select(name="form[]").form
-					//- 		option(value="1", selected) Выберите услугу
-					//- 		option(value="2") Индивидуальные занятия
-					//- 		option(value="3") Абонемент на 4 занятия
-					//- 		option(value="4") Групповые занятия
-					//- 		option(value="5") День рождения на катке
-					//- .form-field
-					//- 	svg(width='13' height='13' viewbox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
-					//- 		path(opacity='0.6' d='M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z' fill='#3E3E3E')
-					//- 	input#name(type="tel", name="name", placeholder="Номер телефона")
+						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="групповое занятие").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true")#form-4.popup
+div(aria-hidden="true", data-type="name-class", data-class="Абонемент на 4 занятия")#form-4.send-request.popup
 	.popup__wrapper
 		.popup__content
-			button(data-close type="button").popup__close._icon-close
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
 			.body
 				.request__form.form-request
 					.form-request__title Абонемент на 4 занятия
 					.form-request__text 
 						| Диана вам перезвони<br>
 						| и запишет вас на удобное время
-					//- .form-request__radio 
-					//- 	.options
-					//- 		.options__item
-					//- 			input#o_1.options__input(hidden='' checked='' type='radio' value='1' name='option')
-					//- 			label.options__label(for='o_1')
-					//- 				span.options__text Индивидуально
-					//- 		.options__item
-					//- 			input#o_2.options__input(hidden='' type='radio' value='2' name='option')
-					//- 			label.options__label(for='o_2')
-					//- 				span.options__text В группе
 					.form-field
 						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
-						input#name(type="text", name="name", placeholder="Ваше имя")
-					//- .form-field._with-select
-					//- 	select(name="form[]").form
-					//- 		option(value="1", selected) Выберите услугу
-					//- 		option(value="2") Индивидуальные занятия
-					//- 		option(value="3") Абонемент на 4 занятия
-					//- 		option(value="4") Групповые занятия
-					//- 		option(value="5") День рождения на катке
-					//- .form-field
-					//- 	svg(width='13' height='13' viewbox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg')
-					//- 		path(opacity='0.6' d='M11.9766 9.57031L11.4141 11.9375C11.3438 12.2891 11.0625 12.5234 10.7109 12.5234C4.80469 12.5 0 7.69531 0 1.78906C0 1.4375 0.210938 1.15625 0.5625 1.08594L2.92969 0.523438C3.25781 0.453125 3.60938 0.640625 3.75 0.945312L4.85156 3.5C4.96875 3.80469 4.89844 4.15625 4.64062 4.34375L3.375 5.375C4.17188 6.99219 5.48438 8.30469 7.125 9.10156L8.15625 7.83594C8.34375 7.60156 8.69531 7.50781 9 7.625L11.5547 8.72656C11.8594 8.89062 12.0469 9.24219 11.9766 9.57031Z' fill='#3E3E3E')
-					//- 	input#name(type="tel", name="name", placeholder="Номер телефона")
+						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="абонемент на 4 занятия").button.form-button ОТПРАВИТЬ

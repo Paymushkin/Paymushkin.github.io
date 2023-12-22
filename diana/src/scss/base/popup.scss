@@ -67,6 +67,15 @@ body::after {
 	}
 }
 
+.popup__close {
+	position: absolute;
+	top: rem(15);
+	right: rem(15);
+	display: flex;
+	outline: none;
+	width: rem(30);
+}
+
 
 .form-request {
 
