@@ -785,12 +785,10 @@ details[open] summary:before {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
   -ms-flex-align: start;
       align-items: flex-start;
   gap: 3rem;
-  min-height: 50rem;
+  min-height: 44.5rem;
 }
 
 .header__menu {
