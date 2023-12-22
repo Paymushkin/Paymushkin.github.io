@@ -19,13 +19,13 @@ div(aria-hidden="true", data-type="name-service")#form.send-request.popup
 					.form-field._with-select
 						select(name="service-type").form
 							option(value="", selected) Выберите услугу
-							option(value="индивидуальные занятия") Индивидуальные занятия
-							option(value="абонемент на 4 занятия") Абонемент на 4 занятия
-							option(value="групповые занятия") Групповые занятия
-							option(value="день рождения на катке") День рождения на катке
+							option(value="индивидуальное") Индивидуальные занятия
+							option(value="абонемент на индивидуальное") Абонемент на 4 занятия
+							option(value="групповое") Групповые занятия
+							option(value="День Рождения") День рождения на катке
 					a(href="").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true", data-type="name-class", data-class="День рождения на катке")#form-1.send-request.popup
+div(aria-hidden="true", data-type="name-class", data-class="День Рождения")#form-1.send-request.popup
 	.popup__wrapper
 		.popup__content
 			button(data-close type="button").popup__close
@@ -45,7 +45,7 @@ div(aria-hidden="true", data-type="name-class", data-class="День рожде�
 						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="день рождения на катке").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true", data-type="name-class", data-class="Индивидуальное занятие")#form-2.send-request.popup
+div(aria-hidden="true", data-type="name-class", data-class="индивидуальное")#form-2.send-request.popup
 	.popup__wrapper
 		.popup__content
 			button(data-close type="button").popup__close
@@ -65,7 +65,7 @@ div(aria-hidden="true", data-type="name-class", data-class="Индивидуал
 						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="индивидуальное занятие").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true", data-type="name-class", data-class="Групповое занятие")#form-3.send-request.popup
+div(aria-hidden="true", data-type="name-class", data-class="групповое")#form-3.send-request.popup
 	.popup__wrapper
 		.popup__content
 			button(data-close type="button").popup__close
@@ -85,7 +85,7 @@ div(aria-hidden="true", data-type="name-class", data-class="Групповое �
 						input.name(type="text", name="name", placeholder="Ваше имя")
 					a(href="", data-text="групповое занятие").button.form-button ОТПРАВИТЬ
 
-div(aria-hidden="true", data-type="name-class", data-class="Абонемент на 4 занятия")#form-4.send-request.popup
+div(aria-hidden="true", data-type="name-class", data-class="абонемент на индивидуальное")#form-4.send-request.popup
 	.popup__wrapper
 		.popup__content
 			button(data-close type="button").popup__close
