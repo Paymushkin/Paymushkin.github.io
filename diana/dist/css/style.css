@@ -184,7 +184,7 @@ body {
 }
 
 .no-webp .button{
-  background: url(../img/button.png); }
+  background-image: url(../img/button.png); }
 
 .button {
   position: relative;
@@ -4246,7 +4246,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 }
 
-.webp .button{ background: url(../img/button.webp); }
+.webp .button{ background-image: url(../img/button.webp); }
 
 .webp .button._with-decor-2{ background-image: url(../img/button-2.webp); }
 
