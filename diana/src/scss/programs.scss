@@ -86,40 +86,40 @@
 		overflow-y: visible;
 	}
 
-	&._slide {
+	// &._slide {
 
-		&_1 {
-			.programs-slide__img {
-				background-image: url(../img/programs/program-1-1.png);
-				animation: slideShow-1 8s ease-in-out 1s infinite ;
-			}
+	// 	&_1 {
+	// 		.programs-slide__img {
+	// 			background-image: url(../img/programs/program-1-1.png);
+	// 			animation: slideShow-1 8s ease-in-out infinite  alternate-reverse;
+	// 		}
 					
-		}
+	// 	}
 
-		&_2 {
-			.programs-slide__img {
-				background-image: url(../img/programs/program-2-1.png);
-				animation: slideShow-2 8s ease-in-out 1s infinite;
-			}
+	// 	&_2 {
+	// 		.programs-slide__img {
+	// 			background-image: url(../img/programs/program-2-1.png);
+	// 			animation: slideShow-2 8s ease-in-out infinite  alternate-reverse;
+	// 		}
 			
-		}
+	// 	}
 
-		&_3 {
-			.programs-slide__img {
-				background-image: url(../img/programs/program-3-1.png);
-				animation: slideShow-3 8s ease-in-out 1s infinite ;
-			}
+	// 	&_3 {
+	// 		.programs-slide__img {
+	// 			background-image: url(../img/programs/program-3-1.png);
+	// 			animation: slideShow-3 8s ease-in-out infinite  alternate-reverse;
+	// 		}
 			
-		}
+	// 	}
 
-		&_4 {
-			.programs-slide__img {
-				background-image: url(../img/programs/program-4-1.png);
-				animation: slideShow-4 8s ease-in-out 1s infinite;
-			}
+	// 	&_4 {
+	// 		.programs-slide__img {
+	// 			background-image: url(../img/programs/program-4-1.png);
+	// 			animation: slideShow-4 8s ease-in-out infinite alternate-reverse;
+	// 		}
 			
-		}
-	}
+	// 	}
+	// }
 
 	&__title {
 		margin-bottom: rem(15);
@@ -145,12 +145,44 @@
 	}
 
 	&__img {
+		position: relative;
 		margin-bottom: rem(40);
 		width: rem(280);
 		height: rem(185);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		overflow: hidden;
+		
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			&:first-child{
+				opacity: 1;
+				animation: slideShow-1 20s infinite 0s forwards;
+			}
+
+			&:nth-child(2) {
+				opacity: 1;
+				animation: slideShow-2 20s infinite 0s  forwards;
+			}
+			&:nth-child(3) {
+				opacity: 1;
+				animation: slideShow-3 20s infinite 0s forwards;
+			}
+			&:nth-child(4) {
+				opacity: 1;
+				animation: slideShow-4 20s infinite 0s  forwards;
+			}
+		}
+		// background-position: center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		// will-change: contents;
+		// animation-play-state: running;
 
 		@media (max-width:$mobileSmall){
 			 margin-bottom: rem(24); 

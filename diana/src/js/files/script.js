@@ -44,13 +44,16 @@ requestForms.forEach(requestForm => {
 			switch(formType) {
 				case 'name-persons':
 					if (clientClassTypeValue == 'День Рождения') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы с Вами организовать ${clientClassTypeValue}`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу с Вами организовать ${clientClassTypeValue}`
 					}
-					else if (clientClassTypeValue == 'абонемент на индивидуальное') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы приобрести ${clientClassTypeValue} занятие`
+					else if (clientClassTypeValue == 'абонемент на индивидуальные') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу приобрести ${clientClassTypeValue} занятия`
+					}
+					else if (clientClassTypeValue == 'индивидуальное') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${clientClassTypeValue} занятие`
 					}
 					else {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы записаться на ${clientClassTypeValue} занятие`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${clientClassTypeValue} занятия`
 					}
 					
 					window.open(waLink, '_blank');
@@ -58,26 +61,32 @@ requestForms.forEach(requestForm => {
 				
 				case 'name-service':
 					if (clientServiceTypeValue == 'День Рождения') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы с Вами организовать ${clientServiceTypeValue}`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу с Вами организовать ${clientServiceTypeValue}`
 					}
-					else if (clientServiceTypeValue == 'абонемент на индивидуальное') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы приобрести ${clientServiceTypeValue} занятие`
+					else if (clientServiceTypeValue == 'абонемент на индивидуальные') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу приобрести ${clientServiceTypeValue} занятия`
+					}
+					else if (clientServiceTypeValue == 'индивидуальное') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${clientServiceTypeValue} занятие`
 					}
 					else {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы записаться на ${clientServiceTypeValue} занятие`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${clientServiceTypeValue} занятия`
 					}
 					window.open(waLink, '_blank');
 					break
 		
 				case 'name-class':
 					if (classType == 'День Рождения') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы с Вами организовать ${classType}`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу с Вами организовать ${classType}`
 					}
-					else if (classType == 'абонемент на индивидуальное') {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы приобрести ${classType} занятие`
+					else if (classType == 'абонемент на индивидуальные') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу приобрести ${classType} занятия`
+					}
+					else if (classType == 'индивидуальное') {
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${classType} занятие`
 					}
 					else {
-						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы записаться на ${classType} занятие`
+						waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хочу записаться на ${classType} занятия`
 					}
 					// waLink = `https://wa.me/+79119145730?text=Здравствуйте, меня зовут ${clientNameValue}. Хотели бы записаться на ${classType} занятие`
 					window.open(waLink, '_blank');
