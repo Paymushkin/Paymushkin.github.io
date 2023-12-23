@@ -46,6 +46,7 @@
 
 	&__title {
 		text-align: left;
+		text-transform: uppercase;
 
 		@media (max-width:$mobileSmall){
 			 text-align: center;
