@@ -1250,25 +1250,25 @@ details[open] summary:before {
      object-fit: cover;
 }
 
-.programs-slide__img img:first-child {
+.programs-slide__img img.image-1 {
   opacity: 1;
   -webkit-animation: slideShow-1 20s infinite 0s forwards;
           animation: slideShow-1 20s infinite 0s forwards;
 }
 
-.programs-slide__img img:nth-child(2) {
+.programs-slide__img img.image-2 {
   opacity: 1;
   -webkit-animation: slideShow-2 20s infinite 0s forwards;
           animation: slideShow-2 20s infinite 0s forwards;
 }
 
-.programs-slide__img img:nth-child(3) {
+.programs-slide__img img.image-3 {
   opacity: 1;
   -webkit-animation: slideShow-3 20s infinite 0s forwards;
           animation: slideShow-3 20s infinite 0s forwards;
 }
 
-.programs-slide__img img:nth-child(4) {
+.programs-slide__img img.image-4 {
   opacity: 1;
   -webkit-animation: slideShow-4 20s infinite 0s forwards;
           animation: slideShow-4 20s infinite 0s forwards;

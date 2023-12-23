@@ -160,20 +160,20 @@
 			height: 100%;
 			object-fit: cover;
 
-			&:first-child{
+			&.image-1{
 				opacity: 1;
 				animation: slideShow-1 20s infinite 0s forwards;
 			}
 
-			&:nth-child(2) {
+			&.image-2 {
 				opacity: 1;
 				animation: slideShow-2 20s infinite 0s  forwards;
 			}
-			&:nth-child(3) {
+			&.image-3 {
 				opacity: 1;
 				animation: slideShow-3 20s infinite 0s forwards;
 			}
-			&:nth-child(4) {
+			&.image-4 {
 				opacity: 1;
 				animation: slideShow-4 20s infinite 0s  forwards;
 			}
