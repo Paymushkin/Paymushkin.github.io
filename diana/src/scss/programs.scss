@@ -30,7 +30,7 @@
 		border-radius: rem(40);
 		z-index: 2;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			padding: 0 rem(10);
 			background-color: transparent;
 		}
@@ -42,7 +42,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				 display: none; 
 			}
 		}
@@ -52,7 +52,7 @@
 		margin-bottom: rem(50);
 		text-transform: uppercase;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			 margin-bottom: rem(30); 
 		}
 	}
@@ -60,7 +60,7 @@
 }
 
 .programs__wrapper {
-	@media (max-width:$mobileSmall){
+	@media (max-width:$mobile){
 		padding-bottom: rem(50); 
 	}
 }
@@ -75,12 +75,12 @@
 	border-radius: rem(15);
 	transition: 0.3s transform ease-in-out;
 
-	@media (min-width:$mobileSmall){
+	@media (min-width:$mobile){
 		opacity: 0.7;
 		transform: scale(percent(30,39)); 
 	}
 
-	@media (max-width:$mobileSmall){
+	@media (max-width:$mobile){
 		padding: rem(24) rem(15) rem(44);
 		background-color: #E2EAF4;
 		overflow-y: visible;
@@ -138,7 +138,7 @@
 		font-size: rem(10);
 		text-align: center;
 		
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			font-size: rem(9);
 			line-height: 1.3;
 		}
@@ -178,14 +178,19 @@
 				animation: slideShow-4 20s infinite 0s  forwards;
 			}
 		}
+		
 		// background-position: center;
 		// background-repeat: no-repeat;
 		// background-size: cover;
 		// will-change: contents;
 		// animation-play-state: running;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			 margin-bottom: rem(24); 
+		}
+
+		@media (max-width: em(320)){
+			  width: 100%;
 		}
 	}
 
@@ -197,7 +202,7 @@
 		line-height: 1.5;
 		text-transform: uppercase;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			margin-bottom: 0;
 			font-size: rem(16); 
 		}
@@ -208,7 +213,7 @@
 		width: rem(280);
 		height: rem(60);
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			position: absolute;
 			bottom: rem(-35);
 		}
@@ -216,7 +221,7 @@
 
 	&.swiper-slide-next {
 
-		@media (min-width:$mobileSmall){
+		@media (min-width:$mobile){
 			opacity: 1;
 			transform: scale(1.01); 
 		}
@@ -230,7 +235,7 @@
 		transform: translateY(-50%);
 
 		svg {
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				width: rem(10);
 				height: rem(18); 
 			}
@@ -240,14 +245,14 @@
 	.prev {
 		left: 0;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			 left: rem(4) 
 		}
 	}
 	.next {
 		right: 0;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			right: rem(4) 
 	   }
 	}

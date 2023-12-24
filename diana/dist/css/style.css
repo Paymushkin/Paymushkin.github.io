@@ -3652,8 +3652,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   color: #585858;
 }
 
-@media (min-width: 36.06125em) {
+@media (min-width: 48.06125em) {
   .header .menu {
+    display: none;
+  }
+
+  .header .menu__body .header__list-item.mobile {
     display: none;
   }
 
@@ -3687,9 +3691,27 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 }
 
-@media (min-width: 48.06125em) {
-  .header .menu__body .header__list-item.mobile {
-    display: none;
+@media (max-width: 20em) {
+  .button {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .header {
+    padding: 1.25rem 0rem;
+  }
+
+  .programs-slide__img {
+    width: 100%;
   }
 }
 
@@ -3732,86 +3754,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (max-width: 48.06125em) {
-  p.document__text {
-    font-size: 0.75rem;
-  }
-
-  .header .menu__body .header__list-item.desktop {
-    display: none;
-  }
-
-  .qa .accordion__details {
-    padding: 0.9375rem 0;
-  }
-}
-
-@media (max-width: 36.06125em) {
-  .button {
-    padding: 1.75rem 1.25rem 1.5625rem 1.25rem;
-    width: 18.75rem;
-    height: 4.375rem;
-    font-size: 0.6875rem;
-    border-radius: 12px/20px;
-  }
-
-  .button._with-decor {
-    padding-right: 4.3125rem;
-  }
-
-  .no-webp .button._with-decor{
-    background-image: url(../img/button-mob.png); }
-
-  .button._with-decor::after {
-    content: url(../img/skates-mob.png);
-    width: 5rem;
-    height: 4.5rem;
-    bottom: 13px;
-    right: 7px;
-  }
-
-  .no-webp .button._with-decor-2{
-    background-image: url(../img/button-2-mob.png); }
-
-  .button._with-decor-2 {
-    padding: 1.4375rem 5rem 1.3125rem 1.875rem;
-    width: 16.25rem;
-    height: 3.75rem;
-    font-size: 0.6875rem;
-  }
-
-  .button._with-decor-2::after {
-    content: url(../img/tablet-mob.png);
-    bottom: -1.0625rem;
-    right: -0.9375rem;
-  }
-
-  .popup__content {
-    padding: 3.125rem 1.25rem 1.25rem;
-    max-width: 21.25rem;
-  }
-
-  .popup__close {
-    top: 0.625rem;
-    right: 1.25rem;
-    width: 1.25rem;
-  }
-
-  .options {
-    -ms-flex-pack: center;
-        justify-content: center;
-    gap: 1.875rem;
-  }
-
-  .options__label {
-    padding: 0.5rem 0.9375rem;
-  }
-
-  .options__text {
-    font-size: 0.625rem;
-  }
-
   h2 {
     font-size: 2.5rem;
+  }
+
+  p.document__text {
+    font-size: 0.75rem;
   }
 
   details summary:before {
@@ -3826,11 +3774,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .header {
     padding: 1.25rem 0.625rem 4.5rem;
+    background-position: center;
   }
 
   .header__container {
     -ms-flex-pack: start;
         justify-content: flex-start;
+    -ms-flex-align: center;
+        align-items: center;
     gap: 0.3125rem;
     min-height: calc(100vh - 2.1875rem);
     min-height: calc(100svh - 2.1875rem);
@@ -3883,6 +3834,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .header .contacts {
+    display: none;
+  }
+
+  .header .menu__body .header__list-item.desktop {
     display: none;
   }
 
@@ -4150,6 +4105,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .qa .accordion__details {
+    padding: 0.9375rem 0;
+  }
+
+  .qa .accordion__details {
     padding: 0.625rem 0;
   }
 
@@ -4212,6 +4171,72 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 }
 
+@media (max-width: 36.06125em) {
+  .button {
+    padding: 1.75rem 1.25rem 1.5625rem 1.25rem;
+    width: 18.75rem;
+    height: 4.375rem;
+    font-size: 0.6875rem;
+    border-radius: 12px/20px;
+  }
+
+  .button._with-decor {
+    padding-right: 4.3125rem;
+  }
+
+  .no-webp .button._with-decor{
+    background-image: url(../img/button-mob.png); }
+
+  .button._with-decor::after {
+    content: url(../img/skates-mob.png);
+    width: 5rem;
+    height: 4.5rem;
+    bottom: 13px;
+    right: 7px;
+  }
+
+  .no-webp .button._with-decor-2{
+    background-image: url(../img/button-2-mob.png); }
+
+  .button._with-decor-2 {
+    padding: 1.4375rem 5rem 1.3125rem 1.875rem;
+    width: 16.25rem;
+    height: 3.75rem;
+    font-size: 0.6875rem;
+  }
+
+  .button._with-decor-2::after {
+    content: url(../img/tablet-mob.png);
+    bottom: -1.0625rem;
+    right: -0.9375rem;
+  }
+
+  .popup__content {
+    padding: 3.125rem 1.25rem 1.25rem;
+    max-width: 21.25rem;
+  }
+
+  .popup__close {
+    top: 0.625rem;
+    right: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .options {
+    -ms-flex-pack: center;
+        justify-content: center;
+    gap: 1.875rem;
+  }
+
+  .options__label {
+    padding: 0.5rem 0.9375rem;
+  }
+
+  .options__text {
+    font-size: 0.625rem;
+  }
+}
+
 @media (any-hover: hover) {
   .button-standart:hover {
     color: #D5BC9F;
@@ -4250,6 +4275,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .webp .qa__container{ background-image: url(../img/qa/bg.webp); }
 
+@media (max-width: 48.06125em){
+
+  .webp .header{ background-image: url(../img/hero/bg-2-mob2.webp); }
+}
+
+@media (max-width: 48.06125em){
+
+  .webp .first{ background-image: url(../img/first/bg-mob.webp); }
+}
+
 @media (max-width: 36.06125em){
 
   .webp .button._with-decor{ background-image: url(../img/button-mob.webp); }
@@ -4258,14 +4293,4 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @media (max-width: 36.06125em){
 
   .webp .button._with-decor-2{ background-image: url(../img/button-2-mob.webp); }
-}
-
-@media (max-width: 36.06125em){
-
-  .webp .header{ background-image: url(../img/hero/bg-2-mob2.webp); }
-}
-
-@media (max-width: 36.06125em){
-
-  .webp .first{ background-image: url(../img/first/bg-mob.webp); }
 }

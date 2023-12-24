@@ -1,7 +1,7 @@
 .qa {
 	padding-bottom: rem(100);
 
-	@media (max-width:$mobileSmall){
+	@media (max-width:$mobile){
 		padding-bottom: rem(50); 
 	}
 
@@ -16,7 +16,7 @@
 		background-repeat: no-repeat;
 		background-position: -30% -10%;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			flex-direction: column;
 			gap: rem(34);
 		}
@@ -26,7 +26,7 @@
 		text-align: left;
 		text-transform: uppercase;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			text-align: center;
 		}
 	}
@@ -42,7 +42,7 @@
 		// background-color: #fff;
 		border-radius: rem(30);
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			padding: 0 0 0 rem(50);
 			max-width: calc(100% - rem(50));
 		}
@@ -63,7 +63,7 @@
 			@media (max-width:$mobile){
 				padding: rem(15) 0 
 			}
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				padding: rem(10) 0;  
 			}
 			summary {
@@ -78,7 +78,7 @@
 				outline: none;
 				transition: all .3s ease;
 
-				@media (max-width:$mobileSmall){
+				@media (max-width:$mobile){
 					 font-size: rem(12); 
 				}
 			}
@@ -89,7 +89,7 @@
 				line-height: 1.5;
 				transition:all .3s ease;
 
-				@media (max-width:$mobileSmall){
+				@media (max-width:$mobile){
 					 font-size: rem(12); 
 				}
 			}

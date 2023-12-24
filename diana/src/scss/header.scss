@@ -4,10 +4,16 @@
 	background-position: top center;
 	background-size: cover;
 
-	@media (max-width:$mobileSmall){
+	@media (max-width:$mobile){
 		padding: rem(20) rem(10) rem(72);
-		background-image: url(../img/hero/bg-2-mob2.png);  
+		background-image: url(../img/hero/bg-2-mob2.png); 
+		background-position: center;
 	}
+
+	@media (max-width: em(320)){
+		// background-image: none;
+		padding: rem(20) rem(0);
+ 	 }
 
 	&__container {
 		position: relative;
@@ -25,8 +31,9 @@
 		// 	padding-top: rem(15);
 		// 	padding-bottom: rem(15);
 		// }
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			justify-content: flex-start;
+			align-items: center;
 			gap: rem(5);
 			min-height: calc(100vh - rem(35));
 			min-height: calc(100svh - rem(35));
@@ -53,7 +60,7 @@
 		letter-spacing: rem(2);
 		text-transform: uppercase;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			max-width: rem(265);
 			font-size: rem(42);
 			text-align: center; 
@@ -69,7 +76,7 @@
 		letter-spacing: rem(4);
 		font-weight: 400;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			margin-top: rem(-10);
 			font-size: rem(42);
 			text-align: center; 
@@ -88,7 +95,7 @@
 		&:not(:last-child) {
 			margin-bottom: rem(25);
 
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				margin-bottom: rem(10); 
 			}
 		}
@@ -99,7 +106,7 @@
 			max-width: rem(468);
 			font-size: rem(17);
 			line-height: 1.5;
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				font-size: rem(12); 
 			}
 		}
@@ -108,7 +115,7 @@
 	&__button {
 		align-self: flex-start;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			 position: absolute; 
 			 bottom: rem(0);
 			 left: 50%;
@@ -123,7 +130,7 @@
 		align-items: flex-start;
 		gap: rem(20);
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			flex: 1 1 60%;
 			flex-direction: column;
 			justify-content: flex-start;
@@ -140,7 +147,7 @@
 				color: $textColorHighlight;
 				line-height: math.div(23, 15);
 
-				@media (max-width:$mobileSmall){
+				@media (max-width:$mobile){
 					 font-size: rem(12); 
 				}
 
@@ -164,7 +171,7 @@
 		align-items: flex-end;
 		gap: rem(12);
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			display: none; 
 		}
 		a 	{
@@ -196,7 +203,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		@media (min-width:$mobileSmall){
+		@media (min-width:$mobile){
 			 display: none; 
 		}
 
