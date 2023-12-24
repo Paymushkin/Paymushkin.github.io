@@ -1366,9 +1366,9 @@ details[open] summary:before {
 .first__container {
   display: -ms-flexbox;
   display: flex;
-  gap: 10rem;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  gap: 8.125rem;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .first__title {

@@ -35,8 +35,8 @@
 
 	&__container {
 		display: flex;
-		gap: rem(160);
-		justify-content: flex-end;
+		gap: rem(130);
+		justify-content: center;
 
 		@media (max-width:$mobileSmall){
 			flex-direction: column;
