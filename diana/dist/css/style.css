@@ -177,10 +177,11 @@ body {
 }
 
 [class*=__container] {
-  margin: 0 auto;
   max-width: 72.5rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 .no-webp .button{
@@ -1511,8 +1512,8 @@ details[open] summary:before {
 }
 
 .slide-feedback__avatar {
-  width: 6.25rem;
-  height: 6.25rem;
+  min-width: 6.25rem;
+  min-height: 6.25rem;
   background-size: contain;
   background-position: top center;
   border-radius: 50%;
@@ -3692,17 +3693,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 }
 
-@media (max-width: 75em) {
-  [class*=__container] {
-    max-width: 60.625rem;
-  }
-}
-
 @media (max-width: 90.06125em) {
-  [class*=__container] {
-    max-width: 64rem;
-  }
-
   h4 {
     font-size: 1.375rem;
   }
@@ -3719,10 +3710,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (max-width: 67.49875em) {
-  [class*=__container] {
-    max-width: 48rem;
-  }
-
   .button-standart {
     font-size: 0.75rem;
   }
@@ -3745,11 +3732,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (max-width: 48.06125em) {
-  [class*=__container] {
-    max-width: none;
-    padding: 0 1.25rem;
-  }
-
   p.document__text {
     font-size: 0.75rem;
   }
@@ -4124,8 +4106,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .slide-feedback__avatar {
-    width: 3.75rem;
-    height: 3.75rem;
+    min-width: 3.75rem;
+    min-height: 3.75rem;
   }
 
   .slide-feedback__info {
