@@ -35,7 +35,8 @@
 
 	&__container {
 		display: flex;
-		gap: rem(100);
+		gap: rem(160);
+		justify-content: flex-end;
 
 		@media (max-width:$mobileSmall){
 			flex-direction: column;
@@ -45,6 +46,8 @@
 	}
 
 	&__title {
+		// padding-left: 20%;
+		width: auto;
 		text-align: left;
 		text-transform: uppercase;
 

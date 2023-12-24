@@ -52,11 +52,17 @@
 		&::after{
 			content: url(../img/skates.png);
 			position: absolute;
-			bottom: -15px;
-			right: -7px;
+			bottom: 8px;
+			right: 7px;
+			width: rem(140);
+			height: rem(126);
 
 			@media (max-width:$mobileSmall){
 				content: url(../img/skates-mob.png);
+				width: rem(80);
+				height: rem(72);
+				bottom: 13px;
+				right: 7px;
 			}
 		}
 	}

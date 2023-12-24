@@ -221,8 +221,10 @@ body {
 .button._with-decor::after {
   content: url(../img/skates.png);
   position: absolute;
-  bottom: -15px;
-  right: -7px;
+  bottom: 8px;
+  right: 7px;
+  width: 8.75rem;
+  height: 7.875rem;
 }
 
 .no-webp .button._with-decor-2{
@@ -1228,7 +1230,7 @@ details[open] summary:before {
 
 .programs-slide__text {
   margin-bottom: 1.4375rem;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   text-align: center;
 }
 
@@ -1364,10 +1366,13 @@ details[open] summary:before {
 .first__container {
   display: -ms-flexbox;
   display: flex;
-  gap: 6.25rem;
+  gap: 10rem;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .first__title {
+  width: auto;
   text-align: left;
   text-transform: uppercase;
 }
@@ -3665,9 +3670,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .programs-slide.swiper-slide-next {
     opacity: 1;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
   }
 
   .why-item:nth-child(2) {
@@ -3776,6 +3781,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .button._with-decor::after {
     content: url(../img/skates-mob.png);
+    width: 5rem;
+    height: 4.5rem;
+    bottom: 13px;
+    right: 7px;
   }
 
   .no-webp .button._with-decor-2{
@@ -3986,7 +3995,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .programs-slide__text {
-    font-size: 0.625rem;
+    font-size: 0.5625rem;
     line-height: 1.3;
   }
 
