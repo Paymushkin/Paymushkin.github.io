@@ -156,21 +156,23 @@
 			padding: rem(30) rem(30) rem(23);
 			background-color: #F5FAF9;
 
-			@media (any-hover: hover){
-				&:hover{
-					&::after{
-						transform: scale(1.1);
-					}
-					span {
-						// background-color: $textColor;
-					}
-					
-					svg	{
-						transform: translateX(5px);
-
-						// path {
-						// 	stroke: #fff;
-						// }
+			@media (min-width:$mobile){
+				@media (any-hover: hover){
+					&:hover{
+						&::after{
+							transform: scale(1.1);
+						}
+						span {
+							// background-color: $textColor;
+						}
+						
+						svg	{
+							transform: translateX(5px);
+	
+							// path {
+							// 	stroke: #fff;
+							// }
+						}
 					}
 				}
 			}

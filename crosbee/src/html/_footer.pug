@@ -87,13 +87,17 @@ footer.footer
 			nav.footer-center__nav.footer-nav
 				ul
 					li 
-						h4 О нас
-					li 
-						h4 Кейсы
-					li 
-						h4 Как мы работаем
-					li 
-						h4 Контакты
+						a(href="about.html") 
+							h4 О нас
+					li
+						a(href="cases.html")  
+							h4 Кейсы
+					li
+						a(href="how.html")  
+							h4 Как мы работаем
+					li
+						a(href="#" data-goto=".footer")  
+							h4 Контакты
 					//- li 
 					//- 	h4 Политика конфиденциальности
 		.footer-bottom

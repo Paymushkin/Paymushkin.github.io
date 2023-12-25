@@ -61,7 +61,7 @@
 	&__slider {
 		margin-bottom: rem(70);
 		@media (max-width:$mobileSmall){
-			margin-bottom: rem(34); 
+			margin-bottom: rem(34)!important; 
 		}
 	}
 	&__bottom{
@@ -268,7 +268,7 @@
 		font-weight: 500;
 
 		@media (max-width:$mobile){
-			 
+			 margin-bottom: rem(17);
 		}
 
 		@media (max-width:$mobileSmall){
@@ -284,6 +284,7 @@
 
 		@media (max-width:$mobile){
 			margin-bottom: rem(34);
+			font-weight: 400;
 		}
 
 		@media (max-width:$mobileSmall){
