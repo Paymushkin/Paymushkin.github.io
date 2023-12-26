@@ -3989,13 +3989,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     font-size: 0.625rem;
   }
 
-  .no-webp .first{
-    background-image: url(../img/first/bg-mob.png); }
-
   .first {
     padding: 0 0 3.125rem;
-    min-height: 43.875rem;
-    background: 100%;
+    min-height: 44.5rem;
   }
 
   .first__container {
@@ -4282,11 +4278,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @media (max-width: 48.06125em){
 
   .webp .header{ background-image: url(../img/hero/bg-2-mob2.webp); }
-}
-
-@media (max-width: 48.06125em){
-
-  .webp .first{ background-image: url(../img/first/bg-mob.webp); }
 }
 
 @media (max-width: 36.06125em){
