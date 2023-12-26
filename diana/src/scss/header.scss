@@ -10,6 +10,10 @@
 		background-position: center;
 	}
 
+	@media (max-width:$mobileSmall){
+		background-position: top center; 
+	}
+
 	@media (max-width: em(320)){
 		// background-image: none;
 		padding: rem(20) rem(0);

@@ -4235,6 +4235,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .options__text {
     font-size: 0.625rem;
   }
+
+  .header {
+    background-position: top center;
+  }
 }
 
 @media (any-hover: hover) {
