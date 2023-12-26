@@ -10,6 +10,7 @@
 	background-image: url(../img/landing/pdf.png);
 	background-repeat: no-repeat;
 	background-position: right center;
+	background-size: contain;
 	border-radius: rem(25);
 
 	@media (max-width:$tablet){

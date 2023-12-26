@@ -113,5 +113,61 @@
 			height: rem(360);
 			border-radius: 0;  
 		}
+
+		&._slide-1 {
+			background-image: url("../img/landing/slide-1.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-1-mob.png");
+			}
+		}
+	
+		&._slide-2 {
+			background-image: url("../img/landing/slide-2.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-2-mob.png");
+			}
+		}
+
+		&._slide-3 {
+			background-image: url("../img/landing/slide-3.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-3-mob.png");
+			}
+		}
+
+		&._slide-4 {
+			background-image: url("../img/landing/slide-4.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-4-mob.png");
+			}
+		}
+
+		&._slide-5 {
+			background-image: url("../img/landing/slide-5.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-5-mob.png");
+			}
+		}
+
+		&._slide-6 {
+			background-image: url("../img/landing/slide-6.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-6-mob.png");
+			}
+		}
+
+		&._slide-7 {
+			background-image: url("../img/landing/slide-7.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/slide-7-mob.png");
+			}
+		}
 	}
 }

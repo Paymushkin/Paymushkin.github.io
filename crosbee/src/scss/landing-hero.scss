@@ -362,15 +362,27 @@
 	&__slide {
 		
 		&._slide-1 {
-			background-image: url("../img/landing/hero-poster-1.png")
+			background-image: url("../img/landing/hero-poster-1.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/hero-poster-1-mob.png") 
+			}
 		}
 
 		&._slide-2 {
-			background-image: url("../img/landing/hero-poster-2.png")
+			background-image: url("../img/landing/hero-poster-2.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/hero-poster-2-mob.png") 
+			}
 		}
 
 		&._slide-3 {
-			background-image: url("../img/landing/hero-poster-3.png")
+			background-image: url("../img/landing/hero-poster-3.png");
+
+			@media (max-width:$mobileSmall){
+				background-image: url("../img/landing/hero-poster-3-mob.png") 
+			}
 		}
 	}
 }

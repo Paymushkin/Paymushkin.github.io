@@ -73,6 +73,10 @@ body::after {
 	height: 100dvh;
 	border-radius: 0;
 
+	picture {
+		height: 100%;
+	}
+
 	img {
 		padding: rem(40);
 		max-width: 100%;
