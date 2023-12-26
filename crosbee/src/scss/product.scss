@@ -178,11 +178,13 @@
 		flex: 1 1 50%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		// justify-content: center;
 		align-items: center;
 		gap: rem(30);
+		padding: 0 rem(40);
+		// max-width: 50%;
 		img {
-
+			max-width: 100%;
 		}
 		a {
 			display: flex;
