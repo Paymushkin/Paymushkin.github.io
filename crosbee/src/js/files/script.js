@@ -59,3 +59,11 @@ if(document.querySelector('button[data-link]')) {
 			}, 2000);
 		})
 }
+
+// document.addEventListener("beforePopupOpen", function (e) {
+// 	// Попап
+// 	const currentPopup = e.detail.popup.targetOpen.element;
+// 	if (currentPopup.classList.contains("popup-swiper")) {
+// 		console.log("это попап со свайпером", e)
+// 	}
+// });

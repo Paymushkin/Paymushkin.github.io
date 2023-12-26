@@ -8,9 +8,18 @@ html(lang="ru")
 			main.main-content
 				section#single-case.case-hero.scroll
 					.case-hero__body._single-case 
-						.case-hero__poster 
-							//- img(src="@img/case/case-1.png", alt="")
-							img(srcset="@img/case/case-1.png 768w" src="@img/case/case-1-mob.png" alt="Картинка")
+						.case-hero__poster
+							.case-hero__slider.swiper
+								.case-hero__wrapper.swiper-wrapper
+									.case-hero__slide.swiper-slide(data-popup="#case-popup")
+										//- img(src="@img/case/case-1.png", alt="")
+										img(srcset="@img/case/case-1.png 768w" src="@img/case/case-1-mob.png" alt="Картинка")
+									.case-hero__slide.swiper-slide(data-popup="#case-popup")
+										//- img(src="@img/case/case-1.png", alt="")
+										img(srcset="@img/case/case-1.png 768w" src="@img/case/case-1-mob.png" alt="Картинка")
+									.case-hero__slide.swiper-slide(data-popup="#case-popup")
+										//- img(src="@img/case/case-1.png", alt="")
+										img(srcset="@img/case/case-1.png 768w" src="@img/case/case-1-mob.png" alt="Картинка")
 						
 						//- 	h2 Этапы выполнения <br>вашего заказа
 						h2.case-hero__text._single-case
