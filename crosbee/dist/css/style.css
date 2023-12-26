@@ -2321,6 +2321,15 @@ body.scrollbar-zoom::-webkit-scrollbar {
   line-height: 1.2;
 }
 
+.no-webp .landing-hero__slide._slide-1{
+  background-image: url("../img/landing/hero-poster-1.png"); }
+
+.no-webp .landing-hero__slide._slide-2{
+  background-image: url("../img/landing/hero-poster-2.png"); }
+
+.no-webp .landing-hero__slide._slide-3{
+  background-image: url("../img/landing/hero-poster-3.png"); }
+
 .no-webp .landing-manager{
   background-image: url(../img/landing/banner.png); }
 
@@ -5355,6 +5364,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .webp .landing-hero__item._small._item-2::after{ background-image: url(../img/landing/poster-item-2.webp); }
 
 .webp .landing-hero__item._small._item-3::after{ background-image: url(../img/landing/poster-item-3.webp); }
+
+.webp .landing-hero__slide._slide-1{ background-image: url(../img/landing/hero-poster-1.webp); }
+
+.webp .landing-hero__slide._slide-2{ background-image: url(../img/landing/hero-poster-2.webp); }
+
+.webp .landing-hero__slide._slide-3{ background-image: url(../img/landing/hero-poster-3.webp); }
 
 .webp .landing-manager{ background-image: url(../img/landing/banner.webp); }
 

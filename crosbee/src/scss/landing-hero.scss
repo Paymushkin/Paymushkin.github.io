@@ -358,4 +358,19 @@
 			}
 		}
 	}
+
+	&__slide {
+		
+		&._slide-1 {
+			background-image: url("../img/landing/hero-poster-1.png")
+		}
+
+		&._slide-2 {
+			background-image: url("../img/landing/hero-poster-2.png")
+		}
+
+		&._slide-3 {
+			background-image: url("../img/landing/hero-poster-3.png")
+		}
+	}
 }
