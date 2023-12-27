@@ -1,0 +1,16 @@
+.header {
+	padding: 20px 50px;
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		padding: 10px;
+		color: $primaryColor;
+		font-size: 28px;
+		font-weight: 500;
+	}
+}

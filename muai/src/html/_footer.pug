@@ -1,0 +1,47 @@
+footer.footer#contacts
+	.footer__container
+		.footer__top
+			h2.footer__title MUAI
+			nav.footer__nav.nav-footer
+				ul.nav-footer__menu 
+					li.nav-footer__item
+						a.nav-footer__link(href="#", data-goto="#about") Home
+					li.nav-footer__item
+						a.nav-footer__link(href="#", data-goto="#programs") Princing
+					li.nav-footer__item
+						a.nav-footer__link(href="#", data-goto="#feedback") About
+					li.nav-footer__item
+						a.nav-footer__link(href="#", data-goto="#contacts") Contact
+			ul.contacts-list
+				li.contacts-list__item
+					address
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+							<path d="M14.234 21.816C16.8485 19.515 21.5 14.814 21.5 10.5C21.5 8.11305 20.5518 5.82387 18.864 4.13604C17.1761 2.44821 14.8869 1.5 12.5 1.5C10.1131 1.5 7.82387 2.44821 6.13604 4.13604C4.44821 5.82387 3.5 8.11305 3.5 10.5C3.5 14.814 8.15 19.515 10.766 21.816C11.2432 22.2419 11.8604 22.4773 12.5 22.4773C13.1396 22.4773 13.7568 22.2419 14.234 21.816ZM9.5 10.5C9.5 9.70435 9.81607 8.94129 10.3787 8.37868C10.9413 7.81607 11.7044 7.5 12.5 7.5C13.2956 7.5 14.0587 7.81607 14.6213 8.37868C15.1839 8.94129 15.5 9.70435 15.5 10.5C15.5 11.2956 15.1839 12.0587 14.6213 12.6213C14.0587 13.1839 13.2956 13.5 12.5 13.5C11.7044 13.5 10.9413 13.1839 10.3787 12.6213C9.81607 12.0587 9.5 11.2956 9.5 10.5Z" fill="white"/>
+						</svg>
+						| Java, Indonesia
+				li.contacts-list__item
+					a(href="mailto:Yourmail@mail.com")
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+							<path d="M22.5 8.608V16.75C22.5001 17.5801 22.1824 18.3788 21.6123 18.9822C21.0422 19.5856 20.2628 19.948 19.434 19.995L19.25 20H5.75C4.91986 20.0001 4.12117 19.6824 3.51777 19.1123C2.91437 18.5422 2.552 17.7628 2.505 16.934L2.5 16.75V8.608L12.152 13.664C12.2594 13.7202 12.3788 13.7496 12.5 13.7496C12.6212 13.7496 12.7406 13.7202 12.848 13.664L22.5 8.608ZM5.75 4H19.25C20.0556 3.9999 20.8325 4.299 21.43 4.83927C22.0276 5.37954 22.4032 6.12248 22.484 6.924L12.5 12.154L2.516 6.924C2.59352 6.15431 2.94305 5.43752 3.50175 4.90246C4.06045 4.36741 4.79168 4.04919 5.564 4.005L5.75 4Z" fill="white"/>
+						</svg>
+						| Yourmail@mail.com
+
+				li.contacts-list__item
+					a(href="https://instagram.com/yournick", target="_blank")
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+							<path d="M22.5 8.608V16.75C22.5001 17.5801 22.1824 18.3788 21.6123 18.9822C21.0422 19.5856 20.2628 19.948 19.434 19.995L19.25 20H5.75C4.91986 20.0001 4.12117 19.6824 3.51777 19.1123C2.91437 18.5422 2.552 17.7628 2.505 16.934L2.5 16.75V8.608L12.152 13.664C12.2594 13.7202 12.3788 13.7496 12.5 13.7496C12.6212 13.7496 12.7406 13.7202 12.848 13.664L22.5 8.608ZM5.75 4H19.25C20.0556 3.9999 20.8325 4.299 21.43 4.83927C22.0276 5.37954 22.4032 6.12248 22.484 6.924L12.5 12.154L2.516 6.924C2.59352 6.15431 2.94305 5.43752 3.50175 4.90246C4.06045 4.36741 4.79168 4.04919 5.564 4.005L5.75 4Z" fill="white"/>
+						</svg>
+						| Your Instagram
+		.footer__banner.banner._dark 
+			h3.banner__title Join to get free updates every week.
+			form(action="#", methods="post").banner__form
+				input#email(type="email", name="email", placeholder="Email Address")
+				button(type="submit").button._highlight Subscribe
+		ul.footer__bottom.footer-bottom
+			li.footer-bottom__item
+				span.footer-bottom__copy ©2023 MUAI
+			li.footer-bottom__item
+				span.footer-bottom__rights  All Rights Reserved
+			li.footer-bottom__item
+				a(href="#", target="_blank") Privacy Policy I Terms Of Service
+
