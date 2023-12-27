@@ -22,6 +22,7 @@ requestForms.forEach(requestForm => {
 	let clientNameValue = ""
 	let clientServiceTypeValue = ""
 	let clientClassTypeValue = ""
+	
 	document.addEventListener("selectCallback", function (e) {
 		// Селект
 		clientServiceTypeValue = e.detail.select.value;
