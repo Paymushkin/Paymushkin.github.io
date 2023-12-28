@@ -556,26 +556,6 @@ input[type='number'] {
 	}
 }
 
-.loader__icon div {
-	position: absolute;
-	animation: loader 1s linear infinite;
-	width: 160px;
-	height: 160px;
-	top: 20px;
-	left: 20px;
-	border-radius: 50%;
-	box-shadow: 0 4px 0 0 #849496;
-	transform-origin: 80px 82px;
-	box-sizing: content-box; 
-}
-
-.loader__spinner {
-	width: 200px;
-	height: 200px;
-	display: inline-block;
-	overflow: hidden;
-	background: #ffffff;
-}
 
 // end site loader
 
@@ -1621,5 +1601,18 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		svg {
 			transition: transform 0.3s ease;
 		}
+	}
+}
+
+
+.policy {
+	h3 {
+		margin-bottom: rem(30);
+		font-size: rem(24);
+		font-weight: 500;
+	}
+
+	p {
+		padding-left: rem(20);
 	}
 }
