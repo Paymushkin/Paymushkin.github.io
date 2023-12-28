@@ -168,6 +168,9 @@
 		@media (max-width:$tablet) {
 			width: unset;
 		}
+		&._to-category {
+			display: none;
+		}
 	}
 }
 
@@ -183,12 +186,17 @@
 	border-radius: rem(15);
 	transition: all 0.3s ease;
 	&._to-category {
+		position: relative;
 		padding: rem(20) rem(10);
+		a {
+			position: absolute;
+			inset: 0;
+		}
 		span {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin: rem(13) rem(7);
+			margin: rem(20) rem(17);
 			max-width: 100%;
 			font-size: rem(16);
 			line-height: math.div(19, 16);

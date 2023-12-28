@@ -268,11 +268,12 @@
 	// border-radius: rem(25);
 
 	&__title {
+		margin-bottom: rem(0);
 		font-size: rem(24);
 		font-weight: 500;
 
 		@media (max-width:$mobileSmall){
-			 font-size: rem(20); 
+			font-size: rem(20); 
 		}
 	}
 
@@ -304,7 +305,13 @@
 	&__checkbox {
 		display: flex;
 		align-items: center;
-		gap: rem(16);
+		gap: rem(10);
+
+		input {
+			margin-bottom: 2px;
+			width: 14px;
+			height: 14px;
+		}
 
 		label {
 			font-size: rem(14);

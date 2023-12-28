@@ -60,6 +60,16 @@ if(document.querySelector('button[data-link]')) {
 		})
 }
 
+const loader = document.getElementById('loader') || null
+
+if (loader) {
+	document.addEventListener("DOMContentLoaded", ()=> {
+		setTimeout(() => {
+			loader.remove()
+		}, 2000);
+	})
+}
+
 // document.addEventListener("beforePopupOpen", function (e) {
 // 	// Попап
 // 	const currentPopup = e.detail.popup.targetOpen.element;

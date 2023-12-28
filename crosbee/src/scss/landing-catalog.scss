@@ -47,16 +47,16 @@
 		padding: rem(20) rem(30);
 		color: #fff;
 		background-color: #333;
-		border-radius: rem(20);
+		border-radius: rem(50);
 
 		@media (max-width:$tablet){
 			padding: rem(14) rem(20);
 			font-size: rem(14);
-			border-radius: rem(14);
+			// border-radius: rem(14);
 		}
 
 		@media (max-width:$mobileSmall){
-			border-radius: rem(20); 
+			// border-radius: rem(20); 
 		}
 	}
 }
