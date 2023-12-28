@@ -1714,7 +1714,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 .about-points .item-points__title {
   margin-bottom: 2.25rem;
-  max-width: 220px;
+  max-width: 310px;
   font-size: 2.125rem;
   font-weight: 500;
   line-height: 1.1764705882;
@@ -4097,6 +4097,19 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 }
 
+@media (max-width: 79.99875em) {
+  .about-points .item-points {
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 71.875em) {
+  .how-points .item-points__text p {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
 @media (max-width: 64.06125em) {
   .poster {
     height: 10.25rem;
@@ -4144,7 +4157,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
   .about-points .item-points {
     padding: 1.875rem 0.9375rem;
-    height: 27.5rem;
+    height: auto;
     background-size: contain;
     background-position: center top;
   }
@@ -4228,7 +4241,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
   .how-points .item-points {
     padding: 1.875rem 0.9375rem;
-    height: 27.5rem;
+    height: auto;
     background-size: contain;
     background-position: center top;
   }
@@ -4732,7 +4745,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
   .about-points .item-points {
     padding: 1.875rem;
-    height: 20rem;
   }
 
   .about-points .item-points__title {
@@ -4767,7 +4779,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
   .how-points .item-points {
     padding: 1.875rem;
-    height: 18.4375rem;
   }
 
   .how-points .item-points__title {
@@ -5451,10 +5462,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 @media (max-width: 767.98px) and (min-width: 36.06125em) {
-  .about-points .item-points {
-    background-image: none !important;
-  }
-
   .how-points .item-points {
     background-image: none !important;
   }
