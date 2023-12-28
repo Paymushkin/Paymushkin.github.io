@@ -62,12 +62,22 @@ if(document.querySelector('button[data-link]')) {
 
 const loader = document.getElementById('loader') || null
 
+// if (loader) {
+// 	document.addEventListener("load", ()=> {
+// 		setTimeout(() => {
+// 			loader.remove()
+// 		}, 2000);
+// 	})
+// }
+
 if (loader) {
-	document.addEventListener("DOMContentLoaded", ()=> {
-		setTimeout(() => {
-			loader.remove()
-		}, 2000);
-	})
+	document.onreadystatechange = function () {
+		if (document.readyState == "complete") {
+			setTimeout(() => {
+				loader.remove()
+			}, 2000);
+		}
+	}
 }
 
 // document.addEventListener("beforePopupOpen", function (e) {
