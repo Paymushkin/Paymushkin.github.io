@@ -21,9 +21,15 @@ h1 {
 }
 
 h2 {
+	margin: 0;
 	font-size: rem(40);
 	line-height: math.div(47, 40);
 	font-weight: 500;
+
+	@media (max-width:$mobile){
+		margin-bottom: rem(30);
+		font-size: rem(24); 
+	}
 }
 
 h1, h2 {
@@ -148,6 +154,7 @@ input[type='number'] {
 			
 		}
 	}
+
 	&__list {
 		display: flex;
 		gap: rem(54);
@@ -496,6 +503,7 @@ input[type='number'] {
 	overflow: hidden;
 	background: #ffffff;
 }
+
 .loader__icon {
 	width: 100%;
 	height: 100%;
@@ -504,6 +512,7 @@ input[type='number'] {
 	backface-visibility: hidden;
 	transform-origin: 0 0; /* see note above */
 }
+
 .loader__icon div { 
 	box-sizing: content-box; 
 }
@@ -584,9 +593,9 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .about-hero {
 	position: relative;
 	margin-top: rem(15);
-	margin-bottom: rem(150);
+	margin-bottom: rem(100);
 	@media (max-width:$tablet){
-		margin-bottom: rem(100);
+		margin-bottom: rem(70);
 	}
 	@media (max-width:$mobile){
 		margin-bottom: rem(50); 
@@ -603,7 +612,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		@media (max-width:em(1280)){
 			padding: rem(45) rem(30);
 		}
-		@media (max-width:$mobile){
+		@media (max-width:em(700)){
 			display: flex;
 			flex-direction: column; 
 		}
@@ -616,6 +625,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			max-width: 53%;
 			font-size: rem(20);
 			line-height: 1.5;
+
+			@media (max-width:$mobile){
+				 font-size: rem(15); 
+			}
 
 			@media (max-width:$mobileSmall){
 				 max-width: 100%; 
@@ -640,9 +653,9 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			font-size: rem(24); 
 		}
 
-		@media (max-width:$mobileSmall){
+		@media (max-width: em(700)){
 			margin-bottom: rem(30);
-			 max-width: 100%; 
+			max-width: 100%; 
 		}
 	}
 
@@ -689,7 +702,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			//  top: rem(20); 
 		}
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:em(700)){
 			position: relative;
 			width: 100%;
 			height: rem(289);
@@ -732,7 +745,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 	&__text {
 		max-width: 50%;
 		@media (max-width:$tablet){
-			max-width: 75%;
+			max-width: 100%;
 		}
 		@media (max-width:$mobileSmall){
 			max-width: 100%; 
@@ -751,7 +764,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .about-points {
-	margin-bottom: rem(150);
+	margin-bottom: rem(100);
 	@media (max-width:$tablet){
 		margin-bottom: rem(100);
 	}
@@ -801,9 +814,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 
 		@media (max-width:$mobile){
-			height: rem(417); 
+			padding: rem(30);
+			height: rem(320); 
 		}
-
+		
 		@media (max-width:767.98px) and (min-width: $mobileSmall){
 			background-image: none!important;
 		}
@@ -899,6 +913,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 		&__title {
 			margin-bottom: rem(36);
+			max-width: 220px;
 			font-size: rem(34);
 			font-weight: 500;
 			line-height: math.div(40, 34);
@@ -912,7 +927,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 				font-size: rem(18);
 			}
 			@media (max-width:$mobile){
-				  
+				  max-width: 100%;
 			}
 			@media (max-width:767.98px){
 				margin-bottom: rem(34);
@@ -933,7 +948,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 					line-height: 1.25; 
 				}
 				@media (max-width:$mobile){
-					
+					line-height: 1.5; 
 				}
 				@media (max-width:767.98px){
 					font-size: rem(15);
@@ -957,10 +972,14 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .about-description  {
-	margin-bottom: rem(20);
+	margin-bottom: rem(70);
 
 	&__body {
-		margin-bottom: rem(50);
+		margin-bottom: rem(70);
+
+		@media (max-width:$tablet){
+			margin-bottom: rem(50);
+		}
 
 		h2 {
 			margin-bottom: rem(30);
@@ -992,7 +1011,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 	}
 
 	&__img	{
-		margin-bottom: rem(150);
+		margin-bottom: rem(100);
 		width: 100%;
 		height: rem(602);
 		border-radius: rem(25);
@@ -1065,7 +1084,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			flex-direction: column;
 
 			@media (max-width:$tablet){
-				margin-bottom: rem(30);
+				margin-bottom: rem(70);
 			}
 
 			.case-hero__slider {
@@ -1073,11 +1092,19 @@ body.scrollbar-zoom::-webkit-scrollbar {
 				margin: 0;
 			}
 
+			.case-hero__poster {
+				margin-bottom: rem(50);
+
+				@media (max-width:$tablet){
+					margin-bottom: rem(30);
+				}
+			}
+
 			.swiper-slide {
 				aspect-ratio: 1280 / 804;
 
 				@media (max-width:$tablet){
-					height: rem(330);
+					max-height: rem(730);
 				}
 
 				@media (max-width:$mobileSmall){
@@ -1100,10 +1127,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		overflow: hidden;
 		@media (max-width:$tablet){
 			margin-bottom: rem(30);
-			height: rem(330);
+			// height: rem(730);
 		}
 		@media (max-width:$mobileSmall){
-			height: rem(236); 
+			max-height: rem(236); 
 		}
 
 		img {
@@ -1114,7 +1141,8 @@ body.scrollbar-zoom::-webkit-scrollbar {
 	}
 
 	&__text {
-		margin-bottom: rem(100);
+		margin-top: rem(45);
+		margin-bottom: rem(70);
 		max-width: percent(897, 1280);
 		font-size: rem(40);
 		font-weight: 500;
@@ -1125,13 +1153,14 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 
 		@media (max-width:$mobile){
+			margin-bottom: rem(45);
 			 max-width: 100%; 
 		}
 
 		&._single-case {
-			margin-bottom: rem(30);
-			@media (min-width:$tablet){
-				max-width: percent(620, 1280);
+			margin-bottom: rem(50);
+			@media (max-width:$tablet){
+				margin-bottom: rem(30);
 			}
 
 			@media (max-width:$tablet){
@@ -1207,10 +1236,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .how-points {
 	margin-bottom: rem(150);
 	@media (max-width:$tablet){
-		margin-bottom: rem(100);
+		margin-bottom: rem(70);
 	}
 	@media (max-width:$mobile){
-		margin-bottom: rem(50); 
+		margin-bottom: rem(70); 
 	}
 
 	&__title {
@@ -1255,7 +1284,8 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 
 		@media (max-width:$mobile){
-			height: rem(417); 
+			padding: rem(30);
+			height: rem(295); 
 		}
 
 		@media (max-width:767.98px) and (min-width: $mobileSmall){
@@ -1353,6 +1383,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 
 		&__title {
 			margin-bottom: rem(36);
+			max-width: rem(100);
 			font-size: rem(34);
 			font-weight: 500;
 			line-height: math.div(40, 34);
@@ -1366,6 +1397,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 				font-size: rem(18);
 			}
 			@media (max-width:$mobile){
+				max-width: 100%;
 				  
 			}
 			@media (max-width:767.98px){
@@ -1387,7 +1419,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 					line-height: 1.25; 
 				}
 				@media (max-width:$mobile){
-					
+					line-height: 1.5; 
 				}
 				@media (max-width:767.98px){
 					font-size: rem(15);
@@ -1420,9 +1452,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 	}
 
-
-	
-
 	@media (any-hover: hover){
 		&:hover{
 			img {
@@ -1445,7 +1474,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		border-radius: rem(15);
 		overflow: hidden;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			aspect-ratio: 312 / 236;
 			height: rem(236);
 		}
@@ -1460,7 +1489,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 			@media (max-width:$mobile){
 				width: auto; 
 			}
-			@media (max-width:$mobileSmall){
+			@media (max-width:$mobile){
 				max-width: 100%;
 				height: 100%;
 				object-fit: cover; 

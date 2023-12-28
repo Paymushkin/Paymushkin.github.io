@@ -23,7 +23,7 @@
 	&__header {
 		margin-bottom: rem(30);
 		@media (max-width:$tablet){
-			margin-bottom: rem(20);
+			margin-bottom: rem(4);
 		}
 	}
 
@@ -37,7 +37,8 @@
 
 		&__title {
 			@media (max-width:$tablet){
-				padding-left: rem(20); 
+				padding-left: rem(20);
+				font-size: rem(24);
 			}
 		}
 

@@ -1,5 +1,5 @@
 .landing-manager {
-	margin-bottom: rem(150);
+	margin-bottom: rem(100);
 	padding: rem(54) rem(52) rem(68);
 	background-image: url(../img/landing/banner.png);
 	background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
 	@media (max-width:$tablet){
 		padding: rem(30) rem(30) rem(20);
-		margin-bottom: rem(100);
+		margin-bottom: rem(70);
 	}
 
 	@media (max-width:$mobileSmall){

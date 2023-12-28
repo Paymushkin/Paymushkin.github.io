@@ -5,12 +5,12 @@
 	grid-auto-rows: auto;
 	gap: rem(20);
 	margin-top: rem(15);
-	margin-bottom: rem(150);
+	margin-bottom: rem(100);
 
 	@media (max-width:$tablet){
 		grid-template-rows: rem(330) rem(320);
-		gap: rem(60) rem(10);
-		margin-bottom: rem(100);
+		gap: rem(40) rem(10);
+		margin-bottom: rem(70);
 	}
 
 	@media (max-width:$mobileSmall){
@@ -55,8 +55,8 @@
 		font-size: rem(70);
 		max-width: rem(790);
 		@media (max-width:$tablet){
-			max-width: rem(312);
-			font-size: rem(24);
+			max-width: rem(475);
+			font-size: rem(40);
 		}
 		@media (max-width:$mobile){
 			order: 0;
@@ -349,6 +349,7 @@
 				}
 
 				@media (max-width:$mobile){
+					max-width: rem(125);
 					font-size: rem(16);
 				}
 

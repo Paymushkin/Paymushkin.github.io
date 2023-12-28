@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: rem(50);
+	margin-bottom: rem(100);
 	padding: rem(60) rem(52) rem(55);
 	min-height: rem(620);
 	background-color: $addColorGreen;
@@ -14,6 +14,7 @@
 	border-radius: rem(25);
 
 	@media (max-width:$tablet){
+		margin-bottom: rem(70);
 		padding: rem(30);
 		min-height: rem(320);
 		background-size: 43%;

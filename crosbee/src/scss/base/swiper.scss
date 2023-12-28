@@ -36,6 +36,10 @@
 	display: none !important;
 }
 .navigation {
+
+	@media (max-width:$tablet){
+		display: none;
+	}
 	img, svg {
 		cursor: pointer;
 	}
@@ -59,7 +63,7 @@
 	.prev {
 		left: rem(33);
 		transform: translateY(-50%) rotate(-180deg);
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			left: rem(10); 
 		}
 		@media (any-hover: hover){
@@ -70,7 +74,7 @@
 	}
 	.next {
 		right: rem(33);
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobile){
 			right: rem(10); 
 		}
 	}

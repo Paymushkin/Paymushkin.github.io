@@ -7,38 +7,48 @@ html(lang="ru")
 			include html/_header
 			main.main-content
 				section#single-case.case-hero.scroll
-					.case-hero__body._single-case 
+					.case-hero__body._single-case
+						h2.case-hero__text._single-case
+							| Москва, 1-й&nbsp;Смоленский пер.,&nbsp;13<br>7МАФ, 18х10м
 						.case-hero__poster
 							.case-hero__slider.swiper
 								.case-hero__wrapper.swiper-wrapper
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
-										img(srcset="@img/case/case-1.png 768w" src="@img/case/case-1-mob.png" alt="Картинка")
+										img(src="@img/case/case-2.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
-										img(srcset="@img/case/case-2.png 768w" src="@img/case/case-2-mob.png" alt="Картинка")
-									.case-hero__slide.swiper-slide(data-popup="#case-popup")
-										img(srcset="@img/case/case-3.png 768w" src="@img/case/case-3-mob.png" alt="Картинка")
+										img(src="@img/case/case-3.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-4.png 768w" src="@img/case/case-4-mob.png" alt="Картинка")
+										img(src="@img/case/case-4.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-5.png 768w" src="@img/case/case-5-mob.png" alt="Картинка")
+										img(src="@img/case/case-5.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-6.png 768w" src="@img/case/case-6-mob.png" alt="Картинка")
+										img(src="@img/case/case-6.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-7.png 768w" src="@img/case/case-7-mob.png" alt="Картинка")
+										img(src="@img/case/case-7.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-8.png 768w" src="@img/case/case-8-mob.png" alt="Картинка")
+										img(src="@img/case/case-8.png" alt="Картинка")
 									.case-hero__slide.swiper-slide(data-popup="#case-popup")
 										//- img(src="@img/case/case-1.png", alt="")
-										img(srcset="@img/case/case-9.png 768w" src="@img/case/case-9-mob.png" alt="Картинка")
+										img(src="@img/case/case-9.png" alt="Картинка")
+									.case-hero__slide.swiper-slide(data-popup="#case-popup")
+										//- img(src="@img/case/case-1.png", alt="")
+										img(src="@img/case/case-10.png" alt="Картинка")
+								.navigation
+									svg.prev(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+										g
+											path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#ffffff", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+									svg.next(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+										g
+											path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#ffffff", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
 						
 						//- 	h2 Этапы выполнения <br>вашего заказа
-						h2.case-hero__text._single-case
-							| Москва, 1-й&nbsp;Смоленский пер.,&nbsp;13<br>7МАФ, 18х10м
+						//- h2.case-hero__text._single-case
+						//- 	| Москва, 1-й&nbsp;Смоленский пер.,&nbsp;13<br>7МАФ, 18х10м
 						.case-hero__description
 							p
 								| Конструкторский отдел нашей компании способен рассчитать 
@@ -66,7 +76,7 @@ html(lang="ru")
 					//- 	img(src="@img/case/case-1.png", alt="")
 					
 					.case-hero__products
-						h3 На объекте установлено
+						h2 На объекте установлено
 
 						- var categoryTitle = "Игровые комплексы размера XL"
 						- var categoryLink = "size-xl"
