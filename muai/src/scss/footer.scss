@@ -4,11 +4,18 @@
 	background-color: $darkColor;
 
 	@media (max-width:$mobileSmall){
-		padding: 20px 0 55px;
+		padding: 50px 20px 0;
+		background-color: #fff;
 	}
 
 	&__container {
 		padding: 0 90px;
+
+		@media (max-width:$mobileSmall){
+			padding: 0 40px 55px;
+			background-color: $darkColor;
+			border-radius: 60px;
+		}
 	}
 
 	&__shape {
@@ -28,6 +35,7 @@
 		border-bottom: 1px solid #6E727E33;
 
 		@media (max-width:$mobileSmall){
+			padding-top: 20px;
 			gap: 30px;
 			border: none;
 		}
@@ -119,6 +127,11 @@
 			align-items: center;
 			gap: 7px;
 			font-style: normal;
+
+			@media (max-width:$mobileSmall){
+				gap: 14px;
+				font-size: 14px; 
+		   }
 		}
 		
 		&:first-child{
@@ -135,6 +148,14 @@
 	}
 	&__item {
 		flex: 1 1 calc((100% - 20px) / 3);
+
+		@media (max-width:$mobileSmall){
+			font-size: 14px; 
+	   	}
+
+		@media (max-width:$mobileSmall){
+			flex: 1 1 100%; 
+		}
 
 		&:nth-child(2) {
 			text-align: center;

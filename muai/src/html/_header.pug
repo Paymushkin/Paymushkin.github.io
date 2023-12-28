@@ -7,25 +7,29 @@ header.header#header
 			ul.nav-list
 
 				li.nav-list__item
-					a.nav-list__link(href="#", data-goto="#about") Home
+					a.nav-list__link(href="#home") Home
 				li.nav-list__item
-					a.nav-list__link(href="#", data-goto="#programs") Princing
+					a.nav-list__link(href="#pricing") Princing
 				li.nav-list__item
-					a.nav-list__link(href="#", data-goto="#feedback") About
+					a.nav-list__link(href="#about") About
 				li.nav-list__item
-					a.nav-list__link(href="#", data-goto="#contacts") Contact
+					a.nav-list__link(href="#contact") Contact
 
 			a.button.header__button._highlight Get Started
 
-			button.header__mobile-menu 
-				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="3" viewBox="0 0 22 3" fill="none">
-					<path d="M2 1.5L20 1.5" stroke="#07070C" stroke-width="3" stroke-linecap="round"/>
-				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="3" viewBox="0 0 22 3" fill="none">
-					<path d="M2 1.5L20 1.5" stroke="#07070C" stroke-width="3" stroke-linecap="round"/>
-				</svg>
-			//- nav.menu
-			//- 	.menu__wrapper
-			//- 		button(type="button").menu__icon.icon-menu
-			//- 			span
-			//- 	.menu__body.menu-body
+			nav(hidden).menu
+				button(type="button").menu__icon.icon-menu
+					span
+				.menu__body.mobile-menu
+					ul.mobile-menu__list
+
+						li.mobile-menu__item
+							a.mobile-menu__link(href="#home") Home
+						li.mobile-menu__item
+							a.mobile-menu__link(href="#pricing") Princing
+						li.mobile-menu__item
+							a.mobile-menu__link(href="#about") About
+						li.mobile-menu__item
+							a.mobile-menu__link(href="#contact") Contact
+					
+					a.button.mobile-menu._highlight Get Started
