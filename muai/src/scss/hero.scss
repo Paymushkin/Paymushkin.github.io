@@ -1,6 +1,22 @@
 .hero {
 	padding: 100px 0;
 
+	@media (max-width:$tablet){
+			
+	}
+
+	&__container {
+		padding: 0 50px;
+
+		@media (max-width:$tablet){
+			padding: 0 40px;
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: 0 20px; 
+		}
+	}
+
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -9,27 +25,53 @@
 		padding: 160px 81px 60px;
 		background-color: $darkColor;
 		border-radius: 70px;
+
+		@media (max-width:$tablet){
+			padding: 100px 20px;
+		}
+		@media (max-width:$mobileSmall){
+			
+		}
+	}
+
+	&__img {
+		@media (min-width:$mobileSmall){
+			display: none; 
+		}
 	}
 
 	&__text {
-		max-width: 800px;
+		color: #F4F4F6;
 		text-align: center;
 		line-height: 27px;
+		font-weight: 500;
 		opacity: 0.8;
-		background: linear-gradient(180deg, #F4F4F6 -32.41%, rgba(244, 244, 246, 0.00) 154.63%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+
+		@media (min-width:$tablet){
+			max-width: 800px;
+			background: linear-gradient(180deg, #F4F4F6 -32.41%, rgba(244, 244, 246, 0.00) 154.63%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		@media (max-width:$mobileSmall){
+			font-size: 14px;
+			line-height: 21px;
+		}
 	}
 
 	&__btns {
+		display: flex;
+		gap: 20px;
+		@media (max-width:$mobileSmall){
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__button {
 		min-width: 194px;
 		min-height: 63px;
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
 	}
 }

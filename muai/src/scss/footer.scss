@@ -1,7 +1,22 @@
 .footer {
 	position: relative;
-	padding: 40px 40px 105px;
+	padding: 40px 0 105px;
 	background-color: $darkColor;
+
+	@media (max-width:$mobileSmall){
+		padding: 20px 0 55px;
+	}
+
+	&__container {
+		padding: 0 90px;
+	}
+
+	&__shape {
+		width: 100%;
+		height: 12px;
+		background-color: $primaryColor;
+		filter: blur(49px);
+	}
 
 	&__top {
 		display: flex;
@@ -11,6 +26,19 @@
 		margin-bottom: 40px;
 		padding-bottom: 40px;
 		border-bottom: 1px solid #6E727E33;
+
+		@media (max-width:$mobileSmall){
+			gap: 30px;
+			border: none;
+		}
+
+		a.button {
+			display: block;
+			@media (min-width:$mobileSmall){
+				display: none; 
+			}
+		}
+		
 	}
 
 	&__title {
@@ -23,6 +51,10 @@
 
 	&__banner {
 		margin-bottom: 40px;
+
+		@media (max-width:$mobileSmall){
+			 display: none; 
+		}
 	}
 
 	&__bottom {
@@ -39,10 +71,21 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
+
+		@media (max-width:$mobileSmall){
+			flex-direction: column; 
+		}
+
 	}
 
 	&__item {
 		padding: 10px 20px;
+		transition: 0.3s opacity ease;
+		@media (any-hover: hover){
+			&:hover{
+				opacity: 0.75;
+			}
+		}
 	}
 
 	&__link {
@@ -55,21 +98,41 @@
 	display: flex;
 	gap: 40px;
 
+	@media (max-width:$mobileSmall){
+		flex-direction: column;
+		align-items: center;
+		gap: 20px; 
+	}
+
 	&__item {
 		color: #fff;
 		font-family:  "DM Sans", sans-serif;
+		transition: 0.3s opacity ease;
+		@media (any-hover: hover){
+			&:hover{
+				opacity: 0.75;
+			}
+		}
 		
-
 		address, a {
 			display: flex;
 			align-items: center;
 			gap: 7px;
 			font-style: normal;
 		}
+		
+		&:first-child{
+			@media (max-width:$mobileSmall){
+				 order: 1; 
+			}
+		}
 	}
 }
 
 .footer-bottom {
+	@media (max-width:$mobileSmall){
+		 flex-direction: column; 
+	}
 	&__item {
 		flex: 1 1 calc((100% - 20px) / 3);
 
@@ -79,6 +142,11 @@
 
 		&:last-child{
 			text-align: right;
+		}
+
+		a, span {
+			color: #F4F4F6;
+			line-height: 27px;
 		}
 	}
 }

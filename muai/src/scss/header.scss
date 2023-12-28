@@ -1,5 +1,16 @@
 .header {
-	padding: 20px 50px;
+	&__container {
+		padding: 20px 100px;
+
+		@media (max-width:$tablet){
+			padding: 20px 40px;
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: 20px; 
+		}
+	}
+
 
 	&__menu {
 		display: flex;
@@ -12,5 +23,26 @@
 		color: $primaryColor;
 		font-size: 28px;
 		font-weight: 500;
+
+		@media (max-width:$tablet){
+			font-size: rem(18);
+		}
+	}
+
+	&__button {
+		@media (max-width:$mobileSmall){
+			display: none; 
+		}
+	}
+
+	&__mobile-menu {
+		display: flex;
+		flex-direction: column;
+		padding: 8px;
+		gap: 6px;
+
+		@media (min-width:$mobileSmall){
+			 display: none; 
+		}
 	}
 }

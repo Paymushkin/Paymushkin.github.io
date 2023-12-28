@@ -1,16 +1,28 @@
 .qa {
-	padding: 50px 0;
+	padding: 50px;
 	background-color: #FFFCFB;
 
-	@media (max-width:$mobile){
-		padding-bottom: rem(50); 
+	@media (max-width:$tablet){
+		padding: 50px 40px;
+	}
+
+	@media (max-width:$mobileSmall){
+		padding: 50px 20px; 
 	}
 
 
 	&__container {
-		padding: 50px;
+		padding: 50px 100px;
 		background-color: #fff;
 		border-radius: 70px;
+
+		@media (max-width:$tablet){
+			padding: 50px;
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: 50px 0;
+		}
 	}
 
 	&__top {
@@ -18,6 +30,14 @@
 		padding: 100px 20px;
 		background-color: #FFFCFB;
 		border-radius: 60px;
+
+		@media (max-width:$tablet){
+			padding: 70px 42px;
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: 100px 0;
+		}
 	}
 
 	&__title {
@@ -31,6 +51,11 @@
 		line-height: 27px;
 		font-weight: 500;
 		text-align: center;
+
+		@media (max-width:$mobileSmall){
+			font-size: 14px;
+			line-height: 21px;
+		}
 	}
 
 	&__accordion {
@@ -64,8 +89,13 @@
 				outline: none;
 				transition: all .3s ease;
 
-				@media (max-width:$mobile){
-					 font-size: rem(12); 
+				@media (max-width:$tablet){
+					font-size: rem(18);
+					line-height: 27px;
+				}
+
+				@media (max-width:$mobileSmall){
+					 font-weight: 400; 
 				}
 			}
 			p {
@@ -77,7 +107,11 @@
 				transition:all .3s ease;
 
 				@media (max-width:$mobile){
-					 font-size: rem(12); 
+					font-size: rem(12); 
+				}
+
+				@media (max-width:$mobileSmall){
+					padding-left: 0; 
 				}
 			}
 
