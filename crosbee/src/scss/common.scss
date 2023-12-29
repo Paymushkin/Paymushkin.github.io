@@ -516,7 +516,7 @@ input[type='number'] {
 		.path-1, .path-2 {
 			stroke-dasharray: 3600;
 			stroke-dashoffset: 3600;
-			animation: animate-loader-1 2s linear forwards;
+			animation: animate-loader-1 2s linear infinite alternate-reverse;
 			@media (any-hover: hover){
 				&:hover{
 					
@@ -527,7 +527,7 @@ input[type='number'] {
 		.path-3 {
 			stroke-dasharray: 4250;
 			stroke-dashoffset: 4250;
-			animation: animate-loader-2 2s linear forwards;
+			animation: animate-loader-2 2s linear infinite alternate-reverse;
 			@media (any-hover: hover){
 				&:hover{
 					
@@ -1603,7 +1603,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 	}
 }
-
 
 .policy {
 	h3 {

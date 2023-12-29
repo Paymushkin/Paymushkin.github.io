@@ -1503,15 +1503,13 @@ input[type=number] {
 .loader__icon svg .path-2 {
   stroke-dasharray: 3600;
   stroke-dashoffset: 3600;
-  -webkit-animation: animate-loader-1 2s linear forwards;
-          animation: animate-loader-1 2s linear forwards;
+  animation: animate-loader-1 2s linear infinite alternate-reverse;
 }
 
 .loader__icon svg .path-3 {
   stroke-dasharray: 4250;
   stroke-dashoffset: 4250;
-  -webkit-animation: animate-loader-2 2s linear forwards;
-          animation: animate-loader-2 2s linear forwards;
+  animation: animate-loader-2 2s linear infinite alternate-reverse;
 }
 
 @-webkit-keyframes animate-loader-1 {
