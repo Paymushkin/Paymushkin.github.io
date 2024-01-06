@@ -1,0 +1,36 @@
+header.header#header
+	.header__top
+		.header__container
+			img(src="@img/header/top-logo.svg", alt="image")
+
+	.header__body.header-body
+		.header-body__top
+		.header-body__content
+			img.header-body__img-top(src="@img/header/device.png", alt="image")
+			.text-container
+				.text 
+					h1 Нашу "Дружбу"
+				.text 
+					h1 собирают
+				.text 
+					h1 крепкие руки!
+			//- h1.header-body__title 
+			//- 	span Нашу "Дружбу"<br>
+			//- 	span собирают<br>
+			//- 	span крепкие руки!
+		.header__menu 
+			ul.nav-list
+				li
+					a(href="#", data-goto="#history") История
+				li
+					a(href="#", data-goto="#about") О производстве
+				li
+					span Модель "Дружба"
+				li
+					a(href="#", data-goto="#device") Устройство
+				li
+					a(href="#", data-goto="#mechanism") Механизм
+
+	.line.header-line
+	//- .line.header-line.header-line_2
+	//- .line.header-line.header-line_3

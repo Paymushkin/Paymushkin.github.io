@@ -1,0 +1,162 @@
+h1, h2, p, span, a {
+	font-variation-settings: 'wght' 400, 'wdth' 75;
+}
+
+h1, h2, h3, h4, p, span, small, button, a, div {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+ol, ul {
+	list-style: none;
+}
+
+h1 {
+	display: inline-block;
+	// color: $textColor;
+	font-size: rem(32);
+	// letter-spacing: 0.9;
+	// // @include adaptiveValue("font-size", 78, 24, 1920, 320, 1);
+	// font-weight: 700;
+	// line-height: 110%;
+	// @media (max-width:$mac){
+	// 	font-size: rem(64);	
+	// }
+	// @media (max-width:$tablet){
+	// 	font-size: rem(32);
+	// }
+
+	// @media (max-width: em(320)){
+	// 	font-size: rem(32)!important;
+ 	//  }
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.ml-30 {
+	margin-left: 60px;
+}
+
+.pr-50 {
+	padding-right: 80px;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(10);
+
+	&.left {
+		align-items: flex-start;
+	}
+
+	&.regular-end {
+		align-items: flex-end;
+		top: rem(98);
+		right: rem(13);
+	}
+}
+
+.text {
+	position: relative;
+	display: inline-flex;
+	// transform: scaleX(0.75);
+    // font-weight: 700;		
+
+	&::before{
+		content:'';
+		position: absolute;
+		top: rem(11);
+		left: -5px;
+		width: calc(100% + 10px);
+		height: 85%;
+		background-color: $bgColor;
+		z-index: 1;
+
+		.light & {
+			background-color: $highlightColor;
+		}
+
+		.regular & {
+			top: rem(9);
+			left: 0;
+			width: calc(100% + 10px);
+		}
+
+		.orange & {
+			background-color: #CB8D4C;
+		}
+
+		.brown & {
+			background-color: #b57c41;
+		}
+
+
+	}
+
+	&.ml-30  {
+		&::before{
+			left: 25px;
+		}
+	}
+
+	h1 {
+		position: relative;
+		color: #000;
+		font-size: rem(41);
+		font-family: "Bahnschrift";
+		z-index: 2;
+	}
+
+	p {
+		color: #000;
+		font-size: rem(24);
+		z-index: 2;
+	}
+}
+
+.line {
+	width: 100%;
+	height: rem(27);
+	background-color: $bgColor;
+
+	&.header-line {
+		position: absolute;
+		bottom: 22px;
+		left: 0;
+		z-index: 2;
+		// &_3 {
+		// 	bottom: 70px;
+		// }
+	}
+
+	&.history-line {
+		position: absolute;
+		top: rem(-15);
+		left: 0;
+
+		&_2 {
+			top: rem(20);
+		}
+		&_3 {
+			top: unset;
+			bottom: rem(60);
+			padding-left: rem(28);
+			height: rem(36);
+			color: $bgColor-2;
+			font-size: rem(36);
+		}
+	}
+}

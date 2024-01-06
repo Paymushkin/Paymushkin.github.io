@@ -1,0 +1,106 @@
+div(aria-hidden="true", data-type="name-service")#form.send-request.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
+			.body
+				.request__form.form-request
+					.form-request__title Оставьте заявку
+					.form-request__text 
+						| Диана вам перезвонит<br>
+						| и запишет вас на удобное время
+					.form-field
+						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
+						input.name(type="text", name="name", placeholder="Ваше имя")
+					.form-field._with-select
+						select(name="service-type").form
+							option(value="", selected) Выберите услугу
+							option(value="индивидуальное") Индивидуальные занятия
+							option(value="абонемент на индивидуальные") Абонемент на 4 занятия
+							option(value="групповые") Групповые занятия
+							option(value="День Рождения") День рождения на катке
+					a(href="").button.form-button ОТПРАВИТЬ
+
+div(aria-hidden="true", data-type="name-class", data-class="День Рождения")#form-1.send-request.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
+			.body
+				.request__form.form-request
+					.form-request__title День рождения на катке
+					.form-request__text 
+						| Диана вам перезвонит<br>
+						| и запишет вас на удобное время
+					.form-field
+						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
+						input.name(type="text", name="name", placeholder="Ваше имя")
+					a(href="", data-text="день рождения на катке").button.form-button ОТПРАВИТЬ
+
+div(aria-hidden="true", data-type="name-class", data-class="индивидуальное")#form-2.send-request.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
+			.body
+				.request__form.form-request
+					.form-request__title Индивидуальное занятие
+					.form-request__text 
+						| Диана вам перезвонит<br>
+						| и запишет вас на удобное время
+					.form-field
+						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
+						input.name(type="text", name="name", placeholder="Ваше имя")
+					a(href="", data-text="индивидуальное занятие").button.form-button ОТПРАВИТЬ
+
+div(aria-hidden="true", data-type="name-class", data-class="групповые")#form-3.send-request.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
+			.body
+				.request__form.form-request
+					.form-request__title Групповые занятия
+					.form-request__text 
+						| Диана вам перезвонит<br>
+						| и запишет вас на удобное время
+					.form-field
+						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
+						input.name(type="text", name="name", placeholder="Ваше имя")
+					a(href="", data-text="групповое занятие").button.form-button ОТПРАВИТЬ
+
+div(aria-hidden="true", data-type="name-class", data-class="абонемент на индивидуальные")#form-4.send-request.popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<rect width="9.46847" height="46.614" transform="matrix(0.703881 0.710318 -0.703881 0.710318 32.8105 0)" fill="#D6D6D6"/>
+					<rect width="9.46847" height="46.614" transform="matrix(-0.703881 0.710318 0.703881 0.710318 7.18945 0.163574)" fill="#D6D6D6"/>
+				</svg>
+			.body
+				.request__form.form-request
+					.form-request__title Абонемент на 4 занятия
+					.form-request__text 
+						| Диана вам перезвонит<br>
+						| и запишет вас на удобное время
+					.form-field
+						svg(width='11' height='13' viewbox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(opacity='0.6' d='M5.5 6.5C3.83594 6.5 2.5 5.16406 2.5 3.5C2.5 1.85938 3.83594 0.5 5.5 0.5C7.14062 0.5 8.5 1.85938 8.5 3.5C8.5 5.16406 7.14062 6.5 5.5 6.5ZM6.67188 7.625C8.92188 7.625 10.75 9.45312 10.75 11.7031C10.75 12.1484 10.375 12.5 9.92969 12.5H1.04688C0.601562 12.5 0.25 12.1484 0.25 11.7031C0.25 9.45312 2.05469 7.625 4.30469 7.625H6.67188Z' fill='#3E3E3E')
+						input.name(type="text", name="name", placeholder="Ваше имя")
+					a(href="", data-text="абонемент на 4 занятия").button.form-button ОТПРАВИТЬ

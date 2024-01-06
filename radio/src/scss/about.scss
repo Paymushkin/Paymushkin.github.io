@@ -1,0 +1,42 @@
+.about {
+	
+	background-color: $highlightColor;
+
+	&__container {
+		position: relative;
+		min-height: rem(488);
+		// padding: rem(39) rem(34);
+		border-top: rem(39) solid $highlightColor;
+		border-left: rem(34) solid $highlightColor;
+		border-right: rem(34) solid $highlightColor;
+		// border-bottom: rem(39) solid $highlightColor;
+		background-color: $bgColor-2;
+		background-image: url(../img/production/bg.png);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		box-sizing: border-box;
+	}
+
+	&__title {
+		color: $bgColor;
+		font-size: rem(72);
+		transform: translate(5px, -30px);
+	}
+
+	&__text {
+		position: absolute;
+		top: rem(65);
+		font-size: rem(22);
+
+		&._center {
+			color: #000;
+			text-align: right;
+			left: rem(240);
+		}
+		&._right {
+			right: rem(60);
+			color: $highlightColor;
+		}
+	}
+}

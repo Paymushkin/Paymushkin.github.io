@@ -1,0 +1,45 @@
+.history {
+	position: relative;
+	background-color: $bgColor-2;
+	// transform: translateY(-48px);
+
+	&__title {
+		position: absolute;
+		top: rem(-15);
+		left: rem(65);
+		color: #000;
+		font-size: rem(83);
+		text-shadow: -3px -2px 0 $highlightColor;
+	}
+	
+	&__container {
+		position: relative;
+		min-height: rem(500);
+		background-image: url(../img/history/bg.png);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		// transform: translateY(1px);
+		z-index: 3;
+	}
+	&__img {
+		position: absolute;
+		z-index: 2;
+	}
+	&__tv {
+		bottom: rem(-88);
+		right: rem(170);
+		width: rem(350);
+	}
+	&__medal {
+		bottom: rem(-88);
+		right: 0;
+		width: rem(165);
+	}
+	&__text {
+		position: absolute;
+		left: 41.5%;
+		top: rem(50);
+		gap: rem(5);
+	}
+}

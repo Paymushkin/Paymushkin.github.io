@@ -1,0 +1,71 @@
+.model {
+	position: relative;
+	padding-bottom: rem(20);
+	background-color: $bgColor-2;
+
+	&__line {
+		width: 100%;
+		height: rem(39);
+		background-color: $highlightColor;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: rem(30);
+		transform: translateY(-25px);
+	}
+
+	&__title {
+		color: #000;
+		font-size: rem(48);
+	}
+
+	&__logo {
+		width: rem(358);
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: rem(152);
+		transform: translateX(-50%);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	&__text {
+		color: #000;
+		font-size: rem(30);
+		line-height: 1.25;
+		text-align: center;
+		transform: translateY(-50px);
+	}
+
+	&__img {
+		max-width: rem(371);
+		z-index: 2;
+	}
+	&__bottom {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: rem(92);
+		background-image: url(../img/model/bottom-pattern.png);
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
+}
