@@ -90,9 +90,10 @@ input[type="search"]::-webkit-search-results-decoration {
 		}
 
 		.regular & {
-			top: rem(9);
-			left: 0;
-			width: calc(100% + 10px);
+			top: 15px;
+			left: -5px;
+			width: calc(100% + 20px);
+			height: 72%;
 		}
 
 		.orange & {

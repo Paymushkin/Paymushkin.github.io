@@ -3,10 +3,12 @@ section.mechanism#mechanism
 	.mechanism__line.line_2
 	.mechanism__line.line_3
 	.mechanism__container
-		img(src="@img/mechanism/tv.png", alt="image").mechanism__tv
+		.mechanism__video
+			video(src="files/video.mp4", muted, autoplay) 
+			img(src="@img/mechanism/tv2.png", alt="image").mechanism__tv
 		.mechanism__body
 			.mechanism__content
-				.mechanism__text.text-container.brown.regular-end.rigth
+				.mechanism__text.text-container.brown.regular.left
 					img(src="@img/mechanism/title.svg", alt="image", data-aos="fade-up")
 					.text 
 						p Состоит из одиннадцатилампового
@@ -39,6 +41,8 @@ section.mechanism#mechanism
 					.text 
 						p Покрыта шеллачным лаком.
 				
+				img(src="@img/mechanism/model.png", alt="image").mechanism__model
+
 				.mechanism__text.text-container.regular.left
 					img(src="@img/mechanism/title-2.svg", alt="image", data-aos="fade-up", data-aos-delay="300")#device
 					.text 
