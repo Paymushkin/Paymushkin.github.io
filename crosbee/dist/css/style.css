@@ -556,7 +556,11 @@ body::after {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.75rem;
   outline: none;
+  z-index: 2;
 }
 
 #sharing-popup .popup__content {
@@ -1010,7 +1014,11 @@ body::after {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.75rem;
   outline: none;
+  z-index: 2;
 }
 
 #sharing-popup .popup__content {
@@ -1559,7 +1567,7 @@ input[type=number] {
       align-items: center;
   gap: 0.625rem;
   color: #333;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -1696,7 +1704,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
       flex-direction: column;
   padding: 3.4375rem 1.25rem;
   width: calc(100% - 1.25rem / 3);
-  height: 34.375rem;
   background-color: #f5faf9;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1917,7 +1924,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .how-points {
-  margin-bottom: 9.375rem;
+  margin-bottom: 4.375rem;
 }
 
 .how-points__title {
@@ -2123,7 +2130,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
   padding: 1.4375rem 0 1.2075rem;
   width: 100%;
   min-height: 5.3125rem;
-  background-color: #ffffff;
 }
 
 .header__nav {
@@ -2365,6 +2371,10 @@ body.scrollbar-zoom::-webkit-scrollbar {
   color: #fff;
   font-size: 4.375rem;
   max-width: 49.375rem;
+}
+
+.landing-hero a.landing-hero__link {
+  font-size: 1.125rem;
 }
 
 .landing-hero__item {
@@ -3044,11 +3054,14 @@ body.scrollbar-zoom::-webkit-scrollbar {
   font-weight: 500;
 }
 
+.no-webp .product-desc__scheme{
+  background-image: url(../img/light-green.png); }
+
 .product-desc__scheme {
   margin-bottom: 1.5625rem;
   padding: 1.875rem;
   border-radius: 1.875rem;
-  background-color: #F5FAF9;
+  background-repeat: repeat;
 }
 
 .product-desc__scheme img {
@@ -3936,41 +3949,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 }
 
-@media (min-width: 48.06125em) and (any-hover: hover) {
-  .landing-hero__item._small:hover::after {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-
-  .landing-hero__item._small:hover svg {
-    -webkit-transform: translateX(5px);
-        -ms-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-}
-
 @media (min-width: 64.06125em) {
-  .about-points .item-points .animation__wrapper {
-    -webkit-transform: translateY(20.75rem);
-        -ms-transform: translateY(20.75rem);
-            transform: translateY(20.75rem);
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    -o-transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  }
-
-  .about-points .item-points .animation__wrapper .item-points__text {
-    height: 0px;
-    opacity: 0;
-    overflow: hidden;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-
   .case-hero__description {
     max-width: 53.75%;
   }
@@ -4011,6 +3990,44 @@ body.scrollbar-zoom::-webkit-scrollbar {
   .footer-nav {
     -ms-flex: 0 1 11.25rem;
         flex: 0 1 11.25rem;
+  }
+}
+
+@media (min-width: 64.06125em) and (any-hover: hover) {
+  .landing-hero__item._small:hover::after {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .landing-hero__item._small:hover svg {
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@media (min-width: 79.99875em) {
+  .about-points .item-points .animation__wrapper {
+    -webkit-transform: translateY(20.75rem);
+        -ms-transform: translateY(20.75rem);
+            transform: translateY(20.75rem);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+
+  .about-points .item-points .animation__wrapper .item-points__text {
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }
 
@@ -4162,6 +4179,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 }
 
+@media (max-width: 74.9375em) {
+  .product-cart {
+    gap: 0.625rem;
+  }
+}
+
 @media (max-width: 71.875em) {
   .how-points .item-points__text p {
     font-size: 1rem;
@@ -4222,6 +4245,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   .about-points .item-points {
     padding: 1.875rem 0.9375rem;
     height: auto;
+    min-height: unset;
     background-size: contain;
     background-position: center top;
   }
@@ -4834,6 +4858,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .case-hero__text {
+    margin-top: 0;
     margin-bottom: 2.8125rem;
     max-width: 100%;
   }
@@ -4843,11 +4868,11 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .case-objects {
-    margin: 3.375rem -1.25rem 3.75rem -1.25rem;
+    margin: 3.125rem -1.25rem 3.125rem -1.25rem;
   }
 
   .how-points {
-    margin-bottom: 4.375rem;
+    margin-bottom: 3.125rem;
   }
 
   .how-points .item-points {
@@ -5596,7 +5621,9 @@ body.scrollbar-zoom::-webkit-scrollbar {
   }
 
   .about-points .item-points:hover .animation__wrapper .item-points__text {
-    height: auto;
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
     opacity: 1;
   }
 
@@ -5742,6 +5769,8 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .webp .landing-numbers .product-item__slide._slide-7{ background-image: url(../img/landing/slide-7.webp); }
 
 .webp .landing-catalog{ background-image: url(../img/landing/pdf.webp); }
+
+.webp .product-desc__scheme{ background-image: url(../img/light-green.webp); }
 
 @media (max-width: 36.06125em){
 

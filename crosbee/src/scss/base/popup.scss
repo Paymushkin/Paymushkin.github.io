@@ -138,7 +138,10 @@ body::after {
 	position: absolute;
 	top: rem(20);
 	right: rem(20);
+	display: flex;
+	padding: 0.75rem;
 	outline: none;
+	z-index: 2;
 }
 
 #sharing-popup {

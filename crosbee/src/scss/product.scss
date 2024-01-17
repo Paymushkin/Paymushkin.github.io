@@ -303,7 +303,9 @@
 		margin-bottom: rem(25);
 		padding: rem(30);
 		border-radius: rem(30);
-		background-color: #F5FAF9;
+		// background-color: #F5FAF9;
+		background-image: url(../img/light-green.png);
+		background-repeat: repeat;
 
 		@media (max-width:$tablet){
 			margin-bottom: rem(34);
