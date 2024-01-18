@@ -1,0 +1,192 @@
+Анатомия HTML документа
+
+Базовя разметка документа
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Моя тестовая страница</title>
+  </head>
+  <body>
+    <img src="images/firefox-icon.png" alt="Моё тестовое изображение" />
+  </body>
+</html>
+
+
+<!DOCTYPE html> — доктайп. В прошлом, когда HTML был молод (около 1991/1992), 
+доктайпы должны были выступать в качестве ссылки на набор правил, 
+которым HTML страница должна была следовать, чтобы считаться хорошим HTML, 
+что могло означать автоматическую проверку ошибок и другие полезные вещи. 
+Однако в наши дни, никто не заботится об этом, и они на самом деле просто исторический артефакт, 
+который должен быть включён для того, что бы все работало правильно.
+
+<html></html> — элемент <html>. 
+Этот элемент оборачивает весь контент на всей странице, и иногда известен как корневой элемент.
+
+<head></head> — элемент <head>. 
+Этот элемент выступает в качестве контейнера для всего, что вы пожелаете включить на HTML страницу, 
+но не являющегося контентом, который вы показываете пользователям вашей страницы. 
+К ним относятся такие вещи, как ключевые слова и описание страницы, 
+которые будут появляться в результатах поиска, CSS стили нашего контента, кодировка и многое другое.
+
+<body></body> — элемент <body>. 
+В нем содержится весь контент, который вы хотите показывать пользователям, 
+когда они посещают вашу страницу, будь то текст, изображения, видео, игры, 
+проигрываемые аудиодорожки или что-то ещё.
+
+<meta charset="utf-8"> — этот элемент устанавливает UTF-8 кодировку вашего документа, 
+которая включает в себя большинство символов из всех известных человечеству языков. 
+По сути, теперь документ может обрабатывать любой текстовый контент, который вы в него вложите. 
+Нет причин не устанавливать её, так как это может помочь избежать некоторых проблем в дальнейшем.
+Этот элемент должен стоять выше title
+
+<title></title> — элемент <title>. 
+Этот элемент устанавливает заголовок для вашей страницы, который является названием, 
+появляющимся на вкладке браузера загружаемой страницы, и используется для описания страницы, 
+когда вы добавляете её в закладки/избранное.
+
+
+Более продвинутая разметка
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Unique page title - My Site</title>
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  <meta name="description" content="Page description">
+  <meta property="og:title" content="Unique page title - My Site">
+  <meta property="og:description" content="Page description">
+  <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+  <meta property="og:image:alt" content="Image description">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.mywebsite.com/page">
+  <link rel="canonical" href="https://www.mywebsite.com/page">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/my.webmanifest">
+  <meta name="theme-color" content="#FF00FF">
+</head>
+
+<body>
+  <!-- Content -->
+  <script src="/assets/js/xy-polyfill.js" nomodule></script>
+  <script src="/assets/js/script.js" type="module"></script>
+</body>
+</html>
+
+Описание дополнительных элементов (о которых не говорили в базовой структуре)
+
+<html lang="en"> - 
+Атрибут lang является одним из самых важных атрибутов в HTML, 
+потому что он мощный и отвечает за многие вещи.
+Примененный к элементу html, он определяет естественный язык страницы. 
+Он содержит один “языковой тег” в формате, определенном в Tags for Identifying Languages (BCP47), 
+например, en для английского, de для немецкого или ru для русского.
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> - 
+Мета-тег области просмотра позволяет нам изменять ширину области просмотра, 
+что необходимо для адаптивного веб-дизайна. width = device-width устанавливает ширину области просмотра равной ширине экрана. 
+initial-scale управляет уровнем масштабирования при первой загрузке страницы.
+установка initial-scale = 1 не является по-прежнему необходимой. 
+Это нужно только для Safari на <iOS 9.
+Метатег viewport должен появляться в документе как можно раньше, чтобы обеспечить правильную визуализацию документа.
+
+<script type="module">
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+</script>
+Это добавление скрипта на прямую в html документ. В конкретном случае проверяется поддерживает ли
+браузер современный JS, при помощи проверки на поддержку работы с module
+
+<link rel="stylesheet" href="/assets/css/styles.css">
+Подключение стилей на html страницу
+
+<link rel="stylesheet" href="/assets/css/print.css" media="print">
+Print CSS для сайта. При печати на бумагу сайт может выглядеть не очень. Но если таким способом подключить специальные
+стили для такого случая, то можно это исправить 
+
+<meta name="description" content="Page description">
+Уникальное описание страницы, например, отображаемое на страницах результатов поиска. 
+Он может быть любой длины, но поисковые системы усекают фрагменты до ~ 155–160 символов.
+
+<meta property="og:title" content="Unique page title - My Site">
+Уникальное название страницы. Используется парсерами URL-адресов в социальных сетях, таких как Twitter или Facebook.
+
+<meta property="og:description" content="Page description">
+Уникальное описание страницы. Используется парсерами URL-адресов в социальных сетях, таких как Twitter или Facebook
+
+<meta property="og:image" content="image.jpg">
+Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях, 
+приложениях чата или других сайтах, которые очищают URL-адреса.
+В идеале это должно быть квадратное изображение с важным содержанием, 
+размещенным в центре квадрата в прямоугольнике с соотношением сторон 2:1. 
+Это гарантирует, что изображение будет хорошо смотреться на карточках с изображениями прямоугольной и квадратной формы.
+
+<meta property="og:image:alt" content="Image description">
+Описание изображения. Не используйте этот метатег, если изображение носит чисто декоративный характер 
+и не содержит значимой информации. Программы чтения с экрана игнорируют изображение, если мы не предоставляем замещающий текст.
+
+<meta property="og:locale" content="en_GB">
+Необязательное свойство Open Graph, но рекомендуется. Он определяет естественный язык страницы.
+
+<meta property="og:type" content="website">
+Тип контента, которым вы делитесь, например website, article, или video.movie. 
+Обязательное свойство для допустимых страниц Open Graph.
+
+<meta property="og:url" content="https://www.mywebsite.com/page">
+Канонический URL страницы. Обязательное свойство для допустимых страниц Open Graph.
+Т е ссылка на оригинал или главную страницу среду ее копий
+
+<meta name="twitter:card" content="summary_large_image">
+Этот метатег определяет, как будут выглядеть карточки при публикации в Twitter. 
+Есть два варианта для веб-сайтов: summary и summary_large_image.
+
+<meta name="theme-color" content="#FF00FF">
+theme-color предоставляет браузерам цвет CSS для настройки отображения страницы или окружающего пользовательского интерфейса.
+Поддерживаемые браузеры: Chrome, Brave и Samsung Internet на Android.
+
+<link rel="icon" href="/favicon.ico">
+Значок 32 × 32 пикселя для устаревших браузеров. Он должен находиться в корне вашего веб-сайта.
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+Большинство современных браузеров поддерживают значки SVG. 
+Преимущества favicon.svg в том, что он выглядит лучше при масштабировании, 
+потому что это векторное, а не растровое изображение, 
+и мы можем добавлять HTML и CSS в SVG, что означает, что мы можем поддерживать темный режим.
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+Значок 180 × 180 пикселей устройства Apple будут использовать, если вы добавите страницу на главный экран.
+
+<link rel="manifest" href="/my.webmanifest">
+Для устройств Android нам нужен файл .webmanifest, 
+который предоставляет браузерам информацию о том, 
+где расположены значки, необходимые для домашнего экрана и заставки для PWA. Progressive Web Application
+
+<link rel="canonical" href="https://www.mywebsite.com/page">
+Используйте элемент canonical ссылки, чтобы предотвратить проблемы SEO, 
+вызванные дублированием контента, указав исходный источник для страниц, доступных по нескольким URL-адресам.
+
+<script src="/assets/js/xy-polyfill.js" nomodule></script>
+Если я хочу обслуживать JavaScript, предназначенный специально для браузеров, 
+не поддерживающих модули, я добавляю атрибут nomodule, 
+который заставляет скрипт запускаться только в устаревших браузерах, а именно в IE 11.
+
+<script src="/assets/js/script.js" type="module"></script>
+JavaScript с type = "module" будет работать только в браузерах, 
+поддерживающих модули, это противоположно атрибуту nomodule.

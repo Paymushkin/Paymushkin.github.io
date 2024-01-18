@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mpasisstant</title>
+  <link rel="preload" href="fonts/nt-somic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/nt-somic-medium.woff2" as="font">
+  <link rel="preload" href="fonts/nt-somic-bold.woff2" as="font">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page__body">
+  <a class="skip-link" href="#main">
+    Перейти к контенту
+  </a>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo logo">
+        <a class="logo__link" href="./index.html">
+          <img class="logo__image" src="./img/logo.svg" width="187" height="18" alt="Логотип Mpasisstant.">
+          <span class="sr-only">На главную</span>
+        </a>
+        <p class="logo__text">
+          Аналитика и оцифровка продаж<br>
+          <span class="logo__market logo__market--wb">Wildberries</span>
+          и
+          <span class="logo__market logo__market--ozon">Ozon</span>
+        </p>
+      </div>
+      <nav class="header__site-navigation site-navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">О нас</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">Возможности</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#">Тарифы</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__user-navigation user-navigation">
+        <ul class="user-navigation__list">
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--sign-in" href="#">
+              <span>Вход</span>
+            </a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--sign-up button" href="#">
+              <span>Зарегистрироваться</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__toggle" type="button">
+        <span>Открыть меню</span>
+      </button>
+    </div>
+  </header>
+  <main class="main" id="main">
+    <div class="main__container">
+      <section class="hero">
+        <h1 class="hero__title title">
+          <span>Внутренняя аналитика</span>
+          и <span>финансовый учёт</span>
+          для бизнеса на маркетплейсах
+          <picture>
+            <source media="(min-width: 1440px)" type="image/png" width="136" height="56"
+              srcset="img/marketplaces-logos-desktop@1x.png 1x, img/marketplaces-logos-desktop@2x.png 2x">
+            <img src="img/marketplaces-logos-mobile@1x.png" srcset="img/marketplaces-logos-mobile@2x.png 2x" width="64"
+              height="26" alt="Логотипы Ozon и Wildberries.">
+          </picture>
+        </h1>
+        <p class="hero__appeal">Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
+        <div class="hero__test test test--half">
+          <div class="test__wrapper">
+            <p class="test__appeal">Начните свой 3-дневный пробный период с неограниченным доступом ко всем возможностям
+            </p>
+            <form class="test__form" action="#" method="POST" autocomplete="off">
+              <label class="test__label sr-only" for="email">Укажите адрес вашей электронной почты</label>
+              <input class="test__input" id="email" type="email" name="email" placeholder="Введите ваш email" required>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
+            </form>
+          </div>
+        </div>
+        <img class="hero__image" src="img/hero@1x.png" srcset="img/hero@2x.png 2x" width="725" height="600"
+          alt="Коробки с посылками Ozon и Wildberries.">
+        <ul class="hero__indicators indicators">
+          <li class="indicators__item">
+            <p class="indicators__value">777</p>
+            <p class="indicators__description">
+              Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов
+            </p>
+          </li>
+          <li class="indicators__item">
+            <p class="indicators__value">5</p>
+            <p class="indicators__description">
+              Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов
+            </p>
+          </li>
+          <li class="indicators__item">
+            <p class="indicators__value">100 000</p>
+            <p class="indicators__description">
+              Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="possibilities">
+        <h2 class="possibilities__title title">Возможности сервиса</h2>
+        <div class="possibilities__tabs tabs">
+          <div class="tabs__navigation">
+            <button class="tabs__link tabs__link--active" type="button">Финансовая аналитика</button>
+            <button class="tabs__link" type="button">Товарная аналитика</button>
+            <button class="tabs__link" type="button">Аналитика внутренней рекламы</button>
+            <button class="tabs__link" type="button">Статистика</button>
+            <button class="tabs__link" type="button">Инструменты</button>
+          </div>
+          <details class="tabs__item" open>
+            <summary class="tabs__title">Финансовая аналитика</summary>
+            <div class="tabs__content">
+              <h3>Инструменты для финансовой <br>аналитики</h3>
+              <ul>
+                <li>Отчёт о прибылях и убытках (P&L)</li>
+                <li>Отчёт о движении денежных средств (ДДС)</li>
+                <li>Журнал операций</li>
+                <li>Сводка продаж</li>
+                <li>Учёт самовыкупов</li>
+              </ul>
+              <div>
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/jpg"
+                    srcset="img/sheets-desktop@1x.jpg 1x, img/sheets-desktop@2x.jpg 2x">
+                  <img src="img/sheets-mobile@1x.jpg" srcset="img/sheets-mobile@2x.jpg 2x" width="280" height="173"
+                    alt="Таблица с показателями.">
+                </picture>
+              </div>
+              <a class="button" href="#">Попробовать бесплатно</a>
+            </div>
+          </details>
+          <details class="tabs__item">
+            <summary class="tabs__title">Товарная аналитика</summary>
+          </details>
+          <details class="tabs__item">
+            <summary class="tabs__title">Аналитика внутренней рекламы</summary>
+          </details>
+          <details class="tabs__item">
+            <summary class="tabs__title">Статистика</summary>
+          </details>
+          <details class="tabs__item">
+            <summary class="tabs__title">Инструменты</summary>
+          </details>
+        </div>
+        <div class="possibilities__test test">
+          <div class="test__wrapper">
+            <p class="test__heading">Начните экономить своё время</p>
+            <p class="test__appeal">3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
+            <form class="test__form" action="#" method="post" autocomplete="off">
+              <label class="test__label">
+                <input class="test__input" type="email" name="email" placeholder="Введите ваш email" required>
+              </label>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
+            </form>
+          </div>
+          <div class="test__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/png" width="580" height="375"
+                srcset="img/women-1-desktop@1x.png 1x, img/women-1-desktop@2x.png 2x">
+              <img class="test__image" src="img/women-1-mobile@1x.png" srcset="img/women-1-mobile@2x.png 2x" width="320"
+                height="220" alt="Девушка с ноутбуком на фоне часов.">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="reports">
+        <h2 class="reports__title title">Собираем единые отчёты по всем вашим магазинам</h2>
+        <p class="reports__subtitle">C Mpassistant вы сможете:</p>
+        <div class="reports__inner">
+          <ul class="reports__list">
+            <li class="reports__item">
+              <p class="reports__text">Сможете видеть прибыль по всем магазинам и маркетплейсам в одном месте</p>
+            </li>
+            <li class="reports__item">
+              <p class="reports__text">Не потратите время на сбор данных из нескольких кабинетов или маркетплейсов</p>
+            </li>
+            <li class="reports__item">
+              <p class="reports__text">Добавите любое количество магазинов</p>
+            </li>
+          </ul>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/png"
+              srcset="img/reports-desktop@1x.png 1x, img/reports-desktop@2x.png 2x" width="690" height="416">
+            <img class="reports__image" src="img/reports-mobile@1x.png" srcset="img/reports-mobile@1x.png 2x"
+              width="280" height="255" alt="Схема сбора отчетов.">
+          </picture>
+        </div>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title title">Почему выбирают Mpassistant</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--accuracy">
+              <span>Точность данных</span>
+            </h3>
+            <p class="advantages__description">
+              Данные в отчётах сервиса полностью совпадает с данными ваших магазинов на маркетплейсах.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--functional">
+              <span>Большой функционал</span>
+            </h3>
+            <p class="advantages__description">
+              Полный набор инструментов для внутренней аналитики для Wildberries и Ozon. Более 10 полезных отчётов
+              с удобными настраиваемыми фильтрами и параметрами.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--ease">
+              <span>Лёгкость освоения</span>
+            </h3>
+            <p class="advantages__description">
+              Наши отчёты просты и удобны. Все отчёты имеют подробные инструкции и видео, помогающие легко читать
+              их и использовать.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--everyone">
+              <span>Подходит всем</span>
+            </h3>
+            <p class="advantages__description">
+              Mpassistant создан селлерами для селлеров. Наш опыт в товарном бизнесе и разработке IT систем позволил
+              создать полезный и удобный продукт, поэтому он подойдёт как для новичков, так и для опытных селлеров.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--confidentiality">
+              <span>Конфиденциальность</span>
+            </h3>
+            <p class="advantages__description">
+              Ваша конфиденциальность для нас самый главный приоритет. Все ваши данные надёжно сохранены, а информация
+              об этом записана в договоре-оферте. По желанию можем заключить дополнительное соглашение (NDA).
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle advantages__subtitle--service">
+              <span>Служба заботы</span>
+            </h3>
+            <p class="advantages__description">
+              Наша служба заботы готова решить практически любые вопросы и в режиме 24/7.
+            </p>
+          </li>
+        </ul>
+        <div class="advantages__test test">
+          <div class="test__wrapper">
+            <p class="test__heading">Попробуйте бесплатно</p>
+            <p class="test__appeal">3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
+            <form class="test__form" action="#" method="post" autocomplete="off">
+              <label class="test__label">
+                <input class="test__input" type="email" name="email" placeholder="Введите ваш email" required>
+              </label>
+              <button class="test__button button button--gradient-reverse" type="submit">Попробовать</button>
+            </form>
+          </div>
+          <div class="test__image-wrapper">
+            <picture>
+              <source media="(min-width: 1024px)" type="image/png" width="580" height="375"
+                srcset="img/women-2-desktop@1x.png 1x, img/women-2-desktop@2x.png 2x">
+              <img class="test__image" src="img/women-2-mobile@1x.png" srcset="img/women-2-mobile@2x.png 2x" width="320"
+                height="220" alt="Девушка с ноутбуком на фоне подарков.">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="rate">
+        <h2 class="rate__title title">Выберите тариф</h2>
+        <form class="rate__form" action="#" method="get" autocomplete="off">
+          <button class="rate__button-form rate__button-form--active" type="button">1 месяц</button>
+          <button class="rate__button-form" type="button">3 месяца</button>
+          <button class="rate__button-form" type="button">6 месяцев</button>
+          <button class="rate__button-form" type="button">12 месяца</button>
+        </form>
+        <ul class="rate__list">
+          <li class="rate__item rate-card rate-card--white">
+            <div class="rate-card__wrapper">
+              <div class="rate-card__inner">
+                <h3 class="rate-card__title">Стартовый</h3>
+                <span class="rate-card__credit"></span>
+                <span class="rate-card__price">4 990 ₽</span>
+              </div>
+              <span class="rate-card__percent"></span>
+              <div class="rate-card__button-wrapper">
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="rate__item rate-card rate-card--blue rate-card--credit rate-card--discount">
+            <div class="rate-card__wrapper">
+              <div class="rate-card__inner">
+                <h3 class="rate-card__title">Стартовый +</h3>
+                <span class="rate-card__credit">4 491 ₽/мес</span>
+                <span class="rate-card__price">13 473 ₽</span>
+              </div>
+              <span class="rate-card__percent">— 10%</span>
+              <div class="rate-card__button-wrapper">
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="rate__item rate-card rate-card--green rate-card--credit rate-card--discount">
+            <div class="rate-card__wrapper">
+              <div class="rate-card__inner">
+                <h3 class="rate-card__title">Профи</h3>
+                <span class="rate-card__credit">4 241 ₽/мес</span>
+                <span class="rate-card__price">25 446 ₽</span>
+              </div>
+              <span class="rate-card__percent">— 15%</span>
+              <div class="rate-card__button-wrapper">
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="rate__item rate__item--special rate-card--credit rate-card rate-card--special">
+            <div class="rate-card__wrapper">
+              <div class="rate-card__inner">
+                <h3 class="rate-card__title">Начинающим селлерам с выручкой</h3>
+                <span class="rate-card__credit">до 200 000 ₽/мес</span>
+                <span class="rate-card__price">Бесплатно</span>
+              </div>
+              <span class="rate-card__percent"></span>
+              <div class="rate-card__button-wrapper">
+                <a class="rate-card__button button" href="#">Попробовать</a>
+                <a class="rate-card__button rate-card__button--more button button--transparent" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="rate-card__image-wrapper">
+              <picture>
+                <source media="(min-width: 1024px)" type="image/png" width="580" height="375"
+                  srcset="img/women-3-desktop@1x.png 1x, img/women-3-desktop@2x.png 2x">
+                <img class="rate-card__image" src="img/women-3-mobile@1x.png" srcset="img/women-3-mobile@2x.png 2x"
+                  width="320" height="220" alt="Девушка на фоне подарков.">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <div class="reviews__header">
+          <h2 class="reviews__title title">Отзывы</h2>
+          <div class="reviews__controls-wrapper">
+            <button class="reviews__control reviews__control--prev" type="button">
+              <span class="sr-only">Назад</span>
+            </button>
+            <button class="reviews__control reviews__control--next" type="button">
+              <span class="sr-only">Вперед</span>
+            </button>
+          </div>
+        </div>
+        <ul class="reviews__list">
+          <li class="reviews__item reviews__item--show">
+            <blockquote>
+              <p class="reviews__text">
+                Изначально нашёл сервис в поиске Яндекса, когда искал калькулятор unit-экономики товара. Калькулятор
+                полностью устроил и решил пользоваться самим сайтом. К тому же это было для меня бесплатно,
+                так как проходил по условиям бесплатного доступа: оборот до 200т.р в месяц. Этого не встретить на других
+                сайтах, это возможность развиваться на ранних этапах, без вложения огромных сумм для доступа к подобным
+                сайтам. Радует поддержка, получал ответы на всевопросы, выслушивали
+              </p>
+            </blockquote>
+            <div class="reviews__accordion">
+              <button class="reviews__button" type="button">Читать полностью</button>
+              <p class="reviews__author">— Алексей</p>
+            </div>
+          </li>
+          <li class="reviews__item reviews__item--show">
+            <blockquote>
+              <p class="reviews__text">
+                Функционал сервиса, тот что есть — полностью устраивает. Хочется ещё автобиддер по ставкам в рекламных
+                компаниях и цены вам не будет!
+              </p>
+            </blockquote>
+            <div class="reviews__accordion">
+              <button class="reviews__button reviews__button--hidden" type="button">Читать полностью</button>
+              <p class="reviews__author">— Владислав</p>
+            </div>
+          </li>
+        </ul>
+        <div class="reviews__pagination">
+          <button class="reviews__indicator reviews__indicator--active" type="button">
+            <span class="sr-only">Комментарий 1</span>
+          </button>
+          <button class="reviews__indicator" type="button">
+            <span class="sr-only">Комментарий 2</span>
+          </button>
+          <button class="reviews__indicator" type="button">
+            <span class="sr-only">Комментарий 3</span>
+          </button>
+          <button class="reviews__indicator" type="button">
+            <span class="sr-only">Комментарий 4</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__contacts">
+        <div class="footer__logo logo">
+          <a class="logo__link" href="./index.html">
+            <img class="logo__image" src="./img/logo.svg" width="187" height="18" alt="Логотип Mpasisstant.">
+            <span class="sr-only">На главную</span>
+          </a>
+          <p class="logo__text">
+            Аналитика и оцифровка продаж<br>
+            <span class="logo__market logo__market--wb">Wildberries</span>
+            и
+            <span class="logo__market logo__market--ozon">Ozon</span>
+          </p>
+        </div>
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="#">
+              <span class="sr-only">Vkontakte</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="#">
+              <span class="sr-only">Telegram</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="#">
+              <span class="sr-only">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__block-group">
+        <div class="footer__item">
+          <h3 class="footer__title">Сервис</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Для кого</a>
+            </li>
+            <li>
+              <a href="#">Возможности</a>
+            </li>
+            <li>
+              <a href="#">Тарифы</a>
+            </li>
+            <li>
+              <a href="grid.html">Гриды</a>
+            </li>
+            <li>
+              <a href="form.html">Формы</a>
+            </li>
+            <li>
+              <a href="demo.html">Демо</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__title">Клиентам</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Вход</a>
+            </li>
+            <li>
+              <a href="#">Регистрация</a>
+            </li>
+            <li>
+              <a href="#">Восстановления пароля</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__title">Документы</h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="#">Публичная оферта</a>
+            </li>
+            <li>
+              <a href="#">Использование cookie</a>
+            </li>
+            <li>
+              <a href="#">Техническая поддержка</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footer__payment payment">
+        <li class="payment__item">
+          <img class="pament__image" width="133" height="36" src="./img/modulbank.png" alt="Логотип Модуль Банк.">
+        </li>
+        <li class="payment__item">
+          <img class="pament__image" width="63" height="26" src="./img/visa.png" alt="Логотип Виза.">
+        </li>
+        <li class="payment__item">
+          <img class="pament__image" width="42" height="26" src="./img/mastercard.png" alt="Логотип Мастер Кард.">
+        </li>
+        <li class="payment__item">
+          <img class="pament__image" width="42" height="26" src="./img/maestro.png" alt="Логотип Маэстро.">
+        </li>
+        <li class="payment__item">
+          <img class="pament__image" width="68" height="18" src="./img/mir.png" alt="Логотип Мир.">
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        &copy; 2022–2023 Mpassistant
+      </p>
+      <p class="footer__disclaimer">
+        Информация, размещённая на сайте, не является публичной офертой
+      </p>
+      <p class="footer__design">
+        Редизайн сайта <span>Turkuletsdesign</span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
