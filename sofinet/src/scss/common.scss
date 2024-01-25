@@ -1,0 +1,76 @@
+h1, h2, h3, h4, p, span, small, button, a, div {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+ol, ul {
+	list-style: none;
+}
+
+input {
+	border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.input-field {
+	position: relative;
+	margin-bottom: rem(16);
+	input {
+		position: relative;
+		padding: rem(14);
+		background-color: transparent;
+		border-radius: rem(8);
+		outline: none;
+		z-index: 1;
+	}
+	label {
+		position: absolute;
+		top: 50%;
+		left: 14px;
+		padding: rem(2);
+		color: #B8B9BA;
+		background-color: #fff;
+		font-size: rem(14);
+		line-height: math.div(16, 14);
+		transform: translateY(-50%);
+		z-index: 0;
+		transition: 0.3s ease all;
+	}
+
+	.input-icon {
+		position: absolute;
+		top: 50%;
+		right: rem(14);
+		display: flex;
+		padding: rem(3);
+		transform: translateY(-50%);
+		z-index: 3;
+		cursor: pointer;
+	}
+
+	input:focus {
+		border-color: $highlightColor;
+	}
+
+	input:focus ~ label, input.used ~ label {
+		top: 1px;
+		left: 29px;
+		/* font-size: 14px; */
+		color: $highlightColor;
+		font-size: rem(12);
+		z-index: 1;
+	}
+}

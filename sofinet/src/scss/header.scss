@@ -1,0 +1,307 @@
+.header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: rem(23) 0 rem(19.32);
+	width: 100%;
+	min-height: rem(85);
+	// background-color: $bgColor;
+
+	.menu {
+		// .menu__body
+		&__body {
+			@media(max-width: $tablet) {
+				position: fixed;
+				top: 0;
+				left: -100%;
+				padding: rem(90) rem(20) rem(30);
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: $highlightColor;
+				z-index: 4;
+				transition: 0.3s left ease;
+				.menu-open & {
+					left: 0;
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+			flex: 0 1 auto;
+			// justify-content: flex-end;
+		}
+		
+	}
+	// Burger ================================================
+	.icon-menu {
+		@media (max-width: $tablet) {
+			display: block;
+			position: relative;
+			flex: 0 0 24px;
+			width: 40px;
+			height: 16px;
+			cursor: pointer;
+			z-index: 10;
+			span,
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: rem(2);
+				background-color: $textColor;
+				border-radius: rem(10);
+				transition: all 0.3s ease 0s;
+			}
+			&::before {
+				top: 0px;
+			}
+			&::after {
+				bottom: 0px;
+			}
+			span {
+				top: calc(50% - 1px);
+				width: 75%;
+			}
+			.menu-open & {
+				span {
+					transform: scale(0);
+				}
+				&::before {
+					background-color: #fff;
+					top: calc(50% - 1px);
+					transform: rotate(-45deg);
+				}
+				&::after {
+					background-color: #fff;
+					bottom: calc(50% - 1px);
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+
+	&__logo {
+		@media (min-width:1279.98px){
+			@include adaptiveValue("margin-right", 45, 10);  
+		}
+		
+	}
+
+	&__nav {
+		flex: 0 1 auto;
+		margin-right: rem(10);
+
+		@media (max-width:$tablet){
+			 display: none; 
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: rem(60);
+			font-size: rem(14);
+			font-weight: 500;
+			line-height: math.div(19.5, 14);
+
+			li {
+				display: flex;
+				
+				&.active {
+
+					a {
+						color: $highlightColor;
+					}
+					
+				}
+				
+				a {
+					position: relative;
+					color: $mainColor;
+					font-size: rem(14);
+					line-height: math.div(17 , 14);
+					font-weight: 500;
+					transition: color 0.3s ease;
+
+					&::after{
+						content:'';
+						position: absolute;
+						left: 0;
+						bottom: rem(-10);
+						width: 100%;
+						height: rem(2);
+						background-color: $highlightColor;
+						transform: scaleX(0);
+						transition: transform 0.3s ease;
+					}
+					
+					@media (any-hover: hover){
+						&:hover{
+							&::after{
+								transform: scaleX(1);
+							}
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		button {
+			@media (max-width:1279.98px){
+				display: none;
+			}
+		}
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		transition: 0.3s ease stroke;
+		cursor: pointer;
+
+		&::after {
+			content: attr(data-count);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: -0.5rem;
+			right: -0.5rem;
+			padding: 0 0.3125rem;
+			width: 1rem;
+			height: 1rem;
+			color: $decorColor2;
+			background-color: $highlightColor;
+			border-radius: 50%;
+			font-size: 0.75rem;
+			line-height: 1;
+		}
+
+		&[data-count="0"]::after {
+			display: none;
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+				path {
+					stroke: $highlightColor;
+				}
+			}
+		}
+		@media (min-width:1279.98px){
+			@include adaptiveValue("margin-left", 45, 10);  
+		}
+		@media (max-width:1279.98px) {
+			padding-left: rem(91);
+		}
+		@media (max-width:$tablet){
+			 padding-left: rem(16); 
+		}
+		// @media (min-width:$tablet){
+		// 	 display: none; 
+		// }
+	}
+
+	.mobile-menu {
+
+		&__contacts {
+			display: flex;
+			flex-direction: column;
+			gap: rem(26);
+			margin-bottom: rem(41);
+			color: #73A9A8;
+			font-size: rem(36);
+			line-height: 1;
+			font-weight: 500;
+		}
+
+		ul.nav-list {
+			color: #73A9A8;
+			font-size: rem(22);
+			font-weight: 500;
+
+			li {
+				padding: rem(30) 0;
+				border-bottom: rem(1) solid #73A9A8;
+
+				&:first-child{
+					display: none;
+				}
+			}
+		}
+
+		&__catalog {
+			color: #fff;
+			font-size: rem(22);
+			font-weight: 500;
+
+			li.catalog-item {
+				padding: rem(30) 0;
+				border-bottom: rem(1) solid #73A9A8;
+			}
+
+			details {
+				position: relative;
+			  }
+			  
+			  details summary::-webkit-details-marker {
+				display: none;
+			  }
+			  
+			  details > summary {
+				list-style: none;
+				padding-right: 2rem;
+			  }
+			  
+			  details summary:before {
+				content: url(../img/plus.svg);
+				position: absolute;
+				right: 0;
+				transition: 0.3s ease transform;
+				cursor: pointer;
+			  }
+			  
+			  details[open] summary:before {
+				transform: rotate(-45deg);
+			  }
+
+			  ul {
+				display: flex;
+				flex-direction: column;
+				gap: rem(26);
+				padding-top: rem(26);
+				li {
+					color: #73A9A8;
+				}
+			  }
+		}
+
+		&__link {
+			display: flex;
+			justify-content: space-between;
+			padding: rem(30) 0;
+			color: #fff;
+			font-size: rem(22);
+			font-weight: 500;
+		}
+
+		&__copy {
+			display: inline-block;
+			padding-top: rem(40);
+			color: #73A9A8;
+			font-size: rem(16);
+			line-height: math.div(18, 16);
+		}
+	}
+}

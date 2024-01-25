@@ -1,0 +1,359 @@
+#catalog-request(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__body
+				form(action="#", method="post").form-aside
+					h2.form-aside__title Заявка на получение<br>каталога
+					.form-aside__fields
+						input#name(type="text", name="name", placeholder="ФИО", required)
+						input#phone(type="tel", name="phone", placeholder="+7", required)
+						input#email(type="email", name="email", placeholder="Email", required)
+						input#company(type="text", name="company", placeholder="Название организации", required)
+						input#address(type="text", name="address", placeholder="Адрес вашего объекта")
+					button(type="submit").button.button-highlight.form-aside__button 
+						span Отправить запрос
+					.checkbox.form-aside__checkbox
+						input#c_1(type="checkbox" value="1" name="form[]").checkbox__input
+						label(for="c_1").checkbox__label 
+							span 
+								a(href="policy.html", target="_blank").checkbox__text Согласие 
+								| на обработку персональных данных
+
+#call-request(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__body
+				form(action="#", method="post").form-aside
+					h2.form-aside__title В течение суток вам<br>перезвонит менеджер,<br>чтобы помочь с выбором
+					.form-aside__fields
+						input#name(type="text", name="name", placeholder="ФИО", required)
+						input#phone(type="tel", name="phone", placeholder="+7", required)
+					button(type="submit").button.button-highlight.form-aside__button 
+						span Отправить запрос
+					.checkbox.form-aside__checkbox
+						input#c_1(type="checkbox" value="1" name="form[]").checkbox__input
+						label(for="c_1").checkbox__label 
+							span 
+								a(href="policy.html", target="_blank").checkbox__text Согласие 
+								| на обработку персональных данных
+
+#image-popup(aria-hidden="true").popup.popup-swiper
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__slider.swiper
+				.popup-slider__wrapper.swiper-wrapper
+					.popup__slide.swiper-slide
+						img(src="@img/product/k1197-1.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/product/k1197-2.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/product/k1197-3.png", alt="img")
+				.popup-slider__navigation
+					svg.prev(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+						g
+							path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#000", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+					svg.next(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+						g
+							path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#000", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+
+#case-popup(aria-hidden="true").popup.popup-swiper
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__slider.swiper
+				.popup-slider__wrapper.swiper-wrapper
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-2.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-3.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-4.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-4.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-5.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-6.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-7.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-8.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-9.png", alt="img")
+					.popup__slide.swiper-slide
+						img(src="@img/case/case-10.png", alt="img")
+				.popup-slider__navigation
+					svg.prev(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+						g
+							path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#000", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+					svg.next(width="53", height="53", viewBox="0 0 53 53", fill="none", xmlns="http://www.w3.org/2000/svg")
+						g
+							path#Vector(d="M29.2447 35.0947L38.0183 26.3211M38.0183 26.3211L29.2447 17.5475M38.0183 26.3211L14.6221 26.3211", stroke="#000", stroke-width="1.69811", stroke-linecap="round", stroke-linejoin="round")
+
+#sharing-popup(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__body
+				h2 Поделиться
+				ul.sharing-list
+					li.sharing-list__item
+						a(href="https://web.whatsapp.com/send?text=Спортивный%20Комплекс%20K1197%20https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png", target="_blank")
+							svg.sharing-list__img(xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewbox='0 0 46 46' fill='none')
+								path(d='M22.9053 -0.00756836C10.2713 -0.00756836 -0.00766464 10.2714 -0.00766464 22.9053C-0.00766464 26.8504 1.01146 30.7296 2.94412 34.1526L0.0291952 44.5531C-0.0664413 44.8948 0.0262067 45.2614 0.273268 45.5154C0.463544 45.7117 0.72256 45.8183 0.988549 45.8183C1.06825 45.8183 1.14894 45.8083 1.22764 45.7894L12.0824 43.1006C15.3968 44.8798 19.1296 45.8183 22.9053 45.8183C35.5392 45.8183 45.8182 35.5393 45.8182 22.9053C45.8182 10.2714 35.5392 -0.00756836 22.9053 -0.00756836ZM34.4314 30.9906C33.9413 32.3475 31.5902 33.5858 30.4605 33.7521C29.4464 33.9006 28.1633 33.9643 26.7546 33.522C25.9009 33.253 24.805 32.8964 23.4014 32.2976C17.5008 29.7812 13.6474 23.9145 13.3526 23.527C13.0587 23.1395 10.9507 20.378 10.9507 17.5198C10.9507 14.6617 12.4699 13.256 13.0099 12.6742C13.5498 12.0924 14.1864 11.947 14.5789 11.947C14.9714 11.947 15.3629 11.952 15.7066 11.9679C16.0682 11.9858 16.5534 11.8314 17.0306 12.9651C17.5207 14.1287 18.6972 16.9868 18.8427 17.2787C18.9901 17.5696 19.0878 17.9093 18.8925 18.2969C18.6972 18.6844 18.5996 18.9265 18.3047 19.2662C18.0099 19.6059 17.6871 20.0233 17.4221 20.2843C17.1272 20.5742 16.8214 20.888 17.1641 21.4698C17.5068 22.0516 18.6873 23.9534 20.4366 25.4935C22.6831 27.472 24.5789 28.0857 25.1667 28.3766C25.7544 28.6674 26.0981 28.6186 26.4408 28.2311C26.7835 27.8426 27.9112 26.5346 28.3027 25.9538C28.6942 25.373 29.0868 25.4686 29.6267 25.6629C30.1667 25.8561 33.0587 27.2608 33.6464 27.5517C34.2342 27.8426 34.6267 27.988 34.7741 28.2301C34.9216 28.4712 34.9216 29.6348 34.4314 30.9906Z' fill='#383838')
+
+					li.sharing-list__item
+						a(href="http://vkontakte.ru/share.php?url=https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png", target="_blank")
+							svg.sharing-list__img(xmlns='http://www.w3.org/2000/svg' width='51' height='50' viewbox='0 0 51 50' fill='none')
+								path(d='M3.80315 3.48675C0.316407 7.0067 0.316406 12.6353 0.316406 23.9091V25.9016C0.316406 37.1588 0.316407 42.7874 3.80315 46.3239C7.32311 49.8107 12.9517 49.8107 24.2255 49.8107H26.218C37.4752 49.8107 43.1038 49.8107 46.6403 46.3239C50.1271 42.804 50.1271 37.1754 50.1271 25.9016V23.9091C50.1271 12.6519 50.1271 7.02331 46.6403 3.48675C43.1204 6.59766e-07 37.4918 0 26.218 0H24.2255C12.9683 0 7.33971 6.59766e-07 3.80315 3.48675ZM8.71781 15.1591H14.4294C14.6121 24.6563 18.7962 28.6744 22.1169 29.5045V15.1591H27.4798V23.3446C30.7507 22.9959 34.2043 19.2601 35.3665 15.1424H40.7129C40.2771 17.274 39.4064 19.2928 38.1551 21.0726C36.9038 22.8524 35.2988 24.355 33.4405 25.4865C35.5144 26.5183 37.3459 27.9782 38.8141 29.7698C40.2823 31.5615 41.3539 33.6441 41.9581 35.8803H36.0639C34.802 31.9453 31.6473 28.8902 27.4798 28.4751V35.8803H26.8157C15.4589 35.8803 8.98347 28.1098 8.71781 15.1591Z' fill='#383838')
+
+					li.sharing-list__item
+						a(href="https://t.me/share/url?url=https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png&text=Спортивный%20Комплекс%20K1197", target="_blank")
+							svg.sharing-list__img(xmlns='http://www.w3.org/2000/svg' width='51' height='51' viewbox='0 0 51 51' fill='none')
+								path(d='M25.6584 2.00195C38.3744 2.00195 48.682 12.3095 48.682 25.0256C48.682 37.7416 38.3744 48.0492 25.6584 48.0492C12.9423 48.0492 2.63477 37.7416 2.63477 25.0256C2.63477 12.3095 12.9423 2.00195 25.6584 2.00195ZM33.6005 34.4102C34.0239 33.1108 36.008 20.1616 36.2532 17.61C36.3273 16.8372 36.0831 16.3236 35.6046 16.0944C35.026 15.8161 34.1691 15.9553 33.1751 16.3136C31.8117 16.8051 14.3818 24.2057 13.3748 24.6342C12.4198 25.0396 11.5169 25.482 11.5169 26.1227C11.5169 26.5731 11.7841 26.8264 12.5209 27.0897C13.2877 27.363 15.2187 27.9486 16.3588 28.2629C17.457 28.5662 18.7072 28.3029 19.408 27.8675C20.1507 27.406 28.7225 21.6701 29.3381 21.1676C29.9528 20.6651 30.4433 21.3087 29.9408 21.8123C29.4382 22.3148 23.5542 28.0256 22.7784 28.8164C21.8365 29.7764 22.5051 30.7714 23.1368 31.1699C23.8585 31.6243 29.0488 35.1059 29.8306 35.6645C30.6124 36.223 31.4053 36.4763 32.131 36.4763C32.8567 36.4763 33.2391 35.5203 33.6005 34.4102Z' fill='#383838')
+
+
+					li.sharing-list__item
+						a(href="https://connect.ok.ru/offer?url=http://vkontakte.ru/share.php?url=https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png&title=Спортивный%20Комплекс%20K1197", target="_blank")
+							svg.sharing-list__img(xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewbox='0 0 50 50' fill='none')
+								path(fill-rule='evenodd' clip-rule='evenodd' d='M1.50082 6.56935C0.189453 9.14304 0.189453 12.5122 0.189453 19.2505V30.5602C0.189453 37.2985 0.189453 40.6676 1.50082 43.2413C2.65432 45.5052 4.49492 47.3458 6.7588 48.4993C9.3325 49.8107 12.7017 49.8107 19.44 49.8107H30.7496C37.4879 49.8107 40.8571 49.8107 43.4308 48.4993C45.6947 47.3458 47.5353 45.5052 48.6888 43.2413C50.0001 40.6676 50.0001 37.2985 50.0001 30.5602V19.2505C50.0001 12.5122 50.0001 9.14304 48.6888 6.56935C47.5353 4.30546 45.6947 2.46487 43.4308 1.31136C40.8571 0 37.4879 0 30.7496 0H19.44C12.7017 0 9.3325 0 6.7588 1.31136C4.49492 2.46487 2.65432 4.30546 1.50082 6.56935ZM26.679 30.7626C28.1207 30.6121 30.3036 30.2126 31.8901 29.2051C33.7777 27.9833 34.6057 27.2711 33.8878 25.7831C33.4535 24.9377 32.2839 24.2313 30.7263 25.453C30.7263 25.453 28.6245 27.1264 25.2314 27.1264C21.8384 27.1264 19.7365 25.453 19.7365 25.453C18.179 24.2255 17.0036 24.9377 16.5751 25.7831C15.8455 27.2711 16.6735 27.9833 18.5611 29.1993C20.165 30.2299 22.3826 30.6063 23.807 30.7568L22.6143 31.9496C21.4385 33.1133 20.3047 34.2518 19.3453 35.2152C18.9252 35.6371 18.5385 36.0254 18.1963 36.3675C16.5635 37.9946 19.1922 40.6059 20.8251 39.0136L25.243 34.5841C26.9337 36.2749 28.555 37.8961 29.6609 39.0194C31.2937 40.6175 33.9225 38.0293 32.307 36.3733L27.8891 31.9554L26.679 30.7626ZM25.2256 9.86582C21.0914 9.86582 17.7157 13.2241 17.7157 17.3757C17.7157 21.5099 21.0914 24.8682 25.2256 24.8682C29.3598 24.8682 32.7355 21.5099 32.7355 17.3757C32.7355 13.2241 29.3598 9.86582 25.2256 9.86582ZM25.2256 21.064C23.1933 21.064 21.5373 19.4081 21.5373 17.3757C21.5373 15.326 23.1933 13.67 25.2256 13.67C27.258 13.67 28.914 15.326 28.914 17.3757C28.914 19.4081 27.258 21.064 25.2256 21.064Z' fill='#383838')
+
+				button.sharing-list__button(data-link="https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png")
+					span Копировать ссылку
+					img(src="@img/copy.svg", alt="")
+				#info-text
+
+#scheme-popup(aria-hidden="true").popup.popup-swiper
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			img(src="@img/product/k1197-scheme.png", alt="img")
+
+#booking(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			.ap-booking
+				.ap-booking__title
+					span Забронировать товар в магазине
+					span.ap-booking__close
+						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+							<line x1="0.353553" y1="0.646447" x2="20.3536" y2="20.6464" stroke="black"/>
+							<line x1="20.3536" y1="0.353553" x2="0.353552" y2="20.3536" stroke="black"/>
+						</svg>
+				.ap-booking__product.ap-product
+					.ap-product__body 
+						.ap-product__brand Scholl
+						.ap-product__name Женские кроссовки Mighty Walk
+						.ap-product__vendor-code Артикул: РС402
+						.ap-product__price-wrapper 
+							span.ap-product__price-text Цена:
+							span.ap-product__price-old 8390р.
+							span.ap-product__price 18390р.
+							span.ap-product__sale Скидка 30%
+					.ap-product__img(style="background-image: url(https://swos.ru/upload/iblock/2a6/3624.jpeg)")
+				
+				.ap-product__message Выберите свой размер и магазин для бронирования товара на 48 часов. Доступно не более 5 пар обуви.
+
+				.ap-product__places.ap-places
+					.ap-places__item._header
+						.ap-places__name Магазин
+						.ap-places__address Адрес
+						.ap-places__sizes Размер
+						.ap-places__space 
+
+					.ap-places__item
+						.ap-places__name Салон «Таганская»
+						.ap-places__address г. Москва, ул. Народная, д.4с1
+						.ap-places__sizes 
+							.ap-places__size._checked 
+								span 36,5M
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+						.ap-places__button(data-store="taganskaya") Забронировать
+					.ap-places__item
+						.ap-places__name Салон «улица 1905 года»
+						.ap-places__address г. Москва, ул.1905 года д. 15
+						.ap-places__sizes 
+							.ap-places__size
+								span 36,5M
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+						.ap-places__button.disabled(data-store="1905") Забронировать
+					.ap-places__item
+						.ap-places__name Салон «Беляево»
+						.ap-places__address г. Москва, ул. Профсоюзная 104
+						.ap-places__sizes 
+							.ap-places__size
+								span 36,5M
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+							.ap-places__size
+								span 36,5
+						.ap-places__button.disabled(data-store="belyaevo") 
+							a(href="")  Забронировать
+
+
+#booking-2(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			.ap-booking
+				.ap-booking__title
+					.ap-booking__title-inner
+						a.ap-booking__back._desktop
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<g clip-path="url(#clip0_2461_1933)">
+									<path d="M0.879313 14.09L4.74931 18C4.84228 18.0938 4.95288 18.1681 5.07474 18.2189C5.1966 18.2697 5.3273 18.2958 5.45931 18.2958C5.59133 18.2958 5.72203 18.2697 5.84389 18.2189C5.96575 18.1681 6.07635 18.0938 6.16931 18C6.26304 17.9071 6.33744 17.7965 6.3882 17.6746C6.43897 17.5527 6.46511 17.422 6.46511 17.29C6.46511 17.158 6.43897 17.0273 6.3882 16.9054C6.33744 16.7836 6.26304 16.673 6.16931 16.58L2.60931 13H22.9993C23.2645 13 23.5189 12.8947 23.7064 12.7071C23.894 12.5196 23.9993 12.2652 23.9993 12C23.9993 11.7348 23.894 11.4805 23.7064 11.2929C23.5189 11.1054 23.2645 11 22.9993 11H2.54931L6.16931 7.38002C6.3466 7.19405 6.4455 6.94696 6.4455 6.69002C6.4455 6.43308 6.3466 6.186 6.16931 6.00002C6.07635 5.90629 5.96575 5.8319 5.84389 5.78113C5.72203 5.73036 5.59133 5.70422 5.45931 5.70422C5.3273 5.70422 5.1966 5.73036 5.07474 5.78113C4.95288 5.8319 4.84228 5.90629 4.74931 6.00002L0.879313 9.85002C0.317511 10.4125 0.00195313 11.175 0.00195312 11.97C0.00195312 12.765 0.317511 13.5275 0.879313 14.09Z" fill="black"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_2461_1933">
+										<rect width="24" height="24" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						h3 Забронировать товар в магазине
+					span.ap-booking__close
+						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+							<line x1="0.353553" y1="0.646447" x2="20.3536" y2="20.6464" stroke="black"/>
+							<line x1="20.3536" y1="0.353553" x2="0.353552" y2="20.3536" stroke="black"/>
+						</svg>
+				
+				.ap-booking__order.ap-order
+					.ap-order__content
+						a.ap-booking__back._mobile
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<g clip-path="url(#clip0_2461_1933)">
+									<path d="M0.879313 14.09L4.74931 18C4.84228 18.0938 4.95288 18.1681 5.07474 18.2189C5.1966 18.2697 5.3273 18.2958 5.45931 18.2958C5.59133 18.2958 5.72203 18.2697 5.84389 18.2189C5.96575 18.1681 6.07635 18.0938 6.16931 18C6.26304 17.9071 6.33744 17.7965 6.3882 17.6746C6.43897 17.5527 6.46511 17.422 6.46511 17.29C6.46511 17.158 6.43897 17.0273 6.3882 16.9054C6.33744 16.7836 6.26304 16.673 6.16931 16.58L2.60931 13H22.9993C23.2645 13 23.5189 12.8947 23.7064 12.7071C23.894 12.5196 23.9993 12.2652 23.9993 12C23.9993 11.7348 23.894 11.4805 23.7064 11.2929C23.5189 11.1054 23.2645 11 22.9993 11H2.54931L6.16931 7.38002C6.3466 7.19405 6.4455 6.94696 6.4455 6.69002C6.4455 6.43308 6.3466 6.186 6.16931 6.00002C6.07635 5.90629 5.96575 5.8319 5.84389 5.78113C5.72203 5.73036 5.59133 5.70422 5.45931 5.70422C5.3273 5.70422 5.1966 5.73036 5.07474 5.78113C4.95288 5.8319 4.84228 5.90629 4.74931 6.00002L0.879313 9.85002C0.317511 10.4125 0.00195313 11.175 0.00195312 11.97C0.00195312 12.765 0.317511 13.5275 0.879313 14.09Z" fill="black"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_2461_1933">
+										<rect width="24" height="24" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						.ap-order__name Салон «улица 1905 года»
+						.ap-order__info 
+							p г. Москва, ул.1905 года д. 15
+							p 10 метров от метро "Улица 1905 года" (первый вагон из центра, выход из метро №3)
+							p Время работы: 09:00—20:00 (без перерывов и выходных дней)
+							p Телефон Единой Справочной: +7 (495) 660-35-28
+							p Менеджер свяжется с вами в ближайшее время для подтверждения бронирования.
+							p Вы сможете примерить и оплатить товар в салоне.
+						<div class="sizeorder__form _desktop">
+							<p class="sizeorder__booking-article">Чтобы забронировать выбранный товар, введите Ваши контактные данные</p>
+							<div class="sizeorder__inputs">
+								<input class="sizeorder__input sizeorder__iname" name="name" placeholder="Имя и фамилия" required>
+								<input class="sizeorder__input sizeorder__phone" name="phone" placeholder="Номер телефона" required>
+								<a href="javascript:void(0);" class="sizeorder__button-check">Подтвердить телефон</a>
+								<input class="sizeorder__input sizeorder__code" name="code" placeholder="Код из смс" style="display:none">
+								<a href="javascript:void(0);" class="sizeorder__button-enter btnForm" style="display:none">Подтвердить</a>
+								<input class="sizeorder__input sizeorder__email" name="email" placeholder="E-mail" required>
+								<input type="hidden" class="phone_check_agree" value="false">
+							</div>
+						</div>
+
+					.ap-order__product
+						.ap-order__body
+							.ap-order__img(style="background-image: url(https://swos.ru/upload/iblock/2a6/3624.jpeg)")
+							.ap-order__details
+								.ap-order__brand Scholl
+								.ap-order__name Женские кроссовки Mighty Walk
+								.ap-order__vendor-code Артикул: РС402
+								.ap-order__price-wrapper 
+									span.ap-order__price-text Цена:
+									span.ap-order__price-old 8390р.
+									span.ap-order__price 18390р.
+									span.ap-order__sale Скидка 30%
+
+						.ap-order__sizes-title Размер
+
+						.ap-order__sizes
+							.ap-order__size
+								span 36,5M
+							.ap-order__size
+								span 36,5
+							.ap-order__size
+								span 36,5
+							.ap-order__size
+								span 36,5
+							.ap-order__size
+								span 36,5
+							.ap-order__size
+								span 36,5
+							.ap-order__size
+								span 36,5
+						
+						<div class="sizeorder__form _mobile">
+							<p class="sizeorder__booking-article">Чтобы забронировать выбранный товар, введите Ваши контактные данные</p>
+							<div class="sizeorder__inputs">
+								<input class="sizeorder__input sizeorder__iname" name="name" placeholder="Имя и фамилия" required>
+								<input class="sizeorder__input sizeorder__phone" name="phone" placeholder="Номер телефона" required>
+								<a href="javascript:void(0);" class="sizeorder__button-check">Подтвердить телефон</a>
+								<input class="sizeorder__input sizeorder__code" name="code" placeholder="Код из смс" style="display:none">
+								<a href="javascript:void(0);" class="sizeorder__button-enter btnForm" style="display:none">Подтвердить</a>
+								<input class="sizeorder__input sizeorder__email" name="email" placeholder="E-mail" required>
+								<input type="hidden" class="phone_check_agree" value="false">
+							</div>
+						</div>
+
+						p.ap-order__text
+							| Нажимая на кнопку "Отправить" Вы принимаете настоящие 
+							| "Правила продажи товаров" и соглашаетесь на обработку персональных данных. 
+							| Мы гарантируем, что Ваши данные никогда не будут переданы третьим лицам
+				
+				a(href="").ap-order__button Отправить 
+					
