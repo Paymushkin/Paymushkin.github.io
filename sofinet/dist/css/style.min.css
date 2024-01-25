@@ -593,6 +593,18 @@ input[type=number] {
     transform: translateX(-50%);
   }
 }
+@media (max-height: 34.375em) {
+  .login-body__logo {
+    max-width: 12.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-height: 27.5em) {
+  .login-body__logo {
+    display: none;
+  }
+}
 .login-body__form {
   position: relative;
   display: flex;
@@ -611,12 +623,27 @@ input[type=number] {
     font-size: 2rem;
   }
 }
+@media (max-height: 34.375em) {
+  .login-body__title {
+    font-size: 2rem;
+  }
+}
 .login-body__subtitle {
   margin-bottom: 1.625rem;
   color: #101010;
   font-size: 1.5rem;
   line-height: 1.1666666667;
   font-variation-settings: "wght" 400;
+}
+@media (max-width: 48.06125em) {
+  .login-body__subtitle {
+    font-size: 1.125rem;
+  }
+}
+@media (max-height: 34.375em) {
+  .login-body__subtitle {
+    font-size: 1.125rem;
+  }
 }
 .login-body__inputs {
   margin-bottom: 1.5rem;
@@ -641,6 +668,11 @@ input[type=number] {
   left: 50%;
   bottom: 2.0625rem;
   transform: translateX(-50%);
+}
+@media (max-height: 27.5em) {
+  .login-body__copy {
+    display: none;
+  }
 }
 .login-img {
   flex: 0 0 50%;
