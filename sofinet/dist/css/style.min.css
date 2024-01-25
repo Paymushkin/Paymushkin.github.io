@@ -558,12 +558,13 @@ input[type=number] {
 
 .login {
   min-width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100svh;
 }
 .login-wrapper {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .login-body {
   position: relative;
