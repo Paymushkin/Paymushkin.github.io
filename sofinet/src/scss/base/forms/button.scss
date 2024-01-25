@@ -82,70 +82,12 @@
 	&-highlight {
 		color: $addColor;
 		background-color: transparent;
-		&::before{
-			background-color: $highlightColor;
-		}
-		&::after{
-			background-color: $addColorGreen;
-		}
-		span {
-			display: flex;
-			align-items: center;
-			gap: rem(10);
-			color: $addColorGreen;
-			i {
-				font-style: normal;
-				font-size: rem(60);
-				font-weight: 250;
-				line-height: 34.5%;
-			}
-		}
-
 		@media (any-hover: hover){
 			&:hover{
 				span {
 					color: $highlightColor;
 				}
 			}
-		}
-		&._with-icon {
-			padding: rem(20) rem(30);
-			font-size: rem(20);
-			line-height: 145%;
-			border-radius: rem(20);
-			&::after{
-				bottom: rem(-90);
-				width: rem(90);
-				height: rem(90);
-			}
-		}
-	}
-	&-black {
-		padding: rem(14) rem(22);
-		border-radius: rem(10);
-		width: 100%;
-		color: #fff;
-		background-color: $textColor;
-	}
-	&-white {
-		padding: rem(10) rem(22);
-		border-radius: rem(5);
-		min-width: rem(140);
-		color: $textColor;
-		background-color: #fff;
-		border: 1px solid $textColor;
-	}
-
-	&-standart {
-		color: #f2f2f2;
-		background-color: #4f4f4f;
-		border-radius: rem(50);
-		&._small {
-			padding: rem(12.5) rem(19);
-			font-size: rem(10);
-		}
-		&::before, &::after{
-			display: none;
 		}
 	}
 }
