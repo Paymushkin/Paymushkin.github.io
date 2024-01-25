@@ -26,7 +26,6 @@ html(lang="ru")
 								button.login-body__button(type="submit") Войти
 							span.login-body__copy SOFINET 2022-2024
 						.login-img
-		script(src="js/app.min.js")
 		script.
 			const passwordInput = document.getElementById("inputPassword")
 			const showHideIcon = document.getElementById("showHideIcon")
@@ -36,11 +35,11 @@ html(lang="ru")
 			} else passwordInput.type = "password"
 			})
 			console.log(passwordInput)
-
 			document.querySelectorAll('input').forEach(input => {
 			input.addEventListener('blur', function() {
 			if (this.value) {this.classList.add('used');}
 			else {this.classList.remove('used');}
 			});
 			});
+		script(src="js/app.min.js")
 	

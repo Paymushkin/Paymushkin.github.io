@@ -2,13 +2,3 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
-const passwordInput = document.getElementById("inputPassword")
-const showHideIcon = document.getElementById("showHideIcon")
-showHideIcon.addEventListener("click", ()=> {
-	if (passwordInput.type !== "text") {
-		passwordInput.type = "text"
-	} else passwordInput.type = "password"
-	
-})
-console.log(passwordInput)
