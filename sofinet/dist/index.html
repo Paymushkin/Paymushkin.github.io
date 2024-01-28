@@ -8,53 +8,428 @@
     <link rel="icon" href="favicon.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png"/>
     <title>CrosBee</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20240125164648"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240128145925"/>
   </head>
   <body>
     <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container">
+          <div class="header__left"><img class="header__logo" src="img/logo.svg?_v=20240128145925" alt=""/>
+            <div class="header__tabs"><a class="header__tab _active" href="">Мои спецификации</a><a class="header__tab" href="">Спецификация PartnerA</a></div>
+          </div>
+          <div class="header__avatar" id="userAvatar" style="background-image: url(img/avatar.png)">
+            <div class="header__menu menu _active">
+              <ul class="menu__list"> 
+                <li class="menu__item"> <span href="" data-popup="#profile">Профиль</span></li>
+                <li class="menu__item"> <a href="/logout">Выход  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
       <main class="main-content">
-        <section class="login" id="login">
-          <div class="login-wrapper"> 
-            <div class="login-body"><img class="login-body__logo" src="img/logo.svg?_v=20240125164648" alt="logo"/>
-              <form class="login-body__form" action="#" method="post">
-                <h1 class="login-body__title">Добро пожаловать!</h1>
-                <h2 class="login-body__subtitle">Вход в систему</h2>
-                <div class="login-body__inputs">
-                  <div class="input-field">
-                    <input class="input" autocomplete="on" type="text" placeholder="" name="name" required="required"/>
-                    <label>Имя пользователя</label>
-                  </div>
-                  <div class="input-field login-body__field">
-                    <input class="input" autocomplete="on" type="password" placeholder="" name="password" required="required" id="inputPassword"/>
-                    <label>Пароль</label><span class="input-icon" id="showHideIcon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-<path d="M7.99996 4.33333C10.5266 4.33333 12.78 5.75333 13.88 8C12.78 10.2467 10.5266 11.6667 7.99996 11.6667C5.47329 11.6667 3.21996 10.2467 2.11996 8C3.21996 5.75333 5.47329 4.33333 7.99996 4.33333ZM7.99996 3C4.66663 3 1.81996 5.07333 0.666626 8C1.81996 10.9267 4.66663 13 7.99996 13C11.3333 13 14.18 10.9267 15.3333 8C14.18 5.07333 11.3333 3 7.99996 3ZM7.99996 6.33333C8.91996 6.33333 9.66663 7.08 9.66663 8C9.66663 8.92 8.91996 9.66667 7.99996 9.66667C7.07996 9.66667 6.33329 8.92 6.33329 8C6.33329 7.08 7.07996 6.33333 7.99996 6.33333ZM7.99996 5C6.34663 5 4.99996 6.34667 4.99996 8C4.99996 9.65333 6.34663 11 7.99996 11C9.65329 11 11 9.65333 11 8C11 6.34667 9.65329 5 7.99996 5Z" fill="#D41F35"/>
-</svg></span>
+        <section class="specific">
+          <div class="specific__container">
+            <div class="specific-header">
+              <div class="specific-header__top">
+                <div class="specific-header__top-wrapper">
+                  <button class="specific-header__button"><span>Фильтр</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+<path d="M10 5L5 0L0 5L10 5Z" fill="#373737"/>
+</svg>
+                  </button>
+                  <form class="specific-header__search header-search" action="" method="post">
+                    <input class="header-search__input" id="globalSearch" type="search" name="global-search" placeholder="Введите текст..."/>
+                    <button class="header-search__button" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+<path d="M0 9.35156C0 14.5078 4.19531 18.7031 9.35156 18.7031C11.3906 18.7031 13.2539 18.0469 14.7891 16.9453L20.5547 22.7227C20.8242 22.9922 21.1758 23.1211 21.5508 23.1211C22.3477 23.1211 22.8984 22.5234 22.8984 21.7383C22.8984 21.3633 22.7578 21.0234 22.5117 20.7773L16.7812 15.0117C17.9883 13.4414 18.7031 11.4844 18.7031 9.35156C18.7031 4.19531 14.5078 0 9.35156 0C4.19531 0 0 4.19531 0 9.35156ZM2.00391 9.35156C2.00391 5.29688 5.29688 2.00391 9.35156 2.00391C13.4062 2.00391 16.6992 5.29688 16.6992 9.35156C16.6992 13.4062 13.4062 16.6992 9.35156 16.6992C5.29688 16.6992 2.00391 13.4062 2.00391 9.35156Z" fill="white"/>
+</svg>
+                    </button>
+                  </form>
+                </div>
+                <button class="button specific-header__add"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M20 12.5714H13.5714V19H11.4286V12.5714H5V10.4286H11.4286V4H13.5714V10.4286H20V12.5714Z" fill="white"/>
+</svg><span>Добавить спецификацию</span>
+                </button>
+              </div>
+              <div class="specific-header__options options">
+                <div class="options__item _active _selected"><span class="options__label">Дистрибьютор</span>
+                  <button class="options__button">OSC10SC2 <span class="options__delete">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+<path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#D41F35"/>
+</svg></span></button><svg class="options__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+<path d="M8.71155 7.34L5.85577 4.5L3 7.34" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  <div class="options__inner options-inner">
+                    <ul class="options-inner__list">
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                    </ul>
                   </div>
                 </div>
-                <button class="login-body__button" type="submit">Войти</button>
-              </form><span class="login-body__copy">SOFINET 2022-2024</span>
+                <div class="options__item"><span class="options__label">Партнёр</span>
+                  <button class="options__button">OSC10SC2 <span class="options__delete">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+<path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#D41F35"/>
+</svg></span></button><svg class="options__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+<path d="M8.71155 7.34L5.85577 4.5L3 7.34" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  <div class="options__inner options-inner">
+                    <ul class="options-inner__list">
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                      <li>OSC1OSC1</li>
+                      <li>OSC1OSC2</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="login-img"></div>
+            <div class="specific-body">
+              <table class="table">
+                <thead> 
+                  <tr> 
+                    <th class="_active"> <span>
+                        Спецификации<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Статус<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Заказчик<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        ИНН Заказчика<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Партнёр<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Дистрибьютор<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Сумма со скидкой<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                    <th><span>
+                        Без скидки<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+<path d="M2 5.5L7 10.5L12 5.5L2 5.5Z" fill="#A2A2A2" fill-opacity="0.9"/>
+</svg></span></th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg>                  </span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg>                    </span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status confirmed">Подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="td-name">S23-122737549</td>
+                    <td class="td-status">Не подтверждена</td>
+                    <td class="td-client">Аэропорт Краснодара</td>
+                    <td class="td-inn">481672841</td>
+                    <td class="td-parther">компания АСБ</td>
+                    <td class="td-distributor">OSC</td>
+                    <td class="td-sale">1000$</td>
+                    <td class="td-price"> <span>
+                        1500$<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM10 18C10 16.9 10.9 16 12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18Z" fill="#A2A2A2"/>
+</svg></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       </main>
+      <footer class="footer">
+        <div class="footer__container"><span class="footer__copy">SOFINET 2022-2024</span>
+          <div class="footer__paggination">
+            <ul class="paggination__list">
+              <li class="paggination__item paggination__first"><a class="paggination__link" href=""><img src="img/to-first.svg?_v=20240128145925" alt=""/><span>First</span></a></li>
+              <li class="paggination__item paggination__first"><a class="paggination__link" href=""><img src="img/back.svg?_v=20240128145925" alt=""/><span>Back</span></a></li>
+              <li class="paggination__item"><a class="paggination__link" href=""><span>1</span></a></li>
+              <li class="paggination__item _active"><a class="paggination__link" href=""><span>2</span></a></li>
+              <li class="paggination__item"><a class="paggination__link" href=""><span>3</span></a></li>
+              <li class="paggination__item"><a class="paggination__link" href=""><span>4</span></a></li>
+              <li class="paggination__item paggination__more"><a class="paggination__link" href=""><img src="img/more.svg?_v=20240128145925" alt=""/></a></li>
+              <li class="paggination__item"><a class="paggination__link" href=""><span>25</span></a></li>
+              <li class="paggination__item paggination__first"><a class="paggination__link" href=""><span>Next</span><img src="img/next.svg?_v=20240128145925" alt=""/></a></li>
+              <li class="paggination__item paggination__last"><a class="paggination__link" href=""><span>Last</span><img src="img/to-last.svg?_v=20240128145925" alt=""/></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script>
-      const passwordInput = document.getElementById("inputPassword")
-      const showHideIcon = document.getElementById("showHideIcon")
-      showHideIcon.addEventListener("click", ()=> {
-      if (passwordInput.type !== "text") {
-      passwordInput.type = "text"
-      } else passwordInput.type = "password"
-      })
-      console.log(passwordInput)
-      document.querySelectorAll('input').forEach(input => {
-      input.addEventListener('blur', function() {
-      if (this.value) {this.classList.add('used');}
-      else {this.classList.remove('used');}
-      });
-      });
-    </script>
-    <script src="js/app.min.js?_v=20240125164648"></script>
+    <div class="popup" id="profile" aria-hidden="true">
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <button class="popup__close" data-close="data-close" type="button"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z" fill="#383838"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z" fill="#383838"></path>
+            </svg>
+          </button>
+          <div class="popup__body">
+            <h2 class="popup__title">Профиль</h2>
+            <form class="form form__profile" action="#" method="post">
+              <div class="popup-form__avatar" style="background-image: url(img/avatar.png)">
+                <label for="avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M19.4827 9.88584C19.4804 9.62513 19.3759 9.37594 19.1918 9.19177C19.0076 9.0076 18.7584 8.90314 18.4977 8.9008L11.0459 8.89446L11.0537 1.42854C11.0329 1.17852 10.9185 0.945749 10.7333 0.776767C10.5482 0.607785 10.3059 0.515045 10.055 0.517085C9.80404 0.519126 9.56294 0.615797 9.37985 0.787773C9.19676 0.95975 9.08518 1.19436 9.06742 1.4447L9.04559 8.89654L1.57967 8.90431C1.44276 8.89488 1.30532 8.91385 1.17597 8.96003C1.04662 9.00621 0.928162 9.07861 0.828016 9.17268C0.727871 9.26674 0.648204 9.38045 0.594014 9.50667C0.539824 9.63288 0.51228 9.76888 0.513111 9.90613C0.513942 10.0434 0.543128 10.1789 0.598841 10.3042C0.654554 10.4296 0.73559 10.542 0.836864 10.6344C0.938138 10.7268 1.05747 10.7973 1.18736 10.8414C1.31725 10.8854 1.45491 10.9022 1.59169 10.8905L9.04351 10.8968L9.03574 18.3628C9.05653 18.6128 9.17094 18.8456 9.35609 19.0145C9.54124 19.1835 9.7835 19.2763 10.0344 19.2742C10.2854 19.2722 10.5265 19.1755 10.7095 19.0035C10.8926 18.8316 11.0042 18.597 11.022 18.3466L11.0438 10.8948L18.5097 10.887C18.7704 10.8841 19.0198 10.7791 19.2044 10.5946C19.389 10.41 19.4939 10.1606 19.4968 9.89991L19.4827 9.88584Z" fill="#A2A2A2"/>
+</svg>
+                </label>
+                <input class="hidden" id="avatar" type="file" name="avatar" accept=".jpg,.png,.jpeg"/>
+              </div>
+              <div class="popup-form__inputs">
+                <div class="input-field">
+                  <input class="input" autocomplete="on" type="text" placeholder="" name="name" required="required"/>
+                  <label>Имя</label><img class="input-icon" src="img/pen.svg?_v=20240128145925" alt=""/>
+                </div>
+                <div class="input-field">
+                  <input class="input" autocomplete="on" type="text" placeholder="" name="surname" required="required"/>
+                  <label>Фамилия</label><img class="input-icon" src="img/pen.svg?_v=20240128145925" alt=""/>
+                </div>
+                <div class="input-field">
+                  <input class="input" autocomplete="on" type="email" placeholder="" name="email" required="required"/>
+                  <label>Email</label>
+                </div>
+              </div>
+              <h3 class="popup__subtitle">Информация</h3>
+              <div class="popup-form__inputs">
+                <div class="input-field">
+                  <input class="input" autocomplete="on" type="text" placeholder="" name="status" required="required"/>
+                  <label>Статус</label>
+                </div>
+                <div class="input-field">
+                  <input class="input" autocomplete="on" type="text" placeholder="" name="company" required="required"/>
+                  <label>Компания</label>
+                </div>
+              </div>
+              <button class="button popup-form__button _disabled" type="submit">Сменить пароль </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js?_v=20240128145925"></script>
   </body>
 </html>

@@ -6,62 +6,28 @@
 	box-sizing: border-box;
 	display: inline-flex;
 	justify-content: center;
-	padding: rem(10) rem(22);
-	// width: rem(220);
-	// color: $highlightColor;
-	// background-color: $addColorGreen;
-	background-color: transparent;
-	border-radius: rem(12);
+	align-items: center;
+	gap: rem(16);
+	padding: rem(14) rem(22);
+	color: #fff;
+	background-color: $highlightColor;
+	border-radius: rem(33);
 	font-size: rem(14);
-	font-weight: 500;
-	// font-family: "Roboto";
-	// line-height: math.div(28, 20);
+	font-variation-settings: "wght" 500;
 	text-align: center;
-	// border: rem(3) solid $highlightColor;
 	overflow: hidden;
-	transition-property: opacity;
+	transition-property: opacit, color, background-color;
 	transition-duration: 0.3s;
 	transition-timing-function: ease;
-	&::before{
-		content:'';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background-color: $addColorGreen;
-		border-radius: rem(12);
-		transition: background-color 0.3s ease;
-		z-index: 0;
-	}
-	&::after{
-		content:'';
-		position: absolute;
-		bottom: rem(-50);
-		width: rem(50);
-		height: rem(50);
-		border-radius: 50%;
-		background-color: $highlightColor;
-		transition: transform 0.3s ease;
-		z-index: 1;
-	}
 	span {
-		z-index: 2;
-		color: $highlightColor;
-		transition: 0.3s ease color;
+		color: #fff;
+		font-size: rem(14);
+		font-variation-settings: "wght" 500;
 	}
 
 	@media (any-hover: hover){
 		&:hover{
-			span {
-				color: $addColorGreen;
-			}
-			&::after{
-				transform: scale(4);
-			}
-			&::before{
-				background-color: transparent;
-			}
+			opacity: 0.75;
 		}
 	}
 	&:focus {
@@ -71,10 +37,10 @@
 	&:active {
 		// background-color: $activeColor;
 	}
-	&:disabled {
+	&._disabled {
+		color: #fff;
+		background-color: #D5D5D5;
 		pointer-events: none;
-		cursor: not-allowed;
-		// background-color: $mainAdditionalColor;
 	}
 	&._fw {
 		width: 100%;

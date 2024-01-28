@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.wrapper
+			//- include html/_header
+			main.main-content._white
+				section#login.login
+					.login-wrapper 
+						.login-body
+							img.login-body__logo(src="@img/logo.svg", alt="logo")
+							form(action="#", method="post").login-body__form
+								h1.login-body__title Добро пожаловать!
+								h2.login-body__subtitle Вход в систему
+								.login-body__inputs
+									.input-field
+										input(autocomplete="on",type="text",placeholder="",name="name", required).input
+										label Имя пользователя
+									.input-field.login-body__field
+										input(autocomplete="on",type="password",placeholder="",name="password", required).input#inputPassword
+										label Пароль
+										span.input-icon#showHideIcon
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+												<path d="M7.99996 4.33333C10.5266 4.33333 12.78 5.75333 13.88 8C12.78 10.2467 10.5266 11.6667 7.99996 11.6667C5.47329 11.6667 3.21996 10.2467 2.11996 8C3.21996 5.75333 5.47329 4.33333 7.99996 4.33333ZM7.99996 3C4.66663 3 1.81996 5.07333 0.666626 8C1.81996 10.9267 4.66663 13 7.99996 13C11.3333 13 14.18 10.9267 15.3333 8C14.18 5.07333 11.3333 3 7.99996 3ZM7.99996 6.33333C8.91996 6.33333 9.66663 7.08 9.66663 8C9.66663 8.92 8.91996 9.66667 7.99996 9.66667C7.07996 9.66667 6.33329 8.92 6.33329 8C6.33329 7.08 7.07996 6.33333 7.99996 6.33333ZM7.99996 5C6.34663 5 4.99996 6.34667 4.99996 8C4.99996 9.65333 6.34663 11 7.99996 11C9.65329 11 11 9.65333 11 8C11 6.34667 9.65329 5 7.99996 5Z" fill="#D41F35"/>
+											</svg>
+								button.login-body__button(type="submit") Войти
+							span.login-body__copy SOFINET 2022-2024
+						.login-img
+		script.
+			const passwordInput = document.getElementById("inputPassword")
+			const showHideIcon = document.getElementById("showHideIcon")
+			showHideIcon.addEventListener("click", ()=> {
+			if (passwordInput.type !== "text") {
+			passwordInput.type = "text"
+			} else passwordInput.type = "password"
+			})
+		script(src="js/app.min.js")
+	

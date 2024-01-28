@@ -52,86 +52,19 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #F5FAF9;
-	padding: rem(40) rem(30);
-	// width: 100dvw;
+	background-color: #fff;
+	padding: rem(58) rem(63);
+	width: rem(544);
 	// height: 100dvh;
-	max-width: 900px;
+	max-width: 100%;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
 	}
 }
 
-#image-popup .popup__content, #scheme-popup .popup__content, #case-popup .popup__content {
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100dvw;
-	max-width: 100%;
-	height: 100dvh;
-	border-radius: 0;
-
-	.popup__slider.swiper {
-		width: 100%!important;
-	}
-
-	.popup-slider {
-
-		&__navigation {
-			
-			.prev, .next {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			.prev {
-				left: rem(20);
-				transform: translateY(-50%) rotate(180deg);
-
-				@media (max-width:$mobileSmall){
-					left: 0;
-				}
-			}
-
-			.next {
-				right: rem(20);
-
-				@media (max-width:$mobileSmall){
-					right: 0; 
-				}
-			}
-		}
-	}
-
-	.popup__slide {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	picture {
-		height: 100%;
-	}
-
-	img {
-		padding: rem(40);
-		max-width: 100%;
-		height: 100%;
-		// height: 100%;
-		object-fit: contain;
-	}
-
-
-}
-
-#case-popup .popup__content {
-	img {
-		padding: 0;
-	}
-	
+.popup__body {
+	width: 100%;
 }
 
 .popup__close {
@@ -144,33 +77,18 @@ body::after {
 	z-index: 2;
 }
 
-#sharing-popup {
-	.popup__content {
-		justify-content: flex-start;
-		background-color: #fff;
-		@media (min-width:$mobile){
-			min-width: rem(373); 
-		}
-	}
-	.popup__body {
-		width: 100%;
-	}
-	h2 {
-		margin-bottom: rem(30);
-		color: $highlightColor;
-		font-size: rem(40);
-	}
+.popup__title {
+	margin-bottom: rem(33);
+	color: $mainColor;
+	font-size: rem(24);
+	line-height: math.div(28, 24);
+	font-variation-settings: "wght" 500;
 }
 
-#info-text {
-	position: absolute;
-	bottom: rem(10);
-	left: 50%;
-	// color: red;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: 0.3s opacity ease;
-	&.active {
-		opacity: 1;
-	}
+.popup__subtitle {
+	margin-bottom: rem(33);
+	color: $mainColor;
+	font-size: rem(18);
+	line-height: math.div(21, 18);
+	font-variation-settings: "wght" 500;
 }

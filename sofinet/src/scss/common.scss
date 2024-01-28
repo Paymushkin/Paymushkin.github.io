@@ -27,10 +27,13 @@ input[type='number'] {
 
 .input-field {
 	position: relative;
-	margin-bottom: rem(16);
+	&:not(:last-child) {
+		margin-bottom: rem(16);
+	}
+	
 	input {
 		position: relative;
-		padding: rem(14);
+		padding: rem(14) rem(40) rem(14) rem(14);
 		background-color: transparent;
 		border-radius: rem(8);
 		outline: none;
@@ -73,4 +76,274 @@ input[type='number'] {
 		font-size: rem(12);
 		z-index: 1;
 	}
+}
+
+main {
+	background-color: $bgColor;
+
+	&._white{
+		background-color: #fff;
+	}
+}
+
+.popup-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	&__avatar {
+		position: relative;
+		align-self: flex-end;
+		margin-bottom: rem(33);
+		width: rem(90);
+		height: rem(90);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		cursor: pointer;
+
+		label {
+			position: absolute;
+			right: -15%;
+			bottom: -5%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: rem(38);
+			height: rem(38);
+			background-color: #fff;
+			border-radius: 50%;
+			filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.07));
+			cursor: pointer;
+		}
+
+		input[type="file"] {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+
+	&__inputs {
+		margin-bottom: rem(34);
+		input {
+			border-color: #B8B9BA;
+		}
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+.options {
+	display: flex;
+	justify-content: flex-start;
+	gap: rem(40);
+	align-self: flex-start;
+	padding: rem(12) rem(30);
+	min-height: rem(56);
+	background-color: #fff;
+	border-radius: rem(4);
+
+	&__label, &__icon {
+
+		._selected & {
+			display: none;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: rem(4);
+		cursor: pointer;
+
+		svg {
+			transform: rotate(180deg);
+			transition: 0.3s ease transform;
+			path {
+				transition: 0.3s ease stroke;
+			}
+		}
+
+		&._active {
+			svg {
+				transform: rotate(0);
+				path {
+					stroke: $highlightColor;
+				}
+			} 
+		}
+	}
+
+	&__inner {
+		position: absolute;
+		top: rem(58);
+		left: rem(-30);
+		display: none;
+		z-index: 2;
+
+		.options__item._active & {
+			display: block;
+		}
+	}
+
+	&-inner {
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: rem(8);
+			padding: rem(12) rem(8);
+			width: rem(220);
+			// max-width: 100%;
+			max-height: rem(316);
+			background-color: #fff;
+			border-radius: rem(4);
+			overflow: hidden auto;
+
+			li {
+				font-size: rem(14);
+				line-height: math.div(16, 14);
+				font-variation-settings: "wght" 500;
+				transition: 0.3s opacity ease;
+				cursor: pointer;
+
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+
+		&::after{
+			content: url(../img/triangle.svg);
+			position: absolute;
+			top: rem(-15);
+			left: rem(15);
+		}
+	}
+
+	&__button {
+		display: none;
+		align-items: center;
+		gap: rem(8);
+		padding: rem(6) rem(8) rem(6) rem(12);
+		color: $highlightColor;
+		border: 1px solid $highlightColor;
+		border-radius: rem(4);
+
+		._selected & {
+			display: flex;
+		}
+
+		span {
+			display: flex;
+		}
+	}
+}
+
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table {
+	margin-bottom: 20px;
+	padding: 0 rem(6);
+	width: 100%;
+	border: none;
+	background-color: #fff;
+	
+}
+.table thead th {
+	padding: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: left;
+	color: #A2A2A2;
+	border-top: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
+
+	span {
+		display: flex;
+		align-items: center;
+		gap: rem(3);
+
+		svg {
+			transition: 0.3s ease transform;
+
+			path {
+				transition: 0.3s ease fill;
+			}
+		}
+	}
+
+	&._active {
+
+		svg {
+			transform: rotate(180deg);
+
+			path {
+				fill: $highlightColor;
+			}
+		}
+	}
+}
+.table tbody tr {
+	transition: 0.3s ease background-color;
+	cursor: pointer;
+	@media (any-hover: hover){
+		&:hover{
+			background-color: #EFEFEF;
+		}
+	}
+}
+.table tbody td {
+	padding: 16px 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #585757;
+	border-top: 1px solid #EFEFEF;
+
+	&.td-name {
+		color: #1d1d1d;
+		font-variation-settings: "wght" 600;
+	}
+
+	&.td-status {
+		color: $highlightColor;
+	}
+
+	&.td-price {
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			svg {
+				cursor: pointer;
+
+				path {
+					transition: 0.3s ease fill;
+				}
+
+				@media (any-hover: hover){
+					&:hover{
+						path {
+							fill: #1d1d1d
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.confirmed {
+		color: #008C1F;
+	}
+	
 }

@@ -28,7 +28,7 @@ $fontSize: rem(16); // где 14px - размер шрифта по умолча
 
 // Основные цвета
 $mainColor: #101010; // Цвет шрифта по умолчанию
-$bgColor: #ffffff; // Цвет фона
+$bgColor: #F8F8F8; // Цвет фона
 $highlightColor: #D41f35; // Цвет акцентов
 $decorColor: #849496; // Цвет деталей
 $decorColor2: #96B2BA;
@@ -64,13 +64,13 @@ $mobileSmall: em(576.98); // Телефоны S
 // @import "base/forms/select";
 // @import "base/forms/checkbox";
 // @import "base/forms/radio";
-// @import "base/popup";
+@import "base/popup";
 
 // кастомный скроллбар
 
 *::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
+	width: 8px;
+	height: 8px;
 	transition: 0.3s all ease;
 	cursor: grab;
 }
@@ -84,14 +84,14 @@ $mobileSmall: em(576.98); // Телефоны S
 }
 
 *::-webkit-scrollbar:horizontal {
-	height: 0;
-	width: 0;
-	display: none;
+	height: 10px;
+	width: 8px;
+	// display: none;
   }
   
-*::-webkit-scrollbar-thumb:horizontal {
-	display: none;
-}
+// *::-webkit-scrollbar-thumb:horizontal {
+// 	display: none;
+// }
 
 body {
 	// Скролл заблокирован
@@ -106,7 +106,8 @@ body {
 }
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-	// min-height: 100%;
+	max-height: 100vh;
+	min-height: 100%;
 	max-width: $maxWidth;
 	display: flex;
 	flex-direction: column;
@@ -115,6 +116,7 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
+		overflow: auto;
 	}
 	// Фикс для слайдеров
 	> * {
@@ -180,8 +182,9 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "login";
-// @import "header";
-// @import "footer";
+@import "specification";
+@import "header";
+@import "footer";
 
 // Подключение стилей отдельных страниц
 // @import "animation";
