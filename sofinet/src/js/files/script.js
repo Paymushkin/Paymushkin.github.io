@@ -33,6 +33,7 @@ const userAvatar = document.getElementById("userAvatar") || null
 const contentNavs = document.querySelectorAll("[data-nav]")
 const optionTabs = document.getElementById("optionTabs") || null
 const optionButtons = document.querySelectorAll(".options__button")
+const iconMore = document.querySelectorAll('.icon-more');
 
 if (showHideOptions) {
     showHideOptions.addEventListener("click", ()=> {
@@ -88,10 +89,17 @@ if (optionTabs) {
 
     optionsButtons.forEach(el => {
         el.addEventListener("click", ()=> {
-            optionsButtons.forEach(element => {
-                element.classList.remove("_active")
-            });
-            if(!el.classList.contains('_selected')) el.classList.add("_active")
+
+            if (el.classList.contains("_active")) {
+                el.classList.remove("_active")
+            } else {
+                optionsButtons.forEach(element => {
+                    element.classList.remove("_active")
+                });
+                if(!el.classList.contains('_selected')) {
+                    el.classList.add("_active")
+                }
+            }
         })
     });
 
@@ -117,5 +125,48 @@ if (optionButtons.length > 0) {
             el.parentNode.parentNode.parentNode.classList.add("_selected")
             el.parentNode.parentNode.parentNode.querySelector(".options__button span").textContent = el.dataset.id
         })
+    });
+}
+
+if (iconMore.length > 0) {
+    // Добавляем обработчик клика на каждый элемент
+    iconMore.forEach(function(icon) {
+        icon.addEventListener('click', function() {
+
+            if (icon.classList.contains("menu-open")) {
+                icon.classList.remove("menu-open")
+                icon.querySelector(".more-list").remove()
+                return
+            }
+            icon.classList.add("menu-open")
+
+            const allMenu = document.querySelectorAll(".more-list")
+
+            if (allMenu.length) {
+                allMenu.forEach(el => {
+                    el.remove()
+                });
+            }
+
+            // Создаем элемент <ul> и добавляем ему класс "more-list"
+            const ul = document.createElement('ul');
+            ul.classList.add('more-list');
+            
+            // Создаем элементы <li> и добавляем им текст
+            const liEdit = document.createElement('li');
+            liEdit.textContent = 'Редактировать';
+            
+            const liDelete = document.createElement('li');
+            liDelete.textContent = 'Удалить';
+            
+            // Добавляем элементы <li> в элемент <ul>
+            ul.appendChild(liEdit);
+            ul.appendChild(liDelete);
+
+            console.log(this.nextElementSibling)
+            
+            // Добавляем элемент <ul> в следующий за элементом <span class="icon-more"> элемент
+            this.appendChild(ul);
+        });
     });
 }

@@ -805,7 +805,6 @@ main._white {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  gap: 0.5rem;
   padding: 0.75rem 0.5rem;
   width: 13.75rem;
   max-height: 19.75rem;
@@ -815,6 +814,7 @@ main._white {
 }
 
 .options-inner__list li {
+  padding: 0.5rem 0;
   font-size: 0.875rem;
   line-height: 1.1428571429;
   font-variation-settings: "wght" 500;
@@ -1274,8 +1274,6 @@ select {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 1.1875rem;
   min-width: 100%;
 }
@@ -1910,6 +1908,11 @@ select {
 
   .login-img {
     display: none;
+  }
+
+  .specific-header__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .specific-header__add {

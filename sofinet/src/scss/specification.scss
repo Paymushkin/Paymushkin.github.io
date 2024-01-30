@@ -36,9 +36,12 @@
         &__top {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
             gap: rem(19);
             min-width: 100%;
+
+            @media (max-width:$mobile){
+                 flex-wrap: wrap; 
+            }
 
             &-wrapper {
                 width: 100%;

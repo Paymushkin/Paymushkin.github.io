@@ -196,7 +196,7 @@ main {
 		&__list {
 			display: flex;
 			flex-direction: column;
-			gap: rem(8);
+			// gap: rem(8);
 			padding: rem(12) rem(8);
 			width: rem(220);
 			// max-width: 100%;
@@ -206,6 +206,7 @@ main {
 			overflow: hidden auto;
 
 			li {
+				padding: rem(8) 0;
 				font-size: rem(14);
 				line-height: math.div(16, 14);
 				font-variation-settings: "wght" 500;
