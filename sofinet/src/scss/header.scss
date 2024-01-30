@@ -17,6 +17,10 @@
 	&__logo {
 		margin-right: rem(20);
 		max-height: rem(44);
+
+		@media (max-width:$mobile){
+			display: none; 
+		}
 	}
 
 	&__tabs {

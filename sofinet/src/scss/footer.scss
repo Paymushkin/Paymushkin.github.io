@@ -14,6 +14,10 @@
 		color: rgba(29, 29, 29, 0.60);
 		font-size: rem(14);
 		font-weight: 300;
+
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 }
 
@@ -39,7 +43,15 @@
 
 	&__link {
 		display: inline-flex;
+		align-items: center;
 		gap: rem(4);
-		padding: rem(8) rem(12);
+		padding: 0 rem(12);
+		height: rem(32);
+
+		@media (max-width:$mobile){
+			padding: 0 rem(6);
+			height: 24;
+			font-size: rem(12); 
+		}
 	}
 }

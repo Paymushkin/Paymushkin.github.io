@@ -61,7 +61,7 @@ $mobileSmall: em(576.98); // Телефоны S
 // Обнуление и общие параметры
 @import "base/null";
 
-// @import "base/forms/select";
+@import "base/spollers";
 // @import "base/forms/checkbox";
 // @import "base/forms/radio";
 @import "base/popup";
@@ -190,4 +190,4 @@ body {
 // @import "animation";
 
 // @import "libs/tippy"; 
-// @import "base/swiper"; 
+@import "base/tabs"; 

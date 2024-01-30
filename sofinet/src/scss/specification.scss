@@ -1,8 +1,12 @@
 .specific {
     flex: 1 1 auto;
-    padding: rem(26);
+    padding: rem(26) 0;
     height: 100%;
     background-color: $bgColor;
+
+    &.no-specific {
+        display: none;
+    }
 
     &__container {
         display: flex;
@@ -17,9 +21,22 @@
         margin-bottom: rem(28);
         min-width: 100%;
 
+        @media (max-width:$mobile){
+              
+        }
+
+        &__options {
+            display: none;
+
+            &._active {
+                display: flex;
+            }
+        }
+
         &__top {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: rem(19);
             min-width: 100%;
 
@@ -53,19 +70,46 @@
                 }
             }
 
+            &._active {
+                color: $highlightColor;
+
+                svg {
+                    transform: rotate(180deg);
+
+                    path {
+                        fill: $highlightColor;
+                    }
+                }
+            }
+
             svg {
-                transform: rotate(180deg);
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+
+                path {
+                    transition: 0.3s ease fill;
+                }
             }
         }
 
         &__add {
             flex: 0 0 auto;
+
+            @media (max-width:$mobile){
+                padding: rem(6) rem(12);
+                font-size: rem(14);
+            }
         }
     }
 
     &-body {
+        display: none;
         padding: 0 rem(6);
         background-color: #fff;
+
+        &._active {
+            display: block;
+        }
     }
 }
 
@@ -99,5 +143,233 @@
         min-width: rem(44);
         background-color: $highlightColor;
         border-radius: rem(4) 0 0 rem(4);
+    }
+}
+
+.specific-add {
+    display: none;
+
+    &._active {
+        display: block;
+    }
+
+    &__options {
+        margin: rem(32) 0;
+        padding: rem(8);
+        background-color: #fff;
+    }
+}
+
+.options-add {
+    margin-bottom: rem(32);
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.03);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(30);
+        padding: rem(9) rem(12);
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: rem(4);
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(25);
+
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        padding: rem(11) rem(17);
+        transition: 0.3s ease opacity;
+
+        span {
+            color: $highlightColor;
+            font-size: rem(14);
+            font-variation-settings: "wght" 500;
+        }
+
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.options-tabs {
+    border-top: 1px solid #efefef;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(12);
+    }
+
+    &__title {
+        color: #525252;
+    }
+
+    &__navigation {
+    }
+}
+
+.inputs-group {
+    display: flex;
+    align-items: center;
+    gap: rem(92);
+
+    &._small {
+        gap: rem(25);
+
+        .inputs-field {
+            flex: 0 0 auto;
+            gap: rem(12);
+        }
+
+        input {
+            flex: 0 0 rem(56);
+            width: rem(56);
+        }
+    }
+}
+
+.inputs-field {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(17);
+    max-width: rem(358);
+
+    &._with-textarea {
+        max-width: rem(564);
+    }
+
+    span {
+        color: #525252;
+    }
+
+    &>div {
+        display: flex;
+        gap: rem(25);
+        max-width: rem(200);
+
+        input {
+            width: calc(50% - 13px);
+        }
+    }
+
+    input, textarea {
+        flex: 1 1 auto;
+        border: 1px solid #B8B9BA;
+        padding: rem(5);
+        border-radius: rem(4);
+        max-width: rem(200);
+    }
+
+    input {
+        &::placeholder {
+            color: #B8B9BA;
+        }
+    }
+
+    textarea {
+        max-width: rem(408);
+        resize: none;
+    }
+}
+
+.body-add {
+    display: none;
+    padding: rem(12);
+
+    &._active {
+        display: block;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+        color: #444;
+        font-size: rem(16);
+        font-variation-settings: "wght" 500;
+    }
+
+    &__button {
+        align-self: flex-start;
+        margin-bottom: rem(8);
+        padding: rem(12) rem(17);
+        color: $highlightColor;
+        border: 1px solid currentColor;
+        border-radius: rem(8);
+        font-size: rem(14);
+        transition: 0.3s ease all;
+        cursor: pointer;
+
+        &._disabled {
+            color: #fff;
+            background-color: #AFAFAF;
+            pointer-events: none;
+        }
+    }
+}
+
+.content-add {
+    padding: rem(12);
+    background-color: #fff;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.03);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(13) 0 rem(20) 0;
+        border-bottom: 1px solid #EFEFEF;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: rem(12);
+    }
+
+    &__title {
+        color: #525252;
+    }
+
+    &__input {
+        padding: rem(11) rem(17);
+        width: rem(309);
+        border: 1px solid #B8B9BA;
+        border-radius: rem(4);
+        &::placeholder {
+            color: #B8B9BA;
+        }
+    }
+
+    &__button {
+        padding: rem(11) rem(17);
+        color: $highlightColor;
+        font-size: rem(14);
+        font-variation-settings: "wght" 500;
+        border: 1px solid currentColor;
+        border-radius: rem(4);
     }
 }

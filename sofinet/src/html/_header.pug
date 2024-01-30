@@ -2,11 +2,11 @@ header.header#header
 	.header__container
 		.header__left
 			img(src="@img/logo.svg", alt="").header__logo
-			.header__tabs
-				a(href="").header__tab._active Мои спецификации
-				a(href="").header__tab Спецификация PartnerA
+			nav#headerTabs.header__tabs
+				button.header__tab.main-content._active(data-nav="my-specification") Мои спецификации
+				button.header__tab.main-content(data-nav="parther-specification") Спецификация PartnerA
 		#userAvatar.header__avatar(style="background-image: url(@img/avatar.png)")
-			.header__menu.menu._active
+			.header__menu.menu
 				ul.menu__list 
 					li.menu__item 
 						span(href="", data-popup="#profile") Профиль

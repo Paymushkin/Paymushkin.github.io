@@ -2,7 +2,8 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
-		gap: rem(22);
+		flex-wrap: wrap;
+		gap: rem(20);
 	}
 	// .tabs__title
 	&__title {

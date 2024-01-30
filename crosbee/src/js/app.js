@@ -89,7 +89,7 @@ import './libs/popup.js'
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-import './libs/select.js'
+// import './libs/select.js'
 
 /* (В работе) Модуль работы с масками.*/
 /*

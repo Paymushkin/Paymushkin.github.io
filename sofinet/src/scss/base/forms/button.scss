@@ -42,18 +42,4 @@
 		background-color: #D5D5D5;
 		pointer-events: none;
 	}
-	&._fw {
-		width: 100%;
-	}
-	&-highlight {
-		color: $addColor;
-		background-color: transparent;
-		@media (any-hover: hover){
-			&:hover{
-				span {
-					color: $highlightColor;
-				}
-			}
-		}
-	}
 }
