@@ -12,6 +12,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
+        @media (max-width:$mobile){
+             padding: 0; 
+        }
     }
 
     &-header {
@@ -179,6 +183,12 @@
         display: flex;
         align-items: center;
         gap: rem(4);
+        @media (max-width:$mobileSmall){
+            span {
+              text-align: left;   
+            }
+             
+        }
     }
 
     &__links {
@@ -186,6 +196,11 @@
         align-items: center;
         flex-wrap: wrap;
         gap: rem(25);
+
+        @media (max-width:$mobileSmall){
+             justify-content: flex-end;
+             gap: rem(5);
+        }
 
     }
 
@@ -196,10 +211,24 @@
         padding: rem(11) rem(17);
         transition: 0.3s ease opacity;
 
+        @media (max-width:$mobile){
+            border: 1px solid $highlightColor;
+            border-radius: rem(4);
+            min-height: 36px;
+        }
+
+        @media (max-width:$mobileSmall){
+             width: rem(50);
+             justify-content: center;
+        }
+
         span {
             color: $highlightColor;
             font-size: rem(14);
             font-variation-settings: "wght" 500;
+            @media (max-width:$mobile){
+                 display: none; 
+            }
         }
 
         @media (any-hover: hover){
@@ -218,13 +247,24 @@
         justify-content: space-between;
         align-items: center;
         padding: rem(12);
+        gap: rem(20);
+
+        @media (max-width:$mobile){
+             flex-wrap: wrap 
+        }
     }
 
     &__title {
         color: #525252;
+        @media (max-width:$mobile){
+             margin-bottom: rem(12); 
+        }
     }
 
     &__navigation {
+        @media (max-width:$mobile){
+             flex-direction: column;
+        }
     }
 }
 
@@ -345,25 +385,40 @@
         align-items: center;
         padding: rem(13) 0 rem(20) 0;
         border-bottom: 1px solid #EFEFEF;
+
+        @media (max-width:$tablet){
+            flex-wrap: wrap;
+        }
     }
 
     &__form {
         display: flex;
         align-items: center;
         gap: rem(12);
+        @media (max-width:$mobile){
+             flex-wrap: wrap; 
+        }
     }
 
     &__title {
         color: #525252;
+        @media (max-width:$tablet){
+            margin-bottom: rem(12);
+        }
     }
 
     &__input {
         padding: rem(11) rem(17);
         width: rem(309);
+        font-size: rem(14);
         border: 1px solid #B8B9BA;
         border-radius: rem(4);
         &::placeholder {
             color: #B8B9BA;
+        }
+
+        @media (max-width:$tablet){
+            width: auto;
         }
     }
 

@@ -108,13 +108,16 @@ if (optionTabs) {
 
 if (optionButtons.length > 0) {
     optionButtons.forEach(element => {
-        element.querySelector(".options__delete").addEventListener("click", ()=> {
+        element.querySelector(".options__delete").addEventListener("click", function(event) {
+            // предотвратил всплытие события
+            event.stopPropagation()
+            console.log(element.parentElement)
             element.parentElement.classList.remove("_selected")
         })
     });
 
     let optionsListItems = document.querySelectorAll("#optionTabs .options-inner li")
-    console.log(optionsListItems)
+    // console.log(optionsListItems)
 
     optionsListItems.forEach(el => {
         el.addEventListener("click", ()=>{
@@ -128,45 +131,45 @@ if (optionButtons.length > 0) {
     });
 }
 
-if (iconMore.length > 0) {
-    // Добавляем обработчик клика на каждый элемент
-    iconMore.forEach(function(icon) {
-        icon.addEventListener('click', function() {
+// if (iconMore.length > 0) {
+//     // Добавляем обработчик клика на каждый элемент
+//     iconMore.forEach(function(icon) {
+//         icon.addEventListener('click', function() {
 
-            if (icon.classList.contains("menu-open")) {
-                icon.classList.remove("menu-open")
-                icon.querySelector(".more-list").remove()
-                return
-            }
-            icon.classList.add("menu-open")
+//             if (icon.classList.contains("menu-open")) {
+//                 icon.classList.remove("menu-open")
+//                 icon.querySelector(".more-list").remove()
+//                 return
+//             }
+//             icon.classList.add("menu-open")
 
-            const allMenu = document.querySelectorAll(".more-list")
+//             const allMenu = document.querySelectorAll(".more-list")
 
-            if (allMenu.length) {
-                allMenu.forEach(el => {
-                    el.remove()
-                });
-            }
+//             if (allMenu.length) {
+//                 allMenu.forEach(el => {
+//                     el.remove()
+//                 });
+//             }
 
-            // Создаем элемент <ul> и добавляем ему класс "more-list"
-            const ul = document.createElement('ul');
-            ul.classList.add('more-list');
+//             // Создаем элемент <ul> и добавляем ему класс "more-list"
+//             const ul = document.createElement('ul');
+//             ul.classList.add('more-list');
             
-            // Создаем элементы <li> и добавляем им текст
-            const liEdit = document.createElement('li');
-            liEdit.textContent = 'Редактировать';
+//             // Создаем элементы <li> и добавляем им текст
+//             const liEdit = document.createElement('li');
+//             liEdit.textContent = 'Редактировать';
             
-            const liDelete = document.createElement('li');
-            liDelete.textContent = 'Удалить';
+//             const liDelete = document.createElement('li');
+//             liDelete.textContent = 'Удалить';
             
-            // Добавляем элементы <li> в элемент <ul>
-            ul.appendChild(liEdit);
-            ul.appendChild(liDelete);
+//             // Добавляем элементы <li> в элемент <ul>
+//             ul.appendChild(liEdit);
+//             ul.appendChild(liDelete);
 
-            console.log(this.nextElementSibling)
+//             console.log(this.nextElementSibling)
             
-            // Добавляем элемент <ul> в следующий за элементом <span class="icon-more"> элемент
-            this.appendChild(ul);
-        });
-    });
-}
+//             // Добавляем элемент <ul> в следующий за элементом <span class="icon-more"> элемент
+//             this.appendChild(ul);
+//         });
+//     });
+// }

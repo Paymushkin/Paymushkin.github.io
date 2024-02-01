@@ -27,6 +27,11 @@
 		display: flex;
 		align-items: center;
 		gap: rem(40);
+
+		@media (max-width:$mobile){
+			 flex-wrap: wrap;
+			 gap: rem(5);
+		}
 	}
 
 	&__tab {
@@ -35,6 +40,10 @@
 		font-weight: 500;
 		transition: 0.3s ease all;
 		cursor: pointer;
+
+		@media (max-width:$mobile){
+			 font-size: rem(14); 
+		}
 
 		&._active {
 			color: $highlightColor;
