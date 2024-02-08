@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #guesses, #restart {
+            display: none;
+        }
+    </style>
+    <h1>Угадай число!</h1>
+    <p>У вас будет 10 попыток, чтобы отгадать случайное загаданное число от 1 до 100</p>
+    <div class="wrapper">
+        <span>Введите число</span>
+        <input type="number" name="input" id="input">
+        <button id="submit">Проверить</button>
+    </div>
+    <p id="guesses">
+        <span>Предыдущие попытки: </span>
+        <span id="lastResults" class="guesses"></span>
+    </p>
+    <p id="hint" class="hint">
+
+    </p>
+    <button id="restart">Сыграть еще раз</button>
+   
+
+    <script>
+
+        // создаем и сохраняем в переменную рандомное чило
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        const guesses = document.getElementById("guesses")
+        const lastResulsts = document.getElementById("lastResults")
+        const hint = document.getElementById("hint")
+        const submitBnt =  document.getElementById("submit")
+        const restartBnt = document.getElementById("restart")
+        const userInput = document.getElementById("input")
+
+        let guessCount = 1
+
+        function checkGuess() {
+            let userGuess = Number(userInput.value)
+
+            if (guessCount) {
+                guesses.style.display.flex
+                lastResulsts.textContent += userInput.value + " "
+                guesses.style.display = "block"
+            }
+
+            if (userGuess === randomNumber) {
+                hint.textContent = "Верно!"
+                hint.style.color = "green"
+                setGameOver()
+            } else if (guessCount === 10) {
+                hint.textContent = "Вы проиграли!"
+                hint.style.color = "red"
+                setGameOver()
+            } else {
+                 hint.textContent = "Неверно, попробуйте еще раз."
+                 hint.style.color = "red"
+
+                 if (userGuess < randomNumber) {
+                    hint.textContent += " Это число меньше загаданного"
+                 } else if (userGuess > randomNumber) {
+                    hint.textContent += " Это число больше загаданного"
+                 }
+            }
+            userInput.value = "";
+            guessCount++;
+            userInput.focus();
+        }
+
+        submitBnt.addEventListener("click", checkGuess)
+
+        function setGameOver() {
+            userInput.disapled = true;
+            submitBnt.disabled = true;
+            restartBnt.style.display = "block"
+            restartBnt.addEventListener("click", restartGame)
+        }
+
+        function restartGame() {
+            guessCount = 1;
+            hint.textContent = ""
+            restartBnt.style.display = "none"
+            userInput.disapled = false;
+            submitBnt.disabled = false;
+            lastResulsts.textContent = ""
+            guesses.style.display = "none"
+
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        }
+
+
+    </script>
+</body>
+</html>
