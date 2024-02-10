@@ -541,6 +541,8 @@ main._white {
   .main-content {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+    -ms-flex-pack: center;
+        justify-content: center;
     gap: 2.5rem;
   }
 

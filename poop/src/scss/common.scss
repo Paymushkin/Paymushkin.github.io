@@ -81,6 +81,7 @@ main {
 
 		@media (max-width:$mobile){
 			flex-direction: column-reverse; 
+			justify-content: center;
 			gap: rem(40);
 		}
 		span {
