@@ -43,15 +43,15 @@ main {
 .main__title {
 	color: #6E8678;
 	font-size: rem(96);
-	line-height: 1.2;
+	line-height: 1;
 	letter-spacing: 1.92px;
 	text-align: right;
+
+
 	@media (max-width: em(1440)){
-		  font-size: rem(50);
+		  font-size: rem(68);
 	}
-	@media (max-width:$tablet){
-		font-size: rem(84);
-	}
+
 
 	@media (max-width:$mobile) {
 		padding-left: 20px;
@@ -59,18 +59,33 @@ main {
 		text-align: left;
 		color: #000;
 	}
+
+	@media (min-width:$mobile){
+		  	background: linear-gradient(267deg, rgba(233, 180, 139, 0.00) -9.64%, rgba(230, 222, 210, 0.71) 52.47%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+	}
 }
 
 .main__subtitle {
-	margin-bottom: rem(10);
+	margin-bottom: rem(15);
 	color: rgba(110, 134, 120, 0.80);
 	font-size: rem(64);
 	line-height: 1.2;
-	letter-spacing: 1.28px;
 	text-align: right;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	@media (min-width:$mobile){
+		background: linear-gradient(267deg, rgba(233, 180, 139, 0.00) -9.64%, rgba(230, 222, 210, 0.71) 52.47%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+	}
 
 	@media (max-width: em(1440)){
-		  font-size: rem(40);
+		  font-size: rem(36);
 	}
 
 	@media (max-width:$mobile) {
@@ -103,15 +118,20 @@ main {
 		}
 		span {
 			display: block;
-			margin-bottom: rem(70);
+			margin-bottom: rem(60);
 			color: #6E8678;
 			text-align: right;
-			font-size: 24px;
+			font-size: 23px;
 			font-weight: 400;
 			line-height: 150%; /* 48px */
+			background: linear-gradient(90deg, #A39D95 27.11%, rgba(110, 134, 120, 0.00) 105.07%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-family: ChangaOne-Regular;
 
 			@media (max-width: em(1440)){
-		  		font-size: rem(16);
+		  		// font-size: rem(15);
 			}
 
 			@media (max-width:$mobile) {
@@ -123,11 +143,11 @@ main {
 		}
 
 		&__left {
-			padding: 0 10px;
+			padding: 0 5px;
 			flex: 1 1 auto;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-end;
 			align-items: flex-end;
 			// align-self: flex-end;
 			// padding-bottom: 120px;
@@ -153,6 +173,14 @@ main {
 				text-align: right;
 				font-weight: 400;
 				line-height: 135%; /* 48.6px */
+				background: linear-gradient(90deg, #E9B48B -23.39%, rgba(233, 180, 139, 0.00) 117.6%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				@media (max-width: em(1440)){
+					font-size: rem(26);  
+				}
 				@media (max-width:$mobile){
 					 font-size: rem(24); 
 					 text-align: center;
@@ -239,8 +267,10 @@ main {
 }
 
 .left-content {
+	padding-bottom: 120px;
 	@media (max-width:$mobile){
 		 align-self: flex-end; 
+		 padding-bottom: 0;
 	}
 }
 
