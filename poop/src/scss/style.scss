@@ -81,12 +81,6 @@ $mobileSmall: em(576.98); // Телефоны S
 	border-radius: 20px;       /* закругления плашки */
 	border: 1px solid $bgColor; 
 }
-
-*::-webkit-scrollbar:horizontal {
-	height: 10px;
-	width: 8px;
-	// display: none;
-  }
   
 // *::-webkit-scrollbar-thumb:horizontal {
 // 	display: none;

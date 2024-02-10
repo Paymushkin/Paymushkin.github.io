@@ -25,6 +25,12 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
+[class*=__container] {
+	@media (max-width:$mobile){
+		 padding: 0 10px; 
+	}
+}
+
 main {
 	background-color: $bgColor;
 
