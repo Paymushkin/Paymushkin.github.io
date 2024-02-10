@@ -45,7 +45,7 @@ main {
 	font-size: rem(96);
 	line-height: 1.2;
 	letter-spacing: 1.92px;
-	text-align: left;
+	text-align: right;
 	@media (max-width: em(1440)){
 		  font-size: rem(50);
 	}
@@ -67,7 +67,7 @@ main {
 	font-size: rem(64);
 	line-height: 1.2;
 	letter-spacing: 1.28px;
-	text-align: left;
+	text-align: right;
 
 	@media (max-width: em(1440)){
 		  font-size: rem(40);
@@ -76,7 +76,7 @@ main {
 	@media (max-width:$mobile) {
 		padding-left: 20px;
 		font-size: rem(22);
-		// text-align: center;
+		text-align: left;
 		margin-bottom: rem(5);
 		color: rgba(0, 0, 0, 0.80);
 
@@ -105,6 +105,7 @@ main {
 			display: block;
 			margin-bottom: rem(70);
 			color: #6E8678;
+			text-align: right;
 			font-size: 24px;
 			font-weight: 400;
 			line-height: 150%; /* 48px */
@@ -122,7 +123,7 @@ main {
 		}
 
 		&__left {
-			padding: 0 50px;
+			padding: 0 10px;
 			flex: 1 1 auto;
 			display: flex;
 			flex-direction: column;
@@ -149,11 +150,12 @@ main {
 				display: block;
 				color: #E9B48B;
 				font-size: 36px;
-				font-style: normal;
+				text-align: right;
 				font-weight: 400;
 				line-height: 135%; /* 48.6px */
 				@media (max-width:$mobile){
 					 font-size: rem(24); 
+					 text-align: center;
 				}
 			}
 		}
