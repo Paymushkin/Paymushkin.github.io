@@ -32,6 +32,7 @@ input[type='number'] {
 }
 
 main {
+	overflow: hidden;
 	background-color: $bgColor;
 
 	&._white{
@@ -70,6 +71,7 @@ main {
 	@media (max-width:$mobile) {
 		font-size: rem(26);
 		text-align: center;
+		margin-bottom: rem(5);
 	}
 }
 
@@ -78,11 +80,13 @@ main {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		overflow: hidden;
 
 		@media (max-width:$mobile){
 			flex-direction: column-reverse; 
 			justify-content: center;
 			gap: rem(40);
+			padding: rem(40) 0;
 		}
 		span {
 			color: #C1CCC7;
@@ -91,13 +95,20 @@ main {
 			line-height: 150%; /* 48px */
 
 			@media (max-width:$mobile) {
-				font-size: rem(12);
+				font-size: rem(10);
 				text-align: center;
 			}
 		}
 
+		&__left {
+			// background-color: #000;
+		}
+
 		&__right {
-			max-width: 100%;
+			max-width: 40%;
+			@media (max-width:$mobile){
+				 max-width: 100%; 
+			}
 			video {
 				max-width: 100%;
 			}
@@ -106,7 +117,7 @@ main {
 }
 
 .media-links {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	right: rem(80);
 	display: flex;
@@ -115,14 +126,38 @@ main {
 	transform: translateY(-50%);
 
 	@media (max-width:$mobile){
-		flex-direction: row;
-		 top: unset;
-		 bottom: 40px;
-		 right: 50%; 
-		 transform: translateX(50%) translateY(0);
+		right: 20px;
+		// bottom: unset;
+		// top: 60px;
+		// flex-direction: row;
+		// right: 50%;
+		// //  top: unset;
+		// //  bottom: 40px;
+		// //  right: 50%; 
+		//  transform: translateY(0);
 	}
 
 	a {
 		cursor: pointer;
+	}
+}
+
+.dyor {
+	position: absolute;
+	bottom: 0;
+	left: 60%;
+	color: rgba(110, 134, 120, 0.40);
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 19.2px */
+	letter-spacing: 0.32px;
+	text-transform: uppercase;
+	@media (max-width:$mobile){
+		bottom: 10px;
+		 left: 50%;
+		 transform: translateX(-50%); 
+		 font-size: rem(12);
 	}
 }
