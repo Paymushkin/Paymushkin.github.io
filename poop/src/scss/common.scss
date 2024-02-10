@@ -45,7 +45,10 @@ main {
 	font-size: rem(96);
 	line-height: 1.2;
 	letter-spacing: 1.92px;
-	text-align: right;
+	text-align: left;
+	@media (max-width: em(1440)){
+		  font-size: rem(50);
+	}
 	@media (max-width:$tablet){
 		font-size: rem(84);
 	}
@@ -66,8 +69,8 @@ main {
 	letter-spacing: 1.28px;
 	text-align: left;
 
-	@media (max-width:$tablet){
-		font-size: rem(54);
+	@media (max-width: em(1440)){
+		  font-size: rem(40);
 	}
 
 	@media (max-width:$mobile) {
@@ -87,11 +90,12 @@ main {
 		align-items: center;
 		overflow: hidden;
 		// padding-top: 50px;
-		height: 100vh;
+		max-height: 100vh;
+		max-height: 100lvh;
 
 		@media (max-width:$mobile){
 			flex-direction: column-reverse; 
-			justify-content: flex-end;
+			justify-content: space-between;
 			align-items: center;
 			// gap: rem(40);
 			padding: 0;
@@ -104,6 +108,10 @@ main {
 			font-size: 24px;
 			font-weight: 400;
 			line-height: 150%; /* 48px */
+
+			@media (max-width: em(1440)){
+		  		font-size: rem(18);
+			}
 
 			@media (max-width:$mobile) {
 				display: none;
@@ -124,14 +132,16 @@ main {
 			// padding-bottom: 120px;
 			background-color: #000;
 			min-height: 100vh;
+			min-height: 100lvh;
+			
 
 			@media (max-width:$mobile){
 				 padding:  0;
 				 width: 100%;
-				 height: 30vh;
-				 flex: 0 0 auto;
+				 height: unset;
 				 min-height: unset;
 				 background-color: transparent;
+				 justify-content: flex-end;
 			}
 			
 			// background-color: #000;
@@ -152,17 +162,21 @@ main {
 			display: flex;
 			align-items: center;
 			min-height: 100vh;
+			min-height: 100lvh;
 			transform: translateX(40px);
 			@media (max-width:$mobile){
 				flex: 1 1 auto;
 				//  width: 100%;
 				 height: 50vh;
 				 min-height: 50vh;
+				 height: 50lvh;
+				 min-height: 50lvh;
 				 transform: translateX(5%);
 			}
 			video {
 				// max-width: 100%;
 				min-height: 100vh;
+				min-height: 100lvh;
 				@media (max-width:$mobile){
 					 min-height: unset;
 					 max-height: 100%; 
@@ -210,7 +224,7 @@ main {
 	line-height: 120%; /* 19.2px */
 	letter-spacing: 0.32px;
 	text-transform: uppercase;
-	transform: translateX(-50%); 
+	transform: translateX(-50%);
 	@media (max-width:$mobile){
 		padding: 20px 10px 0;
 		bottom: 0px;
@@ -218,12 +232,13 @@ main {
 		 font-size: rem(12);
 		 background-color: #000;
 		 width: 100vw;
+		 display: none;
 	}
 }
 
 .left-content {
 	@media (max-width:$mobile){
-		 align-self: flex-start; 
+		 align-self: flex-end; 
 	}
 }
 
@@ -241,3 +256,18 @@ a.error-404 {
 		 text-align: center;
 	}
 }
+
+	.dyor-mob {
+		display: none;
+		color: rgba(110, 134, 120, 0.40);
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%; /* 19.2px */
+		letter-spacing: 0.32px;
+		text-transform: uppercase;
+		@media (max-width:$mobile){
+			 display: block; 
+		}
+	}
