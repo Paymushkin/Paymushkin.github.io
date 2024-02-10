@@ -438,7 +438,7 @@ main._white {
 }
 @media (max-width: 90em) {
   .main-content span {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 48.06125em) {
