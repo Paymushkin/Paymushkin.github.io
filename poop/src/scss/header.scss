@@ -1,0 +1,45 @@
+.header {
+	padding: rem(16) 0;
+	background-color: #EAE3D9;
+
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: rem(20);
+		// max-height: rem(44);
+
+		@media (max-width:$mobile){
+			display: none; 
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+
+		span {
+			color: #6E8678;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 135%; /* 18.9px */
+
+			@media (max-width:$mobile){
+			 	font-size: rem(12); 
+			}
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(16);
+	padding: rem(14) rem(22);
+	color: #fff;
+	background-color: $highlightColor;
+	border-radius: rem(33);
+	font-size: rem(14);
+	font-variation-settings: "wght" 500;
+	text-align: center;
+	overflow: hidden;
+	transition-property: opacit, color, background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	span {
+		color: #fff;
+		font-size: rem(14);
+		font-variation-settings: "wght" 500;
+	}
+
+	@media (any-hover: hover){
+		&:hover{
+			opacity: 0.75;
+		}
+	}
+	&:focus {
+		// border-color: $activeColor;
+		outline: none;
+	}
+	&:active {
+		// background-color: $activeColor;
+	}
+	&._disabled {
+		color: #fff;
+		background-color: #D5D5D5;
+		pointer-events: none;
+	}
+}
