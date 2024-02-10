@@ -1,6 +1,19 @@
 .header {
 	padding: rem(16) 0;
-	background-color: #EAE3D9;
+	background-color: transparent;
+	position: fixed;
+	left: 40px;
+	right: -40px;
+	width: calc(100% - 80px);
+	z-index: 99;
+
+	@media (max-width:$mobile){
+		 position: relative; 
+		 background-color: #000;
+		 width: 100%;
+		 left: 0;
+		 padding: 10px;
+	}
 
 	&__container {
 		position: relative;
@@ -8,6 +21,23 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0;
+		
+	}
+
+	&__id {
+		margin-top: 20px;
+		color: #6E8678;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+		display: none;
+		width: 100%;
+		text-align: center;
+
+		@media (max-width:$mobile){
+			 display: block; 
+		}
 	}
 
 	&__logo {
@@ -16,7 +46,7 @@
 
 		@media (max-width:$mobile){
 			// display: none;
-			max-width: 70px;
+			// max-width: 70px;
 		}
 	}
 
@@ -26,6 +56,8 @@
 		gap: 40px;
 
 		@media (max-width:$mobile){
+			flex-direction: column;
+			align-items: flex-end;
 			width: 100%;
 			gap: rem(5);
 		}
@@ -36,6 +68,12 @@
 		display: flex;
 		align-items: center;
 		gap: rem(10);
+
+		@media (max-width:$mobile){
+			 svg {
+				display: none;
+			 } 
+		}
 	
 
 
@@ -47,6 +85,7 @@
 
 			@media (max-width:$mobile){
 			 	font-size: rem(10); 
+				color: #E9B48B;
 			}
 		}
 	}

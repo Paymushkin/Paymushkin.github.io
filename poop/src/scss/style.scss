@@ -90,6 +90,7 @@ body {
 	height: 100vh;
 	height: 100lvh;
 	background-color: #EAE3D9;
+	overflow: hidden;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
