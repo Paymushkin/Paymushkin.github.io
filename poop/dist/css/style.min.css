@@ -489,7 +489,6 @@ main._white {
   align-items: center;
   min-height: 100vh;
   min-height: 100lvh;
-  transform: translateX(40px);
 }
 @media (max-width: 48.06125em) {
   .main-content__right {
