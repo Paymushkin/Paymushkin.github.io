@@ -1,92 +1,119 @@
 .header {
 	padding: rem(16) 0;
-	background-color: transparent;
-	position: fixed;
-	left: 40px;
-	right: -40px;
-	width: calc(100% - 80px);
+	background-color: #000;
+	padding: 10px 10px 0 10px;
+	@include adaptiveValue("padding-left", 80, 15, 1920, 1024, 1);
+	@include adaptiveValue("padding-right", 80, 15, 1920, 1024, 1);
+	// width: calc(100% - 160px);
 	z-index: 99;
 
-	@media (max-width:$mobile){
-		 position: relative; 
-		 background-color: #000;
-		 width: 100%;
-		 left: 0;
-		 padding: 10px;
+	@media (min-width:$tablet){
+		flex: 0 0 auto;
+		position: fixed;
+		left: 0;
+		right: 0;
+		background-color: transparent;
+		
 	}
+
+	// @media (max-width:$mobile){
+	// 	 position: relative; 
+		 
+	// 	 width: 100%;
+	// 	 left: 0;
+		 
+	// }
 
 	&__container {
 		position: relative;
 		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0;
+	}
+
+	&__top {
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0;
-		
+		@media (max-width:$tablet){
+			margin-bottom: rem(18);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		@media (min-width:$tablet){
+			display: none; 
+		}
 	}
 
 	&__id {
-		margin-top: 20px;
 		color: #6E8678;
-		font-size: 12px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 150%;
-		display: none;
-		width: 100%;
-		text-align: center;
-
-		@media (max-width:$mobile){
-			 display: block; 
-		}
+		font-family: "ChangaOne-Regular";
+		@include adaptiveValue("font-size", 24, 16, 1024, 320);
+		line-height: 1.5;
 	}
 
 	&__logo {
-		margin-right: rem(20);
-		max-height: 22px;
-		// max-height: rem(44);
+		@include adaptiveValue("max-width", 240, 100, 1920, 320);
+		// @media (max-width:$tablet){
+		// 	max-width: rem(200);
+		// }
+		// @media (max-width:$mobile){
+		// 	max-width: rem(150);
+		// }
 
-		@media (max-width:$mobile){
-			// display: none;
-			max-width: 150px;
-		}
+		// @media (max-width:$mobileSmall){
+		// 	 max-width: rem(100); 
+		// }
 	}
 
 	&__links {
 		display: flex;
 		align-items: center;
-		gap: 40px;
+		gap: rem(30);
 
-		@media (max-width:$mobile){
+		@media (max-width:$tablet){
 			flex-direction: column;
-			align-items: flex-end;
-			width: 100%;
-			gap: rem(5);
+			align-items: flex-start;
+			gap: rem(0);
 		}
 
+		@media (max-width:$mobile){
+			 gap: rem(13); 
+		}
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
 		gap: rem(10);
-
-		@media (max-width:$mobile){
-			 svg {
-				display: none;
-			 } 
-		}
-	
-
-
+		color: #6E8678;
+		
 		span {
-			color: #6E8678;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 135%; /* 18.9px */
-
+			@include adaptiveValue("font-size", 16, 14, 1920, 1024);
+			@media (max-width:$tablet){
+				@include adaptiveValue("font-size", 14, 12, 1024, 320)
+			}
 			@media (max-width:$mobile){
-			 	font-size: rem(10); 
-				color: #E9B48B;
+				 color: #E9B48B; 
+			}
+		}
+		
+		svg {
+			transition: transform 0.3s ease;
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+				svg	{
+					transform: translateX(5px);
+				}
 			}
 		}
 	}

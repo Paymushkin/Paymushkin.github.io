@@ -2,26 +2,48 @@
 html(lang="ru")
 	include html/_head
 	body
-		.wrapper
+		#loader.loader
+			<img src="@img/loader.svg" alt="">
+		.wrapper.wrapper__container
 			include html/_header
-			main.main-content
-				.main-content__left
-					.left-content
-						h1.main__title AVOID HATE
-						h2.main__subtitle BECOME A POOP 
-						div.join-wrapper
-							span CA: 0xdkfjfjfejfejw123jrjfgnsksjsj11
-							a(href="") Join now 
-							.dyor-mob DYOR
-				.main-content__right 
+			main.main 
+				.main__content.main-content
+					.main-content__wrapper
+						h1.main-content__title._gradient Avoid hate
+						h2.main-content__subtitle._gradient become a poop
+						p.main-content__id._gradient-2 CA: 0xdkfjfjfejfejw123jrjfgnsksjsj11
+						a.main-content__button._gradient-3 Join now
+				.main__text.main-text
+					h1.main-text__title Avoid hate
+					h2.main-text__subtitle become a poop
+				.main__video
 					video(src="https://storage.yandexcloud.net/videos-meyou/gif.mov", autoplay muted playsinline loop)
-
-				.media-links 
+				.main__links
 					a(href="https://x.com/poops404")
-						<img src="@img/x.svg" alt="">
+						<img src="@img/x.svg" alt="X-icon">
 					a(href="https://t.me/poops404")
-						<img src="@img/telegram.svg" alt="">
-				.dyor DYOR
+						<img src="@img/telegram.svg" alt="Telegram-icon">
+				.main__label DYOR
+
+			//- include html/_header
+			//- main.main-content
+			//- 	.main-content__left
+			//- 		.left-content
+			//- 			h1.main__title AVOID HATE
+			//- 			h2.main__subtitle BECOME A POOP 
+			//- 			div.join-wrapper
+			//- 				span CA: 0xdkfjfjfejfejw123jrjfgnsksjsj11
+			//- 				a(href="") Join now 
+			//- 				.dyor-mob DYOR
+			//- 	.main-content__right 
+			//- 		video(src="https://storage.yandexcloud.net/videos-meyou/gif.mov", autoplay muted playsinline loop)
+
+			//- 	.media-links 
+			//- 		a(href="https://x.com/poops404")
+			//- 			<img src="@img/x.svg" alt="">
+			//- 		a(href="https://t.me/poops404")
+			//- 			<img src="@img/telegram.svg" alt="">
+			//- 	.dyor DYOR
 			//- include html/_footer
 
 		script(src="js/app.min.js")

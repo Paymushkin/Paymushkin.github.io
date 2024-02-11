@@ -1,0 +1,40 @@
+#profile(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			button(data-close type="button").popup__close 
+				svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+			.popup__body
+				h2.popup__title Профиль
+				form(action="#", method="post").form.form__profile
+					.popup-form__avatar(style="background-image: url(@img/avatar.png)")
+							label(for="avatar")
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M19.4827 9.88584C19.4804 9.62513 19.3759 9.37594 19.1918 9.19177C19.0076 9.0076 18.7584 8.90314 18.4977 8.9008L11.0459 8.89446L11.0537 1.42854C11.0329 1.17852 10.9185 0.945749 10.7333 0.776767C10.5482 0.607785 10.3059 0.515045 10.055 0.517085C9.80404 0.519126 9.56294 0.615797 9.37985 0.787773C9.19676 0.95975 9.08518 1.19436 9.06742 1.4447L9.04559 8.89654L1.57967 8.90431C1.44276 8.89488 1.30532 8.91385 1.17597 8.96003C1.04662 9.00621 0.928162 9.07861 0.828016 9.17268C0.727871 9.26674 0.648204 9.38045 0.594014 9.50667C0.539824 9.63288 0.51228 9.76888 0.513111 9.90613C0.513942 10.0434 0.543128 10.1789 0.598841 10.3042C0.654554 10.4296 0.73559 10.542 0.836864 10.6344C0.938138 10.7268 1.05747 10.7973 1.18736 10.8414C1.31725 10.8854 1.45491 10.9022 1.59169 10.8905L9.04351 10.8968L9.03574 18.3628C9.05653 18.6128 9.17094 18.8456 9.35609 19.0145C9.54124 19.1835 9.7835 19.2763 10.0344 19.2742C10.2854 19.2722 10.5265 19.1755 10.7095 19.0035C10.8926 18.8316 11.0042 18.597 11.022 18.3466L11.0438 10.8948L18.5097 10.887C18.7704 10.8841 19.0198 10.7791 19.2044 10.5946C19.389 10.41 19.4939 10.1606 19.4968 9.89991L19.4827 9.88584Z" fill="#A2A2A2"/>
+								</svg>
+
+							input#avatar(type="file", name="avatar", accept=".jpg,.png,.jpeg").hidden
+					
+					.popup-form__inputs
+						.input-field
+							input(autocomplete="on",type="text",placeholder="",name="name", required).input
+							label Имя
+							img(src="@img/pen.svg", alt="").input-icon 
+						.input-field
+							input(autocomplete="on",type="text",placeholder="",name="surname", required).input
+							label Фамилия
+							img(src="@img/pen.svg", alt="").input-icon
+						.input-field
+							input(autocomplete="on",type="email",placeholder="",name="email", required).input
+							label Email
+					h3.popup__subtitle Информация
+					.popup-form__inputs
+						.input-field
+							input(autocomplete="on",type="text",placeholder="",name="status", required).input
+							label Статус
+						.input-field
+							input(autocomplete="on",type="text",placeholder="",name="company", required).input
+							label Компания
+					button.button.popup-form__button._disabled(type="submit") Сменить пароль 
