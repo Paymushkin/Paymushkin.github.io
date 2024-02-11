@@ -10,6 +10,6 @@ import {
 document.addEventListener("DOMContentLoaded", ()=> {
     setTimeout(() => {
         document.getElementById("loader").remove()
-    }, 1000);
+    }, 2000);
     
 })

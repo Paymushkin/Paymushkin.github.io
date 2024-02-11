@@ -373,7 +373,7 @@ input[type=number] {
 
 @media (min-width: 64.06125em) {
   ._gradient {
-    background: linear-gradient(267deg, rgba(233, 180, 139, 0) -9.64%, rgba(230, 222, 210, 0.71) 52.47%);
+    background: linear-gradient(267deg, rgba(255, 255, 255, 0) -9.64%, rgba(255, 212, 147, 0.79) 52.47%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -382,7 +382,7 @@ input[type=number] {
 
 @media (min-width: 64.06125em) {
   ._gradient-2 {
-    background: linear-gradient(90deg, #A39D95 27.11%, rgba(110, 134, 120, 0) 105.07%);
+    background: linear-gradient(90deg, #6e8678 27.11%, rgba(110, 134, 120, 0.39) 105.07%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
