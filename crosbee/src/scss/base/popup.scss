@@ -70,7 +70,7 @@ body::after {
 	align-items: center;
 	width: 100dvw;
 	max-width: 100%;
-	height: 100dvh;
+	height: 100lvh;
 	border-radius: 0;
 
 	.popup__slider.swiper {
@@ -85,6 +85,7 @@ body::after {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
+				cursor: pointer;
 			}
 
 			.prev {
@@ -110,6 +111,7 @@ body::after {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		max-height: 100lvh;
 	}
 
 	picture {
@@ -138,10 +140,8 @@ body::after {
 	position: absolute;
 	top: rem(20);
 	right: rem(20);
-	display: flex;
-	padding: 0.75rem;
 	outline: none;
-	z-index: 2;
+	z-index: 3;
 }
 
 #sharing-popup {

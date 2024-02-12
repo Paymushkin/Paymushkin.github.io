@@ -564,7 +564,7 @@ input[type='number'] {
 	align-items: center;
 	gap: rem(10);
 	color: #333;
-	font-size: rem(16);
+	font-size: rem(14);
 	font-weight: 500;
 }
 
@@ -836,7 +836,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		// justify-content: space-between;
 		padding: rem(55) rem(20);
 		width: calc((100% - rem(20) / 3));
-		// min-height: rem(550);
+		height: rem(550);
 		background-color: $addColorGreen;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -853,7 +853,6 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		@media (max-width:$tablet){
 			padding: rem(30) rem(15);
 			height: auto;
-			min-height: unset;
 			background-size: contain;
 			background-position: center top;
 		}
@@ -911,8 +910,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 				.animation__wrapper {
 					transform: translateY(0);
 					.item-points__text {
-						// height: auto;
-						transform: scaleY(1);
+						height: auto;
 						opacity: 1;
 					}
 				}
@@ -920,15 +918,14 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 
 		.animation__wrapper {
-			@media (min-width: em(1279.98)){
+			@media (min-width:$tablet){
 				transform: translateY(rem(332));
 				transition: transform 0.5s ease-in-out;
 
 				.item-points__text {
-					// height: 0px;
+					height: 0px;
 					opacity: 0;
 					overflow: hidden;
-					transform: scaleY(0);
 					transition: all 0.5s ease-in-out;
 				}
 			}
@@ -1206,9 +1203,8 @@ body.scrollbar-zoom::-webkit-scrollbar {
 		}
 
 		@media (max-width:$mobile){
-			margin-top: 0;
 			margin-bottom: rem(45);
-			max-width: 100%; 
+			 max-width: 100%; 
 		}
 
 		&._single-case {
@@ -1279,7 +1275,7 @@ body.scrollbar-zoom::-webkit-scrollbar {
 .case-objects {
 	margin-bottom: rem(100);
 	@media (max-width:$mobile){
-		margin: rem(50) rem(-20) rem(50) rem(-20);
+		margin: rem(54) rem(-20) rem(60) rem(-20);
 	}
 	@media (max-width:$mobileSmall){
 		// margin: rem(54) rem(-20) rem(60) 0;
@@ -1288,12 +1284,12 @@ body.scrollbar-zoom::-webkit-scrollbar {
 }
 
 .how-points {
-	margin-bottom: rem(70);
+	margin-bottom: rem(150);
 	@media (max-width:$tablet){
 		margin-bottom: rem(70);
 	}
 	@media (max-width:$mobile){
-		margin-bottom: rem(50); 
+		margin-bottom: rem(70); 
 	}
 
 	&__title {

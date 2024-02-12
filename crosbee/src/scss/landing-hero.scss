@@ -76,7 +76,6 @@
 	}
 
 	a.landing-hero__link {
-		font-size: rem(18);
 		@media (max-width:$mobile){
 			display: flex;
 			align-items: center;
@@ -157,7 +156,7 @@
 			padding: rem(30) rem(30) rem(23);
 			background-color: #F5FAF9;
 
-			@media (min-width:$tablet){
+			@media (min-width:$mobile){
 				@media (any-hover: hover){
 					&:hover{
 						&::after{

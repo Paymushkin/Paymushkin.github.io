@@ -85,10 +85,6 @@
 	width: 100%;
 	border-bottom: rem(1) solid #E6ECEC;
 
-	@media (max-width: em(1199)) {
-		gap: rem(10);
-	}
-
 	&:first-child {
 		
 		.product-cart__body {
