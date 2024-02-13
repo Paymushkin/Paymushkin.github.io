@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro.woff') format('woff'), url('../fonts/GothamPro.ttf')  format('truetype'), url('../fonts/GothamPro.svg#GothamPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro-LightItalic';
+  src: url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-LightItalic.woff') format('woff'), url('../fonts/GothamPro-LightItalic.ttf')  format('truetype'), url('../fonts/GothamPro-LightItalic.svg#GothamPro-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamPro-Medium';
+  src: url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-Medium.woff') format('woff'), url('../fonts/GothamPro-Medium.ttf')  format('truetype'), url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DesignFontNeueBoldCondensed';
+  src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf')  format('truetype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /* src: url('../fonts/DesignFontNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),  url('../fonts/DesignFontNeueBoldCondensed.woff') format('woff'), url('../fonts/DesignFontNeueBoldCondensed.ttf')  format('truetype'), url('../fonts/DesignFontNeueBoldCondensed.svg#DesignFontNeueBoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'DesignFontNeueCyr-Bold';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  /* src: url('../fonts/DesignFontNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/DesignFontNeueCyr-Bold.otf')  format('opentype'),
+	     url('../fonts/DesignFontNeueCyr-Bold.woff') format('woff'), url('../fonts/DesignFontNeueCyr-Bold.ttf')  format('truetype'), url('../fonts/DesignFontNeueCyr-Bold.svg#DesignFontNeueCyr-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'DesignFontNeueCyr-Medium';
+  src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf')  format('truetype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /* src: url('../fonts/DesignFontNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/DesignFontNeueCyr-Medium.otf')  format('opentype'),
+	     url('../fonts/DesignFontNeueCyr-Medium.woff') format('woff'), url('../fonts/DesignFontNeueCyr-Medium.ttf')  format('truetype'), url('../fonts/DesignFontNeueCyr-Medium.svg#DesignFontNeueCyr-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'DesignFontNeueCyr-Roman';
+  src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf')  format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /* src: url('../fonts/DesignFontNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),  url('../fonts/DesignFontNeueCyr-Roman.otf')  format('opentype'),
+	     url('../fonts/DesignFontNeueCyr-Roman.woff') format('woff'), url('../fonts/DesignFontNeueCyr-Roman.ttf')  format('truetype'), url('../fonts/DesignFontNeueCyr-Roman.svg#DesignFontNeueCyr-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf')  format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf')  format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf')  format('truetype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
