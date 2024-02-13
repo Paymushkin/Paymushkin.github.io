@@ -737,6 +737,12 @@
 				_error = true;
 			}
 
+			var companyType = $('#company-type');
+			if (!companyType.val()) {
+				companyType.parent().addClass('required_err');
+				_error = true;
+			}
+
 			var name = $('#name');
 			if (!name.val()) {
 				name.addClass('required_err');
@@ -794,6 +800,7 @@
 				console.log('spam');
 			} else {
 				console.log('ok');
+				showPopup()
 			}
 
 			if (_error) {

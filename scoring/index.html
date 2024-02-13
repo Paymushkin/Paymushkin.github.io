@@ -57,6 +57,7 @@
   <link href="./src/css/mobile.css" type="text/css" data-template-style="true" rel="stylesheet" />
   <link href="./src/css/popup_cookies.css" type="text/css" data-template-style="true" rel="stylesheet" />
   <link href="./src/css/custom.ip.css" type="text/css" data-template-style="true" rel="stylesheet" />
+  <link href="./src/css/popup.css" type="text/css" data-template-style="true" rel="stylesheet" />
   <link rel="icon" href="https://scoring.ru/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" type="image/x-icon" href="https://scoring.ru/favicon.ico" />
   <meta name="mailru-verification" content="a21798ec63de8e65" />
@@ -408,81 +409,77 @@
               <!-- вид бизнеса -->
               <div class="line other-line feedback-reason-block title-color">
                 <div class="label lh-small require">
-                  ВИД БИЗНЕСА КОМПАНИИ <span class="mf-req">*</span>
+                  ВИД БИЗНЕСА КОМПАНИИ
                 </div>
-                <div class="select">
+                <select id="company-type" name="company-type" class="basic select-hidden" required="">
+                  <option value="hide" disabled="" , selected="">Выпадающий список не выбран</option>
+                  <option value="Банк">Банк</option>
+                  <option value="МФО">МФО</option>
+                  <option value="Лизинг">Лизинг</option>
+                  <option value="Страховая">Страховая</option>
+                  <option value="Другое">Другое</option>
+                </select>
 
-                  <select id="reason" name="company-type" class="basic select-hidden" required="">
-                    <option value="hide" disabled="">Выпадающий список не выбран</option>
-                    <option value="Банк">Банк</option>
-                    <option value="МФО">МФО</option>
-                    <option value="Лизинг">Лизинг</option>
-                    <option value="Страховая">Страховая</option>
-                    <option value="Другое">Другое</option>
-                  </select>
+                <ul class="select-options" style="display: none">
+                  <li rel="hide">Выпадающий список не выбран</li>
+                  <li rel="Банк">Банк</li>
+                  <li rel="МФО">МФО</li>
+                  <li rel="Лизинг">Лизинг</li>
+                  <li rel="Страховая">Страховая</li>
+                  <li rel="Другое">Другое</li>
+                </ul>
 
-                  <ul class="select-options" style="display: none">
-                    <li rel="hide">Выпадающий список не выбран</li>
-                    <li rel="Банк">Банк</li>
-                    <li rel="МФО">МФО</li>
-                    <li rel="Лизинг">Лизинг</li>
-                    <li rel="Страховая">Страховая</li>
-                    <li rel="Другое">Другое</li>
-                  </ul>
-
-                </div>
               </div>
 
-              <!-- причина обращения -->
+              <!-- направление деятельности -->
               <div class="line bottom-space-line-3 other-line feedback-fame-block title-color">
                 <div class="label lh-small">
                   С КАКИМ НАПРАВЛЕНИЕМ СВЯЗАНА<br>ВАША ПРОФЕССИОНАЛЬНАЯ<br>
                   ДЕЯТЕЛЬНОСТЬ<br>В КОМПАНИИ?
                 </div>
-                <div class="select">
-                  <select name="industry" class="basic select-hidden">
-                    <option value="Проф. деятельность" , disabled="" , selected="">
-                      Выпадающий список не выбран
-                    </option>
-                    <option value="Оценка риска/ Андеррайтинг">
-                      Оценка риска/ Андеррайтинг
-                    </option>
-                    <option value="Розничный бизнес">Розничный бизнес</option>
-                    <option value="Корпоративный бизнес">
-                      Корпоративный бизнес
-                    </option>
-                    <option value="Служба безопасности">
-                      Служба безопасности
-                    </option>
-                    <option value="Маркетинг">Маркетинг</option>
-                    <option value="Финансы/ бухгалтерия">
-                      Финансы/ бухгалтерия
-                    </option>
-                    <option value="Аналитика">Аналитика</option>
-                    <option value="Урегулирование убытков">
-                      Урегулирование убытков
-                    </option>
-                    <option value="Другое">Другое</option>
-                  </select>
-                  <ul class="select-options" style="display: none">
-                    <li rel="Проф. деятельность">
-                      Выпадающий список не выбран
-                    </li>
-                    <li rel="Оценка риска/ Андеррайтинг">
-                      Оценка риска/ Андеррайтинг
-                    </li>
-                    <li rel="Розничный бизнес">Розничный бизнес</li>
-                    <li rel="Корпоративный бизнес">Корпоративный бизнес</li>
-                    <li rel="Служба безопасности">Служба безопасности</li>
-                    <li rel="Маркетинг">Маркетинг</li>
-                    <li rel="Финансы/ бухгалтерия">Финансы/ бухгалтерия</li>
-                    <li rel="Аналитика">Аналитика</li>
-                    <li rel="Урегулирование убытков">
-                      Урегулирование убытков
-                    </li>
-                    <li rel="Другое">Другое</li>
-                  </ul>
-                </div>
+
+                <select id="company-profile" name="company-profile" class="basic select-hidden">
+                  <option value="Проф. деятельность" , disabled="" , selected="">Выпадающий список не выбран</option>
+                  <option value="Оценка риска/ Андеррайтинг">
+                    Оценка риска/ Андеррайтинг
+                  </option>
+                  <option value="Розничный бизнес">Розничный бизнес</option>
+                  <option value="Корпоративный бизнес">
+                    Корпоративный бизнес
+                  </option>
+                  <option value="Служба безопасности">
+                    Служба безопасности
+                  </option>
+                  <option value="Маркетинг">Маркетинг</option>
+                  <option value="Финансы/ бухгалтерия">
+                    Финансы/ бухгалтерия
+                  </option>
+                  <option value="Аналитика">Аналитика</option>
+                  <option value="Урегулирование убытков">
+                    Урегулирование убытков
+                  </option>
+                  <option value="Другое">Другое</option>
+                </select>
+
+                <ul class="select-options" style="display: none">
+                  <li rel="Проф. деятельность">
+                    Выпадающий список не выбран
+                  </li>
+                  <li rel="Оценка риска/ Андеррайтинг">
+                    Оценка риска/ Андеррайтинг
+                  </li>
+                  <li rel="Розничный бизнес">Розничный бизнес</li>
+                  <li rel="Корпоративный бизнес">Корпоративный бизнес</li>
+                  <li rel="Служба безопасности">Служба безопасности</li>
+                  <li rel="Маркетинг">Маркетинг</li>
+                  <li rel="Финансы/ бухгалтерия">Финансы/ бухгалтерия</li>
+                  <li rel="Аналитика">Аналитика</li>
+                  <li rel="Урегулирование убытков">
+                    Урегулирование убытков
+                  </li>
+                  <li rel="Другое">Другое</li>
+                </ul>
+
               </div>
 
               <div class="req-desc bottom-space-line-3">
@@ -515,12 +512,13 @@
                   padding-left: 15px;
                   color: #9e2e3c;
                 }
-                
+
                 a#captcha-refresh {
                   color: #FF6A28;
                   font-size: 12px;
                   font-weight: 700;
-                  line-height: 16px; /* 133.333% */
+                  line-height: 16px;
+                  /* 133.333% */
                   letter-spacing: 1.68px;
                   text-transform: uppercase;
                 }
@@ -548,21 +546,20 @@
                 .captcha-block__item-big {
                   flex: 1 1 auto;
                 } */
-                
               </style>
 
               <div class="line textfield other-line captcha-block bottom-space-line-3">
                 <div class="label require">
-                    <div class="captcha-block__item">
-                      <div class="captcha-block__item--img">
-                        <img id="captcha-image" title="Щелкните для нового кода" alt="captcha" src="./src/captcha.php"
-                          onclick="this.src=&#39;/captcha.php?id=&#39;+(+new Date());" />
-                      </div>
-                      <div class="captcha-block__item--refresh">
-                        <a id="captcha-refresh" href="javascript:void(0);"
-                          onclick="document.getElementById(&#39;captcha-image&#39;).src=&#39;/captcha.php?id=&#39;+(+new Date());">ОБНОВИТЬ</a>
-                      </div>
+                  <div class="captcha-block__item">
+                    <div class="captcha-block__item--img">
+                      <img id="captcha-image" title="Щелкните для нового кода" alt="captcha" src="./src/captcha.php"
+                        onclick="this.src=&#39;/captcha.php?id=&#39;+(+new Date());" />
                     </div>
+                    <div class="captcha-block__item--refresh">
+                      <a id="captcha-refresh" href="javascript:void(0);"
+                        onclick="document.getElementById(&#39;captcha-image&#39;).src=&#39;/captcha.php?id=&#39;+(+new Date());">ОБНОВИТЬ</a>
+                    </div>
+                  </div>
                 </div>
                 <div class="captcha-block__item captcha-block__item-big">
                   <div class="captcha-block__item--field">
@@ -570,8 +567,6 @@
                   </div>
                 </div>
               </div>
-
-
 
               <div class="line other-line">
                 <ul class="input-list">
@@ -590,11 +585,11 @@
               <div class="line other-line submit-wrap">
                 <input type="hidden" name="hidden_user_status" id="hidden_user_status" value="" />
                 <input type="hidden" name="hidden_company-type" id="hidden_company-type" value="" />
-                <input type="hidden" name="hidden_industry" id="hidden_industry" value="" />
+                <input type="hidden" name="hidden_company-profile" id="hidden_company-profile" value="" />
                 <input type="checkbox" id="equifax-check-true" name="equifax-check-true" value="1"
                   style="visibility: hidden !important" />
-                <input name="submit-btn" type="submit" class="form_send" value="ПОДПИСАТЬСЯ"
-                  title="ПОДПИСАТЬСЯ НА АНАЛИТИЧЕСКИЕ ОТЧЕТЫ" />
+                <input data-popup="after-subscribe" name="submit-btn" type="submit" class="form_send"
+                  value="ПОДПИСАТЬСЯ" title="ПОДПИСАТЬСЯ НА АНАЛИТИЧЕСКИЕ ОТЧЕТЫ" />
               </div>
 
               <div class="clearfix feedback-clearfix"></div>
@@ -662,6 +657,43 @@
           </div>
         </div>
       </div>
+
+      <!-- чтоб отобразить попап нужно при успешной валидации вызвать функцию showPopup() -->
+      <!-- временно добавил ее в файле script.js, в блок else валидации формы для демонстрации -->
+      <!-- нужно будет переделать так как это универсальная валидация для всех форм сайта -->
+      <div class="popup" id="after-subscribe" aria-hidden="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M28.5666 12.5664C28.641 12.492 28.7 12.4037 28.7403 12.3065C28.7805 12.2093 28.8012 12.1052 28.8012 12C28.8012 11.8948 28.7805 11.7906 28.7403 11.6935C28.7 11.5963 28.641 11.508 28.5666 11.4336C28.4922 11.3592 28.4039 11.3002 28.3068 11.2599C28.2096 11.2197 28.1054 11.199 28.0002 11.199C27.895 11.199 27.7909 11.2197 27.6937 11.2599C27.5965 11.3002 27.5082 11.3592 27.4338 11.4336L20.0002 18.8688L12.5666 11.4336C12.4922 11.3592 12.4039 11.3002 12.3068 11.2599C12.2096 11.2197 12.1054 11.199 12.0002 11.199C11.895 11.199 11.7909 11.2197 11.6937 11.2599C11.5965 11.3002 11.5082 11.3592 11.4338 11.4336C11.3594 11.508 11.3004 11.5963 11.2602 11.6935C11.2199 11.7906 11.1992 11.8948 11.1992 12C11.1992 12.1052 11.2199 12.2093 11.2602 12.3065C11.3004 12.4037 11.3594 12.492 11.4338 12.5664L18.869 20L11.4338 27.4336C11.2836 27.5838 11.1992 27.7875 11.1992 28C11.1992 28.2124 11.2836 28.4162 11.4338 28.5664C11.584 28.7166 11.7878 28.801 12.0002 28.801C12.2127 28.801 12.4164 28.7166 12.5666 28.5664L20.0002 21.1312L27.4338 28.5664C27.584 28.7166 27.7878 28.801 28.0002 28.801C28.2127 28.801 28.4164 28.7166 28.5666 28.5664C28.7168 28.4162 28.8012 28.2124 28.8012 28C28.8012 27.7875 28.7168 27.5838 28.5666 27.4336L21.1314 20L28.5666 12.5664Z"
+                  fill="black" />
+              </svg>
+            </button>
+
+            <div class="popup__body">
+              <h2 class="popup__title">Спасибо за подписку на рассылку</h2>
+              <p class="popup__text">Пока мы готовим для вас первое письмо, вы можете найти кое‑что интересное здесь</p>
+              <div class="popup__img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path
+                    d="M57.2646 9.14629C53.2154 5.33091 46.2769 4.46014 40 10.7371C33.7323 4.46629 26.7846 5.33091 22.7354 9.14321C18.0184 13.5832 17.9354 21.0109 22.4831 25.5586L40 43.0786L57.5169 25.5617C62.0646 21.014 61.9815 13.5863 57.2646 9.14629Z"
+                    fill="#FF6A28" />
+                  <path
+                    d="M74.7416 9.23254C72.0308 9.23254 69.7816 11.2633 69.5108 13.9587L67.5631 33.1925C66.6246 33.3925 65.7631 33.8479 65.0954 34.5156L49.5539 48.9833C47.4154 50.931 46.1754 53.7095 46.1539 56.6141V73.8479H64.6154V65.7372C64.6154 64.4849 65.1416 63.2664 66.0954 62.3618L77.7723 50.5772C79.2093 49.1249 80 47.2018 80 45.1618V14.491C80 11.5925 77.64 9.23254 74.7416 9.23254ZM76.9231 45.1618C76.9231 46.3864 76.4493 47.5402 75.5846 48.4141L63.9446 60.1618C62.4154 61.6079 61.5385 63.6387 61.5385 65.7372V70.771H49.2308V56.6325C49.2462 54.5925 50.1169 52.6387 51.64 51.2541L67.2308 36.7341C67.6493 36.3156 68.2216 36.1095 68.8277 36.171C69.1631 36.2018 69.6462 36.3218 70.0585 36.7341C70.4369 37.1125 70.6462 37.6172 70.6462 38.1495C70.6462 38.6818 70.4339 39.1864 70.1108 39.5125L58.1077 50.3987L60.1754 52.6756L72.2339 41.7372C73.1939 40.7772 73.7231 39.5033 73.7231 38.1464C73.7231 36.7895 73.1969 35.5156 72.2369 34.5587C71.7693 34.0849 71.2246 33.7218 70.6277 33.4725L72.5693 14.2725C72.6831 13.1525 73.6185 12.3095 74.7416 12.3095C75.9446 12.3095 76.9231 13.2879 76.9231 14.491V45.1618Z"
+                    fill="#FF6A28" />
+                  <path
+                    d="M30.4462 48.9833L14.9046 34.5156C14.2369 33.8479 13.3754 33.3895 12.4369 33.1925L10.4892 13.9587C10.2185 11.2633 7.96923 9.23254 5.25846 9.23254C2.36 9.23254 0 11.5925 0 14.491V45.1618C0 47.2018 0.790769 49.1248 2.22769 50.5741L13.9046 62.3587C14.8585 63.2633 15.3846 64.4849 15.3846 65.7372V73.8479H33.8462V56.6141C33.8277 53.7095 32.5846 50.9341 30.4462 48.9833ZM30.7692 70.771H18.4615V65.7372C18.4615 63.6418 17.5846 61.6079 16.0554 60.1618L4.41538 48.4141C3.55077 47.5402 3.07692 46.3864 3.07692 45.1618V14.491C3.07692 13.2879 4.05538 12.3095 5.25846 12.3095C6.38154 12.3095 7.31692 13.1525 7.43077 14.2664L9.37231 33.4664C8.77538 33.7187 8.23077 34.0818 7.76308 34.5525C6.80615 35.5095 6.27692 36.7833 6.27692 38.1402C6.27692 39.4972 6.80615 40.771 7.76615 41.731L19.8246 52.6695L21.8923 50.3925L9.88923 39.5064C9.56308 39.1802 9.35385 38.6787 9.35385 38.1433C9.35385 37.6079 9.56308 37.1064 9.94154 36.7279C10.3508 36.3156 10.8369 36.1956 11.1723 36.1649C11.7815 36.1064 12.3508 36.3095 12.7692 36.7279L28.36 51.2479C29.8831 52.6325 30.7538 54.5864 30.7692 56.6264V70.771Z"
+                    fill="#FF6A28" />
+                </svg>
+              </div>
+              <a href="https://scoring.ru/" class="popup__button">на главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./src/js/jquery-3.5.1.min.js"></script>
     <script src="./src/js/owl.carousel.min.js"></script>
@@ -669,6 +701,7 @@
     <script src="./src/js/accordion.js"></script>
     <script src="./src/js/script.js"></script>
     <script src="./src/js/form.js"></script>
+    <script src="./src/js/popup.js"></script>
     <script src="./src/js/jquery.maskedinput.min.js"></script>
 
     <script>
@@ -711,6 +744,8 @@
       })(document, window, "yandex_metrika_callbacks");
     </script>
   </div>
+
+
 </body>
 
 </html>
