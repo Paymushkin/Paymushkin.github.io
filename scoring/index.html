@@ -501,7 +501,13 @@
                 .captcha-block__item {
                   display: flex;
                   align-items: center;
-                  width: 100%;
+                  /* width: 100%; */
+                }
+
+                @media screen and (max-width: 767px) {
+                  .captcha-block__item {
+                    width: 100%;
+                  }
                 }
 
                 .captcha-error {
