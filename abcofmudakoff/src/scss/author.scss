@@ -1,0 +1,71 @@
+.author {
+    background-image: url(../img/author/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width:$mobileSmall){
+        background-image: url(../img/author/bg-mob.png);
+    }
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        // @include adaptiveValue("padding-top", 132, 30, 1920, 375, 1);
+        @include adaptiveValue("padding-right", 225, 15, 1920, 375, 1);
+        @include adaptiveValue("padding-left", 225, 15, 1920, 375, 1);
+        // @include adaptiveValue("padding-bottom", 127, 23, 1920, 375, 1);
+        height: rem(744);
+
+        @media (max-width:$tablet){
+            height: rem(500);
+        }
+
+        @media (max-width:$mobile){
+            height: rem(400);
+        }
+
+        @media (max-width:$mobileSmall){
+            padding-top: rem(88);
+            height: rem(773);
+            align-items: flex-start;
+        }
+    }
+
+    &__body {
+
+    }
+
+    &__title {
+        margin-bottom: rem(34);
+        color: #fff;
+        @include adaptiveValue("font-size", 48, 24, 1920, 375, 1);
+        font-weight: 700;
+
+        @media (max-width:$mobileSmall){
+            margin-bottom: rem(21); 
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(34);
+        color: #fff;
+        @include adaptiveValue("font-size", 32, 13, 1920, 375, 1);
+        font-weight: 700;
+
+        @media (max-width:$mobileSmall){
+            margin-bottom: rem(21); 
+        }
+    }
+
+    &__text {
+        // margin-bottom: rem(34);
+        color: #fff;
+        @include adaptiveValue("font-size", 32, 13, 1920, 375, 1);
+        // font-weight: 700;
+
+        @media (max-width:$mobile){
+             max-width: 90%; 
+        }
+    }
+}

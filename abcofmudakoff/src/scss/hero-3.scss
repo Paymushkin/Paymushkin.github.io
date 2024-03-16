@@ -1,0 +1,25 @@
+.hero {
+    position: relative;
+    height: 1181px;
+    background-color: $mainColor;
+    background-image: url(../img/hero-bg-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        position: fixed;
+        top: -100%;
+        opacity: 1;
+        visibility: hidden;
+    }
+
+    &__label {
+        position: absolute;
+    }
+}
