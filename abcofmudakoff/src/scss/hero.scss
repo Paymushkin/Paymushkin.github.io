@@ -67,9 +67,11 @@
         @include adaptiveValue("left", -570, -343, 1920, 375, 1);
         @include adaptiveValue("width", 1898, 593, 1920, 375, 1);
         @include adaptiveValue("height", 1898, 651, 1920, 375, 1);
+        background-color: #000;
         background-color: $highlightColor;
         border-radius: 50%;
-        
+        opacity: 0;
+        animation: show 1.5s ease-in-out 0.5s 1 forwards;
     }
 
     &__img {
@@ -109,5 +111,17 @@
             // height: 100%;
             // width: percent(475, 375); 
         }
+    }
+}
+
+@keyframes show {
+    from {
+        background-color: #000;
+        transform: translate(-100%, 100%);
+        opacity: 0;
+    } to {
+        background-color: $highlightColor;
+        transform: translate(0%, 0%);
+        opacity: 1;
     }
 }

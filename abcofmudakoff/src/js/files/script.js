@@ -13,3 +13,11 @@ import {
 //     }, 2000);
     
 // })
+
+document.querySelector('.hero__button').addEventListener('click', function() {
+    document.querySelector('#e-book').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+AOS.init();
