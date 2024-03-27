@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="color-scheme" content="only light"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png"/>
+    <title>Moleculab</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20240328002343" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240328002343"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container">
+          <div class="header__top header-top">
+            <div class="header-top__left">
+              <div class="header-top__club club">
+                <div class="club__wrapper">
+                  <button class="button _small _gradient header-top__button">Клуб привелегий</button>
+                  <ul class="club__list">
+                    <li class="club__item"> <a href="#">Для бизнеса</a></li>
+                    <li class="club__item"> <a href="#">Для частных лиц</a></li>
+                  </ul>
+                </div>
+              </div><a class="header-top__link _to-customer" href="#">Покупателям</a>
+              <div class="location-block header-top__location">
+                <div class="location-block__current" id="change-location">
+                  <div class="location-block__location"><img src="img/location.svg?_v=20240328002343" alt="location-icon"/></div>
+                  <div class="location-block__city">г. Краснодар</div>
+                  <div class="location-block__icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8291" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <div class="location-block__hidden hidden-block">
+                    <div class="hidden-block__body"> 
+                      <div class="hidden-block__title"> <span>Ваш город</span><span class="_highligth">Краснодар?</span></div>
+                      <div class="hidden-block__buttons">
+                        <button class="button hidden-block__button">Все верно</button><span>Выбрать другой</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-top__right"><a class="header-top__link _to-mail" href="mailto:pochta@gmail.com">pochta@gmail.com</a><a class="header-top__link" href="tel:+79002834869">8 (900) 283-48-69</a>
+              <button class="button _small _gradient header-top__call">Заказать звонок</button>
+            </div>
+          </div>
+          <div class="header__top-mobile"> 
+            <p class="gradient-text">Клуб привилегий		</p>
+          </div>
+        </div>
+        <div class="header__container">
+          <div class="header__middle header-middle">
+            <div class="header-middle__left"><a class="header-middle__logo" href="/"><img src="img/logo.svg?_v=20240328002343" alt="Logo"/></a>
+              <div class="header-middle__menu header-menu" id="open-header-menu"><span class="header-menu__line"></span>
+                <div class="header-menu__hidden-block">
+                  <ul class="header-menu__list">
+                    <li class="header-menu__item" data-value="Все разделы"><a href="#"> Все разделы</a></li>
+                    <li class="header-menu__item" data-value="Клеточная биология"><a href="#"> Клеточная биология</a></li>
+                    <li class="header-menu__item" data-value="Клиническая диагностика"><a href="#"> Клиническая диагностика</a></li>
+                    <li class="header-menu__item" data-value="Биофарма"><a href="#"> Биофарма</a></li>
+                    <li class="header-menu__item" data-value="Геномика"><a href="#"> Геномика</a></li>
+                    <li class="header-menu__item" data-value="Протеомика"><a href="#"> Протеомика</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header-middle__center">
+              <form class="header-middle__form search-form" action="#" method="post">
+                <div class="search-form__select select">
+                  <div class="select__title" id="open-select"><span id="current-value" data-current="">Поиск по разделам</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="select__hidden-block">
+                    <ul class="select__list">
+                      <li class="select__item" data-value="Все разделы">Все разделы</li>
+                      <li class="select__item" data-value="Клеточная биология">Клеточная биология</li>
+                      <li class="select__item" data-value="Клиническая диагностика">Клиническая диагностика</li>
+                      <li class="select__item" data-value="Биофарма">Биофарма</li>
+                      <li class="select__item" data-value="Геномика">Геномика</li>
+                      <li class="select__item" data-value="Протеомика">Протеомика</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="search-form__input input-wrapper"> 
+                  <input class="input" type="text" placeholder="Поиск"/>
+                  <button class="input__icon-search" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                      <path d="M13.1194 13.456L13.1194 13.456C13.2447 13.5813 13.4478 13.5813 13.5731 13.456L13.5731 13.456L13.956 13.0731L13.9207 13.0377L13.956 13.0731C14.0813 12.9478 14.0813 12.7446 13.956 12.6194L10.2113 8.87466C10.9176 7.98732 11.3417 6.86565 11.3417 5.64585C11.3417 2.78083 9.01085 0.45 6.14583 0.45C3.28081 0.45 0.95 2.78083 0.95 5.64585C0.95 8.51088 3.28083 10.8417 6.14586 10.8417C7.36565 10.8417 8.48732 10.4176 9.37466 9.71133L13.1194 13.456ZM6.14586 9.65836C3.93327 9.65836 2.13334 7.85844 2.13334 5.64585C2.13334 3.43327 3.93327 1.63334 6.14586 1.63334C8.35844 1.63334 10.1584 3.43327 10.1584 5.64585C10.1584 7.85844 8.35844 9.65836 6.14586 9.65836Z" fill="#6F8291" stroke="#6F8291" stroke-width="0.1"></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+              <div class="header-middle__search" id="open-mobile-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M13.7021 13.7031L17.4991 17.5" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="header-middle__close" id="open-mobile-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M17.7782 2.22217L2.22266 17.7777M2.22266 2.22217L17.7782 17.7777" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="header-middle__right">
+              <ul class="header-icons__list">
+                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                      <path d="M15.4372 3.375C18.8127 3.375 21.0807 6.58781 21.0807 9.585C21.0807 15.6548 11.6678 20.625 11.4974 20.625C11.327 20.625 1.91406 15.6548 1.91406 9.585C1.91406 6.58781 4.18212 3.375 7.55758 3.375C9.49555 3.375 10.9498 4.60714 11.4974 5.70238C12.045 4.60714 13.4992 3.375 15.4372 3.375Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg><span class="header-icons__text">Избранное</span></a></li>
+                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg><span class="header-icons__text">Войти</span></a></li>
+                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M4.5 8.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                      <path d="M9.5 2.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                      <path d="M14.5 11V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                      <path d="M19.5 3.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                    </svg><span class="header-icons__text">Сравнение</span></a></li>
+                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M15.8338 9.12508V6.25008C15.8338 4.13299 14.1175 2.41675 12.0004 2.41675C9.88334 2.41675 8.1671 4.13299 8.1671 6.25008V9.12508M3.94277 10.4207L3.36777 16.554C3.20428 18.2979 3.12254 19.1699 3.4119 19.8433C3.6661 20.435 4.11155 20.9241 4.67687 21.2325C5.3204 21.5834 6.19616 21.5834 7.94769 21.5834H16.0532C17.8047 21.5834 18.6805 21.5834 19.324 21.2325C19.8893 20.9241 20.3348 20.435 20.589 19.8433C20.8783 19.1699 20.7966 18.2979 20.6331 16.554L20.0581 10.4207C19.92 8.94812 19.851 8.21182 19.5198 7.65515C19.2282 7.16489 18.7973 6.77248 18.2819 6.52785C17.6968 6.25008 16.9572 6.25008 15.4782 6.25008L8.52269 6.25008C7.04364 6.25008 6.30411 6.25008 5.71896 6.52785C5.20361 6.77248 4.77269 7.16489 4.48103 7.65515C4.14986 8.21182 4.08083 8.94812 3.94277 10.4207Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg><span class="header-icons__text">Корзина</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom header-bottom">
+          <div class="header-bottom__top header__container"> 
+            <p class="gradient-text">Инновации для лабораторий, доступные в один клик</p>
+          </div>
+          <div class="header-bottom__links header__container"> 
+            <div class="header-bottom__list"> 
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">О компании</a></div>
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">Производители</a></div>
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">Демо </a></div>
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">Библиотека</a></div>
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">Сервис и поддержка</a></div>
+              <div class="header-bottom__item"> <a class="header-bottom__link" href="">Склад</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main"> </main>
+    </div>
+    <script src="js/app.min.js?_v=20240328002343"></script>
+  </body>
+</html>

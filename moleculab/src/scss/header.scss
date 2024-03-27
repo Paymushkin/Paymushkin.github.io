@@ -1,0 +1,311 @@
+.header {
+	background-color: $headerBg;
+
+	&__container {}
+
+	&__top {
+		padding: 10px 0;
+	}
+
+	&__top-mobile {
+		padding: 5px 16px;
+		background-color: #F2F6F9;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.4;
+		border-radius: 300px;
+
+		@media (min-width:$mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__middle {
+		padding: 14px 0;
+
+		@media (max-width:$mobileSmall) {
+			padding: 20px 0;
+		}
+	}
+
+	&__bottom {
+		@media (max-width: em(767)) {
+			display: none;
+		}
+	}
+
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+
+		&__left {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+
+			@media (max-width: em(1280)) {
+				gap: 20px;
+			}
+
+			@media (max-width:$tablet) {
+				gap: 10px;
+			}
+		}
+
+		&__club {
+			@media (max-width:$mobileSmall) {
+				display: none;
+			}
+		}
+
+		&__right {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			@media (max-width: em(1280)) {
+				gap: 10px;
+			}
+		}
+
+		&__link {
+			color: $textColor;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 140%;
+
+			&._to-customer,
+			&._to-mail {
+				@media (max-width: em(767)) {
+					display: none;
+				}
+			}
+		}
+
+		&__call {
+			padding: 5px 16px;
+			min-width: 155px;
+
+			@media (max-width:$tablet) {
+				display: none;
+			}
+		}
+
+		&__button {
+			padding: 5px 16px;
+			min-width: 155px;
+		}
+	}
+
+	&-middle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 14px;
+
+		@media (max-width:$tablet) {
+			gap: 10px;
+		}
+
+		&__left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+
+			@media (max-width: em(1280)) {
+				gap: 26px;
+			}
+		}
+
+		&__center {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			gap: 35px;
+			margin-right: 26px;
+
+			@media (max-width: em(1280)) {
+				margin-right: 16px;
+			}
+
+			@media (max-width: em(767)) {
+				margin-right: 0;
+			}
+		}
+
+		&__right {
+			@media (max-width: em(767)) {
+				display: none;
+			}
+		}
+
+		&__menu {
+			@media (max-width: em(767)) {
+				display: none;
+			}
+		}
+
+		&__logo {
+
+			._mobile-search-open & {
+				display: none;
+			}
+
+			img {
+				height: 44px;
+
+				@media (max-width:$tablet) {
+					height: 30px;
+				}
+			}
+		}
+
+		&__search {
+
+			display: flex;
+			align-items: center;
+
+			._mobile-search-open & {
+				display: none;
+			}
+
+			@media (min-width:$mobileSmall) {
+				display: none;
+			}
+		}
+
+		&__close {
+			display: none;
+			align-items: center;
+
+			@media (min-width:$mobileSmall) {
+				display: none;
+			}
+
+			._mobile-search-open & {
+				display: flex;
+			}
+		}
+	}
+
+	&-bottom {
+
+		&__top {
+			display: flex;
+			justify-content: center;
+			padding: 14px;
+			border-top: 1px solid $borderColor-3;
+			border-bottom: 1px solid $borderColor-3;
+
+			p {
+				font-family: Manrope;
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 1.2;
+				letter-spacing: 0.66px;
+
+				@media (max-width:$tablet) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&__links {
+			padding: 16px 0;
+		}
+
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 80px;
+
+			@media (max-width:$tablet) {
+				padding: 0 40px;
+			}
+		}
+
+		&__item {
+			color: $textColor;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.2;
+
+			@media (max-width:$tablet) {
+				font-size: 14px;
+				line-height: 1.4;
+			}
+		}
+	}
+}
+
+.header-icons {
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+
+		@media (max-width: em(1280)) {
+			gap: 21px;
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+
+		svg {
+			width: 28px;
+			height: 28px;
+		}
+
+		&::before {
+			content: attr(data-counter);
+			position: absolute;
+			top: -6px;
+			right: 3px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 15px;
+			min-height: 15px;
+			border-radius: 50%;
+			color: #fff;
+			background-color: $highlightColor-2;
+			font-size: 10px;
+			font-weight: 500;
+			line-height: 1.5;
+
+			@media (max-width:$tablet) {
+				right: -4px;
+			}
+		}
+
+		&[data-counter="0"] {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__text {
+		color: $textColor;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.4;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+}

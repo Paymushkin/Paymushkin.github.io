@@ -1,0 +1,88 @@
+.footer {
+	position: relative;
+	margin-top: rem(-50);
+	background-color: #E9E7E7;
+	overflow: hidden;
+	z-index: 0;
+
+	@media (max-width:$mobileSmall){
+		margin-top: rem(-15); 
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		// @include adaptiveValue("padding-top", 49, 23, 1920, 375, 1);
+        @include adaptiveValue("padding-right", 225, 15, 1920, 375, 1);
+        @include adaptiveValue("padding-left", 225, 15, 1920, 375, 1);
+        // @include adaptiveValue("padding-bottom", 207, 32, 1920, 375, 1);
+		@include adaptiveValue("height", 1106, 515, 1920, 576, 1);
+
+		@media (max-width:$mobile){
+			align-items: flex-start;
+			padding-top: rem(58);
+			z-index: 2;
+		}
+	}
+
+	&__shape {
+		position: absolute;
+		bottom: -87%;
+		right: -29%;
+		// width: rem(1756);
+		// height: rem(1756);
+        @include adaptiveValue("width", 1756, 484, 1920, 375, 1);
+        @include adaptiveValue("height", 1756, 484, 1920, 375, 1);
+		background-color: $highlightColor-1;
+		border-radius: 50%;
+
+		@media (max-width:$mobile){
+			bottom: -37%;
+			right: -47%;
+		}
+
+		@media (max-width:$mobileSmall){
+			bottom: -27%;
+			right: -50%; 
+		}
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		max-height: 112%;
+		max-width: 59%;
+		z-index: 1;
+
+		@media (max-width: $mobile){
+            display: none;
+        }
+
+		&-mob {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 80%;
+			@media (min-width:$mobile){
+				display: none;
+			}
+			@media (max-width:$mobileSmall){
+				height: 70%; 
+			}
+		}
+	}
+
+	&__title {
+		max-width: 50%;
+		color: $highlightColor-1;
+		@include adaptiveValue("font-size", 96, 32, 1920, 375, 1);
+		line-height: math.div(116, 96);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@media (max-width:$mobile){
+			max-width: 100%; 
+		}
+	}
+}
