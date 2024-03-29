@@ -262,6 +262,9 @@ body {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: 0.3s ease transform;
+  -o-transition: 0.3s ease transform;
+  transition: 0.3s ease transform;
 }
 
 .button._small {
@@ -567,27 +570,30 @@ body::after {
 
 .swiper-pagination {
   position: absolute;
-  left: 2.5rem;
-  bottom: 2.09375rem;
+  left: 50%;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.875rem;
+  gap: 10px;
   cursor: pointer;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .swiper-pagination-bullet {
   position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #ffffff;
-  -webkit-transition: 0.3s ease background-color;
-  -o-transition: 0.3s ease background-color;
-  transition: 0.3s ease background-color;
+  background: #DCE4EA;
+  -webkit-transition: 0.3s ease background;
+  -o-transition: 0.3s ease background;
+  transition: 0.3s ease background;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #00A0DB;
+  background: -o-linear-gradient(326deg, #00A0DB 10.09%, #86D06C 105.92%);
+  background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
 }
 
 .swiper-pagination .swiper-pagination-total {
@@ -1343,7 +1349,54 @@ details ul {
   line-height: 1.4;
 }
 
+.spheres {
+  margin-bottom: 90px;
+}
+
+.spheres__body {
+  position: relative;
+}
+
+.spheres__slider {
+  position: relative;
+}
+
+.spheres__pagination {
+  bottom: -32px;
+}
+
+.spheres-slide {
+  padding: 40px 20px 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  height: 226px;
+}
+
+.spheres-slide__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spheres-slide__title {
+  color: #6F8290;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.spheres-slide__img {
+  max-height: 142px;
+}
+
 .news {
+  position: relative;
   margin-bottom: 90px;
 }
 
@@ -1361,6 +1414,7 @@ details ul {
   -ms-flex-direction: column;
       flex-direction: column;
   gap: 24px;
+  min-height: 490px;
 }
 
 .news__link {
@@ -1381,6 +1435,10 @@ details ul {
   -webkit-transition: 0.3s ease color;
   -o-transition: 0.3s ease color;
   transition: 0.3s ease color;
+}
+
+.news__pagination {
+  bottom: 5px;
 }
 
 .news-slide {
@@ -1760,6 +1818,14 @@ details ul {
   .header-middle__close {
     display: none;
   }
+
+  .spheres__pagination {
+    display: none;
+  }
+
+  .news__pagination {
+    display: none;
+  }
 }
 
 @media (min-width: 64.06125em) {
@@ -1805,6 +1871,11 @@ details ul {
 @media (max-width: 64.06125em) {
   .navigation {
     display: none;
+  }
+
+  .section-title {
+    font-size: 32px;
+    line-height: 1.2;
   }
 
   .location-block__city {
@@ -1856,6 +1927,27 @@ details ul {
 
   .header-icons__text {
     display: none;
+  }
+
+  .spheres {
+    margin-bottom: 80px;
+  }
+
+  .spheres-slide {
+    gap: 8px;
+    height: 184px;
+  }
+
+  .spheres-slide__title {
+    font-size: 16px;
+  }
+
+  .spheres-slide__img {
+    max-height: 97px;
+  }
+
+  .news {
+    margin-bottom: 80px;
   }
 
   .footer__middle {
@@ -1938,6 +2030,11 @@ details ul {
     padding: 0 20px;
   }
 
+  .section-title {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
   .search-form {
     border: none;
   }
@@ -1961,6 +2058,23 @@ details ul {
 
   .header-top__club {
     display: none;
+  }
+
+  .news__body {
+    gap: 62px;
+  }
+
+  .news__link {
+    padding: 17px 30px;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 100%;
+    border: 1px solid #C2EAB8;
+    border-radius: 30px;
+  }
+
+  .news__pagination {
+    bottom: 90px;
   }
 
   .footer__bottom {
@@ -2097,6 +2211,12 @@ details ul {
 
   .news__link span:hover {
     color: #77C149;
+  }
+
+  .news-slide__link:hover .button__icon {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 
   .footer-top__link:hover {

@@ -1,0 +1,64 @@
+.spheres {
+    margin-bottom: 90px;
+
+    @media (max-width:$tablet) {
+        margin-bottom: 80px;
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__slide {}
+
+    &__pagination {
+        bottom: -32px;
+
+        @media (min-width:$mobileSmall) {
+            display: none;
+        }
+    }
+
+    &-slide {
+        padding: 40px 20px 20px;
+        background-color: #fff;
+        border-radius: 16px;
+        height: 226px;
+
+        @media (max-width:$tablet) {
+            gap: 8px;
+            height: 184px;
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__title {
+            color: $textColor;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: center;
+
+            @media (max-width:$tablet) {
+                font-size: 16px;
+            }
+        }
+
+        &__img {
+            max-height: 142px;
+
+            @media (max-width:$tablet) {
+                max-height: 97px;
+            }
+        }
+    }
+}

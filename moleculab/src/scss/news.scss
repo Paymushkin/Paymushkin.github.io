@@ -1,5 +1,10 @@
 .news {
+    position: relative;
     margin-bottom: 90px;
+
+    @media (max-width:$tablet) {
+        margin-bottom: 80px;
+    }
 
     &__title {}
 
@@ -7,6 +12,10 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @media (max-width:$mobileSmall) {
+            gap: 62px;
+        }
     }
 
     &__slider {}
@@ -15,6 +24,7 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+        min-height: 490px;
     }
 
     &__link {
@@ -35,6 +45,26 @@
                     color: $highlightColor-2;
                 }
             }
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding: 17px 30px;
+            justify-content: center;
+            width: 100%;
+            border: 1px solid #C2EAB8;
+            border-radius: 30px;
+        }
+    }
+
+    &__pagination {
+        bottom: 5px;
+
+        @media (min-width:$mobileSmall) {
+            display: none;
+        }
+
+        @media (max-width:$mobileSmall) {
+            bottom: 90px;
         }
     }
 }
@@ -83,5 +113,13 @@
         line-height: 1.4;
     }
 
-    &__link {}
+    &__link {
+        @media (any-hover: hover) {
+            &:hover {
+                .button__icon {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
 }
