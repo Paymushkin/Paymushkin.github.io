@@ -76,6 +76,14 @@
 			font-size: 14px;
 			font-weight: 500;
 			line-height: 140%;
+			transition: 0.3s ease color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $highlightColor-2;
+				}
+			}
+
 
 			&._to-customer,
 			&._to-mail {
@@ -83,20 +91,58 @@
 					display: none;
 				}
 			}
+
+			&._to-call {
+				font-weight: 700;
+			}
+		}
+
+		&__button,
+		&__call {
+			background-color: #F2F6F9;
+
+			span {
+				background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			&::before {
+				content: attr(data-text);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				box-sizing: border-box;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				background: $gradient-1;
+				transition: 0.3s ease opacity;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						opacity: 0;
+					}
+				}
+			}
+
+			// padding: 5px 16px;
+			// min-width: 155px;
 		}
 
 		&__call {
-			padding: 5px 16px;
-			min-width: 155px;
 
 			@media (max-width:$tablet) {
 				display: none;
 			}
-		}
-
-		&__button {
-			padding: 5px 16px;
-			min-width: 155px;
 		}
 	}
 
@@ -168,6 +214,7 @@
 
 			display: flex;
 			align-items: center;
+			cursor: pointer;
 
 			._mobile-search-open & {
 				display: none;
@@ -181,6 +228,7 @@
 		&__close {
 			display: none;
 			align-items: center;
+			cursor: pointer;
 
 			@media (min-width:$mobileSmall) {
 				display: none;
@@ -228,15 +276,24 @@
 			}
 		}
 
-		&__item {
+		&__item {}
+
+		&__link {
 			color: $textColor;
 			font-size: 16px;
 			font-weight: 500;
 			line-height: 1.2;
+			transition: 0.3s ease color;
 
 			@media (max-width:$tablet) {
 				font-size: 14px;
 				line-height: 1.4;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $highlightColor-2;
+				}
 			}
 		}
 	}

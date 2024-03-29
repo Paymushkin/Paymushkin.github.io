@@ -1,6 +1,266 @@
 footer.footer
-	.footer__shape
-	img.footer__img(src="@img/footer/bg.png", alt="Мила")
-	img.footer__img-mob(src="@img/footer/bg-mob.png", alt="Мила")
-	.footer__container
-		h2.footer__title А на какую букву твоя история мудака?
+	.footer__pattern
+	.footer__container 
+		.footer__top.footer-top
+			.footer-top__logo
+				img(src="@img/footer/logo.svg", alt="Logo")
+			.footer-top__content 
+				a(href="mailto:pochta@gmail.com").footer-top__link pochta@gmail.com
+				a(href="tel:+79002834869").footer-top__link.footer-top__link-phone 8 (900) 283-48-69
+				.footer-top__buttons
+					button(data-text="Заказать звонок").button._gradient.footer-top__call.footer-top__button Заказать звонок
+					a(href="#").button._highlight._with-icon.footer-top__button 
+						span Наверх
+						span.button__icon 
+							svg(xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none")
+								path(d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white")
+
+		.footer__middle.footer-middle
+			nav.footer-middle__nav.footer-nav 
+				ul.footer-nav__list 
+					li.footer-nav__item
+						a.footer-nav__link(href="#", target="_blank") О компании
+					li.footer-nav__item
+						a.footer-nav__link(href="#", target="_blank") Производители				
+					li.footer-nav__item
+						a.footer-nav__link(href="#", target="_blank") Демо
+					li.footer-nav__item
+						a.footer-nav__link(href="#", target="_blank") Библиотека
+					li.footer-nav__item
+						a.footer-nav__link(href="#", target="_blank") Склад
+				.footer-nav__sections.nav-sections
+					h3.nav-sections__title Разделы
+					ul.nav-sections__list
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Центрифуги
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Секвенаторы генетические
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Планшетный фотометр
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Морозильники низкотемпературные
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Микроскопы
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Нанофотометр
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Амплификаторы
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Криохранилища
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Вошеры
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Сыворотки эмбриональные
+						li.nav-sections__item
+							a.nav-sections__link(href="#") CO2 Инкубаторы
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Рестриктизы
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Наконечники для дозаторов
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Шейкеры лабораторные
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Антитела
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Весы лабораторные
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Спектрофотометры
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Реагенты для секвенирования
+						li.nav-sections__item
+							a.nav-sections__link(href="#") Боксы микробиологической безопасности
+
+		.footer__bottom.footer-bottom
+			nav.footer-bottom__nav.footer-nav
+				.footer-nav__social.footer-social
+					h3.footer-social__title Наши соц.сети:
+					ul.footer-social__list 
+						li.footer-nav__item
+							a.footer-nav__link(href="#", target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none")
+									path(fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44ZM8.76367 21.705C8.76367 14.2937 14.7906 8.26514 22.1998 8.26514L22.2076 8.26536C29.6168 8.26536 35.6437 14.2939 35.6437 21.7053C35.6437 29.1163 29.6168 35.1451 22.2076 35.1451C19.4745 35.1451 16.9389 34.3314 14.8142 32.925L9.64824 34.5761L11.3229 29.5826C9.71155 27.3701 8.76367 24.6443 8.76367 21.705ZM17.5947 14.4282C17.9896 14.4442 18.1871 14.4678 18.4477 15.092C18.5319 15.2952 18.6475 15.5759 18.7743 15.8835C19.1352 16.7593 19.586 17.8534 19.6562 17.9996C19.7509 18.1971 19.8459 18.4659 19.7115 18.7265C19.5939 18.9765 19.49 19.0966 19.3171 19.2965C19.3041 19.3115 19.2908 19.3269 19.277 19.3429C19.1924 19.441 19.1094 19.5289 19.0265 19.6166C18.9158 19.7339 18.8054 19.8507 18.6924 19.9909L18.6829 20.002C18.504 20.2121 18.3094 20.4404 18.5346 20.8284C18.7636 21.2156 19.5534 22.5033 20.7146 23.5382C22.0928 24.7642 23.2309 25.2246 23.7443 25.4322C23.79 25.4507 23.8308 25.4672 23.8664 25.482C24.1901 25.6165 24.5773 25.5848 24.8143 25.332C25.0711 25.055 25.3798 24.6218 25.701 24.171C25.7554 24.0948 25.8101 24.018 25.8649 23.9414C26.1333 23.5621 26.4729 23.5146 26.8284 23.6488C27.1918 23.7753 29.1114 24.7234 29.5062 24.921C29.5869 24.9614 29.6619 24.9975 29.7311 25.0308C30.0007 25.1604 30.1812 25.2472 30.2566 25.3792C30.3516 25.5452 30.3516 26.3274 30.0277 27.2441C29.7038 28.1604 28.4161 28.9192 27.3893 29.1404C26.6864 29.2905 25.7699 29.4091 22.6815 28.1292C19.0234 26.614 16.5714 23.0586 16.0726 22.3354C16.0329 22.2778 16.0056 22.2382 15.991 22.219C15.9854 22.2114 15.9789 22.2023 15.9713 22.192C15.7203 21.8488 14.3955 20.037 14.3955 18.1655C14.3955 16.2916 15.3209 15.3509 15.7353 14.9296C15.7472 14.9175 15.7588 14.9057 15.7699 14.8944C16.0938 14.5626 16.6308 14.4126 17.1444 14.4126C17.3105 14.4126 17.4603 14.4204 17.5947 14.4282Z" fill="white")
+						li.footer-nav__item
+							a.footer-nav__link(href="#", target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none")
+									path(d="M15.0903 21.8237C18.7471 20.2305 21.1855 19.1802 22.4055 18.6729C25.8892 17.2236 26.613 16.9722 27.085 16.9639C27.1887 16.9619 27.4207 16.9878 27.571 17.1094C27.698 17.2124 27.7329 17.3516 27.7495 17.4492C27.7661 17.5469 27.7871 17.769 27.7705 17.9429C27.5818 19.9268 26.7649 24.7397 26.3494 26.9614C26.1736 27.9014 25.8271 28.2168 25.4919 28.2476C24.9153 28.3008 24.4482 27.9678 23.9285 27.5972L23.9211 27.5928C23.7871 27.4961 23.6492 27.3984 23.5049 27.3037C22.9285 26.9258 22.4832 26.6226 22.0366 26.3184C21.7646 26.1333 21.4922 25.9478 21.1895 25.7446C21.0371 25.6426 20.8772 25.5361 20.7056 25.4233C19.6396 24.7207 20.0857 24.2905 20.6807 23.7173L20.707 23.6919C20.7952 23.6064 20.8862 23.5186 20.9756 23.4253C21.0195 23.3799 21.2344 23.1802 21.5371 22.8989C22.5081 21.9961 24.3848 20.2515 24.4321 20.0493C24.4399 20.0161 24.447 19.8931 24.3738 19.8276C24.3003 19.7627 24.1921 19.7847 24.114 19.8022C24.0032 19.8276 22.2395 20.9932 18.8228 23.2998C18.3223 23.6436 17.8689 23.811 17.4624 23.8022C17.1753 23.7959 16.718 23.6934 16.2578 23.5659C16.0005 23.4946 15.7424 23.4155 15.5127 23.3408L15.2383 23.2534C14.5872 23.0488 14.1091 22.8984 14.157 22.5166C14.1853 22.291 14.4963 22.0601 15.0903 21.8237Z" fill="white")
+									path(fill-rule="evenodd" clip-rule="evenodd" d="M22.4004 44C34.5505 44 44.4004 34.1504 44.4004 22C44.4004 9.84961 34.5505 0 22.4004 0C10.2502 0 0.400391 9.84961 0.400391 22C0.400391 34.1504 10.2502 44 22.4004 44ZM21.9561 34.5C28.884 34.5 34.5 28.8838 34.5 21.9561C34.5 15.0283 28.884 9.41211 21.9561 9.41211C15.0283 9.41211 9.41211 15.0283 9.41211 21.9561C9.41211 28.8838 15.0283 34.5 21.9561 34.5Z" fill="white")
+
+						li.footer-nav__item
+							a.footer-nav__link(href="#", target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none")
+									path(d="M23.4216 27.9854C17.2952 27.9854 13.8008 23.7852 13.6553 16.7959H16.7239C16.8247 21.9258 19.0872 24.0986 20.8792 24.5469V16.7959H23.7688V21.2197C25.5383 21.0293 27.3975 19.0137 28.0247 16.7959H30.9143C30.4326 19.5293 28.4167 21.5449 26.9832 22.374C28.4167 23.0459 30.7129 24.8037 31.5864 27.9854H28.4055C27.7224 25.8574 26.02 24.2109 23.7688 23.9863V27.9854H23.4216Z" fill="white")
+									path(fill-rule="evenodd" clip-rule="evenodd" d="M22.7998 44C34.95 44 44.7998 34.1504 44.7998 22C44.7998 9.84961 34.95 0 22.7998 0C10.6497 0 0.799805 9.84961 0.799805 22C0.799805 34.1504 10.6497 44 22.7998 44ZM9.11914 21.5225C9.11914 15.4404 9.11914 12.3994 11.0085 10.5098C12.8982 8.62012 15.9392 8.62012 22.0215 8.62012H23.0967C29.179 8.62012 32.22 8.62012 34.1096 10.5098C35.999 12.3994 35.999 15.4404 35.999 21.5225V22.5977C35.999 28.6797 35.999 31.7207 34.1096 33.6104C32.22 35.5 29.179 35.5 23.0967 35.5H22.0215C15.9392 35.5 12.8982 35.5 11.0085 33.6104C9.11914 31.7207 9.11914 28.6797 9.11914 22.5977V21.5225Z" fill="white")
+
+						li.footer-nav__item
+							a.footer-nav__link(href="#", target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none")
+									path(fill-rule="evenodd" clip-rule="evenodd" d="M22.2002 44C34.3505 44 44.2002 34.1503 44.2002 22C44.2002 9.84974 34.3505 0 22.2002 0C10.0499 0 0.200195 9.84974 0.200195 22C0.200195 34.1503 10.0499 44 22.2002 44ZM34.8057 13.4711C35.6479 14.3188 35.9213 16.2492 35.9213 16.2492C35.9213 16.2492 36.2002 18.5188 36.2002 20.7828V22.9047C36.2002 25.1742 35.9213 27.4383 35.9213 27.4383C35.9213 27.4383 35.6479 29.3688 34.8057 30.2164C33.8447 31.2217 32.7817 31.3256 32.1807 31.3843C32.1147 31.3907 32.0543 31.3966 32.0002 31.4031C28.0846 31.682 22.2002 31.693 22.2002 31.693C22.2002 31.693 14.9213 31.6273 12.6791 31.4141C12.57 31.393 12.4372 31.3768 12.2866 31.3585C11.5761 31.2718 10.4691 31.1369 9.58926 30.2164C8.75254 29.3688 8.4791 27.4383 8.4791 27.4383C8.4791 27.4383 8.2002 25.1688 8.2002 22.9047V20.7828C8.2002 18.5188 8.48457 16.2492 8.48457 16.2492C8.48457 16.2492 8.75254 14.3188 9.59473 13.4711C10.5557 12.4658 11.6187 12.3619 12.2197 12.3032C12.2857 12.2968 12.3461 12.2909 12.4002 12.2844C16.3158 12 22.1947 12 22.1947 12H22.2057C22.2057 12 28.0846 12 32.0002 12.2844C32.0543 12.2909 32.1147 12.2968 32.1807 12.3032C32.7817 12.3619 33.8447 12.4658 34.8057 13.4711ZM19.3072 17.6109V25.4805L26.8705 21.5594L19.3072 17.6109Z" fill="white")
+
+				.footer-nav__contacts.nav-contacts
+					a(href="mailto:pochta@gmail.com").nav-contacts__link pochta@gmail.com
+					a(href="tel:+79002834869").nav-contacts__link.nav-contacts__link-phone 8 (900) 283-48-69
+
+				.footer-nav__sections.nav-pages
+					.nav-pages__section
+						h3.nav-pages__title Каталог
+						ul.nav-pages__list
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Оборудование
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Лабораторный пластик
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Расходные принадлежности
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Расходные принадлежности для оборудования
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Реагенты
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Мебель
+
+					.nav-pages__section
+						h3.nav-pages__title Покупателям
+						ul.nav-pages__list
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Как оформить заказ
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Доставка
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Вопросы
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Электронный документооборот
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Гарантии
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Реквизиты
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Юридическая информация
+
+					.nav-pages__section
+						h3.nav-pages__title Клуб привилегий
+						ul.nav-pages__list
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Для частных лиц
+							li.nav-pages__item
+								a.nav-pages__link(href="#") Для бизнеса
+
+		.footer__mobile.footer-mobile 
+			.footer-mobile__right
+				ul.footer-mobile__list 
+					li.footer-mobile__item
+						a(href="#").footer-mobile__link Склад
+					li.footer-mobile__item
+						details
+							summary(tabindex="1")
+								h3.nav-pages__title 
+									span Разделы
+									svg(xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none")
+										path(d="M1 1L5.5 5L10 1" stroke="white" stroke-width="1.6")
+							ul.nav-pages__list
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Центрифуги
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Морозильники низкотемпературные
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Амплификаторы
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Сыворотки эмбриональные
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Наконечники для дозаторов
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Весы лабораторные
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Шейкеры лабораторные
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Секвенаторы генетические
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Микроскопы
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Криохранилища
+								li.nav-pages__item
+									a.nav-pages__link(href="#") CO2 Инкубаторы
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Боксы микробиологической безопасности
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Спектрофотометры
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Планшетный фотометр
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Нанофотометр
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Вошеры
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Рестриктизы
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Антитела
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Реагенты для секвенирования
+					li.footer-mobile__item
+						details
+							summary(tabindex="2")
+								h3.nav-pages__title 
+									span Каталог
+									svg(xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none")
+										path(d="M1 1L5.5 5L10 1" stroke="white" stroke-width="1.6")
+							ul.nav-pages__list
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Оборудование
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Лабораторный пластик
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Расходные принадлежности
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Расходные принадлежности для оборудования
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Реагенты
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Мебель
+					li.footer-mobile__item
+						details
+							summary(tabindex="3")
+								h3.nav-pages__title 
+									span Покупателям
+										svg(xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none")
+											path(d="M1 1L5.5 5L10 1" stroke="white" stroke-width="1.6")
+							ul.nav-pages__list
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Как оформить заказ
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Доставка
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Вопросы
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Электронный документооборот
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Гарантии
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Реквизиты
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Юридическая информация
+					li.footer-mobile__item
+						details
+							summary(tabindex="4")
+								h3.nav-pages__title 
+									span Клуб привилегий
+										svg(xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none")
+											path(d="M1 1L5.5 5L10 1" stroke="white" stroke-width="1.6")
+							ul.nav-pages__list
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Для частных лиц
+								li.nav-pages__item
+									a.nav-pages__link(href="#") Для бизнеса
+
+
+			.footer-mobile__left
+				ul.footer-mobile__list 
+					li.footer-mobile__item
+						a(href="#").footer-mobile__link О компании
+					li.footer-mobile__item
+						a(href="#").footer-mobile__link Производители
+					li.footer-mobile__item
+						a(href="#").footer-mobile__link Демо
+					li.footer-mobile__item
+						a(href="#").footer-mobile__link Библиотека
+
+		.footer__copyrights.footer-copyrights
+			span.footer-copyrights__text © 2024 «MolecuLab». Все права защищены.
+			a.footer-copyrights__link(href="#", target="_blank") Политика конфиденциальности 

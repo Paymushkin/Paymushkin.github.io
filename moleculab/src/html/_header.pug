@@ -5,7 +5,8 @@ header.header#header
 			.header-top__left
 				.header-top__club.club
 					.club__wrapper
-						button.button._small._gradient.header-top__button Клуб привелегий
+						button(data-text="Клуб привелегий").button._smaller.header-top__button 
+							span Клуб привелегий
 						ul.club__list
 							li.club__item 
 								a(href="#") Для бизнеса
@@ -32,8 +33,9 @@ header.header#header
 
 			.header-top__right
 				a(href="mailto:pochta@gmail.com").header-top__link._to-mail pochta@gmail.com
-				a(href="tel:+79002834869").header-top__link 8 (900) 283-48-69
-				button.button._small._gradient.header-top__call Заказать звонок
+				a(href="tel:+79002834869").header-top__link._to-call 8 (900) 283-48-69
+				button(data-text="Заказать звонок").button._smaller.header-top__call 
+					span Заказать звонок
 
 		.header__top-mobile 
 			p.gradient-text Клуб привилегий		
@@ -120,8 +122,9 @@ header.header#header
 							span.header-icons__text Корзина
 
 	.header__bottom.header-bottom
-		.header-bottom__top.header__container 
-			p.gradient-text Инновации для лабораторий, доступные в один клик
+		.header-bottom__top
+			.header__container 
+				p.gradient-text Инновации для лабораторий, доступные в один клик
 		.header-bottom__links.header__container 
 			.header-bottom__list 
 				.header-bottom__item 

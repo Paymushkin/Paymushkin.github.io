@@ -36,9 +36,11 @@ $borderColor-2: #DCE4EA; // Цвет границы 2
 $borderColor-3: #ECF1F4; // Цвет границы 3
 $gradient-1: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%); // Основной градиент
 $gradient-2: linear-gradient(126deg, #0A5096 -10.76%, #0BA5F0 93.22%); // Дополнительный градиент
+$gradientHover: linear-gradient(121deg, #00A0DB -41.61%, #86D06C 82.68%); // Ховер градиент
 $bgColor: #80D06C; // Основной цвет фона
 $bgColor-2: #F6F7F9; // Дополнительный цвет фона
 $headerBg: #FDFDFD; // Цвет фона шапки
+$footerGradient: linear-gradient(151deg, #07498B 6.04%, #309EDD 132.1%);
 
 $decorColor: #849496; // Цвет деталей
 $decorColor2: #96B2BA;
@@ -78,14 +80,14 @@ $mobileSmall: em(576.98); // Телефоны S
 // кастомный скроллбар
 
 *::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     transition: 0.3s all ease;
     cursor: grab;
 }
 
 *::-webkit-scrollbar-track {
-    background: $bgColor;
+    background: #fff;
     /* цвет дорожки */
 }
 
@@ -117,7 +119,7 @@ body {
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-    min-height: 100%;
+    min-height: 100vh;
     max-width: 100%;
     display: -ms-flexbox;
     display: flex;
