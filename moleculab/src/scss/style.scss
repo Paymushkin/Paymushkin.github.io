@@ -13,7 +13,6 @@
 // Подключение иконочных шрифтов========================================================
 // Подключить если есть файл иконочного шрифта
 
-// @import "base/swiper";
 $fontFamily: "Geometria", sans-serif;
 
 // @supports (font-variation-settings: normal) {
@@ -37,7 +36,7 @@ $borderColor-3: #ECF1F4; // Цвет границы 3
 $gradient-1: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%); // Основной градиент
 $gradient-2: linear-gradient(126deg, #0A5096 -10.76%, #0BA5F0 93.22%); // Дополнительный градиент
 $gradientHover: linear-gradient(121deg, #00A0DB -41.61%, #86D06C 82.68%); // Ховер градиент
-$bgColor: #80D06C; // Основной цвет фона
+$bgColor: #F3FFF2; // Основной цвет фона
 $bgColor-2: #F6F7F9; // Дополнительный цвет фона
 $headerBg: #FDFDFD; // Цвет фона шапки
 $footerGradient: linear-gradient(151deg, #07498B 6.04%, #309EDD 132.1%);
@@ -104,7 +103,7 @@ $mobileSmall: em(576.98); // Телефоны S
 // }
 
 body {
-    background-color: #ffffff;
+    background-color: $bgColor;
 
     // Скролл заблокирован
     .lock & {
@@ -205,6 +204,7 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+@import "base/swiper";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -212,7 +212,7 @@ body {
 // Подключение стилей отдельных блоков
 
 @import "header";
-// @import "hero";
+@import "news";
 // @import "about";
 
 @import "footer";

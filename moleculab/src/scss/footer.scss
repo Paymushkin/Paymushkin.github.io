@@ -205,6 +205,10 @@
 		border: 1px solid rgba(255, 255, 255, 0.20);
 		border-radius: 24px;
 
+		@media (min-width:$tablet) {
+			display: none;
+		}
+
 		@media (max-width:$mobileSmall) {
 			grid-template-columns: 1fr;
 			gap: 10px;

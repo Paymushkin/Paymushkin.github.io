@@ -45,6 +45,16 @@
 		background-color: $highlightColor-1;
 	}
 
+	&._ligth {
+		color: $highlightColor-1;
+		background-color: #D3F3FF;
+
+		.button__icon {
+			background-color: #fff;
+			transform: rotate(45deg);
+		}
+	}
+
 	&._small {
 		font-size: 14px;
 		line-height: 1.4;

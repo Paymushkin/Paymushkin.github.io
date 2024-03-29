@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, {Pagination, Autoplay, Navigation} from 'swiper';
+import Swiper, { Pagination, Autoplay, Navigation } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -29,7 +29,7 @@ function bildSliders() {
 	console.log("свайпер")
 	// BildSlider
 	let sliders = document.querySelectorAll(`[class*="__swiper"]:not(.swiper-wrapper)`);
-	if(sliders) {
+	if (sliders) {
 		sliders.forEach(slider => {
 			slider.parentElement.classList.add("swiper");
 			slider.classList.add("swiper-wrapper");
@@ -47,12 +47,12 @@ function initSliders() {
 	bildSliders();
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper:not(.popup__slider)')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.news__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper:not(.popup__slider)', { // Указываем скласс нужного слайдера
+		new Swiper('.news__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Autoplay, Navigation],
+			modules: [Autoplay, Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -62,28 +62,28 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// parallax: true,
 
-			
+
 			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			
+			// effect: 'fade',
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
+
 
 			// Пагинация
-			
+
 			// pagination: {
 			// 	el: '.swiper-pagination',
 			// 	clickable: true,
 			// 	type: "fraction",
 			// },
-			
+
 
 			// Скроллбар
 			/*
@@ -100,7 +100,7 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -109,7 +109,7 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 10,
 				},
 				992: {
 					slidesPerView: 3,
@@ -117,100 +117,9 @@ function initSliders() {
 				},
 				1268: {
 					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// События
-			// on: {
-			// 	init: function(swiper) {
-			// 		const allSlides = document.querySelector(".fraction-controll__all");
-			// 		const allSlidesItems = document.querySelectorAll(".slide-main-block:not(.swiper-slide-duplicate)");
-
-			// 		allSlides.textContent = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
-			// 	},
-			// 	slideChange: function(swiper) {
-			// 		const currentSlide = document.querySelector(".fraction-controll__current");
-			// 		currentSlide.textContent = (swiper.realIndex + 1) < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
-			// 	}
-			// }
-		});
-	}
-
-	if (document.querySelector('.popup__slider.swiper')) { // Указываем скласс нужного слайдера
-		// Создаем слайдер
-		new Swiper('.popup__slider.swiper', { // Указываем скласс нужного слайдера
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			// autoHeight: true,
-			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			loop: true,
-			//preloadImages: false,
-			//lazy: true,
-			// parallax: true,
-
-			
-			// Эффекты
-			effect: 'fade',
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
-			
-
-			// Пагинация
-			
-			// pagination: {
-			// 	el: '.swiper-pagination',
-			// 	clickable: true,
-			// 	type: "fraction",
-			// },
-			
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.popup-slider__navigation .prev',
-				nextEl: '.popup-slider__navigation .next',
-			},
-
-			// Брейкпоинты
-			/*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
 			// События
 			// on: {
 			// 	init: function(swiper) {

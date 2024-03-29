@@ -78,3 +78,11 @@ mobileSearchOpen.addEventListener("click", () => {
 mobileSearchClose.addEventListener("click", () => {
     document.documentElement.classList.remove("_mobile-search-open")
 })
+
+// скролл наверх
+
+document.getElementById('to-top').addEventListener('click', function () {
+    document.querySelector('header').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
