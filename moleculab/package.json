@@ -69,6 +69,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "simplebar": "latest"
+    "simplebar": "latest",
+    "vanilla-calendar-pro": "^2.9.6"
   }
 }

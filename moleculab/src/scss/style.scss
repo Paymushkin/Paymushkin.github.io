@@ -36,6 +36,7 @@ $borderColor-3: #ECF1F4; // Цвет границы 3
 $gradient-1: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%); // Основной градиент
 $gradient-2: linear-gradient(126deg, #0A5096 -10.76%, #0BA5F0 93.22%); // Дополнительный градиент
 $gradientHover: linear-gradient(121deg, #00A0DB -41.61%, #86D06C 82.68%); // Ховер градиент
+$gardientCalendar: linear-gradient(180deg, #00A0DB 0%, #78CB79 100%);
 $bgColor: #F3FFF2; // Основной цвет фона
 $bgColor-2: #F6F7F9; // Дополнительный цвет фона
 $headerBg: #FDFDFD; // Цвет фона шапки
@@ -52,7 +53,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 100%;
 // Ширина ограничивающего контайнера (0 = нет ограничения)
-$maxWidthContainer: 1520;
+$maxWidthContainer: 1360;
 // Общий отступ у контейнера
 // 30 = по 15px слева и справа, 0 = нет отступа
 $containerPadding: 80;
@@ -213,6 +214,8 @@ body {
 
 @import "header";
 @import "spheres";
+@import "special";
+@import "events";
 @import "news";
 
 @import "footer";

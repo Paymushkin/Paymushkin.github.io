@@ -86,3 +86,29 @@ document.getElementById('to-top').addEventListener('click', function () {
         behavior: 'smooth'
     });
 });
+
+// работа с календарем
+
+// https://vanilla-calendar.pro/ru/docs/reference/additionally/actions
+document.addEventListener('DOMContentLoaded', () => {
+    const calendar = new VanillaCalendar('#calendar', {
+        settings: {
+            range: {
+                // disablePast: true,
+            },
+            lang: 'ru',
+            visibility: {
+                theme: 'light',
+            },
+        },
+        actions: {
+            clickDay(e, self) {
+                console.log(self.selectedDates);
+            },
+            clickArrow(event, self) {
+                console.log(self.selectedYear, self.selectedMonth);
+            },
+        },
+    });
+    calendar.init();
+});

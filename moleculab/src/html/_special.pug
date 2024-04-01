@@ -1,0 +1,41 @@
+section.special#special
+   .special__container 
+        h2.section-title.special__title Акции
+        .special__body.special-banners
+            style.
+                .special-banners__item:first-child {
+                background-image: url(img/special/item-1.png);
+                }
+                .special-banners__item:nth-child(2) {
+                background-image: url(img/special/item-2.png);
+                }
+                .special-banners__item:nth-child(3) {
+                background-image: url(img/special/item-3.png);
+                }
+                @media (max-width:1024px) {
+                .special-banners__item:first-child {
+                background-image: url(img/special/item-1-tablet.png);
+                }
+                .special-banners__item:nth-child(2) {
+                background-image: url(img/special/item-2-tablet.png);
+                }
+                .special-banners__item:nth-child(3) {
+                background-image: url(img/special/item-3-tablet.png);
+                }
+                }
+            ul.special-banners__list 
+                li.special-banners__item.item-banner._big
+                    .item-banner__content
+                        h3.item-banner__title Скидка 15% на микроскопы со склада
+                        p.item-banner__text Поставка за 7 дней
+                li.special-banners__item.item-banner
+
+                    .item-banner__content
+                        h3.item-banner__title Скидка на 15% на микроскопы со склада
+                        p.item-banner__text Поставка за 7 дней
+                li.special-banners__item.item-banner
+                     .item-banner__content
+                        h3.item-banner__title Скидка на 15% на микроскопы со склада
+                        .item-banner__text Поставка за 7 дней
+        a(href="#", data-text="Все акции").button._gradient.special__button
+            span Все акции 

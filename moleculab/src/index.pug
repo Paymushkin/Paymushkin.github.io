@@ -6,6 +6,8 @@ html(lang="ru")
 			include html/_header
 			main.main
 				include html/_spheres
+				include html/_special
+				include html/_events
 				include html/_news
 				//- include html/_about
 				//- include html/_author
@@ -15,4 +17,9 @@ html(lang="ru")
 			include html/_footer
 		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script(src="js/app.min.js")
+		//- script.
+		//- 	document.addEventListener('DOMContentLoaded', () => {
+		//- 		const calendar = new VanillaCalendar('#calendar');
+		//- 		calendar.init();
+		//- 	});
 	

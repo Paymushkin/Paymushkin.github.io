@@ -1,0 +1,123 @@
+.special {
+    position: relative;
+    margin-bottom: 90px;
+
+    @media (max-width:$tablet) {
+        margin-bottom: 80px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {}
+
+    &__body {}
+
+    &__button {
+        align-self: center;
+
+        @media (max-width:$mobileSmall) {
+            min-width: 100%;
+        }
+    }
+
+}
+
+.special-banners {
+    margin-bottom: 32px;
+
+    @media (max-width:$tablet) {
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: percent(785, 1360) percent(555, 1360);
+        grid-template-rows: 240px 240px;
+        grid-template-areas: "big-banner second-banner"
+            "big-banner third-banner";
+        gap: 20px;
+
+        @media (max-width:$tablet) {
+            grid-template-columns: 50% 50%;
+        }
+
+        @media (max-width:$mobileSmall) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "big-banner"
+                "second-banner"
+                "third-banner";
+            grid-template-rows: 490px 240px 240px;
+        }
+    }
+
+    &__item {
+        border-radius: 24px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:nth-child(2) {
+            grid-area: second-banner;
+        }
+
+        &:nth-child(3) {
+            grid-area: third-banner;
+        }
+
+        &._big {
+            grid-area: big-banner;
+        }
+    }
+}
+
+.item-banner {
+    padding: 66px 50px;
+
+    @media (max-width:$tablet) {
+        padding: 34px 24px;
+    }
+
+    &__content {
+        max-width: 50%;
+
+        @media (max-width:$tablet) {
+            max-width: 75%;
+        }
+
+        @media (max-width:$mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 20;
+        font-weight: 500;
+        line-height: 1.2;
+
+        ._big & {
+            margin-bottom: 24px;
+            font-size: 36px;
+
+            @media (max-width:$tablet) {
+                margin-bottom: 20px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        ._big & {
+            font-size: 20px;
+        }
+    }
+}
