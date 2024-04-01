@@ -41,6 +41,26 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
+.input {
+
+    color: $mainColor;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.3s ease border-color;
+
+    &::placeholder {
+        color: #6F8290;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: #7F7F7F;
+        }
+    }
+}
+
 /* Убираем стандартный маркер Chrome */
 details summary::-webkit-details-marker {
     display: none

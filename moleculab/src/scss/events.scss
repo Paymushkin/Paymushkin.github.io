@@ -13,7 +13,14 @@
 
     &__title {}
 
+    &__link {
+        @media (max-width:$mobileSmall) {
+            margin-top: 51px;
+        }
+    }
+
     .body-events {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 20px;
@@ -80,6 +87,10 @@
                 height: 100%;
                 background: $gardientCalendar;
             }
+        }
+
+        &__pagination {
+            bottom: -32px;
         }
     }
 

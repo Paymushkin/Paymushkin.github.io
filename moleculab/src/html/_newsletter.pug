@@ -1,0 +1,11 @@
+section.form-banner.banner-newsletter
+    .form-banner__container 
+        .form-banner__body.banner-body(style="background-image: url(img/banner/newsletter.png)")
+            .banner-body__content
+                h2.banner-body__title Будьте в курсе всех новинок, акций и полезных статей!
+                p.banner-body__text Подпишись на нашу рассылку прямо сейчас.
+            form(action="#", method="post").banner-body__form
+                input#newsletter-name.input.banner-body__input(type="text", name="name", placeholder="Имя", autocomplete="on", required)
+                input#newsletter-email.input.banner-body__input(type="email", name="email", placeholder="E-mail", autocomplete="on", required)
+                button(type="submit", data-text="Отправить").button._gradient-2
+                    span Отправить

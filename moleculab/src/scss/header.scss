@@ -321,6 +321,14 @@
 		align-items: center;
 		gap: 4px;
 
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					color: $highlightColor-2;
+				}
+			}
+		}
+
 		svg {
 			width: 28px;
 			height: 28px;
@@ -360,6 +368,7 @@
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 1.4;
+		transition: 0.3s ease color;
 
 		@media (max-width:$tablet) {
 			display: none;
