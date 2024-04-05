@@ -18,7 +18,7 @@
     &__pagination {
         bottom: -32px;
 
-        @media (min-width:$mobileSmall) {
+        @media (min-width:$mobile) {
             display: none;
         }
     }
@@ -27,11 +27,40 @@
         padding: 40px 20px 20px;
         background-color: #fff;
         border-radius: 16px;
-        height: 226px;
+        min-height: 226px;
+        cursor: pointer;
+
+        svg {
+            max-height: 142px;
+
+            @media (max-width:$tablet) {
+                max-height: 97px;
+            }
+
+            stop {
+                transition: 0.3s ease all;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: $gradient-1;
+
+                h4 {
+                    color: #fff;
+                }
+
+                svg {
+                    stop {
+                        stop-color: #fff;
+                    }
+                }
+            }
+        }
 
         @media (max-width:$tablet) {
             gap: 8px;
-            height: 184px;
+            min-height: 184px;
         }
 
         &__link {
@@ -39,6 +68,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 30px;
         }
 
         &__title {
@@ -47,6 +77,7 @@
             font-weight: 500;
             line-height: 1.2;
             text-align: center;
+            transition: 0.3s ease color;
 
             @media (max-width:$tablet) {
                 font-size: 16px;

@@ -30,9 +30,9 @@
     &__pagination {
         bottom: 5px;
 
-        @media (min-width:$mobileSmall) {
-            display: none;
-        }
+        // @media (min-width:$tablet) {
+        //     display: none;
+        // }
 
         @media (max-width:$mobileSmall) {
             bottom: 90px;
@@ -52,7 +52,12 @@
                 transform: scale(1.1);
             }
 
+            .news-slide__link {
+                opacity: 1;
+            }
+
             .button__icon {
+                transition-delay: 0.2s;
                 transform: rotate(90deg);
             }
         }
@@ -105,5 +110,11 @@
         line-height: 1.4;
     }
 
-    &__link {}
+    &__link {
+        transition: 0.3s ease opacity;
+
+        @media (min-width:$tablet) {
+            opacity: 0;
+        }
+    }
 }

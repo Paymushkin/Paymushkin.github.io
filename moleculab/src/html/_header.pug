@@ -1,17 +1,18 @@
-header.header#header
+header.header#heade(itemscope="" itemtype="http://schema.org/WPHeader")
 
 	.header__container
 		.header__top.header-top
 			.header-top__left
 				.header-top__club.club
-					.club__wrapper
-						button(data-text="Клуб привелегий").button._smaller.header-top__button 
-							span Клуб привелегий
+					nav.club__wrapper(itemscope="" itemtype="http://schema.org/SiteNavigationElement")
+						button.button._smaller.header-top__button Клуб привелегий
 						ul.club__list
 							li.club__item 
-								a(href="#") Для бизнеса
+								a(href="#", itemprop="url") 
+									span(itemprop="name") Для бизнеса
 							li.club__item 
-								a(href="#") Для частных лиц
+								a(href="#", itemprop="url") 
+									span(itemprop="name") Для частных лиц
 				a(href="#").header-top__link._to-customer Покупателям
 				.location-block.header-top__location
 					#change-location.location-block__current
@@ -34,7 +35,7 @@ header.header#header
 			.header-top__right
 				a(href="mailto:pochta@gmail.com").header-top__link._to-mail pochta@gmail.com
 				a(href="tel:+79002834869").header-top__link._to-call 8 (900) 283-48-69
-				button(data-text="Заказать звонок").button._smaller.header-top__call 
+				button(data-text="Заказать звонок", data-popup="call-me").button._smaller.header-top__call 
 					span Заказать звонок
 
 		.header__top-mobile 
@@ -48,23 +49,29 @@ header.header#header
 				#open-header-menu.header-middle__menu.header-menu
 					span.header-menu__line
 
-					.header-menu__hidden-block
+					nav.header-menu__hidden-block(itemscope="" itemtype="http://schema.org/SiteNavigationElement")
 						ul.header-menu__list
 							li.header-menu__item(data-value="Все разделы")
-								a(href="#")  Все разделы
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Все разделы
 							li.header-menu__item(data-value="Клеточная биология")
-								a(href="#")  Клеточная биология
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Клеточная биология
 							li.header-menu__item(data-value="Клиническая диагностика")
-								a(href="#")  Клиническая диагностика
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Клиническая диагностика
 							li.header-menu__item(data-value="Биофарма")
-								a(href="#")  Биофарма
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Биофарма
 							li.header-menu__item(data-value="Геномика")
-								a(href="#")  Геномика
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Геномика
 							li.header-menu__item(data-value="Протеомика")
-								a(href="#")  Протеомика
+								a(href="#", itemprop="url")  
+									span(itemprop="name") Протеомика
 
-			.header-middle__center
-				form(action="#", method="post").header-middle__form.search-form
+			.header-middle__center(itemscope="" itemtype="http://schema.org/WebSite")
+				form(action="#", method="post", itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction").header-middle__form.search-form
 					.search-form__select.select
 						.select__title#open-select
 							span#current-value(data-current="") Поиск по разделам
@@ -82,6 +89,7 @@ header.header#header
 
 					.search-form__input.input-wrapper 
 						input(type="text", placeholder="Поиск").input
+						meta(itemprop="target", content="/search/?q={query}")
 						button(type="submit").input__icon-search
 							svg(xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none")
 								path(d="M13.1194 13.456L13.1194 13.456C13.2447 13.5813 13.4478 13.5813 13.5731 13.456L13.5731 13.456L13.956 13.0731L13.9207 13.0377L13.956 13.0731C14.0813 12.9478 14.0813 12.7446 13.956 12.6194L10.2113 8.87466C10.9176 7.98732 11.3417 6.86565 11.3417 5.64585C11.3417 2.78083 9.01085 0.45 6.14583 0.45C3.28081 0.45 0.95 2.78083 0.95 5.64585C0.95 8.51088 3.28083 10.8417 6.14586 10.8417C7.36565 10.8417 8.48732 10.4176 9.37466 9.71133L13.1194 13.456ZM6.14586 9.65836C3.93327 9.65836 2.13334 7.85844 2.13334 5.64585C2.13334 3.43327 3.93327 1.63334 6.14586 1.63334C8.35844 1.63334 10.1584 3.43327 10.1584 5.64585C10.1584 7.85844 8.35844 9.65836 6.14586 9.65836Z" fill="#6F8291" stroke="#6F8291" stroke-width="0.1")
@@ -95,47 +103,53 @@ header.header#header
 					svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none")
 						path(d="M17.7782 2.22217L2.22266 17.7777M2.22266 2.22217L17.7782 17.7777" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
 			
-			.header-middle__right
+			nav(itemscope="" itemtype="http://schema.org/SiteNavigationElement").header-middle__right
 				ul.header-icons__list
 					li.header-icons__item
-						a(href="#", data-counter="0").header-icons__link
+						a(href="#", data-counter="0", itemprop="url").header-icons__link
 							svg(xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none")
 								path(d="M15.4372 3.375C18.8127 3.375 21.0807 6.58781 21.0807 9.585C21.0807 15.6548 11.6678 20.625 11.4974 20.625C11.327 20.625 1.91406 15.6548 1.91406 9.585C1.91406 6.58781 4.18212 3.375 7.55758 3.375C9.49555 3.375 10.9498 4.60714 11.4974 5.70238C12.045 4.60714 13.4992 3.375 15.4372 3.375Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
-							span.header-icons__text Избранное
+							span(itemprop="name").header-icons__text Избранное
 					li.header-icons__item
-						a(href="#", data-counter="0").header-icons__link
+						a(href="#", data-counter="0", itemprop="url").header-icons__link
 							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 								path(d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
-							span.header-icons__text Войти
+							span(itemprop="name").header-icons__text Войти
 					li.header-icons__item
-						a(href="#", data-counter="0").header-icons__link
+						a(href="#", data-counter="0", itemprop="url").header-icons__link
 							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 								path(d="M4.5 8.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
 								path(d="M9.5 2.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
 								path(d="M14.5 11V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
 								path(d="M19.5 3.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
-							span.header-icons__text Сравнение
+							span(itemprop="name").header-icons__text Сравнение
 					li.header-icons__item
-						a(href="#", data-counter="1").header-icons__link
+						a(href="#", data-counter="1", itemprop="url").header-icons__link
 							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 								path(d="M15.8338 9.12508V6.25008C15.8338 4.13299 14.1175 2.41675 12.0004 2.41675C9.88334 2.41675 8.1671 4.13299 8.1671 6.25008V9.12508M3.94277 10.4207L3.36777 16.554C3.20428 18.2979 3.12254 19.1699 3.4119 19.8433C3.6661 20.435 4.11155 20.9241 4.67687 21.2325C5.3204 21.5834 6.19616 21.5834 7.94769 21.5834H16.0532C17.8047 21.5834 18.6805 21.5834 19.324 21.2325C19.8893 20.9241 20.3348 20.435 20.589 19.8433C20.8783 19.1699 20.7966 18.2979 20.6331 16.554L20.0581 10.4207C19.92 8.94812 19.851 8.21182 19.5198 7.65515C19.2282 7.16489 18.7973 6.77248 18.2819 6.52785C17.6968 6.25008 16.9572 6.25008 15.4782 6.25008L8.52269 6.25008C7.04364 6.25008 6.30411 6.25008 5.71896 6.52785C5.20361 6.77248 4.77269 7.16489 4.48103 7.65515C4.14986 8.21182 4.08083 8.94812 3.94277 10.4207Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
-							span.header-icons__text Корзина
+							span(itemprop="name").header-icons__text Корзина
 
 	.header__bottom.header-bottom
-		.header-bottom__top
+		.header-bottom__top(data-text="Инновации для лабораторий, доступные в один клик")
 			.header__container 
 				p.gradient-text Инновации для лабораторий, доступные в один клик
 		.header-bottom__links.header__container 
-			.header-bottom__list 
-				.header-bottom__item 
-					a(href="").header-bottom__link О компании
-				.header-bottom__item 
-					a(href="").header-bottom__link Производители
-				.header-bottom__item 
-					a(href="").header-bottom__link Демо 
-				.header-bottom__item 
-					a(href="").header-bottom__link Библиотека
-				.header-bottom__item 
-					a(href="").header-bottom__link Сервис и поддержка
-				.header-bottom__item 
-					a(href="").header-bottom__link Склад
+			ul.header-bottom__list(itemscope="" itemtype="http://schema.org/SiteNavigationElement") 
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") О компании
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") Производители
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") Демо 
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") Библиотека
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") Сервис и поддержка
+				li.header-bottom__item 
+					a(href="#", itemprop="url").header-bottom__link 
+						span(itemprop="name") Склад

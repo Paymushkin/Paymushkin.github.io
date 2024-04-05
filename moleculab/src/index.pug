@@ -5,7 +5,10 @@ html(lang="ru")
 		.wrapper
 			include html/_header
 			main.main
+				include html/_hero
 				include html/_spheres
+				include html/_laboratory
+				include html/_goods
 				include html/_special
 				include html/_events
 				include html/_news
@@ -15,9 +18,11 @@ html(lang="ru")
 				//- include html/_author
 				//- include html/_what
 				//- include html/_e-book
-				//- include html/_book
 			include html/_footer
+			include html/_menu
+			include html/_popup
 		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js")
 		script(src="js/app.min.js")
 		//- script.
 		//- 	document.addEventListener('DOMContentLoaded', () => {

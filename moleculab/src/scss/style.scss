@@ -207,6 +207,7 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 @import "base/swiper";
+@import "base/popup";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -214,7 +215,10 @@ body {
 // Подключение стилей отдельных блоков
 
 @import "header";
+@import "hero";
 @import "spheres";
+@import "laboratory";
+@import "goods";
 @import "special";
 @import "events";
 @import "news";

@@ -26,6 +26,7 @@
 
 		@media (max-width:$mobileSmall) {
 			padding: 20px 0;
+			min-height: 92px;
 		}
 	}
 
@@ -97,9 +98,12 @@
 			}
 		}
 
-		&__button,
+		&__button {
+			background: $gradient-1;
+		}
+
 		&__call {
-			background-color: #F2F6F9;
+			background: #F2F6F9;
 
 			span {
 				background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
@@ -243,11 +247,44 @@
 	&-bottom {
 
 		&__top {
+			position: relative;
 			display: flex;
 			justify-content: center;
 			padding: 14px;
 			border-top: 1px solid $borderColor-3;
 			border-bottom: 1px solid $borderColor-3;
+			font-family: Manrope;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 1.2;
+			letter-spacing: 0.66px;
+
+			@media (max-width:$tablet) {
+				font-size: 16px;
+			}
+
+			&::before {
+				content: attr(data-text);
+				position: absolute;
+				inset: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
+				opacity: 0;
+				transition: 0.3s ease opacity;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						opacity: 1;
+					}
+				}
+			}
 
 			p {
 				font-family: Manrope;

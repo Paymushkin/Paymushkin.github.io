@@ -1,8 +1,77 @@
 section.hero#hero
-	.hero__shape
-	img.hero__img(src="@img/hero-bg.png", alt="Мила")
-	.hero__container
-		span.hero__label(data-aos="fade-up", data-aos-duration="1000", data-aos-delay="1000") Мила Калинская
-		h1.hero__title(data-aos="fade-up", data-aos-duration="1000") ABC OF<br>MUDAK
-			span.hero__title-extra OFF
-		a.button.hero__button(data-aos="fade-up", data-aos-duration="1000", data-aos-delay="1000") Заказать
+	style.
+		.hero__slide:first-child {
+			background-image: url(img/hero/item-1-bg.png);
+		}
+		.hero__slide:nth-child(2) {
+			background-image: url(img/hero/item-1-bg.png);
+		}
+		.hero__slide:nth-child(3) {
+			background-image: url(img/hero/item-1-bg.png);
+		}
+		@media (max-width:768px) {
+			.hero__slide:first-child {
+				background-image: url(img/hero/item-1-bg-tablet.png);
+			}
+			.hero__slide:nth-child(2) {
+				background-image: url(img/hero/item-1-bg-tablet.png);
+			}
+			.hero__slide:nth-child(3) {
+				background-image: url(img/hero/item-1-bg-tablet.png);
+			}
+		}
+
+		@media (max-width:576px) {
+			.hero__slide:first-child {
+				background-image: url(img/hero/item-1-bg-mobile.png);
+			}
+			.hero__slide:nth-child(2) {
+				background-image: url(img/hero/item-1-bg-mobile.png);
+			}
+			.hero__slide:nth-child(3) {
+				background-image: url(img/hero/item-1-bg-mobile.png);
+			}
+		}
+	.hero__slider.swiper
+		.hero__wrapper.swiper-wrapper
+			.hero__slide.swiper-slide.hero-slide
+				.hero-slide__container 
+					.hero-slide__content 
+						h1.hero-slide__title Комплексные поставки медицинского оборудования
+						p.hero-slide__text Компания MolecuLab предлагает оптимальные решения для лабораторий, а также квалифицированную поддержку.
+					a(href="#").button._ligth._with-icon.hero-slide__button 
+						span Узнать подробней
+						span.button__icon 
+							svg(xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none")
+								path(d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="#00A0DB")
+			
+			.hero__slide.swiper-slide.hero-slide
+				.hero-slide__container 
+					.hero-slide__content 
+						h1.hero-slide__title Комплексные поставки медицинского оборудования (слайд 2)
+						p.hero-slide__text Компания MolecuLab предлагает оптимальные решения для лабораторий, а также квалифицированную поддержку.
+					a(href="#").button._ligth._with-icon.hero-slide__button 
+						span Узнать подробней
+						span.button__icon 
+							svg(xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none")
+								path(d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="#00A0DB")
+	
+			.hero__slide.swiper-slide.hero-slide
+				.hero-slide__container 
+					.hero-slide__content 
+						h1.hero-slide__title Комплексные поставки медицинского оборудования (слайд 3)
+						p.hero-slide__text Компания MolecuLab предлагает оптимальные решения для лабораторий, а также квалифицированную поддержку.
+					a(href="#").button._ligth._with-icon.hero-slide__button 
+						span Узнать подробней
+						span.button__icon 
+							svg(xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none")
+								path(d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="#00A0DB")
+	
+		.hero__controls
+			.hero-slide__prev
+				svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewbox='0 0 18 18' fill='none')
+					path(d='M11.7778 2.75L5.52777 9L11.7778 15.25' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+			.hero-slide__pagination
+			.hero-slide__next
+				svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewbox='0 0 18 18' fill='none')
+					path(d='M6.22223 2.75L12.4722 9L6.22223 15.25' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')

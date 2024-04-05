@@ -1,0 +1,76 @@
+.laboratory {
+    position: relative;
+    margin-bottom: 90px;
+
+    @media (max-width:$tablet) {
+        margin-bottom: 80px;
+    }
+
+    &__container {}
+
+    &__title {}
+
+    &__body {}
+
+    &__slider {
+        margin-bottom: 20px;
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: stretch;
+        align-items: flex-end;
+        padding: 12px;
+        height: 440px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 24px;
+        overflow: hidden;
+        transition: 0.3s ease all;
+
+        @media (min-width:em(1280)) {
+            background-size: 110%;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-size: 120%;
+                }
+            }
+        }
+
+        // @media (max-width:$tablet) {
+        //     background-size: cover;
+
+        //     &:hover {
+        //         background-size: cover
+        //     }
+        // }
+    }
+
+    &__pagination {
+        @media (min-width:$tablet) {
+            display: none;
+        }
+    }
+
+    &-slide {
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            min-height: 88px;
+            color: $mainColor;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: center;
+            border-radius: 16px;
+        }
+    }
+
+}
