@@ -3,6 +3,7 @@
     @include adaptiveValue("height", 1181, 659, 1920, 375, 1);
     background-color: $mainColor;
     overflow: hidden;
+
     &__container {
         position: relative;
         // padding: 185px 195px;
@@ -16,17 +17,17 @@
         color: #fff;
         font-family: Magenda;
         font-size: rem(260);
-        @include adaptiveValue("font-size", 260, 130, 1920, 1024,1);
+        @include adaptiveValue("font-size", 260, 130, 1920, 1024, 1);
 
-        @media (max-width:$mobile){
+        @media (max-width:$mobile) {
             @include adaptiveValue("font-size", 130, 85, 1024, 375, 1);
         }
-        
+
         &-extra {
             display: inline-block;
             @include adaptiveValue("margin-left", 230, 40, 1920, 1024, 1);
 
-            @media (max-width:$tablet){
+            @media (max-width:$tablet) {
                 display: block;
                 margin-left: 0;
             }
@@ -45,17 +46,17 @@
         font-weight: 500;
         z-index: 3;
 
-        @media (max-width:$tablet){
+        @media (max-width:$tablet) {
             display: block;
             margin-bottom: rem(36);
             // display: none;
         }
 
-        @media (max-width:$mobile){
-            position: initial; 
+        @media (max-width:$mobile) {
+            position: initial;
         }
 
-        @media (max-width:$mobileSmall){
+        @media (max-width:$mobileSmall) {
             top: rem(36);
             left: rem(15);
         }
@@ -64,7 +65,8 @@
     &__shape {
         position: absolute;
         @include adaptiveValue("top", -137, 31, 1920, 375, 1);
-        @include adaptiveValue("left", -570, -343, 1920, 375, 1);
+        left: -31%;
+        // @include adaptiveValue("left", -570, -350, 1920, 576, 1);
         @include adaptiveValue("width", 1898, 593, 1920, 375, 1);
         @include adaptiveValue("height", 1898, 651, 1920, 375, 1);
         background-color: #000;
@@ -72,6 +74,43 @@
         border-radius: 50%;
         opacity: 0;
         animation: show 1.5s ease-in-out 0.5s 1 forwards;
+
+        @media (max-width: em(1440)) {
+            left: -31%;
+        }
+
+        @media (max-width: em(180)) {
+            left: -33%;
+        }
+
+        @media (max-width:$tablet) {
+            left: -45%;
+        }
+
+        @media (max-width:$mobile) {
+            left: -54%;
+        }
+
+        @media (max-width:$mobileSmall) {
+            left: -66%;
+        }
+
+        @media (max-width: em(450)) {
+            left: -77%;
+        }
+
+        @media (max-width: em(400)) {
+            left: -97%;
+        }
+
+        @media (max-width: em(375)) {
+            left: -108%;
+        }
+    }
+
+    &__button {
+        position: relative;
+        z-index: 99;
     }
 
     &__img {
@@ -82,30 +121,30 @@
         height: 117%;
         z-index: 2;
 
-        @media (max-width:$tablet){
+        @media (max-width:$tablet) {
             width: percent(1061, 1920);
         }
 
-        @media (max-width:$tablet){
+        @media (max-width:$tablet) {
             bottom: -7%;
             left: 38%;
             height: 95%;
             width: unset;
         }
 
-        @media (max-width:$mobile){
+        @media (max-width:$mobile) {
             bottom: -10%;
             left: 35%;
         }
 
-        @media (max-width: $mobileSmall){
+        @media (max-width: $mobileSmall) {
             bottom: -16%;
             left: 30%;
             height: 95%;
-            width: unset; 
+            width: unset;
         }
 
-        @media (max-width: em(400)){
+        @media (max-width: em(400)) {
             bottom: -16%;
             left: 11%;
             // height: 100%;
@@ -119,7 +158,9 @@
         background-color: #000;
         transform: translate(-100%, 100%);
         opacity: 0;
-    } to {
+    }
+
+    to {
         background-color: $highlightColor;
         transform: translate(0%, 0%);
         opacity: 1;
