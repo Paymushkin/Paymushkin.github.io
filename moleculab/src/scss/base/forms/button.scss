@@ -49,6 +49,13 @@
 		color: $highlightColor-1;
 		background-color: #D3F3FF;
 
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: $highlightColor-1;
+			}
+		}
+
 		.button__icon {
 			background-color: #fff;
 			transform: rotate(45deg);

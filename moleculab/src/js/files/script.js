@@ -32,6 +32,14 @@ changeLocation.addEventListener("click", () => {
     changeLocation.classList.toggle("_open")
 })
 
+// открытие блока Покупателям
+
+const openCustomerBlock = document.getElementById("customer-block") || null
+
+openCustomerBlock.addEventListener("click", () => {
+    openCustomerBlock.classList.toggle("_open")
+})
+
 
 // работа с селектом в шапке
 
@@ -180,6 +188,7 @@ popupHideElements.forEach(element => {
 // инициализация маски ввода телефона
 
 Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
+Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
 
 
 // проверка полей на заполненность
@@ -199,3 +208,22 @@ function toggleButtonState() {
         submitButton.setAttribute('disabled', 'disabled');
     }
 }
+
+// валидация полей
+
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const input = document.querySelector('input[type="email"]');
+
+function isEmailValid(value) {
+    return EMAIL_REGEXP.test(value);
+}
+
+function onInput() {
+    if (isEmailValid(input.value)) {
+        input.style.borderColor = 'green';
+    } else {
+        input.style.borderColor = 'red';
+    }
+}
+
+input.addEventListener('input', onInput);

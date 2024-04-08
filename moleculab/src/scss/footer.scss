@@ -153,6 +153,42 @@
 			}
 		}
 
+		&__to-top {
+			background: linear-gradient(196.05deg, #0A5096 -67.96%, #0BA5F0 92.09%);
+
+			@media (any-hover: hover) {
+				&:hover {
+
+					&::before {
+						opacity: 0;
+					}
+				}
+			}
+
+			.button__icon {
+				z-index: 9;
+			}
+
+			&::before {
+				content: attr(data-text);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 5px 5px 5px 20px;
+				box-sizing: border-box;
+				display: inline-flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				background: linear-gradient(126.47deg, #0A5096 -10.76%, #0BA5F0 93.22%);
+				transition: 0.3s ease opacity;
+			}
+		}
+
 	}
 
 	&-middle {
