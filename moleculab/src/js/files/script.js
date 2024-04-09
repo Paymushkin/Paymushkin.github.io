@@ -26,11 +26,11 @@ import {
 
 // изменение локации
 
-const changeLocation = document.getElementById("change-location") || null
+// const changeLocation = document.getElementById("change-location") || null
 
-changeLocation.addEventListener("click", () => {
-    changeLocation.classList.toggle("_open")
-})
+// changeLocation.addEventListener("click", () => {
+//     changeLocation.classList.toggle("_open")
+// })
 
 // открытие блока Покупателям
 
