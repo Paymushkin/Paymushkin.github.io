@@ -107,8 +107,24 @@ header.header#header
 			li 
 				a(href="/accessories") Аксессуары
 
+		ul.menu__pages 
+			li 
+				a(href="/delivery") Доставка и оплата
+			li 
+				a(href="/contacts") Контакты
+			li 
+				a(href="/about") О нас
+				
+		ul.menu__langs
+			li._active 
+				a(href="?lang=EN") EN
+			li 
+				a(href="?lang=RU") RU 
+			li 
+				a(href="?lang=ES") ES
+
 	.header__search.search
-		input(autocomplete="off",type="text", placeholder="Поиск...").input
+		input#input-search(autocomplete="off",type="text", autofocus, placeholder="Поиск...").input
 		span.search__text Возможно, вы ищете
 		ul.search__hints
 			li Брюки

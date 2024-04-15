@@ -3,6 +3,7 @@
 	width: 100%;
 	overflow: hidden;
 }
+
 .swiper-wrapper {
 	width: 100%;
 	height: 100%;
@@ -10,31 +11,38 @@
 	display: flex;
 	position: relative;
 }
+
 .swiper-vertical {
 	.swiper-wrapper {
 		flex-direction: column;
 	}
 }
+
 .swiper-autoheight {
 	.swiper-wrapper {
 		align-items: flex-start;
 	}
 }
+
 .swiper-initialized {
 	.swiper-slide {
 		flex-shrink: 0;
 		// transition-property: transform;
 	}
 }
+
 .swiper-android {
+
 	.swiper-slide,
 	.swiper-wrapper {
 		transform: translate3d(0px, 0, 0);
 	}
 }
+
 .swiper-button-lock {
 	display: none !important;
 }
+
 .navigation {
 	position: absolute;
 	left: 50%;
@@ -42,33 +50,41 @@
 	display: flex;
 	gap: rem(10);
 	transform: translateX(-50%);
+
 	img {
 		transition: opacity 0.3s ease;
 		cursor: pointer;
 	}
+
 	.swiper-button-disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
 }
+
 .swiper-pagination {
 	position: absolute;
-	left: rem(56);
+	left: rem(33);
 	bottom: rem(90);
 	display: flex;
 	gap: rem(14);
 	cursor: pointer;
+
+	@media (max-width:$mobileSmall) {
+		left: rem(25);
+	}
+
 	&-bullet {
 		position: relative;
 		width: rem(6);
 		height: rem(6);
 		border-radius: 50%;
 		background-color: #231F20;
-		
+
 
 		&-active {
-			&::before{
-				content:'';
+			&::before {
+				content: '';
 				position: absolute;
 				top: rem(-7);
 				left: rem(-7);
@@ -79,6 +95,7 @@
 			}
 		}
 	}
+
 	.swiper-pagination-total {
 		color: #585858;
 	}

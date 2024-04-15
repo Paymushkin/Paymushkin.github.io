@@ -1,21 +1,38 @@
-section.special 
-	.special__container
-		.special__slider.swiper
-			.special__wrapper.swiper-wrapper
-				.special__slide.slide.swiper-slide(style="background-image: url(@img/special/item-1.webp)")
-					
-					h2.slide__title Бестселлеры и рекомендации Streetlook для вас
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.special__slide.slide.swiper-slide(style="background-image: url(@img/special/item-2.webp)")
-					
-					h2.slide__title Бестселлеры и рекомендации Streetlook для вас
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.special__slide.slide.swiper-slide(style="background-image: url(@img/special/item-3.webp)")
-					
-					h2.slide__title Бестселлеры и рекомендации Streetlook для вас
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.special__slide.slide.swiper-slide(style="background-image: url(@img/special/item-4.webp)")
-					
-					h2.slide__title Бестселлеры и рекомендации Streetlook для вас
-					a(href="/catalog").button.slide__button Перейти в каталог
-			.swiper-pagination
+section.special
+	style.
+		.special__slide:first-child {
+			background-image: url(img/hero/hero-1.png);
+		}
+		.special__slide:nth-child(2) {
+			background-image: url(img/hero/hero-2.png);
+		}
+		.special__slide:nth-child(3) {
+			background-image: url(img/hero/hero-4.png);
+		}
+		
+		@media (max-width:576px) {
+			.special__slide:first-child {
+				background-image: url(img/hero/hero-1-mob.png);
+			}
+			.special__slide:nth-child(2) {
+				background-image: url(img/hero/hero-2-mob.png);
+			}
+			.special__slide:nth-child(3) {
+				background-image: url(img/hero/hero-4-mob.png);
+			}
+		}
+	.special__slider.swiper
+		.special__wrapper.swiper-wrapper
+			.special__slide.slide.swiper-slide
+				
+				//- h2.slide__title Бестселлеры и рекомендации Streetlook для вас
+				//- a(href="/catalog").button.slide__button Перейти в каталог
+			.special__slide.slide.swiper-slide
+				
+				//- h2.slide__title Бестселлеры и рекомендации Streetlook для вас
+				//- a(href="/catalog").button.slide__button Перейти в каталог
+			.special__slide.slide.swiper-slide
+				
+				//- h2.slide__title Бестселлеры и рекомендации Streetlook для вас
+				//- a(href="/catalog").button.slide__button Перейти в каталог
+		.swiper-pagination

@@ -1,21 +1,39 @@
 section.hero 
 	.hero__container
+		style.
+			.hero__slide:first-child {
+				background-image: url(img/hero/hero-1.png);
+			}
+			.hero__slide:nth-child(2) {
+				background-image: url(img/hero/hero-2.png);
+			}
+			.hero__slide:nth-child(3) {
+				background-image: url(img/hero/hero-4.png);
+			}
+			
+			@media (max-width:576px) {
+				.hero__slide:first-child {
+					background-image: url(img/hero/hero-1-mob.png);
+				}
+				.hero__slide:nth-child(2) {
+					background-image: url(img/hero/hero-2-mob.png);
+				}
+				.hero__slide:nth-child(3) {
+					background-image: url(img/hero/hero-4-mob.png);
+				}
+			}
 		.hero__slider.swiper
 			.hero__wrapper.swiper-wrapper
-				.hero__slide.slide.swiper-slide(style="background-image: url(@img/hero/hero-1.webp)")
-					span.slide__decor 회사 소개
-					h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.hero__slide.slide.swiper-slide(style="background-image: url(@img/hero/hero-2.webp)")
-					span.slide__decor 회사 소개
-					h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.hero__slide.slide.swiper-slide(style="background-image: url(@img/hero/hero-3.webp)")
-					span.slide__decor 회사 소개
-					h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
-					a(href="/catalog").button.slide__button Перейти в каталог
-				.hero__slide.slide.swiper-slide(style="background-image: url(@img/hero/hero-4.webp)")
-					span.slide__decor 회사 소개
-					h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
-					a(href="/catalog").button.slide__button Перейти в каталог
+				.hero__slide.slide.swiper-slide
+					//- span.slide__decor 회사 소개
+					//- h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
+					//- a(href="/catalog").button.slide__button Перейти в каталог
+				.hero__slide.slide.swiper-slide
+					//- span.slide__decor 회사 소개
+					//- h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
+					//- a(href="/catalog").button.slide__button Перейти в каталог
+				.hero__slide.slide.swiper-slide
+					//- span.slide__decor 회사 소개
+					//- h2.slide__title Наши коллекции, отобранные вручную, сочетают в себе городскую эстетику и уникальный дух модных улиц Сеула.
+					//- a(href="/catalog").button.slide__button Перейти в каталог
 			.swiper-pagination

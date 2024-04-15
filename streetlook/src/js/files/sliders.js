@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, {Pagination, Autoplay} from 'swiper';
+import Swiper, { Pagination, Autoplay, EffectFade } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -29,7 +29,7 @@ function bildSliders() {
 	console.log("свайпер")
 	// BildSlider
 	let sliders = document.querySelectorAll(`[class*="__swiper"]:not(.swiper-wrapper)`);
-	if(sliders) {
+	if (sliders) {
 		sliders.forEach(slider => {
 			slider.parentElement.classList.add("swiper");
 			slider.classList.add("swiper-wrapper");
@@ -52,38 +52,38 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Pagination, Autoplay],
+			modules: [Pagination, Autoplay, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			// autoHeight: true,
-			speed: 800,
+			speed: 2500,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// parallax: true,
 
-			
+
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			
+
 
 			// Пагинация
-			
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 				// type: "fraction",
 			},
-			
+
 
 			// Скроллбар
 			/*

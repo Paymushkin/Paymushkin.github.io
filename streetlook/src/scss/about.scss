@@ -1,14 +1,27 @@
 .about {
+	margin-bottom: rem(25);
+
 	&__container {
 		display: flex;
-		padding: rem(61) rem(25) rem(25) rem(53);
+		padding: 0 rem(25);
+		gap: 20px;
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			padding: 0 20px;
+		}
+
+		@media (max-width:$mobileSmall) {
+			padding: 0 rem(16);
+			gap: rem(15);
+		}
 	}
 
 	&__body {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		flex: 0 0 50%;
+		flex: 1 1 50%;
 	}
 
 	&__title {
@@ -19,25 +32,83 @@
 		margin-bottom: rem(30);
 		width: rem(477);
 		line-height: math.div(22.4, 16);
+
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
+
+		@media (max-width:$mobileSmall) {
+			margin-bottom: rem(20);
+		}
 	}
 
 	&__link {
 		line-height: math.div(22.4, 16);
+
+		@media (max-width:$mobile) {
+			margin-bottom: 0;
+			color: #D3D4D7;
+			font-size: rem(14);
+			letter-spacing: 0.07px;
+		}
 	}
 
-	&__decor {
+	&__title-decor {
 		position: absolute;
-		bottom: rem(31.8);
+		bottom: 0;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
 	}
 
 	&__img {
-		flex: 0 0 50%;
+		flex: 1 1 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(15);
+
+		@media (max-width:$mobile) {
+			flex: 1 1 auto;
+		}
+
+		a {
+			// flex: 0 0 50%;
+			width: 100%;
+			// height: ;
+			border-radius: 10px;
+			overflow: hidden;
+
+			@media (max-width:$mobile) {
+				width: calc(50% - 7.5px);
+				aspect-ratio: 177/222;
+			}
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: cover;
+			}
+
+			&:nth-child(2) {
+				@media (min-width:$mobile) {
+					display: none;
+				}
+
+			}
+		}
 	}
 
 	&__ibg {
 		display: block;
-		margin-bottom: rem(22.4);
+		// margin-bottom: rem(22.4);
 		padding-bottom: percent(683, 601);
 		max-height: rem(1030);
+
+		@media (max-width:$mobile) {
+			padding-bottom: percent(177, 222);
+			max-height: 400px;
+		}
 	}
 }

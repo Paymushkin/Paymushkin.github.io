@@ -6,17 +6,16 @@ html(lang="ru").lock
 			.loader__spinner
 				.loader__icon
 					div
-
 		.wrapper
 			include html/_header
 			main.main-content
 				include html/_hero
 				- var categoryTitle = "Новинки лета 2023"
 					include html/_catalog
-				include html/_offer
+				//- include html/_offer
 				include html/_special
 				include html/_about
-				include html/_interests
+				//- include html/_interests
 			include html/_footer
 		script(src="js/app.min.js")
 	

@@ -1,25 +1,51 @@
-h1, h2, h3, h4, p, span, small, button, a, div {
-	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+small,
+button,
+a,
+div {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
 [class*="__title"] {
-	margin-left: rem(9);
+	// margin-left: rem(9);
 	margin-bottom: rem(22);
 	font-size: rem(48);
 	line-height: math.div(64.77, 48);
+
+	@media (max-width:$tablet) {
+		margin-bottom: rem(20);
+		font-size: rem(24);
+	}
 }
 
 [class*="__title-decor"] {
 	display: block;
-	margin-left: rem(9);
+	margin-bottom: 0;
+	// margin-left: rem(9);
 	color: $decorColor2;
 	font-size: rem(20);
+
+	@media (max-width:$tablet) {
+		// margin-bottom: rem(13);
+		font-size: rem(12);
+	}
 }
 
 // slider
@@ -56,9 +82,7 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 		line-height: math.div(64.77, 48);
 	}
 
-	&__button {
-
-	}
+	&__button {}
 }
 
 // end slider
@@ -89,6 +113,7 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 	box-shadow: 0 4px 0 0 #849496;
 	transform-origin: 80px 82px;
 }
+
 .loader__spinner {
 	width: 200px;
 	height: 200px;
@@ -96,16 +121,28 @@ h1, h2, h3, h4, p, span, small, button, a, div {
 	overflow: hidden;
 	background: #ffffff;
 }
+
 .loader__icon {
 	width: 100%;
 	height: 100%;
 	position: relative;
 	transform: translateZ(0) scale(1);
 	backface-visibility: hidden;
-	transform-origin: 0 0; /* see note above */
+	transform-origin: 0 0;
+	/* see note above */
 }
-.loader__icon div { 
-	box-sizing: content-box; 
+
+.loader__icon div {
+	box-sizing: content-box;
 }
 
 // end site loader
+
+line {
+	position: fixed;
+	height: 100vh;
+	width: 2px;
+	background: red;
+	z-index: 999;
+	left: 16px;
+}

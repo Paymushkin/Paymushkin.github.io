@@ -11,21 +11,24 @@ const menuOpenClose = document.getElementById("menu"),
 	pageParams = new URLSearchParams(window.location.search),
 	siteLang = pageParams.get('lang'),
 	currentLang = document.getElementById("current-lang"),
-	loader = document.getElementById("loader")
+	loader = document.getElementById("loader"),
+	searchInput = document.getElementById("input-search")
 
-menuOpenClose.addEventListener("click", ()=> {
+menuOpenClose.addEventListener("click", () => {
 	headerContainer.classList.toggle("menu--active")
 })
 
-headerSearchOpen.addEventListener("click", ()=> {
+headerSearchOpen.addEventListener("click", () => {
 	headerContainer.classList.add("search--active")
+	// searchInput.focus()
 })
 
-headerSearchClose.addEventListener("click", ()=> {
+headerSearchClose.addEventListener("click", () => {
 	headerContainer.classList.remove("search--active")
+	// searchInput.blur()
 })
 
-headerLang.addEventListener("click", ()=> {
+headerLang.addEventListener("click", () => {
 	headerContainer.classList.toggle("lang--active")
 })
 

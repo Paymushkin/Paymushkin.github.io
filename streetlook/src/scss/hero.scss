@@ -1,14 +1,16 @@
 .hero {
-	
+	margin-bottom: rem(44);
+
 	&__container {
 		padding: 0;
 	}
+
 	&__slider {
+		height: 100vh;
 	}
-	&__wrapper {
-		
-	}
-	&__slide {
-	}
+
+	&__wrapper {}
+
+	&__slide {}
 
 }

@@ -1,20 +1,58 @@
 .catalog {
+	margin-bottom: rem(44);
 
 	&__container {
 		display: flex;
 		flex-direction: column;
-		padding: rem(44) rem(53) rem(44) rem(42);
+		padding: 0 rem(25);
+
+		@media (max-width:$tablet) {
+			padding: 0 rem(25);
+		}
+
+		@media (max-width:$mobile) {
+			padding: 0 rem(20);
+			margin: 0 -1.25rem;
+		}
+
+		@media (max-width:$mobileSmall) {
+			padding: 0 rem(16);
+		}
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: rem(44);
+
+		@media (max-width:$tablet) {
+			margin-bottom: rem(14);
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__top,
+	&__title-decor {
+		@media (max-width:$mobile) {
+			margin: 0 1.25rem;
+		}
 	}
 
 	&__link {
 		display: inline-block;
-		margin-bottom: rem(33);
-		align-self: flex-end;
-		align-items: flex-end;
 		transition: 0.3s ease opacity;
 
-		@media (any-hover: hover){
-			&:hover{
+		@media (max-width:$tablet) {
+			font-size: rem(12);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
 				opacity: 0.75;
 			}
 		}
@@ -35,8 +73,28 @@
 		column-gap: rem(15);
 		row-gap: rem(32);
 
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(auto-fill, 19.5rem);
+			grid-template-rows: auto;
+			grid-auto-flow: column;
+			overflow: auto hidden;
+			padding: 0 1.25rem;
+		}
+
 		&-item {
 
+			&:nth-child(2n+1) {
+
+				@media (min-width:$mobile) {
+					display: none;
+				}
+
+			}
+
+			@media (max-width:$mobile) {
+				aspect-ratio: 312 / 427;
+				height: rem(427);
+			}
 		}
 	}
 
@@ -54,7 +112,7 @@
 				display: flex;
 				justify-content: space-between;
 				line-height: math.div(19.2, 16);
-				letter-spacing:  0.157px;
+				letter-spacing: 0.157px;
 			}
 
 			&__desc {
@@ -66,10 +124,8 @@
 
 		&-body {
 
-			&__text {
-				
-			}
-			
+			&__text {}
+
 		}
 	}
 
