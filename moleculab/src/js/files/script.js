@@ -302,6 +302,24 @@ if (mobFilterBtn) {
     })
 }
 
+
+// липкий сайдбар
+
+window.onscroll = function () {
+    let screenHeight = window.screen.height;
+    const aside = document.querySelector('aside');
+    let asideHeight = aside.offsetHeight;
+    let asideStickyPosition = asideHeight - screenHeight;
+
+    var distanceFromTop = aside.getBoundingClientRect().top + window.pageYOffset;
+    var scrolled = window.scrollY;
+
+    if (scrolled >= distanceFromTop + asideStickyPosition) {
+        aside.style.position = 'sticky';
+        aside.style.top = screenHeight - asideHeight + "px";
+    }
+}
+
 // инициализация маски ввода телефона
 
 const callMePopup = document.getElementById('call-me') || null;

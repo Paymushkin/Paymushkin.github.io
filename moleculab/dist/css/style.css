@@ -2776,10 +2776,12 @@ details ul {
 .product-item__label._special {
   background: #77C149;
 }
-._list .product-item__label {
-  padding: 3px 10px;
-  font-size: 10px;
-  line-height: 1.2;
+@media (max-width: 36.06125em) {
+  ._list .product-item__label {
+    padding: 3px 10px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
 }
 .product-item__icons {
   position: absolute;
@@ -4277,8 +4279,7 @@ details ul {
       flex: 1 1 auto;
 }
 .body-catalog__filters {
-  position: sticky;
-  top: 0px;
+  top: 0;
   -ms-flex: 0 0 293px;
       flex: 0 0 293px;
   height: -webkit-fit-content;
