@@ -305,18 +305,20 @@ if (mobFilterBtn) {
 
 // липкий сайдбар
 
-window.onscroll = function () {
-    let screenHeight = window.screen.height;
-    const aside = document.querySelector('aside');
-    let asideHeight = aside.offsetHeight;
-    let asideStickyPosition = asideHeight - screenHeight;
+if (window.screen.width > 1024) {
+    window.onscroll = function () {
+        let screenHeight = window.screen.height;
+        const aside = document.querySelector('aside');
+        let asideHeight = aside.offsetHeight;
+        let asideStickyPosition = asideHeight - screenHeight;
 
-    var distanceFromTop = aside.getBoundingClientRect().top + window.pageYOffset;
-    var scrolled = window.scrollY;
+        var distanceFromTop = aside.getBoundingClientRect().top + window.pageYOffset;
+        var scrolled = window.scrollY;
 
-    if (scrolled >= distanceFromTop + asideStickyPosition) {
-        aside.style.position = 'sticky';
-        aside.style.top = screenHeight - asideHeight + "px";
+        if (scrolled >= distanceFromTop + asideStickyPosition) {
+            aside.style.position = 'sticky';
+            aside.style.top = screenHeight - asideHeight + "px";
+        }
     }
 }
 
