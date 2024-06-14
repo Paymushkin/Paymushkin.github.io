@@ -1,0 +1,2267 @@
+$color_1: #0f172a;
+$color_2: #64748b;
+$color_3: #94a3b8;
+$color_4: #cbd5e1;
+$color_5: #fff;
+$color_6: #475569;
+$color_7: #f43f5e;
+$color_8: #06b6d4;
+$color_9: #334155;
+$color_10: #e2e8f0;
+$background-color_1: transparent;
+$background-color_2: rgb(255 255 255 / var(--tw-bg-opacity));
+$background-color_3: rgb(241 245 249 / var(--tw-bg-opacity));
+$background-color_4: rgb(6 182 212 / var(--tw-bg-opacity));
+$background-color_5: rgb(244 63 94 / var(--tw-bg-opacity));
+$background-color_6: rgb(226 232 240 / var(--tw-bg-opacity));
+$background-color_7: rgb(255 241 242 / var(--tw-bg-opacity));
+$background-color_8: rgb(203 213 225 / var(--tw-bg-opacity));
+$background-color_9: rgb(255 237 213 / var(--tw-bg-opacity));
+$background-color_10: rgb(15 23 42 / var(--tw-bg-opacity));
+$background-color_11: rgb(30 41 59 / var(--tw-bg-opacity));
+$background-color_12: rgb(100 116 139 / var(--tw-bg-opacity));
+$background-color_13: rgb(51 65 85 / var(--tw-bg-opacity));
+$background-color_14: rgb(71 85 105 / var(--tw-bg-opacity));
+$border-color_1: #cbd5e1;
+$border-color_2: #94a3b8;
+$border-color_3: #fdba74;
+$border-color_4: #1e293b;
+$border-color_5: #475569;
+$border-top-color_1: transparent;
+$border-right-color_1: transparent;
+$border-bottom-color_1: #fff;
+$border-bottom-color_2: #334155;
+$border-left-color_1: transparent;
+$outline-color_1: #fdba74;
+
+/*! name: vanilla-calendar-pro | url: https://github.com/uvarov-frontend/vanilla-calendar-pro */
+.vanilla-calendar {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 300px;
+    min-width: 272px;
+    max-width: 100%;
+    flex-direction: column;
+    border-radius: .75rem;
+    padding: 1rem;
+    opacity: 1;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+}
+
+@supports {
+    ((width: {
+                -webkit-max-content) {
+                or {
+                    (width: {
+                            max-content)) {
+                        and {
+                            ((height: {
+                                        -webkit-max-content) {
+                                        or {
+                                            (height: {
+                                                    max-content)) {
+                                                .vanilla-calendar {
+                                                    height: -webkit-max-content;
+                                                    height: max-content;
+                                                    width: -webkit-max-content;
+                                                    width: max-content;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            -webkit-fit-content) {
+                or {
+                    (width: {
+                            -moz-fit-content) {
+                            or {
+                                (width: {
+                                        fit-content)) {
+                                        .vanilla-calendar_multiple {
+                                            width: -webkit-fit-content;
+                                            width: -moz-fit-content;
+                                            width: fit-content;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .vanilla-calendar_multiple {
+        width: 550px;
+    }
+}
+
+.vanilla-calendar {
+    button {
+        &:focus-visible {
+            border-radius: .5rem;
+            outline-style: solid;
+            outline-width: 1px;
+        }
+    }
+}
+
+.vanilla-calendar.vanilla-calendar_multiple {
+    .vanilla-calendar-days {
+        flex-grow: 0;
+    }
+}
+
+.vanilla-calendar_hidden {
+    pointer-events: none;
+    opacity: 0;
+
+    * {
+        pointer-events: none !important;
+    }
+}
+
+.vanilla-calendar_to-input {
+    position: absolute;
+}
+
+.vanilla-calendar_to-input_bottom {
+    margin-top: .25rem;
+}
+
+.vanilla-calendar_to-input_top {
+    margin-top: -.25rem;
+}
+
+.vanilla-calendar-controls {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.25rem;
+}
+
+.vanilla-calendar-arrow {
+    pointer-events: auto;
+    position: relative;
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    border-width: 0px;
+    background-color: $background-color_1;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        --tw-content: "";
+        content: var(--tw-content);
+    }
+}
+
+.vanilla-calendar-arrow.vanilla-calendar-arrow_prev {
+    &:before {
+        transform: rotate(90deg);
+    }
+}
+
+.vanilla-calendar-arrow.vanilla-calendar-arrow_next {
+    &:before {
+        transform: rotate(-90deg);
+    }
+}
+
+.vanilla-calendar-grid {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.vanilla-calendar-grid.vanilla-calendar-grid_disabled {
+    .vanilla-calendar-column {
+        pointer-events: none;
+        opacity: .3;
+    }
+
+    .vanilla-calendar-column.vanilla-calendar-column_month {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    .vanilla-calendar-column.vanilla-calendar-column_year {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+.vanilla-calendar-column {
+    display: flex;
+    min-width: -webkit-min-content;
+    min-width: min-content;
+    flex-direction: column;
+}
+
+.vanilla-calendar-header {
+    position: relative;
+    margin-bottom: .75rem;
+    display: flex;
+    align-items: center;
+}
+
+.vanilla-calendar-header__content {
+    display: grid;
+    flex-grow: 1;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.vanilla-calendar-month {
+    cursor: pointer;
+    border-radius: .25rem;
+    border-width: 0px;
+    background-color: $background-color_1;
+    padding: .25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.vanilla-calendar-year {
+    cursor: pointer;
+    border-radius: .25rem;
+    border-width: 0px;
+    background-color: $background-color_1;
+    padding: .25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.vanilla-calendar-month.vanilla-calendar-month_disabled {
+    pointer-events: none;
+}
+
+.vanilla-calendar-year.vanilla-calendar-year_disabled {
+    pointer-events: none;
+}
+
+.vanilla-calendar-months {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    row-gap: 1rem;
+    column-gap: .5rem;
+}
+
+.vanilla-calendar-years {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    row-gap: 1rem;
+    column-gap: .5rem;
+}
+
+.vanilla-calendar-months_selecting {
+    .vanilla-calendar-months__month {
+        cursor: pointer;
+
+        .vanilla-calendar-months__month_disabled {
+            cursor: default;
+        }
+    }
+}
+
+.vanilla-calendar-years_selecting {
+    .vanilla-calendar-years__year {
+        cursor: pointer;
+
+        .vanilla-calendar-years__year_disabled {
+            cursor: default;
+        }
+    }
+}
+
+.vanilla-calendar-months__month {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    border-radius: .5rem;
+    border-width: 0px;
+    padding: .25rem;
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.vanilla-calendar-years__year {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    border-radius: .5rem;
+    border-width: 0px;
+    padding: .25rem;
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.vanilla-calendar-months__month.vanilla-calendar-months__month_disabled {
+    pointer-events: none;
+}
+
+.vanilla-calendar-years__year.vanilla-calendar-years__year_disabled {
+    pointer-events: none;
+}
+
+.vanilla-calendar-week-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.vanilla-calendar-week-numbers__title {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.vanilla-calendar-week-numbers__content {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+    row-gap: .25rem;
+}
+
+.vanilla-calendar-week-number {
+    margin: 0;
+    display: flex;
+    min-height: 1.875rem;
+    width: 100%;
+    min-width: 1.875rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    background-color: $background-color_1;
+    padding: 0;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.vanilla-calendar-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
+.vanilla-calendar-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.vanilla-calendar-week {
+    margin-bottom: .5rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+}
+
+.vanilla-calendar-week__day {
+    display: flex;
+    width: 100%;
+    min-width: 1.875rem;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.vanilla-calendar-days {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: .25rem;
+}
+
+.vanilla-calendar-days_selecting {
+    .vanilla-calendar-day__btn {
+        cursor: pointer;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        transition-duration: 75ms;
+    }
+
+    .vanilla-calendar-day__btn_disabled {
+        cursor: default;
+    }
+}
+
+.vanilla-calendar-day {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &:focus-visible {
+        .vanilla-calendar-day__popup {
+            pointer-events: auto;
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        .vanilla-calendar-day__popup {
+            pointer-events: auto;
+            opacity: 1;
+        }
+    }
+}
+
+.vanilla-calendar-day_hover-intermediate {
+    .vanilla-calendar-day__btn {
+        border-radius: 0;
+    }
+}
+
+.vanilla-calendar-day_hover-first {
+    .vanilla-calendar-day__btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_hover-last {
+    .vanilla-calendar-day__btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_hover-first.vanilla-calendar-day_hover-last {
+    .vanilla-calendar-day__btn {
+        border-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_selected-first {
+    .vanilla-calendar-day__btn_selected {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_selected-last {
+    .vanilla-calendar-day__btn_selected {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_selected-first.vanilla-calendar-day_selected-last {
+    .vanilla-calendar-day__btn_selected {
+        border-radius: .5rem;
+    }
+}
+
+.vanilla-calendar-day_selected-intermediate {
+    .vanilla-calendar-day__btn_selected {
+        border-radius: 0;
+    }
+}
+
+.vanilla-calendar-day__btn {
+    display: flex;
+    height: 100%;
+    min-height: 1.875rem;
+    width: 100%;
+    min-width: 1.875rem;
+    cursor: default;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    border-width: 0px;
+    padding: 0;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+.vanilla-calendar-day__btn_today {
+    font-weight: 700;
+}
+
+.vanilla-calendar-day__btn_disabled {
+    pointer-events: none;
+}
+
+.vanilla-calendar-day__popup {
+    transform: translate(-50%);
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 20;
+    width: 8rem;
+    padding: 1rem .75rem .5rem;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    opacity: 0;
+
+    &:before {
+        content: var(--tw-content);
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        z-index: -10;
+        display: block;
+        height: calc(100% - 8px);
+        width: 100%;
+        border-radius: .5rem;
+    }
+
+    &:after {
+        content: var(--tw-content);
+        position: absolute;
+        content: "";
+        transform: translate(-50%);
+        left: 50%;
+        top: 1px;
+        z-index: -10;
+        display: block;
+        height: 0px;
+        width: 0px;
+        border-left-width: 8px;
+        border-right-width: 8px;
+        border-top-width: 0px;
+        border-bottom-width: 8px;
+        border-style: solid;
+        border-left-color: $border-left-color_1;
+        border-right-color: $border-right-color_1;
+        border-top-color: $border-top-color_1;
+    }
+
+    &:hover {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+.vanilla-calendar-time {
+    margin-top: .75rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .75rem;
+    border-top-width: 1px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    padding-top: .75rem;
+}
+
+.vanilla-calendar-time__content {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.vanilla-calendar-time__hours {
+    position: relative;
+    margin-right: .35rem;
+    width: 1.75rem;
+
+    &:after {
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        margin-top: calc(-50% + 1px);
+        display: block;
+        --tw-content: ":";
+        content: var(--tw-content);
+    }
+
+    input {
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-radius: .25rem;
+        border-width: 0px;
+        padding: .125rem;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.125rem;
+
+        &:focus-visible {
+            outline-style: solid;
+            outline-width: 1px;
+        }
+
+        &:disabled {
+            cursor: default;
+        }
+
+        &:hover {
+            &:disabled {
+                background-color: $background-color_1;
+            }
+        }
+    }
+}
+
+.vanilla-calendar-time__minutes {
+    width: 1.75rem;
+
+    input {
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-radius: .25rem;
+        border-width: 0px;
+        padding: .125rem;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.125rem;
+
+        &:focus-visible {
+            outline-style: solid;
+            outline-width: 1px;
+        }
+
+        &:disabled {
+            cursor: default;
+        }
+
+        &:hover {
+            &:disabled {
+                background-color: $background-color_1;
+            }
+        }
+    }
+}
+
+.vanilla-calendar-time__keeping {
+    margin-left: 1px;
+    margin-top: .25rem;
+    width: 22px;
+    cursor: pointer;
+    border-radius: .25rem;
+    border-width: 0px;
+    background-color: $background-color_1;
+    padding: 0;
+    font-size: .69rem;
+
+    &:focus-visible {
+        outline-style: solid;
+        outline-width: 1px;
+    }
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &:hover {
+        &:disabled {
+            background-color: $background-color_1;
+        }
+    }
+}
+
+.vanilla-calendar-time__ranges {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.vanilla-calendar-time__range {
+    position: relative;
+    z-index: 10;
+    font-size: 0;
+
+    &:before {
+        content: var(--tw-content);
+        left: 0;
+        content: "";
+        transform: translateY(-50%);
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        height: .5rem;
+        width: 1px;
+    }
+
+    &:after {
+        content: var(--tw-content);
+        right: 0;
+        content: "";
+        transform: translateY(-50%);
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        height: .5rem;
+        width: 1px;
+    }
+
+    input {
+        position: relative;
+        margin: 0;
+        height: 1.25rem;
+        width: 100%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        outline-width: 0px;
+
+        &::-webkit-slider-thumb {
+            position: relative;
+            z-index: 20;
+            margin-top: -.5rem;
+            box-sizing: border-box;
+            height: 1rem;
+            width: .75rem;
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: .25rem;
+            border-width: 1px;
+            border-style: solid;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        &::-moz-range-thumb {
+            position: relative;
+            z-index: 20;
+            box-sizing: border-box;
+            height: 1rem;
+            width: .75rem;
+            cursor: pointer;
+            border-radius: .25rem;
+            border-width: 1px;
+            border-style: solid;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        &::-webkit-slider-runnable-track {
+            margin-top: 1px;
+            box-sizing: border-box;
+            height: 1px;
+            width: 100%;
+            cursor: pointer;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        &::-moz-range-track {
+            margin-top: 1px;
+            box-sizing: border-box;
+            height: 1px;
+            width: 100%;
+            cursor: pointer;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    }
+}
+
+[data-calendar-theme=light].vanilla-calendar {
+    --tw-bg-opacity: 1;
+    background-color: $background-color_2;
+    color: $color_1;
+
+    button {
+        &:focus-visible {
+            outline-color: $outline-color_1;
+        }
+    }
+}
+
+[data-calendar-theme=light].vanilla-calendar_to-input {
+    --tw-shadow: 0 9px 20px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 9px 20px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+[data-calendar-theme=light] {
+    .vanilla-calendar-arrow {
+        background-color: $background-color_1;
+
+        &:before {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+PHBhdGggZmlsbD0nIzBmMTcyYScgZD0nTTEyIDE2Yy0uMyAwLS41LS4xLS43LS4zbC02LTZjLS40LS40LS40LTEgMC0xLjRzMS0uNCAxLjQgMGw1LjMgNS4zIDUuMy01LjNjLjQtLjQgMS0uNCAxLjQgMHMuNCAxIDAgMS40bC02IDZjLS4yLjItLjQuMy0uNy4zeicvPjwvc3ZnPg==);
+        }
+
+        &:hover {
+            &:before {
+                opacity: .6;
+            }
+        }
+    }
+
+    .vanilla-calendar-header__content {
+        color: $color_1;
+    }
+
+    .vanilla-calendar-month {
+        color: $color_1;
+
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-year {
+        color: $color_1;
+
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-month.vanilla-calendar-month_not-active {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-year.vanilla-calendar-year_not-active {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-month.vanilla-calendar-month_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-year.vanilla-calendar-year_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-months__month {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-months__month.vanilla-calendar-months__month_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_4;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_4;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-months__month.vanilla-calendar-months__month_disabled {
+        color: $color_4;
+
+        &:hover {
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-years__year {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-years__year.vanilla-calendar-years__year_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_4;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_4;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-years__year.vanilla-calendar-years__year_disabled {
+        color: $color_4;
+
+        &:hover {
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-week-numbers__title {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-week-number {
+        color: $color_2;
+
+        &:hover {
+            color: $color_6;
+        }
+    }
+
+    .vanilla-calendar-week__day {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-week__day_weekend {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day_selected-intermediate {
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected {
+            background-color: $background-color_5;
+            --tw-bg-opacity: .7;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_5;
+                --tw-bg-opacity: .7;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_selected {
+            background-color: $background-color_5;
+            --tw-bg-opacity: .7;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_5;
+                --tw-bg-opacity: .7;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected {
+            background-color: $background-color_4;
+            --tw-bg-opacity: .7;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_4;
+                --tw-bg-opacity: .7;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_prev {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_next {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_6;
+            color: $color_2;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_6;
+                color: $color_2;
+            }
+        }
+    }
+
+    .vanilla-calendar-day__btn {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_1;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-day__btn_today {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+        color: $color_8;
+
+        &:hover {
+            color: $color_8;
+        }
+    }
+
+    .vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_prev {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_next {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-day__btn_prev {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_next {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend {
+        color: $color_7;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_7;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday {
+        color: $color_7;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_7;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_7;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_7;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_today {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_today {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_3;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_3;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_3;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_2;
+        color: $color_3;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_3;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_disabled {
+        color: $color_4;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_5;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_5;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_5;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_5;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_4;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_4;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_8;
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-day__popup {
+        color: $color_1;
+
+        &:before {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_2;
+            --tw-shadow: 0 3px 15px rgba(85, 85, 85, .2);
+            --tw-shadow-colored: 0 3px 15px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        &:after {
+            border-bottom-color: $border-bottom-color_1;
+        }
+    }
+
+    .vanilla-calendar-time {
+        border-color: $border-color_1;
+    }
+
+    .vanilla-calendar-time__hours {
+        &:after {
+            content: var(--tw-content);
+            color: $color_1;
+        }
+
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_2;
+            color: $color_1;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_9;
+            }
+
+            &:focus-visible {
+                outline-color: $outline-color_1;
+            }
+        }
+
+        input.vanilla-calendar-is-focus {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_9;
+        }
+    }
+
+    .vanilla-calendar-time__minutes {
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_2;
+            color: $color_1;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_9;
+            }
+
+            &:focus-visible {
+                outline-color: $outline-color_1;
+            }
+        }
+
+        input.vanilla-calendar-is-focus {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_9;
+        }
+    }
+
+    .vanilla-calendar-time__keeping {
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_9;
+        }
+
+        &:focus-visible {
+            outline-color: $outline-color_1;
+        }
+    }
+
+    .vanilla-calendar-time__range {
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_2;
+
+            &:focus-visible {
+                &::-webkit-slider-thumb {
+                    border-color: $border-color_3;
+                }
+
+                &::-moz-range-thumb {
+                    border-color: $border-color_3;
+                }
+            }
+
+            &::-webkit-slider-thumb {
+                border-color: $border-color_1;
+                --tw-bg-opacity: 1;
+                background-color: $background-color_2;
+            }
+
+            &::-moz-range-thumb {
+                border-color: $border-color_1;
+                --tw-bg-opacity: 1;
+                background-color: $background-color_2;
+            }
+
+            &::-webkit-slider-runnable-track {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_8;
+            }
+
+            &::-moz-range-track {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_8;
+            }
+        }
+
+        &:before {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+        }
+
+        &:after {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_8;
+        }
+
+        &:hover {
+            input {
+                &::-webkit-slider-thumb {
+                    border-color: $border-color_2;
+                }
+
+                &::-moz-range-thumb {
+                    border-color: $border-color_2;
+                }
+            }
+        }
+    }
+}
+
+[data-calendar-theme=dark].vanilla-calendar {
+    --tw-bg-opacity: 1;
+    background-color: $background-color_10;
+    color: $color_5;
+
+    button {
+        &:focus-visible {
+            outline-color: $outline-color_1;
+        }
+    }
+}
+
+[data-calendar-theme=dark].vanilla-calendar_to-input {
+    --tw-shadow: 0 9px 20px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 9px 20px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+[data-calendar-theme=dark] {
+    .vanilla-calendar-arrow {
+        background-color: $background-color_1;
+
+        &:before {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+PHBhdGggZmlsbD0nI2ZmZicgZD0nTTEyIDE2Yy0uMyAwLS41LS4xLS43LS4zbC02LTZjLS40LS40LS40LTEgMC0xLjRzMS0uNCAxLjQgMGw1LjMgNS4zIDUuMy01LjNjLjQtLjQgMS0uNCAxLjQgMHMuNCAxIDAgMS40bC02IDZjLS4yLjItLjQuMy0uNy4zeicvPjwvc3ZnPg==);
+        }
+
+        &:hover {
+            &:before {
+                opacity: .6;
+            }
+        }
+    }
+
+    .vanilla-calendar-header__content {
+        color: $color_5;
+    }
+
+    .vanilla-calendar-month {
+        color: $color_5;
+
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-year {
+        color: $color_5;
+
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+    .vanilla-calendar-month.vanilla-calendar-month_not-active {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-year.vanilla-calendar-year_not-active {
+        color: $color_2;
+    }
+
+    .vanilla-calendar-month.vanilla-calendar-month_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-year.vanilla-calendar-year_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-months__month {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+        }
+    }
+
+    .vanilla-calendar-years__year {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+        }
+    }
+
+    .vanilla-calendar-months__month.vanilla-calendar-months__month_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_12;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_12;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-years__year.vanilla-calendar-years__year_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_12;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_12;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-months__month.vanilla-calendar-months__month_disabled {
+        color: $color_9;
+        opacity: .8;
+
+        &:hover {
+            color: $color_9;
+        }
+    }
+
+    .vanilla-calendar-years__year.vanilla-calendar-years__year_disabled {
+        color: $color_9;
+        opacity: .8;
+
+        &:hover {
+            color: $color_9;
+        }
+    }
+
+    .vanilla-calendar-week-numbers__title {
+        color: $color_5;
+    }
+
+    .vanilla-calendar-week-number {
+        color: $color_5;
+
+        &:hover {
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-week__day {
+        color: $color_5;
+    }
+
+    .vanilla-calendar-week__day_weekend {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day_selected-intermediate {
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected {
+            background-color: $background-color_5;
+            --tw-bg-opacity: .8;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_5;
+                --tw-bg-opacity: .8;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_selected {
+            background-color: $background-color_5;
+            --tw-bg-opacity: .8;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_5;
+                --tw-bg-opacity: .8;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+
+        .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+
+        .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected {
+            background-color: $background-color_4;
+            --tw-bg-opacity: .8;
+            color: $color_5;
+
+            &:hover {
+                background-color: $background-color_4;
+                --tw-bg-opacity: .8;
+                color: $color_5;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_prev {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+
+        .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_next {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+                color: $color_4;
+            }
+        }
+    }
+
+    .vanilla-calendar-day__btn {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_3;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_10;
+        }
+    }
+
+    .vanilla-calendar-day__btn_today {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+        color: $color_8;
+
+        &:hover {
+            color: $color_8;
+        }
+    }
+
+    .vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_prev {
+        color: $color_6;
+    }
+
+    .vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_next {
+        color: $color_6;
+    }
+
+    .vanilla-calendar-day__btn_prev {
+        color: $color_6;
+    }
+
+    .vanilla-calendar-day__btn_next {
+        color: $color_6;
+    }
+
+    .vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+    }
+
+    .vanilla-calendar-day__btn_weekend {
+        color: $color_7;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_7;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday {
+        color: $color_7;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_7;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_today {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_today {
+        color: $color_7;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_6;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_6;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_6;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_10;
+        color: $color_6;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_11;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_hover {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_11;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_today {
+        color: $color_3;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_disabled {
+        color: $color_9;
+        opacity: .8;
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_5;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_5;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_5;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_5;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_prev.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_holiday.vanilla-calendar-day__btn_next.vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_4;
+        color: $color_5;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_4;
+            color: $color_5;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_prev {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_next {
+        --tw-bg-opacity: 1;
+        background-color: $background-color_13;
+        color: $color_4;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_4;
+        }
+    }
+
+    .vanilla-calendar-day__popup {
+        color: $color_5;
+
+        &:before {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_10;
+            --tw-shadow: inset 0 0 0 1px rgb(255 255 255 / .1);
+            --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        &:after {
+            border-bottom-color: $border-bottom-color_2;
+        }
+    }
+
+    .vanilla-calendar-time {
+        border-color: $border-color_4;
+    }
+
+    .vanilla-calendar-time__hours {
+        &:after {
+            content: var(--tw-content);
+            color: $color_5;
+        }
+
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_10;
+            color: $color_5;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_13;
+            }
+
+            &:focus-visible {
+                outline-color: $outline-color_1;
+            }
+        }
+
+        input.vanilla-calendar-is-focus {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+        }
+    }
+
+    .vanilla-calendar-time__minutes {
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_10;
+            color: $color_5;
+
+            &:hover {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_13;
+            }
+
+            &:focus-visible {
+                outline-color: $outline-color_1;
+            }
+        }
+
+        input.vanilla-calendar-is-focus {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+        }
+    }
+
+    .vanilla-calendar-time__keeping {
+        color: $color_2;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_13;
+            color: $color_3;
+        }
+
+        &:focus-visible {
+            outline-color: $outline-color_1;
+        }
+    }
+
+    .vanilla-calendar-time__range {
+        input {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_10;
+
+            &:focus-visible {
+                &::-webkit-slider-thumb {
+                    border-color: $border-color_3;
+                }
+
+                &::-moz-range-thumb {
+                    border-color: $border-color_3;
+                }
+            }
+
+            &::-webkit-slider-thumb {
+                border-color: $border-color_5;
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+            }
+
+            &::-moz-range-thumb {
+                border-color: $border-color_5;
+                --tw-bg-opacity: 1;
+                background-color: $background-color_11;
+            }
+
+            &::-webkit-slider-runnable-track {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_14;
+            }
+
+            &::-moz-range-track {
+                --tw-bg-opacity: 1;
+                background-color: $background-color_14;
+            }
+        }
+
+        &:before {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_14;
+        }
+
+        &:after {
+            --tw-bg-opacity: 1;
+            background-color: $background-color_14;
+        }
+
+        &:hover {
+            input {
+                &::-webkit-slider-thumb {
+                    border-color: $border-color_2;
+                }
+
+                &::-moz-range-thumb {
+                    border-color: $border-color_2;
+                }
+            }
+        }
+    }
+}

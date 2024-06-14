@@ -156,6 +156,14 @@
 		&__to-top {
 			background: linear-gradient(196.05deg, #0A5096 -67.96%, #0BA5F0 92.09%);
 
+			&.button {
+				@media (max-width:$mobileSmall) {
+					min-width: 100%;
+				}
+			}
+
+
+
 			@media (any-hover: hover) {
 				&:hover {
 

@@ -728,3 +728,31 @@ details {
         transition: 0.3s ease color;
     }
 }
+
+.verification-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    &__example {
+        flex: 1 1 auto;
+        display: flex;
+        padding: 20px;
+        min-width: 124px;
+        color: $mainColor;
+        background-color: #ECF1F4;
+        border-radius: 30px;
+        font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            min-width: fit-content;
+            font-size: rem(16);
+        }
+
+        span {
+            white-space: pre;
+        }
+    }
+}

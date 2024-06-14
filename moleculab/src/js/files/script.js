@@ -36,9 +36,13 @@ import {
 
 const openCustomerBlock = document.getElementById("customer-block") || null
 
-openCustomerBlock.addEventListener("click", () => {
-    openCustomerBlock.classList.toggle("_open")
-})
+if (openCustomerBlock) {
+    openCustomerBlock.addEventListener("click", () => {
+        openCustomerBlock.classList.toggle("_open")
+    })
+}
+
+
 
 
 // работа с селектом в шапке
@@ -46,46 +50,53 @@ openCustomerBlock.addEventListener("click", () => {
 const selectOptions = document.querySelectorAll("li.select__item[data-value]") || null
 const openSelect = document.getElementById("open-select") || null
 
-openSelect.addEventListener("click", () => {
-    openSelect.parentNode.classList.toggle("_open-select")
-})
-
-selectOptions.forEach(option => {
-    option.addEventListener("click", () => {
-
-        const currentValue = document.getElementById("current-value")
-        const currentSelectValue = option.dataset.value
-
-        currentValue.dataset.current = currentSelectValue
-        currentValue.textContent = currentSelectValue
-        openSelect.parentNode.classList.remove("_open-select")
-
-
+if (selectOptions.length) {
+    openSelect.addEventListener("click", () => {
+        openSelect.parentNode.classList.toggle("_open-select")
     })
-});
+
+    selectOptions.forEach(option => {
+        option.addEventListener("click", () => {
+
+            const currentValue = document.getElementById("current-value")
+            const currentSelectValue = option.dataset.value
+
+            currentValue.dataset.current = currentSelectValue
+            currentValue.textContent = currentSelectValue
+            openSelect.parentNode.classList.remove("_open-select")
+
+
+        })
+    });
+}
 
 
 // работа с меню в шапке
 
 const headerMenu = document.getElementById("open-header-menu") || null
 
-headerMenu.addEventListener("click", () => {
-    headerMenu.classList.toggle("_open-menu")
-})
-
+if (headerMenu) {
+    headerMenu.addEventListener("click", () => {
+        headerMenu.classList.toggle("_open-menu")
+    })
+}
 
 // работа с открытием поиска на мобилке
 
 const mobileSearchOpen = document.getElementById("open-mobile-search") || null
 const mobileSearchClose = document.getElementById("open-mobile-close") || null
 
-mobileSearchOpen.addEventListener("click", () => {
-    document.documentElement.classList.add("_mobile-search-open")
-})
+if (mobileSearchOpen) {
+    mobileSearchOpen.addEventListener("click", () => {
+        document.documentElement.classList.add("_mobile-search-open")
+    })
+}
 
-mobileSearchClose.addEventListener("click", () => {
-    document.documentElement.classList.remove("_mobile-search-open")
-})
+if (mobileSearchClose) {
+    mobileSearchClose.addEventListener("click", () => {
+        document.documentElement.classList.remove("_mobile-search-open")
+    })
+}
 
 // скролл наверх
 
@@ -124,106 +135,294 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // переключение табов 
 
-const goodsTags = document.querySelectorAll("#goods .tag-item") || null
-goodsTags.forEach(tag => {
-    tag.addEventListener("click", () => {
-        if (!tag.classList.contains("_active")) {
-            goodsTags.forEach(item => {
-                item.classList.remove("_active")
-            })
-            tag.classList.add("_active")
-        }
-    })
-});
+let goodsTags = document.querySelectorAll("#goods .tag-item") || null
+
+if (goodsTags.length) {
+    goodsTags.forEach(tag => {
+        tag.addEventListener("click", () => {
+            if (!tag.classList.contains("_active")) {
+                goodsTags.forEach(item => {
+                    item.classList.remove("_active")
+                })
+                tag.classList.add("_active")
+            }
+        })
+    });
+}
 
 // отображение полного списка тегов
 
 const showHideTags = document.getElementById("show-hide-tags") || null
 const tagsWrapper = document.getElementById("tags-wrapper") || null
-showHideTags.addEventListener("click", () => {
-    tagsWrapper.classList.toggle("_all")
-})
+
+if (showHideTags) {
+    showHideTags.addEventListener("click", () => {
+        tagsWrapper.classList.toggle("_all")
+    })
+}
+
 
 // иконка добавить-убрать из избранного
 
 let allHeartIcons = document.querySelectorAll(".icons-product__heart") || null
-allHeartIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        icon.classList.toggle("_active")
-    })
-});
+
+if (allHeartIcons.length) {
+    allHeartIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            icon.classList.toggle("_active")
+        })
+    });
+}
 
 // иконка добавить-убрать из сравнения
 
 let allComparisonIcons = document.querySelectorAll(".icons-product__comparison") || null
-allComparisonIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        icon.classList.toggle("_active")
-    })
-});
+
+if (allComparisonIcons.length) {
+    allComparisonIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            icon.classList.toggle("_active")
+        })
+    });
+}
+
 
 // работа с попапами
 
 const popupShowElements = document.querySelectorAll("[data-popup]")
 const popupHideElements = document.querySelectorAll(".popup__close")
 
-popupShowElements.forEach(element => {
-    element.addEventListener("click", () => {
-        let popupId = element.getAttribute("data-popup");
-        // console.log(document.querySelector(`#${popupId}`))
-        document.querySelector(`#${popupId}`).classList.add('popup_show');
-        document.querySelector('html').classList.add('lock');
-        document.querySelector('html').classList.add('popup-show');
-    })
-});
-
-popupHideElements.forEach(element => {
-    element.addEventListener("click", () => {
+function popupClose(element) {
+    if (element.closest(".popup").dataset.single == "true" || element.classList.contains("popup__close")) {
         element.closest('.popup').classList.remove('popup_show');
         document.querySelector('html').classList.remove('lock');
         document.querySelector('html').classList.remove('popup-show');
+    } else {
+        element.closest('.popup').classList.remove('popup_show');
+    }
+}
+
+function popupShow(element) {
+    console.log(element)
+    let popupId = element.getAttribute("data-popup");
+    // console.log(document.querySelector(`#${popupId}`))
+    document.querySelector(`#${popupId}`).classList.add('popup_show');
+    document.querySelector('html').classList.add('lock');
+    document.querySelector('html').classList.add('popup-show');
+}
+
+if (popupShowElements.length) {
+    popupShowElements.forEach(element => {
+        element.addEventListener("click", () => {
+            popupShow(element)
+        })
+    });
+}
+
+if (popupHideElements.length) {
+    popupHideElements.forEach(element => {
+        element.addEventListener("click", () => {
+            popupClose(element)
+        })
     })
-})
+}
+
+// каталог
+
+const gridSwitcher = document.getElementById("grid-switcher")
+const catalogContainer = document.getElementById("catalog")
+
+if (gridSwitcher) {
+    gridSwitcher.addEventListener("click", () => {
+        catalogContainer.classList.toggle("_list")
+    })
+}
+
+// отображение типа сортировки
+
+const sortSwitcher = document.getElementById("sorting-type")
+
+if (sortSwitcher) {
+    sortSwitcher.addEventListener("click", () => {
+        sortSwitcher.classList.toggle("_active")
+
+        if (window.screen.width < 577) {
+            document.documentElement.classList.toggle("_filter-active")
+        }
+    })
+
+    const sortingElements = sortSwitcher.querySelectorAll(".sorting__item")
+    const currentSortingElement = sortSwitcher.querySelector("span[data-current]")
+
+    sortingElements.forEach(element => {
+        element.addEventListener("click", () => {
+            currentSortingElement.textContent = element.textContent
+            currentSortingElement.dataset.current = element.dataset.sorting
+        })
+    });
+}
+
+const filters = document.querySelectorAll(".catalog-filter")
+
+if (filters.length) {
+    filters.forEach(filter => {
+        const filterShow = filter.querySelector("._show")
+        const filterHide = filter.querySelector("._hide")
+
+        filterShow.addEventListener("click", () => {
+            filter.classList.add("_all")
+        })
+
+        filterHide.addEventListener("click", () => {
+            filter.classList.remove("_all")
+        })
+    });
+}
+
+// закрытие - открытие фильров в мобилке
+
+const closeFiltersBnt = document.getElementById("close-filters")
+const asideFilters = document.getElementById("aside-filters")
+
+if (closeFiltersBnt) {
+    closeFiltersBnt.addEventListener("click", () => {
+        document.documentElement.classList.remove("_filter-active")
+        asideFilters.classList.remove("_active")
+    })
+}
+
+// отображение фильтра в мобилке
+
+const mobFilterBtn = document.getElementById("mob-filter-btn")
+
+if (mobFilterBtn) {
+    mobFilterBtn.addEventListener("click", () => {
+        document.documentElement.classList.add("_filter-active")
+        asideFilters.classList.add("_active")
+    })
+}
 
 // инициализация маски ввода телефона
 
-Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
-Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
-
-
-// проверка полей на заполненность
-
 const callMePopup = document.getElementById('call-me') || null;
-const nameInput = document.getElementById('name-for-call') || null;
-const emailInput = document.getElementById('number-for-call') || null;
-const submitButton = callMePopup.querySelector('button[type="submit"]') || null;
+const nameInputCall = document.getElementById('name-for-call') || null;
+const emailInputCall = document.getElementById('number-for-call') || null;
+// const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
 
-nameInput.addEventListener('input', toggleButtonState);
-emailInput.addEventListener('input', toggleButtonState);
-
-function toggleButtonState() {
-    if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '') {
-        submitButton.removeAttribute('disabled');
-    } else {
-        submitButton.setAttribute('disabled', 'disabled');
-    }
+if (callMePopup) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
 }
+
+if (nameInputCall) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
+}
+
+if (emailInputCall) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
+}
+
+// проверка полей попапов на заполненность
+
+let popups = document.querySelectorAll(".popup")
+
+popups.forEach(popup => {
+    const inputName = popup.querySelector("input[name='name']" || null)
+    const inputPhone = popup.querySelector("input[name='number']" || null)
+    const inputCode = popup.querySelector("input[name='code']" || null)
+    // const inputEmail = popup.querySelector("input[name='email']" || null)
+    const submitButton = popup.querySelector("button[type='submit']") || null
+
+    if (submitButton) {
+        submitButton.addEventListener("click", (event) => {
+            event.preventDefault()
+            popupClose(submitButton)
+        })
+    }
+
+
+    if (inputName) {
+        inputName.addEventListener('input', toggleButtonState);
+    }
+
+    if (inputPhone) {
+        inputPhone.addEventListener('input', toggleButtonState);
+    }
+
+    if (inputCode) {
+        inputCode.addEventListener('input', toggleButtonState);
+    }
+
+    // if (inputEmail) {
+    //     inputEmail.addEventListener('input', toggleButtonState);
+    // }
+
+    function toggleButtonState() {
+
+        if (inputCode) {
+            if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '' && inputCode.value.trim() !== '') {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled', 'disabled');
+            }
+        } else {
+            if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '') {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled', 'disabled');
+            }
+        }
+    }
+
+    // console.log(inputName, inputEmail, inputPhone)
+});
+
+// const requestPopup = document.getElementById('request') || null;
+// const nameInputRequest = document.getElementById('name-for-request') || null;
+// const emailInputRequest = document.getElementById('number-for-request') || null;
+// const submitButtonRequest = requestPopup.querySelector('button[type="submit"]') || null;
+
+// if (nameInputCall) {
+//     nameInputCall.addEventListener('input', toggleButtonState);
+// }
+
+// if (emailInputCall) {
+//     emailInputCall.addEventListener('input', toggleButtonState);
+// }
+
+
+// if (nameInputRequest) {
+//     nameInputRequest.addEventListener('input', toggleButtonState);
+// }
+
+// if (emailInputRequest) {
+//     emailInputRequest.addEventListener('input', toggleButtonState);
+// }
+
+// function toggleButtonState() {
+//     if (nameInputCall.value.trim() !== '' && emailInputCall.value.trim() !== '') {
+//         submitButtonCall.removeAttribute('disabled');
+//     } else {
+//         submitButtonCall.setAttribute('disabled', 'disabled');
+//     }
+// }
 
 // валидация полей
 
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-const input = document.querySelector('input[type="email"]');
+const inputEmail = document.querySelector('input[type="email"]');
 
 function isEmailValid(value) {
     return EMAIL_REGEXP.test(value);
 }
 
 function onInput() {
-    if (isEmailValid(input.value)) {
-        input.style.borderColor = 'green';
+    if (isEmailValid(inputEmail.value)) {
+        inputEmail.style.borderColor = 'green';
     } else {
-        input.style.borderColor = 'red';
+        inputEmail.style.borderColor = 'red';
     }
 }
 
-input.addEventListener('input', onInput);
+if (inputEmail) {
+    inputEmail.addEventListener('input', onInput);
+}

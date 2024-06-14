@@ -1,0 +1,53 @@
+.breadcrumbs {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #90949A;
+        font-size: 18px;
+        line-height: 1.6;
+        font-family: Manrope;
+
+        &:not(:last-child)::after {
+            content: "/";
+            line-height: 1;
+        }
+
+        &:last-child {
+            color: $mainColor;
+
+            a {
+                cursor: inherit;
+            }
+
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        transition: 0.3s ease color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainColor
+            }
+        }
+    }
+}

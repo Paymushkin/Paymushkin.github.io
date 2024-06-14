@@ -1,4 +1,4 @@
-#call-me.popup(aria-hidden='true')
+#call-me.popup(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
@@ -11,8 +11,49 @@
 				p.popup__text Укажите свой контактный телефон и мы перезвоним вам в ближайшее время
 				form(action="#", method="post").popup__form
 					.popup__inputs
-						input#name-for-call.popup__input(type="text", name="name-for-call", placeholder="ФИО", required)
-						input#number-for-call.popup__input(type="tel", name="number-for-call", placeholder="+7 (___)___-__-__", required)
+						input#name-for-call.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input#number-for-call.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
 					button(type="submit", disabled).button.popup__button Отправить 
 				p.popup__policy Нажимая «Отправить», вы принимаете условия 
 					a(href="#", target="_blank") политики конфиденциальности
+
+#request.popup(aria-hidden='true', data-single="false")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewbox='0 0 26 26' fill='none')
+					path(d='M19.3637 19.3639L6.63574 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+					path(d='M6.63585 19.3639L19.3638 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+			.popup__body
+				h2.popup__title Сделать заказ
+				p.popup__text Укажите свой контактный телефон и мы перезвоним вам в ближайшее время
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#name-for-request.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input#number-for-request.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+						//- input#email-for-request.popup__input(type="email", name="email", placeholder="E-mail", required)
+						.popup__verification.verification-form
+							.verification-form__example 
+								span#verification-example 88 / 8 =
+							input#example-for-request.popup__input.verification-form__input(type="number", name="code", placeholder="Введите ответ", required)
+					button(type="submit", disabled, data-popup="request-success").button.popup__button Отправить 
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+
+#request-success.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewbox='0 0 26 26' fill='none')
+					path(d='M19.3637 19.3639L6.63574 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+					path(d='M6.63585 19.3639L19.3638 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+			.popup__body
+				h2.popup__title Спасибо за заявку
+				p.popup__text Ваша заявка успешно отправлена, наши специалисты свяжутся с вами в течение 30 минут
+				//- form(action="#", method="post").popup__form
+				//- 	button(type="submit", disabled).button.popup__button Отправить 
+				//- p.popup__policy Нажимая «Отправить», вы принимаете условия 
+				//- 	a(href="#", target="_blank") политики конфиденциальности

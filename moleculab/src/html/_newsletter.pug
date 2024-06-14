@@ -3,6 +3,10 @@ section.form-banner.banner-newsletter
         .form-banner__body.banner-body(style="background-image: url(img/banner/newsletter.png)")
             .banner-body__content
                 h2.banner-body__title Будьте в курсе всех новинок, акций и полезных статей!
+                .banner-body__success
+                    svg(xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none")
+                        path(d="M7.81217 13.0002L10.9372 16.1252L17.1872 9.87516M22.9163 13.0002C22.9163 18.7531 18.2526 23.4168 12.4997 23.4168C6.74671 23.4168 2.08301 18.7531 2.08301 13.0002C2.08301 7.2472 6.74671 2.5835 12.4997 2.5835C18.2526 2.5835 22.9163 7.2472 22.9163 13.0002Z" stroke="#00A0DB" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
+                    span Вы подписались на рассылку.
                 p.banner-body__text Подпишись на нашу рассылку прямо сейчас.
             form#banner-newsletter(action="#", method="post").banner-body__form
                 input#newsletter-name.input.banner-body__input(type="text", name="name", placeholder="Имя", autocomplete="on", required)

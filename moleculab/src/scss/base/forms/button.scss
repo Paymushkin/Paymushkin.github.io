@@ -41,6 +41,12 @@
 		pointer-events: none;
 	}
 
+	&:disabled {
+		color: #fff;
+		background-color: #D5D5D5;
+		pointer-events: none;
+	}
+
 	&._highlight {
 		background-color: $highlightColor-1;
 	}
@@ -74,6 +80,19 @@
 		min-height: 30px;
 		font-size: 14px;
 		line-height: 1.4;
+	}
+
+	&._transparent {
+		color: $highlightColor-2;
+		background-color: transparent;
+		border: 1px solid $highlightColor-2;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #77C149;
+			}
+		}
 	}
 
 	&._gradient {
