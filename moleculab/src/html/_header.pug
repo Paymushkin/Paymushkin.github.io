@@ -72,29 +72,836 @@ header.header#heade(itemscope="" itemtype="http://schema.org/WPHeader")
 			.header-middle__left
 				a(href="/").header-middle__logo
 					img(src="@img/logo.svg", alt="Logo")
-				//- #open-header-menu.header-middle__menu.header-menu
-				//- 	span.header-menu__line
+				#open-header-menu.header-middle__menu.header-menu
+					span.header-menu__line
 
 					nav.header-menu__hidden-block(itemscope="" itemtype="http://schema.org/SiteNavigationElement")
-						ul.header-menu__list
-							li.header-menu__item(data-value="Все разделы")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Все разделы
-							li.header-menu__item(data-value="Клеточная биология")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Клеточная биология
-							li.header-menu__item(data-value="Клиническая диагностика")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Клиническая диагностика
-							li.header-menu__item(data-value="Биофарма")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Биофарма
-							li.header-menu__item(data-value="Геномика")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Геномика
-							li.header-menu__item(data-value="Протеомика")
-								a(href="#", itemprop="url")  
-									span(itemprop="name") Протеомика
+						//- ul.header-menu__list
+						//- 	li.header-menu__item(data-value="Все разделы")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Все разделы
+						//- 	li.header-menu__item(data-value="Клеточная биология")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Клеточная биология
+						//- 	li.header-menu__item(data-value="Клиническая диагностика")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Клиническая диагностика
+						//- 	li.header-menu__item(data-value="Биофарма")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Биофарма
+						//- 	li.header-menu__item(data-value="Геномика")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Геномика
+						//- 	li.header-menu__item(data-value="Протеомика")
+						//- 		a(href="#", itemprop="url")  
+						//- 			span(itemprop="name") Протеомика
+
+						style.
+							.banner-header_1 {
+								background-image: url(img/header/banner-1.png)
+							}
+							@media (max-width:768px) {
+								.banner-header_1 {
+									background-image: url(img/header/banner-1.png)
+								}
+							}
+
+							@media (max-width:576px) {
+								.banner-header_1 {
+									background-image: url(img/header/banner-1.png)
+								}
+							}
+						.header-tabs__container
+							#header-tabs.tabs.header-menu__tabs.header-tabs(data-tabs="")
+								nav.tabs__navigation.header-tabs__navigation
+									button(data-tab-button="1").tabs__title.header-tabs__title._tab-active Оборудование
+									button(data-tab-button="2").tabs__title.header-tabs__title Аксессуары для оборудования
+									button(data-tab-button="3").tabs__title.header-tabs__title Лабораторный пластик
+									button(data-tab-button="4").tabs__title.header-tabs__title Расходные материалы
+									button(data-tab-button="5").tabs__title.header-tabs__title Реагенты
+									button(data-tab-button="6").tabs__title.header-tabs__title Мебель
+
+								div(data-tabs-body="1").tabs__content.header-tabs__content._content-active
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Оборудование
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+
+								div(data-tabs-body="2").tabs__content.header-tabs__content
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Аксессуары для оборудования
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+								div(data-tabs-body="3").tabs__content.header-tabs__content
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Лабораторный пластик
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+								div(data-tabs-body="4").tabs__content.header-tabs__content
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Расходные материалы
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+								div(data-tabs-body="5").tabs__content.header-tabs__content
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Реагенты
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+								div(data-tabs-body="6").tabs__content.header-tabs__content
+									div.tabs__body.header-tabs__body 
+										.header-tabs__banner.banner-header.banner-header_1
+											.banner-header__title Научное и контрольно-аналитическое оборудование
+											a(href="").button.banner-header__button В каталог
+
+										h2.header-tabs__category(data-count="1234") Мебель
+
+										.header-tabs__grid
+
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+											
+											.grid-tab._full-list
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
+											.grid-tab
+												ul.grid-tab__list
+													li.grid-tab__item
+														a(href="").grid-tab__link Научное и контрольно-аналитическое оборудование
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Автоматические станции
+													li.grid-tab__item(data-count="124")
+														a(href="").grid-tab__link Гель-документирующие системы
+													li.grid-tab__item(data-count="12")
+														a(href="").grid-tab__link Иммуноанализаторы
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+													li.grid-tab__item(data-count="1234")
+														a(href="").grid-tab__link Оборудование для молекулярной спектроскопии
+
+												span.grid-tab__more Еще 8
+												span.grid-tab__less Свернуть
+
 
 			.header-middle__center(itemscope="" itemtype="http://schema.org/WebSite")
 				form(action="#", method="post", itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction").header-middle__form.search-form

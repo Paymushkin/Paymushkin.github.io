@@ -76,9 +76,35 @@ if (selectOptions.length) {
 const headerMenu = document.getElementById("open-header-menu") || null
 
 if (headerMenu) {
+    headerMenu.querySelector(".header-menu__hidden-block").addEventListener("click", function (event) {
+        event.stopPropagation()
+    })
     headerMenu.addEventListener("click", () => {
         headerMenu.classList.toggle("_open-menu")
+
+        if (window.screen.width > 576) {
+            document.documentElement.classList.toggle("_lock")
+        }
     })
+
+    const showFullListBtns = headerMenu.querySelectorAll(".grid-tab__more")
+    const hideFullListBtns = headerMenu.querySelectorAll(".grid-tab__less")
+
+    if (showFullListBtns.length) {
+        showFullListBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.parentElement.classList.add("_full-list")
+            })
+        });
+    }
+
+    if (hideFullListBtns.length) {
+        hideFullListBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.parentElement.classList.remove("_full-list")
+            })
+        });
+    }
 }
 
 // работа с открытием поиска на мобилке
@@ -110,26 +136,29 @@ document.getElementById('to-top').addEventListener('click', function () {
 
 // https://vanilla-calendar.pro/ru/docs/reference/additionally/actions
 document.addEventListener('DOMContentLoaded', () => {
-    const calendar = new VanillaCalendar('#calendar', {
-        settings: {
-            range: {
-                // disablePast: true,
+
+    if (document.getElementById("calendar")) {
+        const calendar = new VanillaCalendar('#calendar', {
+            settings: {
+                range: {
+                    // disablePast: true,
+                },
+                lang: 'ru',
+                visibility: {
+                    theme: 'light',
+                },
             },
-            lang: 'ru',
-            visibility: {
-                theme: 'light',
+            actions: {
+                clickDay(e, self) {
+                    console.log(self.selectedDates);
+                },
+                clickArrow(event, self) {
+                    console.log(self.selectedYear, self.selectedMonth);
+                },
             },
-        },
-        actions: {
-            clickDay(e, self) {
-                console.log(self.selectedDates);
-            },
-            clickArrow(event, self) {
-                console.log(self.selectedYear, self.selectedMonth);
-            },
-        },
-    });
-    calendar.init();
+        });
+        calendar.init();
+    }
 });
 
 
@@ -321,6 +350,30 @@ if (window.screen.width > 1024) {
         }
     }
 }
+
+// работа с табами
+
+const headerTabs = document.getElementById("header-tabs")
+
+if (headerTabs) {
+    const tabsBnts = headerTabs.querySelectorAll("button.tabs__title")
+    const tabsContent = headerTabs.querySelectorAll(".header-tabs__content")
+
+    tabsBnts.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-button")
+
+        tab.addEventListener("mouseover", () => {
+            tabsContent.forEach(content => {
+                content.classList.remove("_content-active")
+            })
+            // console.log(tabID)
+            // console.log(headerTabs.querySelector(`[data-tabs-body="${tabID}"]`))
+            headerTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active")
+        })
+    });
+}
+
+
 
 // инициализация маски ввода телефона
 
