@@ -1,13 +1,7 @@
 section.catalog
     .catalog__container
-        .breadcrumbs.catalog__breadcrumbs
-            ul.breadcrumbs__list
-                li.breadcrumbs__item 
-                    a(href="/").breadcrumbs__link Главная
-                li.breadcrumbs__item 
-                    a(href="/catalog/").breadcrumbs__link Каталог
-                li.breadcrumbs__item 
-                    a(href="/catalog/genomika/").breadcrumbs__link Геномика
+        include _breadcrumbs
+
         style.
             .banner-catalog {
                 background-image: url(img/catalog/banner/genomika.png)

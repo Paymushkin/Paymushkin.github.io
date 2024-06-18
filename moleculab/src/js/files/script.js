@@ -333,11 +333,12 @@ if (mobFilterBtn) {
 
 
 // липкий сайдбар
+const aside = document.querySelector('aside');
 
-if (window.screen.width > 1024) {
+if (window.screen.width > 1024 && aside) {
     window.onscroll = function () {
         let screenHeight = window.screen.height;
-        const aside = document.querySelector('aside');
+
         let asideHeight = aside.offsetHeight;
         let asideStickyPosition = asideHeight - screenHeight;
 
@@ -351,7 +352,7 @@ if (window.screen.width > 1024) {
     }
 }
 
-// работа с табами
+// работа с табами в шапке
 
 const headerTabs = document.getElementById("header-tabs")
 
@@ -373,6 +374,83 @@ if (headerTabs) {
     });
 }
 
+// работа с табами в описании товара
+
+const productTabs = document.getElementById("details")
+
+if (productTabs) {
+    const tabsBnts = productTabs.querySelectorAll("button.details-tabs__title")
+    const tabsContent = productTabs.querySelectorAll(".details__content")
+
+    tabsBnts.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-button")
+
+        tab.addEventListener("click", () => {
+            tabsContent.forEach(content => {
+                content.classList.remove("_content-active")
+            })
+            productTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active")
+        })
+    });
+}
+
+// показать больше текста в описании
+
+const descLessMoreTextBnt = document.getElementById("description-more-less")
+
+if (descLessMoreTextBnt) {
+    descLessMoreTextBnt.addEventListener("click", () => {
+        descLessMoreTextBnt.parentElement.classList.toggle("_less-text")
+
+        if (descLessMoreTextBnt.textContent.trim() === "Читать полностью") {
+            descLessMoreTextBnt.textContent = "Свернуть"
+        } else {
+            descLessMoreTextBnt.textContent = "Читать полностью"
+        }
+
+        console.log(descLessMoreTextBnt.textContent)
+    })
+}
+
+// добавить в корзину товар и работа с счетчиком товара
+
+const addToCartBtn = document.getElementById("add-to-cart")
+const productCounter = document.getElementById("product-counter")
+
+if (addToCartBtn) {
+    const increaseCounter = productCounter.querySelector(".counter-product__increase")
+    const decreaseCounter = productCounter.querySelector(".counter-product__decrease")
+    const productQuantity = document.getElementById("product-quantity")
+    const currentQuantity = productCounter.querySelector(".current-quantity")
+
+    addToCartBtn.addEventListener("click", () => {
+        addToCartBtn.parentElement.classList.add("_product-in-cart")
+        productQuantity.value = 1
+        currentQuantity.textContent = productQuantity.value
+    })
+
+    increaseCounter.addEventListener("click", () => {
+        productQuantity.value = +(productQuantity.value) + 1
+        currentQuantity.textContent = productQuantity.value
+    })
+
+    decreaseCounter.addEventListener("click", () => {
+        productQuantity.value = +(productQuantity.value) - 1
+        currentQuantity.textContent = productQuantity.value
+
+        if (!+(productQuantity.value)) {
+            addToCartBtn.parentElement.classList.remove("_product-in-cart")
+        }
+    })
+}
+
+// скролл к информации о товаре
+
+document.getElementById('to-details').addEventListener('click', function () {
+    document.querySelector('#details').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
 
 
 // инициализация маски ввода телефона

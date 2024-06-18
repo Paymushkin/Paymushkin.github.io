@@ -636,6 +636,85 @@ function initSliders() {
 			// }
 		});
 	}
+
+	if (document.querySelector('.product__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.product__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			// modules: [Autoplay, Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 800,
+
+			// Пагинация
+
+			pagination: {
+				// el: '.hero-slide__pagination',
+				// clickable: true,
+				// type: "fraction",
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				// prevEl: '.hero-slide__prev',
+				// nextEl: '.hero-slide__next',
+			},
+
+			// Брейкпоинты
+
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	576: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 10,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 20,
+			// 	},
+			// },
+			// События
+			on: {
+				init: function (swiper) {
+					// работа с переключением главное изображения в продукте
+
+					const thumbnails = document.querySelectorAll('.product-gallery__item');
+					thumbnails.forEach(function (thumbnail, index) {
+						thumbnail.addEventListener('click', function () {
+							thumbnails.forEach(thumbnail => {
+								thumbnail.classList.remove("_current-slide")
+							})
+							thumbnail.classList.add("_current-slide")
+
+							swiper.slideTo(index); // Переключение на соответствующий слайд
+						});
+					});
+				},
+				// slideChange: function(swiper) {
+				// 	const currentSlide = document.querySelector(".fraction-controll__current");
+				// 	currentSlide.textContent = (swiper.realIndex + 1) < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
+				// }
+			}
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 

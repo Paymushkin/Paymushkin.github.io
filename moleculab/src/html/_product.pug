@@ -1,0 +1,174 @@
+section.product
+    .product__container
+
+        include _breadcrumbs
+
+        .product__header.header-product 
+            .header-product__gallery.product-gallery
+                ul.product-gallery__list 
+                    li.product-gallery__item._current-slide
+                        img(src="@img/product/item-1.png", alt="product")
+                    li.product-gallery__item
+                        img(src="@img/product/item-2.png", alt="product")
+                    li.product-gallery__item
+                        img(src="@img/product/item-1.png", alt="product")
+                    li.product-gallery__item
+                        img(src="@img/product/item-2.png", alt="product")
+                .product-gallery__main
+                    .product__slider.swiper
+                        .product-item__label._popular.product-gallery__label Популярное
+                        .product__wrapper.swiper-wrapper
+                            .product-gallery__slide.swiper-slide
+                                img(src="@img/product/item-big-1.png", alt="")
+                            .product-gallery__slide.swiper-slide
+                                img(src="@img/product/item-big-1.png", alt="")
+                            .product-gallery__slide.swiper-slide
+                                img(src="@img/product/item-big-1.png", alt="")
+                            .product-gallery__slide.swiper-slide
+                                img(src="@img/product/item-big-1.png", alt="")
+                     
+            .header-product__content.content-product
+                .content-product__top
+                    h1.content-product__title УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом
+                    .content-product__icons  
+                        span.icons-product__heart.content-product__icon.content-product__heart 
+                            include icons/_heart
+                        span.icons-product__comparison.content-product__icon.content-product__comparison
+                            include icons/_comparison
+
+                .content-product__middle
+                    .product-item__prices.content-product__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                        meta(itemprop='priceCurrency' content='RUB')
+                        meta(itemprop='price' content='68334')
+                        meta(itemprop='availability' content='http://schema.org/InStock')
+                        span.content-product__price 68 334 ₽
+                        span.content-product__price.content-product__price-old 100 334 ₽
+
+                    .content-product__buttons
+                        #product-counter.content-product__counter.counter-product
+                            .counter-product__decrease
+                                span –
+                            span.current-quantity 1
+                            .counter-product__increase
+                                span +
+                            input#product-quantity(type="number", name="product-quantit", hidden, value="0")
+
+                        button#add-to-cart.button.content-product__button._to-cart В корзину
+                        button.button._gradient.content-product__button._in-cart(data-text="В корзине")
+                            span  В корзине
+                        button.button._transparent.content-product__button Подобрать аналог
+                        
+
+                .content-product__bottom
+                    ul.product-item__info.info-product.content-product__list
+                        li.info-product__item Артикул:
+                            span Wufeng HELICON 1800 type 9
+                        li.info-product__item Производитель:
+                            span Clinx
+                        li.info-product__item Наличие:
+                            span._limited Ограничено
+                        li.info-product__item Регистрационное удостоверение:
+                            span Отсутствует
+                        li.info-product__item Регистрационное удостоверение:
+                            span Отсутствует
+                    #to-details.product-item__to
+                        span Все характеристики
+                        include icons/_arrow-down
+
+        .product__description
+            .description-top 
+                h2.description-top__title Описание товара
+                .description-top__body 
+                    .description-top__text._less-text 
+                        p Используя 20-летний опыт разработки, производства и обслуживания жидкостных хроматографов, 
+                            | Wufeng первыми среди китайских производителей выпустили жидкостной хроматограф 
+                            | сверхвысокого давления (более 1000 бар). 
+                            | Приборы серии SkyHan EX1800 HPLC/UHPLC были представлены в 2019 году. 
+                            | Их технические возможности позволяют реализовать большинство известных ВЭЖХ методик.
+                            | Wufeng первыми среди китайских производителей выпустили жидкостной хроматограф 
+                            | сверхвысокого давления (более 1000 бар). 
+                            | Приборы серии SkyHan EX1800 HPLC/UHPLC были представлены в 2019 году. 
+                            | Их технические возможности позволяют реализовать большинство известных ВЭЖХ методик.
+                        span#description-more-less Читать полностью
+
+                    .description-top__docs.docs
+                        h3.docs__title Инструкции и сертификаты
+                        ul.docs__list 
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+            .description-bottom
+                #details.details
+                    nav.details__navigation.details-tabs 
+                        button(data-tab-button="1").details-tabs__title._tab-active Характеристики
+                        button(data-tab-button="2").details-tabs__title Документация
+                        button(data-tab-button="3").details-tabs__title Доставка и оплата
+                        button(data-tab-button="4").details-tabs__title Гарантия
+
+                    .details__separator
+                    
+                    div(data-tabs-body="1").details__content.details-tab._content-active
+                        ul.details-tab__list
+                            li.details-tab__item 
+                                span.details-tab__option Управление источником света
+                                .details-tab__space 
+                                span.details-tab__value Транс УФ, супер-белый
+                            li.details-tab__item 
+                                span.details-tab__option Максимальный размер образца
+                                .details-tab__space 
+                                span.details-tab__value 19х26 см
+                            li.details-tab__item 
+                                span.details-tab__option Динамический диапазон изображения
+                                .details-tab__space 
+                                span.details-tab__value 16 бит
+                            li.details-tab__item 
+                                span.details-tab__option Оснащение модулей флуоресценции
+                                .details-tab__space 
+                                span.details-tab__value 8-позиционное колесо фильтров
+                            li.details-tab__item 
+                                span.details-tab__option Температура охлаждения камеры
+                                .details-tab__space 
+                                span.details-tab__value до - 30 °С
+                            li.details-tab__item 
+                                span.details-tab__option Управление системой
+                                .details-tab__space 
+                                span.details-tab__value Единое программное обеспечение
+                            li.details-tab__item 
+                                span.details-tab__option Габариты
+                                .details-tab__space 
+                                span.details-tab__value 430 х 380 х 690 мм
+                    
+
+                    div(data-tabs-body="2").details__content.details-tab
+                        p Документация
+
+                    div(data-tabs-body="3").details__content.details-tab
+                        p Доставка и оплата
+
+                    div(data-tabs-body="4").details__content.details-tab
+                        p Гарантия
+
+                                 
+
+

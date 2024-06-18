@@ -28,6 +28,10 @@ ul {
     list-style: none;
 }
 
+picture {
+    font-size: 0;
+}
+
 input {
     border-radius: 0;
 }
@@ -618,7 +622,7 @@ details {
         box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
         transform: scaleY(0);
         transition: 0.3s ease transform;
-        z-index: 3;
+        z-index: 4;
 
         ._open-menu & {
             transform: scaleY(1);
