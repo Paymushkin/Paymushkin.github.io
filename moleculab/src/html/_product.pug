@@ -1,6 +1,7 @@
 section.product
     .product__container
-
+        
+        - const productPage = true;
         include _breadcrumbs
 
         .product__header.header-product 
@@ -26,6 +27,7 @@ section.product
                                 img(src="@img/product/item-big-1.png", alt="")
                             .product-gallery__slide.swiper-slide
                                 img(src="@img/product/item-big-1.png", alt="")
+                    .product__pagination.swiper-pagination
                      
             .header-product__content.content-product
                 .content-product__top
@@ -61,17 +63,17 @@ section.product
 
                 .content-product__bottom
                     ul.product-item__info.info-product.content-product__list
-                        li.info-product__item Артикул:
+                        li.info-product__item.content-product__item Артикул:
                             span Wufeng HELICON 1800 type 9
-                        li.info-product__item Производитель:
+                        li.info-product__item.content-product__item Производитель:
                             span Clinx
-                        li.info-product__item Наличие:
+                        li.info-product__item.content-product__item Наличие:
                             span._limited Ограничено
-                        li.info-product__item Регистрационное удостоверение:
+                        li.info-product__item.content-product__item Регистрационное удостоверение:
                             span Отсутствует
-                        li.info-product__item Регистрационное удостоверение:
+                        li.info-product__item.content-product__item Регистрационное удостоверение:
                             span Отсутствует
-                    #to-details.product-item__to
+                    #to-details.product-item__to.content-product__item
                         span Все характеристики
                         include icons/_arrow-down
 
@@ -118,8 +120,8 @@ section.product
                                             span •
                                             span 15.06.2023
 
-            .description-bottom
-                #details.details
+            #details.description-bottom
+                .details
                     nav.details__navigation.details-tabs 
                         button(data-tab-button="1").details-tabs__title._tab-active Характеристики
                         button(data-tab-button="2").details-tabs__title Документация
@@ -169,6 +171,150 @@ section.product
                     div(data-tabs-body="4").details__content.details-tab
                         p Гарантия
 
+                .accordion
+                    details.accordion__details(open)
+                        summary.accordion__summary 
+                            span.accordion__title Характеристики
+                            span.accordion__icon
+                                include icons/_arrow-down 
+
+                        ul.details-tab__list.accordion__list
+                            li.details-tab__item 
+                                span.details-tab__option Управление источником света
+                                .details-tab__space 
+                                span.details-tab__value Транс УФ, супер-белый
+                            li.details-tab__item 
+                                span.details-tab__option Максимальный размер образца
+                                .details-tab__space 
+                                span.details-tab__value 19х26 см
+                            li.details-tab__item 
+                                span.details-tab__option Динамический диапазон изображения
+                                .details-tab__space 
+                                span.details-tab__value 16 бит
+                            li.details-tab__item 
+                                span.details-tab__option Оснащение модулей флуоресценции
+                                .details-tab__space 
+                                span.details-tab__value 8-позиционное колесо фильтров
+                            li.details-tab__item 
+                                span.details-tab__option Температура охлаждения камеры
+                                .details-tab__space 
+                                span.details-tab__value до - 30 °С
+                            li.details-tab__item 
+                                span.details-tab__option Управление системой
+                                .details-tab__space 
+                                span.details-tab__value Единое программное обеспечение
+                            li.details-tab__item 
+                                span.details-tab__option Габариты
+                                .details-tab__space 
+                                span.details-tab__value 430 х 380 х 690 мм
+ 
+                    details.accordion__details
+                        summary.accordion__summary 
+                            span.accordion__title Доставка и оплата
+                            span.accordion__icon
+                                include icons/_arrow-down 
+
+                        ul.details-tab__list.accordion__list
+                            li.details-tab__item 
+                                span.details-tab__option Управление источником света
+                                .details-tab__space 
+                                span.details-tab__value Транс УФ, супер-белый
+                            li.details-tab__item 
+                                span.details-tab__option Максимальный размер образца
+                                .details-tab__space 
+                                span.details-tab__value 19х26 см
+                            li.details-tab__item 
+                                span.details-tab__option Динамический диапазон изображения
+                                .details-tab__space 
+                                span.details-tab__value 16 бит
+                            li.details-tab__item 
+                                span.details-tab__option Оснащение модулей флуоресценции
+                                .details-tab__space 
+                                span.details-tab__value 8-позиционное колесо фильтров
+                            li.details-tab__item 
+                                span.details-tab__option Температура охлаждения камеры
+                                .details-tab__space 
+                                span.details-tab__value до - 30 °С
+                            li.details-tab__item 
+                                span.details-tab__option Управление системой
+                                .details-tab__space 
+                                span.details-tab__value Единое программное обеспечение
+                            li.details-tab__item 
+                                span.details-tab__option Габариты
+                                .details-tab__space 
+                                span.details-tab__value 430 х 380 х 690 мм
+                                 
+                    details.accordion__details
+                        summary.accordion__summary 
+                            span.accordion__title Документация
+                            span.accordion__icon
+                                include icons/_arrow-down 
+
+                        ul.details-tab__list.accordion__list
+                            li.details-tab__item 
+                                span.details-tab__option Управление источником света
+                                .details-tab__space 
+                                span.details-tab__value Транс УФ, супер-белый
+                            li.details-tab__item 
+                                span.details-tab__option Максимальный размер образца
+                                .details-tab__space 
+                                span.details-tab__value 19х26 см
+                            li.details-tab__item 
+                                span.details-tab__option Динамический диапазон изображения
+                                .details-tab__space 
+                                span.details-tab__value 16 бит
+                            li.details-tab__item 
+                                span.details-tab__option Оснащение модулей флуоресценции
+                                .details-tab__space 
+                                span.details-tab__value 8-позиционное колесо фильтров
+                            li.details-tab__item 
+                                span.details-tab__option Температура охлаждения камеры
+                                .details-tab__space 
+                                span.details-tab__value до - 30 °С
+                            li.details-tab__item 
+                                span.details-tab__option Управление системой
+                                .details-tab__space 
+                                span.details-tab__value Единое программное обеспечение
+                            li.details-tab__item 
+                                span.details-tab__option Габариты
+                                .details-tab__space 
+                                span.details-tab__value 430 х 380 х 690 мм
+                                 
+                    details.accordion__details
+                        summary.accordion__summary 
+                            span.accordion__title Гарантия
+                            span.accordion__icon
+                                include icons/_arrow-down 
+
+                        ul.details-tab__list.accordion__list
+                            li.details-tab__item 
+                                span.details-tab__option Управление источником света
+                                .details-tab__space 
+                                span.details-tab__value Транс УФ, супер-белый
+                            li.details-tab__item 
+                                span.details-tab__option Максимальный размер образца
+                                .details-tab__space 
+                                span.details-tab__value 19х26 см
+                            li.details-tab__item 
+                                span.details-tab__option Динамический диапазон изображения
+                                .details-tab__space 
+                                span.details-tab__value 16 бит
+                            li.details-tab__item 
+                                span.details-tab__option Оснащение модулей флуоресценции
+                                .details-tab__space 
+                                span.details-tab__value 8-позиционное колесо фильтров
+                            li.details-tab__item 
+                                span.details-tab__option Температура охлаждения камеры
+                                .details-tab__space 
+                                span.details-tab__value до - 30 °С
+                            li.details-tab__item 
+                                span.details-tab__option Управление системой
+                                .details-tab__space 
+                                span.details-tab__value Единое программное обеспечение
+                            li.details-tab__item 
+                                span.details-tab__option Габариты
+                                .details-tab__space 
+                                span.details-tab__value 430 х 380 х 690 мм
                                  
 
 

@@ -90,10 +90,6 @@ details {
             transition: 0.3s ease transform;
         }
     }
-
-    ul {
-        margin-top: 12px;
-    }
 }
 
 [class*="__container"] {
@@ -627,6 +623,10 @@ details {
         ._open-menu & {
             transform: scaleY(1);
         }
+
+        @media (max-width:$mobileSmall) {
+            display: none;
+        }
     }
 
     &__tabs {
@@ -665,9 +665,19 @@ details {
 
     &__navigation {
         flex: 0 0 346px;
+
+        @media (max-width:$tablet) {
+            flex: 1 1 auto;
+            gap: 5px;
+        }
     }
 
-    &__title {}
+    &__title {
+        @media (max-width:$tablet) {
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
 
     &__category {
         position: relative;
@@ -699,6 +709,14 @@ details {
         max-height: calc(100vh - 135px);
         overflow-y: auto;
 
+        @media (max-width:$tablet) {
+            padding: 24px;
+        }
+
+        @media (max-width:$mobile) {
+            padding: 10px 24px;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }
@@ -712,6 +730,10 @@ details {
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        @media (max-width:$tablet) {
+            gap: 24px;
+        }
     }
 
     &__banner {}
@@ -723,6 +745,10 @@ details {
 
         @media (max-width:$tablet) {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$tablet) {
+            grid-template-columns: 1fr;
         }
     }
 }
@@ -774,6 +800,10 @@ details {
                 text-overflow: ellipsis;
                 word-break: break-all;
                 line-height: 1.7;
+
+                @media (max-width:$mobile) {
+                    max-width: 100%;
+                }
             }
         }
 
@@ -843,6 +873,10 @@ details {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
+
+    @media (max-width:$mobile) {
+        display: none;
+    }
 
     &__title {
         margin-bottom: 16px;

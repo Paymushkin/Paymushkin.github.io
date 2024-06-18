@@ -389,7 +389,11 @@ if (productTabs) {
             tabsContent.forEach(content => {
                 content.classList.remove("_content-active")
             })
-            productTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active")
+            tabsBnts.forEach(tab => {
+                tab.classList.remove("_tab-active")
+            })
+            productTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+            productTabs.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
         })
     });
 }

@@ -654,8 +654,8 @@ function initSliders() {
 			// Пагинация
 
 			pagination: {
-				// el: '.hero-slide__pagination',
-				// clickable: true,
+				el: '.product__pagination',
+				clickable: true,
 				// type: "fraction",
 			},
 

@@ -3,7 +3,7 @@
     &__list {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 8px;
     }
 
@@ -24,6 +24,10 @@
 
         &:last-child {
             color: $mainColor;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
 
             a {
                 cursor: inherit;
