@@ -1,0 +1,130 @@
+.mobile-catalog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
+    max-height: calc(100vh - 70px);
+    max-height: calc(100dvh - 70px);
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 5;
+
+    ._mobile-catalog-active & {
+        display: flex;
+    }
+
+    &__header {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px 20px;
+        width: 100%;
+        background-color: #F5F8FF;
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 110px - 70px);
+        max-height: calc(100dvh - 110px - 70px);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.catalog-mobile {
+    display: flex;
+
+    &__form {
+        flex: 1 1 auto;
+    }
+
+    &__search {
+        padding: 20px;
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid #E3E3E3;
+        color: $textColor;
+        leading-trim: both;
+        text-edge: cap;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__block {}
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 20px;
+        color: $mainColor;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        svg {
+            transform: translateY(2px);
+        }
+    }
+
+    &__list {}
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 16px 20px;
+        color: $mainColor;
+        transition: 0.3s ease all;
+
+        svg path {
+            transition: 0.3s ease stroke;
+        }
+
+        &._highligth {
+            color: #fff;
+            background: $gradient-1;
+
+            svg path {
+                stroke: #fff;
+            }
+        }
+    }
+
+    &__point {
+        padding: 16px 20px;
+    }
+
+    &__letter {
+        color: #B7CCD8;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    &__text,
+    &__link {
+        color: $mainColor;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 400;
+
+        ._highligth & {
+            color: #fff;
+        }
+    }
+}

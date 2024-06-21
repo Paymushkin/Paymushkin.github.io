@@ -456,6 +456,54 @@ document.getElementById('to-details').addEventListener('click', function () {
     });
 });
 
+// работа с мобильным каталогом
+
+const mobileCatalog = document.getElementById("mobile-catalog")
+
+if (mobileCatalog) {
+
+    const openHideMobileCatalogBtn = document.getElementById("open-mobile-catalog")
+    const hideMobileCatalogBtn = document.getElementById("close-mobile-catalog")
+    const categoryBlock = mobileCatalog.querySelectorAll(".catalog-mobile__block")
+    const categoryBackBtns = mobileCatalog.querySelectorAll(".catalog-mobile__title")
+    const catalogCategories = mobileCatalog.querySelectorAll(".catalog-mobile__item")
+
+    openHideMobileCatalogBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("_mobile-catalog-active")
+    })
+
+    hideMobileCatalogBtn.addEventListener("click", () => {
+        document.documentElement.classList.remove("_mobile-catalog-active")
+    })
+
+    catalogCategories.forEach(category => {
+        category.addEventListener("click", () => {
+            const categoryID = category.getAttribute("data-catalog-category");
+            console.log(categoryID)
+
+            categoryBlock.forEach(block => {
+                block.setAttribute("hidden", "hidden")
+            });
+
+            console.log(document.querySelector(`div[data-category="${categoryID}"]`))
+            document.querySelector(`div[data-category="${categoryID}"]`).removeAttribute("hidden")
+        })
+    });
+
+    categoryBackBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const categoryID = btn.getAttribute("data-category-to");
+
+            categoryBlock.forEach(block => {
+                block.setAttribute("hidden", "hidden")
+            });
+
+            document.querySelector(`div[data-category="${categoryID}"]`).removeAttribute("hidden")
+        })
+    });
+}
+
+
 
 // инициализация маски ввода телефона
 
