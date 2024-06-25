@@ -52,8 +52,19 @@ body::after {
 	align-items: center;
 }
 
+.popup__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 32px;
+	padding-bottom: 32px;
+	border-bottom: 1px solid #DCE4EA;
+}
+
 .popup__content {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	visibility: hidden;
 	transform: scale(0);
@@ -87,9 +98,48 @@ body::after {
 	outline: none;
 	z-index: 2;
 
+	svg path {
+		transition: 0.3s ease stroke;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					stroke: $highlightColor-2;
+				}
+			}
+		}
+	}
+
 	@media (max-width:$mobileSmall) {
 		top: 20px;
 		right: 10px;
+	}
+
+	.popup__header & {
+		position: static;
+	}
+}
+
+.popup__back {
+
+	._step-1 & {
+		visibility: hidden;
+	}
+
+	svg path {
+		transition: 0.3s ease stroke;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					stroke: $highlightColor-2;
+				}
+			}
+		}
 	}
 }
 
@@ -100,6 +150,14 @@ body::after {
 	font-size: 24px;
 	font-weight: 600;
 	line-height: 1.33;
+}
+
+.popup__subtitle {
+	margin-bottom: 20px;
+	color: $mainColor;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6
 }
 
 .popup__text {
@@ -118,6 +176,19 @@ body::after {
 	margin-bottom: 32px;
 }
 
+.popup__field {
+	width: 100%;
+}
+
+.popup__label {
+	display: inline-block;
+	margin-bottom: 8px;
+	color: #333;
+	leading-trim: both;
+	text-edge: cap;
+	font-size: 14px;
+}
+
 .popup__input {
 	padding: 20px;
 	width: 100%;
@@ -130,6 +201,61 @@ body::after {
 
 	&::placeholder {
 		color: $textColor;
+	}
+}
+
+.popup-form__select {
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	min-height: 50px;
+	color: $mainColor;
+	// background: #FFF;
+	border-radius: 30px;
+	border: 1px solid #E3E3E3;
+	// font-size: 16px;
+
+	&::placeholder {
+		color: $textColor;
+	}
+
+	.select__title {
+		display: flex;
+		justify-content: space-between;
+
+		span {
+			color: $mainColor;
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+
+	.select__hidden-block {
+		min-width: 100%;
+	}
+}
+
+.popup__textarea {
+	padding: 20px;
+	width: 100%;
+	min-height: 50px;
+	color: $mainColor;
+	background: #FFF;
+	border-radius: 30px;
+	border: 1px solid #E3E3E3;
+	font-size: 16px;
+	resize: none;
+
+	&:focus {
+		outline: 1px solid $highlightColor-1;
+	}
+
+	&::placeholder {
+		color: $textColor;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
 	}
 }
 
@@ -150,5 +276,102 @@ body::after {
 
 	a {
 		color: $highlightColor-1;
+	}
+}
+
+.popup__sharing {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 20px;
+	height: 50px;
+	border-radius: 30px;
+	border: 1px solid #E3E3E3;
+	background: #FFF;
+}
+
+.popup__sharing-link {
+	flex: 1 1 auto;
+	font-size: 16px;
+
+	input {
+		width: 100%;
+		color: $textColor;
+		leading-trim: both;
+		text-edge: cap;
+		outline: none;
+	}
+}
+
+.popup__sharing-icon {
+	display: flex;
+	cursor: pointer;
+
+	svg {
+		path {
+			transition: 0.3s ease stroke;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					stroke: $highlightColor-2
+				}
+			}
+		}
+	}
+}
+
+.steps-popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+}
+
+.steps-popup__text {
+	color: $textColor;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.steps-popup__fractions {
+	display: flex;
+	align-items: center;
+	width: 62px;
+	height: 4px;
+	background-color: #ECF1F4;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.steps-popup__fraction {
+	width: 50%;
+	height: 100%;
+	transition: 0.3s ease background-color;
+
+	&:first-child {
+		background-color: $highlightColor-2;
+	}
+
+	._step-2 & {
+
+		&:nth-child(2) {
+			background-color: $highlightColor-2;
+		}
+	}
+
+	._step-3 & {
+
+		&:nth-child(2) {
+			background-color: $highlightColor-2;
+		}
+
+		&:nth-child(3) {
+			background-color: $highlightColor-2;
+		}
 	}
 }

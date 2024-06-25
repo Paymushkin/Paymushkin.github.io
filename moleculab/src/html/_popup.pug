@@ -2,9 +2,7 @@
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
-				svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewbox='0 0 26 26' fill='none')
-					path(d='M19.3637 19.3639L6.63574 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
-					path(d='M6.63585 19.3639L19.3638 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+				include icons/_close
 
 			.popup__body
 				h2.popup__title Закажите звонок в MolecuLab по телефону
@@ -21,9 +19,7 @@
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
-				svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewbox='0 0 26 26' fill='none')
-					path(d='M19.3637 19.3639L6.63574 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
-					path(d='M6.63585 19.3639L19.3638 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+				include icons/_close
 
 			.popup__body
 				h2.popup__title Сделать заказ
@@ -46,9 +42,7 @@
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
-				svg(xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewbox='0 0 26 26' fill='none')
-					path(d='M19.3637 19.3639L6.63574 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
-					path(d='M6.63585 19.3639L19.3638 6.63599' stroke='#7F7F7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+				include icons/_close
 
 			.popup__body
 				h2.popup__title Спасибо за заявку
@@ -57,3 +51,121 @@
 				//- 	button(type="submit", disabled).button.popup__button Отправить 
 				//- p.popup__policy Нажимая «Отправить», вы принимаете условия 
 				//- 	a(href="#", target="_blank") политики конфиденциальности
+
+#share-link.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Ссылка действует 15 дней
+				p.popup__text 
+					| При открытии ссылки у другого пользователя товары из вашей корзины 
+					| будут автоматически добавлены в его корзину
+				.popup__sharing 
+					.popup__sharing-link 
+						input#url-input(type="url", name="url-input" value="https://moleculab.ru/cart/12546537")
+					button.popup__sharing-icon
+						include icons/_link
+
+#tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content._step-1
+			.popup__header
+				button.popup__back
+					include icons/_arrow-popup
+				
+				.popup__steps.steps-popup 
+					.steps-popup__text 
+						span.current-step 1 
+						span из 
+						span.all-steps 2
+					.steps-popup__fractions 
+						.steps-popup__fraction
+						.steps-popup__fraction
+
+				button.popup__close(data-close='data-close' type='button')
+					include icons/_close
+
+			.popup__body
+				h2.popup__title Введите данные
+				p.popup__text 
+					| Заполните данные для оформления тендера
+				form(action="#", method="post").popup__form
+					.step.step-1(hidden)
+						h3.popup__subtitle Личные данные
+						.popup__inputs
+							.popup__field
+								label.popup__label Имя
+								input#name-for-tender.popup__input(type="text", name="name", placeholder="Наталья", required)
+
+							.popup__field
+								label.popup__label Фамилия
+								input#surname-for-tender.popup__input(type="text", name="surname", placeholder="Карандашова", required)
+
+							.popup__field
+								label.popup__label Отчество
+								input#patronum-for-tender.popup__input(type="text", name="patronum", placeholder="Олеговна")
+
+						h3.popup__subtitle Контакты
+						.popup__inputs
+							.popup__field
+								label.popup__label Номер телефона
+								input#number-for-tender.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+							
+							.popup__field
+								label.popup__label Почта
+								input#email-for-tender.popup__input(type="email", name="email", placeholder="E-mail", required)
+							
+						button(type="text", disabled).button.popup__button Далее
+					.step.step-2
+						h3.popup__subtitle Сведения об организации
+						.popup__inputs
+							.popup__field
+								label.popup__label Наименование организации
+								input#company-for-tender.popup__input(type="text", name="company", placeholder="ООО “ТоргДом”", required)
+
+							.popup__field
+								label.popup__label ИНН
+								input#inn-for-tender.popup__input(type="number", name="inn", placeholder="1234567890", required)
+
+							.popup__field
+								label.popup__label Регион
+								.popup-form__select.select
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Московская область") Московская область
+											li.select__item(data-value="ЮФО") ЮФО
+											li.select__item(data-value="СЗФО") СЗФО
+											li.select__item(data-value="ЦФО") ЦФО
+
+							.popup__field
+								label.popup__label Город
+								.popup-form__select.select
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Рязань") Рязань
+											li.select__item(data-value="Казань") Казань
+											li.select__item(data-value="Самара") Самара
+											li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+							
+							.popup__field
+								label.popup__label Улица
+								input#street-for-tender.popup__input(type="text", name="street", placeholder="Введите адрес")
+
+						h3.popup__subtitle Комментарий к заказу
+						.popup__inputs
+							textarea#comments.popup__textarea(name="comments") 
+							
+						button(type="text", disabled).button.popup__button Далее

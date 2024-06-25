@@ -45,28 +45,36 @@ if (openCustomerBlock) {
 
 
 
-// работа с селектом в шапке
+// работа с селектами
 
-const selectOptions = document.querySelectorAll("li.select__item[data-value]") || null
-const openSelect = document.getElementById("open-select") || null
+const selects = document.querySelectorAll(".select")
 
-if (selectOptions.length) {
-    openSelect.addEventListener("click", () => {
-        openSelect.parentNode.classList.toggle("_open-select")
-    })
+if (selects.length) {
 
-    selectOptions.forEach(option => {
-        option.addEventListener("click", () => {
+    console.log(selects)
 
-            const currentValue = document.getElementById("current-value")
-            const currentSelectValue = option.dataset.value
+    selects.forEach(select => {
+        let openSelect = select.querySelector(".open-select") || null
+        let selectOptions = select.querySelectorAll("li.select__item[data-value]") || null
 
-            currentValue.dataset.current = currentSelectValue
-            currentValue.textContent = currentSelectValue
-            openSelect.parentNode.classList.remove("_open-select")
+        console.log(openSelect, openSelect.parentNode)
 
-
+        openSelect.addEventListener("click", () => {
+            openSelect.parentNode.classList.toggle("_open-select")
         })
+
+        selectOptions.forEach(option => {
+            option.addEventListener("click", () => {
+
+                let currentValue = select.querySelector(".current-value")
+                const currentSelectValue = option.dataset.value
+
+                currentValue.dataset.current = currentSelectValue
+                currentValue.textContent = currentSelectValue
+                openSelect.parentNode.classList.remove("_open-select")
+            })
+        });
+
     });
 }
 
@@ -218,8 +226,8 @@ if (allComparisonIcons.length) {
 
 // работа с попапами
 
-const popupShowElements = document.querySelectorAll("[data-popup]")
-const popupHideElements = document.querySelectorAll(".popup__close")
+const popupShowElements = document.querySelectorAll("[data-popup]") || null
+const popupHideElements = document.querySelectorAll(".popup__close") || null
 
 function popupClose(element) {
     if (element.closest(".popup").dataset.single == "true" || element.classList.contains("popup__close")) {
@@ -258,8 +266,8 @@ if (popupHideElements.length) {
 
 // каталог
 
-const gridSwitcher = document.getElementById("grid-switcher")
-const catalogContainer = document.getElementById("catalog")
+const gridSwitcher = document.getElementById("grid-switcher") || null
+const catalogContainer = document.getElementById("catalog") || null
 
 if (gridSwitcher) {
     gridSwitcher.addEventListener("click", () => {
@@ -269,7 +277,7 @@ if (gridSwitcher) {
 
 // отображение типа сортировки
 
-const sortSwitcher = document.getElementById("sorting-type")
+const sortSwitcher = document.getElementById("sorting-type") || null
 
 if (sortSwitcher) {
     sortSwitcher.addEventListener("click", () => {
@@ -291,7 +299,7 @@ if (sortSwitcher) {
     });
 }
 
-const filters = document.querySelectorAll(".catalog-filter")
+const filters = document.querySelectorAll(".catalog-filter") || null
 
 if (filters.length) {
     filters.forEach(filter => {
@@ -310,8 +318,8 @@ if (filters.length) {
 
 // закрытие - открытие фильров в мобилке
 
-const closeFiltersBnt = document.getElementById("close-filters")
-const asideFilters = document.getElementById("aside-filters")
+const closeFiltersBnt = document.getElementById("close-filters") || null
+const asideFilters = document.getElementById("aside-filters") || null
 
 if (closeFiltersBnt) {
     closeFiltersBnt.addEventListener("click", () => {
@@ -322,7 +330,7 @@ if (closeFiltersBnt) {
 
 // отображение фильтра в мобилке
 
-const mobFilterBtn = document.getElementById("mob-filter-btn")
+const mobFilterBtn = document.getElementById("mob-filter-btn") || null
 
 if (mobFilterBtn) {
     mobFilterBtn.addEventListener("click", () => {
@@ -333,28 +341,37 @@ if (mobFilterBtn) {
 
 
 // липкий сайдбар
-const aside = document.querySelector('aside');
+const aside = document.querySelector('aside') || null;
+const catalogWrapper = document.querySelector(".body-catalog__wrapper") || null
 
 if (window.screen.width > 1024 && aside) {
     window.onscroll = function () {
         let screenHeight = window.screen.height;
 
         let asideHeight = aside.offsetHeight;
+        let catalogWrapperHeight = catalogWrapper.offsetHeight
         let asideStickyPosition = asideHeight - screenHeight;
 
-        var distanceFromTop = aside.getBoundingClientRect().top + window.pageYOffset;
-        var scrolled = window.scrollY;
+        let distanceFromTopAside = aside.getBoundingClientRect().top + window.pageYOffset;
+        let scrolled = window.scrollY;
 
-        if (scrolled >= distanceFromTop + asideStickyPosition) {
-            aside.style.position = 'sticky';
-            aside.style.top = screenHeight - asideHeight + "px";
+
+        if (scrolled >= distanceFromTopAside + asideStickyPosition) {
+            if (asideHeight > catalogWrapperHeight) {
+                aside.style.position = 'sticky';
+                aside.style.top = screenHeight - asideHeight + "px";
+            } else {
+                aside.style.position = 'sticky';
+                aside.style.top = 0;
+            }
         }
+
     }
 }
 
 // работа с табами в шапке
 
-const headerTabs = document.getElementById("header-tabs")
+const headerTabs = document.getElementById("header-tabs") || null
 
 if (headerTabs) {
     const tabsBnts = headerTabs.querySelectorAll("button.tabs__title")
@@ -376,7 +393,7 @@ if (headerTabs) {
 
 // работа с табами в описании товара
 
-const productTabs = document.getElementById("details")
+const productTabs = document.getElementById("details") || null
 
 if (productTabs) {
     const tabsBnts = productTabs.querySelectorAll("button.details-tabs__title")
@@ -400,7 +417,7 @@ if (productTabs) {
 
 // показать больше текста в описании
 
-const descLessMoreTextBnt = document.getElementById("description-more-less")
+const descLessMoreTextBnt = document.getElementById("description-more-less") || null
 
 if (descLessMoreTextBnt) {
     descLessMoreTextBnt.addEventListener("click", () => {
@@ -418,8 +435,8 @@ if (descLessMoreTextBnt) {
 
 // добавить в корзину товар и работа с счетчиком товара
 
-const addToCartBtn = document.getElementById("add-to-cart")
-const productCounter = document.getElementById("product-counter")
+const addToCartBtn = document.getElementById("add-to-cart") || null
+const productCounter = document.getElementById("product-counter") || null
 
 if (addToCartBtn) {
     const increaseCounter = productCounter.querySelector(".counter-product__increase")
@@ -450,15 +467,19 @@ if (addToCartBtn) {
 
 // скролл к информации о товаре
 
-document.getElementById('to-details').addEventListener('click', function () {
-    document.querySelector('#details').scrollIntoView({
-        behavior: 'smooth'
+const toDetails = document.getElementById('to-details')
+
+if (toDetails) {
+    toDetails.addEventListener('click', function () {
+        document.querySelector('#details').scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-});
+}
 
 // работа с мобильным каталогом
 
-const mobileCatalog = document.getElementById("mobile-catalog")
+const mobileCatalog = document.getElementById("mobile-catalog") || null
 
 if (mobileCatalog) {
 

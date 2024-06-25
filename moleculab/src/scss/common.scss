@@ -115,6 +115,20 @@ details {
         font-size: 28px;
         line-height: 1.1;
     }
+
+    &__text {
+        position: relative;
+    }
+
+    &__counter {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        color: $mainColor;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
 }
 
 .section-link {

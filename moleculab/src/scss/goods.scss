@@ -368,9 +368,9 @@
             min-width: 196px;
             height: 218px;
 
-            img {
-                object-fit: cover;
-            }
+            // img {
+            //     object-fit: cover;
+            // }
         }
 
         img {
@@ -498,6 +498,7 @@
         font-size: 24px;
         font-weight: 500;
         line-height: 1.4;
+        white-space: pre;
 
         &-old {
             color: #C3C8CC;
@@ -615,6 +616,27 @@
                 path {
                     stroke: $highlightColor-2;
                 }
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    path {
+                        stroke: $highlightColor-2;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bin {
+        cursor: pointer;
+
+        svg {
+
+            path {
+                transition: 0.3s ease stroke;
             }
         }
 
