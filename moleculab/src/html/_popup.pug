@@ -69,16 +69,46 @@
 					button.popup__sharing-icon
 						include icons/_link
 
-#tender.popup(aria-hidden='true', data-single="true")
+#to-follow-product.popup(aria-hidden='true', data-single="true")
 	.popup__wrapper
-		.popup__content._step-1
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подпишитесь на товар
+				p.popup__text
+					| Укажите свой e-mail, мы обязательно напишем Вам, 
+					| когда нужный товар появится в наличии
+				form(action="#", method="post").popup__field.popup__field_mb16
+					input#email-input(type="email", name="email-input", required, placeholder="Email")
+					button.button(type="submit") Отправить
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+#you-follow.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Вы подписались на товар
+				p.popup__text
+					| Уведомление о наличии товара придет вам на электронную почту.
+				a.button._w100 В каталог
+
+#tender.popup._step-1(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
 			.popup__header
-				button.popup__back
+				button.popup__back._to-step-1
 					include icons/_arrow-popup
 				
 				.popup__steps.steps-popup 
 					.steps-popup__text 
-						span.current-step 1 
+						span.current-step._step-1 1
+						span.current-step._step-2 2 
 						span из 
 						span.all-steps 2
 					.steps-popup__fractions 
@@ -93,7 +123,8 @@
 				p.popup__text 
 					| Заполните данные для оформления тендера
 				form(action="#", method="post").popup__form
-					.step.step-1(hidden)
+					
+					.step.step-1
 						h3.popup__subtitle Личные данные
 						.popup__inputs
 							.popup__field
@@ -118,7 +149,8 @@
 								label.popup__label Почта
 								input#email-for-tender.popup__input(type="email", name="email", placeholder="E-mail", required)
 							
-						button(type="text", disabled).button.popup__button Далее
+						button(type="text").button.popup__button._to-step-2 Далее
+					
 					.step.step-2
 						h3.popup__subtitle Сведения об организации
 						.popup__inputs

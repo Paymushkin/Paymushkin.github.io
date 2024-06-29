@@ -58,8 +58,8 @@ body::after {
 	align-items: center;
 	gap: 10px;
 	margin-bottom: 32px;
-	padding-bottom: 32px;
-	border-bottom: 1px solid #DCE4EA;
+	// padding-bottom: 32px;
+	// border-bottom: 1px solid #DCE4EA;
 }
 
 .popup__content {
@@ -119,6 +119,8 @@ body::after {
 
 	.popup__header & {
 		position: static;
+
+		padding: 0;
 	}
 }
 
@@ -161,7 +163,7 @@ body::after {
 }
 
 .popup__text {
-	margin-bottom: 39px;
+	margin-bottom: 24px;
 	color: $textColor;
 	font-size: 16px;
 	font-weight: 400;
@@ -177,7 +179,29 @@ body::after {
 }
 
 .popup__field {
+	display: flex;
+	gap: 8px;
 	width: 100%;
+
+	&_mb16 {
+		margin-bottom: 16px;
+	}
+
+	input {
+		flex: 1 1 auto;
+		padding: 20px;
+		color: $textColor;
+		leading-trim: both;
+		text-edge: cap;
+		font-size: 16px;
+		max-height: 50px;
+		border-radius: 30px;
+		border: 1px solid #E3E3E3;
+
+		&:focus {
+			outline: 1px solid $highlightColor-1;
+		}
+	}
 }
 
 .popup__label {
@@ -190,7 +214,7 @@ body::after {
 }
 
 .popup__input {
-	padding: 20px;
+	padding: 14px 20px;
 	width: 100%;
 	min-height: 50px;
 	color: $mainColor;
@@ -266,6 +290,10 @@ body::after {
 	&:disabled {
 		color: #58A429;
 		background-color: #C2EAB8;
+	}
+
+	.step & {
+		margin-bottom: 0px;
 	}
 }
 
@@ -372,6 +400,39 @@ body::after {
 
 		&:nth-child(3) {
 			background-color: $highlightColor-2;
+		}
+	}
+}
+
+._step-1 .step-2 {
+	display: none;
+}
+
+._step-2 {
+	.step-1 {
+		display: none;
+	}
+
+	.popup__title {
+		display: none;
+	}
+
+	.popup__text {
+		display: none;
+	}
+}
+
+.current-step {
+
+	._step-1 & {
+		&._step-2 {
+			display: none;
+		}
+	}
+
+	._step-2 & {
+		&._step-1 {
+			display: none;
 		}
 	}
 }

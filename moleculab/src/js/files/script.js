@@ -240,7 +240,7 @@ function popupClose(element) {
 }
 
 function popupShow(element) {
-    console.log(element)
+    // console.log(element)
     let popupId = element.getAttribute("data-popup");
     // console.log(document.querySelector(`#${popupId}`))
     document.querySelector(`#${popupId}`).classList.add('popup_show');
@@ -261,6 +261,20 @@ if (popupHideElements.length) {
         element.addEventListener("click", () => {
             popupClose(element)
         })
+    })
+}
+
+const popupFollowProduct = document.getElementById("to-follow-product")
+
+if (popupFollowProduct) {
+
+    popupFollowProduct.querySelector("button[type='submit']").addEventListener("click", (event) => {
+
+        event.preventDefault()
+        popupClose(document.getElementById("to-follow-product"))
+        document.getElementById("you-follow").classList.add('popup_show');
+        document.querySelector('html').classList.add('lock');
+        document.querySelector('html').classList.add('popup-show');
     })
 }
 
@@ -306,13 +320,17 @@ if (filters.length) {
         const filterShow = filter.querySelector("._show")
         const filterHide = filter.querySelector("._hide")
 
-        filterShow.addEventListener("click", () => {
-            filter.classList.add("_all")
-        })
+        if (filterShow) {
+            filterShow.addEventListener("click", () => {
+                filter.classList.add("_all")
+            })
+        }
 
-        filterHide.addEventListener("click", () => {
-            filter.classList.remove("_all")
-        })
+        if (filterHide) {
+            filterHide.addEventListener("click", () => {
+                filter.classList.remove("_all")
+            })
+        }
     });
 }
 
@@ -522,6 +540,32 @@ if (mobileCatalog) {
             document.querySelector(`div[data-category="${categoryID}"]`).removeAttribute("hidden")
         })
     });
+}
+
+// попап для тендера
+
+const tenderPopup = document.getElementById("tender")
+
+if (tenderPopup) {
+
+    const toStep_1Btn = tenderPopup.querySelector("._to-step-1")
+    const toStep_2Btn = tenderPopup.querySelector("._to-step-2")
+
+    console.log(toStep_2Btn)
+
+    toStep_2Btn.addEventListener("click", (event) => {
+
+        event.preventDefault()
+
+        tenderPopup.classList.remove("_step-1")
+        tenderPopup.classList.add("_step-2")
+    })
+
+    toStep_1Btn.addEventListener("click", () => {
+
+        tenderPopup.classList.remove("_step-2")
+        tenderPopup.classList.add("_step-1")
+    })
 }
 
 

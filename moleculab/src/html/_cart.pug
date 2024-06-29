@@ -8,6 +8,7 @@ section.cart
             span.section-title__text Корзина
                 span.section-title__counter (3)
 
+        // если корзина пустая
         .cart__empty.empty-cart
             .empty-cart__body
                 .empty-cart__content
@@ -18,6 +19,13 @@ section.cart
         .cart__body.body-cart
 
             .body-cart__products.cart-products
+                .cart-products__alarm.alarm-message
+                    p.alarm-message__text 
+                        | При добавлении товара с температурным режимом +4 и -20 
+                        | автоматически добавляется термоконтейнер с хладоэлементами. 
+                        | Товар с температурой для транспортировки RT доставляется во все регионы 
+                        | РФ транспортной компанией СДЭК.
+
                 .cart-products__header
                     label.checkbox
                         | Выбрать все
@@ -29,9 +37,9 @@ section.cart
 
                 .cart-products__body
                     ul.cart-products__list
-                        li.cart-products__item.cart-product 
+                        li.cart-products__item.cart-product._not-availble 
                             label.checkbox
-                                input(type='checkbox' checked='checked')
+                                input(type='checkbox')
                                 include icons/_checkbox
 
                             .cart-product__item(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
@@ -40,11 +48,13 @@ section.cart
                                 .cart-product__content
                                     .cart-product__info
                                         span.product-item__code(itemprop="sku") 1R-B.002-15
-                                        h4.product-item__title(itemprop="brand") Ламинарные системы
+                                        h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
                                         p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150) Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
                                         span.product-item__status._limited Под заказ
 
                                         .cart-product__buttons
+
+                                            button.button.cart-product__button._follow-to-product(data-popup="to-follow-product") Подписаться на товар
                                             .cart-product__counter
                                                 .cart-product__decrease
                                                     span &ndash;

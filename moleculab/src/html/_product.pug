@@ -123,14 +123,14 @@ section.product
             #details.description-bottom
                 .details
                     nav.details__navigation.details-tabs 
-                        button(data-tab-button="1").details-tabs__title._tab-active Характеристики
+                        button(data-tab-button="1").details-tabs__title Характеристики
                         button(data-tab-button="2").details-tabs__title Документация
                         button(data-tab-button="3").details-tabs__title Доставка и оплата
-                        button(data-tab-button="4").details-tabs__title Гарантия
+                        button(data-tab-button="4").details-tabs__title._tab-active Гарантия
 
                     .details__separator
                     
-                    div(data-tabs-body="1").details__content.details-tab._content-active
+                    div(data-tabs-body="1").details__content.details-tab
                         ul.details-tab__list
                             li.details-tab__item 
                                 span.details-tab__option Управление источником света
@@ -163,13 +163,107 @@ section.product
                     
 
                     div(data-tabs-body="2").details__content.details-tab
-                        p Документация
+                        ul.docs__list.details-tab__docs 
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
+
+                            li.docs__item
+                                a(href="#", download).docs__link.doc
+                                    .doc__icon
+                                        include icons/_pdf
+                                
+                                    .doc__body
+                                        h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                        .doc__info 
+                                            span PDF, 1.44 МБ
+                                            span •
+                                            span 15.06.2023
 
                     div(data-tabs-body="3").details__content.details-tab
-                        p Доставка и оплата
+                        p.details-tab__text Мы предлагаем клиентам гибкие и удобные условия доставки товаров:
+                        ul.details-tab__delivery-list
+                            li.details-tab__delivery-item 
+                                | Бесплатная доставка по Москве, Московской области, 
+                                | Санкт-Петербургу и Новосибирску собственным транспортом.
+                            li.details-tab__delivery-item
+                                | Самовывоз со склада ООО «Компания Хеликон» 
+                                | своими силами или транспортной компанией, с которой вам удобно работать.
+                            li.details-tab__delivery-item
+                                | Ежедневные отгрузки «Мэйджор Экспресс».
+                                | Доставка и страховка груза может быть включена в счет*.
+                            li.details-tab__delivery-item
+                                | Ежедневная бесплатная доставка для междугородних клиентов 
+                                | до терминала транспортных компаний – «Деловые линии» и «Желдор Экспедиция».
+                        p.details-tab__text Подробная информация в разделе 
+                            a(href="#").details-tab__link Условия доставки 
+                            | .
 
-                    div(data-tabs-body="4").details__content.details-tab
-                        p Гарантия
+
+                    div(data-tabs-body="4").details__content.details-tab._content-active
+                        p.details-tab__text При возникновении неполадок в работе оборудования осуществляется:
+                        ul.details-tab__delivery-list
+                            li.details-tab__delivery-item 
+                                | диагностика
+                            li.details-tab__delivery-item
+                                | гарантийный ремонт
+                            li.details-tab__delivery-item
+                                | постгарантийный ремонт
+                            li.details-tab__delivery-item
+                                | поставка запасных частей и комплектующих
+                                
+                        p.details-tab__text Вы можете разместить заявку на сервисное обслуживание любым удобным вам способом:
+                            ul.details-tab__delivery-list
+                                li.details-tab__delivery-item
+                                    span телефон:
+                                    a(href="tel:+74997055050") +74997055050
+                                li.details-tab__delivery-item
+                                    span e-mail:
+                                    a(href="mailto:molecuLab@mail.com") molecuLab@mail.com
 
                 .accordion
                     details.accordion__details(open)
@@ -213,106 +307,116 @@ section.product
                             span.accordion__title Доставка и оплата
                             span.accordion__icon
                                 include icons/_arrow-down 
-
-                        ul.details-tab__list.accordion__list
-                            li.details-tab__item 
-                                span.details-tab__option Управление источником света
-                                .details-tab__space 
-                                span.details-tab__value Транс УФ, супер-белый
-                            li.details-tab__item 
-                                span.details-tab__option Максимальный размер образца
-                                .details-tab__space 
-                                span.details-tab__value 19х26 см
-                            li.details-tab__item 
-                                span.details-tab__option Динамический диапазон изображения
-                                .details-tab__space 
-                                span.details-tab__value 16 бит
-                            li.details-tab__item 
-                                span.details-tab__option Оснащение модулей флуоресценции
-                                .details-tab__space 
-                                span.details-tab__value 8-позиционное колесо фильтров
-                            li.details-tab__item 
-                                span.details-tab__option Температура охлаждения камеры
-                                .details-tab__space 
-                                span.details-tab__value до - 30 °С
-                            li.details-tab__item 
-                                span.details-tab__option Управление системой
-                                .details-tab__space 
-                                span.details-tab__value Единое программное обеспечение
-                            li.details-tab__item 
-                                span.details-tab__option Габариты
-                                .details-tab__space 
-                                span.details-tab__value 430 х 380 х 690 мм
+                        .accordion-tab__body
+                            p.accordion-tab__text Мы предлагаем клиентам гибкие и удобные условия доставки товаров:
+                            ul.accordion-tab__delivery-list
+                                li.accordion-tab__delivery-item 
+                                    | Бесплатная доставка по Москве, Московской области, 
+                                    | Санкт-Петербургу и Новосибирску собственным транспортом.
+                                li.accordion-tab__delivery-item
+                                    | Самовывоз со склада ООО «Компания Хеликон» 
+                                    | своими силами или транспортной компанией, с которой вам удобно работать.
+                                li.accordion-tab__delivery-item
+                                    | Ежедневные отгрузки «Мэйджор Экспресс».
+                                    | Доставка и страховка груза может быть включена в счет*.
+                                li.accordion-tab__delivery-item
+                                    | Ежедневная бесплатная доставка для междугородних клиентов 
+                                    | до терминала транспортных компаний – «Деловые линии» и «Желдор Экспедиция».
+                            p.accordion-tab__text Подробная информация в разделе 
+                                a(href="#").accordion-tab__link Условия доставки 
+                                | .
+ 
                                  
                     details.accordion__details
                         summary.accordion__summary 
                             span.accordion__title Документация
                             span.accordion__icon
                                 include icons/_arrow-down 
+                        .accordion-tab__body
+                            ul.docs__list.details-tab__docs 
+                                li.docs__item
+                                    a(href="#", download).docs__link.doc
+                                        .doc__icon
+                                            include icons/_pdf
+                                    
+                                        .doc__body
+                                            h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                            .doc__info 
+                                                span PDF, 1.44 МБ
+                                                span •
+                                                span 15.06.2023
 
-                        ul.details-tab__list.accordion__list
-                            li.details-tab__item 
-                                span.details-tab__option Управление источником света
-                                .details-tab__space 
-                                span.details-tab__value Транс УФ, супер-белый
-                            li.details-tab__item 
-                                span.details-tab__option Максимальный размер образца
-                                .details-tab__space 
-                                span.details-tab__value 19х26 см
-                            li.details-tab__item 
-                                span.details-tab__option Динамический диапазон изображения
-                                .details-tab__space 
-                                span.details-tab__value 16 бит
-                            li.details-tab__item 
-                                span.details-tab__option Оснащение модулей флуоресценции
-                                .details-tab__space 
-                                span.details-tab__value 8-позиционное колесо фильтров
-                            li.details-tab__item 
-                                span.details-tab__option Температура охлаждения камеры
-                                .details-tab__space 
-                                span.details-tab__value до - 30 °С
-                            li.details-tab__item 
-                                span.details-tab__option Управление системой
-                                .details-tab__space 
-                                span.details-tab__value Единое программное обеспечение
-                            li.details-tab__item 
-                                span.details-tab__option Габариты
-                                .details-tab__space 
-                                span.details-tab__value 430 х 380 х 690 мм
+                                li.docs__item
+                                    a(href="#", download).docs__link.doc
+                                        .doc__icon
+                                            include icons/_pdf
+                                    
+                                        .doc__body
+                                            h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                            .doc__info 
+                                                span PDF, 1.44 МБ
+                                                span •
+                                                span 15.06.2023
+
+                                li.docs__item
+                                    a(href="#", download).docs__link.doc
+                                        .doc__icon
+                                            include icons/_pdf
+                                    
+                                        .doc__body
+                                            h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                            .doc__info 
+                                                span PDF, 1.44 МБ
+                                                span •
+                                                span 15.06.2023
+
+                                li.docs__item
+                                    a(href="#", download).docs__link.doc
+                                        .doc__icon
+                                            include icons/_pdf
+                                    
+                                        .doc__body
+                                            h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                            .doc__info 
+                                                span PDF, 1.44 МБ
+                                                span •
+                                                span 15.06.2023
+
+                                li.docs__item
+                                    a(href="#", download).docs__link.doc
+                                        .doc__icon
+                                            include icons/_pdf
+                                    
+                                        .doc__body
+                                            h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                            .doc__info 
+                                                span PDF, 1.44 МБ
+                                                span •
+                                                span 15.06.2023
+
                                  
                     details.accordion__details
                         summary.accordion__summary 
                             span.accordion__title Гарантия
                             span.accordion__icon
                                 include icons/_arrow-down 
-
-                        ul.details-tab__list.accordion__list
-                            li.details-tab__item 
-                                span.details-tab__option Управление источником света
-                                .details-tab__space 
-                                span.details-tab__value Транс УФ, супер-белый
-                            li.details-tab__item 
-                                span.details-tab__option Максимальный размер образца
-                                .details-tab__space 
-                                span.details-tab__value 19х26 см
-                            li.details-tab__item 
-                                span.details-tab__option Динамический диапазон изображения
-                                .details-tab__space 
-                                span.details-tab__value 16 бит
-                            li.details-tab__item 
-                                span.details-tab__option Оснащение модулей флуоресценции
-                                .details-tab__space 
-                                span.details-tab__value 8-позиционное колесо фильтров
-                            li.details-tab__item 
-                                span.details-tab__option Температура охлаждения камеры
-                                .details-tab__space 
-                                span.details-tab__value до - 30 °С
-                            li.details-tab__item 
-                                span.details-tab__option Управление системой
-                                .details-tab__space 
-                                span.details-tab__value Единое программное обеспечение
-                            li.details-tab__item 
-                                span.details-tab__option Габариты
-                                .details-tab__space 
-                                span.details-tab__value 430 х 380 х 690 мм
-                                 
+                        .accordion-tab__body
+                            p.accordion-tab__text При возникновении неполадок в работе оборудования осуществляется:
+                            ul.accordion-tab__delivery-list
+                                li.accordion-tab__delivery-item 
+                                    | диагностика
+                                li.accordion-tab__delivery-item
+                                    | гарантийный ремонт
+                                li.accordion-tab__delivery-item
+                                    | постгарантийный ремонт
+                                li.accordion-tab__delivery-item
+                                    | поставка запасных частей и комплектующих
+                                    
+                            p.accordion-tab__text Вы можете разместить заявку на сервисное обслуживание любым удобным вам способом:
+                                ul.accordion-tab__delivery-list
+                                    li.accordion-tab__delivery-item
+                                        span телефон:
+                                        a(href="tel:+74997055050") +74997055050
+                                    li.accordion-tab__delivery-item
+                                        span e-mail:
+                                        a(href="mailto:molecuLab@mail.com") molecuLab@mail.com
