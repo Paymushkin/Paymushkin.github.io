@@ -498,6 +498,7 @@ if (toDetails) {
 // работа с мобильным каталогом
 
 const mobileCatalog = document.getElementById("mobile-catalog") || null
+console.log(mobileCatalog)
 
 if (mobileCatalog) {
 
@@ -568,6 +569,60 @@ if (tenderPopup) {
     })
 }
 
+// свитчер способа доставки
+
+const deliverySwitcher = document.getElementById("delivery-switcher")
+
+if (deliverySwitcher) {
+
+    const deliveryTabs = document.querySelectorAll(".delivery-cart__tab")
+
+    deliveryTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+
+            deliveryTabs.forEach(tab => {
+                tab.classList.remove("_active")
+            });
+
+            tab.classList.add("_active")
+
+        })
+    });
+}
+
+// показать опции товара в моб версии
+
+const mobileOptions = document.getElementById("mobile-options")
+let productOptionsBtns = document.querySelectorAll(".more-options") || null
+
+console.log(mobileOptions, productOptionsBtns)
+
+if (mobileOptions && productOptionsBtns.length) {
+
+    const mobileCloseBtn = mobileOptions.querySelector(".mobile-options__close ")
+
+    productOptionsBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            mobileOptions.classList.add("_active");
+            document.documentElement.classList.add("_filter-active")
+        })
+
+    });
+
+    mobileCloseBtn.addEventListener("click", () => {
+        mobileOptions.classList.remove("_active")
+        document.documentElement.classList.remove("_filter-active")
+    })
+}
+
+const headerCartIcon = document.getElementById("showHideHeaderCart")
+const headerCart = document.getElementById("header-cart")
+
+if (headerCartIcon) {
+    headerCartIcon.addEventListener("click", () => {
+        headerCartIcon.classList.toggle("_show-cart")
+    })
+}
 
 
 // инициализация маски ввода телефона

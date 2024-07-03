@@ -1,5 +1,7 @@
-section.cart
-    //._cart-empty
+// если корзина пуста добавляем ._cart-empty
+// если есть разный тип доставки ._delivery-split
+// если есть температурный режим ._spec-delivery
+section.cart._delivery-split._spec-delivery
     .cart__container
         - const cartPage = true;
         include _breadcrumbs
@@ -17,9 +19,23 @@ section.cart
                 a(href="./catalog.html").button.empty-cart__button Начать покупки
 
         .cart__body.body-cart
-
             .body-cart__products.cart-products
+
+                // если добавили с температурным режимом
                 .cart-products__alarm.alarm-message
+                    //- h4.alarm-message__title Внимание!
+                    .alarm-message__wrapper 
+                        include icons/_alarm
+
+                        p.alarm-message__text 
+                            | Страница будет доступна еще 14 дней 23 часа 15 минут.
+                            <br>
+                            | Для добавления товаров в корзину нажмите на кнопку 
+                            span ”Добавить в корзину”
+
+                // если поделились корзиной
+                .cart-products__alarm.alarm-message
+                    h4.alarm-message__title Внимание!
                     p.alarm-message__text 
                         | При добавлении товара с температурным режимом +4 и -20 
                         | автоматически добавляется термоконтейнер с хладоэлементами. 
@@ -27,7 +43,7 @@ section.cart
                         | РФ транспортной компанией СДЭК.
 
                 .cart-products__header
-                    label.checkbox
+                    label.checkbox.cart-products__label
                         | Выбрать все
                         input(type='checkbox' checked='checked')
                         include icons/_checkbox
@@ -35,10 +51,30 @@ section.cart
                     button.cart-products__delete 
                         | Удалить выбранные
 
+                // если есть разделение доставки
+                #delivery-switcher.cart-products__delivery.delivery-cart
+                    .delivery-cart__tab._active
+                        span.delivery-cart__title Отдельный расчет доставки
+                        span.delivery-cart__subtitle доставим с 06.05
+                    .delivery-cart__tab
+                        span.delivery-cart__title Объединить
+                        span.delivery-cart__subtitle доставим с 06.05
+
                 .cart-products__body
+
+                    .cart-products__title.delivery-type
+                        h3.delivery-type__text
+                            span.delivery-type__count 1
+                            p Самостоятельная оплата
+
+                        button.delivery-type__button удалить
+
                     ul.cart-products__list
-                        li.cart-products__item.cart-product._not-availble 
-                            label.checkbox
+                        li.cart-products__item.cart-product._not-availble
+                            .cart-product__options.more-options
+                                include icons/_options
+
+                            label.checkbox.cart-product__label
                                 input(type='checkbox')
                                 include icons/_checkbox
 
@@ -47,10 +83,16 @@ section.cart
                                         img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
                                 .cart-product__content
                                     .cart-product__info
-                                        span.product-item__code(itemprop="sku") 1R-B.002-15
+                                        span.product-item__code.cart-product__code(itemprop="sku") 1R-B.002-15
                                         h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
                                         p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150) Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
-                                        span.product-item__status._limited Под заказ
+                                        .cart-product__mobile-prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                            meta(itemprop='priceCurrency' content='RUB')
+                                            meta(itemprop='price' content='68334')
+                                            meta(itemprop='availability' content='http://schema.org/InStock')
+                                            span.product-item__price.cart-product__mobile-price 68 334 ₽
+                                            span.product-item__price-old.cart-product__mobile-price-old 100 334 ₽
+                                        span.product-item__status.cart-product__status._limited Под заказ
 
                                         .cart-product__buttons
 
@@ -76,8 +118,11 @@ section.cart
                                         span.product-item__price 68 334 ₽
                                         span.product-item__price-old 100 334 ₽
  
-                        li.cart-products__item.cart-product 
-                            label.checkbox
+                        li.cart-products__item.cart-product
+                            .cart-product__options.more-options
+                                include icons/_options
+
+                            label.checkbox.cart-product__label
                                 input(type='checkbox' checked='checked')
                                 include icons/_checkbox
 
@@ -86,10 +131,16 @@ section.cart
                                         img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
                                 .cart-product__content
                                     .cart-product__info
-                                        span.product-item__code(itemprop="sku") 1R-B.002-15
-                                        h4.product-item__title(itemprop="brand") Ламинарные системы
-                                        p.product-item__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
-                                        span.product-item__status._many В наличии
+                                        span.product-item__code.cart-product__code(itemprop="sku") 1R-B.002-15
+                                        h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
+                                        p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                                        .cart-product__mobile-prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                            meta(itemprop='priceCurrency' content='RUB')
+                                            meta(itemprop='price' content='68334')
+                                            meta(itemprop='availability' content='http://schema.org/InStock')
+                                            span.product-item__price.cart-product__mobile-price 68 334 ₽
+                                            span.product-item__price-old.cart-product__mobile-price-old 100 334 ₽
+                                        span.product-item__status.cart-product__status._many В наличии
 
                                         .cart-product__buttons
                                             .cart-product__counter
@@ -113,8 +164,11 @@ section.cart
                                         span.product-item__price 68 334 ₽
                                         span.product-item__price-old 100 334 ₽
  
-                        li.cart-products__item.cart-product 
-                            label.checkbox
+                        li.cart-products__item.cart-product
+                            .cart-product__options.more-options
+                                include icons/_options
+                                
+                            label.checkbox.cart-product__label
                                 input(type='checkbox' checked='checked')
                                 include icons/_checkbox
 
@@ -123,10 +177,16 @@ section.cart
                                         img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
                                 .cart-product__content
                                     .cart-product__info
-                                        span.product-item__code(itemprop="sku") 1R-B.002-15
-                                        h4.product-item__title(itemprop="brand") Ламинарные системы
-                                        p.product-item__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
-                                        span.product-item__status._many В наличии
+                                        span.product-item__code.cart-product__code(itemprop="sku") 1R-B.002-15
+                                        h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
+                                        p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                                        .cart-product__mobile-prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                            meta(itemprop='priceCurrency' content='RUB')
+                                            meta(itemprop='price' content='68334')
+                                            meta(itemprop='availability' content='http://schema.org/InStock')
+                                            span.product-item__price.cart-product__mobile-price 68 334 ₽
+                                            span.product-item__price-old.cart-product__mobile-price-old 100 334 ₽
+                                        span.product-item__status.cart-product__status._many В наличии
 
                                         .cart-product__buttons
                                             .cart-product__counter
@@ -149,7 +209,112 @@ section.cart
                                         meta(itemprop='availability' content='http://schema.org/InStock')
                                         span.product-item__price 68 334 ₽
                                         span.product-item__price-old 100 334 ₽
- 
+
+                .cart-products__body
+
+                    .cart-products__title.delivery-type
+                        h3.delivery-type__text
+                            span.delivery-type__count 2
+                            p Оплата через менеджера
+
+                        button.delivery-type__button удалить
+
+                    ul.cart-products__list
+                        li.cart-products__item.cart-product._not-availble
+                            .cart-product__options.more-options
+                                include icons/_options
+
+                            label.checkbox.cart-product__label
+                                input(type='checkbox')
+                                include icons/_checkbox
+
+                            .cart-product__item(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                .cart-product__image-ibg
+                                        img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
+                                .cart-product__content
+                                    .cart-product__info
+                                        span.product-item__code.cart-product__code(itemprop="sku") 1R-B.002-15
+                                        h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
+                                        p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150) Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                                        .cart-product__mobile-prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                            meta(itemprop='priceCurrency' content='RUB')
+                                            meta(itemprop='price' content='68334')
+                                            meta(itemprop='availability' content='http://schema.org/InStock')
+                                            span.product-item__price.cart-product__mobile-price 68 334 ₽
+                                            span.product-item__price-old.cart-product__mobile-price-old 100 334 ₽
+                                        span.product-item__status.cart-product__status._limited Под заказ
+
+                                        .cart-product__buttons
+
+                                            button.button.cart-product__button._follow-to-product(data-popup="to-follow-product") Подписаться на товар
+                                            .cart-product__counter
+                                                .cart-product__decrease
+                                                    span &ndash;
+                                                span.current-quantity 1
+                                                .cart-product__increase
+                                                    span +
+                                                input.product-quantity(type='number' name='product-quantity' hidden='hidden' value='0')
+
+                                            .cart-product__icons
+                                                span.icons-product__heart 
+                                                    include icons/_heart
+                                                span.icons-product__bin
+                                                    include icons/_bin
+
+                                    .cart-product__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                        meta(itemprop='priceCurrency' content='RUB')
+                                        meta(itemprop='price' content='68334')
+                                        meta(itemprop='availability' content='http://schema.org/InStock')
+                                        span.product-item__price 68 334 ₽
+                                        span.product-item__price-old 100 334 ₽
+
+                        li.cart-products__item.cart-product
+                            .cart-product__options.more-options
+                                include icons/_options
+
+                            label.checkbox.cart-product__label
+                                input(type='checkbox' checked='checked')
+                                include icons/_checkbox
+
+                            .cart-product__item(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                .cart-product__image-ibg
+                                        img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
+                                .cart-product__content
+                                    .cart-product__info
+                                        span.product-item__code.cart-product__code(itemprop="sku") 1R-B.002-15
+                                        h4.product-item__title.cart-product__title(itemprop="brand") Ламинарные системы
+                                        p.product-item__text.cart-product__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                                        .cart-product__mobile-prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                            meta(itemprop='priceCurrency' content='RUB')
+                                            meta(itemprop='price' content='68334')
+                                            meta(itemprop='availability' content='http://schema.org/InStock')
+                                            span.product-item__price.cart-product__mobile-price 68 334 ₽
+                                            span.product-item__price-old.cart-product__mobile-price-old 100 334 ₽
+                                        span.product-item__status.cart-product__status._many В наличии
+
+                                        .cart-product__buttons
+                                            .cart-product__counter
+                                                .cart-product__decrease
+                                                    span &ndash;
+                                                span.current-quantity 1
+                                                .cart-product__increase
+                                                    span +
+                                                input.product-quantity(type='number' name='product-quantity' hidden='hidden' value='0')
+
+                                            .cart-product__icons
+                                                span.icons-product__heart 
+                                                    include icons/_heart
+                                                span.icons-product__bin
+                                                    include icons/_bin
+
+                                    .cart-product__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                        meta(itemprop='priceCurrency' content='RUB')
+                                        meta(itemprop='price' content='68334')
+                                        meta(itemprop='availability' content='http://schema.org/InStock')
+                                        span.product-item__price 68 334 ₽
+                                        span.product-item__price-old 100 334 ₽
+
+
             .body-cart__bill.cart-bill
                 .cart-bill__header.header-bill 
                     .header-bill__print
@@ -190,3 +355,17 @@ section.cart
                     .cart-bill__buttons 
                         a(href="#").button.cart-bill__button Перейти к оформлению
                         span.cart-bill__tender(data-popup="tender") Закупка через тендер
+
+    #mobile-options.mobile-options
+        .mobile-options__header
+            h3.mobile-options__title Действия с товаром
+            .mobile-options__close 
+                include icons/_close
+            
+        ul.mobile-options__list
+            li.mobile-options__item.icons-product__heart
+                include icons/_heart
+                span Добавить в избранное 
+            li.mobile-options__item
+                include icons/_bin
+                span Удалить

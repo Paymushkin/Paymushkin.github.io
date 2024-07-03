@@ -348,7 +348,22 @@
 		}
 	}
 
-	&__item {}
+	&__item {
+		cursor: pointer;
+
+		&._show-cart {
+			position: relative;
+
+
+			@media (any-hover: hover) {
+				&:hover {
+					.header-cart {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 
 	&__link {
 		position: relative;
@@ -360,7 +375,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				span {
+				.header-icons__text {
 					color: $highlightColor-2;
 				}
 			}

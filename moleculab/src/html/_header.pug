@@ -956,11 +956,13 @@ header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
 								path(d="M14.5 11V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
 								path(d="M19.5 3.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round")
 							span(itemprop="name").header-icons__text Сравнение
-					li.header-icons__item
-						a(href="#", data-counter="1", itemprop="url").header-icons__link
+					li#showHideHeaderCart.header-icons__item._show-cart
+						.header-icons__link(data-counter="2")
 							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 								path(d="M15.8338 9.12508V6.25008C15.8338 4.13299 14.1175 2.41675 12.0004 2.41675C9.88334 2.41675 8.1671 4.13299 8.1671 6.25008V9.12508M3.94277 10.4207L3.36777 16.554C3.20428 18.2979 3.12254 19.1699 3.4119 19.8433C3.6661 20.435 4.11155 20.9241 4.67687 21.2325C5.3204 21.5834 6.19616 21.5834 7.94769 21.5834H16.0532C17.8047 21.5834 18.6805 21.5834 19.324 21.2325C19.8893 20.9241 20.3348 20.435 20.589 19.8433C20.8783 19.1699 20.7966 18.2979 20.6331 16.554L20.0581 10.4207C19.92 8.94812 19.851 8.21182 19.5198 7.65515C19.2282 7.16489 18.7973 6.77248 18.2819 6.52785C17.6968 6.25008 16.9572 6.25008 15.4782 6.25008L8.52269 6.25008C7.04364 6.25008 6.30411 6.25008 5.71896 6.52785C5.20361 6.77248 4.77269 7.16489 4.48103 7.65515C4.14986 8.21182 4.08083 8.94812 3.94277 10.4207Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
 							span(itemprop="name").header-icons__text Корзина
+
+							include _header-cart
 
 	.header__bottom.header-bottom
 		.header-bottom__top(data-text="Инновации для лабораторий, доступные в один клик")

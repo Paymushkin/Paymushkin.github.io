@@ -1,0 +1,49 @@
+#header-cart.header-cart
+    .header-cart__inner
+        .header-cart__top
+            h3.header-cart__title Основные товары 
+                span (2)
+            button.header-cart__delete Очистить список
+
+        .header-cart__shipping.shipping-cost
+            .shipping-cost__icon 
+                include icons/_truck
+
+            .shipping-cost__body 
+                .shipping-cost__progress 
+                    .shipping-cost__bar
+                        .shipping-cost__bar-progress(style="width: 75%;")
+                    span.shipping-cost__price 25 000 ₽
+                p.shipping-cost__text 
+                    | До бесплатной доставки по Москве и Московской области осталось добавить товаров на 500 ₽
+
+        .header-cart__products.small-cart
+            ul.small-cart__list
+
+                li.small-cart__item 
+                    .small-cart__image-ibg
+                        img(src="@img/products/item-2.png", alt="")
+                    .small-cart__content 
+                        h3.small-cart__title УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом
+                        span.small-cart__count 1 шт.
+                    .small-cart__left
+                        span.small-cart__price 68 334 ₽
+                        include icons/_bin
+
+                li.small-cart__item 
+                    .small-cart__image-ibg
+                        img(src="@img/products/item-4.png", alt="")
+                    .small-cart__content 
+                        h3.small-cart__title Гель-документирующая система ChemiScope
+                        span.small-cart__count 1 шт.
+                    .small-cart__left
+                        span.header-cart__price.small-cart__price 123 334 ₽
+                        include icons/_bin
+    
+        .header-cart__bottom.bottom-cart 
+            .bottom-cart__total 
+                span.bottom-cart__text Итого:
+                span.bottom-cart__price 234 334 ₽
+            .bottom-cart__buttons 
+                button.button._transparent.bottom-cart__button Оформить заказ
+                a(href="/cart.html").button.bottom-cart__button В корзину
