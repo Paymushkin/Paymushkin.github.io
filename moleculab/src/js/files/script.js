@@ -51,13 +51,13 @@ const selects = document.querySelectorAll(".select")
 
 if (selects.length) {
 
-    console.log(selects)
+    // console.log(selects)
 
     selects.forEach(select => {
         let openSelect = select.querySelector(".open-select") || null
         let selectOptions = select.querySelectorAll("li.select__item[data-value]") || null
 
-        console.log(openSelect, openSelect.parentNode)
+        // console.log(openSelect, openSelect.parentNode)
 
         openSelect.addEventListener("click", () => {
             openSelect.parentNode.classList.toggle("_open-select")
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             actions: {
                 clickDay(e, self) {
-                    console.log(self.selectedDates);
+                    // console.log(self.selectedDates);
                 },
                 clickArrow(event, self) {
-                    console.log(self.selectedYear, self.selectedMonth);
+                    // console.log(self.selectedYear, self.selectedMonth);
                 },
             },
         });
@@ -447,7 +447,7 @@ if (descLessMoreTextBnt) {
             descLessMoreTextBnt.textContent = "Читать полностью"
         }
 
-        console.log(descLessMoreTextBnt.textContent)
+        // console.log(descLessMoreTextBnt.textContent)
     })
 }
 
@@ -498,7 +498,7 @@ if (toDetails) {
 // работа с мобильным каталогом
 
 const mobileCatalog = document.getElementById("mobile-catalog") || null
-console.log(mobileCatalog)
+// console.log(mobileCatalog)
 
 if (mobileCatalog) {
 
@@ -519,13 +519,13 @@ if (mobileCatalog) {
     catalogCategories.forEach(category => {
         category.addEventListener("click", () => {
             const categoryID = category.getAttribute("data-catalog-category");
-            console.log(categoryID)
+            // console.log(categoryID)
 
             categoryBlock.forEach(block => {
                 block.setAttribute("hidden", "hidden")
             });
 
-            console.log(document.querySelector(`div[data-category="${categoryID}"]`))
+            // console.log(document.querySelector(`div[data-category="${categoryID}"]`))
             document.querySelector(`div[data-category="${categoryID}"]`).removeAttribute("hidden")
         })
     });
@@ -552,7 +552,7 @@ if (tenderPopup) {
     const toStep_1Btn = tenderPopup.querySelector("._to-step-1")
     const toStep_2Btn = tenderPopup.querySelector("._to-step-2")
 
-    console.log(toStep_2Btn)
+    // console.log(toStep_2Btn)
 
     toStep_2Btn.addEventListener("click", (event) => {
 
@@ -595,7 +595,7 @@ if (deliverySwitcher) {
 const mobileOptions = document.getElementById("mobile-options")
 let productOptionsBtns = document.querySelectorAll(".more-options") || null
 
-console.log(mobileOptions, productOptionsBtns)
+// console.log(mobileOptions, productOptionsBtns)
 
 if (mobileOptions && productOptionsBtns.length) {
 
@@ -624,6 +624,69 @@ if (headerCartIcon) {
     })
 }
 
+// работа с табами в оформление заказа
+
+const deliveryTabs = document.getElementById("shipping-block") || null
+
+if (deliveryTabs) {
+    const tabsBnts = deliveryTabs.querySelectorAll("button.shipping-tabs__item")
+    const tabsContent = deliveryTabs.querySelectorAll(".shipping__content")
+
+    tabsBnts.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-button")
+
+        tab.addEventListener("click", () => {
+            tabsContent.forEach(content => {
+                content.classList.remove("_content-active")
+            })
+            tabsBnts.forEach(tab => {
+                tab.classList.remove("_tab-active")
+            })
+            deliveryTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+            deliveryTabs.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
+        })
+    });
+}
+
+// переключение способа получения заказа
+
+const shippingType = document.getElementById("shipping-type")
+
+if (shippingType) {
+    const radioBtns = shippingType.querySelectorAll("input[type='radio']")
+
+    radioBtns.forEach(btn => {
+        btn.addEventListener("change", () => {
+            const bntID = btn.getAttribute("data-radio")
+
+            shippingType.querySelectorAll(".stock-block").forEach(block => {
+                block.classList.remove("_active")
+            })
+
+            shippingType.querySelector(`.stock-block[data-type="${bntID}"]`).classList.add("_active")
+        })
+    });
+}
+
+// переключение типа клиента
+
+const clientType = document.getElementById("client-type")
+
+if (clientType) {
+    const radioBtns = clientType.querySelectorAll("input[type='radio']")
+
+    radioBtns.forEach(btn => {
+        btn.addEventListener("change", () => {
+            const bntID = btn.getAttribute("data-radio")
+
+            clientType.querySelectorAll(".info-client").forEach(block => {
+                block.classList.remove("_active")
+            })
+
+            clientType.querySelector(`.info-client[data-type="${bntID}"]`).classList.add("_active")
+        })
+    });
+}
 
 // инициализация маски ввода телефона
 

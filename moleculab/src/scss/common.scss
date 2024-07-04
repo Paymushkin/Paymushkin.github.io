@@ -1021,3 +1021,87 @@ details {
         }
     }
 }
+
+.control--radio {
+    position: relative;
+    cursor: pointer;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+
+        &:checked~span {
+            color: $mainColor;
+        }
+    }
+
+    span {
+        color: $textColor;
+    }
+
+    .control__indicator {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        border: 1px solid $borderColor-2;
+        border-radius: 50%;
+        transform: translate(-16px, -50%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            background: $gradient-1;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+    }
+}
+
+.control input:checked~.control__indicator {
+    &::before {
+        opacity: 1;
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    &__label {
+        display: inline-block;
+        color: #333;
+        leading-trim: both;
+        text-edge: cap;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__input,
+    &__textarea {
+        flex: 1 1 auto;
+        padding: 14px 20px;
+        color: #6F8290;
+        leading-trim: both;
+        text-edge: cap;
+        font-size: 16px;
+        max-height: 50px;
+        border-radius: 30px;
+        border: 1px solid #E3E3E3;
+        resize: none;
+
+        &:focus {
+            outline-color: $highlightColor-2;
+        }
+    }
+}

@@ -18,7 +18,19 @@ else if cartPage == true
             li.breadcrumbs__item 
                 a(href="/").breadcrumbs__link Главная
             li.breadcrumbs__item 
-                .breadcrumbs__link Корзина     
+                .breadcrumbs__link Корзина 
+
+else if orderPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Корзина 
+            li.breadcrumbs__item 
+                .breadcrumbs__link Оформление заказа 
+
 else
 
     .breadcrumbs.catalog__breadcrumbs

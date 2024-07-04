@@ -98,7 +98,7 @@
 					| Уведомление о наличии товара придет вам на электронную почту.
 				a.button._w100 В каталог
 
-#tender.popup._step-1(aria-hidden='true', data-single="true")
+#tender.popup.popup-tender._step-1(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			.popup__header
@@ -149,7 +149,8 @@
 								label.popup__label Почта
 								input#email-for-tender.popup__input(type="email", name="email", placeholder="E-mail", required)
 							
-						button(type="text").button.popup__button._to-step-2 Далее
+						.popup__button-wrapper
+							button(type="text").button.popup__button._to-step-2 Далее
 					
 					.step.step-2
 						h3.popup__subtitle Сведения об организации
@@ -200,4 +201,26 @@
 						.popup__inputs
 							textarea#comments.popup__textarea(name="comments") 
 							
-						button(type="text", disabled).button.popup__button Далее
+						.popup__button-wrapper
+							button(type="text", disabled).button.popup__button Далее
+
+
+#add-card.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title._mb24 Привязка карты
+				form(action="#", method="post").popup__form
+					.popup__inputs.row
+						input#number-for-card.popup__input(type="number", name="number-for-card", placeholder="Укажите номер карты", required)
+						input#date-for-card.popup__input._w50(type="tel", name="date-for-card", placeholder="ММ/ГГ", required)
+						input#cvv-for-card.popup__input._w50(type="number", name="cvv-for-card", placeholder="CVV/CVC", required)
+
+					button(type="submit", disabled).button.popup__button Привязать
+
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+				
