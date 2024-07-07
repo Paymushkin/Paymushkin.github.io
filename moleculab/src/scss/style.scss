@@ -81,7 +81,7 @@ $mobileSmall: em(576.98); // Телефоны S
 // кастомный скроллбар
 
 *::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     height: 5px;
     transition: 0.3s all ease;
     cursor: grab;

@@ -37,7 +37,6 @@
 				p.popup__policy Нажимая «Отправить», вы принимаете условия 
 					a(href="#", target="_blank") политики конфиденциальности
 
-
 #request-success.popup(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
@@ -223,4 +222,57 @@
 
 				p.popup__policy Нажимая «Отправить», вы принимаете условия 
 					a(href="#", target="_blank") политики конфиденциальности
-				
+
+#pick-up-map.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content._transparent._big
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				.popup__map._pick-ups-list
+					
+					.popup__pick-ups.pick-ups
+						h3.pick-ups__title Способы доставки
+						form(action="post").pick-ups__form
+							input#search-pick-up.pick-ups__search(type="search", name="search-pick-up", placeholder="Введите адрес")
+						.pick-ups__address
+							ul.pick-ups__list
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item
+									h4 Красных Партизан, 1/4к5
+									span Краснодар	
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар		
+					
+					.popup__pick-up-point.point-pick-up
+						.point-pick-up__title
+							include icons/_arrow-left
+							h4 Пункт выдачи заказов СДЭК
+						ul.point-pick-up__list 
+							li.point-pick-up__item 
+								include icons/_location-point
+								span Краснодар, улица Красных Партизан, д. 1/4, корп. 2
+							li.point-pick-up__item 
+								include icons/_watch
+								span Срок хранения — 7 дней
+							li.point-pick-up__item 
+								include icons/_hourglass
+								span Ежедневно, 09:00 – 21:00
+					
+					#map.map.popup__ya-map

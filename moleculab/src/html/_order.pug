@@ -104,10 +104,10 @@ section.cart._delivery-split._spec-delivery
                                         p.info-stock__timing пн. - вс. : с 10:00 до 00:00
                                     span.info-stock__link Доставка бесплатная
                                 .stock-block__map.map-stock
-                                    button.button.map-stock__button(data-popup="map-stock") Показать на карте
+                                    button.button.map-stock__button(data-popup="pick-up-map") Показать на карте
 
                             .stock-block(data-type="point")
-                                .stock-block__pick-up-point.pick-up-point
+                                .stock-block__pick-up-point.pick-up-point(data-popup="pick-up-map")
                                     .pick-up-point__icon 
                                         include icons/_plus
                                     
@@ -132,6 +132,60 @@ section.cart._delivery-split._spec-delivery
                                         label.form-field__label(for="client-comment") Комментарий курьеру
                                         textarea#client-comment.form-field__textarea(type="text", name="client-comment", placeholder="Ваш комментарий")
 
+                .cart-products__payment.payment-block
+                    h2.payment-block__title Способы оплаты
+                    ul.payment-block__variants.variants__list
+                        li.variants__item._active
+                            img(src="@img/order/sbp.svg", alt="")
+                        li.variants__item(data-popup="add-card")
+                            include icons/_card
+                            span.variants__text Квитанция Сбербанка
+
+                .cart-products__products.products-block
+                    h2.products-block__title Ожидаемая дата доставки: 
+                        span 15 апреля, бесплатно
+                    .products-block__info
+                        span 3 товара
+                        span •
+                        span 10.01 кг
+                    ul.products-block__list
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-1.png", alt="")
+                            span.products-block__price 153 198 ₽ 
+                        
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-2.png", alt="")
+                            span.products-block__price 53 198 ₽ 
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-3.png", alt="")
+                            span.products-block__price 53 198 ₽ 
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-1.png", alt="")
+                            span.products-block__price 153 198 ₽ 
+                        
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-2.png", alt="")
+                            span.products-block__price 53 198 ₽ 
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-3.png", alt="")
+                            span.products-block__price 53 198 ₽ 
+                    
             .body-cart__bill.cart-bill
                 .cart-bill__header.header-bill 
                     .header-bill__print
@@ -170,6 +224,17 @@ section.cart._delivery-split._spec-delivery
                             span.cart-bill__price 150 000 ₽
 
                     .cart-bill__buttons 
-                        a(href="#").button.cart-bill__button Перейти к оформлению
+                        a(href="#").button.cart-bill__button Оформить заказ
                         span.cart-bill__tender(data-popup="tender") Закупка через тендер
+
+                .cart-bill__promocode.promocode-bill
+                    details.promocode-bill__details 
+                        summary.promocode-bill__summary
+                            .promocode-bill__title
+                                include icons/_sale 
+                                p Промокод или сертификат
+                            include icons/_arrow-down
+                        form(action="#", method="post").promocode-bill__form
+                            input#promocode(type="text", name="promocode", required, placeholder="Введите код").promocode-bill__input
+                            button.button Применить промокод
 

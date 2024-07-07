@@ -688,24 +688,46 @@ if (clientType) {
     });
 }
 
+// переход от списка пунктов выдачи к конкретному пункту
+
+const pickupMap = document.getElementById("pick-up-map")
+
+if (pickupMap) {
+
+    const map = pickupMap.querySelector(".popup__map")
+    const backToListIcon = pickupMap.querySelector(".point-pick-up__title svg")
+
+    backToListIcon.addEventListener("click", () => {
+        map.classList.add("_pick-ups-list")
+    })
+
+    let pickupPoints = pickupMap.querySelectorAll("li.pick-ups__item")
+
+    pickupPoints.forEach(item => {
+        item.addEventListener("click", () => {
+            map.classList.remove("_pick-ups-list")
+        })
+    });
+}
+
 // инициализация маски ввода телефона
 
-const callMePopup = document.getElementById('call-me') || null;
-const nameInputCall = document.getElementById('name-for-call') || null;
-const emailInputCall = document.getElementById('number-for-call') || null;
-// const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
+// const callMePopup = document.getElementById('call-me') || null;
+// const nameInputCall = document.getElementById('name-for-call') || null;
+// const emailInputCall = document.getElementById('number-for-call') || null;
+// // const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
 
-if (callMePopup) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
-}
+// if (callMePopup) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
+// }
 
-if (nameInputCall) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
-}
+// if (nameInputCall) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
+// }
 
-if (emailInputCall) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
-}
+// if (emailInputCall) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
+// }
 
 // проверка полей попапов на заполненность
 

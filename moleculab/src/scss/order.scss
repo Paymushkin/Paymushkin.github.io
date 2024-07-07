@@ -185,6 +185,7 @@
     align-items: center;
     min-height: 188px;
     background-image: url(/img/order/map.png);
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -216,5 +217,157 @@
         font-size: 20px;
         line-height: 1.2;
         font-weight: 500;
+    }
+}
+
+.promocode-bill {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        border-radius: 24px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding-top: 24px;
+    }
+
+    &__input {
+        padding: 8px 20px;
+        color: $mainColor;
+        border: 1px solid #E3E3E3;
+        border-radius: 30px;
+        font-size: 16px;
+        outline-color: $highlightColor-2;
+
+        &::placeholder {
+            color: $textColor;
+        }
+    }
+}
+
+.payment-block {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    &__title {
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 1.6;
+        font-weight: 500;
+    }
+}
+
+.variants {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        flex: 0 0 194px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+        height: 114px;
+        border-radius: 16px;
+        border: 1px solid $borderColor-2;
+        transition: 0.3s ease border-color;
+        cursor: pointer;
+
+        &._active {
+            border-color: $highlightColor-2;
+        }
+
+        img {
+            max-height: 70%;
+            max-width: 80%;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+}
+
+.products-block {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    &__title {
+        font-size: 24px;
+        line-height: 1.6;
+        font-weight: 500;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 32px;
+        color: $textColor;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__image {
+        padding: 10px;
+        border: 1px solid $borderColor-2;
+        border-radius: 24px;
+    }
+
+    &__image-ibg {
+        width: 140px;
+        height: 120px;
+
+        img {}
+    }
+
+    &__price {
+        color: $textColor;
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
