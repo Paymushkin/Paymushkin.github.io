@@ -1,4 +1,4 @@
-section.cart._delivery-split._spec-delivery
+section#order.order-section.cart._delivery-split._spec-delivery
     .cart__container
         - const orderPage = true;
         include _breadcrumbs
@@ -135,8 +135,8 @@ section.cart._delivery-split._spec-delivery
                 .cart-products__payment.payment-block
                     h2.payment-block__title Способы оплаты
                     ul.payment-block__variants.variants__list
-                        li.variants__item._active
-                            img(src="@img/order/sbp.svg", alt="")
+                        li.variants__item
+                            img(src="@img/order/iomoney.svg", alt="")
                         li.variants__item(data-popup="add-card")
                             include icons/_card
                             span.variants__text Квитанция Сбербанка

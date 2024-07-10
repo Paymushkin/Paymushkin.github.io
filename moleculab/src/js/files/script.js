@@ -708,7 +708,22 @@ if (pickupMap) {
             map.classList.remove("_pick-ups-list")
         })
     });
+
+    const searchPickup = pickupMap.querySelector("#search-pick-up")
+
+    searchPickup.addEventListener('input', () => {
+
+        const pickupBlock = pickupMap.querySelector(".pick-ups")
+
+        if (searchPickup.value.length) {
+            pickupBlock.classList.add("_active-search")
+        } else {
+            pickupBlock.classList.remove("_active-search")
+        }
+    });
 }
+
+
 
 // инициализация маски ввода телефона
 

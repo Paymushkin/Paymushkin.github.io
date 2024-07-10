@@ -3,10 +3,20 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 24px 16px;
+    }
+
     &__title {
         font-size: 24px;
         line-height: 1.6;
         font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 8px;
+            font-size: 20px;
+            line-height: 1.2;
+        }
     }
 
     &__subtitle {
@@ -14,6 +24,12 @@
         color: $textColor;
         font-size: 16px;
         line-height: 1.4;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 24px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
     }
 
     &__who {
@@ -22,6 +38,12 @@
         gap: 40px;
         margin-bottom: 20px;
         padding-left: 16px;
+
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
 
         label {
             display: flex;
@@ -45,6 +67,10 @@
 
     &__field {
         flex: 0 0 calc(50% - 10px);
+
+        @media (max-width: em(1200)) {
+            flex: 0 0 100%;
+        }
     }
 }
 
@@ -60,11 +86,21 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 24px;
+    }
+
     &__title {
         margin-bottom: 32px;
         font-size: 24px;
         line-height: 1.6;
         font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 24px;
+            font-size: 20px;
+            line-height: 1.2;
+        }
     }
 }
 
@@ -86,6 +122,10 @@
         border-radius: 16px;
         border: 2px solid $borderColor-2;
         transition: 0.3s ease border-color;
+
+        @media (max-width:$mobileSmall) {
+            gap: 4px;
+        }
 
         &._tab-active {
             border-color: $highlightColor-2;
@@ -118,6 +158,10 @@
     &__field {
         &._w50 {
             max-width: calc(50% - 10px);
+
+            @media (max-width:$mobileSmall) {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -126,6 +170,10 @@
     display: none;
     align-items: center;
     gap: 20px;
+
+    @media (max-width:$mobileSmall) {
+        flex-direction: column;
+    }
 
     &._active {
         display: flex;
@@ -185,11 +233,15 @@
     align-items: center;
     min-height: 188px;
     background-image: url(/img/order/map.png);
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 16px;
+
+    @media (max-width:$mobileSmall) {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
 }
 
 .pick-up-point {
@@ -225,6 +277,10 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 16px;
+    }
+
     &__summary {
         display: flex;
         justify-content: space-between;
@@ -235,6 +291,11 @@
         line-height: 1.2;
         font-weight: 500;
         cursor: pointer;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 16px;
+            line-height: 1.2;
+        }
     }
 
     &__title {
@@ -270,11 +331,21 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 24px;
+    }
+
     &__title {
         margin-bottom: 32px;
         font-size: 24px;
         line-height: 1.6;
         font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 24px;
+            font-size: 20px;
+            line-height: 1.2;
+        }
     }
 }
 
@@ -284,10 +355,11 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     &__item {
-        flex: 0 0 194px;
+        flex: 1 1 194px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -300,8 +372,14 @@
         transition: 0.3s ease border-color;
         cursor: pointer;
 
-        &._active {
-            border-color: $highlightColor-2;
+        @media (min-width:$mobileSmall) {
+            max-width: 194px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $highlightColor-2;
+            }
         }
 
         img {
@@ -322,10 +400,20 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 24px;
+    }
+
     &__title {
         font-size: 24px;
         line-height: 1.6;
         font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 8px;
+            font-size: 20px;
+            line-height: 1.2;
+        }
     }
 
     &__info {
@@ -336,6 +424,12 @@
         color: $textColor;
         font-size: 20px;
         line-height: 1.4;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
     }
 
     &__list {
@@ -343,6 +437,10 @@
         align-items: center;
         gap: 16px;
         flex-wrap: wrap;
+
+        @media (max-width:$mobileSmall) {
+            gap: 10px;
+        }
     }
 
     &__item {
@@ -362,6 +460,11 @@
         width: 140px;
         height: 120px;
 
+        @media (max-width:$mobileSmall) {
+            width: 115px;
+            height: 110px;
+        }
+
         img {}
     }
 
@@ -369,5 +472,19 @@
         color: $textColor;
         font-size: 14px;
         line-height: 1.4;
+    }
+}
+
+.order-section {
+    .cart-bill__header {
+        @media (max-width:$tablet) {
+            display: none;
+        }
+    }
+
+    .cart-bill {
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
     }
 }

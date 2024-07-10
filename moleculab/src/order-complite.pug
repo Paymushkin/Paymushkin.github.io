@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="ru")
+    include html/_head
+    body
+        .wrapper
+            include html/_header
+            main.main
+                include html/_order-complite
+                include html/_recommendation
+            include html/_footer
+            include html/_menu
+            include html/_mobile-catalog
+            include html/_popup
+
+        script(src='https://api-maps.yandex.ru/2.1/?apikey=a0d18d5f-ffdb-41e5-8cc5-86e70d7636e0&lang=ru_RU')
+        script(src="js/app.min.js")

@@ -203,8 +203,7 @@
 						.popup__button-wrapper
 							button(type="text", disabled).button.popup__button Далее
 
-
-#add-card.popup(aria-hidden='true', data-single="true")
+#add-card.popup.popup-add-card(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
@@ -218,12 +217,13 @@
 						input#date-for-card.popup__input._w50(type="tel", name="date-for-card", placeholder="ММ/ГГ", required)
 						input#cvv-for-card.popup__input._w50(type="number", name="cvv-for-card", placeholder="CVV/CVC", required)
 
-					button(type="submit", disabled).button.popup__button Привязать
+					.popup__button-wrapper
+						button(type="submit", disabled).button.popup__button Привязать
 
-				p.popup__policy Нажимая «Отправить», вы принимаете условия 
-					a(href="#", target="_blank") политики конфиденциальности
+						p.popup__policy Нажимая «Отправить», вы принимаете условия 
+							a(href="#", target="_blank") политики конфиденциальности
 
-#pick-up-map.popup(aria-hidden='true', data-single="true")
+#pick-up-map.pick-up-map.popup(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content._transparent._big
 			button.popup__close(data-close='data-close' type='button')
@@ -259,6 +259,12 @@
 								li.pick-ups__item 
 									h4 Красных Партизан, 1/4к5
 									span Краснодар		
+										
+						.pick-ups__location.location-pick-ups
+							button.location-pick-ups__button 
+									include icons/_pickup-point
+									span Определить местоположение
+							button.button._disabled Привезти сюда
 					
 					.popup__pick-up-point.point-pick-up
 						.point-pick-up__title
@@ -274,5 +280,6 @@
 							li.point-pick-up__item 
 								include icons/_hourglass
 								span Ежедневно, 09:00 – 21:00
-					
+						button.button.point-pick-up__button Привезти сюда
+						
 					#map.map.popup__ya-map

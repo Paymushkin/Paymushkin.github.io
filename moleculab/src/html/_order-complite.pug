@@ -1,0 +1,62 @@
+section#order.order-section.cart._delivery-split._spec-delivery
+    .cart__container
+        - const orderComplitePage = true;
+        include _breadcrumbs
+        
+        h1.section-title.cart__title
+            span.section-title__text Ваш заказ создан
+
+        .cart__body.body-cart
+            .body-cart__products.cart-products
+                .cart-products__products.products-block
+                    h2.products-block__title Заказ #15393825392 
+                    .products-block__info
+                        span 3 товара
+                        span •
+                        span 10.01 кг
+                    ul.products-block__list
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-1.png", alt="")
+                            span.products-block__price 153 198 ₽ 
+                        
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-2.png", alt="")
+                            span.products-block__price 53 198 ₽ 
+
+                        li.products-block__item
+                            .products-block__image
+                                .products-block__image-ibg
+                                    img(src="@img/products/item-3.png", alt="")
+                            span.products-block__price 53 198 ₽
+
+                .cart-products__info.info-block
+                    ul.info-block__list 
+                        li.info-block__item 
+                            include icons/_card-small
+                            p К оплате 150 000 ₽
+                        li.info-block__item 
+                            include icons/_box
+                            p Самовывоз из ТЦ “Галерея”
+                                span город Краснодар, улица Володи Головатого, 313; время работы: пн. - вс. : с 10:00 до 00:00
+                        li.info-block__item 
+                            include icons/_mail
+                            p Заберите заказ после сообщения о готовности
+                                span Информация о заказе доступна в личном кабинете
+
+            .body-cart__about.cart-about
+                .cart-about__body 
+                    p.cart-about__text Уведомление о статусе заказа вы получите по почте.
+                    p.cart-about__text Информация о заказе будет доступна в личном кабинете.
+                    .cart-about__buttons 
+                        a(href="").button.cart-about__button Перейти к заказу
+                        button.button._transparent.cart-about__button Оплатить
+                .cart-about__files
+                    a(href="", download).cart-about__link
+                        include icons/_download-files
+                        p Скачать в  PDF
+            

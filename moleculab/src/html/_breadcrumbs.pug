@@ -31,6 +31,19 @@ else if orderPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Оформление заказа 
 
+else if orderComplitePage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Корзина 
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Оформление заказа
+            li.breadcrumbs__item 
+                .breadcrumbs__link Заказ #12345678 
+
 else
 
     .breadcrumbs.catalog__breadcrumbs
