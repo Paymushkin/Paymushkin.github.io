@@ -9266,7 +9266,7 @@ details summary svg {
 }
 
 .no-webp .map-stock{
-  background-image: url(/img/order/map.png); }
+  background-image: url(../img/order/map.png); }
 
 .map-stock {
   -ms-flex: 0 0 50%;
@@ -10077,5 +10077,5 @@ details summary svg {
 .nav-contacts__link-phone {
   font-weight: 700;
 }
-.webp .map-stock{ background-image: url(/img/order/map.webp); }
+.webp .map-stock{ background-image: url(../img/order/map.webp); }
 .webp .footer__pattern{ background-image: url(../img/footer/pattern.webp); }
