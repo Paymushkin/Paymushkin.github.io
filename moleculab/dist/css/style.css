@@ -300,6 +300,14 @@ body {
     color: #fff;
     background-color: #77C149;
   }
+  .button._transparent:hover svg path {
+    stroke: #fff;
+  }
+}
+.button._transparent svg path {
+  -webkit-transition: 0.3s ease stroke;
+  -o-transition: 0.3s ease stroke;
+  transition: 0.3s ease stroke;
 }
 .button._gradient {
   background: -o-linear-gradient(329deg, #00A0DB -41.61%, #86D06C 82.68%);
@@ -7802,6 +7810,11 @@ details summary svg {
   display: -ms-grid;
   display: grid;
 }
+@media (max-width: 36.06125em) {
+  .empty-cart {
+    min-height: 250px;
+  }
+}
 .empty-cart__body {
   display: -ms-flexbox;
   display: flex;
@@ -9561,6 +9574,93 @@ details summary svg {
   .order-section .cart-bill {
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+}
+
+.favorites {
+  padding: 32px 0 80px;
+}
+.favorites__title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
+}
+.favorites__button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  min-height: 34px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+._favorites-empty .favorites__button {
+  display: none;
+}
+._favorites-empty .favorites__products {
+  display: none;
+}
+
+.empty-favorites {
+  display: none;
+  place-items: center;
+  min-height: 528px;
+}
+@media (max-width: 36.06125em) {
+  .empty-favorites {
+    min-height: 250px;
+  }
+}
+._favorites-empty .empty-favorites {
+  display: -ms-grid;
+  display: grid;
+}
+.empty-favorites__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 335px;
+}
+@media (max-width: 48.06125em) {
+  .empty-favorites__body {
+    max-width: 233px;
+  }
+}
+.empty-favorites__title {
+  margin-bottom: 16px;
+  color: #545454;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (max-width: 48.06125em) {
+  .empty-favorites__title {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+}
+.empty-favorites__text {
+  color: #6F8290;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+@media (max-width: 48.06125em) {
+  .empty-favorites__text {
+    font-size: 16px;
   }
 }
 

@@ -91,7 +91,15 @@
 			&:hover {
 				color: #fff;
 				background-color: #77C149;
+
+				svg path {
+					stroke: #fff;
+				}
 			}
+		}
+
+		svg path {
+			transition: 0.3s ease stroke;
 		}
 	}
 

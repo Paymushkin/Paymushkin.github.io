@@ -36,11 +36,11 @@ section#order.order-section.cart._delivery-split._spec-delivery
                         .client-order__info.info-client._active(data-type="individual") 
                             .form-field.info-client__field
                                 label.form-field__label(for="сlient-surname") Фамилия*
-                                input#client-surname.form-field__input(type="text", name="сlient-surname", required, placeholder="Мария")
+                                input#client-surname.form-field__input(type="text", name="сlient-surname", placeholder="Мария")
                             
                             .form-field.info-client__field
                                 label.form-field__label(for="сlient-name") Имя*
-                                input#client-name.form-field__input(type="text", name="сlient-name", required, placeholder="Иванова")
+                                input#client-name.form-field__input(type="text", name="сlient-name", placeholder="Иванова")
 
                             .form-field.info-client__field  
                                 label.form-field__label(for="client-patronum") Отчество
@@ -49,11 +49,11 @@ section#order.order-section.cart._delivery-split._spec-delivery
                         .client-order__info.info-client(data-type="entity") 
                             .form-field.info-client__field
                                 label.form-field__label(for="company-сlient-surname") Фамилия*
-                                input#company-client-surname.form-field__input(type="text", name="company-сlient-surname", required, placeholder="Мария")
+                                input#company-client-surname.form-field__input(type="text", name="company-сlient-surname", placeholder="Мария")
                             
                             .form-field.info-client__field
                                 label.form-field__label(for="company-сlient-name") Имя*
-                                input#company-client-name.form-field__input(type="text", name="company-сlient-name", required, placeholder="Иванова")
+                                input#company-client-name.form-field__input(type="text", name="company-сlient-name", placeholder="Иванова")
 
                             .form-field.info-client__field  
                                 label.form-field__label(for="company-client-patronum") Отчество
@@ -119,11 +119,11 @@ section#order.order-section.cart._delivery-split._spec-delivery
                                 .shipping__info.info-shipping
                                     .form-field.info-shipping__field
                                         label.form-field__label(for="сlient-street") Улица*
-                                        input#client-street.form-field__input(type="text", name="сlient-street", required, placeholder="Введите адрес")
+                                        input#client-street.form-field__input(type="text", name="сlient-street", placeholder="Введите адрес")
                                     
                                     .form-field.info-shipping__field._w50
                                         label.form-field__label(for="сlient-house") Дом*
-                                        input#client-house.form-field__input(type="text", name="сlient-house", required, placeholder="Номер дома")
+                                        input#client-house.form-field__input(type="text", name="сlient-house", placeholder="Номер дома")
 
                                     .form-field.info-shipping__field._w50
                                         label.form-field__label(for="client-flat") Квартира/Офис
@@ -235,6 +235,6 @@ section#order.order-section.cart._delivery-split._spec-delivery
                                 p Промокод или сертификат
                             include icons/_arrow-down
                         form(action="#", method="post").promocode-bill__form
-                            input#promocode(type="text", name="promocode", required, placeholder="Введите код").promocode-bill__input
+                            input#promocode(type="text", name="promocode", placeholder="Введите код").promocode-bill__input
                             button.button Применить промокод
 

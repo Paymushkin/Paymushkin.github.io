@@ -723,6 +723,24 @@ if (pickupMap) {
     });
 }
 
+// работа с кнопкой "очистить список" избранного
+
+const cleanFavoritesList = document.getElementById("remove-all-favorites")
+
+if (cleanFavoritesList) {
+
+    const favoritesSection = document.getElementById("favorites") || null
+    let favoritesProducts = favoritesSection.querySelectorAll(".product-item") || null
+
+
+    if (!favoritesProducts) {
+        favoritesSection.classList.add("_favorites-empty")
+    }
+
+    cleanFavoritesList.addEventListener("click", () => {
+        favoritesSection.classList.add("_favorites-empty")
+    })
+}
 
 
 // инициализация маски ввода телефона

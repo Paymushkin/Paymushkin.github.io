@@ -15,6 +15,10 @@
         display: grid;
     }
 
+    @media (max-width:$mobileSmall) {
+        min-height: 250px;
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
