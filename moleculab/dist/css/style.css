@@ -7103,8 +7103,14 @@ details summary svg {
 .product-gallery__slide {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+}
+.product-gallery__slide img {
+  max-width: 100%;
+  max-width: 100%;
 }
 
 .content-product__top {

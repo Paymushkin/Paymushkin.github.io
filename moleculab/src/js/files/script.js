@@ -855,12 +855,8 @@ if (scrollHeader) {
     window.onscroll = function () {
         fixHeader()
     };
-
-    // const header = document.querySelector("header");
     var sticky = header.offsetHeight;
     document.querySelector("body").style.paddingTop = scrollHeader.offsetHeight + "px"
-
-    // console.log(header.offsetHeight, document.querySelector("body"))
 
     function fixHeader() {
         if (window.pageYOffset > sticky) {

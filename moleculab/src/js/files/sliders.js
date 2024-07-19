@@ -648,7 +648,7 @@ function initSliders() {
 			observeSlideChildren: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 
 			// Пагинация
@@ -715,8 +715,6 @@ function initSliders() {
 			}
 		});
 	}
-
-	console.log(document.querySelectorAll('[class*="comparisson__slider-"]'))
 
 	if (document.querySelectorAll('[data-slider-products]').length) { // Указываем скласс нужного слайдера
 
