@@ -92,6 +92,10 @@ details {
     }
 }
 
+.scroll-x {
+    cursor: grab;
+}
+
 [class*="__container"] {
     @media (max-width:$mobileSmall) {
         padding: 0 20px;
@@ -124,10 +128,16 @@ details {
         position: absolute;
         top: 0;
         left: 100%;
-        color: $mainColor;
+        // color: $mainColor;
         font-size: 18px;
         font-weight: 500;
         line-height: 1.6;
+    }
+
+    span {
+        &._highligth {
+            color: $highlightColor-2;
+        }
     }
 }
 

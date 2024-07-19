@@ -8,6 +8,20 @@
 
     &__container {}
 
+    &__pattern {
+        position: absolute;
+        top: -135px;
+        width: 100vw;
+        max-width: 100vw;
+        height: 20.5vw;
+        background-image: url(../img/laboratory/pattern.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        z-index: -1;
+        // mix-blend-mode: soft-light;
+    }
+
     &__title {}
 
     &__body {}

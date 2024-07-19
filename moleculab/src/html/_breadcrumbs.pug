@@ -53,6 +53,32 @@ else if favoritesPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Избранные товары
 
+else if searchPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/category.html").breadcrumbs__link Каталог
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Оборудование
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Оборудование для ветеринарии
+            li.breadcrumbs__item 
+                .breadcrumbs__link Анализатор
+
+else if comparissonPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Каталог
+            li.breadcrumbs__item 
+                .breadcrumbs__link Сравнение товаров
+
 else
 
     .breadcrumbs.catalog__breadcrumbs

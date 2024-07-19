@@ -248,6 +248,18 @@
 
 .product-item {
 
+    &_comparisson {
+        border: 1px solid $borderColor-2;
+
+        .product-item__text {
+            -webkit-line-clamp: 2;
+        }
+
+        .product-item__link {
+            margin-bottom: 0;
+        }
+    }
+
     &__to {
         display: flex;
         align-items: center;

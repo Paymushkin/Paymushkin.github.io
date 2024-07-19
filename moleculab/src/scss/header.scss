@@ -427,3 +427,19 @@
 		}
 	}
 }
+
+.scroll-header {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+	// box-shadow: 0 4px 27px rgba(0, 0, 0, 0.08);
+	width: 100%;
+	background-color: #fff;
+
+	._header-fixed & {
+		// position: fixed;
+		// top: 0;
+		// z-index: 4;
+		box-shadow: 0 4px 27px rgba(0, 0, 0, 0.08);
+	}
+}

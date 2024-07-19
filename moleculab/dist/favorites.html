@@ -18,635 +18,635 @@
     <title>Moleculab</title>
     <link rel="icon" href="img/favicon.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css?_v=20240713160711" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js?_v=20240713160711" defer="defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240713160711" defer="defer"></script>
-    <link rel="stylesheet" href="css/style.min.css?_v=20240713160711"/>
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css?_v=20240719164043" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js?_v=20240719164043" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240719164043" defer="defer"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240719164043"/>
   </head>
   <body>
     <div class="wrapper">
       <header class="header" id="header" itemscope="" itemtype="http://schema.org/WPHeader">
-        <div class="header__container">
-          <div class="header__top header-top">
-            <div class="header-top__left">
-              <div class="location-block header-top__location">
-                <div class="location-block__current" id="change-location">
-                  <div class="location-block__location"><img src="img/location.svg?_v=20240713160711" alt="location-icon"/></div>
-                  <div class="location-block__city">г. Москва</div>
-                  <div class="location-block__hidden hidden-block">
-                    <div class="hidden-block__body"> 
-                      <div class="hidden-block__title"> <span>Ваш город</span><span class="_highligth">Краснодар?</span></div>
-                      <div class="hidden-block__buttons">
-                        <button class="button hidden-block__button">Все верно</button><span>Выбрать другой</span>
+        <div class="scroll-header">
+          <div class="header__container">
+            <div class="header__top header-top">
+              <div class="header-top__left">
+                <div class="location-block header-top__location">
+                  <div class="location-block__current" id="change-location">
+                    <div class="location-block__location"><img src="img/location.svg?_v=20240719164043" alt="location-icon"/></div>
+                    <div class="location-block__city">г. Москва</div>
+                    <div class="location-block__hidden hidden-block">
+                      <div class="hidden-block__body"> 
+                        <div class="hidden-block__title"> <span>Ваш город</span><span class="_highligth">Краснодар?</span></div>
+                        <div class="hidden-block__buttons">
+                          <button class="button hidden-block__button">Все верно</button><span>Выбрать другой</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="header-top__right"><a class="header-top__link _to-mail" href="mailto:pochta@gmail.com">pochta@gmail.com</a><a class="header-top__link _to-call" href="tel:+79002834869">8 (900) 283-48-69</a>
+                <button class="button _smaller header-top__call" data-text="Заказать звонок" data-popup="call-me"> <span>Заказать звонок</span></button>
+              </div>
             </div>
-            <div class="header-top__right"><a class="header-top__link _to-mail" href="mailto:pochta@gmail.com">pochta@gmail.com</a><a class="header-top__link _to-call" href="tel:+79002834869">8 (900) 283-48-69</a>
-              <button class="button _smaller header-top__call" data-text="Заказать звонок" data-popup="call-me"> <span>Заказать звонок</span></button>
-            </div>
-          </div>
-        </div>
-        <div class="header__container">
-          <div class="header__middle header-middle">
-            <div class="header-middle__left"><a class="header-middle__logo" href="/"><img src="img/logo.svg?_v=20240713160711" alt="Logo"/></a>
-              <div class="header-middle__menu header-menu" id="open-header-menu"><span class="header-menu__line"></span>
-                <nav class="header-menu__hidden-block" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
-                  <style>
-                    .banner-header_1 {
-                    	background-image: url(img/header/banner-1.png)
-                    }
-                    @media (max-width:768px) {
-                    	.banner-header_1 {
-                    		background-image: url(img/header/banner-1.png)
-                    	}
-                    }
-                    
-                    @media (max-width:576px) {
-                    	.banner-header_1 {
-                    		background-image: url(img/header/banner-1.png)
-                    	}
-                    }
-                  </style>
-                  <div class="header-tabs__container">
-                    <div class="tabs header-menu__tabs header-tabs" id="header-tabs" data-tabs="">
-                      <nav class="tabs__navigation header-tabs__navigation">
-                        <button class="tabs__title header-tabs__title _tab-active" data-tab-button="1">Оборудование</button>
-                        <button class="tabs__title header-tabs__title" data-tab-button="2">Аксессуары для оборудования</button>
-                        <button class="tabs__title header-tabs__title" data-tab-button="3">Лабораторный пластик</button>
-                        <button class="tabs__title header-tabs__title" data-tab-button="4">Расходные материалы</button>
-                        <button class="tabs__title header-tabs__title" data-tab-button="5">Реагенты</button>
-                        <button class="tabs__title header-tabs__title" data-tab-button="6">Мебель</button>
-                      </nav>
-                      <div class="tabs__content header-tabs__content _content-active" data-tabs-body="1">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
-                          </div>
-                          <h2 class="header-tabs__category" data-count="1234">Оборудование</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+            <div class="header__middle header-middle">
+              <div class="header-middle__left"><a class="header-middle__logo" href="/"><img src="img/logo.svg?_v=20240719164043" alt="Logo"/></a>
+                <div class="header-middle__menu header-menu" id="open-header-menu"><span class="header-menu__line"></span>
+                  <nav class="header-menu__hidden-block" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                    <style>
+                      .banner-header_1 {
+                      	background-image: url(img/header/banner-1.png)
+                      }
+                      @media (max-width:768px) {
+                      	.banner-header_1 {
+                      		background-image: url(img/header/banner-1.png)
+                      	}
+                      }
+                      
+                      @media (max-width:576px) {
+                      	.banner-header_1 {
+                      		background-image: url(img/header/banner-1.png)
+                      	}
+                      }
+                    </style>
+                    <div class="header-tabs__container">
+                      <div class="tabs header-menu__tabs header-tabs" id="header-tabs" data-tabs="">
+                        <nav class="tabs__navigation header-tabs__navigation">
+                          <button class="tabs__title header-tabs__title _tab-active" data-tab-button="1">Оборудование</button>
+                          <button class="tabs__title header-tabs__title" data-tab-button="2">Аксессуары для оборудования</button>
+                          <button class="tabs__title header-tabs__title" data-tab-button="3">Лабораторный пластик</button>
+                          <button class="tabs__title header-tabs__title" data-tab-button="4">Расходные материалы</button>
+                          <button class="tabs__title header-tabs__title" data-tab-button="5">Реагенты</button>
+                          <button class="tabs__title header-tabs__title" data-tab-button="6">Мебель</button>
+                        </nav>
+                        <div class="tabs__content header-tabs__content _content-active" data-tabs-body="1">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                            <h2 class="header-tabs__category" data-count="1234">Оборудование</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="tabs__content header-tabs__content" data-tabs-body="2">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
-                          </div>
-                          <h2 class="header-tabs__category" data-count="1234">Аксессуары для оборудования</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                        <div class="tabs__content header-tabs__content" data-tabs-body="2">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__content header-tabs__content" data-tabs-body="3">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
-                          </div>
-                          <h2 class="header-tabs__category" data-count="1234">Лабораторный пластик</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                            <h2 class="header-tabs__category" data-count="1234">Аксессуары для оборудования</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="tabs__content header-tabs__content" data-tabs-body="4">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
-                          </div>
-                          <h2 class="header-tabs__category" data-count="1234">Расходные материалы</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                        <div class="tabs__content header-tabs__content" data-tabs-body="3">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__content header-tabs__content" data-tabs-body="5">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
-                          </div>
-                          <h2 class="header-tabs__category" data-count="1234">Реагенты</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                            <h2 class="header-tabs__category" data-count="1234">Лабораторный пластик</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="tabs__content header-tabs__content" data-tabs-body="6">
-                        <div class="tabs__body header-tabs__body"> 
-                          <div class="header-tabs__banner banner-header banner-header_1">
-                            <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
+                        <div class="tabs__content header-tabs__content" data-tabs-body="4">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
+                            </div>
+                            <h2 class="header-tabs__category" data-count="1234">Расходные материалы</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                            </div>
                           </div>
-                          <h2 class="header-tabs__category" data-count="1234">Мебель</h2>
-                          <div class="header-tabs__grid">
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                        </div>
+                        <div class="tabs__content header-tabs__content" data-tabs-body="5">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                            <h2 class="header-tabs__category" data-count="1234">Реагенты</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                          </div>
+                        </div>
+                        <div class="tabs__content header-tabs__content" data-tabs-body="6">
+                          <div class="tabs__body header-tabs__body"> 
+                            <div class="header-tabs__banner banner-header banner-header_1">
+                              <div class="banner-header__title">Научное и контрольно-аналитическое оборудование</div><a class="button banner-header__button" href="">В каталог</a>
                             </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab _full-list">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
-                            </div>
-                            <div class="grid-tab">
-                              <ul class="grid-tab__list">
-                                <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
-                                <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
-                                <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                                <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
-                              </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                            <h2 class="header-tabs__category" data-count="1234">Мебель</h2>
+                            <div class="header-tabs__grid">
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab _full-list">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
+                              <div class="grid-tab">
+                                <ul class="grid-tab__list">
+                                  <li class="grid-tab__item"><a class="grid-tab__link" href="">Научное и контрольно-аналитическое оборудование</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Автоматические станции</a></li>
+                                  <li class="grid-tab__item" data-count="124"><a class="grid-tab__link" href="">Гель-документирующие системы</a></li>
+                                  <li class="grid-tab__item" data-count="12"><a class="grid-tab__link" href="">Иммуноанализаторы</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                  <li class="grid-tab__item" data-count="1234"><a class="grid-tab__link" href="">Оборудование для молекулярной спектроскопии</a></li>
+                                </ul><span class="grid-tab__more">Еще 8</span><span class="grid-tab__less">Свернуть</span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </nav>
-              </div>
-            </div>
-            <div class="header-middle__center" itemscope="" itemtype="http://schema.org/WebSite">
-              <form class="header-middle__form search-form" action="#" method="post" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
-                <div class="search-form__input input-wrapper"> 
-                  <input class="input" type="text" placeholder="Поиск"/>
-                  <meta itemprop="target" content="/search/?q={query}"/>
-                  <button class="input__icon-search" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
-                      <path d="M13.1194 13.456L13.1194 13.456C13.2447 13.5813 13.4478 13.5813 13.5731 13.456L13.5731 13.456L13.956 13.0731L13.9207 13.0377L13.956 13.0731C14.0813 12.9478 14.0813 12.7446 13.956 12.6194L10.2113 8.87466C10.9176 7.98732 11.3417 6.86565 11.3417 5.64585C11.3417 2.78083 9.01085 0.45 6.14583 0.45C3.28081 0.45 0.95 2.78083 0.95 5.64585C0.95 8.51088 3.28083 10.8417 6.14586 10.8417C7.36565 10.8417 8.48732 10.4176 9.37466 9.71133L13.1194 13.456ZM6.14586 9.65836C3.93327 9.65836 2.13334 7.85844 2.13334 5.64585C2.13334 3.43327 3.93327 1.63334 6.14586 1.63334C8.35844 1.63334 10.1584 3.43327 10.1584 5.64585C10.1584 7.85844 8.35844 9.65836 6.14586 9.65836Z" fill="#6F8291" stroke="#6F8291" stroke-width="0.1"></path>
-                    </svg>
-                  </button>
+                  </nav>
                 </div>
-              </form>
-              <div class="header-middle__search" id="open-mobile-search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M13.7021 13.7031L17.4991 17.5" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
               </div>
-              <div class="header-middle__close" id="open-mobile-close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M17.7782 2.22217L2.22266 17.7777M2.22266 2.22217L17.7782 17.7777" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
+              <div class="header-middle__center" itemscope="" itemtype="http://schema.org/WebSite">
+                <form class="header-middle__form search-form" action="#" method="post" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+                  <div class="search-form__input input-wrapper"> 
+                    <input class="input" type="text" placeholder="Поиск"/>
+                    <meta itemprop="target" content="/search/?q={query}"/>
+                    <button class="input__icon-search" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M13.1194 13.456L13.1194 13.456C13.2447 13.5813 13.4478 13.5813 13.5731 13.456L13.5731 13.456L13.956 13.0731L13.9207 13.0377L13.956 13.0731C14.0813 12.9478 14.0813 12.7446 13.956 12.6194L10.2113 8.87466C10.9176 7.98732 11.3417 6.86565 11.3417 5.64585C11.3417 2.78083 9.01085 0.45 6.14583 0.45C3.28081 0.45 0.95 2.78083 0.95 5.64585C0.95 8.51088 3.28083 10.8417 6.14586 10.8417C7.36565 10.8417 8.48732 10.4176 9.37466 9.71133L13.1194 13.456ZM6.14586 9.65836C3.93327 9.65836 2.13334 7.85844 2.13334 5.64585C2.13334 3.43327 3.93327 1.63334 6.14586 1.63334C8.35844 1.63334 10.1584 3.43327 10.1584 5.64585C10.1584 7.85844 8.35844 9.65836 6.14586 9.65836Z" fill="#6F8291" stroke="#6F8291" stroke-width="0.1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+                <div class="header-middle__search" id="open-mobile-search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M13.7021 13.7031L17.4991 17.5" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+                <div class="header-middle__close" id="open-mobile-close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.7782 2.22217L2.22266 17.7777M2.22266 2.22217L17.7782 17.7777" stroke="#6F8291" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <nav class="header-middle__right" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
-              <ul class="header-icons__list">
-                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
-                      <path d="M15.4372 3.375C18.8127 3.375 21.0807 6.58781 21.0807 9.585C21.0807 15.6548 11.6678 20.625 11.4974 20.625C11.327 20.625 1.91406 15.6548 1.91406 9.585C1.91406 6.58781 4.18212 3.375 7.55758 3.375C9.49555 3.375 10.9498 4.60714 11.4974 5.70238C12.045 4.60714 13.4992 3.375 15.4372 3.375Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg><span class="header-icons__text" itemprop="name">Избранное</span></a></li>
-                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg><span class="header-icons__text" itemprop="name">Войти</span></a></li>
-                <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M4.5 8.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
-                      <path d="M9.5 2.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
-                      <path d="M14.5 11V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
-                      <path d="M19.5 3.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
-                    </svg><span class="header-icons__text" itemprop="name">Сравнение</span></a></li>
-                <li class="header-icons__item" id="showHideHeaderCart">
-                  <div class="header-icons__link" data-counter="2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M15.8338 9.12508V6.25008C15.8338 4.13299 14.1175 2.41675 12.0004 2.41675C9.88334 2.41675 8.1671 4.13299 8.1671 6.25008V9.12508M3.94277 10.4207L3.36777 16.554C3.20428 18.2979 3.12254 19.1699 3.4119 19.8433C3.6661 20.435 4.11155 20.9241 4.67687 21.2325C5.3204 21.5834 6.19616 21.5834 7.94769 21.5834H16.0532C17.8047 21.5834 18.6805 21.5834 19.324 21.2325C19.8893 20.9241 20.3348 20.435 20.589 19.8433C20.8783 19.1699 20.7966 18.2979 20.6331 16.554L20.0581 10.4207C19.92 8.94812 19.851 8.21182 19.5198 7.65515C19.2282 7.16489 18.7973 6.77248 18.2819 6.52785C17.6968 6.25008 16.9572 6.25008 15.4782 6.25008L8.52269 6.25008C7.04364 6.25008 6.30411 6.25008 5.71896 6.52785C5.20361 6.77248 4.77269 7.16489 4.48103 7.65515C4.14986 8.21182 4.08083 8.94812 3.94277 10.4207Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg><span class="header-icons__text" itemprop="name">Корзина</span>
-                    <div class="header-cart" id="header-cart">
-                      <div class="header-cart__inner">
-                        <div class="header-cart__top">
-                          <h3 class="header-cart__title">Основные товары <span>(2)</span></h3>
-                          <button class="header-cart__delete">Очистить список</button>
-                        </div>
-                        <div class="header-cart__shipping shipping-cost">
-                          <div class="shipping-cost__icon"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewbox="0 0 31 30" fill="none">
-                              <path d="M18 8.75H20.9216C21.2273 8.75 21.3802 8.75 21.524 8.78454C21.6516 8.81516 21.7735 8.86566 21.8854 8.9342C22.0115 9.0115 22.1196 9.1196 22.3358 9.33579L27.4142 14.4142C27.6304 14.6304 27.7385 14.7385 27.8158 14.8646C27.8843 14.9765 27.9348 15.0984 27.9655 15.226C28 15.3698 28 15.5227 28 15.8284V19.375C28 19.9574 28 20.2486 27.9048 20.4784C27.778 20.7846 27.5346 21.028 27.2284 21.1548C26.9986 21.25 26.7074 21.25 26.125 21.25M19.875 21.25H18M18 21.25V9C18 7.59987 18 6.8998 17.7275 6.36502C17.4878 5.89462 17.1054 5.51217 16.635 5.27248C16.1002 5 15.4001 5 14 5H7C5.59987 5 4.8998 5 4.36502 5.27248C3.89462 5.51217 3.51217 5.89462 3.27248 6.36502C3 6.8998 3 7.59987 3 9V18.75C3 20.1307 4.11929 21.25 5.5 21.25M18 21.25H13M13 21.25C13 23.3211 11.3211 25 9.25 25C7.17893 25 5.5 23.3211 5.5 21.25M13 21.25C13 19.1789 11.3211 17.5 9.25 17.5C7.17893 17.5 5.5 19.1789 5.5 21.25M26.125 21.875C26.125 23.6009 24.7259 25 23 25C21.2741 25 19.875 23.6009 19.875 21.875C19.875 20.1491 21.2741 18.75 23 18.75C24.7259 18.75 26.125 20.1491 26.125 21.875Z" stroke="#6F8291" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
+              <nav class="header-middle__right" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <ul class="header-icons__list">
+                  <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                        <path d="M15.4372 3.375C18.8127 3.375 21.0807 6.58781 21.0807 9.585C21.0807 15.6548 11.6678 20.625 11.4974 20.625C11.327 20.625 1.91406 15.6548 1.91406 9.585C1.91406 6.58781 4.18212 3.375 7.55758 3.375C9.49555 3.375 10.9498 4.60714 11.4974 5.70238C12.045 4.60714 13.4992 3.375 15.4372 3.375Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg><span class="header-icons__text" itemprop="name">Избранное</span></a></li>
+                  <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg><span class="header-icons__text" itemprop="name">Войти</span></a></li>
+                  <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4.5 8.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                        <path d="M9.5 2.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                        <path d="M14.5 11V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                        <path d="M19.5 3.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
+                      </svg><span class="header-icons__text" itemprop="name">Сравнение</span></a></li>
+                  <li class="header-icons__item" id="showHideHeaderCart">
+                    <div class="header-icons__link" data-counter="2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15.8338 9.12508V6.25008C15.8338 4.13299 14.1175 2.41675 12.0004 2.41675C9.88334 2.41675 8.1671 4.13299 8.1671 6.25008V9.12508M3.94277 10.4207L3.36777 16.554C3.20428 18.2979 3.12254 19.1699 3.4119 19.8433C3.6661 20.435 4.11155 20.9241 4.67687 21.2325C5.3204 21.5834 6.19616 21.5834 7.94769 21.5834H16.0532C17.8047 21.5834 18.6805 21.5834 19.324 21.2325C19.8893 20.9241 20.3348 20.435 20.589 19.8433C20.8783 19.1699 20.7966 18.2979 20.6331 16.554L20.0581 10.4207C19.92 8.94812 19.851 8.21182 19.5198 7.65515C19.2282 7.16489 18.7973 6.77248 18.2819 6.52785C17.6968 6.25008 16.9572 6.25008 15.4782 6.25008L8.52269 6.25008C7.04364 6.25008 6.30411 6.25008 5.71896 6.52785C5.20361 6.77248 4.77269 7.16489 4.48103 7.65515C4.14986 8.21182 4.08083 8.94812 3.94277 10.4207Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg><span class="header-icons__text" itemprop="name">Корзина</span>
+                      <div class="header-cart" id="header-cart">
+                        <div class="header-cart__inner">
+                          <div class="header-cart__top">
+                            <h3 class="header-cart__title">Основные товары <span>(2)</span></h3>
+                            <button class="header-cart__delete">Очистить список</button>
                           </div>
-                          <div class="shipping-cost__body"> 
-                            <div class="shipping-cost__progress"> 
-                              <div class="shipping-cost__bar">
-                                <div class="shipping-cost__bar-progress" style="width: 75%;"></div>
-                              </div><span class="shipping-cost__price">25 000 ₽</span>
+                          <div class="header-cart__shipping shipping-cost">
+                            <div class="shipping-cost__icon"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewbox="0 0 31 30" fill="none">
+                                <path d="M18 8.75H20.9216C21.2273 8.75 21.3802 8.75 21.524 8.78454C21.6516 8.81516 21.7735 8.86566 21.8854 8.9342C22.0115 9.0115 22.1196 9.1196 22.3358 9.33579L27.4142 14.4142C27.6304 14.6304 27.7385 14.7385 27.8158 14.8646C27.8843 14.9765 27.9348 15.0984 27.9655 15.226C28 15.3698 28 15.5227 28 15.8284V19.375C28 19.9574 28 20.2486 27.9048 20.4784C27.778 20.7846 27.5346 21.028 27.2284 21.1548C26.9986 21.25 26.7074 21.25 26.125 21.25M19.875 21.25H18M18 21.25V9C18 7.59987 18 6.8998 17.7275 6.36502C17.4878 5.89462 17.1054 5.51217 16.635 5.27248C16.1002 5 15.4001 5 14 5H7C5.59987 5 4.8998 5 4.36502 5.27248C3.89462 5.51217 3.51217 5.89462 3.27248 6.36502C3 6.8998 3 7.59987 3 9V18.75C3 20.1307 4.11929 21.25 5.5 21.25M18 21.25H13M13 21.25C13 23.3211 11.3211 25 9.25 25C7.17893 25 5.5 23.3211 5.5 21.25M13 21.25C13 19.1789 11.3211 17.5 9.25 17.5C7.17893 17.5 5.5 19.1789 5.5 21.25M26.125 21.875C26.125 23.6009 24.7259 25 23 25C21.2741 25 19.875 23.6009 19.875 21.875C19.875 20.1491 21.2741 18.75 23 18.75C24.7259 18.75 26.125 20.1491 26.125 21.875Z" stroke="#6F8291" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
                             </div>
-                            <p class="shipping-cost__text">
-                               До бесплатной доставки по Москве и Московской области осталось добавить товаров на 500 ₽</p>
+                            <div class="shipping-cost__body"> 
+                              <div class="shipping-cost__progress"> 
+                                <div class="shipping-cost__bar">
+                                  <div class="shipping-cost__bar-progress" style="width: 75%;"></div>
+                                </div><span class="shipping-cost__price">25 000 ₽</span>
+                              </div>
+                              <p class="shipping-cost__text">
+                                 До бесплатной доставки по Москве и Московской области осталось добавить товаров на 500 ₽</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="header-cart__products small-cart">
-                          <ul class="small-cart__list">
-                            <li class="small-cart__item"> 
-                              <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240713160711" alt=""/></picture></div>
-                              <div class="small-cart__content"> 
-                                <h3 class="small-cart__title">УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом</h3><span class="small-cart__count">1 шт.</span>
-                              </div>
-                              <div class="small-cart__left"><span class="small-cart__price">68 334 ₽</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                                  <path d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                              </div>
-                            </li>
-                            <li class="small-cart__item"> 
-                              <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240713160711" alt=""/></picture></div>
-                              <div class="small-cart__content"> 
-                                <h3 class="small-cart__title">Гель-документирующая система ChemiScope</h3><span class="small-cart__count">1 шт.</span>
-                              </div>
-                              <div class="small-cart__left"><span class="header-cart__price small-cart__price">123 334 ₽</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                                  <path d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="header-cart__bottom bottom-cart"> 
-                          <div class="bottom-cart__total"> <span class="bottom-cart__text">Итого:</span><span class="bottom-cart__price">234 334 ₽</span></div>
-                          <div class="bottom-cart__buttons"> 
-                            <button class="button _transparent bottom-cart__button">Оформить заказ</button><a class="button bottom-cart__button" href="/cart.html">В корзину</a>
+                          <div class="header-cart__products small-cart">
+                            <ul class="small-cart__list">
+                              <li class="small-cart__item"> 
+                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240719164043" alt=""/></picture></div>
+                                <div class="small-cart__content"> 
+                                  <h3 class="small-cart__title">УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом</h3><span class="small-cart__count">1 шт.</span>
+                                </div>
+                                <div class="small-cart__left"><span class="small-cart__price">68 334 ₽</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                    <path d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="small-cart__item"> 
+                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240719164043" alt=""/></picture></div>
+                                <div class="small-cart__content"> 
+                                  <h3 class="small-cart__title">Гель-документирующая система ChemiScope</h3><span class="small-cart__count">1 шт.</span>
+                                </div>
+                                <div class="small-cart__left"><span class="header-cart__price small-cart__price">123 334 ₽</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                    <path d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="header-cart__bottom bottom-cart"> 
+                            <div class="bottom-cart__total"> <span class="bottom-cart__text">Итого:</span><span class="bottom-cart__price">234 334 ₽</span></div>
+                            <div class="bottom-cart__buttons"> 
+                              <button class="button _transparent bottom-cart__button">Оформить заказ</button><a class="button bottom-cart__button" href="/cart.html">В корзину</a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </nav>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
         <div class="header__bottom header-bottom">
@@ -705,7 +705,7 @@
                         <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                         <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240713160711" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240719164043" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                     <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                       <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                       <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -752,7 +752,7 @@
                         <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                         <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240713160711" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240719164043" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                     <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                       <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                       <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -794,7 +794,7 @@
                         <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                         <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                     <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                       <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                       <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -836,7 +836,7 @@
                         <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                         <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                     <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                       <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                       <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status"></span>
@@ -878,7 +878,7 @@
                         <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                         <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240713160711" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                    <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240719164043" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                     <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                       <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                       <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -928,7 +928,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240713160711" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240719164043" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                     <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -981,7 +981,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240713160711" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240719164043" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                     <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                     <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -1034,7 +1034,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -1087,7 +1087,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                     <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status"></span>
@@ -1140,7 +1140,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240713160711" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240719164043" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                     <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -1193,7 +1193,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240713160711" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240719164043" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                     <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                     <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -1246,7 +1246,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -1299,7 +1299,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240713160711" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240719164043" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                     <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _many">Много</span>
@@ -1352,7 +1352,7 @@
             <meta itemprop="name" content=""/>
             <link itemprop="url" href="https://moleculab.ru"/>
             <meta itemprop="logo" content="/img/logo.svg"/>
-            <div class="footer-top__logo"><img src="img/footer/logo.svg?_v=20240713160711" alt="Logo"/></div>
+            <div class="footer-top__logo"><img src="img/footer/logo.svg?_v=20240719164043" alt="Logo"/></div>
             <div class="footer-top__content"> <a class="footer-top__link" href="mailto:pochta@gmail.com" itemprop="email">pochta@gmail.com</a><a class="footer-top__link footer-top__link-phone" href="tel:+79002834869" itemprop="telephone">8 (900) 283-48-69</a>
               <div class="footer-top__buttons">
                 <button class="button _gradient footer-top__call footer-top__button" data-text="Заказать звонок" data-popup="call-me">Заказать звонок</button><a class="button _with-icon footer-top__to-top" data-text="Наверх" id="to-top"> <span class="button__text">Наверх</span><span class="button__icon"> 
@@ -3468,6 +3468,6 @@
         </div>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20240713160711"></script>
+    <script src="js/app.min.js?_v=20240719164043"></script>
   </body>
 </html>

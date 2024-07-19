@@ -715,6 +715,57 @@ function initSliders() {
 			}
 		});
 	}
+
+	console.log(document.querySelectorAll('[class*="comparisson__slider-"]'))
+
+	if (document.querySelectorAll('[data-slider-products]').length) { // Указываем скласс нужного слайдера
+
+		document.querySelectorAll('[data-slider-products]').forEach(slider => {
+
+			new Swiper(slider, { // Указываем скласс нужного слайдера
+				observer: true,
+				observeParents: true,
+				observeSlideChildren: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				speed: 800,
+
+				// Кнопки "влево/вправо"
+				navigation: {
+					prevEl: `.comparisson__navigation-${slider.getAttribute("data-slider-products")} .comparisson__prev`,
+					nextEl: `.comparisson__navigation-${slider.getAttribute("data-slider-products")} .comparisson__next`,
+				},
+
+				// Брейкпоинты
+
+				breakpoints: {
+					320: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+						autoHeight: true,
+					},
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1268: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+				},
+			});
+		});
+
+	}
+
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 

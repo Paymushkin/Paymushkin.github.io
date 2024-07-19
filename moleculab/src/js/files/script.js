@@ -734,13 +734,143 @@ if (cleanFavoritesList) {
 
 
     if (!favoritesProducts) {
-        favoritesSection.classList.add("_favorites-empty")
+        favoritesSection.classList.add("_section-empty")
     }
 
     cleanFavoritesList.addEventListener("click", () => {
-        favoritesSection.classList.add("_favorites-empty")
+        favoritesSection.classList.add("_section-empty")
     })
 }
+
+// работа с отображение дефолтного сообщения поиска
+
+const searchSection = document.getElementById("search") || null
+
+if (searchSection) {
+
+
+    console.log(searchSection.querySelectorAll(".product-item").length)
+    if (!searchSection.querySelectorAll(".product-item").length) {
+        searchSection.classList.add("_section-empty")
+    }
+}
+
+// горизонтальный скролл для десктопа
+
+const te = document.querySelectorAll(".scroll-x");
+let se, ie, ne = !1;
+te.forEach((e => {
+    e.addEventListener("mousedown", (t => {
+        ne = !0,
+            e.classList.add("active"),
+            se = t.pageX - e.offsetLeft,
+            ie = e.scrollLeft
+    }
+    ))
+}
+)),
+    te.forEach((e => {
+        e.addEventListener("mouseleave", (() => {
+            ne = !1,
+                e.classList.remove("active")
+        }
+        ))
+    }
+    )),
+    te.forEach((e => {
+        e.addEventListener("mouseup", (() => {
+            ne = !1,
+                e.classList.remove("active")
+        }
+        ))
+    }
+    )),
+    te.forEach((e => {
+        e.addEventListener("mousemove", (t => {
+            if (!ne)
+                return;
+            t.preventDefault();
+            const s = 3 * (t.pageX - e.offsetLeft - se);
+            e.scrollLeft = ie - s
+        }
+        ))
+    }
+    ))
+
+// работа с табами в сравнении товаров
+
+const comparissonSection = document.getElementById("comparisson")
+
+if (comparissonSection) {
+    let comparissonSections = comparissonSection.querySelectorAll(".body-comparisson__content") || null
+
+    const tabsBnts = comparissonSection.querySelectorAll("button.comparisson-tabs__title")
+    const tabsContent = comparissonSection.querySelectorAll(".body-comparisson__content")
+
+    tabsBnts.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-button")
+
+        tab.addEventListener("click", () => {
+            tabsContent.forEach(content => {
+                // console.log("удаляем")
+                content.classList.remove("_content-active")
+            })
+            tabsBnts.forEach(tab => {
+                tab.classList.remove("_tab-active")
+            })
+            comparissonSection.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+            comparissonSection.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
+        })
+    });
+
+    if (comparissonSections.length) {
+
+        comparissonSections.forEach(section => {
+            const tabsBnts = section.querySelectorAll(".info-comparisson-tabs__title")
+            const tabsContent = section.querySelectorAll(".info-comparisson__content")
+
+            tabsBnts.forEach(tab => {
+                const tabID = tab.getAttribute("data-tab-info")
+
+                tab.addEventListener("click", () => {
+                    tabsContent.forEach(content => {
+                        content.classList.remove("_content-active")
+                    })
+                    tabsBnts.forEach(tab => {
+                        tab.classList.remove("_tab-active")
+                    })
+                    section.querySelector(`[data-tabs-info="${tabID}"]`).classList.add("_content-active");
+                    section.querySelector(`[data-tab-info="${tabID}"]`).classList.add("_tab-active")
+                })
+            });
+        });
+    }
+}
+
+// фиксируем шапку при скролле
+const scrollHeader = document.querySelector(".scroll-header");
+
+if (scrollHeader) {
+
+    window.onscroll = function () {
+        fixHeader()
+    };
+
+    // const header = document.querySelector("header");
+    var sticky = header.offsetHeight;
+    document.querySelector("body").style.paddingTop = scrollHeader.offsetHeight + "px"
+
+    // console.log(header.offsetHeight, document.querySelector("body"))
+
+    function fixHeader() {
+        if (window.pageYOffset > sticky) {
+            document.documentElement.classList.add("_header-fixed");
+        } else {
+            document.documentElement.classList.remove("_header-fixed");
+        }
+    }
+}
+
 
 
 // инициализация маски ввода телефона

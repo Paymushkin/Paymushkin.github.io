@@ -1,0 +1,437 @@
+//- класс _section-empty для случа когда избранного нет 
+section#comparisson.comparisson
+    .comparissons__container
+        - const comparissonPage = true;
+        include _breadcrumbs
+        
+        h1.section-title.comparisson__title
+            span.section-title__text Сравнение товаров
+
+            button#remove-all-comparisson.button._transparent.favorites__button
+                span Очистить список
+                include icons/_close-small
+
+        .comparisson__empty.empty-comparisson
+             .empty-comparisson__body
+                h3.empty-favorites__title Список сравниваемых товаров пуст.
+                p.empty-comparisson__text Добавьте тоавары в список, воспользуйтесь нашим 
+                    a(href="") каталогом товаров.
+
+        .comparisson__body.body-comparisson
+            nav.body-comparisson__tabs.comparisson-tabs.scroll-x
+                button(data-tab-button="1").comparisson-tabs__title._tab-active Гель-документирующие системы (3)
+                button(data-tab-button="2").comparisson-tabs__title Наконечники без фильтра (2)
+                button(data-tab-button="3").comparisson-tabs__title Все товары (4)
+            
+            div(data-tabs-body="1").body-comparisson__content.comparisson-tab._content-active
+                .comparisson-tab__top.comparisson-block
+                    ul.comparisson-block__list
+                        li.comparisson-block__item Артикул
+                        li.comparisson-block__item Производитель
+                        li.comparisson-block__item Модель
+                        li.comparisson-block__item Цена
+                    .comparisson-block__slider
+                        .comparisson__slider(data-slider-products="1").swiper
+                            .comparisson__wrapper.swiper-wrapper
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-2.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+                                                    
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-2.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-2.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽             
+
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-2.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽                                   
+                            
+                    .comparisson__navigation-1 
+                        .comparisson__prev
+                            include icons/_arrow-slider
+                        .comparisson__next
+                            include icons/_arrow-slider
+
+                .comparisson-block__info.comparisson-info
+                    nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
+                        button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
+                        button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+
+                    div(data-tabs-info="1").info-comparisson__content._content-active
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-1.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 1-1 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                            
+                    div(data-tabs-info="2").info-comparisson__content
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-1.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 1-2 до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+
+            div(data-tabs-body="2").body-comparisson__content.comparisson-tab
+                .comparisson-tab__top.comparisson-block
+                    ul.comparisson-block__list
+                        li.comparisson-block__item Артикул
+                        li.comparisson-block__item Производитель
+                        li.comparisson-block__item Модель
+                        li.comparisson-block__item Цена
+                    
+                    .comparisson-block__slider
+                        .comparisson__slider(data-slider-products="2").swiper
+                            .comparisson__wrapper.swiper-wrapper
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-1.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+                                                    
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-1.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+
+                    .comparisson__navigation-2 
+                        .comparisson__prev
+                            include icons/_arrow-slider
+                        .comparisson__next
+                            include icons/_arrow-slider
+
+                .comparisson-block__info.comparisson-info
+                    nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
+                        button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
+                        button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+
+                    div(data-tabs-info="1").info-comparisson__content._content-active
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-2.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 2-1 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                            
+                    div(data-tabs-info="2").info-comparisson__content
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-2.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 2-2 до 25 × 25 см
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 19 × 26
+                                                li.comparisson-info__item 430 × 380 × 690
+                                                li.comparisson-info__item 430 × 380 × 690
+
+            div(data-tabs-body="3").body-comparisson__content.comparisson-tab
+                .comparisson-tab__top.comparisson-block
+                    ul.comparisson-block__list
+                        li.comparisson-block__item Артикул
+                        li.comparisson-block__item Производитель
+                        li.comparisson-block__item Модель
+                        li.comparisson-block__item Цена
+                    
+                    .comparisson-block__slider
+                        .comparisson__slider(data-slider-products="3").swiper
+                            .comparisson__wrapper.swiper-wrapper
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-3.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+                                                    
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-3.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽
+
+                                .comparisson__slide.swiper-slide
+                                    .products__item.product-item.product-item_comparisson(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/Product")
+                                        .product-item__label._new Новинка
+                                        .product-item__icons.icons-product  
+                                            span.icons-product__heart 
+                                                include icons/_heart
+                                            span.icons-product__bin
+                                                include icons/_bin
+                                        a(href="/product.html", itemprop="url").product-item__link
+                                            .product-item__image-ibg
+                                                img(src="@img/products/item-3.png" alt="Многофункциональная центрифуга с охлаждением 1248R", itemprop="image")
+                                            .product-item__content 
+                                                span.product-item__code(itemprop="sku") GZ-1248R
+                                                h4.product-item__title(itemprop="brand") Gyrozen
+                                                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
+                                                .product-item__prices(itemscope="" itemprop="offers" itemtype="http://schema.org/Offer")
+                                                    meta(itemprop='priceCurrency' content='RUB')
+                                                    meta(itemprop='price' content='68334')
+                                                    meta(itemprop='availability' content='http://schema.org/InStock')
+                                                    span.product-item__price 68 334 ₽
+                                                    span.product-item__price-old 100 334 ₽                                  
+
+                    .comparisson__navigation-3 
+                        .comparisson__prev
+                            include icons/_arrow-slider
+                        .comparisson__next
+                            include icons/_arrow-slider
+
+                .comparisson-block__info.comparisson-info
+                    nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
+                        button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
+                        button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+
+                    div(data-tabs-info="1").info-comparisson__content._content-active
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-3.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 3-1 29 × 36
+                                                li.comparisson-info__item 550 × 480 × 790
+                                                li.comparisson-info__item 530 × 580 × 890
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 25 × 25 см
+                                                li.comparisson-info__item -
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 29 × 36
+                                                li.comparisson-info__item 550 × 480 × 790
+                                                li.comparisson-info__item 530 × 580 × 890
+                            
+                    div(data-tabs-info="2").info-comparisson__content
+                        .comparisson-info-tab__top.comparisson-info-block
+                            ul.comparisson-info-block__list
+                                li.comparisson-info-block__item Размер образца, см
+                                li.comparisson-info-block__item Размеры (Д×Ш×В)
+                                li.comparisson-info-block__item Размеры (Д×Ш×В), мм
+                            .comparisson-info-block__slider
+                                .comparisson-info__slider-3.swiper
+                                    .comparisson-info__wrapper.swiper-wrapper
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 3-2 -
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 55 × 25 см
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item 119 × 226
+                                                li.comparisson-info__item 530 × 380 × 1690
+                                                li.comparisson-info__item 430 × 480 × 590
+                                        .comparisson-info__slide.swiper-slide
+                                            ul.comparisson-info__list 
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item -
+                                                li.comparisson-info__item до 125 × 225 см

@@ -21,14 +21,14 @@
         line-height: 1.4;
 
 
-        ._favorites-empty & {
+        ._section-empty & {
             display: none;
         }
     }
 
     &__products {
 
-        ._favorites-empty & {
+        ._section-empty & {
             display: none;
         }
     }
@@ -43,7 +43,7 @@
         min-height: 250px;
     }
 
-    ._favorites-empty & {
+    ._section-empty & {
         display: grid;
     }
 

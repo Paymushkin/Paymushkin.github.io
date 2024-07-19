@@ -6,6 +6,21 @@
         margin-bottom: 80px;
     }
 
+    &__pattern {
+        position: absolute;
+        bottom: -280px;
+        right: 0;
+        width: 100vw;
+        max-width: 100%;
+        height: 27.7vw;
+        background-image: url(../img/clients/pattern.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center right;
+        z-index: -1;
+        // mix-blend-mode: soft-light;
+    }
+
     &__container {}
 
     &__header {

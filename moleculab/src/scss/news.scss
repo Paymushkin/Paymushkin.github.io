@@ -6,6 +6,21 @@
         margin-bottom: 80px;
     }
 
+    &__pattern {
+        position: absolute;
+        bottom: -195px;
+        left: 0;
+        width: 970px;
+        max-width: 100%;
+        height: 30.4vw;
+        background-image: url(../img/news/pattern.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center right;
+        z-index: -1;
+        // mix-blend-mode: soft-light;
+    }
+
     &__title {}
 
     &__body {

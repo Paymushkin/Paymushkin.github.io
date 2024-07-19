@@ -6,6 +6,30 @@
         margin-bottom: 80px;
     }
 
+    &__pattern {
+        position: absolute;
+        top: -95px;
+        right: 0;
+        width: 970px;
+        max-width: 100%;
+        height: percent(295, 970);
+        background-image: url(../img/popular/pattern.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center right;
+        z-index: -1;
+        // mix-blend-mode: soft-light;
+
+        &-2 {
+            top: unset;
+            bottom: -35px;
+            width: 100vw;
+            max-width: 100%;
+            height: percent(295, 1440);
+            background-image: url(../img/popular/pattern-2.png);
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
