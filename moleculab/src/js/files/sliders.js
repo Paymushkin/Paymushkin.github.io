@@ -716,7 +716,7 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelectorAll('[data-slider-products]').length) { // Указываем скласс нужного слайдера
+	if ((document.querySelectorAll('[data-slider-products]').length) && (window.screen.width > 576)) { // Указываем скласс нужного слайдера
 
 		document.querySelectorAll('[data-slider-products]').forEach(slider => {
 
@@ -747,11 +747,15 @@ function initSliders() {
 						spaceBetween: 20,
 					},
 					768: {
-						slidesPerView: 3,
+						slidesPerView: 2,
 						spaceBetween: 10,
 					},
-					992: {
-						slidesPerView: 3,
+					900: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+					1200: {
+						slidesPerView: 2,
 						spaceBetween: 20,
 					},
 					1268: {
@@ -759,6 +763,110 @@ function initSliders() {
 						spaceBetween: 20,
 					},
 				},
+			});
+		});
+
+	}
+
+	if ((document.querySelectorAll('[data-mobile-products]').length) && (window.screen.width <= 576)) { // Указываем скласс нужного слайдера
+
+		document.querySelectorAll('[data-mobile-products]').forEach((slider, index) => {
+
+			const fraction = slider.querySelector(`.fraction`);
+			const slides = slider.querySelectorAll(`.swiper-slide`);
+			const slideCount = slides.length;
+			fraction.textContent = `1 из ${slideCount}`;
+			const sliderInfoPrefix = "slider_info_";
+			const sliderDiffPrefix = "slider_diff_";
+			const dynamicSliderInfoName = sliderInfoPrefix + index;
+			const dynamicSliderDiffName = sliderDiffPrefix + index;
+			// const slidersList = document.querySelectorAll('[data-mobile-products]')
+			// console.log(sliderPrefix + (Number(slidersList.length) + Number("1")))/
+			// const dynamicSliderName2 = sliderPrefix + Number(index + 2);
+
+			new Swiper(slider, { // Указываем скласс нужного слайдера
+				observer: true,
+				observeParents: true,
+				observeSlideChildren: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
+				speed: 800,
+
+				pagination: {
+					el: `.comparisson-mobile__pagination-${slider.getAttribute("data-mobile-products")}`,
+					// type: "fraction",
+				},
+
+				on: {
+					slideChange: function (swiper) {
+						fraction.textContent = `${swiper.realIndex + 1} из ${slideCount}`;
+
+						window[dynamicSliderInfoName].slideTo(swiper.realIndex)
+						window[dynamicSliderDiffName].slideTo(swiper.realIndex)
+					}
+				}
+
+			});
+		});
+
+	}
+
+	if ((document.querySelectorAll('[data-mobile-info]').length) && (window.screen.width <= 576)) { // Указываем скласс нужного слайдера
+
+		document.querySelectorAll('[data-mobile-info]').forEach((slider, index) => {
+
+			const sliderPrefix = "slider_info_";
+			const dynamicSliderName = sliderPrefix + index;
+			// console.log(index)
+
+			// console.log("1")
+
+			window[dynamicSliderName] = new Swiper(slider, { // Указываем скласс нужного слайдера
+				observer: true,
+				observeParents: true,
+				observeSlideChildren: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
+				speed: 800,
+				allowTouchMove: false,
+
+				on: {
+					slideChange: function (swiper) {
+						// console.log(this)
+					}
+				}
+
+			});
+		});
+
+	}
+
+
+	if ((document.querySelectorAll('[data-mobile-diff]').length) && (window.screen.width <= 576)) { // Указываем скласс нужного слайдера
+
+		document.querySelectorAll('[data-mobile-diff]').forEach((slider, index) => {
+
+			const sliderPrefix = "slider_diff_";
+			const dynamicSliderName = sliderPrefix + index;
+			// console.log(index)
+
+			// console.log("1")
+
+			window[dynamicSliderName] = new Swiper(slider, { // Указываем скласс нужного слайдера
+				observer: true,
+				observeParents: true,
+				observeSlideChildren: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
+				speed: 800,
+				allowTouchMove: false,
+
+				on: {
+					slideChange: function (swiper) {
+						// console.log(this)
+					}
+				}
+
 			});
 		});
 
@@ -774,3 +882,5 @@ window.addEventListener("load", function (e) {
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
+
+// console.log(slider_comparisson_0)
