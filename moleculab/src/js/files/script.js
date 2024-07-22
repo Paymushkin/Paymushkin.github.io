@@ -867,7 +867,45 @@ if (scrollHeader) {
     }
 }
 
+// фиксация слайдера сравнения при скролле
 
+if (comparissonSection) {
+
+
+    let comparissonBlock = comparissonSection.querySelector(".comparisson__body")
+
+    // window.onscroll = function () {
+
+    //     if ()
+
+
+    //     let distanceFromTopBlock = comparissonBlock.getBoundingClientRect().top + window.pageYOffset;
+    //     let scrolled = window.scrollY;
+    //     console.log(distanceFromTopBlock, scrolled)
+    // }
+
+    window.onscroll = function () {
+        console.log(comparissonBlock.getBoundingClientRect().top)
+        fixSlider()
+    };
+
+    function fixSlider() {
+        let distance = comparissonBlock.getBoundingClientRect().top
+        if (distance - scrollHeader.offsetHeight < 0) {
+            comparissonSection.classList.add("_fix-slider")
+
+            if ((window.scrollY > scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
+                comparissonSection.classList.add("_transparent-slider")
+            } else {
+                comparissonSection.classList.remove("_transparent-slider")
+            }
+
+        } else {
+            comparissonSection.classList.remove("_fix-slider")
+        }
+    }
+
+}
 
 // инициализация маски ввода телефона
 

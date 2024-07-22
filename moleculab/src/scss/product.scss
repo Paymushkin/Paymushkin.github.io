@@ -257,6 +257,12 @@
     &_comparisson {
         border: 1px solid $borderColor-2;
 
+        ._fix-slider & {
+
+            border-radius: 0;
+            border: none;
+        }
+
         @media (min-width:$mobileSmall) {
 
             .product-item__text {
