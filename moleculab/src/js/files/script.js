@@ -86,7 +86,7 @@ if (headerMenu) {
     headerMenu.addEventListener("click", () => {
         headerMenu.classList.toggle("_open-menu")
 
-        if (window.screen.width > 576) {
+        if ((Math.min(screen.width, window.innerWidth)) <= 576) {
             document.documentElement.classList.toggle("_lock")
         }
     })
@@ -876,10 +876,12 @@ if (comparissonSection) {
 
     function fixSlider() {
         let distance = comparissonBlock.getBoundingClientRect().top
-        if (distance - scrollHeader.offsetHeight < 0) {
+        if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
+            // comparissonSection.style.paddingTop = 120 + "px"
             comparissonSection.classList.add("_fix-slider")
 
-            if ((window.scrollY > scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
+
+            if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
                 comparissonSection.classList.add("_transparent-slider")
             } else {
                 comparissonSection.classList.remove("_transparent-slider")
@@ -887,6 +889,7 @@ if (comparissonSection) {
 
         } else {
             comparissonSection.classList.remove("_fix-slider")
+
         }
     }
 }
