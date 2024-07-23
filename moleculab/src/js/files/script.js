@@ -42,9 +42,6 @@ if (openCustomerBlock) {
     })
 }
 
-
-
-
 // работа с селектами
 
 const selects = document.querySelectorAll(".select")
@@ -77,7 +74,6 @@ if (selects.length) {
 
     });
 }
-
 
 // работа с меню в шапке
 
@@ -874,18 +870,7 @@ if (comparissonSection) {
 
     let comparissonBlock = comparissonSection.querySelector(".comparisson__body")
 
-    // window.onscroll = function () {
-
-    //     if ()
-
-
-    //     let distanceFromTopBlock = comparissonBlock.getBoundingClientRect().top + window.pageYOffset;
-    //     let scrolled = window.scrollY;
-    //     console.log(distanceFromTopBlock, scrolled)
-    // }
-
     window.onscroll = function () {
-        console.log(comparissonBlock.getBoundingClientRect().top)
         fixSlider()
     };
 
@@ -904,8 +889,23 @@ if (comparissonSection) {
             comparissonSection.classList.remove("_fix-slider")
         }
     }
-
 }
+
+// кнопка скрытия информации о товаре в сравнении
+
+if (comparissonSection) {
+
+    let comparissonInfoBtns = comparissonSection.querySelectorAll("button.info-comparisson-tabs__button") || null
+
+    if (comparissonInfoBtns.length) {
+        comparissonInfoBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                comparissonSection.classList.toggle("_hide-comparisson-info")
+            })
+        });
+    }
+}
+
 
 // инициализация маски ввода телефона
 

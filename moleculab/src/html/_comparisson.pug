@@ -1,5 +1,7 @@
 //- класс _section-empty для случа когда избранного нет 
 section#comparisson.comparisson
+    .comparisson__pattern
+    .comparisson__pattern.comparisson__pattern-2
     .comparisson__container
         - const comparissonPage = true;
         include _breadcrumbs
@@ -22,7 +24,7 @@ section#comparisson.comparisson
                 button(data-tab-button="1").comparisson-tabs__title._tab-active Гель-документирующие системы (3)
                 button(data-tab-button="2").comparisson-tabs__title Наконечники без фильтра (2)
                 button(data-tab-button="3").comparisson-tabs__title Все товары (4)
-            
+      
             div(data-tabs-body="1").body-comparisson__content.comparisson-tab._content-active
                 .comparisson-tab__top.comparisson-block
 
@@ -276,6 +278,8 @@ section#comparisson.comparisson
                     nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
                         button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
                         button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+                        button.info-comparisson-tabs__button 
+                            include icons/_arrow-down
 
                     div(data-tabs-info="1").info-comparisson__content._content-active
                         .comparisson-info-tab__top.comparisson-info-block
@@ -693,6 +697,8 @@ section#comparisson.comparisson
                     nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
                         button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
                         button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+                        button.info-comparisson-tabs__button 
+                            include icons/_arrow-down
 
                     div(data-tabs-info="1").info-comparisson__content._content-active
                         .comparisson-info-tab__top.comparisson-info-block
@@ -1199,11 +1205,12 @@ section#comparisson.comparisson
                                                 span.product-item__price 68 334 ₽
                                                 span.product-item__price-old 100 334 ₽
 
-
                 .comparisson-block__info.comparisson-info
                     nav.comparisson-info__tabs.info-comparisson-tabs.scroll-x
                         button(data-tab-info="1").info-comparisson-tabs__title._tab-active Только отличия
                         button(data-tab-info="2").info-comparisson-tabs__title Все характеристики
+                        button.info-comparisson-tabs__button 
+                            include icons/_arrow-down
 
                     div(data-tabs-info="1").info-comparisson__content._content-active
                         .comparisson-info-tab__top.comparisson-info-block
