@@ -876,21 +876,35 @@ if (comparissonSection) {
 
     function fixSlider() {
         let distance = comparissonBlock.getBoundingClientRect().top
-        if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
-            // comparissonSection.style.paddingTop = 120 + "px"
-            comparissonSection.classList.add("_fix-slider")
 
+
+        if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
+            comparissonSection.classList.add("_fix-slider")
 
             if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
                 comparissonSection.classList.add("_transparent-slider")
             } else {
                 comparissonSection.classList.remove("_transparent-slider")
             }
-
-        } else {
-            comparissonSection.classList.remove("_fix-slider")
-
         }
+
+        if (distance - scrollHeader.offsetHeight > 10) {
+            comparissonSection.classList.remove("_fix-slider")
+        }
+
+        // if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
+        //     comparissonSection.classList.add("_fix-slider")
+
+
+        //     if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
+        //         comparissonSection.classList.add("_transparent-slider")
+        //     } else {
+        //         comparissonSection.classList.remove("_transparent-slider")
+        //     }
+
+        // } else {
+        //     comparissonSection.classList.remove("_fix-slider")
+        // }
     }
 }
 
