@@ -917,85 +917,45 @@ if (comparissonSection) {
 
 
 function setSizeForPoints() {
-    const numberOfPointsOfBlocks = document.querySelectorAll("._content-active div[data-tabs-info]._content-active") || null
+    const numberOfPointsOfBlock = document.querySelector("._content-active div[data-tabs-info]._content-active") || null
 
     // console.log(numberOfPointsOfBlocks)
 
-    if (numberOfPointsOfBlocks.length) {
+    if (numberOfPointsOfBlock) {
 
-        numberOfPointsOfBlocks.forEach(block => {
+        // console.log(numberOfPointsOfBlock.querySelectorAll("[data-point]"))
+        const numberOfItems = numberOfPointsOfBlock.querySelectorAll(".comparisson-info-block__list li")
 
-            const numberOfPointsAll = block.querySelectorAll(".comparisson-info-block__list li[data-point-all]")
-            const numberOfPointsDiff = block.querySelectorAll(".comparisson-info-block__list li[data-point-diff]")
+        setTimeout(() => {
+            numberOfItems.forEach((element, index) => {
 
+                // Находим все элементы с заданным data-point
+                const elements = numberOfPointsOfBlock.querySelectorAll(`[data-point="${index + 1}"]`);
+                // console.log(numberOfPointsOfBlock.querySelectorAll(`[data-point="${i}"]`))
 
+                //  Преобразуем NodeList в массив
+                let elementsArray = Array.from(elements);
+                // console.log("array", elementsArray)
 
-            if (numberOfPointsAll.length) {
+                // Проверяем, есть ли элементы
+                if (elementsArray.length === 0) return;
 
+                // Находим максимальную высоту среди элементов
+                let arrayOfHeights = [...elementsArray.map(el => el.offsetHeight)]
+                console.log(arrayOfHeights)
 
-                const blocks = block.querySelectorAll(".block-all")
+                let maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
 
-                console.log(blocks)
+                console.log(maxHeight)
 
-                blocks.forEach(element => {
-
-                    for (let i = 1; i < numberOfPointsAll.length + 1; i++) {
-                        // Находим все элементы с заданным data-point
-                        const elements = element.querySelectorAll(`[data-point-all="${i}"]`);
-
-                        // Преобразуем NodeList в массив
-                        const elementsArray = Array.from(elements);
-                        console.log("all", elementsArray)
-
-                        // Проверяем, есть ли элементы
-                        if (elementsArray.length === 0) return;
-
-                        // Находим максимальную высоту среди элементов
-                        const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
-
-                        // Устанавливаем максимальную высоту всем элементам в массиве
-                        elementsArray.forEach(el => {
-                            // console.log("all", el)
-                            el.style.height = `${maxHeight}px`;
-                        });
-                    }
+                // Устанавливаем максимальную высоту всем элементам в массиве
+                elementsArray.forEach(el => {
+                    el.style.height = `${maxHeight}px`;
                 });
-            }
 
-            if (numberOfPointsDiff.length) {
+            });
 
-
-                const blocks = block.querySelectorAll(".block-diff")
-
-                // console.log(blocks)
-
-                blocks.forEach(element => {
-
-
-                    for (let i = 1; i < numberOfPointsDiff.length + 1; i++) {
-                        // Находим все элементы с заданным data-point
-                        const elements = element.querySelectorAll(`[data-point-diff="${i}"]`);
-
-                        // Преобразуем NodeList в массив
-                        const elementsArray = Array.from(elements);
-
-                        console.log("diff", elementsArray)
-
-                        // Проверяем, есть ли элементы
-                        if (elementsArray.length === 0) return;
-
-                        // Находим максимальную высоту среди элементов
-                        const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
-
-                        // Устанавливаем максимальную высоту всем элементам в массиве
-                        elementsArray.forEach(el => {
-                            // console.log("all", el)
-                            el.style.height = `${maxHeight}px`;
-                        });
-                    }
-                });
-            }
-        });
+        }, 100);
     }
 }
 
