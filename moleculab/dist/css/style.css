@@ -10594,7 +10594,6 @@ details summary svg {
   }
 }
 .comparisson-info-block__item {
-  min-height: 28px;
   font-size: 18px;
   line-height: 1.6;
 }
@@ -10609,9 +10608,9 @@ details summary svg {
   gap: 16px;
 }
 .comparisson-info__item {
-  min-height: 28px;
   font-size: 18px;
   line-height: 1.6;
+  max-width: 90%;
 }
 @media (max-width: 36.06125em) {
   .comparisson-info__item {

@@ -528,7 +528,7 @@
     }
 
     &__item {
-        min-height: 28px;
+        // min-height: 28px;
         font-size: 18px;
         line-height: 1.6;
     }
@@ -545,9 +545,10 @@
     }
 
     &__item {
-        min-height: 28px;
+        // min-height: 28px;
         font-size: 18px;
         line-height: 1.6;
+        max-width: 90%;
 
         @media (max-width:$mobileSmall) {
             font-size: 14px;

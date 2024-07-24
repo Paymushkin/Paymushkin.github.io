@@ -919,34 +919,80 @@ if (comparissonSection) {
 function setSizeForPoints() {
     const numberOfPointsOfBlocks = document.querySelectorAll("._content-active div[data-tabs-info]._content-active") || null
 
-    console.log(numberOfPointsOfBlocks)
+    // console.log(numberOfPointsOfBlocks)
 
     if (numberOfPointsOfBlocks.length) {
 
         numberOfPointsOfBlocks.forEach(block => {
-            const numberOfPoints = block.querySelectorAll(".comparisson-info-block__list li")
+
+            const numberOfPointsAll = block.querySelectorAll(".comparisson-info-block__list li[data-point-all]")
+            const numberOfPointsDiff = block.querySelectorAll(".comparisson-info-block__list li[data-point-diff]")
 
 
-            if (numberOfPoints.length) {
 
-                numberOfPoints.forEach((point, index) => {
+            if (numberOfPointsAll.length) {
 
-                    // Находим все элементы с заданным data-point
-                    const elements = block.querySelectorAll(`[data-point="${index + 1}"]`);
 
-                    // Преобразуем NodeList в массив
-                    const elementsArray = Array.from(elements);
+                const blocks = block.querySelectorAll(".block-all")
 
-                    // Проверяем, есть ли элементы
-                    if (elementsArray.length === 0) return;
+                console.log(blocks)
 
-                    // Находим максимальную высоту среди элементов
-                    const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
+                blocks.forEach(element => {
 
-                    // Устанавливаем максимальную высоту всем элементам в массиве
-                    elementsArray.forEach(el => {
-                        el.style.height = `${maxHeight}px`;
-                    });
+                    for (let i = 1; i < numberOfPointsAll.length + 1; i++) {
+                        // Находим все элементы с заданным data-point
+                        const elements = element.querySelectorAll(`[data-point-all="${i}"]`);
+
+                        // Преобразуем NodeList в массив
+                        const elementsArray = Array.from(elements);
+                        console.log("all", elementsArray)
+
+                        // Проверяем, есть ли элементы
+                        if (elementsArray.length === 0) return;
+
+                        // Находим максимальную высоту среди элементов
+                        const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
+
+                        // Устанавливаем максимальную высоту всем элементам в массиве
+                        elementsArray.forEach(el => {
+                            // console.log("all", el)
+                            el.style.height = `${maxHeight}px`;
+                        });
+                    }
+                });
+            }
+
+            if (numberOfPointsDiff.length) {
+
+
+                const blocks = block.querySelectorAll(".block-diff")
+
+                // console.log(blocks)
+
+                blocks.forEach(element => {
+
+
+                    for (let i = 1; i < numberOfPointsDiff.length + 1; i++) {
+                        // Находим все элементы с заданным data-point
+                        const elements = element.querySelectorAll(`[data-point-diff="${i}"]`);
+
+                        // Преобразуем NodeList в массив
+                        const elementsArray = Array.from(elements);
+
+                        console.log("diff", elementsArray)
+
+                        // Проверяем, есть ли элементы
+                        if (elementsArray.length === 0) return;
+
+                        // Находим максимальную высоту среди элементов
+                        const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
+
+                        // Устанавливаем максимальную высоту всем элементам в массиве
+                        elementsArray.forEach(el => {
+                            // console.log("all", el)
+                            el.style.height = `${maxHeight}px`;
+                        });
+                    }
                 });
             }
         });
@@ -955,27 +1001,27 @@ function setSizeForPoints() {
 
 // инициализация маски ввода телефона
 
-const callMePopup = document.getElementById('call-me') || null;
-const nameInputCall = document.getElementById('name-for-call') || null;
-const emailInputCall = document.getElementById('number-for-call') || null;
-const registrationInputCall = document.getElementById('number-for-registration') || null;
-// const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
+// const callMePopup = document.getElementById('call-me') || null;
+// const nameInputCall = document.getElementById('name-for-call') || null;
+// const emailInputCall = document.getElementById('number-for-call') || null;
+// const registrationInputCall = document.getElementById('number-for-registration') || null;
+// // const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
 
-if (callMePopup) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
-}
+// if (callMePopup) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
+// }
 
-if (nameInputCall) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
-}
+// if (nameInputCall) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
+// }
 
-if (emailInputCall) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
-}
+// if (emailInputCall) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
+// }
 
-if (registrationInputCall) {
-    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-registration"));
-}
+// if (registrationInputCall) {
+//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-registration"));
+// }
 
 // проверка полей попапов на заполненность
 
