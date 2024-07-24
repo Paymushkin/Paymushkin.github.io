@@ -925,12 +925,44 @@ function setSizeForPoints() {
 
         // console.log(numberOfPointsOfBlock.querySelectorAll("[data-point]"))
         const numberOfItems = numberOfPointsOfBlock.querySelectorAll(".comparisson-info-block__list li")
+        const numberOfMobItems = numberOfPointsOfBlock.querySelectorAll(".comparisson-info__list li")
 
         setTimeout(() => {
             numberOfItems.forEach((element, index) => {
 
                 // Находим все элементы с заданным data-point
                 const elements = numberOfPointsOfBlock.querySelectorAll(`[data-point="${index + 1}"]`);
+                // console.log(numberOfPointsOfBlock.querySelectorAll(`[data-point="${i}"]`))
+
+                //  Преобразуем NodeList в массив
+                let elementsArray = Array.from(elements);
+                // console.log("array", elementsArray)
+
+                // Проверяем, есть ли элементы
+                if (elementsArray.length === 0) return;
+
+                // Находим максимальную высоту среди элементов
+                let arrayOfHeights = [...elementsArray.map(el => el.offsetHeight)]
+                console.log(arrayOfHeights)
+
+                let maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
+
+                console.log(maxHeight)
+
+                // Устанавливаем максимальную высоту всем элементам в массиве
+                elementsArray.forEach(el => {
+                    el.style.height = `${maxHeight}px`;
+                });
+
+            });
+
+        }, 100);
+
+        setTimeout(() => {
+            numberOfMobItems.forEach((element, index) => {
+
+                // Находим все элементы с заданным data-point
+                const elements = numberOfPointsOfBlock.querySelectorAll(`[data-mobile-point="${index + 1}"]`);
                 // console.log(numberOfPointsOfBlock.querySelectorAll(`[data-point="${i}"]`))
 
                 //  Преобразуем NodeList в массив
