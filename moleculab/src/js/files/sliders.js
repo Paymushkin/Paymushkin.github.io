@@ -781,9 +781,6 @@ function initSliders() {
 			const sliderDiffPrefix = "slider_diff_";
 			const dynamicSliderInfoName = sliderInfoPrefix + index;
 			const dynamicSliderDiffName = sliderDiffPrefix + index;
-			// const slidersList = document.querySelectorAll('[data-mobile-products]')
-			// console.log(sliderPrefix + (Number(slidersList.length) + Number("1")))/
-			// const dynamicSliderName2 = sliderPrefix + Number(index + 2);
 
 			new Swiper(slider, { // Указываем скласс нужного слайдера
 				observer: true,
@@ -798,22 +795,9 @@ function initSliders() {
 					// type: "fraction",
 				},
 
-				// Брейкпоинты
-
-				// breakpoints: {
-				// 	375: {
-				// 		allowTouchMove: false,
-				// 	},
-				// 	1440: {
-				// 		allowTouchMove: false,
-				// 	},
-
-				// },
-
 				on: {
 					slideChange: function (swiper) {
 						fraction.textContent = `${swiper.realIndex + 1} из ${slideCount}`;
-
 						window[dynamicSliderInfoName].slideTo(swiper.realIndex)
 						window[dynamicSliderDiffName].slideTo(swiper.realIndex)
 					}
