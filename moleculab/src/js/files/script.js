@@ -880,10 +880,10 @@ if (comparissonSection) {
         let distance = comparissonBlock.getBoundingClientRect().top
 
 
-        if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
+        if ((distance - scrollHeader.offsetHeight + 30 < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
             comparissonSection.classList.add("_fix-slider")
 
-            if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
+            if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight - 100)) {
                 comparissonSection.classList.add("_transparent-slider")
             } else {
                 comparissonSection.classList.remove("_transparent-slider")
@@ -904,7 +904,8 @@ if (comparissonSection) {
 
     if (comparissonInfoBtns.length) {
         comparissonInfoBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", function (event) {
+                event.stopPropagation()
                 comparissonSection.classList.toggle("_hide-comparisson-info")
             })
         });
@@ -943,11 +944,11 @@ function setSizeForPoints() {
 
                 // Находим максимальную высоту среди элементов
                 let arrayOfHeights = [...elementsArray.map(el => el.offsetHeight)]
-                console.log(arrayOfHeights)
+                // console.log(arrayOfHeights)
 
                 let maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
 
-                console.log(maxHeight)
+                // console.log(maxHeight)
 
                 // Устанавливаем максимальную высоту всем элементам в массиве
                 elementsArray.forEach(el => {
@@ -974,11 +975,11 @@ function setSizeForPoints() {
 
                 // Находим максимальную высоту среди элементов
                 let arrayOfHeights = [...elementsArray.map(el => el.offsetHeight)]
-                console.log(arrayOfHeights)
+                // console.log(arrayOfHeights)
 
                 let maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
 
-                console.log(maxHeight)
+                // console.log(maxHeight)
 
                 // Устанавливаем максимальную высоту всем элементам в массиве
                 elementsArray.forEach(el => {

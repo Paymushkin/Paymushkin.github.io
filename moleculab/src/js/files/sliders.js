@@ -727,6 +727,7 @@ function initSliders() {
 				slidesPerView: 1,
 				spaceBetween: 0,
 				speed: 800,
+				allowTouchMove: false,
 
 				// Кнопки "влево/вправо"
 				navigation: {
@@ -796,6 +797,18 @@ function initSliders() {
 					el: `.comparisson-mobile__pagination-${slider.getAttribute("data-mobile-products")}`,
 					// type: "fraction",
 				},
+
+				// Брейкпоинты
+
+				// breakpoints: {
+				// 	375: {
+				// 		allowTouchMove: false,
+				// 	},
+				// 	1440: {
+				// 		allowTouchMove: false,
+				// 	},
+
+				// },
 
 				on: {
 					slideChange: function (swiper) {

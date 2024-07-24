@@ -4044,6 +4044,47 @@ details summary svg {
           box-shadow: 0 4px 27px rgba(0, 0, 0, 0.08);
 }
 
+@-webkit-keyframes showSlider {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showSlider {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes hideSlider {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+@keyframes hideSlider {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
 .hero {
   margin-bottom: 24px;
 }
@@ -10292,7 +10333,10 @@ details summary svg {
   -ms-flex-align: center;
       align-items: center;
   grid-auto-flow: column;
-  overflow-x: scroll;
+  overflow-x: auto;
+}
+.comparisson-tabs > div::-webkit-scrollbar {
+  display: none;
 }
 @media (min-width: 36.06125em) {
   .comparisson-tabs {
@@ -10307,9 +10351,6 @@ details summary svg {
   width: 100%;
   height: 1px;
   background-color: #DCE4EA;
-}
-.comparisson-tabs::-webkit-scrollbar {
-  display: none;
 }
 .comparisson-tabs__title {
   position: relative;
@@ -10615,6 +10656,7 @@ details summary svg {
   gap: 16px;
 }
 .comparisson-info__item {
+  min-height: 28px;
   font-size: 18px;
   line-height: 1.6;
   max-width: 90%;
@@ -10652,6 +10694,11 @@ details summary svg {
   -webkit-box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
           box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
   z-index: 6;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: showSlider 0.3s ease forwards;
+          animation: showSlider 0.3s ease forwards;
 }
 ._fix-slider .comparisson-mobile .product-item__text {
   margin-bottom: 0;
@@ -10673,10 +10720,8 @@ details summary svg {
   border-right: 1px solid #DCE4EA;
 }
 ._transparent-slider .comparisson-mobile {
-  opacity: 0;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-animation: hideSlider 0.3s ease forwards;
+          animation: hideSlider 0.3s ease forwards;
 }
 @media (min-width: 36.06125em) {
   .comparisson-mobile {
