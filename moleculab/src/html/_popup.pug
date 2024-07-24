@@ -283,3 +283,57 @@
 						button.button.point-pick-up__button Привезти сюда
 						
 					#map.map.popup__ya-map
+
+#to-auth.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Авторизация
+				p.popup__text Авторизация осуществляется e-mail, с помощью одноразового кода, который придет вам на почту.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#email-for-auth.popup__input(type="email", name="email-for-auth", placeholder="E-mail", required)
+					button(type="submit", disabled).button.popup__button Продолжить
+
+
+#registration.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Регистрация
+				p.popup__text Введите данные для успешой регистрации.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#name-for-registration.popup__input(type="text", name="name-for-registration", placeholder="Имя", required)
+						input#surname-for-registration.popup__input(type="text", name="surname-for-registration", placeholder="Фамилия", required)
+						input#number-for-registration.popup__input(type="tel", name="number-for-registration", placeholder="+7 (___)___-__-__", required)
+						input#email-for-registration.popup__input(type="email", name="email-for-registration", placeholder="E-mail", required)
+					button(type="submit", disabled).button.popup__button Продолжить
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+
+
+#password.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Введите пароль из<br>уведомления
+				p.popup__text Проверьте e-mail, на котором вы авторизованы в приложении.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#pass-for-auth.popup__input(type="password", name="pass-for-auth", placeholder="Введите пароль", required)
+					//- button(type="submit", disabled).button.popup__button Продолжить
+					details.popup-hidden
+						summary.popup-hidden__title Не приходит пароль?
+						ul.popup-hidden__list 
+							li.popup-hidden__item Проверьте корректность вводимых данных – без тире и пробела, язык ввода, клавишу «Caps Lock»
+							li.popup-hidden__item Вы ввели правильный адрес электронной почты.
+						p.popup-hidden__text Если указанные способы не помогают, обратитесь
+							a(href="").popup-hidden__link  в службу поддержки

@@ -817,9 +817,6 @@ function initSliders() {
 
 			const sliderPrefix = "slider_info_";
 			const dynamicSliderName = sliderPrefix + index;
-			// console.log(index)
-
-			// console.log("1")
 
 			window[dynamicSliderName] = new Swiper(slider, { // Указываем скласс нужного слайдера
 				observer: true,
@@ -829,13 +826,6 @@ function initSliders() {
 				spaceBetween: 10,
 				speed: 800,
 				allowTouchMove: false,
-
-				on: {
-					slideChange: function (swiper) {
-						// console.log(this)
-					}
-				}
-
 			});
 		});
 
@@ -847,9 +837,6 @@ function initSliders() {
 
 			const sliderPrefix = "slider_diff_";
 			const dynamicSliderName = sliderPrefix + index;
-			// console.log(index)
-
-			// console.log("1")
 
 			window[dynamicSliderName] = new Swiper(slider, { // Указываем скласс нужного слайдера
 				observer: true,
@@ -859,13 +846,6 @@ function initSliders() {
 				spaceBetween: 10,
 				speed: 800,
 				allowTouchMove: false,
-
-				on: {
-					slideChange: function (swiper) {
-						// console.log(this)
-					}
-				}
-
 			});
 		});
 
@@ -881,5 +861,3 @@ window.addEventListener("load", function (e) {
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
-
-// console.log(slider_comparisson_0)

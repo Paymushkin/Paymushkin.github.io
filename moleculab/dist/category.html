@@ -18,10 +18,10 @@
     <title>Moleculab</title>
     <link rel="icon" href="img/favicon.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css?_v=20240723120319" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js?_v=20240723120319" defer="defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240723120319" defer="defer"></script>
-    <link rel="stylesheet" href="css/style.min.css?_v=20240723120319"/>
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css?_v=20240724125540" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js?_v=20240724125540" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240724125540" defer="defer"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240724125540"/>
   </head>
   <body>
     <div class="wrapper">
@@ -32,7 +32,7 @@
               <div class="header-top__left">
                 <div class="location-block header-top__location">
                   <div class="location-block__current" id="change-location">
-                    <div class="location-block__location"><img src="img/location.svg?_v=20240723120319" alt="location-icon"/></div>
+                    <div class="location-block__location"><img src="img/location.svg?_v=20240724125540" alt="location-icon"/></div>
                     <div class="location-block__city">г. Москва</div>
                     <div class="location-block__hidden hidden-block">
                       <div class="hidden-block__body"> 
@@ -50,7 +50,7 @@
               </div>
             </div>
             <div class="header__middle header-middle">
-              <div class="header-middle__left"><a class="header-middle__logo" href="/"><img src="img/logo.svg?_v=20240723120319" alt="Logo"/></a>
+              <div class="header-middle__left"><a class="header-middle__logo" href="/"><img src="img/logo.svg?_v=20240724125540" alt="Logo"/></a>
                 <div class="header-middle__menu header-menu" id="open-header-menu"><span class="header-menu__line"></span>
                   <nav class="header-menu__hidden-block" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
                     <style>
@@ -570,10 +570,13 @@
                       <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                         <path d="M15.4372 3.375C18.8127 3.375 21.0807 6.58781 21.0807 9.585C21.0807 15.6548 11.6678 20.625 11.4974 20.625C11.327 20.625 1.91406 15.6548 1.91406 9.585C1.91406 6.58781 4.18212 3.375 7.55758 3.375C9.49555 3.375 10.9498 4.60714 11.4974 5.70238C12.045 4.60714 13.4992 3.375 15.4372 3.375Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg><span class="header-icons__text" itemprop="name">Избранное</span></a></li>
-                  <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
+                  <li class="header-icons__item" id="toAccount" data-popup="registration">
+                    <div class="header-icons__link" data-counter="0">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg><span class="header-icons__text" itemprop="name">Войти</span></a></li>
+                      </svg><span class="header-icons__text" itemprop="name">Войти</span>
+                    </div>
+                  </li>
                   <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M4.5 8.5V21.5" stroke="#77C149" stroke-width="1.4" stroke-linecap="round"></path>
@@ -611,7 +614,7 @@
                           <div class="header-cart__products small-cart">
                             <ul class="small-cart__list">
                               <li class="small-cart__item"> 
-                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240723120319" alt=""/></picture></div>
+                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240724125540" alt=""/></picture></div>
                                 <div class="small-cart__content"> 
                                   <h3 class="small-cart__title">УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом</h3><span class="small-cart__count">1 шт.</span>
                                 </div>
@@ -622,7 +625,7 @@
                                 </div>
                               </li>
                               <li class="small-cart__item"> 
-                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240723120319" alt=""/></picture></div>
+                                <div class="small-cart__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240724125540" alt=""/></picture></div>
                                 <div class="small-cart__content"> 
                                   <h3 class="small-cart__title">Гель-документирующая система ChemiScope</h3><span class="small-cart__count">1 шт.</span>
                                 </div>
@@ -709,28 +712,28 @@
               <h2 class="section-title">Популярные категории</h2>
               <ul class="popular-category__list"> 
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-1.webp" type="image/webp"><img src="img/category/item-1.png?_v=20240723120319" alt="Оборудование для ветеринарии"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-1.webp" type="image/webp"><img src="img/category/item-1.png?_v=20240724125540" alt="Оборудование для ветеринарии"/></picture></div>
                     <h3 class="popular-category__title">Оборудование для ветеринарии</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-2.webp" type="image/webp"><img src="img/category/item-2.png?_v=20240723120319" alt="Оборудование для КДЛ"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-2.webp" type="image/webp"><img src="img/category/item-2.png?_v=20240724125540" alt="Оборудование для КДЛ"/></picture></div>
                     <h3 class="popular-category__title">Оборудование для КДЛ</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-3.webp" type="image/webp"><img src="img/category/item-3.png?_v=20240723120319" alt="Общелабораторное оборудование"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-3.webp" type="image/webp"><img src="img/category/item-3.png?_v=20240724125540" alt="Общелабораторное оборудование"/></picture></div>
                     <h3 class="popular-category__title">Общелабораторное оборудование</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-4.webp" type="image/webp"><img src="img/category/item-4.png?_v=20240723120319" alt="Общелабораторное оборудование"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-4.webp" type="image/webp"><img src="img/category/item-4.png?_v=20240724125540" alt="Общелабораторное оборудование"/></picture></div>
                     <h3 class="popular-category__title">Общелабораторное оборудование</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-5.webp" type="image/webp"><img src="img/category/item-5.png?_v=20240723120319" alt="Оборудование для ветеринарии"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-5.webp" type="image/webp"><img src="img/category/item-5.png?_v=20240724125540" alt="Оборудование для ветеринарии"/></picture></div>
                     <h3 class="popular-category__title">Оборудование для ветеринарии</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-6.webp" type="image/webp"><img src="img/category/item-6.png?_v=20240723120319" alt="Научное и контрольно-аналитическое оборудование"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-6.webp" type="image/webp"><img src="img/category/item-6.png?_v=20240724125540" alt="Научное и контрольно-аналитическое оборудование"/></picture></div>
                     <h3 class="popular-category__title">Научное и контрольно-аналитическое оборудование</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-7.webp" type="image/webp"><img src="img/category/item-7.png?_v=20240723120319" alt="Общелабораторное оборудование"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-7.webp" type="image/webp"><img src="img/category/item-7.png?_v=20240724125540" alt="Общелабораторное оборудование"/></picture></div>
                     <h3 class="popular-category__title">Общелабораторное оборудование</h3></a></li>
                 <li class="popular-category__item"><a class="popular-category__link" href="">
-                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-8.webp" type="image/webp"><img src="img/category/item-8.png?_v=20240723120319" alt="Прочее лабораторное оборудование"/></picture></div>
+                    <div class="popular-category__image-ibg"><picture><source srcset="img/category/item-8.webp" type="image/webp"><img src="img/category/item-8.png?_v=20240724125540" alt="Прочее лабораторное оборудование"/></picture></div>
                     <h3 class="popular-category__title">Прочее лабораторное оборудование</h3></a></li>
               </ul>
             </div>
@@ -2043,7 +2046,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240723120319" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240724125540" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                           <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                           <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -2096,7 +2099,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240723120319" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240724125540" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                           <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                           <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -2149,7 +2152,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                           <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                           <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -2202,7 +2205,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                           <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                           <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status"></span>
@@ -2255,7 +2258,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240723120319" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240724125540" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                           <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                           <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -2308,7 +2311,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240723120319" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240724125540" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                           <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                           <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -2361,7 +2364,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                           <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                           <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -2414,7 +2417,7 @@
                             <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                             <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                           </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                        <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                         <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                           <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                           <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _many">Много</span>
@@ -2501,7 +2504,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240723120319" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240724125540" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                     <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -2554,7 +2557,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240723120319" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240724125540" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                     <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                     <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -2607,7 +2610,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -2660,7 +2663,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                     <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status"></span>
@@ -2713,7 +2716,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240723120319" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-1.webp" type="image/webp"><img src="img/products/item-1.png?_v=20240724125540" alt="Ламинарный шкаф II класса защиты БМБ-II-&quot;Ламинар-С&quot; - 1,5 SAVVY (222.150)" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Ламинарные системы</h4>
                     <p class="product-item__text" itemprop="description">Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)</p><span class="product-item__status _limited">Ограничено</span>
@@ -2766,7 +2769,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240723120319" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-2.webp" type="image/webp"><img src="img/products/item-2.png?_v=20240724125540" alt="Многофункциональная центрифуга с охлаждением 1248R" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">GZ-1248R</span>
                     <h4 class="product-item__title" itemprop="brand">Gyrozen</h4>
                     <p class="product-item__text" itemprop="description">Многофункциональная центрифуга с охлаждением 1248R</p><span class="product-item__status _request">Уточнить у менеджера</span>
@@ -2819,7 +2822,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-3.webp" type="image/webp"><img src="img/products/item-3.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1R-B.002-15</span>
                     <h4 class="product-item__title" itemprop="brand">Senova BS-3031</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _limited">Ограничено</span>
@@ -2872,7 +2875,7 @@
                       <path d="M14 10.5V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                       <path d="M19 3V21" stroke="#B7CCD8" stroke-width="1.4" stroke-linecap="round"></path>
                     </svg></span></div><a class="product-item__link" href="/product.html" itemprop="url">
-                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240723120319" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
+                  <div class="product-item__image-ibg"><picture><source srcset="img/products/item-4.webp" type="image/webp"><img src="img/products/item-4.png?_v=20240724125540" alt="Гель-документирующая система ChemiScope" itemprop="image"/></picture></div>
                   <div class="product-item__content"> <span class="product-item__code" itemprop="sku">1802001 U</span>
                     <h4 class="product-item__title" itemprop="brand">Clinx</h4>
                     <p class="product-item__text" itemprop="description">Гель-документирующая система ChemiScope</p><span class="product-item__status _many">Много</span>
@@ -2925,7 +2928,7 @@
             <meta itemprop="name" content=""/>
             <link itemprop="url" href="https://moleculab.ru"/>
             <meta itemprop="logo" content="/img/logo.svg"/>
-            <div class="footer-top__logo"><img src="img/footer/logo.svg?_v=20240723120319" alt="Logo"/></div>
+            <div class="footer-top__logo"><img src="img/footer/logo.svg?_v=20240724125540" alt="Logo"/></div>
             <div class="footer-top__content"> <a class="footer-top__link" href="mailto:pochta@gmail.com" itemprop="email">pochta@gmail.com</a><a class="footer-top__link footer-top__link-phone" href="tel:+79002834869" itemprop="telephone">8 (900) 283-48-69</a>
               <div class="footer-top__buttons">
                 <button class="button _gradient footer-top__call footer-top__button" data-text="Заказать звонок" data-popup="call-me">Заказать звонок</button><a class="button _with-icon footer-top__to-top" data-text="Наверх" id="to-top"> <span class="button__text">Наверх</span><span class="button__icon"> 
@@ -5040,8 +5043,85 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="to-auth" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                <path d="M19.3646 19.8637L6.63672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.63927 19.8637L19.3672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Авторизация</h2>
+              <p class="popup__text">Авторизация осуществляется e-mail, с помощью одноразового кода, который придет вам на почту.</p>
+              <form class="popup__form" action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" id="email-for-auth" type="email" name="email-for-auth" placeholder="E-mail" required="required"/>
+                </div>
+                <button class="button popup__button" type="submit" disabled="disabled">Продолжить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="registration" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                <path d="M19.3646 19.8637L6.63672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.63927 19.8637L19.3672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Регистрация</h2>
+              <p class="popup__text">Введите данные для успешой регистрации.</p>
+              <form class="popup__form" action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" id="name-for-registration" type="text" name="name-for-registration" placeholder="Имя" required="required"/>
+                  <input class="popup__input" id="surname-for-registration" type="text" name="surname-for-registration" placeholder="Фамилия" required="required"/>
+                  <input class="popup__input" id="number-for-registration" type="tel" name="number-for-registration" placeholder="+7 (___)___-__-__" required="required"/>
+                  <input class="popup__input" id="email-for-registration" type="email" name="email-for-registration" placeholder="E-mail" required="required"/>
+                </div>
+                <button class="button popup__button" type="submit" disabled="disabled">Продолжить</button>
+              </form>
+              <p class="popup__policy">Нажимая «Отправить», вы принимаете условия <a href="#" target="_blank">политики конфиденциальности</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="password" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                <path d="M19.3646 19.8637L6.63672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.63927 19.8637L19.3672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Введите пароль из<br>уведомления</h2>
+              <p class="popup__text">Проверьте e-mail, на котором вы авторизованы в приложении.</p>
+              <form class="popup__form" action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" id="pass-for-auth" type="password" name="pass-for-auth" placeholder="Введите пароль" required="required"/>
+                </div>
+                <details class="popup-hidden">
+                  <summary class="popup-hidden__title">Не приходит пароль?</summary>
+                  <ul class="popup-hidden__list"> 
+                    <li class="popup-hidden__item">Проверьте корректность вводимых данных – без тире и пробела, язык ввода, клавишу «Caps Lock»</li>
+                    <li class="popup-hidden__item">Вы ввели правильный адрес электронной почты.</li>
+                  </ul>
+                  <p class="popup-hidden__text">Если указанные способы не помогают, обратитесь<a class="popup-hidden__link" href=""> в службу поддержки</a></p>
+                </details>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js?_v=20240723120319"></script>
-    <script src="js/app.min.js?_v=20240723120319"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js?_v=20240724125540"></script>
+    <script src="js/app.min.js?_v=20240724125540"></script>
   </body>
 </html>

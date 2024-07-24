@@ -495,7 +495,7 @@
 .comparisson-info-block {
 
     display: flex;
-    align-items: flex-end;
+    // align-items: flex-end;
     gap: 20px;
     width: 100%;
 
@@ -528,6 +528,7 @@
     }
 
     &__item {
+        min-height: 28px;
         font-size: 18px;
         line-height: 1.6;
     }
@@ -544,6 +545,7 @@
     }
 
     &__item {
+        min-height: 28px;
         font-size: 18px;
         line-height: 1.6;
 

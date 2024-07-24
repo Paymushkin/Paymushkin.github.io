@@ -816,6 +816,7 @@ if (comparissonSection) {
             })
             comparissonSection.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
             comparissonSection.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
+            setSizeForPoints()
         })
     });
 
@@ -837,11 +838,14 @@ if (comparissonSection) {
                     })
                     section.querySelector(`[data-tabs-info="${tabID}"]`).classList.add("_content-active");
                     section.querySelector(`[data-tab-info="${tabID}"]`).classList.add("_tab-active")
+                    setSizeForPoints()
                 })
             });
         });
     }
 }
+
+setSizeForPoints()
 
 // фиксируем шапку при скролле
 const scrollHeader = document.querySelector(".scroll-header");
@@ -866,15 +870,13 @@ if (scrollHeader) {
 // фиксация слайдера сравнения при скролле
 
 if (comparissonSection) {
-
-
-    let comparissonBlock = comparissonSection.querySelector(".comparisson__body")
-
     window.onscroll = function () {
         fixSlider()
     };
 
     function fixSlider() {
+
+        let comparissonBlock = comparissonSection.querySelector(".comparisson__body")
         let distance = comparissonBlock.getBoundingClientRect().top
 
 
@@ -891,20 +893,6 @@ if (comparissonSection) {
         if (distance - scrollHeader.offsetHeight > 10) {
             comparissonSection.classList.remove("_fix-slider")
         }
-
-        // if ((distance - scrollHeader.offsetHeight < 0) && ((Math.min(screen.width, window.innerWidth)) <= 576)) {
-        //     comparissonSection.classList.add("_fix-slider")
-
-
-        //     if ((window.scrollY >= scrollHeader.offsetHeight + comparissonBlock.offsetHeight)) {
-        //         comparissonSection.classList.add("_transparent-slider")
-        //     } else {
-        //         comparissonSection.classList.remove("_transparent-slider")
-        //     }
-
-        // } else {
-        //     comparissonSection.classList.remove("_fix-slider")
-        // }
     }
 }
 
@@ -924,24 +912,70 @@ if (comparissonSection) {
 }
 
 
+// const numberOfPoints = document.querySelectorAll("div[data-tabs-body='1'] .comparisson-block__item") || null
+// console.log(numberOfPoints)
+
+
+function setSizeForPoints() {
+    const numberOfPointsOfBlocks = document.querySelectorAll("._content-active div[data-tabs-info]._content-active") || null
+
+    console.log(numberOfPointsOfBlocks)
+
+    if (numberOfPointsOfBlocks.length) {
+
+        numberOfPointsOfBlocks.forEach(block => {
+            const numberOfPoints = block.querySelectorAll(".comparisson-info-block__list li")
+
+
+            if (numberOfPoints.length) {
+
+                numberOfPoints.forEach((point, index) => {
+
+                    // Находим все элементы с заданным data-point
+                    const elements = block.querySelectorAll(`[data-point="${index + 1}"]`);
+
+                    // Преобразуем NodeList в массив
+                    const elementsArray = Array.from(elements);
+
+                    // Проверяем, есть ли элементы
+                    if (elementsArray.length === 0) return;
+
+                    // Находим максимальную высоту среди элементов
+                    const maxHeight = Math.max(...elementsArray.map(el => el.offsetHeight));
+
+                    // Устанавливаем максимальную высоту всем элементам в массиве
+                    elementsArray.forEach(el => {
+                        el.style.height = `${maxHeight}px`;
+                    });
+                });
+            }
+        });
+    }
+}
+
 // инициализация маски ввода телефона
 
-// const callMePopup = document.getElementById('call-me') || null;
-// const nameInputCall = document.getElementById('name-for-call') || null;
-// const emailInputCall = document.getElementById('number-for-call') || null;
-// // const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
+const callMePopup = document.getElementById('call-me') || null;
+const nameInputCall = document.getElementById('name-for-call') || null;
+const emailInputCall = document.getElementById('number-for-call') || null;
+const registrationInputCall = document.getElementById('number-for-registration') || null;
+// const submitButtonCall = callMePopup.querySelector('button[type="submit"]') || null;
 
-// if (callMePopup) {
-//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
-// }
+if (callMePopup) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-call"));
+}
 
-// if (nameInputCall) {
-//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
-// }
+if (nameInputCall) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("newsletter-phone"));
+}
 
-// if (emailInputCall) {
-//     Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
-// }
+if (emailInputCall) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-request"));
+}
+
+if (registrationInputCall) {
+    Inputmask({ mask: "+7 (999) 999-9999" }).mask(document.getElementById("number-for-registration"));
+}
 
 // проверка полей попапов на заполненность
 

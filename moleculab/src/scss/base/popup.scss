@@ -859,3 +859,73 @@ body::after {
 		font-weight: 500;
 	}
 }
+
+.popup__additional {
+	width: 100%;
+	color: $highlightColor-1;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 500;
+	transition: 0.3s ease color;
+	cursor: pointer;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $textColor;
+		}
+	}
+}
+
+.popup-hidden {
+
+	&__title {
+		width: 100%;
+		color: $highlightColor-1;
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 500;
+		transition: 0.3s ease color;
+		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $textColor;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 10px;
+		padding-top: 24px;
+		padding-left: 20px;
+	}
+
+	&__item {
+		color: $textColor;
+		font-size: 16px;
+		line-height: 1.4;
+		list-style-type: disc;
+	}
+
+	&__text {
+		color: $textColor;
+		font-size: 16px;
+		line-height: 1.4;
+	}
+
+	&__link {
+		color: $highlightColor-2;
+		transition: 0.3s ease color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+}
