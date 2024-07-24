@@ -956,7 +956,7 @@ function setSizeForPoints() {
 
             });
 
-        }, 100);
+        }, 200);
 
         setTimeout(() => {
             numberOfMobItems.forEach((element, index) => {
@@ -987,7 +987,7 @@ function setSizeForPoints() {
 
             });
 
-        }, 100);
+        }, 500);
     }
 }
 

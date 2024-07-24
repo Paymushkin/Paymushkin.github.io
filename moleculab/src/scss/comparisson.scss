@@ -72,7 +72,7 @@
         }
 
         @media (max-width:$mobileSmall) {
-            margin: -20px;
+            margin: 0 -20px;
         }
     }
 
@@ -220,11 +220,18 @@
 
 .comparisson-tabs {
     position: relative;
-    display: grid;
-    justify-content: flex-start;
-    align-items: center;
-    grid-auto-flow: column;
-    overflow-x: auto;
+
+    &>div {
+        display: grid;
+        justify-content: flex-start;
+        align-items: center;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+    }
+
+    @media (min-width:$mobileSmall) {
+        overflow-x: auto;
+    }
 
     &::after {
         content: '';

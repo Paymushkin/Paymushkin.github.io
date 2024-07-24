@@ -10140,7 +10140,7 @@ details summary svg {
 }
 @media (max-width: 36.06125em) {
   .comparisson__body {
-    margin: -20px;
+    margin: 0 -20px;
   }
 }
 .comparisson__prev, .comparisson__next {
@@ -10283,6 +10283,8 @@ details summary svg {
 
 .comparisson-tabs {
   position: relative;
+}
+.comparisson-tabs > div {
   display: -ms-grid;
   display: grid;
   -ms-flex-pack: start;
@@ -10290,7 +10292,12 @@ details summary svg {
   -ms-flex-align: center;
       align-items: center;
   grid-auto-flow: column;
-  overflow-x: auto;
+  overflow-x: scroll;
+}
+@media (min-width: 36.06125em) {
+  .comparisson-tabs {
+    overflow-x: auto;
+  }
 }
 .comparisson-tabs::after {
   content: "";
