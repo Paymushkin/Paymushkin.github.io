@@ -319,8 +319,8 @@
 						input#email-for-registration.popup__input(type="email", name="email-for-registration", placeholder="E-mail", required)
 					.popup__button-wrapper
 						button(type="submit", data-popup="password").button.popup__button Продолжить
-				p.popup__policy Нажимая «Отправить», вы принимаете условия 
-					a(href="#", target="_blank") политики конфиденциальности
+						p.popup__policy Нажимая «Отправить», вы принимаете условия 
+							a(href="#", target="_blank") политики конфиденциальности
 
 #password.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
@@ -334,6 +334,8 @@
 					.popup__inputs
 						input#pass-for-auth.popup__input(type="password", name="pass-for-auth", placeholder="Введите пароль", required)
 					//- button(type="submit", disabled).button.popup__button Продолжить
+					.popup__button-wrapper
+						button(type="submit").button.popup__button Продолжить
 					details.popup-hidden
 						summary.popup-hidden__title Не приходит пароль?
 						ul.popup-hidden__list 

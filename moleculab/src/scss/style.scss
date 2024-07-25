@@ -120,6 +120,12 @@ body {
         padding-right: 0 !important;
     }
 
+    &::-webkit-scrollbar {
+        .lock & {
+            display: none;
+        }
+    }
+
 
     ._filter-active & {
         @media (max-width:$tablet) {

@@ -167,6 +167,9 @@ body {
       touch-action: none;
   padding-right: 0 !important;
 }
+.lock body::-webkit-scrollbar {
+  display: none;
+}
 @media (max-width: 64.06125em) {
   ._filter-active body::before {
     content: "";
@@ -1359,6 +1362,8 @@ body::after {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 .popup__to-registration span {
@@ -2467,6 +2472,8 @@ body::after {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 .popup__to-registration span {
