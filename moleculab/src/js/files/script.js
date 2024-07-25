@@ -236,12 +236,26 @@ function popupClose(element) {
 }
 
 function popupShow(element) {
-    // console.log(element)
+
     let popupId = element.getAttribute("data-popup");
-    // console.log(document.querySelector(`#${popupId}`))
-    document.querySelector(`#${popupId}`).classList.add('popup_show');
+    const currentPopup = document.querySelector(`#${popupId}`);
+    currentPopup.classList.add('popup_show')
     document.querySelector('html').classList.add('lock');
     document.querySelector('html').classList.add('popup-show');
+    const nextPopup = currentPopup.querySelectorAll("[data-popup]") || null
+
+    if (nextPopup.length) {
+
+        nextPopup.forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault()
+
+                const nextPopupId = el.getAttribute("data-popup")
+                popupClose(currentPopup)
+                popupShow(document.querySelector(`[data-popup="${nextPopupId}"]`))
+            })
+        });
+    }
 }
 
 if (popupShowElements.length) {
@@ -260,19 +274,33 @@ if (popupHideElements.length) {
     })
 }
 
-const popupFollowProduct = document.getElementById("to-follow-product")
+// const popupFollowProduct = document.getElementById("to-follow-product") | null
 
-if (popupFollowProduct) {
+// if (popupFollowProduct) {
 
-    popupFollowProduct.querySelector("button[type='submit']").addEventListener("click", (event) => {
+//     popupFollowProduct.querySelector("button[type='submit']").addEventListener("click", (event) => {
 
-        event.preventDefault()
-        popupClose(document.getElementById("to-follow-product"))
-        document.getElementById("you-follow").classList.add('popup_show');
-        document.querySelector('html').classList.add('lock');
-        document.querySelector('html').classList.add('popup-show');
-    })
-}
+//         event.preventDefault()
+//         popupClose(document.getElementById("to-follow-product"))
+//         document.getElementById("you-follow").classList.add('popup_show');
+//         document.querySelector('html').classList.add('lock');
+//         document.querySelector('html').classList.add('popup-show');
+//     })
+// }
+
+// const popupToAuth = document.getElementById("to-auth") || null
+
+// if (popupToAuth) {
+
+//     popupToAuth.querySelector(".to-registration").addEventListener("click", (event) => {
+
+//         event.preventDefault()
+//         popupClose(document.getElementById("to-auth"))
+//         document.getElementById("registration").classList.add('popup_show');
+//         document.querySelector('html').classList.add('lock');
+//         document.querySelector('html').classList.add('popup-show');
+//     })
+// }
 
 // каталог
 

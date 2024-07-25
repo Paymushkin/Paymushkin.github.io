@@ -81,7 +81,7 @@
 					| когда нужный товар появится в наличии
 				form(action="#", method="post").popup__field.popup__field_mb16
 					input#email-input(type="email", name="email-input", required, placeholder="Email")
-					button.button(type="submit") Отправить
+					button.button(type="submit", data-popup="you-follow") Отправить
 				p.popup__policy Нажимая «Отправить», вы принимаете условия 
 					a(href="#", target="_blank") политики конфиденциальности
 
@@ -284,7 +284,8 @@
 						
 					#map.map.popup__ya-map
 
-#to-auth.popup(aria-hidden='true', data-single="true")
+
+#to-auth.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
@@ -295,10 +296,14 @@
 				form(action="#", method="post").popup__form
 					.popup__inputs
 						input#email-for-auth.popup__input(type="email", name="email-for-auth", placeholder="E-mail", required)
-					button(type="submit", disabled).button.popup__button Продолжить
+					.popup__button-wrapper
+						button(type="submit", data-popup="password").button.popup__button Продолжить
+				
+				.popup__to-registration 
+					span Нет учётной записи?
+					span.to-registration._highligth(data-popup="registration") Зарегистрироваться
 
-
-#registration.popup(aria-hidden='true', data-single="true")
+#registration.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
@@ -312,13 +317,12 @@
 						input#surname-for-registration.popup__input(type="text", name="surname-for-registration", placeholder="Фамилия", required)
 						input#number-for-registration.popup__input(type="tel", name="number-for-registration", placeholder="+7 (___)___-__-__", required)
 						input#email-for-registration.popup__input(type="email", name="email-for-registration", placeholder="E-mail", required)
-					button(type="submit", disabled).button.popup__button Продолжить
+					.popup__button-wrapper
+						button(type="submit", data-popup="password").button.popup__button Продолжить
 				p.popup__policy Нажимая «Отправить», вы принимаете условия 
 					a(href="#", target="_blank") политики конфиденциальности
 
-
-
-#password.popup(aria-hidden='true', data-single="true")
+#password.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
 			button.popup__close(data-close='data-close' type='button')
