@@ -284,7 +284,6 @@
 						
 					#map.map.popup__ya-map
 
-
 #to-auth.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
@@ -343,3 +342,82 @@
 							li.popup-hidden__item Вы ввели правильный адрес электронной почты.
 						p.popup-hidden__text Если указанные способы не помогают, обратитесь
 							a(href="").popup-hidden__link  в службу поддержки
+
+#raiting.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Оценить товар
+				p.popup__text 
+					| Поставьте оценку – от 1 до 5 звёздочек, 
+					| после этого просто нажмите на кнопку «Отправить».
+					form(action="", method="post").popup__form
+						fieldset.raiting
+							.raiting__group
+								input.raiting__star(aria-label='Ужасно' type='radio' value='1' checked='')
+								input.raiting__star(aria-label='Сносно' type='radio' value='2')
+								input.raiting__star(aria-label='Нормально' type='radio' value='3')
+								input.raiting__star(aria-label='Хорошо' type='radio' value='4')
+								input.raiting__star(aria-label='Отлично' type='radio' value='5')
+						.popup__button-wrapper
+							button.button(type="submit").popup__button.mb0 Отправить
+
+#refund-request.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подать заявку на возврат
+				p.popup__text 
+					| Расскажите подробнее о причине возврата.
+				form(action="#", method="post")
+					textarea#refund-comments.popup__textarea.mb32(name="comments")
+
+					.popup__files.files-popup
+						h3.files-popup__title Добавьте фотографии
+						.files-popup__wrapper 
+							.files-popup__preview(style="background-image:url(@img/preview.png)") 
+								input#preview-file(type="file", name="preview-file", accept=".jpg,.png,.webp,.jpeg", multiple)
+							p.files-popup__text
+								| Нажмите на кнопку и выберите 
+								| до 10 изображений в формате PNG, JPEG.
+						.files-popup__imgs 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Отправить 
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности

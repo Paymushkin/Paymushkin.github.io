@@ -883,7 +883,9 @@ if (scrollHeader) {
     window.onscroll = function () {
         fixHeader()
     };
-    var sticky = header.offsetHeight;
+    let sticky = document.querySelector("header").offsetHeight || null;
+    console.log(sticky)
+
     document.querySelector("body").style.paddingTop = scrollHeader.offsetHeight + "px"
 
     function fixHeader() {
@@ -1021,6 +1023,43 @@ function setSizeForPoints() {
 }
 
 // инициализация маски ввода телефона
+
+const phoneInputs = document.querySelectorAll("input[type='tel']") || null
+
+if (phoneInputs.length) {
+
+    phoneInputs.forEach(input => {
+        Inputmask({ mask: "+7 (999) 999-9999" }).mask(input);
+    });
+}
+
+const orderTabsContainer = document.getElementById("order-grid")
+
+if (orderTabsContainer) {
+
+    const tabsBnts = orderTabsContainer.querySelectorAll("[data-tab-button]") || null
+    const tabsContent = orderTabsContainer.querySelectorAll("[data-tabs-body]") || null
+
+    // console.log(orderTabs, tabsContent) 
+
+    if (tabsBnts.length) {
+
+        tabsBnts.forEach(tab => {
+            const tabID = tab.getAttribute("data-tab-button")
+
+            tab.addEventListener("click", () => {
+                tabsContent.forEach(content => {
+                    content.classList.remove("_content-active")
+                })
+                tabsBnts.forEach(tab => {
+                    tab.classList.remove("_tab-active")
+                })
+                orderTabsContainer.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+                orderTabsContainer.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
+            })
+        });
+    }
+}
 
 // const callMePopup = document.getElementById('call-me') || null;
 // const nameInputCall = document.getElementById('name-for-call') || null;

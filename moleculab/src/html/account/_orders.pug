@@ -1,0 +1,170 @@
+section.account
+    .account__container 
+        - const accountOrdersPage = true;
+        include ../_breadcrumbs
+
+        .account__body.body-pa
+            aside.body-pa__aside.aside-pa
+                .aside-pa__header 
+                    .aside-pa__avatar
+                        img(src="@img/account/avatar.png", alt="")
+                    .aside-pa__info 
+                        h3.aside-pa__name Наталья Карандашова
+                        .aside-pa__label в клубе
+                ul.aside-pa__list
+                    li.aside-pa__item
+                        a(href="./account-personal.html").aside-pa__link 
+                            include ../icons/_profile
+                            span Учетные данные
+
+                    li.aside-pa__item._active 
+                        a(href="./account-orders.html").aside-pa__link 
+                            include ../icons/_order
+                            span Мои заказы
+
+                    li.aside-pa__item 
+                        a(href="./account-payments.html").aside-pa__link 
+                            include ../icons/_payment
+                            span Платежные профили
+
+                    li.aside-pa__item 
+                        a(href="./account-notifications.html").aside-pa__link 
+                            include ../icons/_bell
+                            span Настройка уведомлений
+
+                    li.aside-pa__item 
+                        a(href="/account-info.html").aside-pa__link 
+                            include ../icons/_file
+                            span Информация для клиента
+                .aside-pa__footer
+                    a(href="./logout")
+                        include ../icons/_logout
+                        span Выйти
+            
+            #order-grid.body-pa__main.orders-grid
+                .orders-grid__search.search-orders
+                    h2.search-orders__title(data-popup="raiting") Найти заказ
+                    form(action="#", method="post").search-orders__form
+                        .search-orders__field 
+                            include ../icons/_search
+                            input#search-orders.search-orders__input(type="search", name="search-orders", placeholder="Найдите ваш заказ")
+                        button(type="submit").button.search-orders__button Найти
+
+                .orders-grid__years.years-orders
+                    nav(data-tabs-titles="").years-tabs
+                        .scroll-x
+                            button(type="button", data-tab-button="1").years-tabs__title._tab-active
+                                span(data-count="(1)") 2023
+                            button(type="button", data-tab-button="2").years-tabs__title
+                                span(data-count="(1)") 2022
+                            button(type="button", data-tab-button="3").years-tabs__title
+                                span(data-count="(1)") 2021
+
+                .orders-grid__items.items-orders
+                    div(data-tabs-body="1").items-orders__content._content-active
+                        ul.orders-list
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_cancel
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item 
+                                a(href="./account-order.html").orders-list__link  
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_done
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link   
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_pending
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+
+                    div(data-tabs-body="2").items-orders__content
+                        ul.orders-list
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_cancel
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item 
+                                a(href="./account-order.html").orders-list__link  
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_done
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link   
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_pending
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+
+                    div(data-tabs-body="3").items-orders__content
+                        ul.orders-list
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_cancel
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item 
+                                a(href="./account-order.html").orders-list__link  
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_done
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽
+                            li.orders-list__item
+                                a(href="./account-order.html").orders-list__link   
+                                    .orders-list__left
+                                        .orders-list__icon
+                                            include ../icons/_pending
+                                    .orders-list__right
+                                        .orders-list__title
+                                            .orders-list__number № 158111234
+                                            .orders-list__status Заказ отменен
+                                        .orders-list__date от 08.04.2023
+                                        .orders-list__price 100 344 ₽

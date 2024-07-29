@@ -79,6 +79,61 @@ else if comparissonPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Сравнение товаров
 
+else if accountPersonalPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                .breadcrumbs__link Учетные данные
+
+else if accountPersonalPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                .breadcrumbs__link Заказы
+
+else if accountPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Личный кабинет
+
+else if accountOrdersPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                .breadcrumbs__link История заказов
+
+else if accountOrderPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link История заказов
+            li.breadcrumbs__item 
+                .breadcrumbs__link Заказ #12345678
+
 else
 
     .breadcrumbs.catalog__breadcrumbs

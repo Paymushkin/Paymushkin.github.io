@@ -339,7 +339,7 @@
     &__slider {
         width: 100%;
 
-        @media (min-width:em(900)) {
+        @media (min-width:em(901)) {
             width: calc(100% - 261px);
         }
     }
@@ -529,7 +529,7 @@
     &__slider {
         width: 100%;
 
-        @media (min-width:em(900)) {
+        @media (min-width:em(901)) {
             width: calc(100% - 261px);
         }
     }
@@ -566,6 +566,10 @@
             color: $mainColor;
             font-size: 12px;
             line-height: 1.6;
+
+            @media (min-width:em(901)) {
+                display: none;
+            }
         }
     }
 }

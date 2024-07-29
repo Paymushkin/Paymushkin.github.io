@@ -96,9 +96,17 @@ details {
     cursor: grab;
 }
 
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb32 {
+    margin-bottom: 32px;
+}
+
 [class*="__container"] {
     @media (max-width:$mobileSmall) {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 }
 
@@ -1114,12 +1122,4 @@ details {
             outline-color: $highlightColor-2;
         }
     }
-}
-
-[class*="copyrights-pane"] {
-    display: none !important;
-}
-
-[class*="ground-pane"] {
-    filter: grayscale(1);
 }
