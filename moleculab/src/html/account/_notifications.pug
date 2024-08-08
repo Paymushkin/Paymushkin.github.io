@@ -1,0 +1,62 @@
+section.account
+    .account__container 
+        - const accountNotificationsPage = true;
+        include ../_breadcrumbs
+
+        .account__body.body-pa
+            aside.body-pa__aside.aside-pa
+                .aside-pa__header 
+                    .aside-pa__avatar
+                        img(src="@img/account/avatar.png", alt="")
+                    .aside-pa__info 
+                        h3.aside-pa__name Наталья Карандашова
+                        .aside-pa__label в клубе
+                ul.aside-pa__list
+                    li.aside-pa__item
+                        a(href="./account-personal.html").aside-pa__link 
+                            include ../icons/_profile
+                            span Учетные данные
+
+                    li.aside-pa__item
+                        a(href="./account-orders.html").aside-pa__link 
+                            include ../icons/_order
+                            span Мои заказы
+
+                    li.aside-pa__item 
+                        a(href="./account-payments.html").aside-pa__link 
+                            include ../icons/_payment
+                            span Платежные профили
+
+                    li.aside-pa__item._active 
+                        a(href="./account-notifications.html").aside-pa__link 
+                            include ../icons/_bell
+                            span Настройка уведомлений
+
+                    li.aside-pa__item 
+                        a(href="/account-info.html").aside-pa__link 
+                            include ../icons/_file
+                            span Информация для клиента
+                .aside-pa__footer
+                    a(href="./logout")
+                        include ../icons/_logout
+                        span Выйти
+            
+            .body-pa__main.notifications-block
+                h2.notifications-block__title Настройка уведомлений
+                ul.notifications-block__list 
+                    li.notifications-block__item.item-notification
+                        h3.item-notification__title Статус заказа
+                        p.item-notification__text Получайте информацию о статусе заказов на электронную почту
+                        .toggle
+                            span.toggle__title E-mail
+                            .toggle__input
+                                input#toggle-status.toggle__checkbox(type='checkbox')
+                                label.toggle__switch(for='toggle-status')
+                    li.notifications-block__item.item-notification
+                        h3.item-notification__title Скидки и акции
+                        p.item-notification__text Экономьте на акциях и распродажах
+                        .toggle
+                            span.toggle__title E-mail
+                            .toggle__input
+                                input#toggle-sale.toggle__checkbox(type='checkbox')
+                                label.toggle__switch(for='toggle-sale')

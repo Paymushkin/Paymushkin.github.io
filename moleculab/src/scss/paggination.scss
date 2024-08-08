@@ -1,16 +1,27 @@
 .paggination {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
+    align-self: center;
+    // margin: 0 auto;
+    // justify-content: space-between;
 
     @media (max-width:$mobileSmall) {
-        display: none;
+        gap: 20px;
     }
+
+    @media (max-width:$mobileSmall) {
+        gap: 10px;
+    }
+
+    // @media (max-width:$mobileSmall) {
+    //     display: none;
+    // }
 
     &__list {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
 
     &__item {

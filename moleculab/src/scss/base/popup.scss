@@ -274,6 +274,11 @@ body::after {
 	&::placeholder {
 		color: $textColor;
 	}
+
+	&:focus {
+		outline: none;
+		border-color: $highlightColor-1;
+	}
 }
 
 .popup-form__select {
@@ -287,6 +292,13 @@ body::after {
 	border: 1px solid #E3E3E3;
 	// font-size: 16px;
 
+	&._small {
+		display: flex;
+		align-items: center;
+		padding: 10px 20px;
+		max-height: 50px;
+	}
+
 	&::placeholder {
 		color: $textColor;
 	}
@@ -294,11 +306,16 @@ body::after {
 	.select__title {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
 
 		span {
 			color: $mainColor;
 			font-size: 16px;
 			font-weight: 400;
+
+			&[data-current=""] {
+				color: $textColor;
+			}
 		}
 	}
 
@@ -545,6 +562,89 @@ body::after {
 
 			@media (max-width:$mobileSmall) {}
 		}
+	}
+}
+
+.popup-profile {
+
+	.content-data__who {
+		@media (max-width:$mobileSmall) {
+			margin-bottom: 16px;
+		}
+	}
+
+	.popup__wrapper {
+		max-height: 100vh;
+	}
+
+	.popup__content {
+		position: relative;
+		height: 100vh;
+		height: 100dvh;
+		max-height: 100vh;
+		max-height: 100dvh;
+		overflow: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.popup__body {
+		display: flex;
+		flex-direction: column;
+		max-height: 100%;
+		overflow: hidden;
+	}
+
+	.popup__header {
+		flex: 0 0 auto;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 0;
+	}
+
+	.popup__form {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.popup__scroll {
+		flex: 1 1 auto;
+		padding-right: 10px;
+		max-height: 100%;
+		overflow: scroll;
+
+		@media (max-width:$mobileSmall) {
+			padding-bottom: 60px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 5px;
+			height: 5px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: #fff;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $borderColor-2;
+		}
+	}
+
+	.popup__button-wrapper {
+		flex: 0 0 auto;
+	}
+}
+
+._only-company {
+	display: none;
+
+	.company & {
+		display: block;
 	}
 }
 

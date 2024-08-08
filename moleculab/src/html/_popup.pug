@@ -421,3 +421,233 @@
 					button(type="submit", disabled).button.popup__button Отправить 
 					p.popup__policy Нажимая «Отправить», вы принимаете условия 
 						a(href="#", target="_blank") политики конфиденциальности
+
+#add-profile.popup.popup-profile(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				.popup__header
+					h2.popup__title Введите данные
+					p.popup__text Пункты, отмеченные звездочкой, обязательны для заполнения.
+				form(action="#", method="post").popup__form
+					.toggle-client-info.popup__scroll
+						h3.popup__subtitle Личные данные
+						.radio-block.client-order__who.content-data__who
+							label.control.control--radio
+								input(type='radio' name='profile-type' checked='checked', value="individual")
+								.control__indicator
+								span Физическое лицо
+							
+							label.control.control--radio
+								input(type='radio' name='profile-type', value="company")
+								.control__indicator
+								span Юридическое лицо
+
+						.popup__inputs
+							.popup__field
+								label.popup__label Имя*
+								input.popup__input(type="text", name="name", placeholder="Наталья", required)
+
+							.popup__field
+								label.popup__label Фамилия*
+								input.popup__input(type="text", name="surname", placeholder="Карандашова", required)
+
+						h3.popup__subtitle Контакты
+						.popup__inputs
+							.popup__field
+								label.popup__label Номер телефона
+								input.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+							
+							.popup__field
+								label.popup__label Почта*
+								input.popup__input(type="email", name="email", placeholder="E-mail", required)
+
+						._only-company
+							h3.popup__subtitle Сведения об организации
+							.popup__inputs
+
+								.popup__field
+									label.popup__label Наименование организации
+									input.popup__input(type="text", name="company", placeholder="ООО “ТоргДом”")
+								
+								.popup__field
+									label.popup__label ИНН*
+									input.popup__input(type="number", name="inn", placeholder="1234567890")
+								
+								.popup__field
+									label.popup__label КПП
+									input.popup__input(type="number", name="kpp", placeholder="1234567890")
+								
+								.popup__field
+									label.popup__label Регион
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите регион
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Москва") Москва
+												li.select__item(data-value="Московская область") Московская область
+												li.select__item(data-value="ЮФО") ЮФО
+												li.select__item(data-value="СЗФО") СЗФО
+												li.select__item(data-value="ЦФО") ЦФО
+
+								.popup__field
+									label.popup__label Район
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите район
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Центральный") Центральный
+												li.select__item(data-value="Южный") Южный
+
+								.popup__field
+									label.popup__label Город
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите регион
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Москва") Москва
+												li.select__item(data-value="Рязань") Рязань
+												li.select__item(data-value="Казань") Казань
+												li.select__item(data-value="Самара") Самара
+												li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+								
+								.popup__field
+									label.popup__label Улица
+									input.popup__input(type="text", name="street", placeholder="Улица")
+
+								.popup__field
+									label.popup__label Дом
+									input.popup__input(type="text", name="house", placeholder="Номер дома")
+
+								.popup__field
+									label.popup__label Номер квартиры/офиса
+									input.popup__input(type="text", name="flat", placeholder="Номер помещения")
+
+						h3.popup__subtitle Адрес доставки платежного профиля
+						.popup__inputs
+
+							.popup__field
+								label.popup__label Название адреса доставки
+								input.popup__input(type="text", name="place", placeholder="ООО “ТоргДом”")
+							
+							.popup__field
+								label.popup__label Индекс
+								input.popup__input(type="text", name="index", data-input="index" placeholder="__-__-__")
+							
+							.popup__field
+								label.popup__label Регион
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Московская область") Московская область
+											li.select__item(data-value="ЮФО") ЮФО
+											li.select__item(data-value="СЗФО") СЗФО
+											li.select__item(data-value="ЦФО") ЦФО
+
+							.popup__field
+								label.popup__label Район
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите район
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Центральный") Центральный
+											li.select__item(data-value="Южный") Южный
+
+							.popup__field
+								label.popup__label Город
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Рязань") Рязань
+											li.select__item(data-value="Казань") Казань
+											li.select__item(data-value="Самара") Самара
+											li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+							.popup__field
+								label.popup__label Улица
+								input.popup__input(type="text", name="street", placeholder="Улица")
+
+							.popup__field
+								label.popup__label Дом
+								input.popup__input(type="text", name="house", placeholder="Номер дома")
+
+							.popup__field
+								label.popup__label Номер квартиры/офиса
+								input.popup__input(type="text", name="flat", placeholder="Номер помещения")
+
+							.popup__field
+								label.popup__label Этаж
+								input.popup__input(type="text", name="stage", placeholder="Этаж")
+							
+							.popup__field
+								label.popup__label Доп. контакт для приемки груза
+								input.popup__input(type="tel", name="extra-number", placeholder="+7 (___) ___-__-__")
+
+					.popup__button-wrapper
+						button(type="submit").button.popup__button Сохранить платежный профиль
+						//- p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						//- 	a(href="#", target="_blank") политики конфиденциальности
+
+#edo.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title.mb32 Оставить заявку на ЭДО
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						textarea.popup__textarea(name="comments", placeholder="Комментарий к заявке")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Оставить заявку
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#private-club.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title.mb32 Вступить в клуб привилегий
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						textarea.popup__textarea(name="comments", placeholder="Комментарий к заявке")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Оставить заявку
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности

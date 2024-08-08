@@ -1,0 +1,102 @@
+section.account
+    .account__container 
+        - const accountInfoPage = true;
+        include ../_breadcrumbs
+
+        .account__body.body-pa
+            aside.body-pa__aside.aside-pa
+                .aside-pa__header 
+                    .aside-pa__avatar
+                        img(src="@img/account/avatar.png", alt="")
+                    .aside-pa__info 
+                        h3.aside-pa__name Наталья Карандашова
+                        .aside-pa__label в клубе
+                ul.aside-pa__list
+                    li.aside-pa__item
+                        a(href="./account-personal.html").aside-pa__link 
+                            include ../icons/_profile
+                            span Учетные данные
+
+                    li.aside-pa__item
+                        a(href="./account-orders.html").aside-pa__link 
+                            include ../icons/_order
+                            span Мои заказы
+
+                    li.aside-pa__item 
+                        a(href="./account-payments.html").aside-pa__link 
+                            include ../icons/_payment
+                            span Платежные профили
+
+                    li.aside-pa__item 
+                        a(href="./account-notifications.html").aside-pa__link 
+                            include ../icons/_bell
+                            span Настройка уведомлений
+
+                    li.aside-pa__item._active 
+                        a(href="/account-info.html").aside-pa__link 
+                            include ../icons/_file
+                            span Информация для клиента
+                .aside-pa__footer
+                    a(href="./logout")
+                        include ../icons/_logout
+                        span Выйти
+            
+            .body-pa__main.client-info
+                .client-info__header 
+                .client-info__body 
+                    ul.client-info__list 
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Политика конфиденциальности
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Положение об антикоррупционной политике в  Обществе с ограниченной ответственностью «Молекулаб» 
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Условия доставки
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Согласие на обработку персональных данных
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Клуб привилегий: Для бизнеса
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Клуб привилегий: Для частных лиц
+                                    span.doc-client__date 15.06.2023
+
+                        li.client-info__item.doc-client
+                            a(href="", download).doc-client__link
+                                .doc-client__icon 
+                                    include ../icons/_doc
+                                .doc-client__content 
+                                    h4.doc-client__title Электронный документооборот
+                                    span.doc-client__date 15.06.2023                                   

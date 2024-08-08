@@ -1,0 +1,38 @@
+section.policy
+    .vacancy__pattern
+    .policy__container
+        - const vacancyPage = true;
+        include ../_breadcrumbs
+
+        h1.vacancy__title Вакансии в компании
+        .vacancy__body
+            .vacancy__top.vacancy-top 
+                .vacancy-top__left
+                    .vacancy__block
+                        h3.vacancy__subtitle Кто мы?
+                        p.vacancy__text Присоединяйтесь к нашей команде профессионалов! Вакансии в компании Молекулаб предоставляют возможность работать в дружном и профессиональном коллективе, занимаясь оснащением лабораторий по направлениям ПЦР, ИФА, генетики и микробиологии.
+                    .vacancy__block
+                        h3.vacancy__subtitle Чем мы занимаемся?
+                        p.vacancy__text Мы специализируемся на поставках высококачественного лабораторного оборудования, расходных материалов, реактивов и мебели для лабораторий. Наша цель - предоставить клиентам широкий ассортимент товаров, необходимых для успешной работы в лабораторных условиях.
+                    a(href="/about.html").vacancy__link
+                        span О компании
+                        include ../icons/_arrow-link
+                .vacancy-top__right
+                    
+            .vacancy__bottom.vacancy-bottom
+                .vacancy-bottom__left
+                    .vacancy__block
+                        h3.vacancy__subtitle Вакансии
+                        p.vacancy__text Пока нет свободных вакансий, но если Вы хотите работать у нас, пришлите, пожалуйста, Ваше резюме на почту 
+                            a(href="mailto:info@moleculab.ru") info@moleculab.ru
+                   
+                .vacancy-bottom__right
+                    .vacancy-bottom__title Отдел кадров
+                    .vacancy-bottom__text Отправьте свое резюме на нашу электронную почту. Мы будем рады рассмотреть вашу кандидатуру и обсудить возможности сотрудничества. 
+                    .vacancy-bottom__social 
+                        .vacancy-bottom__contact
+                            include ../icons/_email 
+                            a(href="mailto:info@moleculab.ru")  info@moleculab.ru
+                        .vacancy-bottom__contact
+                            include ../icons/_phone 
+                            a(href="tel:+79181111203") +7 918 111-12-03

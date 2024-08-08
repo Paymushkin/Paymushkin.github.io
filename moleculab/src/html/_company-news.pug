@@ -1,0 +1,88 @@
+section.company-news
+    .company-news__pattern
+    .company-news__container 
+        - const companyNewsPage = true;
+        include _breadcrumbs
+        
+        h1.section-title.company-news__title
+            span.section-title__text Новости компании
+                span.section-title__counter (5)
+
+        .company-news__body
+        
+            form(action="", method="post", itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction").company-news__form
+                .company-news__filters.filters-news
+                    .filters-news__select.select
+                        .select__title.filters-news__title.open-select
+                            span.current-value(data-current="") Любой месяц
+                            svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                        .select__hidden-block.filters-news__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Любой месяц") Любой месяц
+                                li.select__item(data-value="Январь") Январь
+                                li.select__item(data-value="Февраль") Февраль
+                                li.select__item(data-value="Март") Март
+                                li.select__item(data-value="Апрель") Апрель
+                                li.select__item(data-value="Май") Май
+                                li.select__item(data-value="Июнь") Июнь
+                                li.select__item(data-value="Июль") Июль
+                                li.select__item(data-value="вгуст") Август
+                                li.select__item(data-value="Сентябрь") Сентябрь
+                                li.select__item(data-value="Октябрь") Октябрь
+                                li.select__item(data-value="Ноябрь") Ноябрь
+                                li.select__item(data-value="Декабрь") Декабрь
+
+                    .filters-news__select.select
+                        .select__title.filters-news__title.open-select
+                            span.current-value(data-current="") Любой год
+                            svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                        .select__hidden-block.filters-news__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Любой год") Любой год
+                                li.select__item(data-value="2022") 2022
+                                li.select__item(data-value="2023") 2023
+                                li.select__item(data-value="2024") 2024
+
+
+                button.button._transparent.favorites__button.company-news__button
+                    span Очистить список
+                    include icons/_close-small
+
+            .company-news__grid.grid-news
+                .grid-news__item 
+                    a(href="company-new.html").grid-news__link
+                        .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                        .grid-news__content
+                            .grid-news__title День российского студенчества
+                            .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                            .grid-news__date 30 октября 2023
+
+                .grid-news__item 
+                    a(href="company-new.html").grid-news__link
+                        .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                        .grid-news__content
+                            .grid-news__title День российского студенчества
+                            .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                            .grid-news__date 30 октября 2023
+
+                .grid-news__item 
+                    a(href="company-new.html").grid-news__link
+                        .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                        .grid-news__content
+                            .grid-news__title День российского студенчества
+                            .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                            .grid-news__date 30 октября 2023
+
+                .grid-news__item 
+                    a(href="company-new.html").grid-news__link
+                        .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                        .grid-news__content
+                            .grid-news__title День российского студенчества
+                            .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                            .grid-news__date 30 октября 2023
+
+            include _paggination

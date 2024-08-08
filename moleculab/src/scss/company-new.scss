@@ -1,0 +1,251 @@
+.company-new {
+    position: relative;
+    padding: 32px 0 80px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 56px;
+        background-color: #fff;
+        border-radius: 24px;
+
+        @media (max-width:$mobileSmall) {
+            padding-bottom: 24px;
+        }
+    }
+
+    &__top {
+        margin-bottom: 56px;
+        width: 100%;
+        max-height: 328px;
+        aspect-ratio: 1360 / 328;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 24px;
+        overflow: hidden;
+
+        @media (max-width:$tablet) {
+            min-height: 255px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            min-height: 209px;
+        }
+    }
+
+    &__header {
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    &__separator {
+        margin: 56px 0;
+        width: 100%;
+        height: 1px;
+        background-color: $borderColor-2;
+
+        @media (max-width:$mobile) {
+            margin: 40px 0;
+        }
+
+        @media (max-width:$mobileSmall) {
+            margin: 32px 0;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        gap: 32px;
+        width: 100%;
+        max-width: 900px;
+
+        @media (max-width:$mobileSmall) {
+            gap: 24px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-family: Manrope;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.1;
+
+        @media (max-width:$mobile) {
+            margin-bottom: 12px;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        @media (max-width:$mobileSmall) {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        color: $textColor;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
+    }
+
+    &__p {
+        color: $textColor;
+        font-size: 16px;
+        line-height: 1.4;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
+    }
+
+    &__image-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__image-text {
+        color: $textColor;
+        font-size: 14px;
+        line-height: 1.4;
+        opacity: 0.7;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__quote {}
+
+}
+
+.quote {
+    display: flex;
+    gap: 20px;
+    padding: 32px;
+    background-color: #F5F8FF;
+    border-radius: 12px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.4;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
+    }
+
+    &__author {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
+    }
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 900px;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+
+        @media (max-width:$mobileSmall) {
+            transform: scale(1.5);
+        }
+
+        svg {
+            transition: 0.3s ease transform;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+        span {
+            background: $gradient-1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+
+            @media (max-width:$mobileSmall) {
+                display: none;
+            }
+        }
+    }
+}
+
+.social-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    &__title {
+        padding-top: 12px;
+        color: #59606A;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__item {}
+
+    &__link {
+        display: flex;
+        padding: 8px;
+
+        svg path {
+            transition: 0.3s ease fill;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    fill: $highlightColor-2;
+                }
+            }
+        }
+    }
+}

@@ -77,12 +77,30 @@
 .product-gallery {
     display: flex;
     gap: 10px;
+    max-height: 484px;
 
     &__list {
+        flex: 0 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
+        padding-right: 5px;
+        max-height: 100%;
+        overflow: hidden auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #F3FFF2;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $borderColor-2;
+            cursor: grab;
+        }
 
         @media (max-width:$mobile) {
             display: none;
@@ -99,11 +117,16 @@
         &._current-slide {
             border-color: $borderColor-2;
         }
+
+        img {
+            width: 87px;
+            height: 87px;
+        }
     }
 
     &__main {
         flex: 1 1 auto;
-        max-width: calc(100% - 97px);
+        max-width: calc(100% - 120px);
         cursor: grab;
 
         @media (max-width:$mobile) {
@@ -130,7 +153,7 @@
 
         img {
             max-width: 100%;
-            max-width: 100%;
+            max-height: 444px;
         }
     }
 }
@@ -146,7 +169,7 @@
 
     &__title {
         color: $mainColor;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 1.2;
 
@@ -338,25 +361,55 @@
             font-size: 14px;
         }
 
-        p {
+        .text-description {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             margin-bottom: 16px;
-        }
+            max-height: 100%;
+            overflow: hidden;
 
-        &._less-text {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding-left: 20px;
 
-            p {
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-
-                @media (max-width:$mobileSmall) {
-                    -webkit-line-clamp: 12;
+                li {
+                    list-style: disc;
                 }
             }
         }
 
-        span {
+        &._less-text {
+
+            .text-description {
+                position: relative;
+                max-height: 200px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 70px;
+                    background: linear-gradient(0deg, #fff 0%, transparent 100%);
+                }
+            }
+
+            // display: -webkit-box;
+            // -webkit-line-clamp: 5;
+            // -webkit-box-orient: vertical;
+            // overflow: hidden;
+
+            @media (max-width:$mobileSmall) {
+                -webkit-line-clamp: 12;
+            }
+        }
+
+        #description-more-less {
             color: $highlightColor-2;
             font-weight: 500;
             cursor: pointer;

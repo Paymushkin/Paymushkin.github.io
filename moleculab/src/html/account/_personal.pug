@@ -47,7 +47,7 @@ section.account
                         h2.data-pa__title Учетные данные
                         p.data-pa__subtitle Здесь вы можете отредактировать информацию о себе и добавить новую.
                         h3.data-pa__subtitle-mob Личные данные
-                    .data-pa__main 
+                    form(action="", method="post").data-pa__main 
                         .data-pa__avatar(style="background-image:url(@img/account/avatar.png)")
                             .data-pa__input
                                 include ../icons/_camera
@@ -55,33 +55,19 @@ section.account
                         .data-pa__content.content-data 
                             .content-data__personal
                                 h3.content-data__title Личные данные
-
-                                form#client-type(action="", method="post").client-order__form.content-data__form
+                                .toggle-client-info.client-order__form.content-data__form
                                     .radio-block.client-order__who.content-data__who
                                         label.control.control--radio
-                                            input(type='radio' name='client-type' checked='checked' data-radio="individual")
+                                            input(type='radio' name='client-type' checked='checked', value="individual")
                                             .control__indicator
                                             span Физическое лицо
                                         
                                         label.control.control--radio
-                                            input(type='radio' name='client-type' data-radio="entity")
+                                            input(type='radio' name='client-type', value="company")
                                             .control__indicator
                                             span Юридическое лицо
 
-                                    .client-order__info.info-client._active(data-type="individual") 
-                                        .form-field.info-client__field
-                                            label.form-field__label(for="сlient-surname") Фамилия
-                                            input#client-surname.form-field__input(type="text", name="сlient-surname", placeholder="Мария")
-                                        
-                                        .form-field.info-client__field
-                                            label.form-field__label(for="сlient-name") Имя
-                                            input#client-name.form-field__input(type="text", name="сlient-name", placeholder="Иванова")
-
-                                        .form-field.info-client__field  
-                                            label.form-field__label(for="client-patronum") Отчество
-                                            input#client-patronum.form-field__input(type="text", name="client-patronum", placeholder="Ивановна")
-
-                                    .client-order__info.info-client(data-type="entity") 
+                                    .client-order__info.info-client(data-type="entity")
                                         .form-field.info-client__field
                                             label.form-field__label(for="company-сlient-surname") Фамилия
                                             input#company-client-surname.form-field__input(type="text", name="company-сlient-surname", placeholder="Мария")
@@ -94,15 +80,15 @@ section.account
                                             label.form-field__label(for="company-client-patronum") Отчество
                                             input#company-client-patronum.form-field__input(type="text", name="company-client-patronum", placeholder="Ивановна")
                                         
-                                        .form-field.info-client__field  
+                                        .form-field.info-client__field._only-company  
                                             label.form-field__label(for="company-name") Наименование организации
                                             input#company-name.form-field__input(type="text", name="company-name", require, placeholder="ООО “MolecuLab”")
 
-                                        .form-field.info-client__field  
+                                        .form-field.info-client__field._only-company 
                                             label.form-field__label(for="company-inn") ИНН
                                             input#company-inn.form-field__input(type="number", name="company-inn", require, placeholder="1234567890")
 
-                                        .form-field.info-client__field  
+                                        .form-field.info-client__field._only-company  
                                             label.form-field__label(for="company-kpp") КПП*
                                             input#company-kpp.form-field__input(type="number", name="company-kpp", require, placeholder="123456789")
 
@@ -116,7 +102,7 @@ section.account
 
                             .content-data__contacts
                                 h3.content-data__title Контакты
-                                form(action="", method="post").content-data__form
+                                .content-data__form
                                     .form-field.info-client__field
                                         label.form-field__label(for="contact-number") Номер телефона
                                         input#contact-number.popup__input(type="tel", name="contact-number", placeholder="+7 (___)___-__-__")
@@ -129,7 +115,7 @@ section.account
                                         label.form-field__label(for="contact-email") Почта
                                         input#contact-email.popup__input(type="email", name="contact-email", placeholder="Email")
 
-                            button.button.content-data__button Сохранить изменения
+                            button.button.content-data__button(type="submit") Сохранить изменения
 
                 .body-pa__footer 
                     .body-pa__question.question-pa 

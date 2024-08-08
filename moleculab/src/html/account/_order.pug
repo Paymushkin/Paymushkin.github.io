@@ -44,7 +44,7 @@ section.account
             .body-pa__main.order-block
                 .order-block__header.header-order
                     .header-order__left
-                        h3.header-order__title Заказ № 1584068240
+                        h2.header-order__title Заказ № 1584068240
                         .header-order__text Не оплачен. В доставке.
                         a(href="").button.header-order__button Оплатить
                     .header-order__right
@@ -57,6 +57,8 @@ section.account
                             .status-order__left
                                 .status-order__icon 
                                     include ../icons/_pending
+                                //- .status-order__icon 
+                                //-     include ../icons/_check
                                 span Доставлен
                             .status-order__right 
                                 span Показать подробный статус
@@ -76,10 +78,6 @@ section.account
                                     span.tracking-status__text Оформлен, г. Пущино, мкр Д, д. 20а, помещение 1Б
                                     span.tracking-status__date 29 апреля 23:12
                             
-                        
-                            
-
-
                 .order-block__products.products-order
 
                     ul.products-order__list
@@ -93,6 +91,9 @@ section.account
                                         h4.product-order__title(itemprop="brand") Senova BS-3031
                                         p.product-order__text(itemprop="description") Гель-документирующая система ChemiScope Гель-документирующая система ChemiScope Гель-документирующая система ChemiScope
                                     .product-order__count 1шт.
+                                .product-order__mob-prices
+                                    .product-order__mob-price 234 567 ₽
+                                    .product-order__mob-price-old 100 334 ₽
                                 .product-order__actions
                                     .product-order__action(data-popup="refund-request") Подать заявку на возврат
                                     .product-order__action(data-popup="raiting") Оценить товар
@@ -109,13 +110,15 @@ section.account
                                         h4.product-order__title(itemprop="brand") Senova BS-3031
                                         p.product-order__text(itemprop="description") Гель-документирующая система ChemiScope
                                     .product-order__count 1шт.
+                                .product-order__mob-prices
+                                    .product-order__mob-price 234 567 ₽
+                                    .product-order__mob-price-old 100 334 ₽
                                 .product-order__actions
                                     .product-order__action(data-popup="refund-request") Подать заявку на возврат
                                     .product-order__action(data-popup="raiting") Оценить товар
                             .product-order__prices
                                 .product-order__price 234 567 ₽
                                 .product-order__price-old 100 334 ₽
-
 
                 .order-block__footer.footer-order
                     .footer-order__info.info-order

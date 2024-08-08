@@ -511,13 +511,29 @@ if (addToCartBtn) {
 
 const toDetails = document.getElementById('to-details')
 
+// if (toDetails) {
+//     toDetails.addEventListener('click', function () {
+//         document.querySelector('#details').scrollIntoView({
+//             top: document.querySelector(".scroll-header").offsetHeight,
+//             behavior: 'smooth'
+//         });
+//     });
+// }
+
 if (toDetails) {
     toDetails.addEventListener('click', function () {
-        document.querySelector('#details').scrollIntoView({
+        const detailsSection = document.querySelector('#details');
+        const headerOffset = document.querySelector('.scroll-header').offsetHeight; // Высота шапки
+        const elementPosition = detailsSection.getBoundingClientRect().top + window.scrollY; // Позиция элемента относительно документа
+        const offsetPosition = elementPosition - headerOffset; // Учитываем высоту шапки
+
+        window.scrollTo({
+            top: offsetPosition,
             behavior: 'smooth'
         });
     });
 }
+
 
 // работа с мобильным каталогом
 
@@ -643,9 +659,25 @@ const headerCartIcon = document.getElementById("showHideHeaderCart")
 const headerCart = document.getElementById("header-cart")
 
 if (headerCartIcon) {
-    headerCartIcon.addEventListener("click", () => {
+    headerCart.addEventListener("click", function (event) {
+        event.stopPropagation()
+    })
+    headerCart.querySelector(".header-cart__wrapper").addEventListener("click", () => {
+        headerCartIcon.classList.remove("_show-cart")
+    })
+    headerCartIcon.addEventListener("click", function (event) {
+        event.stopPropagation()
         headerCartIcon.classList.toggle("_show-cart")
     })
+
+}
+
+headerCartIcon.onfocus = function () {
+    console.log("в фокусе")
+}
+
+headerCartIcon.onblur = function () {
+    console.log("не в фокусе")
 }
 
 // работа с табами в оформление заказа
@@ -709,6 +741,28 @@ if (clientType) {
 
             clientType.querySelector(`.info-client[data-type="${bntID}"]`).classList.add("_active")
         })
+    });
+}
+
+const clientInfoBlocks = document.querySelectorAll(".toggle-client-info") || null
+
+if (clientInfoBlocks.length) {
+
+    clientInfoBlocks.forEach(block => {
+
+        const radioBtns = block.querySelectorAll("input[type='radio']")
+
+        radioBtns.forEach(btn => {
+            btn.addEventListener("change", () => {
+
+                block.classList.remove("individual", "company")
+
+                if (btn.checked) {
+                    block.classList.add(btn.value);
+                }
+                console.log(btn.value)
+            })
+        });
     });
 }
 
@@ -942,11 +996,6 @@ if (comparissonSection) {
     }
 }
 
-
-// const numberOfPoints = document.querySelectorAll("div[data-tabs-body='1'] .comparisson-block__item") || null
-// console.log(numberOfPoints)
-
-
 function setSizeForPoints() {
     const numberOfPointsOfBlock = document.querySelector("._content-active div[data-tabs-info]._content-active") || null
 
@@ -1026,10 +1075,21 @@ function setSizeForPoints() {
 
 const phoneInputs = document.querySelectorAll("input[type='tel']") || null
 
+const indexInputs = document.querySelectorAll("input[data-input='index']") || null
+
+console.log(indexInputs)
+
 if (phoneInputs.length) {
 
     phoneInputs.forEach(input => {
-        Inputmask({ mask: "+7 (999) 999-9999" }).mask(input);
+        Inputmask({ mask: "+7 (999) 999-99-99" }).mask(input);
+    });
+}
+
+if (indexInputs.length) {
+
+    indexInputs.forEach(input => {
+        Inputmask({ mask: "99-99-99" }).mask(input);
     });
 }
 
@@ -1059,6 +1119,52 @@ if (orderTabsContainer) {
             })
         });
     }
+}
+
+const paymentsBlock = document.getElementById("payments-block") || null
+
+if (paymentsBlock) {
+
+    let paymentsOptions = paymentsBlock.querySelectorAll(".item-payment__button") || null
+
+    if (paymentsOptions.length) {
+
+        paymentsOptions.forEach(option => {
+            option.addEventListener("click", () => {
+                option.classList.toggle("_active")
+                option.querySelector(".options-payment__close").addEventListener("click", (event) => {
+                    event.stopPropagation()
+                    option.classList.remove("_active")
+                    document.documentElement.classList.remove("_filter-active")
+                })
+                if ((Math.min(screen.width, window.innerWidth)) <= 576) {
+                    document.documentElement.classList.toggle("_filter-active")
+                }
+            })
+        });
+    }
+}
+
+// скролл до нужного блока
+
+const scrollToBlocks = document.querySelectorAll("[data-to-block]") || null
+
+if (scrollToBlocks.length) {
+
+    scrollToBlocks.forEach(scrollToBlock => {
+        const scrollBlockID = scrollToBlock.getAttribute("data-to-block")
+        const targetBlock = document.getElementById(`${scrollBlockID}`)
+        const headerOffset = document.querySelector('.scroll-header').offsetHeight;
+        const elementPosition = targetBlock.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        scrollToBlock.addEventListener('click', function () {
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
 // const callMePopup = document.getElementById('call-me') || null;
@@ -1114,10 +1220,6 @@ popups.forEach(popup => {
         inputCode.addEventListener('input', toggleButtonState);
     }
 
-    // if (inputEmail) {
-    //     inputEmail.addEventListener('input', toggleButtonState);
-    // }
-
     function toggleButtonState() {
 
         if (inputCode) {
@@ -1134,8 +1236,6 @@ popups.forEach(popup => {
             }
         }
     }
-
-    // console.log(inputName, inputEmail, inputPhone)
 });
 
 // const requestPopup = document.getElementById('request') || null;

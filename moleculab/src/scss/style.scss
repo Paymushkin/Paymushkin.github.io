@@ -115,6 +115,7 @@ body {
 
     // Скролл заблокирован
     ._lock & {
+        display: flex;
         overflow: hidden;
         touch-action: none;
         padding-right: 0 !important;
@@ -243,6 +244,7 @@ body {
 @import "base/popup";
 @import "base/tabs";
 @import "base/raiting";
+@import "base/forms/toggle";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -274,6 +276,10 @@ body {
 @import "search";
 @import "comparisson";
 @import "account-personal";
+@import "error";
+@import "documents";
+@import "company-news";
+@import "company-new";
 
 @import "footer";
 

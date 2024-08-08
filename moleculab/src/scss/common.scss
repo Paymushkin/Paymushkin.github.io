@@ -104,6 +104,14 @@ details {
     margin-bottom: 32px;
 }
 
+.mw-800 {
+    max-width: 800px;
+}
+
+._highlight-text {
+    color: $highlightColor-2;
+}
+
 [class*="__container"] {
     @media (max-width:$mobileSmall) {
         padding: 0 15px;
@@ -430,7 +438,7 @@ details {
         box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
         transform: scaleY(0);
         transition: 0.3s ease transform;
-        z-index: 2;
+        z-index: 3;
 
         ._open-select & {
             transform: scaleY(1);
@@ -705,6 +713,8 @@ details {
     }
 
     &__title {
+        color: #545454;
+
         @media (max-width:$tablet) {
             padding: 10px;
             font-size: 16px;
@@ -832,6 +842,13 @@ details {
                 text-overflow: ellipsis;
                 word-break: break-all;
                 line-height: 1.7;
+                transition: 0.3s ease all;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        -webkit-line-clamp: unset;
+                    }
+                }
 
                 @media (max-width:$mobile) {
                     max-width: 100%;
@@ -854,7 +871,7 @@ details {
     }
 
     &__link {
-        color: $textColor;
+        color: $mainColor;
         font-size: 14px;
         line-height: 1.4;
         transition: 0.3s ease color;

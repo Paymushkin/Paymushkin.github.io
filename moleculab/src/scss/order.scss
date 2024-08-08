@@ -56,17 +56,21 @@
 }
 
 .info-client {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 
-    &._active {
-        display: flex;
-    }
-
     &__field {
         flex: 0 0 calc(50% - 10px);
+
+        &._only-company {
+            display: none;
+
+            .company & {
+                display: flex;
+            }
+        }
 
         @media (max-width: em(1200)) {
             flex: 0 0 100%;

@@ -1,0 +1,100 @@
+section.account
+    .account__container 
+        - const accountPaymentsPage = true;
+        include ../_breadcrumbs
+
+        .account__body.body-pa
+            aside.body-pa__aside.aside-pa
+                .aside-pa__header 
+                    .aside-pa__avatar
+                        img(src="@img/account/avatar.png", alt="")
+                    .aside-pa__info 
+                        h3.aside-pa__name Наталья Карандашова
+                        .aside-pa__label в клубе
+                ul.aside-pa__list
+                    li.aside-pa__item
+                        a(href="./account-personal.html").aside-pa__link 
+                            include ../icons/_profile
+                            span Учетные данные
+
+                    li.aside-pa__item._active 
+                        a(href="./account-orders.html").aside-pa__link 
+                            include ../icons/_order
+                            span Мои заказы
+
+                    li.aside-pa__item 
+                        a(href="./account-payments.html").aside-pa__link 
+                            include ../icons/_payment
+                            span Платежные профили
+
+                    li.aside-pa__item 
+                        a(href="./account-notifications.html").aside-pa__link 
+                            include ../icons/_bell
+                            span Настройка уведомлений
+
+                    li.aside-pa__item 
+                        a(href="/account-info.html").aside-pa__link 
+                            include ../icons/_file
+                            span Информация для клиента
+                .aside-pa__footer
+                    a(href="./logout")
+                        include ../icons/_logout
+                        span Выйти
+            
+            #payments-block.body-pa__main.payments-block
+                h2.payments-block__title Платежные профили
+                ul.payments-block__list 
+                   
+                    li.payments-block__item.item-payment
+                        .item-payment__avatar
+                            img(src="@img/account/avatar.png", alt="")
+                        .item-payment__info 
+                            h3.item-payment__name Наталья Карандашова
+                            p.item-payment__mail n.karanddash111@gmail.com
+                        .item-payment__button
+                            include ../icons/_options
+                            .options-payment
+                                h3.options-payment__title 
+                                    span Действия с профилем
+                                    .options-payment__close
+                                        include ../icons/_close
+                                ul.options-payment__list
+                                    li.options-payment__item
+                                        a(href="/logout").options-payment__link
+                                            include ../icons/_logout
+                                            span Выйти из профиля  
+                                    li.options-payment__item
+                                        .options-payment__link
+                                            include ../icons/_delete-profile
+                                            span Выйти и удалить из списка 
+
+                    
+                    li.payments-block__item.item-payment
+                        .item-payment__avatar
+                            img(src="@img/account/avatar.png", alt="")
+                        .item-payment__info 
+                            h3.item-payment__name Оля Шпунькина
+                            p.item-payment__mail shpunya@gmail.com
+                        .item-payment__button
+                            include ../icons/_options
+                            .options-payment
+                                h3.options-payment__title 
+                                    span Действия с профилем
+                                    .options-payment__close
+                                        include ../icons/_close
+                                ul.options-payment__list
+                                    li.options-payment__item
+                                        a(href="/logout").options-payment__link
+                                            include ../icons/_logout
+                                            span Выйти из профиля  
+                                    li.options-payment__item
+                                        .options-payment__link
+                                            include ../icons/_delete-profile
+                                            span Выйти и удалить из списка 
+
+                    li.payments-block__item.item-payment.item-payment-add(data-popup="add-profile")
+                        .item-payment__add 
+                            svg(xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewbox='0 0 46 46' fill='none')
+                                path(d='M31.1304 22.9987H14.867M22.9987 14.867V31.1304M36.5516 36.5516C29.0665 44.0366 16.9309 44.0366 9.44582 36.5516C1.96077 29.0665 1.96077 16.9309 9.44582 9.44582C16.9309 1.96077 29.0665 1.96077 36.5516 9.44582C44.0366 16.9309 44.0366 29.0665 36.5516 36.5516Z' stroke='#545454' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        .item-payment__info 
+                            h3.item-payment__name Добавить новый платёжный профиль
