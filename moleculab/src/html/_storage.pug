@@ -1,0 +1,41 @@
+section.storage
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .storage__container 
+        - const storagePage = true;
+        include _breadcrumbs
+
+        h2.section-title.storage__title Склад магазина MolecuLab
+        .storage__body 
+            .storage__grid.grid-storage 
+                .grid-storage__item.grid-storage__address
+                    h4.grid-storage__title Адрес склада в Москве:
+                    address.grid-storage__text 142290, Московская обл, г.о. Пущино, г Пущино, мкр. Г, павильон 1
+                .grid-storage__item.grid-storage__phone
+                    h4.grid-storage__title Номер телефона:
+                    a(href="tel:+79182384545").grid-storage__link 8(918)238 45 45
+                .grid-storage__item.grid-storage__timing
+                    h4.grid-storage__title Часы работы:
+                    p.grid-storage__text Пн-Пт. с 9.00 до 17.00
+                .grid-storage__item.grid-storage__route
+                    h4.grid-storage__title Схема проезда:
+                    a(href="").grid-storage__link._highlight Схема проезда и прохода на склад MolecuLab
+
+            .storage__map.map-storage__wrapper
+                #map.map.map-storage
+                a(href="#").button.map-storage__route Проложить маршрут
+        
+        .storage__bottom.bottom-storage
+            .bottom-storage__left
+                h3.bottom-storage__title Условия забора груза
+                p.bottom-storage__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad laborum quisquam nulla placeat numquam, facilis rem. Illo vero quaerat unde magni sint autem quibusdam omnis beatae, blanditiis ea minus!
+                a(href="#").button Товары в наличии на складе
+            .bottom-storage__right
+                h3.bottom-storage__title._light Складские остатки
+                p.bottom-storage__text._light Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum reprehenderit iure veniam consequuntur est quibusdam quis officiis recusandae consectetur doloribus autem doloremque, saepe, vitae quae exercitationem repudiandae, nostrum fuga quasi!
+                a(href="#").button.bottom-storage__button._smaller._light 
+                    span Перейти к товарам 
+
+

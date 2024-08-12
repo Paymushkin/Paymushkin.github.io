@@ -1,0 +1,125 @@
+.partners-page {
+    position: relative;
+    padding: 32px 0 80px;
+
+    &__title {}
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-width:$mobileSmall) {
+            gap: 16px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media (max-width:$tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__button {
+        width: 100%;
+
+        @media (min-width:$tablet) {
+            display: none;
+        }
+    }
+
+}
+
+.item-partner {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .item-partner__img {
+                background: $gradient-1;
+            }
+
+            svg {
+                stop {
+                    stop-color: #fff;
+                }
+            }
+
+            .item-partner__more {
+                color: $highlightColor-2;
+
+                svg {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__img {
+        flex: 1 1 auto;
+        display: flex;
+        place-items: center;
+        min-width: percent(210, 606);
+        max-height: 132px;
+        // width: 210px;
+        // height: 132px;
+        aspect-ratio: 210 / 132;
+        border-radius: 8px;
+        transition: 0.3s ease background;
+
+        svg {
+            width: 100%;
+            transition: 0.3s ease all;
+        }
+
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &__text {
+        margin-bottom: auto;
+        color: $textColor;
+        font-size: 16px;
+        line-height: 1.4;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        span {
+            transition: 0.3s ease color;
+        }
+
+        svg {
+            transform: scaleX(0);
+            transition: 0.3s ease transform;
+        }
+    }
+}

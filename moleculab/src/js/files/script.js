@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // переключение табов 
 
-let goodsTags = document.querySelectorAll("#goods .tag-item") || null
+let goodsTags = document.querySelectorAll(".tags-goods .tag-item") || null
 
 if (goodsTags.length) {
     goodsTags.forEach(tag => {
@@ -1164,6 +1164,33 @@ if (scrollToBlocks.length) {
                 behavior: 'smooth'
             });
         });
+    });
+}
+
+// показать больше  ивентов на странице мероприятий
+
+const moreEventsBtns = document.querySelectorAll(".grid-events__more") || null
+
+if (moreEventsBtns.length) {
+    moreEventsBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            btn.closest(".grid-events__item").classList.toggle("_short-list")
+        })
+    });
+}
+
+const companyEvents = document.querySelectorAll(".grid-events__item") || null
+
+if (companyEvents.length) {
+    companyEvents.forEach(el => {
+
+        const eventCount = el.querySelectorAll(".grid-events__event") || null
+
+        console.log(eventCount.length)
+
+        if (eventCount.length < 2) {
+            el.querySelector(".grid-events__more").style.display = "none"
+        }
     });
 }
 

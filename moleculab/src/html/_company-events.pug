@@ -1,0 +1,177 @@
+section.company-events
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .company-events__container 
+        - const companyEventsPage = true;
+        include _breadcrumbs
+        
+        h1.section-title.company-events__title
+            span.section-title__text Мероприятия
+                span.section-title__counter (5)
+
+        .company-news__body
+        
+            form(action="", method="post", itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction").company-events__form
+                #tags-wrapper.goods__tags.tags-goods.company-events__tags 
+                    ul.tags-goods__list
+                        li.tags-goods__item.tag-item._active(data-tag="Все")
+                            span.tag-item__text Все
+                        li.tags-goods__item.tag-item(data-tag="Аккаунт-дни")
+                            span.tag-item__text Аккаунт-дни
+                        li.tags-goods__item.tag-item(data-tag="Выставка")
+                            span.tag-item__text Выставка
+                        li.tags-goods__item.tag-item(data-tag="Конференции")
+                            span.tag-item__text Конференции
+                
+                .company-events__filters.filters-news.filters-events
+
+                    .filters-news__select.select._only-mobile
+                        .select__title.filters-news__title.open-select
+                            span.current-value(data-current="") Любой тип
+                            svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                        .select__hidden-block.filters-news__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Любой тип") Любой тип
+                                li.select__item(data-value="Аккаунт-дни") Аккаунт-дни
+                                li.select__item(data-value="Выставка") Выставка
+                                li.select__item(data-value="Конференции") Конференции
+
+                    .filters-news__select.select
+                        .select__title.filters-news__title.open-select
+                            span.current-value(data-current="") Любой месяц
+                            svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                        .select__hidden-block.filters-news__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Любой месяц") Любой месяц
+                                li.select__item(data-value="Январь") Январь
+                                li.select__item(data-value="Февраль") Февраль
+                                li.select__item(data-value="Март") Март
+                                li.select__item(data-value="Апрель") Апрель
+                                li.select__item(data-value="Май") Май
+                                li.select__item(data-value="Июнь") Июнь
+                                li.select__item(data-value="Июль") Июль
+                                li.select__item(data-value="вгуст") Август
+                                li.select__item(data-value="Сентябрь") Сентябрь
+                                li.select__item(data-value="Октябрь") Октябрь
+                                li.select__item(data-value="Ноябрь") Ноябрь
+                                li.select__item(data-value="Декабрь") Декабрь
+
+                    .filters-news__select.select
+                        .select__title.filters-news__title.open-select
+                            span.current-value(data-current="") Любой год
+                            svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                        .select__hidden-block.filters-news__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Любой год") Любой год
+                                li.select__item(data-value="2022") 2022
+                                li.select__item(data-value="2023") 2023
+                                li.select__item(data-value="2024") 2024
+
+                button.button._transparent.favorites__button.company-events__button
+                    span Очистить список
+                    include icons/_close-small
+
+            .company-events__grid.grid-events
+                .grid-events__item._short-list 
+                    .grid-events__body
+                        .grid-events__dates 4-12 января
+
+                        .grid-events__events
+
+                            a(href="./company-event.html").grid-events__event
+                                .grid-events__type 
+                                    .grid-events__name Выставка
+                                    .grid-events__dot 
+                                    .grid-events__date(itemprop="startDate") 25 января
+                                h3.grid-events__title(itemprop="name") День российского студенчества
+                                p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником!
+
+                            //- a(href="./company-event.html").grid-events__event
+                            //-     .grid-events__type 
+                            //-         .grid-events__name._gradient Аккаунт-дни
+                            //-         .grid-events__dot._gradient 
+                            //-         .grid-events__date(itemprop="startDate") 25 января
+                            //-     h3.grid-events__title(itemprop="name") День российского студенчества
+                            //-     p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником! 
+
+
+                        .grid-events__more
+                            span Показать еще
+                            span Показать меньше
+
+                        .grid-events__footer(itemprop="location" itemscope="" itemtype="http://schema.org/Place")
+                            .grid-events__city Санкт-Петербург
+                            .grid-events__address Суворовский пр. 18, Отель «Эмеральд»
+
+                .grid-events__item._short-list 
+                    .grid-events__body
+                        .grid-events__dates 12-25 января
+
+                        .grid-events__events
+
+                            a(href="./company-event.html").grid-events__event
+                                .grid-events__type 
+                                    .grid-events__name Выставка
+                                    .grid-events__dot 
+                                    .grid-events__date(itemprop="startDate") 25 января
+                                h3.grid-events__title(itemprop="name") День российского студенчества
+                                p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником!
+                                img(src="@img/company-events/item-1.png", alt="").grid-events__img
+
+                            a(href="./company-event.html").grid-events__event
+                                .grid-events__type 
+                                    .grid-events__name._gradient Аккаунт-дни
+                                    .grid-events__dot._gradient 
+                                    .grid-events__date(itemprop="startDate") 25 января
+                                h3.grid-events__title(itemprop="name") День российского студенчества
+                                p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником! 
+
+                        .grid-events__more
+                            span Показать еще
+                            span Показать меньше
+
+                        .grid-events__footer(itemprop="location" itemscope="" itemtype="http://schema.org/Place")
+                            .grid-events__city Санкт-Петербург
+                            .grid-events__address Суворовский пр. 18, Отель «Эмеральд»
+
+                .grid-events__item._short-list 
+                    .grid-events__body
+                        .grid-events__dates 25-30 января
+                        
+                        .grid-events__events
+
+                            a(href="./company-event.html").grid-events__event
+                                .grid-events__type 
+                                    .grid-events__name Выставка
+                                    .grid-events__dot 
+                                    .grid-events__date(itemprop="startDate") 25 января
+                                h3.grid-events__title(itemprop="name") День российского студенчества
+                                p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником!
+                                img(src="@img/company-events/item-1.png", alt="").grid-events__img
+
+                            a(href="./company-event.html").grid-events__event
+                                .grid-events__type 
+                                    .grid-events__name._gradient Аккаунт-дни
+                                    .grid-events__dot._gradient 
+                                    .grid-events__date(itemprop="startDate") 25 января
+                                h3.grid-events__title(itemprop="name") День российского студенчества
+                                p.grid-events__text(itemprop="description") Поздравляем всех студентов с праздником! 
+                                img(src="@img/company-events/item-2.png", alt="").grid-events__img
+
+                        .grid-events__more
+                            span Показать еще
+                            span Показать меньше
+
+                        .grid-events__footer(itemprop="location" itemscope="" itemtype="http://schema.org/Place")
+                            .grid-events__city Санкт-Петербург
+                            .grid-events__address Суворовский пр. 18, Отель «Эмеральд»
+
+            include _paggination

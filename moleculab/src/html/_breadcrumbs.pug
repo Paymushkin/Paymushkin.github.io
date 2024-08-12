@@ -259,6 +259,55 @@ else if companyNewPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link 2 в 1: рентген-аппарат и флюорограф
 
+else if companyEventsPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Мероприятия
+
+else if companyEventPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Мероприятия
+            li.breadcrumbs__item 
+                .breadcrumbs__link «Истина микромира и истина диагностики»
+
+else if storagePage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Склад
+
+else if partnersPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Партнеры
+
+else if partnerPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Accumax
+
 else
 
     .breadcrumbs.catalog__breadcrumbs

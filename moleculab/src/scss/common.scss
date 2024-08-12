@@ -3,7 +3,6 @@ h2,
 h3,
 h4,
 p,
-span,
 small,
 button,
 a,
@@ -30,6 +29,10 @@ ul {
 
 picture {
     font-size: 0;
+}
+
+address {
+    font-style: normal;
 }
 
 input {
@@ -405,6 +408,13 @@ details {
 }
 
 .select {
+
+    &._only-mobile {
+
+        @media (min-width:$tablet) {
+            display: none;
+        }
+    }
 
     &__title {
         display: flex;
@@ -1139,4 +1149,8 @@ details {
             outline-color: $highlightColor-2;
         }
     }
+}
+
+[class*="ymaps-2-1"] [class*="-ground-pane"] {
+    filter: grayscale(1);
 }

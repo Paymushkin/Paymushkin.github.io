@@ -1,0 +1,69 @@
+section.company-event
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .company-event__container 
+        - const companyEventPage = true;
+        include _breadcrumbs
+
+        .company-event__wrapper
+
+            //- .company-new__top(style="background-image:url('@img/company-new/image.png')")
+            
+            .company-event__header
+                h1.company-event__title «Истина микромира и истина диагностики»
+                .company-event__about 
+                    .company-event__dates
+                        .company-event__type Выставка
+                        .company-event__dot
+                        .company-event__date 4 января
+                    p.company-event__address г. Москва, ул. Москворечье, д. 1, ФГБНУ «МГНЦ»
+
+            
+            .company-event__separator
+
+            .company-event__body
+                p.company-event__p В марте 2024 года Компания Хеликон проведёт цикл семинаров на базе ФГБУН «Медико-генетический научный центр имени академика Н. П. Бочкова».
+
+                .company-event__image-wrapper
+                    img(src="@img/company-new/photo-1.png", alt="").company-new__image
+                    p.company-new__image-text Описание к фотографии если тут что то надо будет написать
+
+                .company-event__block  
+                    p.company-event__p 
+                        | 13 марта (среда) с 14:00 до 16:00 пройдёт второй семинар «Клеточная биология – современные решения и новые подходы», в рамках которого выступят специалисты направления «Клеточная биология» :
+
+                    ul.company-event__list 
+                        li.company-event__item Ольга Шикшина, менеджер группы.
+                        li.company-event__item Евгений Ладанов, ведущий специалист по продукции (микроскопия).
+                        li.company-event__item Артём Мельников, специалист по продукции (гистология).
+
+                p.company-new__p В рамках выставочной части мероприятия специалисты Компании Хеликон проведут комплексные консультации по вопросам оснащения клинико-диагностических лабораторий и ответят на вопросы.
+
+            .company-event__separator
+
+            .company-event__bottom.bottom-nav 
+                a(href="").bottom-nav__link
+                    include icons/_arrow-prev
+                    span Предыдущая
+                    
+                .bottom-nav__social.social-block
+                    h4.social-block__title Поделиться
+                    ul.social-block__list
+                        li.social-block__item 
+                            a(href="").social-block__link
+                                include icons/_wa 
+                        li.social-block__item 
+                            a(href="").social-block__link 
+                                include icons/_telegram
+                        li.social-block__item 
+                            a(href="").social-block__link 
+                                include icons/_vk
+                        li.social-block__item 
+                            a(href="").social-block__link 
+                                include icons/_youtube
+
+                a(href="").bottom-nav__link
+                    span Следующая
+                    include icons/_arrow-next
