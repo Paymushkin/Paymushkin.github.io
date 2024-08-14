@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="ru")
+    include html/_head
+    body
+        .wrapper
+            include html/_header
+            main.main
+                include html/_company-contacts
+            include html/_footer
+            include html/_menu
+            include html/_mobile-catalog
+            include html/_popup
+
+        script(src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js")
+        script(src='https://api-maps.yandex.ru/2.1/?apikey=a0d18d5f-ffdb-41e5-8cc5-86e70d7636e0&lang=ru_RU')
+        script(src="js/app.min.js")
+        script.
+            // яндекс карты
+            let center = [55.76, 37.64];
+            function init() {
+            let mapRoute = new ymaps.Map('map', {
+            center: center,
+            zoom: 10
+            });
+            // 1. Метка с точкой.
+            var myPlacemark1 = new ymaps.Placemark([55.85, 37.45], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/point.png",
+            iconImageSize: [35, 48],
+            iconImageOffset: [-15, -44]
+            });
+            mapRoute.geoObjects.add(myPlacemark1);
+            // map.controls.remove('geolocationControl'); // удаляем геолокацию
+            mapRoute.controls.remove('searchControl'); // удаляем поиск
+            mapRoute.controls.remove('trafficControl'); // удаляем контроль трафика
+            mapRoute.controls.remove('typeSelector'); // удаляем тип
+            // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+            mapRoute.controls.remove('zoomControl'); // удаляем контрол зуммирования
+            mapRoute.controls.remove('rulerControl'); // удаляем контрол правил
+            // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+            }
+            ymaps.ready(init);

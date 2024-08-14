@@ -212,6 +212,17 @@
     }
 }
 
+.others-events {
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+}
+
 .body-events {
     position: relative;
     display: grid;
@@ -287,6 +298,55 @@
 
         @media (min-width:$mobileSmall) {
             display: none;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media (max-width:$mobile) {
+            display: none;
+        }
+
+        &>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $highlightColor-2;
+            border-radius: 50%;
+            transition: 0.3s ease background-color;
+            cursor: pointer;
+
+            &.swiper-button-disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            path {
+                stroke: 0.3s ease stroke;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $highlightColor-2;
+
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
+        .prev {
+            transform: rotate(90deg);
+        }
+
+        .next {
+            transform: rotate(-90deg);
         }
     }
 }

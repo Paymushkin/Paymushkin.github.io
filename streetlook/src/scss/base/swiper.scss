@@ -71,7 +71,8 @@
 	cursor: pointer;
 
 	@media (max-width:$mobileSmall) {
-		left: rem(25);
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	&-bullet {

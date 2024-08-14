@@ -1,0 +1,52 @@
+section.company-contacts
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .company-contacts__container 
+        - const contactsPage = true;
+        include _breadcrumbs
+
+        h1.section-title.company-contacts__title Контакты
+
+        .company-contacts__body
+            .company-contacts__requisites.requisites
+                .requisites__img
+                p.requisites__info
+                    | Общество с ограниченной<br> ответственностью: ООО «Молекулаб»<br>
+                    | ИНН 5043084212<br>
+                    | КПП 504301001<br>
+                    | Кор. счет: 30101810400000000225<br>
+                    | БИК: 044525225<br>
+                    | Расчетный счет: 40702810740000103565<br>
+
+            .company-contacts__grid.grid-requisites 
+                .grid-requisites__item.grid-requisites__phone
+                    h4.grid-requisites__title Номер телефона:
+                    a(href="tel:+79182384545").grid-requisites__link 8(918)238 45 45
+                .grid-requisites__item.grid-requisites__timing
+                    h4.grid-requisites__title E-mail:
+                    a(href="mailto:molecuLab@mail.com").grid-requisites__link molecuLab@mail.com
+                .grid-requisites__item.grid-requisites__address
+                    h4.grid-requisites__title Адрес склада в Москве:
+                    address.grid-requisites__text 142290, Московская обл, г.о. Пущино, г Пущино, мкр. Г, павильон 1
+                .grid-requisites__item.grid-requisites__route
+                    h4.grid-requisites__title Социальные сети:
+                    ul.grid-requisites__contacts
+                        li.grid-requisites__contact 
+                            a(href="#").grid-requisites__icon
+                                include icons/_wa
+                        li.grid-requisites__contact 
+                            a(href="#").grid-requisites__icon
+                                include icons/_telegram
+                        li.grid-requisites__contact 
+                            a(href="#").grid-requisites__icon
+                                include icons/_vk
+                        li.grid-requisites__contact 
+                            a(href="#").grid-requisites__icon
+                                include icons/_youtube
+
+        
+        .company-requisites__bottom.bottom-requisites
+            #map.map.map-requisites
+            a(href="#").button.map-requisites__route Проложить маршрут 

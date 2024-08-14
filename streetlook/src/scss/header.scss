@@ -398,6 +398,10 @@
 			gap: rem(15);
 			margin-top: rem(45);
 
+			@media (min-width:$mobileSmall) {
+				display: none;
+			}
+
 			li {
 				&._active {
 					a {
@@ -415,6 +419,10 @@
 
 		.menu__pages {
 			margin-top: rem(45);
+
+			@media (min-width:$mobileSmall) {
+				display: none;
+			}
 		}
 
 		ul {

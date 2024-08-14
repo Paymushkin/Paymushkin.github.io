@@ -221,6 +221,15 @@ else if clubPersonalPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Клуб привилегий: Для бизнеса
 
+else if aboutPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link О компании
+
 else if deliveryPage == true
 
     .breadcrumbs.catalog__breadcrumbs
@@ -268,6 +277,26 @@ else if companyEventsPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Мероприятия
 
+else if companyActionsPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Акции
+
+else if companyActionPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Акции
+            li.breadcrumbs__item 
+                .breadcrumbs__link Скидка на 15% на микроскопы со склада
+
 else if companyEventPage == true
 
     .breadcrumbs.catalog__breadcrumbs
@@ -307,6 +336,15 @@ else if partnerPage == true
                 a(href="/").breadcrumbs__link Главная
             li.breadcrumbs__item 
                 .breadcrumbs__link Accumax
+
+else if contactsPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Контакты
 
 else
 

@@ -1,0 +1,55 @@
+section.company-actions
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .company-actions__container
+        - const companyActionPage = true;
+        include _breadcrumbs
+
+        style.
+            .header-partner__img {
+                aspect-ratio: 785 / 295;
+                background-position: left center;
+                background-image: url(@img/actions/item-big.png);
+            }
+            @media (max-width:1024px) {
+                .header-partner__img {
+                    aspect-ratio: 688 / 295;
+                    background-image: url(@img/actions/item-big-tablet.png);
+                    background-size: contain;
+                }
+            }
+
+            @media (max-width:576px) {
+                .header-partner__img {
+                    aspect-ratio: 335 / 295;
+                    background-image: url(@img/actions/item-big-mobile.png)
+                }
+            }
+
+        .partner-page__header.header-partner.header-action 
+            .header-partner__content
+                h2.header-partner__title Скидка на 15% на микроскопы со склада
+                .grid-actions__date
+                    include icons/_calendar
+                    span 30.12.2023 - 07.01.24
+
+            .header-partner__img
+       
+        .partner-page__body.body-partner.body-action
+            .body-partner__left.body-action__left
+                p Условия проведения акции
+            .body-partner__right.body-action__right
+                .body-action__block
+                    p Уважаемые клиенты! Мы объявляем скидку на 15% на микроскопы со склада 15 лет назад. Компания первой вывела на рынок «башни» наконечников. С тех пор они пользуются огромной популярностью благодаря нескольким важным преимуществам:
+                    ul.body-partner__list
+                        li.body-partner__item Экономия рабочего пространства. Наконечники упакованы в сменные блоки.
+                        li.body-partner__item Экономия времени. С помощью крышки наконечники можно быстро перенести в штатив.
+                    p Кроме того, они сертифицированы на отсутствие ДНКаз, РНКаз и эндотоксинов бактерий.
+                .body-action__separator
+                .body-action__block
+                    p Специальное предложение действует до полного исчерпания остатков товара.
+                    p Подробные условия акции можно узнать по 
+                        a(href="#") ссылке.
+                a(href="#").button.body-partner__button В каталог акций

@@ -60,7 +60,7 @@
 
     &__route {
         position: absolute;
-        inset: 32px 32px 0 0;
+        inset: 32px 32px auto auto;
 
         @media (max-width:$mobileSmall) {
             inset: auto 16px 16px 16px;
@@ -86,12 +86,20 @@
     &__title {
         font-size: 18px;
         line-height: 1.6;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
     }
 
     &__text {
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 16px;
+        }
     }
 
     &__link {
@@ -99,6 +107,10 @@
         font-weight: 500;
         line-height: 1.2;
         text-decoration-line: underline;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 16px;
+        }
 
         &._highlight {
             color: $highlightColor-2;

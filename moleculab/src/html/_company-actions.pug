@@ -1,0 +1,67 @@
+section.company-actions
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .company-actions__container
+        - const companyActionsPage = true;
+        include _breadcrumbs
+
+        h1.section-title.company-actions__title Акции и скидки
+
+        .company-actions__body
+
+            form(action="", method="post", itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction").company-events__form
+                #tags-wrapper.goods__tags.tags-goods.company-actions__tags._all 
+                    ul.tags-goods__list
+                        li.tags-goods__item.tag-item._active(data-tag="Все")
+                            span.tag-item__text Все
+                        li.tags-goods__item.tag-item(data-tag="Акции")
+                            span.tag-item__text Акции
+                        li.tags-goods__item.tag-item(data-tag="Скидки")
+                            span.tag-item__text Скидки
+
+            ul.company-actions__grid.grid-actions 
+                li.grid-actions__item
+                    a(href="").grid-actions__link
+                        .grid-actions__img(style="background-image:url('@img/actions/item-1.png')") 
+                        .grid-actions__body 
+                            .grid-actions__content
+                                h3.grid-actions__title Скидка на 15% на микроскопы со склада
+                                p.grid-actions__text Поставка за 7 дней
+                            .grid-actions__date
+                                include icons/_calendar
+                                span 30.12.2023 - 07.01.24
+
+                li.grid-actions__item
+                    a(href="").grid-actions__link
+                        .grid-actions__img(style="background-image:url('@img/actions/item-2.png')") 
+                        .grid-actions__body 
+                            .grid-actions__content
+                                h3.grid-actions__title Скидка на 15% на микроскопы со склада
+                                p.grid-actions__text Поставка за 7 дней
+                            .grid-actions__date
+                                include icons/_calendar
+                                span 30.12.2023 - 07.01.24
+
+                li.grid-actions__item
+                    a(href="").grid-actions__link
+                        .grid-actions__img(style="background-image:url('@img/actions/item-1.png')") 
+                        .grid-actions__body 
+                            .grid-actions__content
+                                h3.grid-actions__title Скидка на 15% на микроскопы со склада
+                                p.grid-actions__text Поставка за 7 дней
+                            .grid-actions__date
+                                include icons/_calendar
+                                span 30.12.2023 - 07.01.24
+
+                li.grid-actions__item
+                    a(href="").grid-actions__link
+                        .grid-actions__img(style="background-image:url('@img/actions/item-3.png')") 
+                        .grid-actions__body 
+                            .grid-actions__content
+                                h3.grid-actions__title Скидка на 15% на микроскопы со склада
+                                p.grid-actions__text Поставка за 7 дней
+                            .grid-actions__date
+                                include icons/_calendar
+                                span 30.12.2023 - 07.01.24
