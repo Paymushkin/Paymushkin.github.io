@@ -1194,6 +1194,33 @@ if (companyEvents.length) {
     });
 }
 
+const copyButtons = document.querySelectorAll(".product-item__copy") || null
+
+if (copyButtons.length) {
+    copyButtons.forEach(btn => {
+        btn.addEventListener("click", function (event) {
+            event.stopPropagation()
+            event.preventDefault()
+            const newDiv = document.createElement('div');
+            newDiv.classList.add("info-text")
+            const copyText = btn.parentNode.textContent
+            try {
+                navigator.clipboard.writeText(copyText);
+                newDiv.textContent = "Скопировано!";
+                btn.appendChild(newDiv)
+            } catch (err) {
+                newDiv.textContent = "Не скопировалось"
+                btn.appendChild(newDiv)
+            }
+
+
+            setTimeout(() => {
+                newDiv.remove()
+            }, 2000);
+        })
+    });
+}
+
 // const callMePopup = document.getElementById('call-me') || null;
 // const nameInputCall = document.getElementById('name-for-call') || null;
 // const emailInputCall = document.getElementById('number-for-call') || null;

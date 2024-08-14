@@ -1,0 +1,45 @@
+section.partner-page
+
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .partner-page__container 
+        - const partnerPage = true;
+        include _breadcrumbs
+
+        style.
+            .header-partner__img {
+                aspect-ratio: 785 / 276;
+                background-image: url(@img/company-partner/bg.png)
+            }
+            @media (max-width:1024px) {
+                .header-partner__img {
+                    aspect-ratio: 688 / 142;
+                    background-image: url(@img/company-partner/bg-tablet.png)
+                }
+            }
+
+            @media (max-width:576px) {
+                .header-partner__img {
+                    aspect-ratio: 335 / 153;
+                    background-image: url(@img/company-partner/bg-mobile.png)
+                }
+            }
+
+        .partner-page__header.header-partner
+            .header-partner__content
+                h2.header-partner__title Accumax
+                p.header-partner__text 
+                    | Accumax — один из ведущих производителей расходных 
+                    | материалов для лабораторных исследований. 
+                    | Компания Хеликон является официальным поставщиком 
+                    | Accumax Lab Devices Pvt. Ltd на территории РФ.
+            .header-partner__img
+       
+        .partner-page__body.body-partner
+            .body-partner__left
+                p С 2021 года Компания Хеликон является официальным поставщиком продукции Accumax Lab Devices Pvt. Ltd на территории РФ. 
+            .body-partner__right
+                p Accumax — один из ведущих мировых производителей расходных материалов для исследований. Компания была основана в 2003 году и базируется в городе Гандинагар (Индия).
+                p Миссия Accumax — предоставить лабораториям инновационные технологии высокого качества. Благодаря тщательным проверкам на каждом этапе производства, включая упаковку и отправку товара, бренд пользуется прекрасной репутацией за рубежом, а его продукция экспортируется в 130 стран. Компания имеет сертификаты о соответствии стандартам системы менеджмента качества ISO 9001-2015, ISO 13485-2016.
+                a(href="#").button.body-partner__button В каталог 

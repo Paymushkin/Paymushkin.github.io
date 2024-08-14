@@ -4,9 +4,7 @@ h3,
 h4,
 p,
 small,
-button,
-a,
-div {
+button {
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -1153,4 +1151,16 @@ details {
 
 [class*="ymaps-2-1"] [class*="-ground-pane"] {
     filter: grayscale(1);
+}
+
+.info-text {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 14px;
+    background: $gradient-1;
+    border-radius: 16px;
+    z-index: 9;
 }

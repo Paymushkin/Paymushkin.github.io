@@ -450,7 +450,9 @@
     }
 
     &__code {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-bottom: 20px;
         color: $textColor;
         font-size: 14px;
@@ -470,6 +472,9 @@
     }
 
     &__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-bottom: 10px;
         color: $mainColor;
         font-size: 16px;
@@ -486,6 +491,31 @@
         @media (max-width:$mobileSmall) {
             ._list & {
                 font-size: 12px;
+            }
+        }
+
+    }
+
+    &__copy {
+        position: relative;
+        display: flex;
+        padding: 3px;
+        cursor: pointer;
+
+        svg {
+            display: flex;
+            max-height: 16px;
+
+            path {
+                transition: 0.3s ease stroke;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                path {
+                    stroke: $highlightColor-2;
+                }
             }
         }
     }
@@ -752,6 +782,9 @@
         line-height: 1.4;
 
         span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             color: $textColor;
 
             &._limited {

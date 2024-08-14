@@ -40,6 +40,10 @@
     background-color: #fff;
     border-radius: 24px;
 
+    @media (max-width:$mobileSmall) {
+        padding: 24px;
+    }
+
     @media (any-hover: hover) {
         &:hover {
             .item-partner__img {
@@ -65,6 +69,10 @@
     &__link {
         display: flex;
         gap: 32px;
+
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+        }
     }
 
     &__img {
@@ -78,6 +86,11 @@
         aspect-ratio: 210 / 132;
         border-radius: 8px;
         transition: 0.3s ease background;
+
+        @media (max-width:$mobileSmall) {
+            height: 141px;
+            max-height: 141px;
+        }
 
         svg {
             width: 100%;
@@ -98,11 +111,15 @@
         color: $textColor;
         font-size: 16px;
         line-height: 1.4;
-        line-height: 1.4;
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+            line-height: 1.6;
+        }
     }
 
     &__more {

@@ -3034,9 +3034,7 @@ h3,
 h4,
 p,
 small,
-button,
-a,
-div {
+button {
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -4197,6 +4195,19 @@ details summary svg {
 [class*=ymaps-2-1] [class*=-ground-pane] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+}
+
+.info-text {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 14px;
+  background: -o-linear-gradient(326deg, #00A0DB 10.09%, #86D06C 105.92%);
+  background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
+  border-radius: 16px;
+  z-index: 9;
 }
 
 .header {
@@ -5474,7 +5485,11 @@ details summary svg {
       flex-direction: column;
 }
 .product-item__code {
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 8px;
   margin-bottom: 20px;
   color: #6F8290;
   font-size: 14px;
@@ -5491,6 +5506,11 @@ details summary svg {
   display: none;
 }
 .product-item__title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 8px;
   margin-bottom: 10px;
   color: #545454;
   font-size: 16px;
@@ -5506,6 +5526,28 @@ details summary svg {
 @media (max-width: 36.06125em) {
   ._list .product-item__title {
     font-size: 12px;
+  }
+}
+.product-item__copy {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3px;
+  cursor: pointer;
+}
+.product-item__copy svg {
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 16px;
+}
+.product-item__copy svg path {
+  -webkit-transition: 0.3s ease stroke;
+  -o-transition: 0.3s ease stroke;
+  transition: 0.3s ease stroke;
+}
+@media (any-hover: hover) {
+  .product-item__copy:hover path {
+    stroke: #77C149;
   }
 }
 .product-item__text {
@@ -5721,6 +5763,11 @@ details summary svg {
   line-height: 1.4;
 }
 .info-product__item span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 8px;
   color: #6F8290;
 }
 .info-product__item span._limited {
@@ -14927,6 +14974,11 @@ details[open] .status-order__right span:last-child {
   background-color: #fff;
   border-radius: 24px;
 }
+@media (max-width: 36.06125em) {
+  .item-partner {
+    padding: 24px;
+  }
+}
 @media (any-hover: hover) {
   .item-partner:hover .item-partner__img {
     background: -o-linear-gradient(326deg, #00A0DB 10.09%, #86D06C 105.92%);
@@ -14949,6 +15001,12 @@ details[open] .status-order__right span:last-child {
   display: flex;
   gap: 32px;
 }
+@media (max-width: 36.06125em) {
+  .item-partner__link {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
 .item-partner__img {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -14962,6 +15020,12 @@ details[open] .status-order__right span:last-child {
   -webkit-transition: 0.3s ease background;
   -o-transition: 0.3s ease background;
   transition: 0.3s ease background;
+}
+@media (max-width: 36.06125em) {
+  .item-partner__img {
+    height: 141px;
+    max-height: 141px;
+  }
 }
 .item-partner__img svg {
   width: 100%;
@@ -14983,11 +15047,16 @@ details[open] .status-order__right span:last-child {
   color: #6F8290;
   font-size: 16px;
   line-height: 1.4;
-  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width: 36.06125em) {
+  .item-partner__text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 .item-partner__more {
   display: -ms-flexbox;
@@ -15011,6 +15080,130 @@ details[open] .status-order__right span:last-child {
   -webkit-transition: 0.3s ease transform;
   -o-transition: 0.3s ease transform;
   transition: 0.3s ease transform;
+}
+
+.partner-page {
+  position: relative;
+  padding: 32px 0 80px;
+}
+.partner-page__header {
+  margin-bottom: 20px;
+}
+
+.header-partner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  gap: 24px;
+  min-height: 276px;
+  border-radius: 32px;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (max-width: 64.06125em) {
+  .header-partner {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+.header-partner__img {
+  width: 765px;
+  width: 56.25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 64.06125em) {
+  .header-partner__img {
+    max-width: 100%;
+    width: 100%;
+    min-height: 142px;
+  }
+}
+.header-partner__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  gap: 24px;
+  padding: 32px;
+  max-width: 42.2794117647%;
+  width: 575px;
+  background-color: #fff;
+}
+@media (max-width: 64.06125em) {
+  .header-partner__content {
+    padding: 24px 24px 0 24px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.header-partner__title {
+  font-family: Manrope;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.header-partner__text {
+  color: #6F8290;
+  font-size: 16px;
+  line-height: 1.4;
+}
+@media (max-width: 36.06125em) {
+  .header-partner__text {
+    font-size: 14px;
+  }
+}
+
+.body-partner {
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+@media (max-width: 64.06125em) {
+  .body-partner {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+.body-partner__left {
+  width: 42.2794117647%;
+}
+@media (max-width: 64.06125em) {
+  .body-partner__left {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.body-partner__left p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.body-partner__right {
+  width: 56.25%;
+}
+@media (max-width: 64.06125em) {
+  .body-partner__right {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.body-partner__right p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.body-partner__right p:not(:last-child) {
+  margin-bottom: 16px;
+}
+.body-partner__right p:last-child {
+  margin-bottom: 32px;
 }
 
 .footer {

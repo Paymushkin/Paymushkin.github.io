@@ -1,0 +1,119 @@
+.partner-page {
+    position: relative;
+    padding: 32px 0 80px;
+
+    &__header {
+        margin-bottom: 20px;
+    }
+}
+
+.header-partner {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    min-height: 276px;
+    border-radius: 32px;
+    background-color: #fff;
+    overflow: hidden;
+
+    @media (max-width:$tablet) {
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 765px;
+        width: percent(765, 1360);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (max-width:$tablet) {
+            max-width: 100%;
+            width: 100%;
+            min-height: 142px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 24px;
+        padding: 32px;
+        max-width: percent(575, 1360);
+        width: 575px;
+        background-color: #fff;
+
+        @media (max-width:$tablet) {
+            padding: 24px 24px 0 24px;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: Manrope;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.1;
+    }
+
+    &__text {
+        color: $textColor;
+        font-size: 16px;
+        line-height: 1.4;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 14px;
+        }
+    }
+}
+
+.body-partner {
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    @media (max-width:$tablet) {
+        flex-direction: column;
+    }
+
+    &__left {
+        width: percent(575, 1360);
+
+        @media (max-width:$tablet) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    }
+
+    &__right {
+        width: percent(765, 1360);
+
+        @media (max-width:$tablet) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &:last-child {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
