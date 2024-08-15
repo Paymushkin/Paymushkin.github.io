@@ -8891,6 +8891,7 @@ details summary svg {
 }
 
 .cart {
+  position: relative;
   padding-bottom: 80px;
 }
 .cart__container {
@@ -10140,6 +10141,7 @@ details summary svg {
 }
 
 .client-order {
+  position: relative;
   padding: 32px;
   background-color: #fff;
   border-radius: 24px;
@@ -10687,6 +10689,7 @@ details summary svg {
 }
 
 .favorites {
+  position: relative;
   padding: 32px 0 80px;
 }
 .favorites__title {
@@ -10774,6 +10777,7 @@ details summary svg {
 }
 
 .search {
+  position: relative;
   padding: 32px 0 80px;
 }
 .search__title {
