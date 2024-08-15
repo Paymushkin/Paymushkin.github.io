@@ -14366,11 +14366,20 @@ details[open] .status-order__right span:last-child {
   background-position: center right;
   z-index: -1;
 }
+.no-webp .company-event__pattern-1{
+  background-image: url(../img/error/pattern.png); }
+.company-event__pattern-1 {
+  top: 60%;
+  height: 20.4vw;
+}
 .no-webp .company-event__pattern-2{
   background-image: url(../img/error/pattern.png); }
 .company-event__pattern-2 {
   top: 83%;
   height: 20.4vw;
+}
+.company-event__pattern-3 {
+  top: 40%;
 }
 .company-event__wrapper {
   display: -ms-flexbox;
@@ -16163,6 +16172,7 @@ details[open] .status-order__right span:last-child {
 .webp .company-new__pattern{ background-image: url(../img/clients/pattern.webp); }
 .webp .company-new__pattern-2{ background-image: url(../img/error/pattern.webp); }
 .webp .company-event__pattern{ background-image: url(../img/clients/pattern.webp); }
+.webp .company-event__pattern-1{ background-image: url(../img/error/pattern.webp); }
 .webp .company-event__pattern-2{ background-image: url(../img/error/pattern.webp); }
 .webp .requisites__img{ background-image: url(../img/contacts/item-1.webp); }
 @media (max-width: 48.06125em){

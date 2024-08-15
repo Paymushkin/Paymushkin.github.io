@@ -16,10 +16,20 @@
         z-index: -1;
         // mix-blend-mode: soft-light;
 
+        &-1 {
+            top: 60%;
+            height: 20.4vw;
+            background-image: url(../img/error/pattern.png);
+        }
+
         &-2 {
             top: 83%;
             height: 20.4vw;
             background-image: url(../img/error/pattern.png);
+        }
+
+        &-3 {
+            top: 40%;
         }
     }
 
