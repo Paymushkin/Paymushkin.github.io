@@ -6,17 +6,23 @@ ul.products__list
                 include icons/_heart
             span.icons-product__comparison
                 include icons/_comparison
-        .product-item__link
+        a(href="/product.html", itemprop="description").product-item__link
             a(href="/product.html", itemprop="url").product-item__image-ibg
                 img(src="@img/products/item-1.png" alt=`Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)`, itemprop="image")
             .product-item__content 
                 span.product-item__code(itemprop="sku") 1R-B.002-15
+                    button.product-item__copy
+                        include icons/_copy
                 h4.product-item__title(itemprop="brand") Ламинарные системы
-                a(href="/product.html", itemprop="description").product-item__text Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                .product-item__text Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
+                    button.product-item__copy
+                        include icons/_copy
                 span.product-item__status._limited Ограничено
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
                         span Wufeng HELICON 1800 type 9
+                            button.product-item__copy
+                                include icons/_copy
                     li.info-product__item Производитель:
                         span Clinx
                     li.info-product__item Наличие:
@@ -67,9 +73,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Gyrozen
+                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
                 span.product-item__status._request Уточнить у менеджера
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -128,9 +134,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Senova BS-3031
+                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                 span.product-item__status._limited Ограничено
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -188,9 +194,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Clinx
+                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                 span.product-item__status
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -243,9 +249,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Ламинарные системы
+                p.product-item__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Ламинарный шкаф II класса защиты БМБ-II-"Ламинар-С" - 1,5 SAVVY (222.150)
                 span.product-item__status._limited Ограничено
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -297,9 +303,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Gyrozen
+                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Многофункциональная центрифуга с охлаждением 1248R
                 span.product-item__status._request Уточнить у менеджера
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -352,9 +358,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Senova BS-3031
+                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                 span.product-item__status._limited Ограничено
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:
@@ -406,9 +412,9 @@ ul.products__list
                     button.product-item__copy
                         include icons/_copy
                 h4.product-item__title(itemprop="brand") Clinx
+                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                     button.product-item__copy
                         include icons/_copy
-                p.product-item__text(itemprop="description") Гель-документирующая система ChemiScope
                 span.product-item__status._many Много
                 ul.product-item__info.info-product
                     li.info-product__item Артикул:

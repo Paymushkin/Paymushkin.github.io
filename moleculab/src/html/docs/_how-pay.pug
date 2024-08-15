@@ -1,0 +1,63 @@
+section.policy
+    .policy__container
+        - const howPayPage = true;
+        include ../_breadcrumbs
+
+        .policy__header 
+            h2.policy__title Как оплатить заказ
+            p.policy__upd Последнее обновление: 12 марта, 2023
+        
+        .policy__body.body-policy 
+            ol.body-policy__content
+                li.body-policy__block
+                    p.body-policy__text
+                        | У нас в компании Молекулаб предлагается несколько 
+                        | способов оплаты заказа, чтобы удовлетворить ваши предпочтения:
+
+                #block-1.body-policy__block
+                    h3.body-policy__title 1. Для физических лиц
+                    ol.body-policy__list
+                        li.body-policy__item 
+                            | 1.1 Оплата по реквизитам:<br>
+                            | Вы можете оплатить заказ в системе банк-клиент вашего банка 
+                            | или в офисе любого банка. После оформления заказа наш менеджер 
+                            | предоставит Вам счет с необходимыми банковские реквизиты для 
+                            | осуществления платежа.
+
+                        li.body-policy__item 
+                            | 1.2 Оплата по ссылке:<br>
+                            | Мы также предлагаем возможность оплаты заказа по ссылке, 
+                            | которую вы получите от нашего менеджера. 
+                            | Просто перейдите по ссылке и следуйте инструкциям для 
+                            | осуществления безопасного онлайн-платежа.
+
+                        li.body-policy__item 
+                            | 1.3 Оплата на сайте:<br>
+                            | Платёжная форма будет доступна после оформления заказа.
+                            | Вам нужно пара простых действий, чтобы завершить покупку:
+
+                            ul.body-policy__list.pl-20 
+                                li.body-policy__item &#x2022; Выбрать способ оплаты
+                                li.body-policy__item &#x2022; Заполнить поля формы
+                                li.body-policy__item &#x2022; Нажать кнопку оплаты.
+
+
+
+
+                #block-2.body-policy__block
+                    h3.body-policy__title 2. Для юридических лиц:
+                    ol.body-policy__list 
+                        li.body-policy__item 
+                            | 2.1 С юридическими лицами доступен безналичный платеж в рамках договора. 
+                            | Если у вас заключен договор с нами, вы можете оплатить 
+                            | заказ безналичным платежом в соответствии с условием договора. 
+                            | При доставке товара мы предоставим вам пакет закрывающих документов.
+                   
+            aside.body-policy__aside 
+                nav.body-policy__nav.nav-policy
+                    h3.nav-policy__title На этой странице
+                    ol.nav-policy__list 
+                        li.nav-policy__item 
+                            .nav-policy__link(data-to-block="block-1") Для физических лиц
+                        li.nav-policy__item 
+                            .nav-policy__link(data-to-block="block-2") Для юридических лиц:

@@ -3123,6 +3123,10 @@ details summary svg {
   max-width: 800px;
 }
 
+.pl-20 {
+  padding-left: 20px;
+}
+
 ._highlight-text {
   color: #77C149;
 }
@@ -4178,11 +4182,12 @@ details summary svg {
 
 .info-text {
   position: absolute;
-  top: -35px;
-  left: 0;
-  padding: 8px 16px;
+  top: 0;
+  right: 23px;
+  padding: 4px 12px;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
   background: -o-linear-gradient(326deg, #00A0DB 10.09%, #86D06C 105.92%);
   background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
   border-radius: 16px;
@@ -5530,8 +5535,10 @@ details summary svg {
   }
 }
 .product-item__text {
+  position: relative;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
+  padding-right: 20px;
   margin-bottom: 10px;
   color: #545454;
   font-size: 16px;
@@ -5544,6 +5551,11 @@ details summary svg {
   -webkit-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
+}
+.product-item__text button {
+  position: absolute;
+  top: 0;
+  right: -5px;
 }
 ._list .product-item__text {
   max-width: 90%;
