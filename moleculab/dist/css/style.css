@@ -131,7 +131,7 @@ h6 {
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
   height: 5px;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -147,7 +147,7 @@ h6 {
 *::-webkit-scrollbar-thumb {
   background-color: #00A0DB;
   /* цвет плашки */
-  border-radius: 20px;
+  border-radius: 30px;
   /* закругления плашки */
   border: 1px solid #F3FFF2;
 }
@@ -5237,7 +5237,7 @@ details summary svg {
   -o-transition: 0.3s ease opacity;
   transition: 0.3s ease opacity;
 }
-.tag-item._active::before {
+.tag-item._active::before, .tag-item._tab-active::before {
   opacity: 1;
 }
 .tag-item__text {
@@ -5314,6 +5314,7 @@ details summary svg {
       justify-content: space-between;
   position: relative;
   padding: 20px;
+  height: 100%;
   background-color: #fff;
   border-radius: 30px;
 }
@@ -13972,14 +13973,23 @@ details[open] .status-order__right span:last-child {
   border-radius: 30px;
   border: 1px solid #77C149;
 }
+.filters-news__select.filters-library__select {
+  border-color: #DCE4EA;
+}
 .filters-news__title {
   color: #77C149;
+}
+.filters-library__select .filters-news__title {
+  color: #6F8290;
 }
 .filters-news__title span {
   line-height: 1.4;
 }
 .filters-news__title svg path {
   stroke: #77C149;
+}
+.filters-library__select .filters-news__title svg path {
+  stroke: #6F8290;
 }
 .filters-news__hidden-block {
   padding-right: 5px;
@@ -14027,6 +14037,9 @@ details[open] .status-order__right span:last-child {
   background-color: #fff;
   border-radius: 24px;
   overflow: hidden;
+}
+.grid-news__item-doc {
+  border: 1px solid #DCE4EA;
 }
 .grid-news__link {
   display: -ms-flexbox;
@@ -15657,6 +15670,129 @@ details[open] .status-order__right span:last-child {
   .map-requisites__route {
     inset: auto 16px 16px 16px;
   }
+}
+
+.library {
+  position: relative;
+  padding: 32px 0 80px;
+}
+.library__navigation {
+  margin-bottom: 24px;
+}
+.library__materials {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+@media (max-width: 64.06125em) {
+  .library__materials {
+    padding: 32px 16px 16px 16px;
+  }
+}
+.library__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 12px;
+  min-width: 100%;
+}
+@media (max-width: 48.06125em) {
+  .library__form {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+}
+.library__filters {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 12px;
+}
+.library__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 64.06125em) {
+  .library__grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 36.06125em) {
+  .library__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.library-tabs {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form-library__wrapper {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+  max-width: 420px;
+  min-height: 40px;
+  background-color: #fff;
+  border: 1px solid #DCE4EA;
+  border-radius: 30px;
+}
+@media (max-width: 48.06125em) {
+  .form-library__wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.form-library__search {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  color: #545454;
+  font-size: 14px;
+  line-height: 1.6;
+  outline: none;
+}
+.form-library__search::-webkit-input-placeholder {
+  color: #6F8290;
+}
+.form-library__search::-moz-placeholder {
+  color: #6F8290;
+}
+.form-library__search:-ms-input-placeholder {
+  color: #6F8290;
+}
+.form-library__search::-ms-input-placeholder {
+  color: #6F8290;
+}
+.form-library__search::placeholder {
+  color: #6F8290;
 }
 
 .footer {
