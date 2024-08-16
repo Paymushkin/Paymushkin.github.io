@@ -3341,12 +3341,10 @@ details summary svg {
 .club {
   position: relative;
 }
-@media (any-hover: hover) {
-  .club:hover .club__list {
-    -webkit-transform: scaleY(1);
-        -ms-transform: scaleY(1);
-            transform: scaleY(1);
-  }
+.club:hover .club__list {
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
 }
 .club__list {
   position: absolute;
@@ -3545,6 +3543,19 @@ details summary svg {
 }
 .customer-block__body {
   position: relative;
+}
+.customer-block__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+._open .customer-block__wrapper {
+  display: block;
 }
 .customer-block__text {
   position: relative;
