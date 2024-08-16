@@ -40,7 +40,20 @@ if (openCustomerBlock) {
     openCustomerBlock.addEventListener("click", () => {
         openCustomerBlock.classList.toggle("_open")
     })
+
+    document.querySelector(".customer-block__wrapper").addEventListener("click", function (event) {
+        event.stopPropagation()
+        openCustomerBlock.classList.remove("_open")
+    })
+
+    window.addEventListener("scroll", () => {
+        if (openCustomerBlock.classList.contains("_open")) {
+            openCustomerBlock.classList.remove("_open")
+        }
+    })
 }
+
+// document
 
 // работа с селектами
 
@@ -700,6 +713,30 @@ if (deliveryTabs) {
             })
             deliveryTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
             deliveryTabs.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
+        })
+    });
+}
+
+// работа с табами в библиотеке
+
+const libraryTabs = document.getElementById("library-block") || null
+
+if (libraryTabs) {
+    const tabsBnts = libraryTabs.querySelectorAll("button.library-tabs__item")
+    const tabsContent = libraryTabs.querySelectorAll(".library__content")
+
+    tabsBnts.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-button")
+
+        tab.addEventListener("click", () => {
+            tabsContent.forEach(content => {
+                content.classList.remove("_content-active")
+            })
+            tabsBnts.forEach(tab => {
+                tab.classList.remove("_tab-active")
+            })
+            libraryTabs.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+            libraryTabs.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
         })
     });
 }

@@ -302,16 +302,14 @@ details {
     }
 }
 
-// клуб привелегий
+// клуб привилегий
 
 .club {
     position: relative;
 
-    @media (any-hover: hover) {
-        &:hover {
-            .club__list {
-                transform: scaleY(1);
-            }
+    &:hover {
+        .club__list {
+            transform: scaleY(1);
         }
     }
 
@@ -500,6 +498,21 @@ details {
 
     &__body {
         position: relative;
+    }
+
+    &__wrapper {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        z-index: -1;
+
+        ._open & {
+            display: block;
+        }
     }
 
     &__text {

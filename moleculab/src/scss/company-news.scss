@@ -47,10 +47,18 @@
         background-color: #fff;
         border-radius: 30px;
         border: 1px solid $highlightColor-2;
+
+        &.filters-library__select {
+            border-color: $borderColor-2;
+        }
     }
 
     &__title {
         color: $highlightColor-2;
+
+        .filters-library__select & {
+            color: $textColor;
+        }
 
         span {
             line-height: 1.4;
@@ -58,6 +66,10 @@
 
         svg path {
             stroke: $highlightColor-2;
+
+            .filters-library__select & {
+                stroke: $textColor;
+            }
         }
     }
 
@@ -105,6 +117,10 @@
         background-color: #fff;
         border-radius: 24px;
         overflow: hidden;
+
+        &-doc {
+            border: 1px solid $borderColor-2;
+        }
     }
 
     &__link {

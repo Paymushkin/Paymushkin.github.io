@@ -179,7 +179,8 @@
         transition: 0.3s ease opacity;
     }
 
-    &._active {
+    &._active,
+    &._tab-active {
         &::before {
             opacity: 1;
         }
@@ -259,6 +260,7 @@
     justify-content: space-between;
     position: relative;
     padding: 20px;
+    height: 100%;
     background-color: #fff;
     border-radius: 30px;
 

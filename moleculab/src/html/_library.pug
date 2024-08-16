@@ -1,0 +1,173 @@
+section.library
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2 
+
+    .library__container 
+        - const libraryPage = true;
+        include _breadcrumbs
+
+        h1.section-title.library__title Библиотека
+
+        #library-block.library__body
+            nav.library__navigation.library-tabs 
+                button(data-tab-button="1", data-tag="Статьи").library-tabs__item.tag-item._tab-active
+                    .tag-item__text Статьи
+                button(data-tab-button="2", data-tag="Инструкции").library-tabs__item.tag-item
+                    .tag-item__text Инструкции
+                button(data-tab-button="3", data-tag="Регистрационные удостоверения").library-tabs__item.tag-item
+                    .tag-item__text Регистрационные удостоверения 
+                button(data-tab-button="4", data-tag="Обучение").library-tabs__item.tag-item
+                    .tag-item__text Обучение
+                button(data-tab-button="5", data-tag="Иное").library-tabs__item.tag-item
+                    .tag-item__text Иное
+
+            .library__materials
+                form(action="#").library__form.form-library
+                    .form-library__wrapper
+                        input#form-library.form-library__search(type="search", name="form-library", placeholder="Введие запрос")
+                        include icons/_search
+                    .library__filters.filters-news.filters-events
+
+                        .filters-news__select.filters-library__select.select
+                            .select__title.filters-news__title.open-select
+                                span.current-value(data-current="") Любой месяц
+                                svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                    path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                            .select__hidden-block.filters-news__hidden-block
+                                ul.select__list
+                                    li.select__item(data-value="Любой месяц") Любой месяц
+                                    li.select__item(data-value="Январь") Январь
+                                    li.select__item(data-value="Февраль") Февраль
+                                    li.select__item(data-value="Март") Март
+                                    li.select__item(data-value="Апрель") Апрель
+                                    li.select__item(data-value="Май") Май
+                                    li.select__item(data-value="Июнь") Июнь
+                                    li.select__item(data-value="Июль") Июль
+                                    li.select__item(data-value="вгуст") Август
+                                    li.select__item(data-value="Сентябрь") Сентябрь
+                                    li.select__item(data-value="Октябрь") Октябрь
+                                    li.select__item(data-value="Ноябрь") Ноябрь
+                                    li.select__item(data-value="Декабрь") Декабрь
+
+                        .filters-news__select.filters-library__select.select
+                            .select__title.filters-news__title.open-select
+                                span.current-value(data-current="") Любой год
+                                svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+                                    path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8290" stroke-linecap="round" stroke-linejoin="round")
+
+                            .select__hidden-block.filters-news__hidden-block
+                                ul.select__list
+                                    li.select__item(data-value="Любой год") Любой год
+                                    li.select__item(data-value="2022") 2022
+                                    li.select__item(data-value="2023") 2023
+                                    li.select__item(data-value="2024") 2024
+
+                div(data-tabs-body="1").library__content.details-tab._content-active
+                    .company-news__grid.grid-news
+                        .grid-news__item.grid-news__item-doc 
+                            a(href="company-new.html").grid-news__link
+                                .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                                .grid-news__content
+                                    .grid-news__title День российского студенчества
+                                    .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                                    .grid-news__date 30 октября 2023
+
+                        .grid-news__item.grid-news__item-doc 
+                            a(href="company-new.html").grid-news__link
+                                .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                                .grid-news__content
+                                    .grid-news__title День российского студенчества
+                                    .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                                    .grid-news__date 30 октября 2023
+
+                        .grid-news__item.grid-news__item-doc 
+                            a(href="company-new.html").grid-news__link
+                                .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                                .grid-news__content
+                                    .grid-news__title День российского студенчества
+                                    .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                                    .grid-news__date 30 октября 2023
+
+                        .grid-news__item.grid-news__item-doc 
+                            a(href="company-new.html").grid-news__link
+                                .grid-news__img(style="background-image:url('@img/company-news/item-1.png')")
+                                .grid-news__content
+                                    .grid-news__title День российского студенчества
+                                    .grid-news__text Компания MolecuLab на мероприяти для криминалистов 
+                                    .grid-news__date 30 октября 2023
+
+                div(data-tabs-body="2").library__content.details-tab
+                    ul.library__grid.library__grid-docs.docs-grid
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_pdf
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PDF, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_png
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PNG, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_pdf
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PDF, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_png
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PNG, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_pdf
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PDF, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                        li.docs__item
+                            a(href="#", download).docs__link.doc
+                                .doc__icon
+                                    include icons/_png
+                            
+                                .doc__body
+                                    h4.doc__title Инструкция по применению экспресс-тестов RAINBOW PIGLET
+                                    .doc__info 
+                                        span PNG, 1.44 МБ
+                                        span •
+                                        span 15.06.2023
+                div(data-tabs-body="3").library__content.details-tab
+                    p Регистрационные удостоверения 
+                div(data-tabs-body="4").library__content.details-tab
+                    p Обучение
+                div(data-tabs-body="5").library__content.details-tab
+                    p Иное

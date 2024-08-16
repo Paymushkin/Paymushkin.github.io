@@ -81,7 +81,7 @@ $mobileSmall: em(576.98); // Телефоны S
 // кастомный скроллбар
 
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     height: 5px;
     transition: 0.3s all ease;
     cursor: grab;
@@ -95,7 +95,7 @@ $mobileSmall: em(576.98); // Телефоны S
 *::-webkit-scrollbar-thumb {
     background-color: $highlightColor-1;
     /* цвет плашки */
-    border-radius: 20px;
+    border-radius: 30px;
     /* закругления плашки */
     border: 1px solid $bgColor;
 }
@@ -287,6 +287,7 @@ body {
 @import "partner";
 @import "company-actions";
 @import "company-contacts";
+@import "library";
 
 @import "footer";
 
