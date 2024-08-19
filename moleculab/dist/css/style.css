@@ -3028,7 +3028,30 @@ body::after {
   transition: all 0.3s;
 }
 
-ol,
+h1:not(.content-product__title),
+h2,
+h3,
+h4,
+p,
+small,
+button,
+a,
+li,
+span {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+span ol,
 ul {
   list-style: none;
 }
@@ -5797,6 +5820,8 @@ details summary svg {
     gap: 0 4px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 
@@ -6967,12 +6992,18 @@ details summary svg {
   border-radius: 24px;
   overflow: hidden;
 }
+@media (max-width: 64.06125em) {
+  .banner-catalog {
+    background-size: cover;
+  }
+}
 @media (max-width: 48.06125em) {
   .banner-catalog {
     -ms-flex-align: start;
         align-items: flex-start;
     height: 320px;
     background-position: center bottom;
+    background-size: contain;
   }
 }
 @media (max-width: 36.06125em) {
@@ -6987,7 +7018,15 @@ details summary svg {
       flex-direction: column;
   gap: 24px;
   padding: 32px;
-  max-width: 42.2794117647%;
+  width: 42.2794117647%;
+  min-width: 410px;
+  max-width: 100%;
+}
+@media (max-width: 48.06125em) {
+  .banner-catalog__content {
+    width: 100%;
+    min-width: unset;
+  }
 }
 @media (max-width: 48.06125em) {
   .banner-catalog__content {
@@ -8769,6 +8808,20 @@ details summary svg {
   -webkit-transition: 0.3s ease background-color;
   -o-transition: 0.3s ease background-color;
   transition: 0.3s ease background-color;
+}
+
+.content-product__item:first-child,
+.content-product__item:first-child span {
+  -webkit-touch-callout: inherit;
+  /* iOS Safari */
+  -webkit-user-select: inherit;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: inherit;
+  /* Old versions of Firefox */
+  -ms-user-select: inherit;
+  /* Internet Explorer/Edge */
+  user-select: inherit;
 }
 
 .mobile-catalog {

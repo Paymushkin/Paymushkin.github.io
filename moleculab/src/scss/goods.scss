@@ -821,6 +821,7 @@
         @media (max-width:$mobileSmall) {
             gap: 0 4px;
             flex-wrap: wrap;
+            align-items: center;
         }
     }
 }

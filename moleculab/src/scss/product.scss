@@ -864,3 +864,18 @@
         }
     }
 }
+
+.content-product__item:first-child,
+.content-product__item:first-child span {
+    -webkit-touch-callout: inherit;
+    /* iOS Safari */
+    -webkit-user-select: inherit;
+    /* Safari */
+    -khtml-user-select: inherit;
+    /* Konqueror HTML */
+    -moz-user-select: inherit;
+    /* Old versions of Firefox */
+    -ms-user-select: inherit;
+    /* Internet Explorer/Edge */
+    user-select: inherit;
+}
