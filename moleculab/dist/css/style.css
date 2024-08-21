@@ -9966,6 +9966,11 @@ details summary svg {
   padding: 40px 20px 20px;
   z-index: 4;
 }
+@media (max-width: 48.06125em) {
+  .header-cart {
+    padding: 20px;
+  }
+}
 .header-cart__wrapper {
   position: fixed;
   top: 0;
@@ -9986,6 +9991,7 @@ details summary svg {
   gap: 24px;
   padding: 24px;
   width: 613px;
+  max-height: calc(100vh - 150px);
   border-radius: 24px;
   background-color: #fff;
   -webkit-box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
@@ -10002,9 +10008,17 @@ details summary svg {
 }
 .header-cart__products {
   padding-bottom: 16px;
+  padding-right: 5px;
   max-height: 500px;
   border-bottom: 1px solid #DCE4EA;
-  overflow: scroll;
+  overflow: hidden auto;
+}
+.header-cart__products::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+.header-cart__products::-webkit-scrollbar-thumb {
+  background: #DCE4EA;
 }
 .header-cart__title {
   color: #545454;
