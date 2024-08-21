@@ -13664,6 +13664,7 @@ details[open] .status-order__right span:last-child {
   -ms-flex-direction: column;
       flex-direction: column;
   gap: 40px;
+  list-style: none;
 }
 @media (min-width: 64.06125em) {
   .body-policy__aside {
