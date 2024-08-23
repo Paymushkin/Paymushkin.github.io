@@ -3036,7 +3036,7 @@ p,
 small,
 button,
 a,
-li,
+li:not(.table-point),
 span {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -4228,6 +4228,68 @@ details summary svg {
   z-index: 9;
 }
 
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 16px;
+}
+
+table tr {
+  border: 1px solid #DCE4EA;
+  padding: 16px;
+}
+
+table th,
+table td {
+  padding: 16px;
+}
+
+.table-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 8px;
+}
+
+.table-value {
+  border: none;
+}
+
+.table-item {
+  width: 25%;
+  font-weight: 500;
+}
+@media (max-width: 48.06125em) {
+  .table-item {
+    width: 40%;
+  }
+}
+@media (max-width: 36.06125em) {
+  .table-item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 36.06125em) {
+  table {
+    border: 0;
+  }
+
+  table tr {
+    display: block;
+    padding: 0;
+  }
+
+  table td {
+    display: block;
+    padding: 8px;
+  }
+}
 .header {
   background-color: #FDFDFD;
 }
@@ -8071,6 +8133,8 @@ details summary svg {
 .product-gallery__item img {
   width: 87px;
   height: 87px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .product-gallery__main {
   -ms-flex: 1 1 auto;
@@ -13981,6 +14045,11 @@ details[open] .status-order__right span:last-child {
   line-height: 1.2;
 }
 
+.body-requisites {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
 .company-news {
   position: relative;
   padding: 32px 0 80px;
@@ -15861,6 +15930,10 @@ details[open] .status-order__right span:last-child {
 }
 .form-library__search::placeholder {
   color: #6F8290;
+}
+
+.site-map {
+  padding: 32px 0 80px;
 }
 
 .footer {
