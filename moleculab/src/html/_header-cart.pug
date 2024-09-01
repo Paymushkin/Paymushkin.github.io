@@ -26,7 +26,12 @@
                         img(src="@img/products/item-2.png", alt="")
                     .small-cart__content 
                         h3.small-cart__title УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом
-                        span.small-cart__count 1 шт.
+                        .cart-product__counter.small-cart__counter
+                            .cart-product__decrease
+                                span &ndash;
+                            span.current-quantity 1
+                            .cart-product__increase
+                                span +
                     .small-cart__left
                         span.small-cart__price 68 334 ₽
                         include icons/_bin
@@ -36,7 +41,12 @@
                         img(src="@img/products/item-4.png", alt="")
                     .small-cart__content 
                         h3.small-cart__title Гель-документирующая система ChemiScope
-                        span.small-cart__count 1 шт.
+                        .cart-product__counter.small-cart__counter
+                            .cart-product__decrease
+                                span &ndash;
+                            span.current-quantity 1
+                            .cart-product__increase
+                                span +
                     .small-cart__left
                         span.header-cart__price.small-cart__price 123 334 ₽
                         include icons/_bin
@@ -46,7 +56,12 @@
                         img(src="@img/products/item-2.png", alt="")
                     .small-cart__content 
                         h3.small-cart__title УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом
-                        span.small-cart__count 1 шт.
+                        .cart-product__counter.small-cart__counter
+                            .cart-product__decrease
+                                span &ndash;
+                            span.current-quantity 1
+                            .cart-product__increase
+                                span +
                     .small-cart__left
                         span.small-cart__price 68 334 ₽
                         include icons/_bin
@@ -56,7 +71,13 @@
                         img(src="@img/products/item-4.png", alt="")
                     .small-cart__content 
                         h3.small-cart__title Гель-документирующая система ChemiScope
-                        span.small-cart__count 1 шт.
+                        .cart-product__counter.small-cart__counter
+                            .cart-product__decrease
+                                span &ndash;
+                            span.current-quantity 1
+                            .cart-product__increase
+                                span +
+                            input.product-quantity(type='number' name='product-quantity' hidden='hidden' value='0')
                     .small-cart__left
                         span.header-cart__price.small-cart__price 123 334 ₽
                         include icons/_bin

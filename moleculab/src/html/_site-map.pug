@@ -1,0 +1,343 @@
+section#site-map.site-map
+    .company-event__pattern
+    .company-event__pattern.company-event__pattern-2
+    .site-map__container
+        - const siteMapPage = true;
+        include _breadcrumbs
+        
+        h1.section-title.site-map__title Карта сайта
+        #site-tabs.site-map__body
+            .site-map__left
+                nav.map-tabs__navigation
+                    button(data-tab-button="1").map-tabs__title._tab-active 
+                        h4 Каталог
+                        span.tab-counter 6
+                    button(data-tab-button="2").map-tabs__title 
+                        h4 Покупателям
+                        span.tab-counter 1
+                    button(data-tab-button="3").map-tabs__title 
+                        h4 Клуб привилегий
+                        span.tab-counter 1
+                    button(data-tab-button="4").map-tabs__title 
+                        h4 Разделы
+                        span.tab-counter 1
+                    button(data-tab-button="5").map-tabs__title 
+                        h4 О компании
+                        span.tab-counter 1
+                    button(data-tab-button="6").map-tabs__title 
+                        h4 Производители
+                        span.tab-counter 1
+                    button(data-tab-button="7").map-tabs__title 
+                        h4 Демо
+                        span.tab-counter 1
+                    button(data-tab-button="8").map-tabs__title 
+                        h4 Библиотека
+                        span.tab-counter 1
+                    button(data-tab-button="9").map-tabs__title 
+                        h4 Склад
+                        span.tab-counter 1
+                
+                .question-block.site-map__question
+                    h3.question-block__title Остались вопросы?
+                    p.question-block__text Вы всегда можете задать нам вопрос. Выберите наиболее удобный способ обращения и мы сами свяжемся с вами.
+                    button.button._smaller.question-block__button(data-text="Заказать звонок", data-popup="call-me") 
+                        span Заказать звонок
+
+            .map-tabs__section 
+                h2 Каталог
+                span 6
+
+            div(data-tabs-body="1").map-tabs__content.map-content._content-active
+                details.map-content__details(open)
+                    summary.map-content__summary 
+                        span Оборудование
+                        .summary-icon 
+                            include icons/_arrow-down
+
+                    .header-tabs__grid.map-tabs__grid
+                        .grid-tab._full-list
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/amplifikatory/").grid-tab__link Амплификаторы
+                                li.grid-tab__item
+                                    a(href="./catalog/amplifikatory_v_realnom_vremeni/").grid-tab__link Амплификаторы "в реальном времени"
+                                li.grid-tab__item
+                                    a(href="./catalog/amplifikatory_klassicheskie/").grid-tab__link Амплификаторы классические
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aspiratory/").grid-tab__link Аспираторы
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/gomogenizatory/").grid-tab__link Гомогенизаторы
+                                li.grid-tab__item
+                                    a(href="./catalog/gomogenizatory_s_sharikami_sharikovye_melnitsy/").grid-tab__link Гомогенизаторы с шариками (Шариковые мельницы)
+                                li.grid-tab__item
+                                    a(href="./catalog/ruchnye_gomogenizatory/").grid-tab__link Ручные гомогенизаторы
+                                li.grid-tab__item
+                                    a(href="./catalog/ultrazvukovye_gomogenizatory/").grid-tab__link Ультразвуковые гомогенизаторы
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/vesy/").grid-tab__link Весы
+                                li.grid-tab__item
+                                    a(href="./catalog/vesy_analiticheskie/").grid-tab__link Весы аналитические
+                                li.grid-tab__item
+                                    a(href="./catalog/vesy_pretsizionnye/").grid-tab__link Весы прецизионные
+                                li.grid-tab__item
+                                    a(href="./catalog/polumikrovesy/").grid-tab__link Полумикровесы
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/inkubatory_co2/").grid-tab__link Инкубаторы CO2
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/kriokhranilishcha/").grid-tab__link Криохранилища
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/laboratornye_dozatory/").grid-tab__link Лабораторные дозаторы
+                                li.grid-tab__item
+                                    a(href="./catalog/dozatory_dlya_nakonechnikov/").grid-tab__link Дозаторы для наконечников
+                                li.grid-tab__item
+                                    a(href="./catalog/dozatory_dlya_pipetok_serologicheskikh/").grid-tab__link Дозаторы для пипеток серологических
+                                li.grid-tab__item
+                                    a(href="./catalog/dispensery_butylochnye_dozatory_i_dispensery/").grid-tab__link Диспенсеры (Бутылочные дозаторы и диспенсеры)
+                                li.grid-tab__item
+                                    a(href="./catalog/steppery/").grid-tab__link Степперы
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/mikroskopy/").grid-tab__link Микроскопы
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/mikrotsentrifugi/").grid-tab__link Центрифуги
+                                li.grid-tab__item
+                                    a(href="./catalog/tsentrifugi/").grid-tab__link Микроцентрифуги
+                                li.grid-tab__item
+                                    a(href="./catalog/ultratsentrifugi/").grid-tab__link Ультрацентрифуги
+                                li.grid-tab__item
+                                    a(href="./catalog/tsentrifugi_vysokoskorostnye/").grid-tab__link Центрифуги высокоскоростные
+                                li.grid-tab__item
+                                    a(href="./catalog/tsentrifugi_nizkoskorostnye/").grid-tab__link Центрифуги низкоскоростные
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/sheykery_laboratornye/").grid-tab__link Шейкеры лабораторные
+                                li.grid-tab__item
+                                    a(href="./catalog/vibrostendy_laboratornye/").grid-tab__link Вибростенды лабораторные
+                                li.grid-tab__item
+                                    a(href="./catalog/peremeshivateli_rotatsionnye/").grid-tab__link Перемешиватели ротационные
+                                li.grid-tab__item
+                                    a(href="./catalog/termosheykery/").grid-tab__link Термошейкеры
+                                li.grid-tab__item
+                                    a(href="./catalog/sheykery_3d_i_sheykery_kachayushchie/").grid-tab__link Шейкеры 3D и шейкеры качающие
+                                li.grid-tab__item
+                                    a(href="./catalog/sheykery_orbitalnye/").grid-tab__link Шейкеры орбитальные
+                                li.grid-tab__item
+                                    a(href="./catalog/sheykery_rollernye/").grid-tab__link Шейкеры роллерные
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/analizatory_zhidkosti/").grid-tab__link Анализаторы жидкости
+                                li.grid-tab__item
+                                    a(href="./catalog/titratory/").grid-tab__link Титраторы
+                                li.grid-tab__item
+                                    a(href="./catalog/turbiditory/").grid-tab__link Турбидиторы
+                                li.grid-tab__item
+                                    a(href="./catalog/rn_metry/").grid-tab__link рН-метры
+                                li.grid-tab__item
+                                    a(href="./catalog/analizatory_mnogoparametricheskie/").grid-tab__link Анализаторы многопараметрические
+                                li.grid-tab__item
+                                    a(href="./catalog/konduktometry/").grid-tab__link Кондуктометры
+                                li.grid-tab__item
+                                    a(href="./catalog/oksimetry/").grid-tab__link Оксиметры
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/sistemy_vizualizatsii_geley/").grid-tab__link Системы визуализации гелей
+                                li.grid-tab__item
+                                    a(href="./catalog/sistemy_gel_dokumentiruyushchie_1/").grid-tab__link Системы гель-документирующие
+
+                details.map-content__details
+                    summary.map-content__summary 
+                        span Аксессуары для оборудования
+                        .summary-icon 
+                            include icons/_arrow-down
+
+                    .header-tabs__grid.map-tabs__grid
+                        .grid-tab._full-list
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_avtoklavov/").grid-tab__link Аксессуары для автоклавов
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_vosherov/").grid-tab__link Аксессуары для вошеров
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_gomogenizatorov/").grid-tab__link Аксессуары для гомогенизаторов
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_kontsentratorov_isparitelnykh_termostatov_sheykerov_vorteksov_inkubatorov/").grid-tab__link Аксессуары для концентраторов испарительных, термостатов, шейкеров, вортексов, инкубаторов
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_schetchikov_kletok/").grid-tab__link Аксессуары для счетчиков клеток
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_kriokhranilishch/").grid-tab__link Аксессуары для криохранилищ
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/laboratornye_dozatory/").grid-tab__link Аксессуары для морозильников и холодильников
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_morozilnikov_i_kholodilnikov/").grid-tab__link Микроскопы
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_meshalok/").grid-tab__link Аксессуары для мешалок
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_sistem_vodoochistki/").grid-tab__link Аксессуары для систем водоочистки
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_tsentrifug/").grid-tab__link Аксессуары для центрифуг
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/nasosy_laboratornye/").grid-tab__link Насосы лабораторные
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/aksessuary_dlya_posudomoechnykh_mashin/").grid-tab__link Аксессуары для посудомоечных машин
+
+                details.map-content__details
+                    summary.map-content__summary 
+                        span Лабораторный пластик
+                        .summary-icon 
+                            include icons/_arrow-down
+
+                    .header-tabs__grid.map-tabs__grid
+                        .grid-tab._full-list
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/vannochki_dlya_dozirovaniya_zhidkostey/").grid-tab__link Ванночки для дозирования жидкостей
+                        
+                details.map-content__details
+                    summary.map-content__summary 
+                        span Расходные принадлежности
+                        .summary-icon 
+                            include icons/_arrow-down
+
+                    .header-tabs__grid.map-tabs__grid
+                        .grid-tab._full-list
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/perchatki_meditsinskie/").grid-tab__link Перчатки медицинские
+
+                details.map-content__details
+                    summary.map-content__summary 
+                        span Реагенты
+                        .summary-icon 
+                            include icons/_arrow-down
+
+                    .header-tabs__grid.map-tabs__grid
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/raskhodnye_prinadlezhnosti/").grid-tab__link Реактивы химические
+                                li.grid-tab__item
+                                    a(href="./catalog/organicheskie_soedineniya/").grid-tab__link Органические соединения
+                        
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/belki_i_kletochnyy_analiz/").grid-tab__link Белки и клеточный анализ
+                                li.grid-tab__item
+                                    a(href="./catalog/markery_belkovye/").grid-tab__link Маркеры белковые
+
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/reagenty_dlya_molekulyarnoy_biologii_i_analiza_nukleinovykh_kislot/").grid-tab__link Реагенты для молекулярной биологии и анализа нуклеиновых кислот
+                                li.grid-tab__item
+                                    a(href="./catalog/reagenty_dlya_ngs_sekvenirovaniya/").grid-tab__link Реагенты для NGS секвенирования
+
+
+                        .grid-tab
+                            ul.grid-tab__list
+                                li.grid-tab__item
+                                    a(href="./catalog/reaktivy_dlya_klinicheskikh_i_diagnosticheskikh_tseley/").grid-tab__link Реактивы для клинических и диагностических целей
+                                li.grid-tab__item
+                                    a(href="./catalog/reagenty_dlya_biokhimicheskogo_analiza/").grid-tab__link Реагенты для биохимического анализа
+
+            .map-tabs__section 
+                h2 Покупателям
+                span.tab-counter 1
+
+            div(data-tabs-body="2").map-tabs__content.map-content
+                .header-tabs__grid.map-tabs__grid
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="./how-order/").grid-tab__link Как оформить заказ
+                    
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="./delivery/").grid-tab__link Условия доставки
+
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="./edo/").grid-tab__link Электронный документооборот
+
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="./garantiya/").grid-tab__link Гарантия
+
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="./personal/").grid-tab__link Персональные данные
+                    
+                    .grid-tab
+                        ul.grid-tab__list
+                            li.grid-tab__item
+                                a(href="#").grid-tab__link Реквизиты

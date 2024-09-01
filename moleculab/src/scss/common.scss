@@ -6,7 +6,7 @@ p,
 small,
 button,
 a,
-li,
+li:not(.table-point),
 span {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -1183,4 +1183,65 @@ details {
     background: $gradient-1;
     border-radius: 16px;
     z-index: 9;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 16px;
+}
+
+table tr {
+    border: 1px solid $borderColor-2;
+    padding: 16px;
+}
+
+table th,
+table td {
+    padding: 16px;
+}
+
+.table-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table-value {
+    border: none;
+}
+
+.table-item {
+    width: 25%;
+    font-weight: 500;
+
+    @media (max-width:$mobile) {
+        width: 40%;
+    }
+
+    @media (max-width:$mobileSmall) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $mobileSmall) {
+    table {
+        border: 0;
+    }
+
+    table tr {
+        display: block;
+        padding: 0;
+        // border-bottom: 1px solid $borderColor-2;
+    }
+
+    table td {
+        display: block;
+        padding: 8px;
+        // border-bottom: 1px solid $borderColor-2;
+    }
 }

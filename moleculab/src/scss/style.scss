@@ -121,6 +121,14 @@ body {
         padding-right: 0 !important;
     }
 
+    ._mobile-catalog-active &,
+    ._mobile-menu-active & {
+        display: flex;
+        overflow: hidden;
+        touch-action: none;
+        padding-right: 0 !important;
+    }
+
     &::-webkit-scrollbar {
         .lock & {
             display: none;
@@ -288,6 +296,7 @@ body {
 @import "company-actions";
 @import "company-contacts";
 @import "library";
+@import "site-map";
 
 @import "footer";
 

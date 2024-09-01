@@ -20,6 +20,15 @@ else if cartPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Корзина 
 
+else if requisitesPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Реквизиты
+
 else if orderPage == true
 
     .breadcrumbs.catalog__breadcrumbs
@@ -321,6 +330,15 @@ else if companyActionsPage == true
                 a(href="/").breadcrumbs__link Главная
             li.breadcrumbs__item 
                 .breadcrumbs__link Акции
+
+else if siteMapPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                .breadcrumbs__link Карта сайта
 
 else if companyActionPage == true
 
