@@ -141,8 +141,8 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 4,
+			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
 
@@ -161,29 +161,13 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 
-
 			// Пагинация
 
 			pagination: {
 				el: '.news__pagination',
-				// clickable: true,
+				clickable: true,
 				// type: "fraction",
 			},
-
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "влево/вправо"
-			// navigation: {
-			// 	prevEl: '.navigation .prev',
-			// 	nextEl: '.navigation .next',
-			// },
 
 			// Брейкпоинты
 
@@ -211,19 +195,6 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 			},
-			// События
-			// on: {
-			// 	init: function(swiper) {
-			// 		const allSlides = document.querySelector(".fraction-controll__all");
-			// 		const allSlidesItems = document.querySelectorAll(".slide-main-block:not(.swiper-slide-duplicate)");
-
-			// 		allSlides.textContent = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
-			// 	},
-			// 	slideChange: function(swiper) {
-			// 		const currentSlide = document.querySelector(".fraction-controll__current");
-			// 		currentSlide.textContent = (swiper.realIndex + 1) < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
-			// 	}
-			// }
 		});
 	}
 
@@ -763,6 +734,60 @@ function initSliders() {
 			});
 		});
 
+	}
+
+	if (document.querySelector('.recommended__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.recommended__slider', { // Указываем скласс нужного слайдера
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			slidesPerView: 4,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+
+			// Пагинация
+
+			pagination: {
+				el: '.recommended-paggination',
+				clickable: true,
+				// type: "fraction",
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.recommended-nav__prev',
+				nextEl: '.recommended-nav__next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				576: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+
+		});
 	}
 
 }

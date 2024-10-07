@@ -1185,6 +1185,70 @@ details {
     z-index: 9;
 }
 
+.recommended__slider {
+    // position: relative;
+    margin-bottom: 32px;
+}
+
+.recommended-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px auto 0;
+
+    &__prev,
+    &__next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        color: #545454;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.4;
+        transition: 0.3s ease all;
+        cursor: pointer;
+
+        path {
+            transition: 0.3s ease stroke;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $highlightColor-2;
+
+                path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    &__prev {
+        left: 0;
+        transform: rotate(180deg);
+    }
+
+    &__next {
+        right: 0;
+
+    }
+}
+
+.recommended-paggination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        display: block;
+    }
+}
+
 table {
     border: 1px solid #ccc;
     border-collapse: collapse;

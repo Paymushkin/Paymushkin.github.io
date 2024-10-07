@@ -87,6 +87,47 @@
         @media (max-width:$mobileSmall) {
             gap: 24px;
         }
+
+        ul:not(.social-block__list) {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 20px;
+            color: $textColor;
+            font-size: 16px;
+            line-height: 1.4;
+            list-style: disc;
+
+            li {
+                list-style: disc;
+            }
+
+            @media (max-width:$mobileSmall) {
+                font-size: 14px;
+            }
+        }
+
+        a {
+            color: $highlightColor-1;
+            text-decoration: underline;
+            transition: 0.3s ease color;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $textColor;
+                }
+            }
+        }
+
+        p {
+            color: $textColor;
+            font-size: 16px;
+            line-height: 1.4;
+
+            @media (max-width:$mobileSmall) {
+                font-size: 14px;
+            }
+        }
     }
 
     &__title {

@@ -144,7 +144,8 @@ if (mobileSearchClose) {
 // скролл наверх
 
 document.getElementById('to-top').addEventListener('click', function () {
-    document.querySelector('header').scrollIntoView({
+    window.scrollTo({
+        top: 0,
         behavior: 'smooth'
     });
 });
@@ -1311,7 +1312,7 @@ if (copyButtons.length) {
             event.preventDefault()
             const newDiv = document.createElement('div');
             newDiv.classList.add("info-text")
-            const copyText = btn.parentNode.textContent
+            const copyText = btn.parentNode.textContent.replace(/\s+/g, ' ').trim()
             try {
                 navigator.clipboard.writeText(copyText);
                 newDiv.textContent = "Скопировано!";
