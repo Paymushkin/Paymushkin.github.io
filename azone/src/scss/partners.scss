@@ -1,0 +1,29 @@
+.partners {
+    padding-bottom: 130px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__grid {
+        margin-bottom: 27px;
+    }
+}
+
+.grid-partners {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+
+    &__item {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: 2px solid $highlightColor-2;
+        border-radius: 60px;
+    }
+}

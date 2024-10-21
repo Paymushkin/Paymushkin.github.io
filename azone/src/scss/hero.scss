@@ -1,0 +1,73 @@
+.hero {
+
+    &__body {
+        margin-bottom: 30px;
+        padding: 79px 50px;
+        height: 763px;
+        background-color: $bgColor-2;
+        border-radius: 60px;
+        background-image: url(../img/hero/img-1.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+    }
+
+    &__content {
+        max-width: 393px;
+    }
+
+    &__title {
+        margin-bottom: 58px;
+        color: $mainColor;
+        font-family: "Gotham Pro";
+        font-size: 64px;
+        font-weight: 500;
+    }
+
+    &__text {
+        margin-bottom: 45px;
+        color: $textColor;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 500;
+    }
+
+    &__button {}
+
+    &__nav {
+        margin-bottom: 113px;
+    }
+}
+
+
+.nav-hero {
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 41px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 38px;
+        width: 148px;
+        height: 51px;
+        color: $mainColor;
+        background-color: $bgColor-2;
+        font-size: 22px;
+        line-height: 30;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: 0.3s ease all;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background-color: $highlightColor-2;
+            }
+        }
+    }
+}

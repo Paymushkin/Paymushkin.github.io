@@ -1,0 +1,92 @@
+.projects {
+    margin-bottom: 113px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        width: percent(600, 1005);
+    }
+
+    &__right {
+        flex: 0 0 auto;
+        width: percent(379, 1005);
+    }
+
+    &__slider {
+        // position: relative;
+        // padding-bottom: 50px;
+    }
+}
+
+.projects-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        padding: 30px;
+        max-width: 600px;
+        font-family: "Gotham Pro";
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.projects-swiper {
+
+    &__pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        padding-bottom: 4px;
+        width: 200px;
+        font-family: "PP Neue Machina";
+        border-bottom: 2px solid $highlightColor;
+
+        // .swiper-pagination-current {
+        //     color: $highlightColor;
+        //     font-weight: 800;
+        // }
+
+        // .swiper-pagination-total {
+        //     display: none;
+        // }
+
+        .swiper-pagination-bullet {
+            display: none;
+
+            &-active {
+                display: block;
+                color: $highlightColor;
+                background-color: unset;
+            }
+        }
+    }
+}
+
+.right-projects {
+
+    &__decor {
+        font-family: "Gotham Pro";
+        font-size: 64px;
+        font-weight: 500;
+        opacity: 0.1;
+    }
+}

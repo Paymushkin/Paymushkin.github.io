@@ -1,0 +1,77 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(16);
+	padding: 16px;
+	color: #fff;
+	background-color: $bgColor-2;
+	border: 1px solid transparent;
+	border-radius: 60px;
+	font-size: 20px;
+	text-align: center;
+	overflow: hidden;
+	transition-property: opacity, color, background-color, border-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			// opacity: 0.75;
+		}
+	}
+
+	&:focus {
+		// border-color: $activeColor;
+		outline: none;
+	}
+
+	&:active {
+		// background-color: $activeColor;
+	}
+
+	&._disabled {
+		color: #fff;
+		background-color: #D5D5D5;
+		pointer-events: none;
+	}
+
+	&._highlight {
+		padding: 18px 44px;
+		height: 65px;
+		color: #fff;
+		background-color: $highlightColor;
+		font-weight: 500;
+
+		@media (any-hover: hover) {
+			&:hover {
+				// color: $mainColor;
+				background-color: $mainColor;
+				// border-color: $mainColor;
+			}
+		}
+	}
+
+	&._transparent {
+		padding: 15px 46px;
+		color: $mainColor;
+		background-color: transparent;
+		font-size: 22px;
+		line-height: 30px;
+		font-weight: 500;
+		border: 1px solid $textColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: $highlightColor;
+				border-color: $highlightColor;
+			}
+		}
+	}
+}

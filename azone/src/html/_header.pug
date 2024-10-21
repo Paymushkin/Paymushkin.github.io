@@ -1,0 +1,20 @@
+header.header#header
+	.header__container
+		.header__wrapper
+			a(href="/").header__logo
+				include icons/_logo
+			nav.header__nav.header-menu
+				ul.header-menu__list
+					li.header-menu__item 
+						a(href="").header-menu__link Каталог 
+					li.header-menu__item 
+						a(href="").header-menu__link ИТ-инфраструктура
+					li.header-menu__item
+						a(href="").header-menu__link О компании
+					li.header-menu__item._contact 
+						a(href="tel:+74959026636").header-menu__link 8 (495) 902-66-36
+					li.header-menu__item._contact
+						a(href="mailto:info@azone-it.ru").header-menu__link info@azone-it.ru
+				a(href="#consultation").button.header-menu__button._highlight Консультация
+			button.menu-icon 
+				span

@@ -1,0 +1,15 @@
+section#consultation.consultation
+    .consultation__container
+        .consultation__body
+            h2.consultation__title Получить консультацию
+            p.consultation__text
+                | Отправьте описание задачи, в решении которой нуждается ваш бизнес. 
+                | Мы предложим возможные варианты её решения и рассчитаем стоимость выполнения
+            form(action="#", method="post").consultation__form
+                .consultation__wrapper
+                    input#consultation-name.consultation__input(type="text", name="consultation-name", placeholder="Ваше имя", required)
+                    input#consultation-email.consultation__input(type="email", name="consultation-email", placeholder="E-mail", required)
+                    input#consultation-inn.consultation__input(type="number", name="consultation-inn", placeholder="ИНН Компании", required)
+                    input#consultation-phone.consultation__input(type="tel", name="consultation-phone", placeholder="Телефон", required)
+                    textarea#consultation-comment.consultation__textarea(name="", cols="30", rows="5", placeholder="Комментарий")
+                button.button.consultation__button._highlight(type="submit") Отправить

@@ -1,0 +1,39 @@
+.licenses {
+    padding-bottom: 113px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+        margin-bottom: 25px;
+    }
+}
+
+.item-licenses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 68px 31px 100px;
+    background-color: $bgColor-2;
+    border-radius: 30px;
+
+    &:nth-child(even) {
+        color: #fff;
+        background-color: $highlightColor-2;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    &__text {
+        max-width: 662px;
+        line-height: 27px;
+    }
+}

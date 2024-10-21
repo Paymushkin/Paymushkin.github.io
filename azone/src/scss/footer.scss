@@ -1,0 +1,102 @@
+.footer {
+	padding: 90px 0 58px;
+	background-color: $mainColor;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 82px;
+		border-bottom: 1px solid #fff;
+	}
+
+	&__top-left {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 22px;
+	}
+
+	&__nav {
+		display: flex;
+		gap: 50px;
+	}
+}
+
+.logo-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 27px;
+
+	&__text {
+		color: #fff;
+	}
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	gap: 31px;
+
+	&__icon {
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	path {
+		transition: 0.3s ease fill;
+	}
+}
+
+.menu-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+
+	&__item {
+		color: #fff;
+		margin-bottom: 18px;
+		transition: 0.3s ease color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $highlightColor;
+			}
+		}
+	}
+
+	&__title {
+		color: $highlightColor;
+		font-weight: 700;
+	}
+}
+
+
+.bottom-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 58px;
+
+	&>* {
+		color: #fff;
+		font-size: 16px;
+	}
+
+	&__text {}
+
+	&__link {
+		transition: 0.3s ease color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $highlightColor;
+			}
+		}
+	}
+}

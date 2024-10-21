@@ -1,0 +1,107 @@
+.services {
+    padding-bottom: 130px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__grid {
+        margin-bottom: 27px;
+    }
+}
+
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 237px);
+    gap: 48px;
+
+    &__item {
+        grid-column: span 2;
+        padding: 32px 45px;
+        background-color: $bgColor-2;
+        border-radius: 30px;
+
+        svg {
+            transition: 0.3s ease transform;
+
+            path {
+                fill: $mainColor;
+                transition: 0.3s ease fill;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: translate(5px, -5px) scale(1.25);
+
+                    path {
+                        fill: $highlightColor;
+                    }
+                }
+            }
+        }
+
+        &._black {
+            color: #fff;
+            background-color: #292929;
+
+            path {
+                fill: #fff;
+            }
+        }
+
+        &._highlight {
+            color: #fff;
+            background-color: $highlightColor;
+
+            path {
+                fill: #fff;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    svg {
+
+                        path {
+                            fill: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        &._tall {
+            grid-row: span 2;
+        }
+
+        &._wide {
+            grid-column: span 3;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__count {
+        font-size: 48px;
+        line-height: 66px;
+    }
+}

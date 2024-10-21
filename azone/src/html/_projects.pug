@@ -1,0 +1,36 @@
+section#projects.projects
+    .projects__container
+        .projects__body
+            h2.section-title.projects__title Реализованные
+                br 
+                span проекты
+            
+            .projects__content
+                .projects__left
+                    .projects__slider.swiper
+                        .projects__wrapper.swiper-wrapper
+                            .projects__slide.swiper-slide.projects-slide
+                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                            .projects__slide.swiper-slide.projects-slide
+                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                            .projects__slide.swiper-slide.projects-slide
+                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                    .projects-swiper__pagination
+                    .swiper__navigation.projects-swiper__navigation 
+                        .prev
+                            include icons/_arrow-prev
+                        .next
+                            include icons/_arrow-next
+                
+                .projects__right.right-projects
+                    p.right-projects__decor 
+                        | 539204920
+                        | 492049202
+                        | 403249202
+                        | 539204920
+                        | 492049202
+                        | 403249202
+
+            a(href="/projects.html").see-all.projects__link
+                span Все проекты
+                include icons/_link-all

@@ -1,0 +1,42 @@
+.feedback {
+    margin-bottom: 155px;
+
+    &__body {}
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+        padding-bottom: 65px;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    &__slider {}
+
+    &__wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+.feedback-slide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+
+    &__item {
+        display: flex;
+
+        &:nth-child(even) {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.feedback-swiper {
+    &__navigation {
+        margin: 0;
+    }
+}

@@ -1,0 +1,136 @@
+.recognition {
+    padding-bottom: 113px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+        margin-bottom: 25px;
+    }
+}
+
+.grid-recognition {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 30px);
+    gap: 48px;
+
+    &__item {
+        // padding: 34px 21px;
+        grid-row: span 2;
+        // height: fit-content;
+        background-color: $bgColor-2;
+        border-radius: 30px;
+
+        &._black {
+            background-color: $mainColor;
+        }
+
+        &._highlight {
+            background-color: $highlightColor;
+        }
+
+        &._wide {
+            grid-column: span 2;
+        }
+
+        &._tall {
+            // height: 478px;
+            grid-row: span 3;
+        }
+
+        &._medium {
+            grid-row: span 3;
+        }
+    }
+
+    &__blockquote {
+        flex: 1 1 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 37px;
+        height: 100%;
+    }
+
+    &__author {
+        position: absolute;
+        top: 34px;
+        color: $mainColor;
+        font-style: normal;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Gotham Pro";
+
+        ._black &,
+        ._highlight & {
+            color: #fff;
+        }
+    }
+
+    &__text {
+        // flex: 1 1 auto;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        font-size: 32px;
+        line-height: 44px;
+        word-break: keep-all;
+
+        ._black &,
+        ._highlight & {
+            color: #fff;
+        }
+
+        ._tall & {
+            -webkit-line-clamp: 7;
+        }
+
+        ._medium & {
+            -webkit-line-clamp: 5;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        right: 39px;
+        bottom: 34px;
+        color: $mainColor;
+        align-self: flex-end;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: "Gotham Pro";
+
+        ._black &,
+        ._highlight & {
+            color: #fff;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            width: 100%;
+            height: 1px;
+            background-color: currentColor;
+            transition: 0.3s ease transform;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    content: '';
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+}
