@@ -1,5 +1,5 @@
 .partners {
-    padding-bottom: 130px;
+    @include adaptiveValue("margin-bottom", 113, 50);
 
     &__body {
         display: flex;
@@ -18,12 +18,28 @@
     flex-wrap: wrap;
     margin-bottom: 31px;
 
+    @media (max-width:$tablet) {
+        gap: 20px;
+    }
+
+    @media (max-width:$mobile) {
+        gap: 12px;
+    }
+
     &__item {
         padding: 14px 30px;
-        font-size: 16px;
+        @include adaptiveValue("font-size", 16, 8);
         font-weight: 800;
         text-transform: uppercase;
         border: 2px solid $highlightColor-2;
         border-radius: 60px;
+
+        @media (max-width:$tablet) {
+            padding: 12px 20px;
+        }
+
+        @media (max-width:$mobile) {
+            padding: 8px 16px;
+        }
     }
 }

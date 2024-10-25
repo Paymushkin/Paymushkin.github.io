@@ -20,7 +20,7 @@
 		}
 
 		@media (max-width:$mobile) {
-			padding-left: 0;
+			padding: 0;
 			height: unset;
 			background-color: #fff;
 		}
@@ -40,6 +40,10 @@
 		align-items: center;
 		gap: 47px;
 
+		@media (max-width: em(1280)) {
+			gap: 20px;
+		}
+
 		@media (min-width:$tablet) {
 			// flex: 1 1 auto;
 		}
@@ -57,6 +61,10 @@
 		// justify-content: space-between;
 		align-items: center;
 		gap: 45px;
+
+		@media (max-width: em(1280)) {
+			gap: 20px;
+		}
 	}
 
 	&__item {
@@ -87,5 +95,102 @@
 		@media (max-width: em(1200)) {
 			display: none;
 		}
+	}
+}
+
+
+.menu-icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.3s ease transform;
+
+	@media (min-width:$mobile) {
+		display: none;
+	}
+
+	._menu-active & {
+		transform: translateX(8px);
+	}
+
+	&__line {
+		width: 17px;
+		height: 2px;
+		background-color: $mainColor;
+		border-radius: 10px;
+		transform-origin: 0;
+		transition: 0.3s ease all;
+
+		&:nth-child(2) {
+			transform: translateX(4px);
+		}
+
+		._menu-active & {
+
+			&:first-child {
+				width: 29px;
+				background-color: $highlightColor;
+				transform: rotate(45deg);
+				// transform: rotate(45deg) translateY(14px) translateX(-10px);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:last-child {
+				width: 29px;
+				background-color: $highlightColor;
+				transform: rotate(-45deg);
+				// transform: rotate(-45deg) translateY(-14px) translateX(10px);
+			}
+		}
+
+	}
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 96px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: .5);
+	transform: translateX(-200%);
+	transition: 0.3s ease transform;
+
+	._menu-active & {
+		transform: translateX(0);
+	}
+
+	&__body {
+		padding: 26px 38px 86px;
+		background-color: #fff;
+		border-radius: 0 0 30px 30px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 31px;
+	}
+
+	&__item {
+		font-size: 24px;
+		line-height: 33px;
+	}
+
+	&__button {
+		width: 100%;
+		color: $highlightColor;
+		font-weight: 600;
+		border: 1px solid $highlightColor;
+		border-radius: 15px;
+		background-color: transparent;
 	}
 }
