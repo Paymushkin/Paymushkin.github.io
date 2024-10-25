@@ -1,11 +1,17 @@
 section#consultation.consultation
     .consultation__container
+        h2.section-title.consultation__message
+            | Спасибо за обращение!
+            br
+            | Мы 
+            span скоро 
+            | с&nbsp;Вами свяжемся.
         .consultation__body
-            h2.consultation__title Получить консультацию
-            p.consultation__text
-                | Отправьте описание задачи, в решении которой нуждается ваш бизнес. 
-                | Мы предложим возможные варианты её решения и рассчитаем стоимость выполнения
-            form(action="#", method="post").consultation__form
+            h2.section-title.consultation__title Получить консультацию
+            p.section-subtitle.consultation__text
+                | Отправьте описание задачи, в&nbsp;решении которой нуждается ваш бизнес. 
+                | Мы&nbsp;предложим возможные варианты её&nbsp;решения и&nbsp;рассчитаем стоимость выполнения
+            form(action="#", method="post")#consultation-form.consultation__form
                 .consultation__wrapper
                     input#consultation-name.consultation__input(type="text", name="consultation-name", placeholder="Ваше имя", required)
                     input#consultation-email.consultation__input(type="email", name="consultation-email", placeholder="E-mail", required)

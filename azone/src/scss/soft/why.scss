@@ -1,0 +1,34 @@
+.soft-why {
+    @include adaptiveValue("margin-bottom", 113, 50);
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 38px;
+    }
+
+    &__reason {
+        flex: 0 0 percent(316, 1280);
+        @include adaptiveValue("font-size", 32, 16);
+        font-family: "Gotham Pro";
+        font-weight: 500;
+    }
+
+    &__list {
+        flex: 0 0 percent(706, 1280);
+        width: percent(706, 1280);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 32px 32px 32px 52px;
+        border: 2px solid $highlightColor-2;
+        border-radius: 30px;
+        list-style: disc;
+    }
+
+    &__item {
+        line-height: 1.3;
+        list-style: disc;
+    }
+}

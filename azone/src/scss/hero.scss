@@ -56,11 +56,6 @@
 
     &__title {
         margin-bottom: 58px;
-        color: $mainColor;
-        font-family: "Gotham Pro";
-        line-height: 1;
-        font-weight: 500;
-        @include adaptiveValue("font-size", 64, 40);
 
         @media (max-width:$tablet) {
             margin-bottom: 30px;

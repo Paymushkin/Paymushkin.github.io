@@ -22,3 +22,22 @@ if (mobileConsultationBtn) {
         document.documentElement.classList.remove("_menu-active")
     })
 }
+
+const consultationForm = document.getElementById("consultation-form")
+
+if (consultationForm) {
+    consultationForm.addEventListener("submit", function (e) {
+        e.preventDefault()
+        document.getElementById("consultation").classList.add("_form-sent")
+    })
+}
+
+const spoilers = document.querySelectorAll(".spoiler")
+
+if (spoilers.length) {
+    spoilers.forEach(spoiler => {
+        spoiler.addEventListener("click", () => {
+            spoiler.classList.toggle("_spoiler-open")
+        })
+    });
+}

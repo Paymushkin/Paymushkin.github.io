@@ -1,0 +1,34 @@
+if softPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/about.html").breadcrumbs__link О компании
+            li.breadcrumbs__item 
+                .breadcrumbs__link Программное обеспечение
+
+else if cartPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/category.html").breadcrumbs__link Каталог
+            li.breadcrumbs__item 
+                a(href="/catalog/genomika/").breadcrumbs__link Геномика
+            li.breadcrumbs__item 
+                .breadcrumbs__link УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом
+
+else
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/category.html").breadcrumbs__link Каталог
+            li.breadcrumbs__item 
+                a(href="/catalog/genomika/").breadcrumbs__link Геномика
+            li.breadcrumbs__item 
+                .breadcrumbs__link УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом

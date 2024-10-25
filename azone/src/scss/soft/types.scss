@@ -1,0 +1,24 @@
+.soft-types {
+    @include adaptiveValue("margin-bottom", 113, 50);
+
+    &__body {
+        padding-bottom: 50px;
+        border-bottom: 1px solid $bgColor-2;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        color: #4F4F4F;
+        font-weight: 300;
+        line-height: 1.3;
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}

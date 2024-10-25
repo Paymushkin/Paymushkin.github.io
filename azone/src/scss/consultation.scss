@@ -1,10 +1,22 @@
 .consultation {
     @include adaptiveValue("margin-bottom", 113, 50);
 
+    &__message {
+        display: none;
+
+        ._form-sent & {
+            display: block;
+        }
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        ._form-sent & {
+            display: none;
+        }
     }
 
     &__form {
@@ -13,18 +25,17 @@
 
     &__title {
         margin-bottom: 12px;
-        font-family: "Gotham Pro";
-        // font-size: 36px;
-        @include adaptiveValue("font-size", 36, 32);
-        font-weight: 500;
-        text-align: center;
+        // font-family: "Gotham Pro";
+        // // font-size: 36px;
+        // @include adaptiveValue("font-size", 36, 32);
+        // font-weight: 500;
+        // text-align: center;
     }
 
     &__text {
         margin-bottom: 68px;
         max-width: 470px;
         text-align: center;
-        // font-size: 16px;
         @include adaptiveValue("font-size", 16, 14);
         line-height: 1.2;
 

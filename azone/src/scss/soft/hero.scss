@@ -1,0 +1,15 @@
+.soft-hero {
+    @include adaptiveValue("margin-bottom", 90, 30);
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        margin-bottom: 42px;
+    }
+}
+
+.spoiler-soft {
+    margin-bottom: 24px;
+}
