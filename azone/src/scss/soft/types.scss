@@ -2,8 +2,11 @@
     @include adaptiveValue("margin-bottom", 113, 50);
 
     &__body {
-        padding-bottom: 50px;
-        border-bottom: 1px solid $bgColor-2;
+
+        @media (min-width:$mobileSmall) {
+            padding-bottom: 50px;
+            border-bottom: 1px solid $bgColor-2;
+        }
     }
 
     &__list {
@@ -15,10 +18,11 @@
     &__item {
         color: #4F4F4F;
         font-weight: 300;
+        @include adaptiveValue("font-size", 20, 16);
         line-height: 1.3;
 
         &:first-child {
-            margin-bottom: 20px;
+            @include adaptiveValue("margin-bottom", 20, 14);
         }
     }
 }
