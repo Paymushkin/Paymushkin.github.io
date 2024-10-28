@@ -21,17 +21,23 @@
     }
 
     &__wrapper {
-        margin-bottom: 32px;
+        @include adaptiveValue("margin-bottom", 32, 16);
     }
 
     &__slide {}
 }
 
 .slide-delivery {
+    display: flex;
+    align-items: center;
     padding: 40px;
     line-height: 1.3;
     border: 1px solid $highlightColor;
     border-radius: 30px;
+
+    @media (max-width:$mobileSmall) {
+        font-size: 18px;
+    }
 
     &__text {
         span {

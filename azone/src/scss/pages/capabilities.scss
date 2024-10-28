@@ -3,5 +3,9 @@
 
     &__separator {
         margin-bottom: 58px;
+
+        @media (max-width:$mobile) {
+            display: none;
+        }
     }
 }

@@ -9,7 +9,12 @@
     gap: 30px;
 
     @media (max-width:$tablet) {
+        grid-template-columns: repeat(2, 1fr);
         gap: 18px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        grid-template-columns: 1fr;
     }
 
     &__list {
