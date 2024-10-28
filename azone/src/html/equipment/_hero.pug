@@ -1,0 +1,148 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const equipmentPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title Поставка и обслуживание IT-оборудования
+            p.main-subtitle.page-hero__text 
+                | Мы оказываем услуги по поставке и обслуживанию 
+                | оборудования под задачи любой сложности
+        
+            nav.hero__nav.nav-hero.page-hero__nav
+                ul.nav-hero__list
+                    li.nav-hero__item
+                        a(href="#delivery-time").nav-hero__link Сроки поставки
+                    li.nav-hero__item
+                        a(href="#registry-equipment").nav-hero__link Реестровое оборудование             
+                    li.nav-hero__item
+                        a(href="#why-us").nav-hero__link Почему мы              
+                    li.nav-hero__item
+                        a(href="#capabilities").nav-hero__link Что мы можем
+                    li.nav-hero__item
+                        a(href="#partners").nav-hero__link Партнёры
+
+        .page-hero__softs.softs-grid
+            form(action="#", method="post").select-page__form
+                .select.page-hero__select
+                    .select__title.open-select
+                        span.current-value(data-current="") Направления
+                        include ../icons/_spoiler
+
+                    .select__hidden-block
+                        ul.select__list
+                            li.select__item(data-value="Серверное оборудование") Серверное оборудование
+                            li.select__item(data-value="Сетевое оборудование") Сетевое оборудование
+                            li.select__item(data-value="Системы хранения данных") Системы хранения данных
+                            li.select__item(data-value="ТЗСИ") ТЗСИ
+                            li.select__item(data-value="Операционные системы") Операционные системы
+                            li.select__item(data-value="Источники бесперебойного питания") Источники бесперебойного питания
+                            li.select__item(data-value="Принтеры") Принтеры
+                            li.select__item(data-value="Межсетевые экраны") Межсетевые экраны
+                            li.select__item(data-value="Средства криптографической защиты информации ") Средства криптографической защиты информации 
+                            li.select__item(data-value="Межсетевые экраны ФСТЭК") Межсетевые экраны ФСТЭК
+                            li.select__item(data-value="Системы виртуализации") Системы виртуализации
+                            li.select__item(data-value="DLP-системы") DLP-системы
+
+            //- .spoiler.spoiler-soft
+            //-     .spoiler__text
+            //-         span Направления
+            //-         include ../icons/_spoiler
+            //-     nav.spoiler__hidden-block
+            //-         ul.spoiler__list
+            //-             li.spoiler__item(data-value="Серверное оборудование")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Серверное оборудование
+            //-             li.spoiler__item(data-value="Сетевое оборудование")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Сетевое оборудование
+            //-             li.spoiler__item(data-value="Системы хранения данных")
+            //-                 a(href="#").spoiler__link
+            //-                     span Системы хранения данных
+            //-             li.spoiler__item(data-value="ТЗСИ")
+            //-                 a(href="#").spoiler__link  
+            //-                     span ТЗСИ
+            //-             li.spoiler__item(data-value="Операционные системы")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Операционные системы
+            //-             li.spoiler__item(data-value="Источники бесперебойного питания")
+            //-                 a(href="#").spoiler__link
+            //-                     span Источники бесперебойного питания
+            //-             li.spoiler__item(data-value="Принтеры")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Принтеры
+            //-             li.spoiler__item(data-value="Межсетевые экраны")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Межсетевые экраны
+            //-             li.spoiler__item(data-value="Средства криптографической защиты информации ")
+            //-                 a(href="#").spoiler__link
+            //-                     span Средства криптографической защиты информации 
+            //-             li.spoiler__item(data-value="Межсетевые экраны ФСТЭК")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Межсетевые экраны ФСТЭК 
+            //-             li.spoiler__item(data-value="Системы виртуализации")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Системы виртуализации
+            //-             li.spoiler__item(data-value="DLP-системы")
+            //-                 a(href="#").spoiler__link
+            //-                     span DLP-системы
+
+            ul.softs-grid__list 
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Sharx DC
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «РУСТЭК»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Росплатформа»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Киберпротект»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Positive Technologies
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Content AI
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «МойОфис»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «СёрчИнформ»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Солар»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Атом Безопасность»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Код Безопасности»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «РТ-Информационная безопасность»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Смарт-Софт»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Makves
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «1С»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Стахановец»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Лаборатория Касперского»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link PROMT
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Astra Linux
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «РТ-Информационная безопасность»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Аврора»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Альт»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «РОСА»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «РЕД СОФТ»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «БУЛАТ»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Dr.Web
+                li.softs-grid__item
+                    a(href="#").softs-grid__link «Битрикс24»
+                li.softs-grid__item
+                    a(href="#").softs-grid__link InfoWatch
+                li.softs-grid__item
+                    a(href="#").softs-grid__link Zecurion

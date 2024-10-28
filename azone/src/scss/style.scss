@@ -222,16 +222,20 @@ body {
 @import "feedback";
 @import "consultation";
 @import "breadcrumbs";
-@import "soft/hero";
+@import "pages/hero";
 @import "offer";
 @import "recomendation";
-@import "soft/types";
-@import "soft/why";
+@import "pages/types";
+@import "pages/why";
+@import "pages/delivery";
+@import "pages/registry";
+@import "pages/why-us";
+@import "pages/capabilities";
 @import "footer";
 @import "base/swiper";
 
 // Подключение стилей отдельных страниц
-// @import "animation";
+@import "animation";
 
 // @import "libs/tippy"; 
 @import "base/tabs";

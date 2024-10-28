@@ -1,0 +1,51 @@
+.page-hero {
+    @include adaptiveValue("margin-bottom", 113, 50);
+
+    &__title {
+        margin-bottom: 36px;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        margin-bottom: 42px;
+        padding-left: 20px;
+        line-height: 1.3;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 21px;
+            font-weight: 500;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 90%;
+            background-color: $highlightColor;
+            transform: translateY(5%);
+        }
+    }
+
+    &__nav {
+        margin-bottom: 42px;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 21px;
+        }
+    }
+}
+
+.select-page__form {
+    display: flex;
+    margin-bottom: 24px;
+
+    @media (max-width:$mobileSmall) {
+        margin-bottom: 16px;
+    }
+}

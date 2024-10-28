@@ -1,0 +1,35 @@
+section#soft-types.delivery
+    .delivery__container
+        .delivery__body
+            h2.section-title.delivery__title Сроки поставки IT-оборудования
+            p.delivery__subtitle 
+                | В зависимости от места нахождения 
+                br
+                | продукции 
+                span сроки 
+                | поставки могут быть:
+            
+            .delivery__slider.swiper
+                .delivery__wrapper.swiper-wrapper
+                    .delivery__slide.swiper-slide.slide-delivery
+                        p.slide-delivery__text 
+                            span От 3 до 7 дней
+                            | , если оборудование находится на складе.
+                    .delivery__slide.swiper-slide.slide-delivery
+                        p.slide-delivery__text 
+                            span До 4 недель
+                            | , если оборудование находится в транзите с завода на склад.
+                    .delivery__slide.swiper-slide.slide-delivery
+                        p.slide-delivery__text 
+                            span От 4 недель до 6
+                            | , если оборудование находится ещё на заводе производителя.
+                    .delivery__slide.swiper-slide.slide-delivery
+                        p.slide-delivery__text 
+                            span Тут какие-то еще сроки 
+                            | которых нет в макете
+
+                .swiper__navigation.delivery-swiper__navigation 
+                    .prev
+                        include ../icons/_arrow-prev
+                    .next
+                        include ../icons/_arrow-next

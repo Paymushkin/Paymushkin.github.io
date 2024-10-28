@@ -1,0 +1,7 @@
+.capabilities {
+    @include adaptiveValue("margin-bottom", 113, 50);
+
+    &__separator {
+        margin-bottom: 58px;
+    }
+}

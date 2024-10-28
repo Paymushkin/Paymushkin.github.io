@@ -1,28 +1,54 @@
-section#soft-hero.soft-hero
-    .soft-hero__container
+section#page-hero.page-hero
+    .page-hero__container
         - const softPage = true;
         include ../_breadcrumbs
 
-        .soft-hero__mobile-content
-            h1.main-title.soft-hero__title Лицензионное программное обеспечение
-            p.main-subtitle.soft-hero__text Подбираем, поставляем, внедряем и&nbsp;оказываем техническую поддержку
+        .page-hero__content
+            h1.main-title.page-hero__title Лицензионное программное обеспечение
+            p.main-subtitle.page-hero__text Подбираем, поставляем, внедряем и&nbsp;оказываем техническую поддержку
+            
+            nav.hero__nav.nav-hero.page-hero__nav
+                ul.nav-hero__list
+                    li.nav-hero__item
+                        a(href="#delivery-time").nav-hero__link Наше предложение
+                    li.nav-hero__item
+                        a(href="#registry-equipment").nav-hero__link Рекомендации             
+                    li.nav-hero__item
+                        a(href="#why-us").nav-hero__link Виды ПО              
+                    li.nav-hero__item
+                        a(href="#capabilities").nav-hero__link Зачем лицензи
+                    li.nav-hero__item
+                        a(href="#partners").nav-hero__link Консультация
 
-        .soft-hero__softs.softs-grid
-            .spoiler.spoiler-soft
-                .spoiler__text
-                    span Направления
-                    include ../icons/_spoiler
-                nav.spoiler__hidden-block
-                    ul.spoiler__list
-                        li.spoiler__item(data-value="Операционные системы")
-                            a(href="#").spoiler__link  
-                                span Операционные системы
-                        li.spoiler__item(data-value="Информационная безопасность")
-                            a(href="#").spoiler__link  
-                                span Информационная безопасностьи
-                        li.spoiler__item(data-value="Офисные программы")
-                            a(href="#").spoiler__link
-                                span Офисные программы
+        .page-hero__softs.softs-grid
+
+            form(action="#", method="post").select-page__form
+                .select.page-hero__select
+                    .select__title.open-select
+                        span.current-value(data-current="") Направления
+                        include ../icons/_spoiler
+
+                    .select__hidden-block
+                        ul.select__list
+                            li.select__item(data-value="Операционные системы") Операционные системы
+                            li.select__item(data-value="Информационная безопасность") Информационная безопасность
+                            li.select__item(data-value="Офисные программы") Офисные программы
+
+            //- .spoiler.spoiler-soft
+            //-     .spoiler__text
+            //-         span Направления
+            //-         include ../icons/_spoiler
+            //-     nav.spoiler__hidden-block
+            //-         ul.spoiler__list
+            //-             li.spoiler__item(data-value="Операционные системы")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Операционные системы
+            //-             li.spoiler__item(data-value="Информационная безопасность")
+            //-                 a(href="#").spoiler__link  
+            //-                     span Информационная безопасность
+            //-             li.spoiler__item(data-value="Офисные программы")
+            //-                 a(href="#").spoiler__link
+            //-                     span Офисные программы
 
             ul.softs-grid__list 
                 li.softs-grid__item

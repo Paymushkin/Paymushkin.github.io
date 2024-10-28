@@ -62,7 +62,7 @@ function initSliders() {
 			// Эффекты
 			// effect: 'fade',
 			autoplay: {
-				delay: 3000000,
+				delay: 3000,
 				// disableOnInteraction: false,
 			},
 
@@ -151,7 +151,80 @@ function initSliders() {
 			// Эффекты
 			// effect: 'fade',
 			autoplay: {
-				delay: 3000000,
+				delay: 3000,
+				// disableOnInteraction: false,
+			},
+
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '..projects__slider__navigation .prev',
+				nextEl: '..projects__slider__navigation .next',
+			},
+
+			// Брейкпоинты
+
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	576: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 0,
+			// 		autoHeight: true,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 10,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 20,
+			// 	},
+			// },
+		});
+	}
+
+	if (document.querySelector('.delivery__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.delivery__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			// modules: [Autoplay, Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			slidesPerView: 3,
+			spaceBetween: 40,
+			// autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// parallax: true,
+
+
+			// Эффекты
+			// effect: 'fade',
+			autoplay: {
+				delay: 3000,
 				// disableOnInteraction: false,
 			},
 
@@ -182,8 +255,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.projects-swiper__navigation .prev',
-				nextEl: '.projects-swiper__navigation .next',
+				prevEl: '.delivery-swiper__navigation .prev',
+				nextEl: '.delivery-swiper__navigation .next',
 			},
 
 			// Брейкпоинты
