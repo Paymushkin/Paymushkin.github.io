@@ -20,3 +20,10 @@ section#page-hero.page-hero
                         a(href="#it-market").nav-hero__link Рынок IT
                     li.nav-hero__item
                         a(href="#campaign").nav-hero__link  Акции вендоров
+            
+            .page-hero__search.search-news
+                form(action="#", method="post").search-news__form
+                    .search-news__wrapper
+                        input#search-input(type="search", name="search-input", placeholder="Поиск").search-news__input
+                        button(type="submit").search-news__submit
+                            include ../icons/_search
