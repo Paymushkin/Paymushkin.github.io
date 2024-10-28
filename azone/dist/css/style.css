@@ -3330,7 +3330,7 @@ details[open] summary:before {
 
 @media (min-width: 36.06125em) {
   .no-webp .search-news__form{
-    background-image: url(../../img/news/search-bg.png); }
+    background-image: url(../img/news/search-bg.png); }
   .search-news__form {
     height: 180px;
     background-repeat: no-repeat;
@@ -4105,5 +4105,5 @@ details[open] summary:before {
 
 @media (min-width: 36.06125em){
 
-  .webp .search-news__form{ background-image: url(../../img/news/search-bg.webp); }
+  .webp .search-news__form{ background-image: url(../img/news/search-bg.webp); }
 }
