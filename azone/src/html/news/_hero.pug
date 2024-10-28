@@ -1,0 +1,22 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const newsPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title PRO Медиа
+            p.main-subtitle.page-hero__text
+                | Новости вендоров и&nbsp;рынка, база знаний  —  собираем полезную информацию в&nbsp;IT
+        
+            nav.hero__nav.nav-hero.page-hero__nav
+                ul.nav-hero__list
+                    li.nav-hero__item
+                        a(href="#pro-azone").nav-hero__link PRO Азон
+                    li.nav-hero__item
+                        a(href="#articles").nav-hero__link Статьи           
+                    li.nav-hero__item
+                        a(href="#vendors").nav-hero__link Вендоры
+                    li.nav-hero__item
+                        a(href="#it-market").nav-hero__link Рынок IT
+                    li.nav-hero__item
+                        a(href="#campaign").nav-hero__link  Акции вендоров

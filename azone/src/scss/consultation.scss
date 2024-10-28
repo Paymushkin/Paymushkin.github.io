@@ -1,5 +1,4 @@
 .consultation {
-    @include adaptiveValue("margin-bottom", 113, 50);
 
     &__message {
         display: none;

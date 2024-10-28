@@ -1,6 +1,4 @@
 .hero {
-    // margin-bottom: 113px;
-    @include adaptiveValue("margin-bottom", 113, 50);
 
     &__container {
         padding: 0;

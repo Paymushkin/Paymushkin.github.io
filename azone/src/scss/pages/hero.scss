@@ -1,5 +1,4 @@
 .page-hero {
-    @include adaptiveValue("margin-bottom", 113, 50);
 
     &__title {
         margin-bottom: 36px;
@@ -14,6 +13,10 @@
         margin-bottom: 42px;
         padding-left: 20px;
         line-height: 1.3;
+
+        @media (min-width:$tablet) {
+            max-width: 75%;
+        }
 
         @media (max-width:$mobileSmall) {
             margin-bottom: 21px;
@@ -37,6 +40,20 @@
 
         @media (max-width:$mobileSmall) {
             margin-bottom: 21px;
+        }
+    }
+
+    &__company {
+        padding: 54px;
+        background-color: $bgColor-2;
+        border-radius: 30px;
+
+        p {
+            margin: 0 auto;
+            max-width: 750px;
+            @include adaptiveValue("font-size", 24, 16);
+            line-height: 1.3;
+            font-weight: 500;
         }
     }
 }

@@ -1,0 +1,31 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const aboutPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title О компании
+            p.main-subtitle.page-hero__text
+                | Создание решения, максимально отвечающего технологическим 
+                | возможностям и&nbsp;задачам бизнеса заказчика — приоритетный 
+                | элемент нашей стратегии
+        
+            nav.hero__nav.nav-hero.page-hero__nav
+                ul.nav-hero__list
+                    li.nav-hero__item
+                        a(href="#what-we-do").nav-hero__link Что мы делаем
+                    li.nav-hero__item
+                        a(href="#expertise").nav-hero__link Экспертиза            
+                    li.nav-hero__item
+                        a(href="#feedback").nav-hero__link Отзывы
+                    li.nav-hero__item
+                        a(href="#partners").nav-hero__link Партнёры
+
+            .page-hero__company.about__company
+                p
+                    | Российская ИТ&#8209;компания «Азон» с&nbsp;2003&nbsp;года специализируется 
+                    | на&nbsp;выполнении задач любой сложности в&nbsp;области 
+                    | информационных технологий: от&nbsp;поставки и&nbsp;внедрения решений до&nbsp;комплексного 
+                    | обслуживания ИТ&#8209;инфраструктуры.
+            
+            .separator.about__separator
