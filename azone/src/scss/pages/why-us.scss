@@ -18,6 +18,9 @@
     }
 
     &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         padding-left: 20px;
 
         li {
@@ -38,8 +41,13 @@
         padding: 30px 30px;
         background-color: $bgColor-2;
         border-radius: 30px;
+        @include adaptiveValue("font-size", 20, 16);
         line-height: 1.3;
         font-weight: 300;
+
+        @media (max-width:$mobileSmall) {
+            border-radius: 20px;
+        }
 
         &._black {
             color: #fff;

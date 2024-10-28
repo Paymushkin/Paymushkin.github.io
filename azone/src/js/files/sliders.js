@@ -166,8 +166,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '..projects__slider__navigation .prev',
-				nextEl: '..projects__slider__navigation .next',
+				prevEl: '.projects__slider__navigation .prev',
+				nextEl: '.projects__slider__navigation .next',
 			},
 
 			// Брейкпоинты
@@ -239,12 +239,12 @@ function initSliders() {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
 					// autoHeight: true,
 				},
 				576: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
 					// autoHeight: true,
 				},
 				768: {
