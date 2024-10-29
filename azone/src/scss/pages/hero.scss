@@ -48,6 +48,11 @@
         background-color: $bgColor-2;
         border-radius: 30px;
 
+        @media (max-width:$mobile) {
+            padding: 20px;
+            border-radius: 20px;
+        }
+
         p {
             margin: 0 auto;
             max-width: 750px;

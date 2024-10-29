@@ -603,7 +603,9 @@ details[open] summary:before {
 	border-radius: 30px;
 
 	@media (max-width:$mobileSmall) {
+		padding: 20px;
 		font-size: 18px;
+		border-radius: 20px;
 	}
 
 	&__text {
