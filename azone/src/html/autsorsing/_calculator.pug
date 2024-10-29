@@ -1,0 +1,35 @@
+section#calculator.calculator
+    .calculator__container 
+        h2.section-title.calculator__title Цены и тарифы
+        .calculator__body
+            form(action="#", method="post").calculator__price.price-calculator
+                .price-calculator__field
+                    input#compQuantity.price-calculator__input(type="number", name="quantity", min="0", max="99" placeholder="Компьютерное оборудование")
+                    span.price-calculator__text Компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи
+                .price-calculator__field
+                    input#serverQuantity.price-calculator__input(type="number", name="quantity", min="0", max="300" placeholder="Серверное оборудование")
+                    span.price-calculator__text Физические и виртуальные серверы, службы или сервисы
+                .price-calculator__field
+                    input#techQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Оргтехника и сетевое оборудование")
+                    span.price-calculator__text Принтеры, сканеры, копиры, маршрутизаторы, коммутаторы
+                .price-calculator__field
+                    input#branchQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Количество филиалов")
+                    span.price-calculator__text Филиалы в Москве и Московской области
+                .price-calculator__field
+                    select#MaintenanceMode.price-calculator__select
+                        option(value='8x5') 8x5
+                        option(value='12x7') 12x7
+                        option(value='24x7') 24x7
+                    span.price-calculator__text Режим IT-обслуживания
+                    
+                
+                button#inputSubmit(type="submit").button._standart.price-calculator__button Рассчитать
+
+            p.calculator__text
+                | Минимальная стоимость комплексного обслуживания IT&#8209;инфраструктуры 
+                | составляет 12&nbsp;000 рублей. Если у&nbsp;вас&nbsp;сложная ИТ&#8209;инфраструктура 
+                | или&nbsp;вы&nbsp;хотите указать дополнительные сведения — отправьте запрос 
+                | на&nbsp;консультацию, так&nbsp;как в&nbsp;данном случае на&nbsp;цену влияют и&nbsp;другие 
+                | факторы, которые не&nbsp;учтены в&nbsp;калькуляторе расчета. 
+                | Наши сотрудники оперативно ответят вам в&nbsp;течение рабочего 
+                | дня с&nbsp;9 &nbsp;тра до&nbsp;7&nbsp;вечера по&nbsp;Москве.

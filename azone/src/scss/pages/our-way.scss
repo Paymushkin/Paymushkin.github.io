@@ -1,0 +1,57 @@
+.our-way {}
+
+.grid-our-way {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiveValue("gap", 45, 18);
+    margin-bottom: 50px;
+
+    @media (max-width: em(1200)) {
+        // grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+        width: 200px;
+        height: 200px;
+        line-height: 1.3;
+        background-color: $bgColor-2;
+        border-radius: 30px;
+
+        @media (max-width:$mobile) {
+            width: 155px;
+            height: 155px;
+            font-size: 16px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            width: 140px;
+            height: 140px;
+        }
+
+        &._black {
+            color: #fff;
+            background-color: $mainColor;
+        }
+
+        &._highlight {
+            color: #fff;
+            background-color: $highlightColor;
+        }
+
+        &._highlight-2 {
+            color: #fff;
+            background-color: $highlightColor-2;
+        }
+    }
+
+    &__text {
+        @media (max-width:$mobile) {
+            text-align: center;
+        }
+    }
+}

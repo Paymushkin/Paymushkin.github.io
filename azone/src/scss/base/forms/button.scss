@@ -57,6 +57,31 @@
 		}
 	}
 
+	&._standart {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 38px;
+		color: #fff;
+		height: 44px;
+		background-color: $highlightColor;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		transition: 0.3s ease all;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+				background-color: #fff;
+				border-color: $mainColor;
+			}
+		}
+
+		// @media (max-width:$mobile) {
+		// 	font-size: 16px;
+		// }
+	}
+
 	&._transparent {
 		padding: 15px 46px;
 		color: $mainColor;

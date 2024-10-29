@@ -1,0 +1,91 @@
+.why-we {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
+
+        @media (max-width:$mobile) {
+            gap: 30px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            gap: 20px;
+        }
+    }
+
+    &__left {
+        flex: 1 1 percent(350, 1180);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width:$tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-family: "Gotham Pro";
+        @include adaptiveValue("font-size", 48, 32);
+        line-height: 1.3;
+        font-weight: 500;
+
+        @media (max-width:$tablet) {
+            text-align: center;
+        }
+    }
+
+    &__right {
+        flex: 1 1 percent(700, 1180);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (max-width:$mobile) {
+            gap: 18px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        background-color: $bgColor-2;
+        border-radius: 30px;
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: 1.3;
+        text-align: center;
+
+        @media (max-width:$mobile) {
+            padding: 18px;
+            border-radius: 20px;
+        }
+
+        &._highlight-2 {
+            color: #fff;
+            background-color: $highlightColor-2;
+        }
+    }
+
+    &__button {
+        align-self: flex-start;
+
+        @media (max-width:$tablet) {
+            align-self: center;
+        }
+
+        @media (max-width:$mobileSmall) {
+            align-self: stretch;
+        }
+    }
+}

@@ -469,6 +469,24 @@ body::after {
   font-weight: 500;
 }
 
+.button._standart {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0 38px;
+  color: #fff;
+  height: 44px;
+  background-color: #95C11F;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
 .button._transparent {
   padding: 15px 46px;
   color: #333333;
@@ -952,6 +970,10 @@ input[type=number] {
   gap: 16px;
 }
 
+.softs-grid__list:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .softs-grid__item {
   font-size: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1217,7 +1239,6 @@ details[open] summary:before {
 
 .accordion {
   margin: 0 auto;
-  max-width: 800px;
 }
 
 .accordion__details {
@@ -1235,7 +1256,6 @@ details[open] summary:before {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  max-width: 540px;
   font-weight: 500;
   line-height: 1.3;
   outline: none;
@@ -1259,7 +1279,6 @@ details[open] summary:before {
 .accordion__details p {
   padding-top: 12px;
   padding-right: 50px;
-  width: 660px;
   max-width: 90%;
   color: #4F4F4F;
   font-weight: 300;
@@ -1279,6 +1298,35 @@ details[open] summary:before {
   .accordion__details p {
     font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
   }
+}
+
+.accordion__details ul {
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-left: 20px;
+  max-width: 90%;
+  color: #4F4F4F;
+  font-weight: 300;
+  line-height: 1.3;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .accordion__details ul {
+    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .accordion__details ul {
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.accordion__details ul li {
+  list-style: disc;
 }
 
 .accordion__details[open] p {
@@ -1380,7 +1428,7 @@ details[open] summary:before {
   gap: 20px;
 }
 
-.nav-hero__item {
+.nav-hero__link {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1402,37 +1450,37 @@ details[open] summary:before {
 }
 
 @supports (padding-left: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     padding-left: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem );
   }
 }
 
 @supports not (padding-left: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     padding-left: calc(1rem + 1.375 * (100vw - 64rem) / 56);
   }
 }
 
 @supports (padding-right: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     padding-right: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem );
   }
 }
 
 @supports not (padding-right: clamp( 1rem , -0.5714285714rem  +  2.4553571429vw , 2.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     padding-right: calc(1rem + 1.375 * (100vw - 64rem) / 56);
   }
 }
 
 @supports (font-size: clamp( 1.125rem , 0.8392857143rem  +  0.4464285714vw , 1.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     font-size: clamp( 1.125rem , 0.8392857143rem  +  0.4464285714vw , 1.375rem );
   }
 }
 
 @supports not (font-size: clamp( 1.125rem , 0.8392857143rem  +  0.4464285714vw , 1.375rem )) {
-  .nav-hero__item {
+  .nav-hero__link {
     font-size: calc(1.125rem + 0.25 * (100vw - 64rem) / 56);
   }
 }
@@ -2322,6 +2370,28 @@ details[open] summary:before {
   margin-bottom: 36px;
 }
 
+.page-hero__list {
+  padding-left: 20px;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+@supports (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+  .page-hero__list {
+    font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+  .page-hero__list {
+    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.page-hero__list li {
+  list-style: disc;
+}
+
 .page-hero__text {
   position: relative;
   margin-bottom: 42px;
@@ -2340,6 +2410,10 @@ details[open] summary:before {
   -webkit-transform: translateY(5%);
       -ms-transform: translateY(5%);
           transform: translateY(5%);
+}
+
+.page-hero__text p {
+  margin-bottom: 20px;
 }
 
 .page-hero__nav {
@@ -3097,6 +3171,322 @@ details[open] summary:before {
   transition: 0.3s ease transform;
 }
 
+.calculator__title {
+  text-align: left;
+}
+
+.calculator__text {
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .calculator__text {
+    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .calculator__text {
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.price-calculator {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.price-calculator__field {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+@supports (gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem )) {
+  .price-calculator__field {
+    gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem );
+  }
+}
+
+@supports not (gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem )) {
+  .price-calculator__field {
+    gap: calc(0.25rem + 5.25 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.price-calculator__input {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  width: 33.3898305085%;
+  padding: 12px 24px;
+  color: #333333;
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  border-radius: 10px;
+  border: 1px solid #DADADA;
+  outline: none;
+  -webkit-transition: 0.3s ease border-color;
+  -o-transition: 0.3s ease border-color;
+  transition: 0.3s ease border-color;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__input {
+    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__input {
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.price-calculator__input::-webkit-input-placeholder {
+  color: #333333;
+  font-weight: 300;
+}
+
+.price-calculator__input::-moz-placeholder {
+  color: #333333;
+  font-weight: 300;
+}
+
+.price-calculator__input:-ms-input-placeholder {
+  color: #333333;
+  font-weight: 300;
+}
+
+.price-calculator__input::-ms-input-placeholder {
+  color: #333333;
+  font-weight: 300;
+}
+
+.price-calculator__input::placeholder {
+  color: #333333;
+  font-weight: 300;
+}
+
+.price-calculator__input:focus {
+  border-color: #95C11F;
+}
+
+.price-calculator__select {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  width: 33.3898305085%;
+  padding: 12px 24px;
+  color: #333333;
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  border-radius: 10px;
+  border: 1px solid #DADADA;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url(../img/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  outline: none;
+  -webkit-transition: 0.3s ease border-color;
+  -o-transition: 0.3s ease border-color;
+  transition: 0.3s ease border-color;
+  cursor: pointer;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__select {
+    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__select {
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.price-calculator__select:focus {
+  border-color: #95C11F;
+}
+
+.price-calculator__text {
+  -ms-flex: 1 1 59.3220338983%;
+      flex: 1 1 59.3220338983%;
+  padding-bottom: 10px;
+  width: 59.3220338983%;
+  font-weight: 300;
+  text-transform: lowercase;
+  border-bottom: 1px solid #DADADA;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__text {
+    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+  .price-calculator__text {
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.price-calculator__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.grid-our-way {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 50px;
+}
+
+@supports (gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem )) {
+  .grid-our-way {
+    gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem );
+  }
+}
+
+@supports not (gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem )) {
+  .grid-our-way {
+    gap: calc(1.125rem + 1.6875 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.grid-our-way__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 18px;
+  width: 200px;
+  height: 200px;
+  line-height: 1.3;
+  background-color: #EFEEEE;
+  border-radius: 30px;
+}
+
+.grid-our-way__item._black {
+  color: #fff;
+  background-color: #333333;
+}
+
+.grid-our-way__item._highlight {
+  color: #fff;
+  background-color: #95C11F;
+}
+
+.grid-our-way__item._highlight-2 {
+  color: #fff;
+  background-color: #814997;
+}
+
+.why-we__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 40px;
+}
+
+.why-we__left {
+  -ms-flex: 1 1 29.6610169492%;
+      flex: 1 1 29.6610169492%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 30px;
+}
+
+.why-we__title {
+  font-family: "Gotham Pro";
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@supports (font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem )) {
+  .why-we__title {
+    font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem );
+  }
+}
+
+@supports not (font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem )) {
+  .why-we__title {
+    font-size: calc(2rem + 1 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.why-we__right {
+  -ms-flex: 1 1 59.3220338983%;
+      flex: 1 1 59.3220338983%;
+}
+
+.why-we__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 32px;
+}
+
+.why-we__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 32px;
+  background-color: #EFEEEE;
+  border-radius: 30px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+  .why-we__item {
+    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+  .why-we__item {
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.why-we__item._highlight-2 {
+  color: #fff;
+  background-color: #814997;
+}
+
+.why-we__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .footer {
   padding: 90px 0 58px;
   background-color: #333333;
@@ -3733,6 +4123,34 @@ details[open] summary:before {
     gap: 18px;
   }
 
+  .price-calculator__input {
+    width: 60%;
+  }
+
+  .price-calculator__select {
+    width: 60%;
+  }
+
+  .why-we__body {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+
+  .why-we__left {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+
+  .why-we__title {
+    text-align: center;
+  }
+
+  .why-we__button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
   .footer {
     padding: 60px 0;
   }
@@ -3785,6 +4203,10 @@ details[open] summary:before {
 
   .softs-grid__list {
     gap: 12px;
+  }
+
+  .softs-grid__list:not(:last-child) {
+    margin-bottom: 16px;
   }
 
   .softs-grid__item {
@@ -3929,6 +4351,37 @@ details[open] summary:before {
     max-width: 80%;
   }
 
+  .price-calculator__input {
+    padding: 8px 16px;
+  }
+
+  .price-calculator__select {
+    padding: 8px 16px;
+  }
+
+  .grid-our-way__item {
+    width: 155px;
+    height: 155px;
+    font-size: 16px;
+  }
+
+  .grid-our-way__text {
+    text-align: center;
+  }
+
+  .why-we__body {
+    gap: 30px;
+  }
+
+  .why-we__list {
+    gap: 18px;
+  }
+
+  .why-we__item {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
   .footer {
     padding: 40px 0;
   }
@@ -3990,6 +4443,10 @@ details[open] summary:before {
 
   .page-hero__title {
     margin-bottom: 16px;
+  }
+
+  .page-hero__list {
+    display: none;
   }
 
   .page-hero__text {
@@ -4062,6 +4519,35 @@ details[open] summary:before {
     display: none;
   }
 
+  .price-calculator__input {
+    padding: 6px 12px;
+  }
+
+  .price-calculator__select {
+    padding: 6px 12px;
+  }
+
+  .price-calculator__button {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+
+  .grid-our-way__item {
+    width: 140px;
+    height: 140px;
+  }
+
+  .why-we__body {
+    gap: 20px;
+  }
+
+  .why-we__button {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+
   .footer {
     padding: 22px 0;
   }
@@ -4071,9 +4557,38 @@ details[open] summary:before {
   }
 }
 
+@media (max-width: 23.4375em) {
+  .price-calculator__field {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+
+  .price-calculator__input {
+    width: 100%;
+  }
+
+  .price-calculator__select {
+    width: 100%;
+  }
+
+  .price-calculator__text {
+    padding: 0;
+    width: 100%;
+    border: none;
+    text-transform: none;
+    font-weight: 700;
+  }
+}
+
 @media (any-hover: hover) {
   .button._highlight:hover {
     background-color: #333333;
+  }
+
+  .button._standart:hover {
+    color: #333333;
+    background-color: #fff;
+    border-color: #333333;
   }
 
   .button._transparent:hover {
@@ -4114,7 +4629,7 @@ details[open] summary:before {
     background-color: #EFEEEE;
   }
 
-  .nav-hero__item:hover {
+  .nav-hero__link:hover {
     color: #fff;
     background-color: #814997;
   }

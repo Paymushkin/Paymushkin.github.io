@@ -8,6 +8,21 @@
         }
     }
 
+    &__list {
+        padding-left: 20px;
+        text-transform: lowercase;
+        @include adaptiveValue("font-size", 24, 16);
+        font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            display: none;
+        }
+
+        li {
+            list-style: disc;
+        }
+    }
+
     &__text {
         position: relative;
         margin-bottom: 42px;
@@ -32,6 +47,10 @@
             height: 90%;
             background-color: $highlightColor;
             transform: translateY(5%);
+        }
+
+        p {
+            margin-bottom: 20px;
         }
     }
 
