@@ -1,0 +1,76 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const vendorPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title UTINET
+            p.main-subtitle.page-hero__text
+                | Компания по&nbsp;производству полного цикла 
+                | отечественных систем хранения данных (далее — СХД) 
+                | и&nbsp;виртуализации, серверного оборудования, 
+                | а&nbsp;также программного обеспечения (далее — ПО).
+        
+            .page-hero__softs.softs-grid
+                form(action="#", method="post").select-page__form
+                    .select.page-hero__select
+                        .select__title.open-select
+                            span.current-value(data-current="") Направления
+                            include ../icons/_spoiler
+                        
+                        .select__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Системы хранения данных") Системы хранения данных
+                                li.select__item(data-value="Серверы") Серверы
+                                li.select__item(data-value="Программное обеспечение") Программное обеспечение
+                            
+                ul.softs-grid__list 
+                    li.softs-grid__item
+                        a(href="#item-1").softs-grid__link UTINET Corenetic R240
+                    li.softs-grid__item
+                        a(href="#item-2").softs-grid__link UTINET Corenetic R280
+                    li.softs-grid__item
+                        a(href="#item-3").softs-grid__link UTINET Corenetic R180
+                    li.softs-grid__item
+                        a(href="#item-4").softs-grid__link UTINET UView
+                    li.softs-grid__item
+                        a(href="#item-5").softs-grid__link UTINET Corenetic R420
+                    li.softs-grid__item
+                        a(href="#item-6").softs-grid__link UTINET Corenetic R410
+                    li.softs-grid__item
+                        a(href="#item-7").softs-grid__link UTINET Corenetic R290
+                    li.softs-grid__item
+                        a(href="#item-8").softs-grid__link UTINET Nasco
+                    li.softs-grid__item
+                        a(href="#item-9").softs-grid__link UTINET Corenetic R610
+                    li.softs-grid__item
+                        a(href="#item-10").softs-grid__link UTINET Opticstack Q218-100-Q1-R
+                    li.softs-grid__item
+                        a(href="#item-11").softs-grid__link UTINET Opticstack Q248-25-Q1-R
+                    li.softs-grid__item
+                        a(href="#item-12").softs-grid__link UTINET Opticstack Q218-100-R1-R
+                    li.softs-grid__item
+                        a(href="#item-13").softs-grid__link UTINET Opticstack Q248-25-R1-R
+                    li.softs-grid__item
+                        a(href="#item-14").softs-grid__link UTINET UMC
+                    li.softs-grid__item
+                        a(href="#item-15").softs-grid__link UTINET UThin
+                    li.softs-grid__item
+                        a(href="#item-16").softs-grid__link UTINET Efiris
+                    li.softs-grid__item
+                        a(href="#item-17").softs-grid__link UTINET Backdat
+                    li.softs-grid__item
+                        a(href="#item-18").softs-grid__link UTINET Orchestrix
+                    li.softs-grid__item
+                        a(href="#item-19").softs-grid__link UTINET Virtualdesk
+                    li.softs-grid__item
+                        a(href="#item-20").softs-grid__link UTINET Glovirt
+                
+                    //- nav.hero__nav.nav-hero.page-hero__nav
+                    //-     ul.nav-hero__list
+                    //-         li.nav-hero__item
+                    //-             .nav-hero__link(data-filter="systems") Системы хранения данных
+                    //-         li.nav-hero__item
+                    //-             .nav-hero__link(data-filter="servers") Серверы           
+                    //-         li.nav-hero__item
+                    //-             .nav-hero__link(data-filter="po") Программное обеспечение
