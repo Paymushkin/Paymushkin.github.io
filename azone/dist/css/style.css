@@ -3712,6 +3712,83 @@ details[open] summary:before {
           transform: translateY(-50%);
 }
 
+.certificates-grid__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+  grid-template-columns: repeat(9, 1fr);
+  gap: 32px;
+}
+
+.certificates-grid__item {
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
+  border-radius: 30px;
+  border: 2px solid #dadada;
+  font-family: "Gotham Pro";
+  font-weight: 500;
+}
+
+.certificates-grid__item svg {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  -webkit-transition: 0.3s ease transform;
+  -o-transition: 0.3s ease transform;
+  transition: 0.3s ease transform;
+}
+
+.certificates-grid__item svg path {
+  -webkit-transition: 0.3s ease fill;
+  -o-transition: 0.3s ease fill;
+  transition: 0.3s ease fill;
+}
+
+.certificates-grid__link {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 60px;
+  height: 500px;
+}
+
+.certificates-grid__title {
+  line-height: 1.2;
+}
+
+@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+  .certificates-grid__title {
+    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+  .certificates-grid__title {
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+  }
+}
+
+.certificates-grid__status {
+  max-width: 90%;
+  line-height: 1.2;
+}
+
+@supports (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+  .certificates-grid__status {
+    font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+  .certificates-grid__status {
+    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 62.5);
+  }
+}
+
 .footer {
   padding: 90px 0 58px;
   background-color: #333333;
@@ -4084,6 +4161,16 @@ details[open] summary:before {
     border-right: 1px solid #DADADA;
   }
 
+  .certificates-grid__item:nth-child(5n-1) {
+    -ms-grid-column-span: 5;
+    grid-column: span 5;
+  }
+
+  .certificates-grid__item:nth-child(5n) {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+
   .footer__top {
     border-bottom: 1px solid #fff;
   }
@@ -4146,6 +4233,11 @@ details[open] summary:before {
 
   .plan__button {
     font-size: 14px;
+  }
+
+  .certificates-grid__link {
+    padding: 40px;
+    height: 350px;
   }
 }
 
@@ -4428,6 +4520,27 @@ details[open] summary:before {
         align-self: center;
   }
 
+  .certificates-grid__list {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .certificates-grid__item {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
+  .certificates-grid__item:nth-child(4n-1) {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+
+  .certificates-grid__link {
+    padding: 32px;
+    height: 300px;
+  }
+
   .footer {
     padding: 60px 0;
   }
@@ -4694,6 +4807,11 @@ details[open] summary:before {
     border-radius: 20px;
   }
 
+  .certificates-grid__link {
+    padding: 20px;
+    height: 250px;
+  }
+
   .footer {
     padding: 40px 0;
   }
@@ -4894,6 +5012,25 @@ details[open] summary:before {
     height: 4px;
   }
 
+  .certificates-grid__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .certificates-grid__item {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+
+  .certificates-grid__item:nth-child(4n-1) {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+
+  .certificates-grid__link {
+    height: 200px;
+  }
+
   .footer {
     padding: 22px 0;
   }
@@ -5005,6 +5142,16 @@ details[open] summary:before {
 
   .plan__button:hover {
     background-color: #333333;
+  }
+
+  .certificates-grid__item:hover svg {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .certificates-grid__item:hover svg path {
+    fill: #95C11F;
   }
 
   .social-icons__icon:hover path {
