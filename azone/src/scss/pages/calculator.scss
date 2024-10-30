@@ -27,8 +27,9 @@
         align-items: center;
         @include adaptiveValue("gap", 88, 4);
 
-        @media (max-width: em(375)) {
+        @media (max-width:$mobileSmall) {
             flex-direction: column-reverse;
+            gap: 8px;
         }
     }
 
@@ -55,9 +56,6 @@
 
         @media (max-width:$mobileSmall) {
             padding: 6px 12px;
-        }
-
-        @media (max-width: em(375)) {
             width: 100%;
         }
 
@@ -109,7 +107,7 @@
             padding: 6px 12px;
         }
 
-        @media (max-width: em(375)) {
+        @media (max-width:$mobileSmall) {
             width: 100%;
         }
     }
@@ -123,7 +121,7 @@
         text-transform: lowercase;
         border-bottom: 1px solid #DADADA;
 
-        @media (max-width: em(375)) {
+        @media (max-width:$mobileSmall) {
             padding: 0;
             width: 100%;
             border: none;

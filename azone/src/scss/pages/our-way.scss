@@ -33,6 +33,11 @@
             height: 140px;
         }
 
+        @media (max-width: em(350)) {
+            width: 135px;
+            height: 135px;
+        }
+
         &._black {
             color: #fff;
             background-color: $mainColor;

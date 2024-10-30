@@ -51,7 +51,11 @@
 		}
 
 		@media (max-width:$mobileSmall) {
-			gap: 22px;
+			gap: 20px;
+		}
+
+		@media (max-width: em(400)) {
+			gap: 16px;
 		}
 	}
 }
@@ -112,7 +116,7 @@
 
 	&__item {
 		color: #fff;
-		@include adaptiveValue("font-size", 20, 12);
+		@include adaptiveValue("font-size", 20, 10);
 		// margin-bottom: 18px;
 		transition: 0.3s ease color;
 

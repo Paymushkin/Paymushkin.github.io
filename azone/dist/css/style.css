@@ -3704,15 +3704,15 @@ details[open] summary:before {
   transition: 0.3s ease color;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem )) {
   .menu-footer__item {
-    font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem )) {
   .menu-footer__item {
-    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.625rem + 0.625 * (100vw - 20rem) / 62.5);
   }
 }
 
@@ -4049,6 +4049,12 @@ details[open] summary:before {
 
   .plan__button {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 25em) {
+  .footer__nav {
+    gap: 16px;
   }
 }
 
@@ -4728,12 +4734,31 @@ details[open] summary:before {
     display: none;
   }
 
+  .price-calculator__field {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    gap: 8px;
+  }
+
   .price-calculator__input {
     padding: 6px 12px;
+    width: 100%;
   }
 
   .price-calculator__select {
     padding: 6px 12px;
+  }
+
+  .price-calculator__select {
+    width: 100%;
+  }
+
+  .price-calculator__text {
+    padding: 0;
+    width: 100%;
+    border: none;
+    text-transform: none;
+    font-weight: 700;
   }
 
   .price-calculator__button {
@@ -4766,30 +4791,14 @@ details[open] summary:before {
   }
 
   .footer__nav {
-    gap: 22px;
+    gap: 20px;
   }
 }
 
-@media (max-width: 23.4375em) {
-  .price-calculator__field {
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-  }
-
-  .price-calculator__input {
-    width: 100%;
-  }
-
-  .price-calculator__select {
-    width: 100%;
-  }
-
-  .price-calculator__text {
-    padding: 0;
-    width: 100%;
-    border: none;
-    text-transform: none;
-    font-weight: 700;
+@media (max-width: 21.875em) {
+  .grid-our-way__item {
+    width: 135px;
+    height: 135px;
   }
 }
 
