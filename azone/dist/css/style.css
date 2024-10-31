@@ -414,7 +414,7 @@ body::after {
 }
 
 [class*=__container] {
-  max-width: 80rem;
+  max-width: 73.75rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin: 0 auto;
@@ -704,15 +704,15 @@ input {
   color: #fff;
 }
 
-@supports (margin-bottom: clamp( 3.125rem , 1.865rem  +  6.3vw , 7.0625rem )) {
+@supports (margin-bottom: clamp( 3.125rem , 1.725rem  +  7vw , 7.0625rem )) {
   section {
-    margin-bottom: clamp( 3.125rem , 1.865rem  +  6.3vw , 7.0625rem );
+    margin-bottom: clamp( 3.125rem , 1.725rem  +  7vw , 7.0625rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 3.125rem , 1.865rem  +  6.3vw , 7.0625rem )) {
+@supports not (margin-bottom: clamp( 3.125rem , 1.725rem  +  7vw , 7.0625rem )) {
   section {
-    margin-bottom: calc(3.125rem + 3.9375 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(3.125rem + 3.9375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -784,27 +784,27 @@ input {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .main-title {
-    font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem );
+    font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem );
   }
 }
 
-@supports not (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports not (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .main-title {
-    font-size: calc(2rem + 2 * (100vw - 20rem) / 62.5);
+    font-size: calc(2rem + 2 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .main-subtitle {
-    font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .main-subtitle {
-    font-size: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -815,39 +815,39 @@ input {
   font-weight: 500;
 }
 
-@supports (margin-bottom: clamp( 1.875rem , 1.275rem  +  3vw , 3.75rem )) {
+@supports (margin-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.3333333333vw , 3.75rem )) {
   .section-title {
-    margin-bottom: clamp( 1.875rem , 1.275rem  +  3vw , 3.75rem );
+    margin-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.3333333333vw , 3.75rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.875rem , 1.275rem  +  3vw , 3.75rem )) {
+@supports not (margin-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.3333333333vw , 3.75rem )) {
   .section-title {
-    margin-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .section-title {
-    font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem );
+    font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem );
   }
 }
 
-@supports not (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports not (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .section-title {
-    font-size: calc(2rem + 2 * (100vw - 20rem) / 62.5);
+    font-size: calc(2rem + 2 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 2.075rem  +  -1vw , 1.875rem )) {
+@supports (margin-bottom: clamp( 1.25rem , 2.0972222222rem  +  -1.1111111111vw , 1.875rem )) {
   .section-title._with-text {
-    margin-bottom: clamp( 1.25rem , 2.075rem  +  -1vw , 1.875rem );
+    margin-bottom: clamp( 1.25rem , 2.0972222222rem  +  -1.1111111111vw , 1.875rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 2.075rem  +  -1vw , 1.875rem )) {
+@supports not (margin-bottom: clamp( 1.25rem , 2.0972222222rem  +  -1.1111111111vw , 1.875rem )) {
   .section-title._with-text {
-    margin-bottom: calc(1.875rem + -0.625 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1.875rem + -0.625 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -862,27 +862,27 @@ input {
   text-align: center;
 }
 
-@supports (margin-bottom: clamp( 1.875rem , 1.415rem  +  2.3vw , 3.3125rem )) {
+@supports (margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem )) {
   .section-subtitle {
-    margin-bottom: clamp( 1.875rem , 1.415rem  +  2.3vw , 3.3125rem );
+    margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.875rem , 1.415rem  +  2.3vw , 3.3125rem )) {
+@supports not (margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem )) {
   .section-subtitle {
-    margin-bottom: calc(1.875rem + 1.4375 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1.875rem + 1.4375 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 0.875rem , 0.675rem  +  1vw , 1.5rem )) {
+@supports (font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem )) {
   .section-subtitle {
-    font-size: clamp( 0.875rem , 0.675rem  +  1vw , 1.5rem );
+    font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.675rem  +  1vw , 1.5rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem )) {
   .section-subtitle {
-    font-size: calc(0.875rem + 0.625 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.625 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -904,15 +904,15 @@ input {
   transition: 0.3s ease color;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .see-all {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .see-all {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1179,15 +1179,15 @@ input {
   background-color: #DADADA;
 }
 
-@supports (margin-top: clamp( 1.875rem , 0.475rem  +  7vw , 6.25rem )) {
+@supports (margin-top: clamp( 1.875rem , 0.3194444444rem  +  7.7777777778vw , 6.25rem )) {
   .separator {
-    margin-top: clamp( 1.875rem , 0.475rem  +  7vw , 6.25rem );
+    margin-top: clamp( 1.875rem , 0.3194444444rem  +  7.7777777778vw , 6.25rem );
   }
 }
 
-@supports not (margin-top: clamp( 1.875rem , 0.475rem  +  7vw , 6.25rem )) {
+@supports not (margin-top: clamp( 1.875rem , 0.3194444444rem  +  7.7777777778vw , 6.25rem )) {
   .separator {
-    margin-top: calc(1.875rem + 4.375 * (100vw - 20rem) / 62.5);
+    margin-top: calc(1.875rem + 4.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1255,15 +1255,15 @@ details[open] summary:before {
   transition: all 0.3s ease;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .accordion__details summary {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .accordion__details summary {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1279,15 +1279,15 @@ details[open] summary:before {
   transition: all 0.3s ease;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .accordion__details p {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .accordion__details p {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1304,15 +1304,15 @@ details[open] summary:before {
   transition: all 0.3s ease;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .accordion__details ul {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .accordion__details ul {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1325,15 +1325,15 @@ details[open] summary:before {
           animation: appear 0.3s ease;
 }
 
-@supports (margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .simple__wrapper {
-    margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .simple__wrapper {
-    margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1395,15 +1395,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 0.9375rem , 0.7975rem  +  0.7vw , 1.375rem )) {
+@supports (font-size: clamp( 0.9375rem , 0.7819444444rem  +  0.7777777778vw , 1.375rem )) {
   .hero__text {
-    font-size: clamp( 0.9375rem , 0.7975rem  +  0.7vw , 1.375rem );
+    font-size: clamp( 0.9375rem , 0.7819444444rem  +  0.7777777778vw , 1.375rem );
   }
 }
 
-@supports not (font-size: clamp( 0.9375rem , 0.7975rem  +  0.7vw , 1.375rem )) {
+@supports not (font-size: clamp( 0.9375rem , 0.7819444444rem  +  0.7777777778vw , 1.375rem )) {
   .hero__text {
-    font-size: calc(0.9375rem + 0.4375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.9375rem + 0.4375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1513,7 +1513,7 @@ details[open] summary:before {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  gap: 45px;
+  gap: 30px;
 }
 
 .header-menu__item {
@@ -1718,15 +1718,15 @@ details[open] summary:before {
   line-height: 1.4;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem )) {
+@supports (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
   .grid-services__title {
-    font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem );
+    font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
   .grid-services__title {
-    font-size: calc(0.75rem + 1.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 1.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1753,15 +1753,15 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (font-size: clamp( 1.125rem , 0.525rem  +  3vw , 3rem )) {
+@supports (font-size: clamp( 1.125rem , 0.4583333333rem  +  3.3333333333vw , 3rem )) {
   .grid-services__count {
-    font-size: clamp( 1.125rem , 0.525rem  +  3vw , 3rem );
+    font-size: clamp( 1.125rem , 0.4583333333rem  +  3.3333333333vw , 3rem );
   }
 }
 
-@supports not (font-size: clamp( 1.125rem , 0.525rem  +  3vw , 3rem )) {
+@supports not (font-size: clamp( 1.125rem , 0.4583333333rem  +  3.3333333333vw , 3rem )) {
   .grid-services__count {
-    font-size: calc(1.125rem + 1.875 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.125rem + 1.875 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1803,15 +1803,15 @@ details[open] summary:before {
   font-weight: 600;
 }
 
-@supports (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .item-licenses__title {
-    font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .item-licenses__title {
-    font-size: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1820,15 +1820,15 @@ details[open] summary:before {
   line-height: 1.2;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .item-licenses__text {
-    font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .item-licenses__text {
-    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1847,15 +1847,15 @@ details[open] summary:before {
   border-bottom: 1px solid #dadada;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .licenses-list__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .licenses-list__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1940,15 +1940,15 @@ details[open] summary:before {
   font-family: "Gotham Pro";
 }
 
-@supports (font-size: clamp( 0.75rem , 0.39rem  +  1.8vw , 1.875rem )) {
+@supports (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 1.875rem )) {
   .grid-recognition__author {
-    font-size: clamp( 0.75rem , 0.39rem  +  1.8vw , 1.875rem );
+    font-size: clamp( 0.75rem , 0.35rem  +  2vw , 1.875rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.39rem  +  1.8vw , 1.875rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 1.875rem )) {
   .grid-recognition__author {
-    font-size: calc(0.75rem + 1.125 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 1.125 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1966,15 +1966,15 @@ details[open] summary:before {
   word-break: keep-all;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem )) {
+@supports (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
   .grid-recognition__text {
-    font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem );
+    font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.35rem  +  2vw , 2rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
   .grid-recognition__text {
-    font-size: calc(0.75rem + 1.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 1.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2003,15 +2003,15 @@ details[open] summary:before {
   font-family: "Gotham Pro";
 }
 
-@supports (font-size: clamp( 0.5rem , 0.26rem  +  1.2vw , 1.25rem )) {
+@supports (font-size: clamp( 0.5rem , 0.2333333333rem  +  1.3333333333vw , 1.25rem )) {
   .grid-recognition__link {
-    font-size: clamp( 0.5rem , 0.26rem  +  1.2vw , 1.25rem );
+    font-size: clamp( 0.5rem , 0.2333333333rem  +  1.3333333333vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.5rem , 0.26rem  +  1.2vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.5rem , 0.2333333333rem  +  1.3333333333vw , 1.25rem )) {
   .grid-recognition__link {
-    font-size: calc(0.5rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.5rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2062,15 +2062,15 @@ details[open] summary:before {
   border-radius: 60px;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem )) {
+@supports (font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem )) {
   .grid-partners__item {
-    font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem );
+    font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem )) {
   .grid-partners__item {
-    font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2127,15 +2127,15 @@ details[open] summary:before {
   text-align: center;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.19rem  +  2.8vw , 2.5rem )) {
+@supports (font-size: clamp( 0.75rem , 0.1277777778rem  +  3.1111111111vw , 2.5rem )) {
   .projects-slide__title {
-    font-size: clamp( 0.75rem , 0.19rem  +  2.8vw , 2.5rem );
+    font-size: clamp( 0.75rem , 0.1277777778rem  +  3.1111111111vw , 2.5rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.19rem  +  2.8vw , 2.5rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.1277777778rem  +  3.1111111111vw , 2.5rem )) {
   .projects-slide__title {
-    font-size: calc(0.75rem + 1.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 1.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2167,15 +2167,15 @@ details[open] summary:before {
   opacity: 0.1;
 }
 
-@supports (font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .right-projects__decor {
-    font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem );
+    font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .right-projects__decor {
-    font-size: calc(1.25rem + 2.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 2.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2254,15 +2254,15 @@ details[open] summary:before {
   line-height: 1.2;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.835rem  +  0.2vw , 1rem )) {
+@supports (font-size: clamp( 0.875rem , 0.8305555556rem  +  0.2222222222vw , 1rem )) {
   .consultation__text {
-    font-size: clamp( 0.875rem , 0.835rem  +  0.2vw , 1rem );
+    font-size: clamp( 0.875rem , 0.8305555556rem  +  0.2222222222vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.835rem  +  0.2vw , 1rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.8305555556rem  +  0.2222222222vw , 1rem )) {
   .consultation__text {
-    font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2394,15 +2394,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .page-hero__list {
-    font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem );
+    font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .page-hero__list {
-    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2451,15 +2451,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .page-hero__company p {
-    font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem );
+    font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .page-hero__company p {
-    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2474,15 +2474,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .page-hero__licenses {
-    font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .page-hero__licenses {
-    font-size: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2581,15 +2581,15 @@ details[open] summary:before {
   transition: 0.3s ease all;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-offer__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-offer__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2647,15 +2647,15 @@ details[open] summary:before {
   transition: 0.3s ease all;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-recomendation__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-recomendation__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2682,15 +2682,15 @@ details[open] summary:before {
   font-style: normal;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.71rem  +  0.2vw , 0.875rem )) {
+@supports (font-size: clamp( 0.75rem , 0.7055555556rem  +  0.2222222222vw , 0.875rem )) {
   .grid-recomendation__author {
-    font-size: clamp( 0.75rem , 0.71rem  +  0.2vw , 0.875rem );
+    font-size: clamp( 0.75rem , 0.7055555556rem  +  0.2222222222vw , 0.875rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.71rem  +  0.2vw , 0.875rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.7055555556rem  +  0.2222222222vw , 0.875rem )) {
   .grid-recomendation__author {
-    font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2708,27 +2708,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .soft-types__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .soft-types__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (margin-bottom: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (margin-bottom: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .soft-types__item:first-child {
-    margin-bottom: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    margin-bottom: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (margin-bottom: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .soft-types__item:first-child {
-    margin-bottom: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2749,15 +2749,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .soft-why__reason {
-    font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (font-size: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .soft-why__reason {
-    font-size: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2781,27 +2781,27 @@ details[open] summary:before {
   list-style: disc;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .soft-why__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .soft-why__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports (margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .delivery__title {
-    margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem );
+    margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1rem , 0.68rem  +  1.6vw , 2rem )) {
+@supports not (margin-bottom: clamp( 1rem , 0.6444444444rem  +  1.7777777778vw , 2rem )) {
   .delivery__title {
-    margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2856,15 +2856,15 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (font-size: clamp( 1.125rem , 1.085rem  +  0.2vw , 1.25rem )) {
+@supports (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
   .grid-registry__item {
-    font-size: clamp( 1.125rem , 1.085rem  +  0.2vw , 1.25rem );
+    font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1.125rem , 1.085rem  +  0.2vw , 1.25rem )) {
+@supports not (font-size: clamp( 1.125rem , 1.0805555556rem  +  0.2222222222vw , 1.25rem )) {
   .grid-registry__item {
-    font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -2911,15 +2911,15 @@ details[open] summary:before {
   font-weight: 300;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-why-us__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-why-us__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3024,15 +3024,15 @@ details[open] summary:before {
   font-weight: 300;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-expertise__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .grid-expertise__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3064,15 +3064,15 @@ details[open] summary:before {
   font-weight: 700;
 }
 
-@supports (font-size: clamp( 1rem , 0.52rem  +  2.4vw , 2.5rem )) {
+@supports (font-size: clamp( 1rem , 0.4666666667rem  +  2.6666666667vw , 2.5rem )) {
   .news-expertise__year {
-    font-size: clamp( 1rem , 0.52rem  +  2.4vw , 2.5rem );
+    font-size: clamp( 1rem , 0.4666666667rem  +  2.6666666667vw , 2.5rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.52rem  +  2.4vw , 2.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.4666666667rem  +  2.6666666667vw , 2.5rem )) {
   .news-expertise__year {
-    font-size: calc(1rem + 1.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 1.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3089,15 +3089,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .news-expertise__title {
-    font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem );
+    font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem );
   }
 }
 
-@supports not (font-size: clamp( 2rem , 1.36rem  +  3.2vw , 4rem )) {
+@supports not (font-size: clamp( 2rem , 1.2888888889rem  +  3.5555555556vw , 4rem )) {
   .news-expertise__title {
-    font-size: calc(2rem + 2 * (100vw - 20rem) / 62.5);
+    font-size: calc(2rem + 2 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3105,15 +3105,15 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .news-expertise__text {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .news-expertise__text {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3128,27 +3128,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (margin-bottom: clamp( 0.625rem , 0.025rem  +  3vw , 2.5rem )) {
+@supports (margin-bottom: clamp( 0.625rem , -0.0416666667rem  +  3.3333333333vw , 2.5rem )) {
   .article-item__title {
-    margin-bottom: clamp( 0.625rem , 0.025rem  +  3vw , 2.5rem );
+    margin-bottom: clamp( 0.625rem , -0.0416666667rem  +  3.3333333333vw , 2.5rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 0.625rem , 0.025rem  +  3vw , 2.5rem )) {
+@supports not (margin-bottom: clamp( 0.625rem , -0.0416666667rem  +  3.3333333333vw , 2.5rem )) {
   .article-item__title {
-    margin-bottom: calc(0.625rem + 1.875 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(0.625rem + 1.875 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .article-item__title {
-    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .article-item__title {
-    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3157,27 +3157,27 @@ details[open] summary:before {
   font-weight: 300;
 }
 
-@supports (margin-bottom: clamp( 0.5625rem , 0.3825rem  +  0.9vw , 1.125rem )) {
+@supports (margin-bottom: clamp( 0.5625rem , 0.3625rem  +  1vw , 1.125rem )) {
   .article-item__text {
-    margin-bottom: clamp( 0.5625rem , 0.3825rem  +  0.9vw , 1.125rem );
+    margin-bottom: clamp( 0.5625rem , 0.3625rem  +  1vw , 1.125rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 0.5625rem , 0.3825rem  +  0.9vw , 1.125rem )) {
+@supports not (margin-bottom: clamp( 0.5625rem , 0.3625rem  +  1vw , 1.125rem )) {
   .article-item__text {
-    margin-bottom: calc(0.5625rem + 0.5625 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(0.5625rem + 0.5625 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .article-item__text {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .article-item__text {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3194,15 +3194,15 @@ details[open] summary:before {
   cursor: pointer;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .article-item__to {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .article-item__to {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3221,15 +3221,15 @@ details[open] summary:before {
   font-weight: 300;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .calculator__text {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .calculator__text {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3251,15 +3251,15 @@ details[open] summary:before {
       align-items: center;
 }
 
-@supports (gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem )) {
+@supports (gap: clamp( 0.25rem , -1.6166666667rem  +  9.3333333333vw , 5.5rem )) {
   .price-calculator__field {
-    gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem );
+    gap: clamp( 0.25rem , -1.6166666667rem  +  9.3333333333vw , 5.5rem );
   }
 }
 
-@supports not (gap: clamp( 0.25rem , -1.43rem  +  8.4vw , 5.5rem )) {
+@supports not (gap: clamp( 0.25rem , -1.6166666667rem  +  9.3333333333vw , 5.5rem )) {
   .price-calculator__field {
-    gap: calc(0.25rem + 5.25 * (100vw - 20rem) / 62.5);
+    gap: calc(0.25rem + 5.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3279,15 +3279,15 @@ details[open] summary:before {
   transition: 0.3s ease border-color;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__input {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__input {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3344,15 +3344,15 @@ details[open] summary:before {
   cursor: pointer;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__select {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__select {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3370,15 +3370,15 @@ details[open] summary:before {
   border-bottom: 1px solid #DADADA;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__text {
-    font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.755rem  +  0.6vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.7416666667rem  +  0.6666666667vw , 1.25rem )) {
   .price-calculator__text {
-    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3508,15 +3508,15 @@ details[open] summary:before {
   font-weight: 300;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .components__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .components__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3534,15 +3534,15 @@ details[open] summary:before {
   margin-bottom: 50px;
 }
 
-@supports (gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem )) {
+@supports (gap: clamp( 1.125rem , 0.525rem  +  3vw , 2.8125rem )) {
   .grid-our-way {
-    gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem );
+    gap: clamp( 1.125rem , 0.525rem  +  3vw , 2.8125rem );
   }
 }
 
-@supports not (gap: clamp( 1.125rem , 0.585rem  +  2.7vw , 2.8125rem )) {
+@supports not (gap: clamp( 1.125rem , 0.525rem  +  3vw , 2.8125rem )) {
   .grid-our-way {
-    gap: calc(1.125rem + 1.6875 * (100vw - 20rem) / 62.5);
+    gap: calc(1.125rem + 1.6875 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3604,15 +3604,15 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem )) {
+@supports (font-size: clamp( 2rem , 1.6444444444rem  +  1.7777777778vw , 3rem )) {
   .why-we__title {
-    font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem );
+    font-size: clamp( 2rem , 1.6444444444rem  +  1.7777777778vw , 3rem );
   }
 }
 
-@supports not (font-size: clamp( 2rem , 1.68rem  +  1.6vw , 3rem )) {
+@supports not (font-size: clamp( 2rem , 1.6444444444rem  +  1.7777777778vw , 3rem )) {
   .why-we__title {
-    font-size: calc(2rem + 1 * (100vw - 20rem) / 62.5);
+    font-size: calc(2rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3643,15 +3643,15 @@ details[open] summary:before {
   text-align: center;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .why-we__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .why-we__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3692,39 +3692,39 @@ details[open] summary:before {
   font-weight: 500;
 }
 
-@supports (font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .vendor-item__title {
-    font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem );
+    font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .vendor-item__title {
-    font-size: calc(1.25rem + 2.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 2.75 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .vendor-item__title._small {
-    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .vendor-item__title._small {
-    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .vendor-item__text {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .vendor-item__text {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3736,15 +3736,15 @@ details[open] summary:before {
   position: relative;
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .vendor-item__item {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .vendor-item__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3810,15 +3810,15 @@ details[open] summary:before {
   line-height: 1.2;
 }
 
-@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .certificates-grid__title {
-    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .certificates-grid__title {
-    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3827,15 +3827,15 @@ details[open] summary:before {
   line-height: 1.2;
 }
 
-@supports (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .certificates-grid__status {
-    font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem );
+    font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.84rem  +  0.8vw , 1.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.8222222222rem  +  0.8888888889vw , 1.5rem )) {
   .certificates-grid__status {
-    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3846,15 +3846,15 @@ details[open] summary:before {
       flex-direction: column;
 }
 
-@supports (gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports (gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .projects-grid__list {
-    gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem );
+    gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem );
   }
 }
 
-@supports not (gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports not (gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .projects-grid__list {
-    gap: calc(1.25rem + 2.75 * (100vw - 20rem) / 62.5);
+    gap: calc(1.25rem + 2.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3874,27 +3874,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .projects-grid__title {
-    margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .projects-grid__title {
-    margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .projects-grid__title {
-    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .projects-grid__title {
-    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3908,27 +3908,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .projects-grid__text {
-    gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem );
   }
 }
 
-@supports not (gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .projects-grid__text {
-    gap: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    gap: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .projects-grid__text {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .projects-grid__text {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3957,15 +3957,15 @@ details[open] summary:before {
       flex-direction: column;
 }
 
-@supports (gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports (gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .recomendation-grid__list {
-    gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem );
+    gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem );
   }
 }
 
-@supports not (gap: clamp( 1.25rem , 0.37rem  +  4.4vw , 4rem )) {
+@supports not (gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
   .recomendation-grid__list {
-    gap: calc(1.25rem + 2.75 * (100vw - 20rem) / 62.5);
+    gap: calc(1.25rem + 2.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -3985,27 +3985,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .recomendation-grid__title {
-    margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (margin-bottom: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .recomendation-grid__title {
-    margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .recomendation-grid__title {
-    font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem );
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
   }
 }
 
-@supports not (font-size: clamp( 1.25rem , 1.01rem  +  1.2vw , 2rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .recomendation-grid__title {
-    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 62.5);
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -4019,27 +4019,27 @@ details[open] summary:before {
   line-height: 1.3;
 }
 
-@supports (gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .recomendation-grid__text {
-    gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem );
   }
 }
 
-@supports not (gap: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (gap: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .recomendation-grid__text {
-    gap: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    gap: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .recomendation-grid__text {
-    font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem );
+    font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.92rem  +  0.4vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9111111111rem  +  0.4444444444vw , 1.25rem )) {
   .recomendation-grid__text {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -4114,15 +4114,15 @@ details[open] summary:before {
   color: #fff;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem )) {
+@supports (font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem )) {
   .logo-footer__text {
-    font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem );
+    font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.67rem  +  0.4vw , 1rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.6611111111rem  +  0.4444444444vw , 1rem )) {
   .logo-footer__text {
-    font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -4155,15 +4155,15 @@ details[open] summary:before {
   transition: 0.3s ease color;
 }
 
-@supports (font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem )) {
+@supports (font-size: clamp( 0.625rem , 0.4027777778rem  +  1.1111111111vw , 1.25rem )) {
   .menu-footer__item {
-    font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem );
+    font-size: clamp( 0.625rem , 0.4027777778rem  +  1.1111111111vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.625rem , 0.425rem  +  1vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.625rem , 0.4027777778rem  +  1.1111111111vw , 1.25rem )) {
   .menu-footer__item {
-    font-size: calc(0.625rem + 0.625 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.625rem + 0.625 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -4187,15 +4187,15 @@ details[open] summary:before {
   font-size: 16px;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .bottom-footer__text {
-    font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .bottom-footer__text {
-    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -4205,15 +4205,15 @@ details[open] summary:before {
   transition: 0.3s ease color;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .bottom-footer__link {
-    font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem );
+    font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.59rem  +  0.8vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.5722222222rem  +  0.8888888889vw , 1.25rem )) {
   .bottom-footer__link {
-    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 62.5);
+    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
