@@ -26,98 +26,100 @@ section#page-hero.page-hero
             form(action="#", method="post").select-page__form
                 .select.page-hero__select
                     .select__title.open-select
-                        span.current-value(data-current="") Направления
+                        span.current-value(data-current="") Все направления
                         include ../icons/_spoiler
 
                     .select__hidden-block
                         ul.select__list
-                            li.select__item(data-value="Серверное оборудование") Серверное оборудование
-                            li.select__item(data-value="Сетевое оборудование") Сетевое оборудование
-                            li.select__item(data-value="Системы хранения данных") Системы хранения данных
-                            li.select__item(data-value="ТЗСИ") ТЗСИ
-                            li.select__item(data-value="Операционные системы") Операционные системы
-                            li.select__item(data-value="Источники бесперебойного питания") Источники бесперебойного питания
-                            li.select__item(data-value="Принтеры") Принтеры
-                            li.select__item(data-value="Межсетевые экраны") Межсетевые экраны
-                            li.select__item(data-value="Средства криптографической защиты информации ") Средства криптографической защиты информации 
-                            li.select__item(data-value="Межсетевые экраны ФСТЭК") Межсетевые экраны ФСТЭК
-                            li.select__item(data-value="Системы виртуализации") Системы виртуализации
-                            li.select__item(data-value="DLP-системы") DLP-системы
+                            li.select__item(data-value="Все направления", data-category="0") Все направления
+                            li.select__item(data-value="Серверное оборудование", data-category="1") Серверное оборудование
+                            li.select__item(data-value="Сетевое оборудование", data-category="2") Сетевое оборудование
+                            li.select__item(data-value="Системы хранения данных", data-category="3") Системы хранения данных
+                            li.select__item(data-value="ТЗСИ", data-category="4") ТЗСИ
+                            li.select__item(data-value="Операционные системы", data-category="5") Операционные системы
+                            li.select__item(data-value="Источники бесперебойного питания", data-category="6") Источники бесперебойного питания
+                            li.select__item(data-value="Принтеры", data-category="7") Принтеры
+                            li.select__item(data-value="Межсетевые экраны", data-category="8") Межсетевые экраны
+                            li.select__item(data-value="Средства криптографической защиты информации", data-category="9") Средства криптографической защиты информации 
+                            li.select__item(data-value="Межсетевые экраны ФСТЭК", data-category="10") Межсетевые экраны ФСТЭК
+                            li.select__item(data-value="Системы виртуализации", data-category="11") Системы виртуализации
+                            li.select__item(data-value="DLP-системы", data-category="12") DLP-системы
 
-            ul.softs-grid__list 
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Минцифры РФ
-                li.softs-grid__item
-                    a(href="#").softs-grid__link ФСТЭК РФ
-                li.softs-grid__item
-                    a(href="#").softs-grid__link ФСБ РФ
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Минобороны РФ
+            .filter-list
+                ul.softs-grid__list 
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link Минцифры РФ
+                    li.softs-grid__item(data-category="2")
+                        a(href="#").softs-grid__link ФСТЭК РФ
+                    li.softs-grid__item(data-category="3")
+                        a(href="#").softs-grid__link ФСБ РФ
+                    li.softs-grid__item(data-category="4")
+                        a(href="#").softs-grid__link Минобороны РФ
 
-            ul.softs-grid__list 
-                li.softs-grid__item
-                    a(href="#").softs-grid__link UTINET
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Рикор Электроникс»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link VECOM
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Sitronics Group
-                li.softs-grid__item
-                    a(href="#").softs-grid__link DEPO Computers
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Аладдин Р.Д.»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «НОРСИ-ТРАНС»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link BI.ZONE
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Гравитон»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Hyperline
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «АйТи Бастион»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Kraftway
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Инфинет»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Гарда Технологии»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «ИнфоТеКС»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Фактор-ТС»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Eltex
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «ОКБ САПР»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Вектор Технологии»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Аквариус»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Код Безопасности»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link YADRO
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Катюша»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link iRU
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Айдеко»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link RDW Computers
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Mobile Inform Group
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Vinteo
-                li.softs-grid__item
-                    a(href="#").softs-grid__link QTECH
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «ЦСТБИ»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link Wellink
-                li.softs-grid__item
-                    a(href="#").softs-grid__link «Аванпост»
-                li.softs-grid__item
-                    a(href="#").softs-grid__link АО «НПО «Эшелон»
+                ul.softs-grid__list 
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link UTINET
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «Рикор Электроникс»
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link VECOM
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link Sitronics Group
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link DEPO Computers
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «Аладдин Р.Д.»
+                    li.softs-grid__item(data-category="2")
+                        a(href="#").softs-grid__link «НОРСИ-ТРАНС»
+                    li.softs-grid__item(data-category="2")
+                        a(href="#").softs-grid__link BI.ZONE
+                    li.softs-grid__item(data-category="2")
+                        a(href="#").softs-grid__link «Гравитон»
+                    li.softs-grid__item(data-category="2")
+                        a(href="#").softs-grid__link Hyperline
+                    li.softs-grid__item(data-category="3")
+                        a(href="#").softs-grid__link «АйТи Бастион»
+                    li.softs-grid__item(data-category="3")
+                        a(href="#").softs-grid__link Kraftway
+                    li.softs-grid__item(data-category="3")
+                        a(href="#").softs-grid__link «Инфинет»
+                    li.softs-grid__item(data-category="4")
+                        a(href="#").softs-grid__link «Гарда Технологии»
+                    li.softs-grid__item(data-category="4")
+                        a(href="#").softs-grid__link «ИнфоТеКС»
+                    li.softs-grid__item(data-category="5")
+                        a(href="#").softs-grid__link «Фактор-ТС»
+                    li.softs-grid__item(data-category="6")
+                        a(href="#").softs-grid__link Eltex
+                    li.softs-grid__item(data-category="7")
+                        a(href="#").softs-grid__link «ОКБ САПР»
+                    li.softs-grid__item(data-category="8")
+                        a(href="#").softs-grid__link «Вектор Технологии»
+                    li.softs-grid__item(data-category="9")
+                        a(href="#").softs-grid__link «Аквариус»
+                    li.softs-grid__item(data-category="10")
+                        a(href="#").softs-grid__link «Код Безопасности»
+                    li.softs-grid__item(data-category="11")
+                        a(href="#").softs-grid__link YADRO
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «Катюша»
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link iRU
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «Айдеко»
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link RDW Computers
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link Mobile Inform Group
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link Vinteo
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link QTECH
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «ЦСТБИ»
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link Wellink
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link «Аванпост»
+                    li.softs-grid__item(data-category="1")
+                        a(href="#").softs-grid__link АО «НПО «Эшелон»

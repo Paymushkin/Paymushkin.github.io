@@ -15,55 +15,56 @@ section#page-hero.page-hero
                 form(action="#", method="post").select-page__form
                     .select.page-hero__select
                         .select__title.open-select
-                            span.current-value(data-current="") Направления
+                            span.current-value(data-current="") Все предложения
                             include ../icons/_spoiler
                         
                         .select__hidden-block
                             ul.select__list
-                                li.select__item(data-value="Системы хранения данных") Системы хранения данных
-                                li.select__item(data-value="Серверы") Серверы
-                                li.select__item(data-value="Программное обеспечение") Программное обеспечение
+                                li.select__item(data-value="Все предложения", data-category="0") Все предложения
+                                li.select__item(data-value="Системы хранения данных", data-category="1") Системы хранения данных
+                                li.select__item(data-value="Серверы", data-category="2") Серверы
+                                li.select__item(data-value="Программное обеспечение", data-category="3") Программное обеспечение
                             
-                ul.softs-grid__list 
-                    li.softs-grid__item
+                ul.softs-grid__list.filter-list
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-1").softs-grid__link UTINET Corenetic R240
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="2")
                         a(href="#item-2").softs-grid__link UTINET Corenetic R280
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="3")
                         a(href="#item-3").softs-grid__link UTINET Corenetic R180
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-4").softs-grid__link UTINET UView
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-5").softs-grid__link UTINET Corenetic R420
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-6").softs-grid__link UTINET Corenetic R410
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-7").softs-grid__link UTINET Corenetic R290
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-8").softs-grid__link UTINET Nasco
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-9").softs-grid__link UTINET Corenetic R610
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-10").softs-grid__link UTINET Opticstack Q218-100-Q1-R
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-11").softs-grid__link UTINET Opticstack Q248-25-Q1-R
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-12").softs-grid__link UTINET Opticstack Q218-100-R1-R
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-13").softs-grid__link UTINET Opticstack Q248-25-R1-R
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-14").softs-grid__link UTINET UMC
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-15").softs-grid__link UTINET UThin
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-16").softs-grid__link UTINET Efiris
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-17").softs-grid__link UTINET Backdat
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-18").softs-grid__link UTINET Orchestrix
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-19").softs-grid__link UTINET Virtualdesk
-                    li.softs-grid__item
+                    li.softs-grid__item(data-category="1")
                         a(href="#item-20").softs-grid__link UTINET Glovirt
                 
                     //- nav.hero__nav.nav-hero.page-hero__nav

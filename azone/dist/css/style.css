@@ -1356,6 +1356,10 @@ details[open] summary:before {
   color: #95C11F;
 }
 
+._hidden {
+  display: none !important;
+}
+
 .hero__container {
   padding: 0;
 }

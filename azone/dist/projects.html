@@ -20,10 +20,10 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241031162337"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241031162337"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241031162337"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241031162337"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241101004712"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241101004712"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241101004712"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241101004712"/>
   </head>
   <body>
     <div class="wrapper">
@@ -96,18 +96,19 @@
                     </div>
                     <div class="select__hidden-block">
                       <ul class="select__list">
-                        <li class="select__item" data-value="IT-инфраструктура">IT-инфраструктура</li>
-                        <li class="select__item" data-value="СП И СИ">СП И СИ</li>
-                        <li class="select__item" data-value="Информационная безопасность">
+                        <li class="select__item" data-value="Все проекты" data-category="0">Все проекты</li>
+                        <li class="select__item" data-value="IT-инфраструктура" data-category="1">IT-инфраструктура</li>
+                        <li class="select__item" data-value="СП И СИ" data-category="2">СП И СИ</li>
+                        <li class="select__item" data-value="Информационная безопасность" data-category="3">
                            Информационная безопасность</li>
-                        <li class="select__item" data-value="Виртуализация">Все проекты</li>
+                        <li class="select__item" data-value="Виртуализация" data-category="4">Все проекты</li>
                       </ul>
                     </div>
                   </div>
                 </form>
-                <div class="projects-grid">
+                <div class="projects-grid filter-list">
                   <ul class="projects-grid__list"> 
-                    <li class="projects-grid__item">
+                    <li class="projects-grid__item" data-category="1">
                       <h4 class="projects-grid__title"> Российский стартап (NDA)</h4>
                       <div class="projects-grid__text">
                         <p>
@@ -119,7 +120,7 @@
                            Результат: эффективно работающая стабильная ИТ-инфраструктура.</p>
                       </div><a class="projects-grid__link" href="#">Подробнее</a>
                     </li>
-                    <li class="projects-grid__item">
+                    <li class="projects-grid__item" data-category="2">
                       <h4 class="projects-grid__title">Федеральный орган исполнительной власти (NDA)</h4>
                       <div class="projects-grid__text"> 
                         <p>
@@ -133,7 +134,7 @@
                         </p>
                       </div><a class="projects-grid__link" href="#">Подробнее</a>
                     </li>
-                    <li class="projects-grid__item">
+                    <li class="projects-grid__item" data-category="3">
                       <h4 class="projects-grid__title">Сеть магазинов одежды Philipp Plein</h4>
                       <div class="projects-grid__text"> 
                         <p>
@@ -148,7 +149,7 @@
                         </p>
                       </div><a class="projects-grid__link" href="#">Подробнее</a>
                     </li>
-                    <li class="projects-grid__item">
+                    <li class="projects-grid__item" data-category="4">
                       <h4 class="projects-grid__title"> Российская компания (NDA)</h4>
                       <div class="projects-grid__text"> 
                         <p>
@@ -162,7 +163,7 @@
                         </p>
                       </div><a class="projects-grid__link" href="#">Подробнее</a>
                     </li>
-                    <li class="projects-grid__item">
+                    <li class="projects-grid__item" data-category="5">
                       <h4 class="projects-grid__title"> «Олимп Дизайн Групп»</h4>
                       <div class="projects-grid__text">
                         <p>
@@ -209,7 +210,7 @@
         <div class="footer__container">
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241031162337" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241101004712" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -280,7 +281,7 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js?_v=20241031162337"></script>
-    <script src="js/app.min.js?_v=20241031162337"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.0.3/dist/inputmask.min.js?_v=20241101004712"></script>
+    <script src="js/app.min.js?_v=20241101004712"></script>
   </body>
 </html>

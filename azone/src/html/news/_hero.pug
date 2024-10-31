@@ -8,18 +8,22 @@ section#page-hero.page-hero
             p.main-subtitle.page-hero__text
                 | Новости вендоров и&nbsp;рынка, база знаний  —  собираем полезную информацию в&nbsp;IT
         
-            nav.hero__nav.nav-hero.page-hero__nav
-                ul.nav-hero__list
-                    li.nav-hero__item
-                        a(href="#pro-azone").nav-hero__link PRO Азон
-                    li.nav-hero__item
-                        a(href="#articles").nav-hero__link Статьи           
-                    li.nav-hero__item
-                        a(href="#vendors").nav-hero__link Вендоры
-                    li.nav-hero__item
-                        a(href="#it-market").nav-hero__link Рынок IT
-                    li.nav-hero__item
-                        a(href="#campaign").nav-hero__link  Акции вендоров
+            .page-hero__softs.softs-grid
+                form(action="#", method="post").select-page__form
+                    .select.page-hero__select
+                        .select__title.open-select
+                            span.current-value(data-current="") Все статьи
+                            include ../icons/_spoiler
+
+                        .select__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="Все статьи", data-category="0") Все статьи
+                                li.select__item(data-value="PRO Азон", data-category="1") PRO Азон
+                                li.select__item(data-value="Статьи", data-category="2") Статьи           
+                                li.select__item(data-value="Вендоры", data-category="3") Вендоры
+                                li.select__item(data-value="Рынок IT", data-category="4") Рынок IT
+                                li.select__item(data-value=" Акции вендоров", data-category="5")  Акции вендоров
+
             
             .page-hero__search.search-news
                 form(action="#", method="post").search-news__form

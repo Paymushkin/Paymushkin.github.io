@@ -18,15 +18,14 @@ section#page-hero.page-hero
                         
                         .select__hidden-block
                             ul.select__list
-                                li.select__item(data-value="IT-аутсорсинг") IT-аутсорсинг
-                                li.select__item(data-value="IT-инфраструктура") IT-инфраструктура
-                                li.select__item(data-value="СП И СИ") 
-                                    | СП И СИ
-                                li.select__item(data-value="Все отзывы") Все отзывы
+                                li.select__item(data-value="Все отзывы", data-category="0") Все отзывы
+                                li.select__item(data-value="IT-аутсорсинг", data-category="1") IT-аутсорсинг
+                                li.select__item(data-value="IT-инфраструктура", data-category="2") IT-инфраструктура
+                                li.select__item(data-value="СП И СИ", data-category="3") СП И СИ
                         
                 .recomendation-grid
-                    ul.recomendation-grid__list 
-                        li.recomendation-grid__item
+                    ul.recomendation-grid__list.filter-list 
+                        li.recomendation-grid__item(data-category="1")
                                 h4.recomendation-grid__title  Russia Discovery
                                 .recomendation-grid__text
                                     p 
@@ -37,7 +36,7 @@ section#page-hero.page-hero
   
                                     span В.Ю. Мамонтов, генеральный директор
 
-                        li.recomendation-grid__item
+                        li.recomendation-grid__item(data-category="2")
                                 h4.recomendation-grid__title ООО «Атмосфера кино»
                                 .recomendation-grid__text 
                                     p
@@ -48,7 +47,7 @@ section#page-hero.page-hero
                                     
                                     span В.С. Иванов, генеральный директор
 
-                        li.recomendation-grid__item
+                        li.recomendation-grid__item(data-category="3")
                             
                                 h4.recomendation-grid__title «Металлург»
                                 .recomendation-grid__text 
@@ -60,7 +59,7 @@ section#page-hero.page-hero
                                     
                                     span Н.А. Евстропов, генеральный директор
 
-                        li.recomendation-grid__item
+                        li.recomendation-grid__item(data-category="3")
                                 h4.recomendation-grid__title  АО НТЦ «Специальные системы»
                                 .recomendation-grid__text 
                                     p
@@ -72,7 +71,7 @@ section#page-hero.page-hero
 
                                     span Е.Н. Стародумова, генеральный директор
 
-                        li.recomendation-grid__item
+                        li.recomendation-grid__item(data-category="1")
                             
                                 h4.recomendation-grid__title  ООО «Промальянс»
                                 .recomendation-grid__text

@@ -10,15 +10,15 @@ section#page-hero.page-hero
             nav.hero__nav.nav-hero.page-hero__nav
                 ul.nav-hero__list
                     li.nav-hero__item
-                        a(href="#delivery-time").nav-hero__link Наше предложение
+                        a(href="#offer").nav-hero__link Наше предложение
                     li.nav-hero__item
-                        a(href="#registry-equipment").nav-hero__link Рекомендации             
+                        a(href="#recomendation").nav-hero__link Рекомендации             
                     li.nav-hero__item
-                        a(href="#why-us").nav-hero__link Виды ПО              
+                        a(href="#soft-types").nav-hero__link Виды ПО              
                     li.nav-hero__item
-                        a(href="#capabilities").nav-hero__link Зачем лицензи
+                        a(href="#soft-why").nav-hero__link Зачем лицензия
                     li.nav-hero__item
-                        a(href="#partners").nav-hero__link Консультация
+                        a(href="#consultation").nav-hero__link Консультация
 
         .page-hero__softs.softs-grid
 
@@ -30,82 +30,67 @@ section#page-hero.page-hero
 
                     .select__hidden-block
                         ul.select__list
-                            li.select__item(data-value="Операционные системы") Операционные системы
-                            li.select__item(data-value="Информационная безопасность") Информационная безопасность
-                            li.select__item(data-value="Офисные программы") Офисные программы
+                            li.select__item(data-value="Все", data-category="0") Все
+                            li.select__item(data-value="Операционные системы", data-category="1") Операционные системы
+                            li.select__item(data-value="Информационная безопасность", data-category="2") Информационная безопасность
+                            li.select__item(data-value="Офисные программы", data-category="3") Офисные программы
 
-            //- .spoiler.spoiler-soft
-            //-     .spoiler__text
-            //-         span Направления
-            //-         include ../icons/_spoiler
-            //-     nav.spoiler__hidden-block
-            //-         ul.spoiler__list
-            //-             li.spoiler__item(data-value="Операционные системы")
-            //-                 a(href="#").spoiler__link  
-            //-                     span Операционные системы
-            //-             li.spoiler__item(data-value="Информационная безопасность")
-            //-                 a(href="#").spoiler__link  
-            //-                     span Информационная безопасность
-            //-             li.spoiler__item(data-value="Офисные программы")
-            //-                 a(href="#").spoiler__link
-            //-                     span Офисные программы
-
-            ul.softs-grid__list 
-                li.softs-grid__item
-                    a(href="https://www.azone-it.ru/sharxdc-o-kompanii").softs-grid__link Sharx DC
-                li.softs-grid__item
-                    a(href="https://rustack.ru/").softs-grid__link «РУСТЭК»
-                li.softs-grid__item
+            ul.softs-grid__list.filter-list 
+                li.softs-grid__item(data-category="1")
+                    a(href="").softs-grid__link Sharx DC
+                li.softs-grid__item(data-category="1")
+                    a(href="").softs-grid__link «РУСТЭК»
+                li.softs-grid__item(data-category="1")
                     a(href="#").softs-grid__link «Росплатформа»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="1")
                     a(href="#").softs-grid__link «Киберпротект»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="1")
                     a(href="#").softs-grid__link Positive Technologies
-                li.softs-grid__item
+                li.softs-grid__item(data-category="1")
                     a(href="#").softs-grid__link Content AI
-                li.softs-grid__item
+                li.softs-grid__item(data-category="1")
                     a(href="#").softs-grid__link «МойОфис»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «СёрчИнформ»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «Солар»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «Атом Безопасность»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «Код Безопасности»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «РТ-Информационная безопасность»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «Смарт-Софт»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link Makves
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «1С»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="2")
                     a(href="#").softs-grid__link «Стахановец»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «Лаборатория Касперского»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link PROMT
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link Astra Linux
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «РТ-Информационная безопасность»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «Аврора»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «Альт»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «РОСА»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «РЕД СОФТ»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «БУЛАТ»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link Dr.Web
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link «Битрикс24»
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link InfoWatch
-                li.softs-grid__item
+                li.softs-grid__item(data-category="3")
                     a(href="#").softs-grid__link Zecurion

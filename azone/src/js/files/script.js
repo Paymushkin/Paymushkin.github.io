@@ -51,8 +51,9 @@ if (selects.length) {
     // console.log(selects)
 
     selects.forEach(select => {
-        let openSelect = select.querySelector(".open-select") || null
-        let selectOptions = select.querySelectorAll("li.select__item[data-value]") || null
+        let openSelect = select.querySelector(".open-select")
+        let selectOptions = select.querySelectorAll("li.select__item[data-value]")
+        const elementsForFilterWrapper = document.querySelector(".filter-list")
 
         // console.log(openSelect, openSelect.parentNode)
 
@@ -69,11 +70,33 @@ if (selects.length) {
                 currentValue.dataset.current = currentSelectValue
                 currentValue.textContent = currentSelectValue
                 openSelect.parentNode.classList.remove("_open-select")
+
+                if (elementsForFilterWrapper) {
+                    const elements = elementsForFilterWrapper.querySelectorAll("[data-category]")
+
+                    if (elements.length) {
+                        elements.forEach(element => {
+                            element.classList.remove("_hidden")
+                            if (option.getAttribute("data-category") != 0) {
+                                if (element.getAttribute("data-category") != option.getAttribute("data-category")) {
+                                    element.classList.add("_hidden")
+                                }
+                            }
+                        });
+                    }
+                }
             })
         });
 
     });
 }
+
+// const filterItems = function(data) {
+//     const elements = document.querySelectorAll("[data-category]")
+//     elements.forEach(element => {
+//         element.style.display.none
+//     });
+// }
 
 // инициализация маски ввода телефона
 
