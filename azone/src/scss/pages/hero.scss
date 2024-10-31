@@ -81,6 +81,28 @@
         }
     }
 
+    &__licenses {
+        margin: 0 auto 50px;
+        padding: 65px 50px;
+        max-width: 900px;
+        color: #fff;
+        background-color: $highlightColor-2;
+        border-radius: 30px;
+        font-family: "Gotham Pro";
+        @include adaptiveValue("font-size", 32, 16);
+        font-weight: 500;
+
+        @media (max-width:$mobile) {
+            margin: 0 auto 30px;
+            padding: 32px;
+            border-radius: 18px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding: 24px;
+        }
+    }
+
     &__search {}
 }
 

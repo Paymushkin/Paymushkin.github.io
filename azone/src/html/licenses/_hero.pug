@@ -1,0 +1,73 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const licensesPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title Лицензии
+            p.main-subtitle.page-hero__text
+                | Имеем все&nbsp;необходимые лицензии&nbsp;для осуществления 
+                | деятельности в&nbsp;области информационной безопасности
+
+            .page-hero__licenses
+                p 
+                    | В&nbsp;рамках обеспечения информационной безопасности, 
+                    | изображения лицензий не&nbsp;находятся в&nbsp;открытом доступе.
+
+            .page-hero__softs
+                form(action="#", method="post").select-page__form
+                    .select.page-hero__select
+                        .select__title.open-select
+                            span.current-value(data-current="") Направления
+                            include ../icons/_spoiler
+                        
+                        .select__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="ФСБ") ФСБ
+                                li.select__item(data-value="ФСТЭК") ФСТЭК
+                                li.select__item(data-value="МЧС") МЧС
+                                li.select__item(data-value="Минобороны") Минобороны
+            
+            ul.licenses-list
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСТЭК России №3518 от&nbsp;25.03.2019 на&nbsp;осуществление 
+                        | мероприятий и&nbsp;(или)&nbsp;оказание услуг в&nbsp;области 
+                        | защиты государственной тайны (в&nbsp;части технической защиты информации)
+                
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСТЭК России №3519 от&nbsp;25.03.2019 на&nbsp;проведение работ, 
+                        | связанных с&nbsp;созданием средств защиты информации
+                
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСБ&nbsp;России №34174 от&nbsp;20.12.2019 на&nbsp;проведение 
+                        | работ, связанных с&nbsp;использованием сведений, составляющих государственную тайну
+                
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСБ&nbsp;России №16171 Н от&nbsp;17.08.2017 на&nbsp;осуществление 
+                        | разработки, производства, распространения шифровальных (криптографических) 
+                        | средств, информационных и&nbsp;телекоммуникационных систем
+                
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСТЭК России №3409 от&nbsp;31.10.2017 на&nbsp;деятельность 
+                        | по&nbsp;технической защите конфиденциальной информации
+
+                li.licenses-list__item 
+                    p
+                        | Лицензия МЧС&nbsp;России №77-Б/07463 от&nbsp;19.09.2019 
+                        | на осуществление деятельности по&nbsp;монтажу, 
+                        | техническому обслуживанию и&nbsp;ремонту средств обеспечения 
+                        | пожарной безопасности зданий и&nbsp;сооружения
+                
+                li.licenses-list__item 
+                    p
+                        | Лицензия ФСБ&nbsp;России №17517 М от&nbsp;24.10.2019 
+                        | на&nbsp;проведение специальных исследований
+                li.licenses-list__item 
+                    p
+                        | Выписка из&nbsp;реестра членов саморегулируемой 
+                        | организации АСО «ПОСО» от&nbsp;5&nbsp;июля&nbsp;2018&nbsp;года под №&nbsp;0002277

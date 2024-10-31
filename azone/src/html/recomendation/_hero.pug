@@ -1,0 +1,86 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const recomendationPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title Нас рекомендуют
+            p.main-subtitle.page-hero__text
+                | «...Отзывы наших клиентов, 
+                | которые мы&nbsp;регулярно получаем на&nbsp;протяжении всей&nbsp;нашей&nbsp;работы...»
+            
+            .page-hero__softs
+                form(action="#", method="post").select-page__form
+                    .select.page-hero__select
+                        .select__title.open-select
+                            span.current-value(data-current="") Все отзывы
+                            include ../icons/_spoiler
+                        
+                        .select__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="IT-аутсорсинг") IT-аутсорсинг
+                                li.select__item(data-value="IT-инфраструктура") IT-инфраструктура
+                                li.select__item(data-value="СП И СИ") 
+                                    | СП И СИ
+                                li.select__item(data-value="Все отзывы") Все отзывы
+                        
+                .recomendation-grid
+                    ul.recomendation-grid__list 
+                        li.recomendation-grid__item
+                                h4.recomendation-grid__title  Russia Discovery
+                                .recomendation-grid__text
+                                    p 
+                                        | Russia Discovery выражает благодарность 
+                                        | за&nbsp;высокий уровень профессионализма и&nbsp;оперативность 
+                                        | в&nbsp;предоставлении IT-услуг. Все&nbsp;вопросы не&nbsp;остаются без&nbsp;внимания, 
+                                        | решаются быстро, качественно и&nbsp;в&nbsp;короткий срок. Приятно иметь дело с&nbsp;профессионалами!
+  
+                                    span В.Ю. Мамонтов, генеральный директор
+
+                        li.recomendation-grid__item
+                                h4.recomendation-grid__title ООО «Атмосфера кино»
+                                .recomendation-grid__text 
+                                    p
+                                        | «...С&nbsp;тех&nbsp;пор&nbsp;мы&nbsp;продолжаем пользоваться услугой 
+                                        | инженерного сопровождения, которой очень довольны: 
+                                        | мы&nbsp;получаем быструю и&nbsp;качественную удалённую поддержку 
+                                        | по&nbsp;стоимости значительно ниже собственного системного администратора в&nbsp;штате...»
+                                    
+                                    span В.С. Иванов, генеральный директор
+
+                        li.recomendation-grid__item
+                            
+                                h4.recomendation-grid__title «Металлург»
+                                .recomendation-grid__text 
+                                    p
+                                        | «...Все текущие и&nbsp;срочные заявки инженеры выполняют оперативно. 
+                                        | Регламентные работы ведутся с&nbsp;соблюдением всех требований. 
+                                        | Мы&nbsp;рекомендуем ИТ-компанию «Азон» как&nbsp;профессионалов 
+                                        | в&nbsp;сфере ИТ-аутсорсинга и&nbsp;планируем дальнейшее сотрудничество...»
+                                    
+                                    span Н.А. Евстропов, генеральный директор
+
+                        li.recomendation-grid__item
+                                h4.recomendation-grid__title  АО НТЦ «Специальные системы»
+                                .recomendation-grid__text 
+                                    p
+                                        | «...При&nbsp;выборе партнёра мы ориентировались 
+                                        | на возможность выполнения поставленных задач 
+                                        | в&nbsp;сжатые сроки с&nbsp;сохранением требуемого качества. 
+                                        | Оба&nbsp;эти&nbsp;условия специалисты «Азон» регулярно и&nbsp;успешно выполняют. 
+                                        | Поэтому мы&nbsp;оцениваем результаты сотрудничества положительно...»
+
+                                    span Е.Н. Стародумова, генеральный директор
+
+                        li.recomendation-grid__item
+                            
+                                h4.recomendation-grid__title  ООО «Промальянс»
+                                .recomendation-grid__text
+                                    p 
+                                        | «...ИТ-компания «Азон» зарекомендовала себя&nbsp;как&nbsp;подрядчика, 
+                                        | который ставит интересы заказчика на&nbsp;первое место. 
+                                        | По&nbsp;результатам взаимодействия хотим отметить: выполнение задач в&nbsp;сжатые сроки, 
+                                        | своевременное предоставление комплектов отчётной документации 
+                                        | без&nbsp;дополнительных запросов с&nbsp;нашей стороны...»
+
+                                    span Э.Ш. Ахмедов, генеральный директор

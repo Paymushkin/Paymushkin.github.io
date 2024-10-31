@@ -1,0 +1,88 @@
+section#page-hero.page-hero
+    .page-hero__container
+        - const projectsPage = true;
+        include ../_breadcrumbs
+
+        .page-hero__content
+            h1.main-title.page-hero__title Реализованные проекты
+            p.main-subtitle.page-hero__text
+                | С 2003&nbsp;года реализовываем проекты любой сложности 
+                | под&nbsp;задачи и&nbsp;возможности государственных и&nbsp;коммерческих заказчиков
+            
+            .page-hero__softs
+                form(action="#", method="post").select-page__form
+                    .select.page-hero__select
+                        .select__title.open-select
+                            span.current-value(data-current="") Все проекты
+                            include ../icons/_spoiler
+                        
+                        .select__hidden-block
+                            ul.select__list
+                                li.select__item(data-value="IT-инфраструктура") IT-инфраструктура
+                                li.select__item(data-value="СП И СИ") СП И СИ
+                                li.select__item(data-value="Информационная безопасность") 
+                                    | Информационная безопасность
+                                li.select__item(data-value="Виртуализация") Все проекты
+                        
+                .projects-grid
+                    ul.projects-grid__list 
+                        li.projects-grid__item
+                                h4.projects-grid__title  Российский стартап (NDA)
+                                .projects-grid__text
+                                    p 
+                                        | Задача: создание и&nbsp;настройка ИТ-инфраструктуры 
+                                        | для запуска офиса с&nbsp;нуля с&nbsp;расчётом её&nbsp;масштабирования 
+                                        | на&nbsp;будущий рост компании.
+                                    p 
+                                        | Результат: эффективно работающая стабильная ИТ-инфраструктура.
+                                a(href="#").projects-grid__link Подробнее
+                        li.projects-grid__item
+                                h4.projects-grid__title Федеральный орган исполнительной власти (NDA)
+                                .projects-grid__text 
+                                    p
+                                        | Задача: поставка электронных идентификаторов, 
+                                        | сертифицированных ФСТЭК.
+
+                                    p 
+                                        | Результат: ИТ-компания «Азон» предоставила 
+                                        | заказчику электронные идентификаторы (токены) 
+                                        | «Рутокен&nbsp;S»&nbsp;(64&nbsp;КБ) в&nbsp;согласованный срок.
+                                a(href="#").projects-grid__link Подробнее
+                        li.projects-grid__item
+                            
+                                h4.projects-grid__title Сеть магазинов одежды Philipp Plein
+                                .projects-grid__text 
+                                    p
+                                        | Задача: автоматизация работы с&nbsp;заявками 
+                                        | и&nbsp;обращениями клиентов по всему миру за&nbsp;счёт внедрения Service Desk.
+
+                                    p 
+                                        | Результат: ИТ-компания «Азон» произвела внедрение 
+                                        | Service Desk в&nbsp;ИТ-инфраструктуру международной 
+                                        | сети магазинов Philipp Plein с&nbsp;последующим обучением 
+                                        | специалистов заказчика.
+                                a(href="#").projects-grid__link Подробнее
+                        li.projects-grid__item
+                                h4.projects-grid__title  Российская компания (NDA)
+                                .projects-grid__text 
+                                    p
+                                        | Задача: внедрение и&nbsp;настройка 
+                                        | серверного и&nbsp;сетевого оборудования.
+
+                                    p 
+                                        | Результат: ИТ-компания «Азон» 
+                                        | выполнила работы по&nbsp;оптимизации ИТ-инфраструктуры 
+                                        | под&nbsp;возможности и&nbsp;задачи заказчика.
+                                a(href="#").projects-grid__link Подробнее
+                        li.projects-grid__item
+                            
+                                h4.projects-grid__title  «Олимп Дизайн Групп»
+                                .projects-grid__text
+                                    p 
+                                        | Задача: проведение аудита и&nbsp;модернизации 
+                                        | текущей сетевой и&nbsp;серверной инфраструктуры.
+                                    p
+                                        | Результат: выполненные работы позволили 
+                                        | повысить отказоустойчивость сетевой и&nbsp;серверной 
+                                        | инфраструктуры, а&nbsp;также значительно увеличить пропускную способность локальной сети клиента.
+                                a(href="#").projects-grid__link Подробнее
