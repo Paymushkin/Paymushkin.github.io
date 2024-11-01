@@ -1,12 +1,3 @@
-// Подключение функционала "Чертогов Фрилансера"
-import {
-    isMobile
-} from "./functions.js";
-// Подключение списка активных модулей
-import {
-    flsModules
-} from "./modules.js";
-
 const showHideMenuBtn = document.getElementById("show-hide-menu")
 
 if (showHideMenuBtn) {
@@ -90,13 +81,6 @@ if (selects.length) {
 
     });
 }
-
-// const filterItems = function(data) {
-//     const elements = document.querySelectorAll("[data-category]")
-//     elements.forEach(element => {
-//         element.style.display.none
-//     });
-// }
 
 // инициализация маски ввода телефона
 
