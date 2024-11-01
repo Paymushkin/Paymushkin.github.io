@@ -3690,6 +3690,19 @@ details[open] summary:before {
   font-weight: 300;
 }
 
+.vendor-item__block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 20px;
+}
+
+.vendor-item__block:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dadada;
+}
+
 .vendor-item__title {
   max-width: 800px;
   font-family: "Gotham Pro";
@@ -3716,6 +3729,22 @@ details[open] summary:before {
 
 @supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
   .vendor-item__title._small {
+    font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
+  }
+}
+
+.vendor-item__subtitle {
+  font-weight: 500;
+}
+
+@supports (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
+  .vendor-item__subtitle {
+    font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , 0.9833333333rem  +  1.3333333333vw , 2rem )) {
+  .vendor-item__subtitle {
     font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.25);
   }
 }
@@ -3764,6 +3793,26 @@ details[open] summary:before {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.vendor-item__link {
+  color: #95C11F;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease color;
+  -o-transition: 0.3s ease color;
+  transition: 0.3s ease color;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.7861111111rem  +  0.4444444444vw , 1.125rem )) {
+  .vendor-item__link {
+    font-size: clamp( 0.875rem , 0.7861111111rem  +  0.4444444444vw , 1.125rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.7861111111rem  +  0.4444444444vw , 1.125rem )) {
+  .vendor-item__link {
+    font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 56.25);
+  }
 }
 
 .certificates-grid__list {
@@ -5316,6 +5365,10 @@ details[open] summary:before {
     border-radius: 18px;
   }
 
+  .vendor-item__block {
+    gap: 16px;
+  }
+
   .vendor-item__item::before {
     width: 4px;
     height: 4px;
@@ -5471,6 +5524,10 @@ details[open] summary:before {
 
   .plan__button:hover {
     background-color: #333333;
+  }
+
+  .vendor-item__link:hover {
+    color: #814997;
   }
 
   .certificates-grid__item:hover svg {
