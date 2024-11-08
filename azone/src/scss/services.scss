@@ -18,8 +18,12 @@
 
     @media (max-width:$tablet) {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 91px);
+        grid-template-rows: repeat(4, 130px);
         gap: 18px;
+    }
+
+    @media (max-width:$mobile) {
+        grid-template-rows: repeat(4, 91px);
     }
 
     &__item {

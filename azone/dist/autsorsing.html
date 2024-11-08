@@ -19,11 +19,13 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108175253"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108175253"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108175253"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241108175253"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108202743"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108202743"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108202743"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241108202743"/>
     <link rel="manifest" href="./site.webmanifest"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20241108202743" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20241108202743"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -172,7 +174,7 @@
                     <option value="24x7">24x7</option>
                   </select>
                 </div>
-                <button class="button _standart price-calculator__button" id="inputSubmit" type="submit">Рассчитать</button>
+                <button class="button _standart price-calculator__button" id="calculatePlan">Рассчитать</button>
               </form>
               <p class="calculator__text">
                 Минимальная стоимость комплексного обслуживания IT&#8209;инфраструктуры 
@@ -186,7 +188,7 @@
             </div>
             <div class="separator separator__our-way"></div>
           </div>
-          <div class="plans__container" id="plans">
+          <div class="plans plans__container" id="plans">
             <h2 class="section-title _with-text plans__title">Выберите тариф</h2>
             <p class="section-subtitle plans__text">
                Мы предлагаем 3 тарифа, с&nbsp;различными 
@@ -362,34 +364,34 @@
               ИТ&#8209;аутсорсинга основана на&nbsp;ITIL и включает в&nbsp;себя:
             </p>
             <ul class="our-way__grid grid-our-way">
-              <li class="grid-our-way__item _black"> 
+              <li class="grid-our-way__item _black" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Обслуживание по&nbsp;SLA</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система мониторинга 24Х7</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система учёта данных Service Desk</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Неограниченное количество выездов</p>
               </li>
-              <li class="grid-our-way__item _highlight-2"> 
+              <li class="grid-our-way__item _highlight-2" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система защиты доступов</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Аренда серверов</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">3&nbsp;линии ИТ&#8209;поддержки</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Реакция на&nbsp;заявку до&nbsp;15&nbsp;минут</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Выделенный менеджер</p>
               </li>
-              <li class="grid-our-way__item _highlight-2"> 
+              <li class="grid-our-way__item _highlight-2" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">NDA</p>
               </li>
             </ul>
@@ -404,27 +406,27 @@
               </div>
               <div class="why-we__right"> 
                 <ul class="why-we__list">
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Штат технической поддержки состоит 
                       из опытных сертифицированных инженеров
                     </p>
                   </li>
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Фиксируем стоимость оказания услуг 
                       в договоре (нет внезапных расходов на обслуживание)
                     </p>
                   </li>
-                  <li class="why-we__item _highlight-2">
+                  <li class="why-we__item _highlight-2" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        90% заявок от пользователей решаем в течение часа</p>
                   </li>
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Тщательно контролируем качество обслуживания клиентов</p>
                   </li>
-                </ul>
+                </ul><a class="button _standart why-we__button" href="#consultation">Консультация</a>
               </div>
             </div>
             <div class="separator separator__why-we"></div>
@@ -444,25 +446,25 @@
                     <div class="feedback__slide swiper-slide">
                       <ul class="feedback-slide"> 
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-1.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-2.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-3.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-4.svg?_v=20241108202743" alt="logo"></li>
                       </ul>
                     </div>
                     <div class="feedback__slide swiper-slide">
                       <ul class="feedback-slide"> 
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-1.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-2.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-3.svg?_v=20241108202743" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241108175253" alt="logo"></li>
+                           <img src="img/feedback/item-4.svg?_v=20241108202743" alt="logo"></li>
                       </ul>
                     </div>
                   </div>
@@ -662,7 +664,7 @@
                 <div class="consultation__wrapper">
                   <input class="consultation__input" id="consultation-name" type="text" name="consultation-name" placeholder="Ваше имя" required="required"/>
                   <input class="consultation__input" id="consultation-email" type="email" name="consultation-email" placeholder="E-mail" required="required"/>
-                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН Компании" required="required"/>
+                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН" required="required"/>
                   <input class="consultation__input" id="consultation-phone" type="tel" name="consultation-phone" placeholder="+7 (___)___-__-__" required="required"/>
                   <textarea class="consultation__textarea" id="consultation-comment" name="" cols="30" rows="5" placeholder="Комментарий"></textarea>
                 </div>
@@ -673,10 +675,13 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108175253" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108202743" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -747,6 +752,6 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20241108175253"></script>
+    <script src="js/app.min.js?_v=20241108202743"></script>
   </body>
 </html>

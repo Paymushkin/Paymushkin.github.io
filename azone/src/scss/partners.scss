@@ -25,13 +25,15 @@
         gap: 12px;
     }
 
-    &__item {
+    &__link {
+        display: block;
         padding: 14px 30px;
         @include adaptiveValue("font-size", 16, 12);
         font-weight: 800;
         text-transform: uppercase;
         border: 2px solid $highlightColor-2;
         border-radius: 60px;
+        transition: 0.3s ease all;
 
         @media (max-width:$tablet) {
             padding: 12px 20px;
@@ -40,5 +42,18 @@
         @media (max-width:$mobile) {
             padding: 8px 16px;
         }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background-color: $highlightColor-2;
+            }
+        }
+
+        &:active {
+            color: #fff;
+            background-color: $highlightColor-2;
+        }
+
     }
 }

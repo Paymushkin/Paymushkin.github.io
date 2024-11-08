@@ -6,13 +6,29 @@
         @include adaptiveValue("gap", 64, 20);
     }
 
-    &__item {
+    &__item {}
+
+    &__link {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 58px 102px;
         border-radius: 30px;
         border: 1px solid #dadada;
+        transition: 0.3s ease border-color;
+
+        @media (any-hover: hover) {
+
+            &:hover {
+                border-color: $highlightColor-2;
+
+                button {
+                    background-color: $highlightColor-2;
+                }
+
+            }
+
+        }
 
         @media (max-width:$tablet) {
             padding: 40px 60px;
@@ -25,6 +41,18 @@
 
         @media (max-width:$mobileSmall) {
             padding: 20px 32px;
+        }
+
+        &:active {
+            border-color: $highlightColor-2;
+        }
+
+        &:visited {
+            border-color: $highlightColor-2;
+
+            button {
+                background-color: $highlightColor-2;
+            }
         }
     }
 
@@ -44,7 +72,7 @@
         line-height: 1.3;
     }
 
-    &__link {
+    &__button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,12 +86,6 @@
 
         @media (max-width:$mobileSmall) {
             align-self: stretch;
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $highlightColor-2;
-            }
         }
     }
 }

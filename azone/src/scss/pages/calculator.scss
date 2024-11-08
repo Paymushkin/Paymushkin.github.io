@@ -126,7 +126,8 @@
 
         span {
             @include adaptiveValue("font-size", 14, 10);
-            font-weight: 700;
+            color: $textColor;
+            // font-weight: 700;
         }
 
         @media (max-width:$mobile) {
@@ -154,6 +155,11 @@
 }
 
 .plans {
+    display: none;
+
+    ._plans-visible & {
+        display: block;
+    }
 
     &__container {
         padding-top: 50px;
@@ -314,6 +320,13 @@
 
                 @media (min-width:$mobile) {
                     display: none;
+                }
+            }
+
+            &:last-child {
+                @media (max-width:$mobile) {
+                    color: $highlightColor-2;
+                    font-weight: 700;
                 }
             }
         }

@@ -1,7 +1,7 @@
 .page-hero {
 
     &__title {
-        margin-bottom: 36px;
+        margin-bottom: 20px;
 
         @media (max-width:$mobileSmall) {
             margin-bottom: 16px;
@@ -25,7 +25,7 @@
 
     &__text {
         position: relative;
-        margin-bottom: 42px;
+        margin-bottom: 32px;
         padding-left: 20px;
         line-height: 1.3;
 

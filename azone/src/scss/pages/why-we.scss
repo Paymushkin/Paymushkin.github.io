@@ -27,7 +27,13 @@
 
         @media (max-width:$tablet) {
             justify-content: center;
+
+            .why-we__button {
+                display: none;
+            }
         }
+
+
     }
 
     &__title {
@@ -43,6 +49,15 @@
 
     &__right {
         flex: 1 1 percent(700, 1180);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (min-width:$tablet) {
+            .why-we__button {
+                display: none;
+            }
+        }
     }
 
     &__list {

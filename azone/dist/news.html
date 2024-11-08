@@ -19,11 +19,13 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108175253"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108175253"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108175253"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241108175253"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108202743"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108202743"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108202743"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241108202743"/>
     <link rel="manifest" href="./site.webmanifest"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20241108202743" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20241108202743"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -92,6 +94,15 @@
               <h1 class="main-title page-hero__title">PRO Медиа</h1>
               <p class="main-subtitle page-hero__text">Новости вендоров и&nbsp;рынка, база знаний  —  собираем полезную информацию в&nbsp;IT</p>
               <div class="page-hero__softs softs-grid">
+                <nav class="hero__nav nav-hero page-hero__nav">
+                  <ul class="nav-hero__list">
+                    <li class="nav-hero__item"><a class="nav-hero__link" href="#pro-azone">PRO Азон</a></li>
+                    <li class="nav-hero__item"><a class="nav-hero__link" href="#articles">Статьи           </a></li>
+                    <li class="nav-hero__item"><a class="nav-hero__link" href="#vendors">Вендоры</a></li>
+                    <li class="nav-hero__item"><a class="nav-hero__link" href="#it-market">Рынок IT</a></li>
+                    <li class="nav-hero__item"><a class="nav-hero__link" href="#campaign"> Акции вендоров</a></li>
+                  </ul>
+                </nav>
                 <form class="select-page__form" action="#" method="post">
                   <div class="select page-hero__select">
                     <div class="select__title open-select"><span class="current-value" data-current="">Все статьи</span>
@@ -101,7 +112,7 @@
                     </div>
                     <div class="select__hidden-block">
                       <ul class="select__list">
-                        <li class="select__item" data-value="Все статьи" data-category="0">Все статьи</li>
+                        <li class="select__item" data-value="Все материалы" data-category="0">Все материалы</li>
                         <li class="select__item" data-value="PRO Азон" data-category="1">PRO Азон</li>
                         <li class="select__item" data-value="Статьи" data-category="2">Статьи           </li>
                         <li class="select__item" data-value="Вендоры" data-category="3">Вендоры</li>
@@ -251,23 +262,20 @@
                       <path d="M10.6716 22.0528L9.53644 20.4061L19.4163 13.5952L11.7664 12.1886L12.1295 10.2136L23.1454 12.2391L21.1199 23.255L19.1448 22.8918L20.5514 15.2419L10.6716 22.0528Z" fill="#95C11F"></path>
                     </svg></a></a></li>
             </ul>
-            <nav class="hero__nav nav-hero page-hero__nav">
-              <ul class="nav-hero__list">
-                <li class="nav-hero__item"><a class="nav-hero__link" href="#pro-azone">PRO Азон</a></li>
-                <li class="nav-hero__item"><a class="nav-hero__link" href="#articles">Статьи           </a></li>
-                <li class="nav-hero__item"><a class="nav-hero__link" href="#vendors">Вендоры</a></li>
-                <li class="nav-hero__item"><a class="nav-hero__link" href="#it-market">Рынок IT</a></li>
-                <li class="nav-hero__item"><a class="nav-hero__link" href="#campaign"> Акции вендоров</a></li>
-              </ul>
-            </nav>
+            <form class="load-more" action="" method="post"> 
+              <button class="button _highlight load-more__button" type="button">Загрузить еще</button>
+            </form>
           </div>
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108175253" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108202743" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -338,6 +346,6 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20241108175253"></script>
+    <script src="js/app.min.js?_v=20241108202743"></script>
   </body>
 </html>

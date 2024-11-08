@@ -19,11 +19,13 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108175253"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108175253"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108175253"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241108175253"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241108202743"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20241108202743"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20241108202743"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241108202743"/>
     <link rel="manifest" href="./site.webmanifest"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20241108202743" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20241108202743"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -110,82 +112,81 @@
                         <li class="select__item" data-value="СП И СИ" data-category="2">СП И СИ</li>
                         <li class="select__item" data-value="Информационная безопасность" data-category="3">
                            Информационная безопасность</li>
-                        <li class="select__item" data-value="Виртуализация" data-category="4">Все проекты</li>
                       </ul>
                     </div>
                   </div>
                 </form>
                 <div class="projects-grid filter-list">
                   <ul class="projects-grid__list"> 
-                    <li class="projects-grid__item" data-category="1">
-                      <h4 class="projects-grid__title"> Российский стартап (NDA)</h4>
-                      <div class="projects-grid__text">
-                        <p>
-                           Задача: создание и&nbsp;настройка ИТ-инфраструктуры 
-                          для запуска офиса с&nbsp;нуля с&nbsp;расчётом её&nbsp;масштабирования 
-                          на&nbsp;будущий рост компании.
-                        </p>
-                        <p>
-                           Результат: эффективно работающая стабильная ИТ-инфраструктура.</p>
-                      </div><a class="projects-grid__link" href="#">Подробнее</a>
-                    </li>
-                    <li class="projects-grid__item" data-category="2">
-                      <h4 class="projects-grid__title">Федеральный орган исполнительной власти (NDA)</h4>
-                      <div class="projects-grid__text"> 
-                        <p>
-                          Задача: поставка электронных идентификаторов, 
-                          сертифицированных ФСТЭК.
-                        </p>
-                        <p>
-                           Результат: ИТ-компания «Азон» предоставила 
-                          заказчику электронные идентификаторы (токены) 
-                          «Рутокен&nbsp;S»&nbsp;(64&nbsp;КБ) в&nbsp;согласованный срок.
-                        </p>
-                      </div><a class="projects-grid__link" href="#">Подробнее</a>
-                    </li>
-                    <li class="projects-grid__item" data-category="3">
-                      <h4 class="projects-grid__title">Сеть магазинов одежды Philipp Plein</h4>
-                      <div class="projects-grid__text"> 
-                        <p>
-                          Задача: автоматизация работы с&nbsp;заявками 
-                          и&nbsp;обращениями клиентов по всему миру за&nbsp;счёт внедрения Service Desk.
-                        </p>
-                        <p>
-                           Результат: ИТ-компания «Азон» произвела внедрение 
-                          Service Desk в&nbsp;ИТ-инфраструктуру международной 
-                          сети магазинов Philipp Plein с&nbsp;последующим обучением 
-                          специалистов заказчика.
-                        </p>
-                      </div><a class="projects-grid__link" href="#">Подробнее</a>
-                    </li>
-                    <li class="projects-grid__item" data-category="4">
-                      <h4 class="projects-grid__title"> Российская компания (NDA)</h4>
-                      <div class="projects-grid__text"> 
-                        <p>
-                          Задача: внедрение и&nbsp;настройка 
-                          серверного и&nbsp;сетевого оборудования.
-                        </p>
-                        <p>
-                           Результат: ИТ-компания «Азон» 
-                          выполнила работы по&nbsp;оптимизации ИТ-инфраструктуры 
-                          под&nbsp;возможности и&nbsp;задачи заказчика.
-                        </p>
-                      </div><a class="projects-grid__link" href="#">Подробнее</a>
-                    </li>
-                    <li class="projects-grid__item" data-category="5">
-                      <h4 class="projects-grid__title"> «Олимп Дизайн Групп»</h4>
-                      <div class="projects-grid__text">
-                        <p>
-                           Задача: проведение аудита и&nbsp;модернизации 
-                          текущей сетевой и&nbsp;серверной инфраструктуры.
-                        </p>
-                        <p>
-                          Результат: выполненные работы позволили 
-                          повысить отказоустойчивость сетевой и&nbsp;серверной 
-                          инфраструктуры, а&nbsp;также значительно увеличить пропускную способность локальной сети клиента.
-                        </p>
-                      </div><a class="projects-grid__link" href="#">Подробнее</a>
-                    </li>
+                    <li class="projects-grid__item" data-category="1"><a class="projects-grid__link" href="#?11"> 
+                        <h4 class="projects-grid__title"> Российский стартап (NDA)</h4>
+                        <div class="projects-grid__text">
+                          <p>
+                             Задача: создание и&nbsp;настройка ИТ-инфраструктуры 
+                            для запуска офиса с&nbsp;нуля с&nbsp;расчётом её&nbsp;масштабирования 
+                            на&nbsp;будущий рост компании.
+                          </p>
+                          <p>
+                             Результат: эффективно работающая стабильная ИТ-инфраструктура.</p>
+                        </div>
+                        <button class="projects-grid__button" type="button">Подробнее</button></a></li>
+                    <li class="projects-grid__item" data-category="2"><a class="projects-grid__link" href="#?2"> 
+                        <h4 class="projects-grid__title">Федеральный орган исполнительной власти (NDA)</h4>
+                        <div class="projects-grid__text"> 
+                          <p>
+                            Задача: поставка электронных идентификаторов, 
+                            сертифицированных ФСТЭК.
+                          </p>
+                          <p>
+                             Результат: ИТ-компания «Азон» предоставила 
+                            заказчику электронные идентификаторы (токены) 
+                            «Рутокен&nbsp;S»&nbsp;(64&nbsp;КБ) в&nbsp;согласованный срок.
+                          </p>
+                        </div>
+                        <button class="projects-grid__button" type="button">Подробнее</button></a></li>
+                    <li class="projects-grid__item" data-category="3"><a class="projects-grid__link" href="#?3"> 
+                        <h4 class="projects-grid__title">Сеть магазинов одежды Philipp Plein</h4>
+                        <div class="projects-grid__text"> 
+                          <p>
+                            Задача: автоматизация работы с&nbsp;заявками 
+                            и&nbsp;обращениями клиентов по всему миру за&nbsp;счёт внедрения Service Desk.
+                          </p>
+                          <p>
+                             Результат: ИТ-компания «Азон» произвела внедрение 
+                            Service Desk в&nbsp;ИТ-инфраструктуру международной 
+                            сети магазинов Philipp Plein с&nbsp;последующим обучением 
+                            специалистов заказчика.
+                          </p>
+                        </div>
+                        <button class="projects-grid__button" type="button">Подробнее</button></a></li>
+                    <li class="projects-grid__item" data-category="4"><a class="projects-grid__link" href="#?4"> 
+                        <h4 class="projects-grid__title"> Российская компания (NDA)</h4>
+                        <div class="projects-grid__text"> 
+                          <p>
+                            Задача: внедрение и&nbsp;настройка 
+                            серверного и&nbsp;сетевого оборудования.
+                          </p>
+                          <p>
+                             Результат: ИТ-компания «Азон» 
+                            выполнила работы по&nbsp;оптимизации ИТ-инфраструктуры 
+                            под&nbsp;возможности и&nbsp;задачи заказчика.
+                          </p>
+                        </div>
+                        <button class="projects-grid__button" type="button">Подробнее</button></a></li>
+                    <li class="projects-grid__item" data-category="5"><a class="projects-grid__link" href="#?5"> 
+                        <h4 class="projects-grid__title"> «Олимп Дизайн Групп»</h4>
+                        <div class="projects-grid__text">
+                          <p>
+                             Задача: проведение аудита и&nbsp;модернизации 
+                            текущей сетевой и&nbsp;серверной инфраструктуры.
+                          </p>
+                          <p>
+                            Результат: выполненные работы позволили 
+                            повысить отказоустойчивость сетевой и&nbsp;серверной 
+                            инфраструктуры, а&nbsp;также значительно увеличить пропускную способность локальной сети клиента.
+                          </p>
+                        </div>
+                        <button class="projects-grid__button" type="button">Подробнее</button></a></li>
                   </ul>
                 </div>
               </div>
@@ -205,7 +206,7 @@
                 <div class="consultation__wrapper">
                   <input class="consultation__input" id="consultation-name" type="text" name="consultation-name" placeholder="Ваше имя" required="required"/>
                   <input class="consultation__input" id="consultation-email" type="email" name="consultation-email" placeholder="E-mail" required="required"/>
-                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН Компании" required="required"/>
+                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН" required="required"/>
                   <input class="consultation__input" id="consultation-phone" type="tel" name="consultation-phone" placeholder="+7 (___)___-__-__" required="required"/>
                   <textarea class="consultation__textarea" id="consultation-comment" name="" cols="30" rows="5" placeholder="Комментарий"></textarea>
                 </div>
@@ -216,10 +217,13 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108175253" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241108202743" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -290,6 +294,6 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20241108175253"></script>
+    <script src="js/app.min.js?_v=20241108202743"></script>
   </body>
 </html>

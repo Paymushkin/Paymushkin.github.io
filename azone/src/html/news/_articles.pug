@@ -120,15 +120,5 @@ section#articles.articles
                         span Подробнее
                         include ../icons/_link
 
-        nav.hero__nav.nav-hero.page-hero__nav
-            ul.nav-hero__list
-                li.nav-hero__item
-                    a(href="#pro-azone").nav-hero__link PRO Азон
-                li.nav-hero__item
-                    a(href="#articles").nav-hero__link Статьи           
-                li.nav-hero__item
-                    a(href="#vendors").nav-hero__link Вендоры
-                li.nav-hero__item
-                    a(href="#it-market").nav-hero__link Рынок IT
-                li.nav-hero__item
-                    a(href="#campaign").nav-hero__link  Акции вендоров
+        form(action="", method="post").load-more 
+            button(type="button").button._highlight.load-more__button Загрузить еще

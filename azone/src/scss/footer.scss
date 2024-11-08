@@ -58,6 +58,26 @@
 			gap: 16px;
 		}
 	}
+
+	&__to-top {
+		position: fixed;
+		right: 20px;
+		bottom: 60px;
+		display: flex;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $highlightColor;
+		transition: 0.3s ease background-color;
+		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $highlightColor-2;
+			}
+		}
+	}
 }
 
 
