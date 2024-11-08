@@ -4,23 +4,65 @@ section#calculator.calculator
         .calculator__body
             form(action="#", method="post").calculator__price.price-calculator
                 .price-calculator__field
-                    input#compQuantity.price-calculator__input(type="number", name="quantity", min="0", max="99" placeholder="Компьютерное оборудование")
-                    span.price-calculator__text Компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи
+                    p.price-calculator__text 
+                        | Компьютерное оборудование<br>
+                        span | компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи |
+                    .range-wrapper
+                        .length.range__slider(data-min='0' data-max='99')
+                            input.slider-input(type='range' min='0' max='99' value='0')
+                        input#price-item-1.slider-count(type="number", min="0", max="99", value="0")
                 .price-calculator__field
-                    input#serverQuantity.price-calculator__input(type="number", name="quantity", min="0", max="300" placeholder="Серверное оборудование")
-                    span.price-calculator__text Физические и виртуальные серверы, службы или сервисы
+                    p.price-calculator__text 
+                        | Серверное оборудование<br>
+                        span | физические и виртуальные серверы, службы или сервисы |
+                    .range-wrapper
+                        .length.range__slider(data-min='0' data-max='300')
+                            input.slider-input(type='range' min='0' max='300' value='0')
+                        input#price-item-2.slider-count(type="number", min="0", max="300", value="0")
                 .price-calculator__field
-                    input#techQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Оргтехника и сетевое оборудование")
-                    span.price-calculator__text Принтеры, сканеры, копиры, маршрутизаторы, коммутаторы
+                    p.price-calculator__text 
+                        | Оргтехника и сетевое оборудование<br>
+                        span | принтеры, сканеры, копиры, маршрутизаторы, коммутаторы |
+                    .range-wrapper
+                        .length.range__slider(data-min='0' data-max='999')
+                            input.slider-input(type='range' min='0' max='999' value='0')
+                        input#price-item-3.slider-count(type="number", min="0", max="999", value="0")
                 .price-calculator__field
-                    input#branchQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Количество филиалов")
-                    span.price-calculator__text Филиалы в Москве и Московской области
+                    p.price-calculator__text 
+                        | Количество филиалов<br>
+                        span | Филиалы в Москве и Московской области |
+                    .range-wrapper
+                        .length.range__slider(data-min='0' data-max='999')
+                            input.slider-input(type='range' min='0' max='999' value='0')
+                        input#price-item-4.slider-count(type="number", min="0", max="999", value="0")
                 .price-calculator__field
+                    span.price-calculator__text Режим IT-обслуживания
                     select#MaintenanceMode.price-calculator__select
                         option(value='8x5') 8x5
                         option(value='12x7') 12x7
                         option(value='24x7') 24x7
-                    span.price-calculator__text Режим IT-обслуживания
+
+
+
+                    //- span Компьютерное оборудование<br>(Компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи)
+                    //- .range-wrapper
+                    //-     span.range-limit 0
+                    //-     input#quantity-range-1(type="range", name="quantity", min="0", max="99", step="1" placeholder="0")
+                    //-     span.range-limit 99
+                    //- input#quantity-number-1(type="number", name="quantity", min="0", max="99").price-calculator__input
+
+                //- .price-calculator__field
+                //-     input#compQuantity.price-calculator__input(type="number", name="quantity", min="0", max="99" placeholder="Компьютерное оборудование")
+                //-     span.price-calculator__text Компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи
+                //- .price-calculator__field
+                //-     input#serverQuantity.price-calculator__input(type="number", name="quantity", min="0", max="300" placeholder="Серверное оборудование")
+                //-     span.price-calculator__text Физические и виртуальные серверы, службы или сервисы
+                //- .price-calculator__field
+                //-     input#techQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Оргтехника и сетевое оборудование")
+                //-     span.price-calculator__text Принтеры, сканеры, копиры, маршрутизаторы, коммутаторы
+                //- .price-calculator__field
+                //-     input#branchQuantity.price-calculator__input(type="number", name="quantity", min="0", max="999" placeholder="Количество филиалов")
+                //-     span.price-calculator__text Филиалы в Москве и Московской области
                     
                 
                 button#inputSubmit(type="submit").button._standart.price-calculator__button Рассчитать
