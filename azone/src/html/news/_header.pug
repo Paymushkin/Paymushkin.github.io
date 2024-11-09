@@ -1,0 +1,41 @@
+header#header.header(data-scroll="300", data-scroll-show="500")
+	.header__container
+		.header__wrapper
+			a(href="/").header__logo
+				include ../icons/_logo
+			nav.header__nav.header-menu
+				ul.header-menu__list
+					li.header-menu__item 
+						a(href="").header-menu__link Каталог 
+					li.header-menu__item 
+						a(href="").header-menu__link ИТ-инфраструктура
+					li.header-menu__item
+						a(href="").header-menu__link О компании
+					li.header-menu__item._contact 
+						a(href="tel:+74959026636").header-menu__link 8 (495) 902-66-36
+					li.header-menu__item._contact
+						a(href="mailto:info@azone-it.ru").header-menu__link info@azone-it.ru
+				a(href="#consultation").button.header-menu__button._highlight Консультация
+			.header__mobile-icons.header-mobile
+					a.header-mobile__icon(href="tel:+74959026636")
+						include ../icons/_phone
+					a.header-mobile__icon(href="mailto:info@azone-it.ru")
+						include ../icons/_mail
+					button#show-hide-menu.menu-icon 
+						.menu-icon__line
+						.menu-icon__line
+						.menu-icon__line
+	
+		.header__tags
+			nav.hero__nav.nav-hero.header-tags
+				ul.nav-hero__list
+					li.nav-hero__item
+						a(href="#pro-azone").nav-hero__link PRO Азон
+					li.nav-hero__item
+						a(href="#articles").nav-hero__link Статьи           
+					li.nav-hero__item
+						a(href="#vendors").nav-hero__link Вендоры
+					li.nav-hero__item
+						a(href="#it-market").nav-hero__link Рынок IT
+					li.nav-hero__item
+						a(href="#campaign").nav-hero__link  Акции вендоров

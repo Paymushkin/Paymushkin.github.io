@@ -152,7 +152,6 @@ if (calculatePlan) {
 
         if (plans) {
             plans.scrollIntoView({
-                // top: document.querySelector(".scroll-header").offsetHeight,
                 behavior: 'smooth'
             });
         }
@@ -221,3 +220,26 @@ sliders.forEach(slider => {
     }
 
 });
+
+const header = document.querySelector('header');
+const body = document.body;
+const headerHeight = header.offsetHeight;
+body.style.paddingTop = `${headerHeight}px`;
+
+
+
+// function updateBodyPadding() {
+//     // Проверяем, есть ли у заголовка класс _header-scroll
+//     if (header.classList.contains('_header-scroll')) {
+//         // Получаем высоту заголовка
+//         const headerHeight = header.offsetHeight;
+//         // Устанавливаем отступ верхней части для body
+//         body.style.paddingTop = `${headerHeight}px`;
+//     } else {
+//         // Если класс отсутствует, сбрасываем отступ
+//         body.style.paddingTop = '0';
+//     }
+// }
+
+// // Запускаем функцию при изменении размера окна
+// window.addEventListener('scroll', updateBodyPadding);

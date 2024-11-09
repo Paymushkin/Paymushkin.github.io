@@ -390,6 +390,7 @@ body::after {
 }
 
 .wrapper {
+  position: relative;
   min-height: 100%;
   max-width: 100%;
   display: -ms-flexbox;
@@ -1497,8 +1498,34 @@ details[open] summary:before {
   }
 }
 
+.header-tags .nav-hero__link {
+  min-width: auto;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
 .header {
-  margin: 37px 0;
+  top: 0;
+  position: fixed;
+  padding: 37px 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header._header-scroll {
+  top: -200px;
+}
+
+.header._header-show {
+  -webkit-transition: top 0.3s ease 0s;
+  -o-transition: top 0.3s ease 0s;
+  transition: top 0.3s ease 0s;
+  top: 0;
+  padding: 0;
+  -webkit-box-shadow: 0px 1px 10px 4px #dadada;
+          box-shadow: 0px 1px 10px 4px #dadada;
 }
 
 .header__wrapper {
@@ -1515,6 +1542,10 @@ details[open] summary:before {
   border-radius: 50px;
 }
 
+._header-show .header__wrapper {
+  background-color: transparent;
+}
+
 .header__logo {
   margin-right: auto;
 }
@@ -1525,6 +1556,15 @@ details[open] summary:before {
   -ms-flex-align: center;
       align-items: center;
   gap: 47px;
+}
+
+.header__tags {
+  display: none;
+  margin-bottom: 10px;
+}
+
+._header-show .header__tags {
+  display: block;
 }
 
 .header-mobile {
@@ -1565,6 +1605,12 @@ details[open] summary:before {
   -webkit-transition: 0.3s ease color;
   -o-transition: 0.3s ease color;
   transition: 0.3s ease color;
+}
+
+._header-show .header-menu__button {
+  padding: 12px 24px;
+  height: 44px;
+  border-radius: 12px;
 }
 
 .menu-icon {
@@ -1651,7 +1697,7 @@ details[open] summary:before {
 }
 
 .mobile-menu__body {
-  padding: 26px 38px 86px;
+  padding: 46px 38px 86px;
   background-color: #fff;
   border-radius: 0 0 30px 30px;
 }
@@ -5189,14 +5235,35 @@ details[open] summary:before {
     display: none;
   }
 
+  .header {
+    padding: 15px 0;
+  }
+
+  .header._header-show {
+    padding: 15px 0;
+  }
+
+  ._menu-active .header {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
   .header__wrapper {
     padding: 0;
     height: unset;
     background-color: #fff;
   }
 
+  ._header-show .header__tags {
+    display: none;
+  }
+
   .header-menu {
     display: none;
+  }
+
+  .mobile-menu {
+    top: 64px;
   }
 
   .grid-services {
