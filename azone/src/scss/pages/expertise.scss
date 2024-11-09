@@ -94,7 +94,7 @@
 
     &__year {
         @include adaptiveValue("font-size", 40, 16);
-        line-height: 1.5;
+        line-height: 0.8;
         font-weight: 700;
     }
 
@@ -108,7 +108,7 @@
 
     &__title {
         font-family: "Gotham Pro";
-        @include adaptiveValue("font-size", 64, 32);
+        @include adaptiveValue("font-size", 40, 32);
         font-weight: 500;
     }
 

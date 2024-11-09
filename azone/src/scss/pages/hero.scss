@@ -89,7 +89,7 @@
         background-color: $highlightColor-2;
         border-radius: 30px;
         font-family: "Gotham Pro";
-        @include adaptiveValue("font-size", 32, 16);
+        @include adaptiveValue("font-size", 22, 16);
         font-weight: 500;
 
         @media (max-width:$mobile) {
@@ -101,10 +101,6 @@
         @media (max-width:$mobileSmall) {
             padding: 24px;
         }
-    }
-
-    &__softs {
-        margin-bottom: 32px;
     }
 
     &__search {}
