@@ -2571,6 +2571,10 @@ details[open] summary:before {
   }
 }
 
+.page-hero__softs {
+  margin-bottom: 32px;
+}
+
 .select-page__form {
   display: -ms-flexbox;
   display: flex;
@@ -4126,6 +4130,7 @@ details[open] summary:before {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  margin-bottom: 32px;
 }
 
 @supports (gap: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
@@ -5211,6 +5216,11 @@ details[open] summary:before {
 }
 
 @media (max-width: 48.06125em) {
+  .load-more__button {
+    width: 100%;
+    max-height: 44px;
+  }
+
   .swiper__navigation {
     gap: 20px;
   }
@@ -5511,6 +5521,11 @@ details[open] summary:before {
     border-radius: 20px;
   }
 
+  .recomendation-grid__button {
+    max-height: 44px;
+    font-size: 16px;
+  }
+
   .footer {
     padding: 40px 0;
   }
@@ -5533,6 +5548,11 @@ details[open] summary:before {
 }
 
 @media (max-width: 36.06125em) {
+  .load-more {
+    -ms-flex-pack: stretch;
+        justify-content: stretch;
+  }
+
   .spoiler {
     width: 100%;
   }

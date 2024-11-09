@@ -27,28 +27,31 @@ section#page-hero.page-hero
                         
                 .certificates-grid.filter-list
                     ul.certificates-grid__list 
-                        li.certificates-grid__item(data-category="1", data-aos="fade-up", data-aos-duration="750")
+                        li.certificates-grid__item(data-category="1")
                             a.certificates-grid__link(href="https://www.azone-it.ru/sites/all/themes/blogger_theme/images/sertificats/2024/kaspersky_2024.png", data-fancybox="images" data-caption="«Лаборатория Касперского»") 
                                 h4.certificates-grid__title  «Лаборатория Касперского»
                                 span.certificates-grid__status Статус Platinum Partner
                                 include ../icons/_arrow-down
-                        li.certificates-grid__item(data-category="2", data-aos="fade-up", data-aos-duration="750")
+                        li.certificates-grid__item(data-category="2")
                             a.certificates-grid__link(href="https://www.azone-it.ru/sites/all/themes/blogger_theme/images/sertificats/2024/code_2024.png", data-fancybox="images" data-caption="«Код безопасности»") 
                                 h4.certificates-grid__title   «Код безопасности»
                                 span.certificates-grid__status Статус Platinum Partner
                                 include ../icons/_arrow-down
-                        li.certificates-grid__item(data-category="3", data-aos="fade-up", data-aos-duration="750")
+                        li.certificates-grid__item(data-category="3")
                             a.certificates-grid__link(href="https://www.azone-it.ru/sites/all/themes/blogger_theme/images/sertificats/2024/stakhanovets_2024.png", data-fancybox="images" data-caption="«Стахановец»") 
                                 h4.certificates-grid__title  «Стахановец»
                                 span.certificates-grid__status Статус Platinum Partner
                                 include ../icons/_arrow-down
-                        li.certificates-grid__item(data-category="4", data-aos="fade-up", data-aos-duration="750")
+                        li.certificates-grid__item(data-category="4")
                             a.certificates-grid__link(href="https://www.azone-it.ru/sites/all/themes/blogger_theme/images/sertificats/2024/my-office-2024.png", data-fancybox="images" data-caption="ООО «Новые облачные технологии» (МойОфис)")     
                                 h4.certificates-grid__title  ООО «Новые облачные технологии» (МойОфис)
                                 span.certificates-grid__status Статус авторизованного партнёра
                                 include ../icons/_arrow-down
-                        li.certificates-grid__item(data-category="1", data-aos="fade-up", data-aos-duration="750")
+                        li.certificates-grid__item(data-category="1")
                             a.certificates-grid__link(href="https://www.azone-it.ru/sites/all/themes/blogger_theme/images/sertificats/2022/1c-2022.jpg", data-fancybox="images" data-caption="ООО «1С»") 
                                 h4.certificates-grid__title  ООО «1С»
                                 span.certificates-grid__status Статус авторизованного партнёра
                                 include ../icons/_arrow-down
+
+            form(action="", method="post").load-more 
+                button(type="button").button._highlight.load-more__button Загрузить еще
