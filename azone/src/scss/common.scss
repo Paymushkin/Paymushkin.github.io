@@ -126,11 +126,11 @@ section {
 
 .section-title {
 	// margin-bottom: 60px;
-	@include adaptiveValue("margin-bottom", 60, 30);
+	@include adaptiveValue("margin-bottom", 42, 30);
 	color: $mainColor;
 	text-align: center;
 	font-family: "Gotham Pro";
-	@include adaptiveValue("font-size", 64, 32);
+	@include adaptiveValue("font-size", 36, 32);
 	font-weight: 500;
 
 	&._with-text {
@@ -170,6 +170,8 @@ section {
 
 mark {
 	// color: #fff;
+	padding: 0 7px;
+	border-radius: 12px;
 	background-color: $highlightColor;
 }
 
