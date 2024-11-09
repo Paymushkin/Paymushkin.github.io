@@ -863,27 +863,27 @@ input {
   text-align: center;
 }
 
-@supports (margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem )) {
+@supports (margin-bottom: clamp( 1.875rem , 1.475rem  +  2vw , 3rem )) {
   .section-subtitle {
-    margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem );
+    margin-bottom: clamp( 1.875rem , 1.475rem  +  2vw , 3rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 1.875rem , 1.3638888889rem  +  2.5555555556vw , 3.3125rem )) {
+@supports not (margin-bottom: clamp( 1.875rem , 1.475rem  +  2vw , 3rem )) {
   .section-subtitle {
-    margin-bottom: calc(1.875rem + 1.4375 * (100vw - 20rem) / 56.25);
+    margin-bottom: calc(1.875rem + 1.125 * (100vw - 20rem) / 56.25);
   }
 }
 
-@supports (font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem )) {
+@supports (font-size: clamp( 0.875rem , 0.6972222222rem  +  0.8888888889vw , 1.375rem )) {
   .section-subtitle {
-    font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem );
+    font-size: clamp( 0.875rem , 0.6972222222rem  +  0.8888888889vw , 1.375rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.6527777778rem  +  1.1111111111vw , 1.5rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.6972222222rem  +  0.8888888889vw , 1.375rem )) {
   .section-subtitle {
-    font-size: calc(0.875rem + 0.625 * (100vw - 20rem) / 56.25);
+    font-size: calc(0.875rem + 0.5 * (100vw - 20rem) / 56.25);
   }
 }
 
@@ -1801,15 +1801,15 @@ details[open] summary:before {
   line-height: 1.4;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
+@supports (font-size: clamp( 0.75rem , 0.3944444444rem  +  1.7777777778vw , 1.75rem )) {
   .grid-services__title {
-    font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem );
+    font-size: clamp( 0.75rem , 0.3944444444rem  +  1.7777777778vw , 1.75rem );
   }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.3055555556rem  +  2.2222222222vw , 2rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.3944444444rem  +  1.7777777778vw , 1.75rem )) {
   .grid-services__title {
-    font-size: calc(0.75rem + 1.25 * (100vw - 20rem) / 56.25);
+    font-size: calc(0.75rem + 1 * (100vw - 20rem) / 56.25);
   }
 }
 
