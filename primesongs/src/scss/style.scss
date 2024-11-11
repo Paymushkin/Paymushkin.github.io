@@ -121,9 +121,7 @@ body {
         padding-right: 0 !important;
     }
 
-    ._mobile-catalog-active &,
-    ._mobile-menu-active & {
-        display: flex;
+    &._menu-open {
         overflow: hidden;
         touch-action: none;
         padding-right: 0 !important;

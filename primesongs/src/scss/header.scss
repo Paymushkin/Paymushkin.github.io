@@ -17,6 +17,12 @@
 		@media (max-width:$mobile) {
 			margin-right: auto;
 		}
+
+		@media (max-width: em(350)) {
+			img {
+				max-width: 110px;
+			}
+		}
 	}
 
 	&__search {

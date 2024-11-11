@@ -164,10 +164,7 @@ body {
   padding-right: 0 !important;
 }
 
-._mobile-catalog-active body,
-._mobile-menu-active body {
-  display: -ms-flexbox;
-  display: flex;
+body._menu-open {
   overflow: hidden;
   -ms-touch-action: none;
       touch-action: none;
@@ -3434,6 +3431,10 @@ select:focus {
   gap: 20px;
 }
 
+.form-sidebar__title {
+  font-size: 18px;
+}
+
 .form-sidebar__list {
   display: -ms-flexbox;
   display: flex;
@@ -4310,6 +4311,16 @@ select:focus {
 
   .sidebar {
     top: 80px;
+    gap: 24px;
+    padding: 15px;
+  }
+
+  .sidebar-nav__list {
+    gap: 12px;
+  }
+
+  .sidebar-nav__link {
+    gap: 12px;
   }
 
   .about-song__info {
@@ -4326,6 +4337,12 @@ select:focus {
 @media (max-width: 23.4375em) {
   .about-song__cover {
     display: none;
+  }
+}
+
+@media (max-width: 21.875em) {
+  .header__logo img {
+    max-width: 110px;
   }
 }
 
