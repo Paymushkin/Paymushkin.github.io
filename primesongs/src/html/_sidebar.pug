@@ -1,0 +1,89 @@
+aside#sidebar.sidebar 
+    nav.sidebar__nav.sidebar-nav 
+        ul.sidebar-nav__list
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    include icons/_home
+                    span Главная
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    include icons/_downloads
+                    span Скаченное
+    
+    nav.sidebar__nav.sidebar-nav
+        h4.sidebar-nav__title Открой новое
+        ul.sidebar-nav__list
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/music-album.svg", alt="music-album-icon")
+                    span Популярное
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/music-album.svg", alt="music-album-icon")
+                    span Discount
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/music-album.svg", alt="music-album-icon")
+                    span Альбомы
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/artists.svg", alt="artists-icon")
+                    span Артисты
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/recently.svg", alt="recently-icon")
+                    span Недавние
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/favorites.svg", alt="favorites-icon")
+                    span Любимые
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link
+                    img(src="@img/icons/settings.svg", alt="settings-icon")
+                    span Настройки
+    
+    nav.sidebar__nav.sidebar-nav
+        h4.sidebar-nav__title.sidebar-nav__title-grey ФИЛЬТРЫ
+        form(action="#", method="post").sidebar-nav__form.form-sidebar
+            h4.form-sidebar__title Вокал
+            ul.form-sidebar__list
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox' checked)
+                        |   Мужской
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        |   Женский
+
+        form(action="#", method="post").sidebar-nav__form.form-sidebar
+            h4.form-sidebar__title Жанр
+            ul.form-sidebar__list
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox' checked)
+                        |  Популярное
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        |  Поп
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox' checked)
+                        | Эстрада
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        | Танцевальная/Хаус
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        | Поп-рок/Рок
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        | Рэп
+                li.form-sidebar__item
+                    label.form-control
+                        input(type='checkbox' name='checkbox')
+                        | РнБ

@@ -1,0 +1,126 @@
+section.hero#hero
+    .hero__body
+        .hero__content 
+            .hero__slider.hero-slider.swiper
+                .hero-slider__wrapper.hero-slider__wrapper.swiper-wrapper
+                    .hero-slider__slide.hero-slide.swiper-slide(style="background-image: url(@img/hero/slider-1.png)")  
+                        h1.hero-slide__title Prime Songs
+                        p.hero-slide__text Откройте новый мир
+                            br
+                            span музыки с нами!
+                    
+                    .hero-slider__slide.hero-slide.swiper-slide(style="background-image: url(@img/hero/slider-1.png)")  
+                        h1.hero-slide__title Prime Songs 2
+                        p.hero-slide__text Откройте новый мир
+                            br
+                            span музыки с нами!
+                    
+                    .hero-slider__slide.hero-slide.swiper-slide(style="background-image: url(@img/hero/slider-1.png)")  
+                        h1.hero-slide__title Prime Songs 3
+                        p.hero-slide__text Откройте новый мир
+                            br
+                            span музыки с нами!
+
+                .hero-slider__pagination.swiper-pagination
+
+            .hero__charts.charts-block
+                h4.charts-block__title Музыка 
+                    span недели
+                ul.charts-block__list 
+                    li.charts-block__item.charts-item
+                        a(href="").charts-item__link 
+                            .charts-item__count 1
+                            .charts-item__track 
+                                .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                    .charts-item__label._crown
+                                .charts-item__about 
+                                    h5.charts-item__artist Starboy
+                                    p.charts-item__song The Weeknd
+                            .charts-item__plays 
+                                .charts-item__icon
+                                    include icons/_headphones
+                                .charts-item__counter 12.5k
+
+                    li.charts-block__item.charts-item
+                        a(href="").charts-item__link 
+                            .charts-item__count 2
+                            .charts-item__track 
+                                .charts-item__cover(style="background-image: url(@img/hero/chart-2.png)")  
+                                .charts-item__about 
+                                    h5.charts-item__artist I Met With You I Met With You
+                                    p.charts-item__song Modern English Modern English
+                            .charts-item__plays 
+                                .charts-item__icon
+                                    include icons/_headphones
+                                .charts-item__counter 11.9k
+
+                    li.charts-block__item.charts-item
+                        a(href="").charts-item__link 
+                            .charts-item__count 3
+                            .charts-item__track 
+                                .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                    .charts-item__label._crown
+                                .charts-item__about 
+                                    h5.charts-item__artist Ruh
+                                    p.charts-item__song She Past Away
+                            .charts-item__plays 
+                                .charts-item__icon
+                                    include icons/_headphones
+                                .charts-item__counter 10.2k
+
+                    li.charts-block__item.charts-item
+                        a(href="").charts-item__link 
+                            .charts-item__count 4
+                            .charts-item__track 
+                                .charts-item__cover(style="background-image: url(@img/hero/chart-2.png)")  
+                                .charts-item__about 
+                                    h5.charts-item__artist Starboy
+                                    p.charts-item__song The Weeknd
+                            .charts-item__plays 
+                                .charts-item__icon
+                                    include icons/_headphones
+                                .charts-item__counter 8.4k
+                    
+                    li.charts-block__item.charts-item
+                        a(href="").charts-item__link 
+                            .charts-item__count 5
+                            .charts-item__track 
+                                .charts-item__cover(style="background-image: url(@img/hero/chart-2.png)")  
+                                .charts-item__about 
+                                    h5.charts-item__artist Starboy
+                                    p.charts-item__song The Weeknd
+                            .charts-item__plays 
+                                .charts-item__icon
+                                    include icons/_headphones
+                                .charts-item__counter 8.1k
+        
+        .hero__carousel.genres-carousel
+            .genres-carousel__slider.swiper
+                .genres-carousel__wrapper.swiper-wrapper
+                    .genres-carousel__slide.slide-genres.swiper-slide._pink(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Поп
+                        //- <img src="@img/genres/item-1.png" alt="">
+                    .genres-carousel__slide.slide-genres.swiper-slide._purple(style="background-image: url(@img/genres/item-2.png)")
+                        h5.slide-genres__title Рок
+                    .genres-carousel__slide.slide-genres.swiper-slide._orange(style="background-image: url(@img/genres/item-3.png)")
+                        h5.slide-genres__title Джаз
+                    .genres-carousel__slide.slide-genres.swiper-slide._turquoise(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Эстрада
+                    .genres-carousel__slide.slide-genres.swiper-slide(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Эстрада
+                    .genres-carousel__slide.slide-genres.swiper-slide._pink(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Поп
+                    .genres-carousel__slide.slide-genres.swiper-slide._purple(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Рок
+                    .genres-carousel__slide.slide-genres.swiper-slide._orange(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Джаз
+                    .genres-carousel__slide.slide-genres.swiper-slide._turquoise(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Эстрада
+                    .genres-carousel__slide.slide-genres.swiper-slide(style="background-image: url(@img/genres/item-1.png)")
+                        h5.slide-genres__title Эстрада
+                
+                .genres-carousel__navigation.genres-navigation
+                    .genres-navigation__prev
+                        include icons/_arrow-slider 
+                    .genres-navigation__next
+                        include icons/_arrow-slider

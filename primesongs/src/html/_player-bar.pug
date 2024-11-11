@@ -1,0 +1,26 @@
+#playerBar.player-bar
+    .player-bar__container 
+        .player-bar__content.content-player 
+            .content-player__about.about-song
+                #rotatingImage.about-song__cover(style="background-image: url(@img/player/item-1.png)") 
+                .about-song__info
+                    h4.about-song__name Chumad
+                    span.about-song__artists Melqo, Skazz
+            .content-player__controls
+                .controls-player
+                    button#backwardBtn.control-btn.backward(type="button")
+                        include icons/_backward
+                    button#playPauseBtn.control-btn.play-pause-btn._play(type="button")
+                        include icons/_play
+                        include icons/_pause
+                    button#forwardBtn.control-btn.forward(type="button")
+                        include icons/_forward
+                button(type="button").favorite-btn#favoriteBtn
+                    include icons/_favorite
+            .content-player__track.range-wrapper
+                audio#song(src='https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Besomorph-Coopex-Redemption.mp3')
+                    source(src='Besomorph-Coopex-Redemption.mp3' type='audio/mpeg')
+                input#track.content-player__range(type="range", name="track", min='0' max='300' value='0') 
+            .content-player__volume.range-wrapper
+                include icons/_volume
+                input#volume.content-player__range(type="range", name="volume", min='0' max='100' value='0')

@@ -1,0 +1,22 @@
+header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
+	a.header__logo(href="/")
+		img(src="@img/logo.svg", alt="logo")
+	.header__search.search-header
+		form(action="#", method="post").search-header__form
+			input.search-header__input(type="search", placeholder="Search by artist, song or album...")
+			button.search-header__submit(type="submit")
+				svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+					circle(cx='11.0586' cy='11.0586' r='7.06194' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+					path(d='M20.0033 20.0033L16.0517 16.0516' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+	nav.header__nav.nav-header
+		button(type="button")#mobileMenuBtn.mobile-menu__button 
+			span
+			span 
+			span
+		a(href="").nav-header__notification
+			svg(xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewbox='0 0 28 28' fill='none')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M7.58066 20.2548C6.35865 20.2548 5.36693 19.2662 5.36307 18.0442V18.0442V18.0442C5.36384 17.4224 5.61203 16.8265 6.05286 16.388L7.5223 14.9174V10.5488C7.52261 8.83161 8.20544 7.185 9.42041 5.97156C10.6354 4.75812 12.2829 4.07737 14 4.07923V4.07923C17.5718 4.08116 20.4666 6.97692 20.4672 10.5488V14.9139L21.9366 16.3845C22.3778 16.8229 22.6264 17.4188 22.6276 18.0407V18.0407V18.0407C22.6237 19.2627 21.632 20.2513 20.41 20.2513L7.58066 20.2548Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+				path(d='M15.7262 23.9207H12.2749' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+		a(href="").nav-header__account
+			.nav-header__avatar(style="background-image:url('@img/header/avatar.png')")
+				.user-status

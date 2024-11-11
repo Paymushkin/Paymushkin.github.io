@@ -1,0 +1,765 @@
+#call-me.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Закажите звонок в MolecuLab по телефону
+				p.popup__text Укажите свой контактный телефон и мы перезвоним вам в ближайшее время
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#name-for-call.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input#number-for-call.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+					button(type="submit", disabled).button.popup__button Отправить 
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+#request.popup(aria-hidden='true', data-single="false")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Сделать заказ
+				p.popup__text Укажите свой контактный телефон и мы перезвоним вам в ближайшее время
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#name-for-request.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input#number-for-request.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+						//- input#email-for-request.popup__input(type="email", name="email", placeholder="E-mail", required)
+						.popup__verification.verification-form
+							.verification-form__example 
+								span#verification-example 88 / 8 =
+							input#example-for-request.popup__input.verification-form__input(type="number", name="code", placeholder="Введите ответ", required)
+					button(type="submit", disabled, data-popup="request-success").button.popup__button Отправить 
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+#request-success.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Спасибо за заявку
+				p.popup__text Ваша заявка успешно отправлена, наши специалисты свяжутся с вами в течение 30 минут
+				//- form(action="#", method="post").popup__form
+				//- 	button(type="submit", disabled).button.popup__button Отправить 
+				//- p.popup__policy Нажимая «Отправить», вы принимаете условия 
+				//- 	a(href="#", target="_blank") политики конфиденциальности
+
+#share-link.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Ссылка действует 15 дней
+				p.popup__text 
+					| При открытии ссылки у другого пользователя товары из вашей корзины 
+					| будут автоматически добавлены в его корзину
+				.popup__sharing 
+					.popup__sharing-link 
+						input#url-input(type="url", name="url-input" value="https://moleculab.ru/cart/12546537")
+					button.popup__sharing-icon
+						include icons/_link
+
+#to-follow-product.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подпишитесь на товар
+				p.popup__text
+					| Укажите свой e-mail, мы обязательно напишем Вам, 
+					| когда нужный товар появится в наличии
+				form(action="#", method="post").popup__field.popup__field_mb16
+					input#email-input(type="email", name="email-input", required, placeholder="Email")
+					button.button(type="submit", data-popup="you-follow") Отправить
+				p.popup__policy Нажимая «Отправить», вы принимаете условия 
+					a(href="#", target="_blank") политики конфиденциальности
+
+#you-follow.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Вы подписались на товар
+				p.popup__text
+					| Уведомление о наличии товара придет вам на электронную почту.
+				a.button._w100 В каталог
+
+#tender.popup.popup-tender._step-1(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			.popup__header
+				button.popup__back._to-step-1
+					include icons/_arrow-popup
+				
+				.popup__steps.steps-popup 
+					.steps-popup__text 
+						span.current-step._step-1 1
+						span.current-step._step-2 2 
+						span из 
+						span.all-steps 2
+					.steps-popup__fractions 
+						.steps-popup__fraction
+						.steps-popup__fraction
+
+				button.popup__close(data-close='data-close' type='button')
+					include icons/_close
+
+			.popup__body
+				h2.popup__title Введите данные
+				p.popup__text 
+					| Заполните данные для оформления тендера
+				form(action="#", method="post").popup__form
+					
+					.step.step-1
+						h3.popup__subtitle Личные данные
+						.popup__inputs
+							.popup__field
+								label.popup__label Имя
+								input#name-for-tender.popup__input(type="text", name="name", placeholder="Наталья", required)
+
+							.popup__field
+								label.popup__label Фамилия
+								input#surname-for-tender.popup__input(type="text", name="surname", placeholder="Карандашова", required)
+
+							.popup__field
+								label.popup__label Отчество
+								input#patronum-for-tender.popup__input(type="text", name="patronum", placeholder="Олеговна")
+
+						h3.popup__subtitle Контакты
+						.popup__inputs
+							.popup__field
+								label.popup__label Номер телефона
+								input#number-for-tender.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+							
+							.popup__field
+								label.popup__label Почта
+								input#email-for-tender.popup__input(type="email", name="email", placeholder="E-mail", required)
+							
+						.popup__button-wrapper
+							button(type="text").button.popup__button._to-step-2 Далее
+					
+					.step.step-2
+						h3.popup__subtitle Сведения об организации
+						.popup__inputs
+							.popup__field
+								label.popup__label Наименование организации
+								input#company-for-tender.popup__input(type="text", name="company", placeholder="ООО “ТоргДом”", required)
+
+							.popup__field
+								label.popup__label ИНН
+								input#inn-for-tender.popup__input(type="number", name="inn", placeholder="1234567890", required)
+
+							.popup__field
+								label.popup__label Регион
+								.popup-form__select.select
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Московская область") Московская область
+											li.select__item(data-value="ЮФО") ЮФО
+											li.select__item(data-value="СЗФО") СЗФО
+											li.select__item(data-value="ЦФО") ЦФО
+
+							.popup__field
+								label.popup__label Город
+								.popup-form__select.select
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Рязань") Рязань
+											li.select__item(data-value="Казань") Казань
+											li.select__item(data-value="Самара") Самара
+											li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+							
+							.popup__field
+								label.popup__label Улица
+								input#street-for-tender.popup__input(type="text", name="street", placeholder="Введите адрес")
+
+						h3.popup__subtitle Комментарий к заказу
+						.popup__inputs
+							textarea#comments.popup__textarea(name="comments") 
+							
+						.popup__button-wrapper
+							button(type="text", disabled).button.popup__button Далее
+
+#add-card.popup.popup-add-card(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title._mb24 Привязка карты
+				form(action="#", method="post").popup__form
+					.popup__inputs.row
+						input#number-for-card.popup__input(type="number", name="number-for-card", placeholder="Укажите номер карты", required)
+						input#date-for-card.popup__input._w50(type="tel", name="date-for-card", placeholder="ММ/ГГ", required)
+						input#cvv-for-card.popup__input._w50(type="number", name="cvv-for-card", placeholder="CVV/CVC", required)
+
+					.popup__button-wrapper
+						button(type="submit", disabled).button.popup__button Привязать
+
+						p.popup__policy Нажимая «Отправить», вы принимаете условия 
+							a(href="#", target="_blank") политики конфиденциальности
+
+#pick-up-map.pick-up-map.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content._transparent._big
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				.popup__map._pick-ups-list
+					
+					.popup__pick-ups.pick-ups
+						h3.pick-ups__title Способы доставки
+						form(action="post").pick-ups__form
+							input#search-pick-up.pick-ups__search(type="search", name="search-pick-up", placeholder="Введите адрес")
+						.pick-ups__address
+							ul.pick-ups__list
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар
+								li.pick-ups__item
+									h4 Красных Партизан, 1/4к5
+									span Краснодар	
+								li.pick-ups__item 
+									h4 Красных Партизан, 1/4к5
+									span Краснодар		
+										
+						.pick-ups__location.location-pick-ups
+							button.location-pick-ups__button 
+									include icons/_pickup-point
+									span Определить местоположение
+							button.button._disabled Привезти сюда
+					
+					.popup__pick-up-point.point-pick-up
+						.point-pick-up__title
+							include icons/_arrow-left
+							h4 Пункт выдачи заказов СДЭК
+						ul.point-pick-up__list 
+							li.point-pick-up__item 
+								include icons/_location-point
+								span Краснодар, улица Красных Партизан, д. 1/4, корп. 2
+							li.point-pick-up__item 
+								include icons/_watch
+								span Срок хранения — 7 дней
+							li.point-pick-up__item 
+								include icons/_hourglass
+								span Ежедневно, 09:00 – 21:00
+						button.button.point-pick-up__button Привезти сюда
+						
+					#map.map.popup__ya-map
+
+#to-auth.popup.popup-tender(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Авторизация
+				p.popup__text Авторизация осуществляется e-mail, с помощью одноразового кода, который придет вам на почту.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#email-for-auth.popup__input(type="email", name="email-for-auth", placeholder="E-mail", required)
+					.popup__button-wrapper
+						button(type="submit", data-popup="password").button.popup__button Продолжить
+				
+				.popup__to-registration 
+					span Нет учётной записи?
+					span.to-registration._highligth(data-popup="registration") Зарегистрироваться
+
+#registration.popup.popup-tender(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Регистрация
+				p.popup__text Введите данные для успешой регистрации.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#name-for-registration.popup__input(type="text", name="name-for-registration", placeholder="Имя", required)
+						input#surname-for-registration.popup__input(type="text", name="surname-for-registration", placeholder="Фамилия", required)
+						input#number-for-registration.popup__input(type="tel", name="number-for-registration", placeholder="+7 (___)___-__-__", required)
+						input#email-for-registration.popup__input(type="email", name="email-for-registration", placeholder="E-mail", required)
+					.popup__button-wrapper
+						button(type="submit", data-popup="password").button.popup__button Продолжить
+						p.popup__policy Нажимая «Отправить», вы принимаете условия 
+							a(href="#", target="_blank") политики конфиденциальности
+
+#password.popup.popup-tender(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+			.popup__body
+				h2.popup__title Введите пароль из<br>уведомления
+				p.popup__text Проверьте e-mail, на котором вы авторизованы в приложении.
+				form(action="#", method="post").popup__form
+					.popup__inputs
+						input#pass-for-auth.popup__input(type="password", name="pass-for-auth", placeholder="Введите пароль", required)
+					//- button(type="submit", disabled).button.popup__button Продолжить
+					.popup__button-wrapper
+						button(type="submit").button.popup__button Продолжить
+					details.popup-hidden
+						summary.popup-hidden__title Не приходит пароль?
+						ul.popup-hidden__list 
+							li.popup-hidden__item Проверьте корректность вводимых данных – без тире и пробела, язык ввода, клавишу «Caps Lock»
+							li.popup-hidden__item Вы ввели правильный адрес электронной почты.
+						p.popup-hidden__text Если указанные способы не помогают, обратитесь
+							a(href="").popup-hidden__link  в службу поддержки
+
+#raiting.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Оценить товар
+				p.popup__text 
+					| Поставьте оценку – от 1 до 5 звёздочек, 
+					| после этого просто нажмите на кнопку «Отправить».
+					form(action="", method="post").popup__form
+						fieldset.raiting
+							.raiting__group
+								input.raiting__star(aria-label='Ужасно' type='radio' value='1' checked='')
+								input.raiting__star(aria-label='Сносно' type='radio' value='2')
+								input.raiting__star(aria-label='Нормально' type='radio' value='3')
+								input.raiting__star(aria-label='Хорошо' type='radio' value='4')
+								input.raiting__star(aria-label='Отлично' type='radio' value='5')
+						.popup__button-wrapper
+							button.button(type="submit").popup__button.mb0 Отправить
+
+#refund-request.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подать заявку на возврат
+				p.popup__text 
+					| Расскажите подробнее о причине возврата.
+				form(action="#", method="post")
+					textarea#refund-comments.popup__textarea.mb32(name="comments")
+
+					.popup__files.files-popup
+						h3.files-popup__title Добавьте фотографии
+						.files-popup__wrapper 
+							.files-popup__preview(style="background-image:url(@img/preview.png)") 
+								input#preview-file(type="file", name="preview-file", accept=".jpg,.png,.webp,.jpeg", multiple)
+							p.files-popup__text
+								| Нажмите на кнопку и выберите 
+								| до 10 изображений в формате PNG, JPEG.
+						.files-popup__imgs 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-1.png)")
+								.files-popup__delete 
+									include icons/_close 
+							.files-popup__img(style="background-image:url(@img/product/item-2.png)")
+								.files-popup__delete 
+									include icons/_close 
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Отправить 
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#add-profile.popup.popup-profile(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				.popup__header
+					h2.popup__title Введите данные
+					p.popup__text Пункты, отмеченные звездочкой, обязательны для заполнения.
+				form(action="#", method="post").popup__form
+					.toggle-client-info.popup__scroll
+						h3.popup__subtitle Личные данные
+						.radio-block.client-order__who.content-data__who
+							label.control.control--radio
+								input(type='radio' name='profile-type' checked='checked', value="individual")
+								.control__indicator
+								span Физическое лицо
+							
+							label.control.control--radio
+								input(type='radio' name='profile-type', value="company")
+								.control__indicator
+								span Юридическое лицо
+
+						.popup__inputs
+							.popup__field
+								label.popup__label Имя*
+								input.popup__input(type="text", name="name", placeholder="Наталья", required)
+
+							.popup__field
+								label.popup__label Фамилия*
+								input.popup__input(type="text", name="surname", placeholder="Карандашова", required)
+
+						h3.popup__subtitle Контакты
+						.popup__inputs
+							.popup__field
+								label.popup__label Номер телефона
+								input.popup__input(type="tel", name="number", placeholder="+7 (___)___-__-__", required)
+							
+							.popup__field
+								label.popup__label Почта*
+								input.popup__input(type="email", name="email", placeholder="E-mail", required)
+
+						._only-company
+							h3.popup__subtitle Сведения об организации
+							.popup__inputs
+
+								.popup__field
+									label.popup__label Наименование организации
+									input.popup__input(type="text", name="company", placeholder="ООО “ТоргДом”")
+								
+								.popup__field
+									label.popup__label ИНН*
+									input.popup__input(type="number", name="inn", placeholder="1234567890")
+								
+								.popup__field
+									label.popup__label КПП
+									input.popup__input(type="number", name="kpp", placeholder="1234567890")
+								
+								.popup__field
+									label.popup__label Регион
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите регион
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Москва") Москва
+												li.select__item(data-value="Московская область") Московская область
+												li.select__item(data-value="ЮФО") ЮФО
+												li.select__item(data-value="СЗФО") СЗФО
+												li.select__item(data-value="ЦФО") ЦФО
+
+								.popup__field
+									label.popup__label Район
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите район
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Центральный") Центральный
+												li.select__item(data-value="Южный") Южный
+
+								.popup__field
+									label.popup__label Город
+									.popup-form__select.select._small
+										.select__title.open-select
+											span.current-value(data-current="") Выберите регион
+											include icons/_arrow-down
+
+										.select__hidden-block
+											ul.select__list
+												li.select__item(data-value="Москва") Москва
+												li.select__item(data-value="Рязань") Рязань
+												li.select__item(data-value="Казань") Казань
+												li.select__item(data-value="Самара") Самара
+												li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+								
+								.popup__field
+									label.popup__label Улица
+									input.popup__input(type="text", name="street", placeholder="Улица")
+
+								.popup__field
+									label.popup__label Дом
+									input.popup__input(type="text", name="house", placeholder="Номер дома")
+
+								.popup__field
+									label.popup__label Номер квартиры/офиса
+									input.popup__input(type="text", name="flat", placeholder="Номер помещения")
+
+						h3.popup__subtitle Адрес доставки платежного профиля
+						.popup__inputs
+
+							.popup__field
+								label.popup__label Название адреса доставки
+								input.popup__input(type="text", name="place", placeholder="ООО “ТоргДом”")
+							
+							.popup__field
+								label.popup__label Индекс
+								input.popup__input(type="text", name="index", data-input="index" placeholder="__-__-__")
+							
+							.popup__field
+								label.popup__label Регион
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Московская область") Московская область
+											li.select__item(data-value="ЮФО") ЮФО
+											li.select__item(data-value="СЗФО") СЗФО
+											li.select__item(data-value="ЦФО") ЦФО
+
+							.popup__field
+								label.popup__label Район
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите район
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Центральный") Центральный
+											li.select__item(data-value="Южный") Южный
+
+							.popup__field
+								label.popup__label Город
+								.popup-form__select.select._small
+									.select__title.open-select
+										span.current-value(data-current="") Выберите регион
+										include icons/_arrow-down
+
+									.select__hidden-block
+										ul.select__list
+											li.select__item(data-value="Москва") Москва
+											li.select__item(data-value="Рязань") Рязань
+											li.select__item(data-value="Казань") Казань
+											li.select__item(data-value="Самара") Самара
+											li.select__item(data-value="Санкт-Петербург") Санкт-Петербург
+							.popup__field
+								label.popup__label Улица
+								input.popup__input(type="text", name="street", placeholder="Улица")
+
+							.popup__field
+								label.popup__label Дом
+								input.popup__input(type="text", name="house", placeholder="Номер дома")
+
+							.popup__field
+								label.popup__label Номер квартиры/офиса
+								input.popup__input(type="text", name="flat", placeholder="Номер помещения")
+
+							.popup__field
+								label.popup__label Этаж
+								input.popup__input(type="text", name="stage", placeholder="Этаж")
+							
+							.popup__field
+								label.popup__label Доп. контакт для приемки груза
+								input.popup__input(type="tel", name="extra-number", placeholder="+7 (___) ___-__-__")
+
+					.popup__button-wrapper
+						button(type="submit").button.popup__button Сохранить платежный профиль
+						//- p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						//- 	a(href="#", target="_blank") политики конфиденциальности
+
+#edo.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title.mb32 Оставить заявку на ЭДО
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						textarea.popup__textarea(name="comments", placeholder="Комментарий к заявке")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Оставить заявку
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#private-club.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title.mb32 Вступить в клуб привилегий
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						textarea.popup__textarea(name="comments", placeholder="Комментарий к заявке")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Оставить заявку
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#compaint-request.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подать рекламацию
+				p.popup__text Укажите свои данные и мы перезвоним вам в ближайшее время
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						input.popup__input(type="text", name="complaint-id", placeholder="По заказу №", required)
+						.popup-form__select.select._small
+							.select__title.open-select
+								span.current-value(data-current="") Тип рекламации
+								include icons/_arrow-down
+
+							.select__hidden-block
+								ul.select__list
+									li.select__item(data-value="Рекламация 1") Рекламация 1
+									li.select__item(data-value="Рекламация 2") Рекламация 2
+									li.select__item(data-value="Рекламация 3") Рекламация 3
+									li.select__item(data-value="Рекламация 4") Рекламация 4
+
+
+						select
+							option(value="1") 	111	
+							option(value="2") 	222
+						textarea.popup__textarea(name="comments", placeholder="Укажите, пожалуйста, артикул товара, краткое описание проблемы")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Отправить
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#select-city.popup.popup-tender.popup-city(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			//- button.popup__close(data-close='data-close' type='button')
+			//- 	include icons/_close
+
+			.popup__body
+				form(action="post").popup-city__form
+					.popup-city__header
+						input#search-city.popup-city__search(type="search", name="city-search", placeholder="Найдите ваш город...")
+						button.popup__close(data-close='data-close' type='button')
+							include icons/_close
+					#select-city.popup-city__body.select-city
+						.select-city__nav.nav-city 
+							.nav-city__tab._active(data-tab-region="2") Все города
+							.nav-city__tab(data-tab-region="1") По округам
+						.select-city__content.select-city__regions.regions-city(data-tab-city="1")
+							ul.regions-city__top
+								li.regions-city__region
+									span.regions-city__title._highligth Вся Россия
+									span.regions-city__count 639
+								li.regions-city__region
+									span.regions-city__title Москва и область
+									span.regions-city__count 90
+								li.regions-city__region
+									span.regions-city__title СПб и область
+									span.regions-city__count 90
+							ul.regions-city__main
+								li.regions-city__region
+									span.main-city__title Центральный ФО
+									span.regions-city__count 639
+								li.regions-city__region
+									span.main-city__title Дальневосточный ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Северо-Западный ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Приволжский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Северо-Кавказский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Сибирский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Уральский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Южный ФО
+									span.regions-city__count 90
+								li.regions-city__region._active
+									span.main-city__title Центральная Азия
+									span.regions-city__count 90
+
+						.select-city__content.select-city__cities.cities-city._active(data-tab-city="2")
+							ul.cities-city__list
+								li.cities-city__item Москва
+								li.cities-city__item Санкт-Петербург
+								li.cities-city__item Ростов-на-Дону
+								li.cities-city__item Новосибирск
+								li.cities-city__item Краснодар
+								li.cities-city__item Екатеринбург
+								li.cities-city__item Нижний Новгород
+								li.cities-city__item._letter А
+								li.cities-city__item Абакан
+								li.cities-city__item Абинск
+								li.cities-city__item Адлер
+								li.cities-city__item Азнаково
+								li.cities-city__item Азнаково
+								li.cities-city__item._letter Б
+								li.cities-city__item Барнаул

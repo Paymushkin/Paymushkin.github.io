@@ -1,0 +1,225 @@
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: $bgColor-2;
+    z-index: 2;
+    transform: translateY(150%);
+    transition: 0.3s ease transform;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width:$mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    ._player-active & {
+        transform: translateY(0);
+    }
+}
+
+.content-player {
+    flex: 1 1 auto;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    &__about {
+        margin-right: auto;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        @media (min-width:$mobile) {
+            margin-right: 28px;
+        }
+
+        @media (max-width:$mobile) {
+            gap: 20px;
+        }
+
+        button {
+            display: flex;
+            flex: 0 0 32px;
+        }
+
+        .play-pause-btn {
+            flex: 0 0 44px;
+
+            &:not(._play) {
+                svg {
+                    &:first-child {
+                        display: none;
+                    }
+                }
+            }
+
+            &._play {
+                svg {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__track {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        max-width: 514px;
+
+        @media (max-width:$mobile) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__volume {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @media (max-width:$tablet) {
+            display: none;
+        }
+    }
+}
+
+.controls-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-song {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width:$mobile) {
+        gap: 12px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 150px;
+
+        @media (max-width:$mobile) {
+            width: auto;
+        }
+
+        @media (max-width:$mobileSmall) {
+            width: auto;
+            max-width: 30vw;
+        }
+    }
+
+    &__cover {
+        width: 64px;
+        height: 56px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 6px;
+
+        @media (max-width:$mobile) {
+            width: 50px;
+            height: 44px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: em(375)) {
+            display: none;
+        }
+    }
+
+    &__name {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__artists {
+        color: #8A828C;
+        font-size: 14px;
+        line-height: 1.3;
+
+        @media (max-width:$mobile) {
+            font-size: 12px;
+        }
+    }
+}
+
+.play-pause-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.control-btn {
+    transition: 0.3s ease border-color;
+
+    @media (min-width:$mobile) {
+        padding: 3px;
+    }
+
+    svg path {
+        transition: 0.3s ease fill;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: $highlightColor-2;
+
+            svg path {
+                fill: $highlightColor-2;
+            }
+        }
+    }
+}
+
+.favorite-btn {
+
+    @media (min-width:$mobile) {
+        padding: 5px;
+    }
+
+    svg path {
+        transition: 0.3s ease all;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: $highlightColor-2;
+
+            svg path {
+                stroke: $highlightColor-2;
+                fill: $highlightColor-2;
+            }
+        }
+    }
+}

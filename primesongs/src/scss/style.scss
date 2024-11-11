@@ -1,0 +1,275 @@
+@use "sass:math";
+
+// Подключение миксинов ================================================================
+@import "base/mixins";
+
+// Подключение шрифтов =================================================================
+// добавить флаг &display=swap при подключении через google fonts
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap);
+
+// Подключение локальных шрифтов
+@import "fonts/fonts";
+
+// Подключение иконочных шрифтов========================================================
+// Подключить если есть файл иконочного шрифта
+
+$fontFamily: "Poppins", sans-serif;
+
+// @supports (font-variation-settings: normal) {
+//   $fontFamily: "RobotoFlex-VF", sans-serif;
+// }
+
+
+// Шрифт по умолчанию
+
+$fontSize: rem(20); // где 14px - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #ffffff; // Цвет шрифта заголовков
+$textColor: #CFCDD0; // Цвет шрифта параграфов
+$textColorExtra: #7F7F7F; // Цвет отдельных текстов
+$highlightColor-1: #D03FC2; // Цвет акцентов 1
+$highlightColor-2: #00DEC7; // Цвет акцентов 2
+$borderColor: #E5E6E9; // Цвет границы
+$borderColor-2: #DCE4EA; // Цвет границы 2
+$borderColor-3: #ECF1F4; // Цвет границы 3
+$gradient-1: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%); // Основной градиент
+$gradient-2: linear-gradient(126deg, #0A5096 -10.76%, #0BA5F0 93.22%); // Дополнительный градиент
+$gradientHover: linear-gradient(121deg, #00A0DB -41.61%, #86D06C 82.68%); // Ховер градиент
+$gradientHover-2: linear-gradient(188deg, #1663B0 -55.84%, #0BA5F0 94.83%); // Дополнительный ховер градиент
+$gardientCalendar: linear-gradient(180deg, #00A0DB 0%, #78CB79 100%);
+$bgColor: #110716; // Основной цвет фона
+$bgColor-2: #1D1322; // Дополнительный цвет фона
+$headerBg: #FDFDFD; // Цвет фона шапки
+$footerGradient: linear-gradient(151deg, #07498B 6.04%, #309EDD 132.1%);
+
+$decorColor: #849496; // Цвет деталей
+$decorColor2: #96B2BA;
+$addColor: #e8e8e8;
+$addColorGreen: #f5faf9;
+
+// Настройки ===========================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 100%;
+// Ширина ограничивающего контайнера (0 = нет ограничения)
+$maxWidthContainer: 1188;
+// Общий отступ у контейнера
+// 30 = по 15px слева и справа, 0 = нет отступа
+$containerPadding: 80;
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейк-поинтов)
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбука, некоторые планшеты в гор. положении
+$tablet: em(1024.98); // Планшеты, некоторые телефоны в гор.положении
+$mobile: em(768.98); // Телефоны L 
+$mobileSmall: em(576.98); // Телефоны S 
+
+// Обнуление и общие параметры
+@import "base/null";
+
+// @import "base/spollers";
+// @import "base/forms/checkbox";
+// @import "base/forms/radio";
+// @import "base/popup";
+
+// кастомный скроллбар
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    transition: 0.3s all ease;
+    cursor: grab;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $highlightColor-1;
+    /* цвет плашки */
+    border-radius: 30px;
+    /* закругления плашки */
+    border: 1px solid $bgColor;
+}
+
+// *::-webkit-scrollbar-thumb:horizontal {
+// 	display: none;
+// }
+
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $bgColor;
+    max-width: 100vw;
+
+    // Скролл заблокирован
+    ._lock & {
+        display: flex;
+        overflow: hidden;
+        touch-action: none;
+        padding-right: 0 !important;
+    }
+
+    ._mobile-catalog-active &,
+    ._mobile-menu-active & {
+        display: flex;
+        overflow: hidden;
+        touch-action: none;
+        padding-right: 0 !important;
+    }
+
+    &::-webkit-scrollbar {
+        .lock & {
+            display: none;
+        }
+    }
+
+
+    ._filter-active & {
+        @media (max-width:$tablet) {
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(30, 31, 33, 0.40);
+                z-index: 6;
+            }
+        }
+    }
+
+    // Сайт загружен
+    .loaded & {}
+}
+
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    // overflow-x: hidden;
+    margin: 0 auto;
+
+    // Прижимаем footer
+    >main {
+        flex: 1 1 auto;
+        max-width: 100vw;
+        // overflow-x: auto !important;
+        // overflow: auto;
+    }
+
+    // Фикс для слайдеров
+    >* {
+        min-width: 0;
+    }
+
+    &._sticky {
+        overflow: unset;
+    }
+}
+
+// Ограничения контейнера ================================================
+
+// (i) Стили будут применяться ко 
+// всем классамм содержащим *__container
+// Например, header__container, main__container
+// Снипет (HTML): cnt
+
+@if ($responsiveType ==1) {
+
+    // Отзывчивая
+    [class*="__container"] {
+        @if ($maxWidthContainer > 0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+
+        @if ($containerPadding > 0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+}
+
+@else {
+
+    // По брейк-поинтам
+    [class*="__container"] {
+        margin: 0 auto;
+
+        @if ($maxWidthContainer > 0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        }
+
+        @else {
+            @if ($containerPadding > 0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+
+        @media (max-width: $mobile) {
+            max-width: none;
+
+            @if ($containerPadding > 0 and $maxWidthContainer > 0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+@import "base/swiper";
+// @import "base/popup";
+// @import "base/tabs";
+// @import "base/raiting";
+// @import "base/forms/toggle";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+
+// Подключение стилей отдельных блоков
+
+@import "header";
+@import "hero";
+@import "catalog";
+@import "pagination";
+@import "footer";
+@import "sidebar";
+@import "player-bar";
+
+// Подключение стилей отдельных страниц
+// @import "animation";
+
+// @import "libs/tippy"; 
+// @import "base/tabs"; 

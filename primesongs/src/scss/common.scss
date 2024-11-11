@@ -1,0 +1,636 @@
+h1:not(.content-product__title),
+h2,
+h3,
+h4,
+p,
+small,
+button,
+a,
+li:not(.table-point),
+span {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+span ol,
+ul {
+    list-style: none;
+}
+
+picture {
+    font-size: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+input {
+    border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: transparent;
+    /* Not removed via appearance */
+
+    display: grid;
+    place-content: center;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 17px;
+    height: 16px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: 0.3s transform ease-in-out;
+    box-shadow: inset 1em 1em $highlightColor-1;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #454545;
+    border-radius: 4px;
+    outline: none;
+    // margin-bottom: 16px;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+    height: 3px;
+    background-color: #454545;
+}
+
+
+
+/* Специальные правила для браузеров на движках WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 12px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    // margin-top: -14px;
+    /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+    box-shadow: -200px 1px 200px red;
+    /* Добавляем классные эффекты для слайдера! */
+}
+
+/* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+/* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.input {
+
+    color: $mainColor;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.3s ease border-color;
+
+    &::placeholder {
+        color: #6F8290;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: #7F7F7F;
+        }
+    }
+}
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+    display: none
+}
+
+/* Убираем стандартный маркер Firefox */
+details>summary {
+    list-style: none;
+}
+
+details {
+    &[open] {
+        summary {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    summary {
+
+        svg {
+            transition: 0.3s ease transform;
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 182px 1fr;
+    // grid-template-rows: 116px 1fr;
+    gap: 20px;
+
+    ._player-active & {
+        padding-bottom: 100px;
+    }
+}
+
+header {
+    grid-column: 1 / 3;
+}
+
+.main {
+    position: sticky;
+    top: 0;
+    // background-color: green;
+}
+
+.scroll-x {
+    cursor: grab;
+}
+
+[class*="__container"] {
+    @media (max-width:$mobileSmall) {
+        padding: 0 15px;
+    }
+}
+
+.main-title {
+    margin-bottom: 32px;
+    color: $mainColor;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-title {
+    margin-bottom: 32px;
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    // @media (max-width:$tablet) {
+    //     font-size: 32px;
+    //     line-height: 1.2;
+    // }
+
+    // @media (max-width:$mobileSmall) {
+    //     font-size: 28px;
+    //     line-height: 1.1;
+    // }
+}
+
+.section-link {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    gap: 10px;
+
+    span {
+        color: $mainColor;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4;
+        transition: 0.3s ease color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-2;
+            }
+        }
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: 17px 30px;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid #C2EAB8;
+        border-radius: 30px;
+    }
+}
+
+// всплывающий блок в верхней шапке
+
+.hidden-block {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    cursor: auto;
+    z-index: 2;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    &__title {
+        display: flex;
+        gap: 15px;
+        color: $textColorExtra;
+        font-size: 14px;
+        line-height: math.div(20, 14);
+
+        span {
+
+            &._highligth {
+                color: $highlightColor-1;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+            display: block;
+            color: $mainColor;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: math.div(20, 14);
+            transition: 0.3s ease color;
+            cursor: pointer;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $highlightColor-2;
+                }
+            }
+        }
+    }
+
+    &__button {
+        min-width: 138px;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #58A429;
+            }
+        }
+    }
+}
+
+// форма поиска
+
+.select {
+
+    &._only-mobile {
+
+        @media (min-width:$tablet) {
+            display: none;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.1;
+            white-space: pre;
+        }
+
+        svg {
+            transition: 0.3s ease transform;
+
+            ._open-select & {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &__hidden-block {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        min-width: 336px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0px 12px 50px 0px rgba(48, 49, 53, 0.08);
+        transform: scaleY(0);
+        transition: 0.3s ease transform;
+        z-index: 3;
+
+        ._open-select & {
+            transform: scaleY(1);
+        }
+    }
+
+    &__list {
+        padding: 12px 0;
+        background-color: #fff;
+    }
+
+    &__item {
+        padding: 10px 24px;
+        color: $textColor;
+        font-size: 14px;
+        line-height: math.div(23, 14);
+        transition: 0.3s ease background-color;
+        cursor: pointer;
+
+        @media (any-hover: hover) {
+            &:hover {
+                font-weight: 500;
+                color: #6F8290;
+                background-color: $bgColor-2;
+            }
+        }
+    }
+}
+
+.input-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+
+    @media (max-width:$mobileSmall) {
+        display: none;
+
+        ._mobile-search-open & {
+            display: flex;
+        }
+    }
+
+    // @media (max-width:$mobileSmall) {
+    //     justify-content: flex-end;
+    // }
+
+    .input {
+        flex: 1 1 auto;
+        padding: 0;
+        color: $textColor;
+        min-height: 50px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.1;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: #DCE4EA;
+        }
+
+        &__icon-search {}
+    }
+}
+
+.header-menu {
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    width: 88px;
+    height: 50px;
+    color: #fff;
+    background-color: $highlightColor-2;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form-control {
+    font-size: 16px;
+    line-height: 1.3;
+    display: grid;
+    grid-template-columns: 1em auto;
+    align-items: center;
+    gap: 12px;
+    color: $textColor;
+    transition: 0.3s ease color;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $highlightColor-1;
+
+            input {
+                color: $highlightColor-1;
+            }
+        }
+    }
+}
+
+.genres-tag {
+    padding: 4px 8px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    color: #8A828C;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: 0.3s ease color;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $highlightColor-1;
+        }
+    }
+}
+
+select {
+    flex: 1 1 auto;
+    padding: 12px 48px 12px 12px;
+    color: $mainColor;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #88838B;
+    background: transparent;
+    background-image: url(../img/icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    outline: none;
+    transition: 0.3s ease border-color;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: $highlightColor-1;
+        }
+    }
+
+    &:focus {
+        border-color: $highlightColor-1;
+    }
+
+    // @media (max-width:$tablet) {
+    //     width: 60%;
+    // }
+
+    @media (max-width:$mobile) {
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: 6px 12px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        width: 100%;
+    }
+}
+
+// .control--radio {
+//     position: relative;
+//     cursor: pointer;
+
+//     input[type="radio"] {
+//         position: absolute;
+//         opacity: 0;
+//         visibility: hidden;
+//         z-index: -1;
+
+//         &:checked~span {
+//             color: $mainColor;
+//         }
+//     }
+
+//     span {
+//         color: $textColor;
+//     }
+
+//     .control__indicator {
+//         position: absolute;
+//         top: 50%;
+//         left: 0;
+//         height: 12px;
+//         width: 12px;
+//         border: 1px solid $borderColor-2;
+//         border-radius: 50%;
+//         transform: translate(-16px, -50%);
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: 2px;
+//             left: 2px;
+//             width: 6px;
+//             height: 6px;
+//             background: $gradient-1;
+//             border-radius: 50%;
+//             opacity: 0;
+//         }
+
+//     }
+// }
+
+// .control input:checked~.control__indicator {
+//     &::before {
+//         opacity: 1;
+//     }
+// }
+
+// .form-field {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 8px;
+//     width: 100%;
+
+//     &__label {
+//         display: inline-block;
+//         color: #333;
+//         leading-trim: both;
+//         text-edge: cap;
+//         font-size: 14px;
+//         font-weight: 500;
+//     }
+
+//     &__input,
+//     &__textarea {
+//         flex: 1 1 auto;
+//         padding: 14px 20px;
+//         color: #6F8290;
+//         leading-trim: both;
+//         text-edge: cap;
+//         font-size: 16px;
+//         max-height: 50px;
+//         border-radius: 30px;
+//         border: 1px solid #E3E3E3;
+//         resize: none;
+
+//         &:focus {
+//             outline-color: $highlightColor-2;
+//         }
+//     }
+// }
