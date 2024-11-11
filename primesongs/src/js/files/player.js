@@ -20,6 +20,7 @@ function setRangeTrack(slider) {
     slider.style.background = bg;
 }
 
+
 // playBtn
 
 const progress = document.getElementById("track");
@@ -36,6 +37,8 @@ const volumeControl = document.getElementById('volume');
 let rotating = false;
 let currentRotation = 0;
 let rotationInterval;
+
+setRangeTrack(volumeControl)
 
 const songs = [
     {
