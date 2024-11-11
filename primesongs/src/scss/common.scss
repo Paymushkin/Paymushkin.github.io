@@ -192,12 +192,14 @@ details {
 .wrapper {
     position: relative;
     display: grid;
-    grid-template-columns: 182px 1fr;
-    // grid-template-rows: 116px 1fr;
-    gap: 20px;
 
     ._player-active & {
         padding-bottom: 100px;
+    }
+
+    @media (min-width:$tablet) {
+        grid-template-columns: 182px 1fr;
+        gap: 20px;
     }
 }
 
@@ -231,11 +233,12 @@ header {
 }
 
 .section-title {
-    margin-bottom: 32px;
     color: #FFF;
     font-size: 32px;
     font-weight: 600;
     line-height: 1.5;
+
+
 
     // @media (max-width:$tablet) {
     //     font-size: 32px;
@@ -502,11 +505,19 @@ header {
             color: $highlightColor-1;
         }
     }
+
+    @media (max-width:$mobile) {
+        font-size: 12px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        font-size: 10px;
+    }
 }
 
 select {
     flex: 1 1 auto;
-    padding: 12px 48px 12px 12px;
+    padding: 16px 48px 16px 24px;
     color: $mainColor;
     font-size: 14px;
     border-radius: 10px;
@@ -538,16 +549,16 @@ select {
     // }
 
     @media (max-width:$mobile) {
-        padding: 8px 16px;
-        width: 100%;
+        // padding: 8px 16px;
+        // width: 100%;
     }
 
     @media (max-width:$mobileSmall) {
-        padding: 6px 12px;
+        // padding: 6px 12px;
     }
 
     @media (max-width:$mobileSmall) {
-        width: 100%;
+        // width: 100%;
     }
 }
 

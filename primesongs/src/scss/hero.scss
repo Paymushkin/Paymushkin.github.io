@@ -1,10 +1,18 @@
 .hero {
     margin-bottom: 48px;
 
+    @media (max-width:$mobileSmall) {
+        margin-bottom: 24px;
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
         gap: 64px;
+
+        @media (max-width:$mobile) {
+            gap: 30px;
+        }
     }
 
     &__content {
@@ -13,9 +21,13 @@
     }
 
     &__slider {
-        flex: 1 1 percent(686, 962);
-        max-width: percent(686, 962);
-        aspect-ratio: 686 / 327;
+        aspect-ratio: 343 / 164;
+
+        @media (min-width:$mobile) {
+            flex: 1 1 percent(686, 962);
+            max-width: percent(686, 962);
+            aspect-ratio: 686 / 327;
+        }
     }
 
     &__charts {
@@ -35,16 +47,42 @@
     border-radius: 16px;
     overflow: hidden;
 
+    @media (max-width:$mobile) {
+        gap: 10px;
+        padding: 24px 48px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        gap: 6px;
+        padding: 18px 26px;
+    }
+
     &__title {
         font-size: 40px;
         line-height: 1.5;
         font-weight: 800;
+
+        @media (max-width:$mobile) {
+            font-size: 32px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            font-size: 20px;
+        }
     }
 
     &__text {
         color: rgba(255, 255, 255, 0.70);
         font-size: 20px;
         line-height: 1.5;
+
+        @media (max-width:$mobile) {
+            font-size: 16px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            font-size: 12px;
+        }
 
         span {
             color: #FFF;
@@ -57,6 +95,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width:$mobile) {
+        display: none;
+    }
 
     &__title {
         color: #FFF;
@@ -197,6 +239,10 @@
         background: linear-gradient(90deg, rgba(22, 6, 25, 0.00) 0%, rgba(22, 6, 25, 0.48) 31.83%, rgba(22, 6, 25, 0.82) 64.99%, #160619 84.62%);
         // background: #160619;
         z-index: 2;
+
+        @media (max-width:$mobileSmall) {
+            width: 10%;
+        }
     }
 
     &__slide {}
@@ -210,7 +256,7 @@
     padding-left: 32px;
     height: 90px;
     border-radius: 8px;
-    background-size: 70px 70px;
+    background-size: 80px 80px;
     background-repeat: no-repeat;
     background-position: right 5px bottom -10px;
     background-color: #598FF8;

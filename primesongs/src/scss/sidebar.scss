@@ -5,12 +5,75 @@
     flex-direction: column;
     gap: 48px;
     padding: 16px 0;
+    background-color: $bgColor;
+    transition: 0.6s ease left;
+
+    @media (max-width:$tablet) {
+        position: fixed;
+        top: 105px;
+        left: -150%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr;
+        padding: 30px;
+        height: 100vh;
+        z-index: 5;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            background-color: rgb(17 7 22 / 52%);
+            z-index: -1;
+            backdrop-filter: blur(1px);
+            opacity: 0;
+            transition: 0.3s ease 0.3s opacity;
+        }
+
+        ._menu-open & {
+            left: 0;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (max-width:$mobile) {
+        top: 85px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        top: 80px;
+    }
 }
 
 .sidebar-nav {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    &.nav-pages {
+        @media (max-width:$tablet) {
+            order: 1;
+        }
+    }
+
+    &.nav-links {
+        @media (max-width:$tablet) {
+            order: 0;
+            grid-row: span 2;
+        }
+    }
+
+    &.nav-filters {
+        @media (max-width:$tablet) {
+            order: 2;
+        }
+    }
 
     &__title {
         color: $mainColor;

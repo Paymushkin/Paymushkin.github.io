@@ -11,6 +11,6 @@ const mobileMenuBtn = document.getElementById("mobileMenuBtn")
 
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener("click", () => {
-        mobileMenuBtn.classList.toggle("_menu-open")
+        document.body.classList.toggle("_menu-open")
     })
 }

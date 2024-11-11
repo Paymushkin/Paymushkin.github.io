@@ -167,7 +167,7 @@
 		width: 30px;
 		height: 21px;
 
-		@media (min-width:$mobile) {
+		@media (min-width:$tablet) {
 			display: none;
 		}
 
@@ -179,7 +179,7 @@
 			transition: 0.3s ease transform;
 		}
 
-		&._menu-open {
+		._menu-open & {
 
 			span {
 

@@ -1,5 +1,5 @@
 aside#sidebar.sidebar 
-    nav.sidebar__nav.sidebar-nav 
+    nav.sidebar__nav.sidebar-nav.nav-pages
         ul.sidebar-nav__list
             li.sidebar-nav__item
                 a(href="#").sidebar-nav__link
@@ -10,7 +10,7 @@ aside#sidebar.sidebar
                     include icons/_downloads
                     span Скаченное
     
-    nav.sidebar__nav.sidebar-nav
+    nav.sidebar__nav.sidebar-nav.nav-links
         h4.sidebar-nav__title Открой новое
         ul.sidebar-nav__list
             li.sidebar-nav__item
@@ -42,7 +42,7 @@ aside#sidebar.sidebar
                     img(src="@img/icons/settings.svg", alt="settings-icon")
                     span Настройки
     
-    nav.sidebar__nav.sidebar-nav
+    nav.sidebar__nav.sidebar-nav.nav-filters
         h4.sidebar-nav__title.sidebar-nav__title-grey ФИЛЬТРЫ
         form(action="#", method="post").sidebar-nav__form.form-sidebar
             h4.form-sidebar__title Вокал
