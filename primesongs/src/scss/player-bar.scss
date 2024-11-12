@@ -9,6 +9,10 @@
     transform: translateY(150%);
     transition: 0.3s ease transform;
 
+    @media (max-width:$mobileSmall) {
+        padding-bottom: 30px;
+    }
+
     &__content {
         display: flex;
         align-items: center;

@@ -4327,6 +4327,10 @@ select:focus {
     gap: 12px;
   }
 
+  .player-bar {
+    padding-bottom: 30px;
+  }
+
   .about-song__info {
     width: auto;
     max-width: 30vw;
