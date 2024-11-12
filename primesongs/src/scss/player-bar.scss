@@ -10,7 +10,7 @@
     transition: 0.3s ease transform;
 
     @media (max-width:$mobileSmall) {
-        padding-bottom: 30px;
+        padding: 10px 0 50px;
     }
 
     &__content {
@@ -83,6 +83,7 @@
         max-width: 514px;
 
         @media (max-width:$mobile) {
+            order: -1;
             max-width: 100%;
             width: 100%;
         }

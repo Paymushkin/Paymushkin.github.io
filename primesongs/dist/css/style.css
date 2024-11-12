@@ -177,7 +177,6 @@ body._menu-open {
 
 .wrapper {
   position: relative;
-  min-height: 100vh;
   max-width: 100vw;
   display: -ms-flexbox;
   display: flex;
@@ -3917,6 +3916,8 @@ select:focus {
   }
 
   .content-player__track {
+    -ms-flex-order: -1;
+        order: -1;
     max-width: 100%;
     width: 100%;
   }
@@ -4233,11 +4234,8 @@ select:focus {
   }
 
   .pagination {
-    gap: 20px;
-  }
-
-  .pagination {
     gap: 10px;
+    margin-bottom: 80px;
   }
 
   .footer {
@@ -4328,7 +4326,7 @@ select:focus {
   }
 
   .player-bar {
-    padding-bottom: 30px;
+    padding: 10px 0 50px;
   }
 
   .about-song__info {
