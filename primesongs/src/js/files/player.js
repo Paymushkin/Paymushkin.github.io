@@ -77,6 +77,8 @@ const songs = [
             "files/Besomorph-Coopex-Redemption.mp3",
         cover:
             "./img/catalog/item-1.png",
+        webpCover:
+            "./img/catalog/item-1.webp",
     },
     {
         id: "00002",
@@ -86,6 +88,8 @@ const songs = [
             "files/OSKI-Whats-The-Problem.mp3",
         cover:
             "./img/catalog/item-2.png",
+        webpCover:
+            "./img/catalog/item-2.webp",
     },
     {
         id: "00003",
@@ -95,6 +99,8 @@ const songs = [
             "files/Unknown-BrainxRival-Control.mp3",
         cover:
             "./img/catalog/item-3.png",
+        webpCover:
+            "./img/catalog/item-3.webp",
     },
     {
         id: "00004",
@@ -104,6 +110,8 @@ const songs = [
             "files/Unknown-BrainxRival-Control.mp3",
         cover:
             "./img/catalog/item-4.png",
+        webpCover:
+            "./img/catalog/item-4.webp",
     },
 ];
 
@@ -118,7 +126,11 @@ function updateSongInfo(songId, index) {
     songName.textContent = songId.title;
     artistName.textContent = songId.name;
     song.src = songId.source;
-    rotatingImage.src = songId.cover;
+    if (document.documentElement.classList.contains("webp")) {
+        rotatingImage.style.backgroundImage = `url(${songId.webpCover})`;
+    } else {
+        rotatingImage.style.backgroundImage = `url(${songId.cover})`;
+    }
     currentSongIndex = index;
 
     song.addEventListener("loadeddata", function () { });
