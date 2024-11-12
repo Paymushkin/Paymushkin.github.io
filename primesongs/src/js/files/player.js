@@ -1,3 +1,31 @@
+const bodyElement = document.querySelector('body')
+const productsItems = document.querySelectorAll('.product-item__header')
+
+if (productsItems.length) {
+    productsItems.forEach(product => {
+        product.addEventListener("click", () => {
+            if (!bodyElement.classList.contains('_player-active')) {
+                bodyElement.classList.add('_player-active')
+            }
+            const findSongIndexById = (id) => {
+                return songs.findIndex(song => song.id === id);
+            };
+
+            const songIdToFind = product.dataset.id;
+            const foundSong = findSongById(songIdToFind);
+            const foundIndex = findSongIndexById(songIdToFind);
+
+
+            if (foundSong) {
+                updateSongInfo(foundSong, foundIndex)
+                playPause();
+            } else {
+                console.log("Песня не найдена");
+            }
+        })
+    });
+}
+
 // Range Slider Properties.
 
 const sliderProps = {
@@ -42,38 +70,56 @@ setRangeTrack(volumeControl)
 
 const songs = [
     {
-        title: "Redemption",
+        id: "00001",
+        title: "Blinding Lights",
         name: "Besomorph & Coopex",
         source:
-            "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Besomorph-Coopex-Redemption.mp3",
+            "files/Besomorph-Coopex-Redemption.mp3",
         cover:
-            "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/398875d0-9b9e-494a-8906-210aa3f777e0",
+            "./img/catalog/item-1.png",
     },
     {
-        title: "What's The Problem?",
+        id: "00002",
+        title: "7 Rings",
         name: "OSKI",
         source:
-            "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/OSKI-Whats-The-Problem.mp3",
+            "files/OSKI-Whats-The-Problem.mp3",
         cover:
-            "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/810d1ddc-1168-4990-8d43-a0ffee21fb8c",
+            "./img/catalog/item-2.png",
     },
     {
-        title: "Control",
+        id: "00003",
+        title: "Broken Clocks",
         name: "Unknown Brain x Rival",
         source:
-            "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Unknown-BrainxRival-Control.mp3",
+            "files/Unknown-BrainxRival-Control.mp3",
         cover:
-            "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7bd23b84-d9b0-4604-a7e3-872157a37b61",
+            "./img/catalog/item-3.png",
+    },
+    {
+        id: "00004",
+        title: "Paint The Town Red",
+        name: "Unknown artist",
+        source:
+            "files/Unknown-BrainxRival-Control.mp3",
+        cover:
+            "./img/catalog/item-4.png",
     },
 ];
 
+const findSongById = (id) => {
+    return songs.find(song => song.id === id);
+};
+
+
 let currentSongIndex = 0;
 
-function updateSongInfo() {
-    songName.textContent = songs[currentSongIndex].title;
-    artistName.textContent = songs[currentSongIndex].name;
-    song.src = songs[currentSongIndex].source;
-    rotatingImage.src = songs[currentSongIndex].cover;
+function updateSongInfo(songId, index) {
+    songName.textContent = songId.title;
+    artistName.textContent = songId.name;
+    song.src = songId.source;
+    rotatingImage.src = songId.cover;
+    currentSongIndex = index;
 
     song.addEventListener("loadeddata", function () { });
 }
@@ -121,14 +167,14 @@ progress.addEventListener("change", function () {
 forwardButton.addEventListener("click", function () {
     setRangeTrack(progress)
     currentSongIndex = (currentSongIndex + 1) % songs.length;
-    updateSongInfo();
+    updateSongInfo(songs[currentSongIndex], currentSongIndex);
     playPause();
 });
 
 backwardButton.addEventListener("click", function () {
     setRangeTrack(progress)
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    updateSongInfo();
+    updateSongInfo(songs[currentSongIndex], currentSongIndex);
     playPause();
 });
 
