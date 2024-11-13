@@ -673,3 +673,12 @@ details[open] summary:before {
 ._hidden {
 	display: none !important;
 }
+
+.lightbox {
+	display: flex;
+	flex-direction: column-reverse;
+
+	@media (max-width:$mobile) {
+		flex-direction: column;
+	}
+}
