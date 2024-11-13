@@ -14,3 +14,14 @@ if (mobileMenuBtn) {
         document.body.classList.toggle("_menu-open")
     })
 }
+
+
+const productsCards = document.querySelectorAll(".product-item")
+
+if (productsCards.length) {
+    productsCards.forEach((item) => {
+        item.querySelector(".product-item__heart").addEventListener("click", () => {
+            item.classList.toggle("_liked")
+        })
+    })
+}

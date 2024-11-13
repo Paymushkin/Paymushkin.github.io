@@ -2845,10 +2845,15 @@ select:focus {
   cursor: pointer;
 }
 
+._liked .product-item__heart svg path {
+  fill: #00DEC7;
+  stroke: #00DEC7;
+}
+
 .product-item__heart svg path {
-  -webkit-transition: 0.3s ease stroke;
-  -o-transition: 0.3s ease stroke;
-  transition: 0.3s ease stroke;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .product-item__options {
@@ -3602,6 +3607,11 @@ select:focus {
   -webkit-transition: 0.3s ease fill;
   -o-transition: 0.3s ease fill;
   transition: 0.3s ease fill;
+}
+
+.favorite-btn._liked svg path {
+  fill: #00DEC7;
+  stroke: #00DEC7;
 }
 
 .favorite-btn svg path {
@@ -4503,6 +4513,7 @@ select:focus {
   }
 
   .product-item__heart:hover svg path {
+    fill: #00DEC7;
     stroke: #00DEC7;
   }
 

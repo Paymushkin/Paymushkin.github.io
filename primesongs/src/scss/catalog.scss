@@ -95,13 +95,21 @@
         border-radius: 50%;
         cursor: pointer;
 
+        ._liked & {
+            svg path {
+                fill: $highlightColor-2;
+                stroke: $highlightColor-2;
+            }
+        }
+
         svg path {
-            transition: 0.3s ease stroke;
+            transition: 0.3s ease all;
         }
 
         @media (any-hover: hover) {
             &:hover {
                 svg path {
+                    fill: $highlightColor-2;
                     stroke: $highlightColor-2;
                 }
             }

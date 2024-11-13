@@ -48,9 +48,6 @@ function setRangeTrack(slider) {
     slider.style.background = bg;
 }
 
-
-// playBtn
-
 const progress = document.getElementById("track");
 const song = document.getElementById("song");
 const controlIcon = document.getElementById("controlIcon");
@@ -118,7 +115,6 @@ const songs = [
 const findSongById = (id) => {
     return songs.find(song => song.id === id);
 };
-
 
 let currentSongIndex = 0;
 
@@ -195,3 +191,11 @@ song.volume = volumeControl.value / 100;
 volumeControl.addEventListener('input', function () {
     song.volume = this.value / 100;
 });
+
+const favoriteBtn = document.getElementById("favoriteBtn")
+
+if (favoriteBtn) {
+    favoriteBtn.addEventListener("click", function () {
+        favoriteBtn.classList.toggle("_liked")
+    })
+}
