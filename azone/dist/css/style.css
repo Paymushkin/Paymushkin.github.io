@@ -898,7 +898,7 @@ input {
 mark {
   padding: 0 7px;
   border-radius: 12px;
-  background-color: #95C11F;
+  background-color: rgba(149, 193, 31, 0.4117647059);
 }
 
 .see-all {
