@@ -148,14 +148,23 @@ if (calculatePlan) {
     calculatePlan.addEventListener("click", function (event) {
         event.preventDefault()
         document.documentElement.classList.add("_plans-visible")
-        plans
-
-        if (plans) {
+        if (plansBlock) {
             plans.scrollIntoView({
                 behavior: 'smooth'
             });
         }
     })
+
+    const plansItems = plansBlock.querySelectorAll(".plan")
+
+    if (plansItems.length) {
+        plansItems.forEach(item => {
+            const plansHeader = item.querySelector(".plan__header")
+            plansHeader.addEventListener("click", () => {
+                item.classList.toggle("_plan-open")
+            })
+        })
+    }
 }
 
 

@@ -114,7 +114,9 @@ section#calculator.calculator
                 form(action="#", method="post").grid-plans__plan.plan
                     .plan__header
                         h4.plan__title Стандартный
-                        span.plan__price 18694 руб.
+                            span.plan__price 18694 руб.
+                        .plan__icon 
+                            include ../icons/_plus
                     ul.plan__list 
                         li.plan__item
                             span Количество выездов
@@ -158,25 +160,25 @@ section#calculator.calculator
                         li.plan__item
                             span Мониторинг серверного и сетевого оборудования
                             span +
-                        li.plan__item
+                        li.plan__item._not-available
                             span Обеспечение функционирования СУБД
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Администрирование гипервизора и виртуализации
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Обслуживание IP АТС
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка серверов Unix
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка сетевого оборудования уровня Enterprise
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка систем хранения данных
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Доступ к Service Desk
                             span -
                     button(type="submit").button.plan__button  Отправить заявку 
@@ -184,7 +186,9 @@ section#calculator.calculator
                 form(action="#", method="post").grid-plans__plan.plan
                     .plan__header
                         h4.plan__title Эффективный
-                        span.plan__price 22747 руб.
+                            span.plan__price 22747 руб.
+                        .plan__icon 
+                            include ../icons/_plus
                     ul.plan__list 
                         li.plan__item
                             span Количество выездов
@@ -237,16 +241,16 @@ section#calculator.calculator
                         li.plan__item
                             span Обслуживание IP АТС
                             span +
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка серверов Unix
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка сетевого оборудования уровня Enterprise
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Поддержка систем хранения данных
                             span -
-                        li.plan__item
+                        li.plan__item._not-available
                             span Доступ к Service Desk
                             span -
                     button(type="submit").button.plan__button Отправить заявку 
@@ -254,7 +258,9 @@ section#calculator.calculator
                 form(action="#", method="post").grid-plans__plan.plan
                     .plan__header
                         h4.plan__title Максимальный
-                        span.plan__price 26954 руб.
+                            span.plan__price 26954 руб.
+                        .plan__icon 
+                            include ../icons/_plus
                     ul.plan__list 
                         li.plan__item
                             span Количество выездов

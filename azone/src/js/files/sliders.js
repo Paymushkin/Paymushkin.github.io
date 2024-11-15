@@ -78,8 +78,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper__navigation .prev',
-				nextEl: '.swiper__navigation .next',
+				prevEl: '.feedback-swiper__navigation .prev',
+				nextEl: '.feedback-swiper__navigation .next',
 			},
 		});
 	}
@@ -108,15 +108,20 @@ function initSliders() {
 
 			// Эффекты
 			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				// disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	// delay: 3000,
+			// 	// disableOnInteraction: false,
+			// },
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.projects__slider__navigation .prev',
-				nextEl: '.projects__slider__navigation .next',
+				prevEl: '.projects-swiper__navigation  .prev',
+				nextEl: '.projects-swiper__navigation  .next',
+			},
+
+			pagination: {
+				el: ".projects-swiper__pagination",
+				type: "progressbar",
 			},
 		});
 	}
