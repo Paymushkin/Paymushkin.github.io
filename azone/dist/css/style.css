@@ -1841,6 +1841,7 @@ details[open] summary:before {
 }
 
 .grid-services__count {
+  display: none;
   line-height: 1.3;
 }
 
