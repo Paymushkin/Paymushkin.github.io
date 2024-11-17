@@ -72,5 +72,10 @@
         font-weight: 300;
         line-height: 1.3;
         border-bottom: 1px solid #dadada;
+
+        span {
+            @include adaptiveValue("font-size", 24, 20);
+            font-weight: 700;
+        }
     }
 }

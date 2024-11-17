@@ -505,6 +505,10 @@ mark {
 			border-bottom: 1px solid #D9D9D9;
 		}
 
+		&._selected {
+			display: none;
+		}
+
 		@media (max-width:$mobileSmall) {
 			font-size: 14px;
 		}

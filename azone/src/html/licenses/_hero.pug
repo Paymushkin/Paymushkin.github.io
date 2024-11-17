@@ -23,7 +23,7 @@ section#page-hero.page-hero
                         
                         .select__hidden-block
                             ul.select__list
-                                li.select__item(data-value="Все лицензии", data-category="0") Все лицензии
+                                li.select__item._selected(data-value="Все лицензии", data-category="0") Все лицензии
                                 li.select__item(data-value="ФСБ", data-category="1") ФСБ
                                 li.select__item(data-value="ФСТЭК", data-category="2") ФСТЭК
                                 li.select__item(data-value="МЧС", data-category="3") МЧС
@@ -32,46 +32,60 @@ section#page-hero.page-hero
             ul.licenses-list.filter-list
                 li.licenses-list__item(data-category="1") 
                     p
-                        | Лицензия ФСТЭК России №3518 от&nbsp;25.03.2019 на&nbsp;осуществление 
+                        span Лицензия ФСТЭК России
+                        <br> 
+                        | №3518 от&nbsp;25.03.2019 на&nbsp;осуществление 
                         | мероприятий и&nbsp;(или)&nbsp;оказание услуг в&nbsp;области 
                         | защиты государственной тайны (в&nbsp;части технической защиты информации)
                 
                 li.licenses-list__item(data-category="2") 
                     p
-                        | Лицензия ФСТЭК России №3519 от&nbsp;25.03.2019 на&nbsp;проведение работ, 
+                        span Лицензия ФСТЭК России
+                        <br>
+                        | №3519 от&nbsp;25.03.2019 на&nbsp;проведение работ, 
                         | связанных с&nbsp;созданием средств защиты информации
                 
                 li.licenses-list__item(data-category="3") 
                     p
-                        | Лицензия ФСБ&nbsp;России №34174 от&nbsp;20.12.2019 на&nbsp;проведение 
+                        span Лицензия ФСБ России
+                        <br>  
+                        | №34174 от&nbsp;20.12.2019 на&nbsp;проведение 
                         | работ, связанных с&nbsp;использованием сведений, составляющих государственную тайну
                 
                 li.licenses-list__item(data-category="4") 
                     p
-                        | Лицензия ФСБ&nbsp;России №16171 Н от&nbsp;17.08.2017 на&nbsp;осуществление 
+                        span Лицензия ФСБ России
+                        <br>  
+                        | №16171 Н от&nbsp;17.08.2017 на&nbsp;осуществление 
                         | разработки, производства, распространения шифровальных (криптографических) 
                         | средств, информационных и&nbsp;телекоммуникационных систем
                 
                 li.licenses-list__item(data-category="1") 
                     p
-                        | Лицензия ФСТЭК России №3409 от&nbsp;31.10.2017 на&nbsp;деятельность 
+                        span Лицензия ФСТЭК России
+                        <br>  
+                        | №3409 от&nbsp;31.10.2017 на&nbsp;деятельность 
                         | по&nbsp;технической защите конфиденциальной информации
 
                 li.licenses-list__item(data-category="1") 
                     p
-                        | Лицензия МЧС&nbsp;России №77-Б/07463 от&nbsp;19.09.2019 
+                        span Лицензия МЧС&nbsp;России
+                        <br> 
+                        | №77-Б/07463 от&nbsp;19.09.2019 
                         | на осуществление деятельности по&nbsp;монтажу, 
                         | техническому обслуживанию и&nbsp;ремонту средств обеспечения 
                         | пожарной безопасности зданий и&nbsp;сооружения
                 
                 li.licenses-list__item(data-category="1") 
                     p
-                        | Лицензия ФСБ&nbsp;России №17517 М от&nbsp;24.10.2019 
+                        span Лицензия ФСБ&nbsp;России
+                        <br>  
+                        | №17517 М от&nbsp;24.10.2019 
                         | на&nbsp;проведение специальных исследований
                 li.licenses-list__item(data-category="1") 
                     p
                         | Выписка из&nbsp;реестра членов саморегулируемой 
                         | организации АСО «ПОСО» от&nbsp;5&nbsp;июля&nbsp;2018&nbsp;года под №&nbsp;0002277
         
-            form(action="", method="post").load-more 
-                button(type="button").button._highlight.load-more__button Загрузить еще
+            //- form(action="", method="post").load-more 
+            //-     button(type="button").button._highlight.load-more__button Загрузить еще

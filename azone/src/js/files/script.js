@@ -75,6 +75,9 @@ if (selects.length) {
 
         selectOptions.forEach(option => {
             option.addEventListener("click", () => {
+                selectOptions.forEach(el => {
+                    el.classList.remove("_selected")
+                })
 
                 let currentValue = select.querySelector(".current-value")
                 const currentSelectValue = option.dataset.value
@@ -82,6 +85,7 @@ if (selects.length) {
                 currentValue.dataset.current = currentSelectValue
                 currentValue.textContent = currentSelectValue
                 openSelect.parentNode.classList.remove("_open-select")
+                option.classList.add("_selected")
 
                 if (elementsForFilterWrapper) {
                     const elements = elementsForFilterWrapper.querySelectorAll("[data-category]")
@@ -195,8 +199,6 @@ toTopButton.addEventListener('click', function () {
 
 // Изначально скрываем кнопку
 toTopButton.style.display = 'none';
-
-
 
 // Range Slider Properties.
 
