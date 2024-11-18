@@ -1,0 +1,131 @@
+section#cart.cart
+    //- - const cartPage = true;
+    //- include _breadcrumbs
+
+    .cart__body.cart-body
+        .cart-body__header
+            h3.cart-body__title Корзина
+            .total-price 
+                span.total-price__text Сумма: 
+                span.total-price__sum 102 000 
+                span.total-price__currency ₽
+
+        form(action="#", method="post").cart-body__form
+            .cart-body__products.product-cart        
+                ul.product-cart__list
+                    li.grid-catalog__item.product-item
+                        .product-item__header(data-id="00001", style="background-image: url(@img/catalog/item-1.png)")
+                            .product-item__heart
+                                include icons/_heart
+                            .product-item__options
+                                include icons/_options
+                        h5.product-item__title 
+                            a(href="/") Blinding Lights
+                        ul.product-item__tags
+                            li.product-item__tag.genres-tag
+                                span Мужской
+                            li.product-item__tag.genres-tag
+                                span Поп
+                            li.product-item__tag.genres-tag
+                                span РнБ
+                        .product-item__bottom 
+                            .product-item__prices 
+                                .product-item__price 34 000 ₽
+                                .product-item__price-old 100 000 ₽
+                            button(type="button").product-item__cart
+                                <img src="@img/cart.svg" alt="cart-icon">
+
+                    li.grid-catalog__item.product-item
+                        .product-item__header(data-id="00002", style="background-image: url(@img/catalog/item-2.png)")
+                            .product-item__heart
+                                include icons/_heart
+                            .product-item__options
+                                include icons/_options
+                        h5.product-item__title
+                            a(href="/") 7 Rings
+                        ul.product-item__tags
+                            li.product-item__tag.genres-tag
+                                span Женский
+                            li.product-item__tag.genres-tag
+                                span Поп
+                            li.product-item__tag.genres-tag
+                                span РнБ
+                        .product-item__bottom 
+                            .product-item__prices 
+                                .product-item__price 34 000 ₽
+                                .product-item__price-old 100 000 ₽
+                            button(type="button").product-item__cart
+                                    <img src="@img/cart.svg" alt="cart-icon">
+
+                    li.grid-catalog__item.product-item
+                        .product-item__header(data-id="00003", style="background-image: url(@img/catalog/item-3.png)")
+                            .product-item__heart
+                                include icons/_heart
+                            .product-item__options
+                                include icons/_options
+                        h5.product-item__title 
+                            a(href="/") Broken Clocks
+                        ul.product-item__tags
+                            li.product-item__tag.genres-tag
+                                span Женский
+                            li.product-item__tag.genres-tag
+                                span Поп
+                            li.product-item__tag.genres-tag
+                                span РнБ
+                            li.product-item__tag.genres-tag
+                                span Металл
+                        .product-item__bottom 
+                            .product-item__prices 
+                                .product-item__price 34 000 ₽
+                                .product-item__price-old 100 000 ₽
+                            button(type="button").product-item__cart
+                                <img src="@img/cart.svg" alt="cart-icon">
+
+                    li.grid-catalog__item.product-item
+                        .product-item__header(data-id="00004", style="background-image: url(@img/catalog/item-4.png)")
+                            .product-item__heart
+                                include icons/_heart
+                            .product-item__options
+                                include icons/_options
+                        h5.product-item__title 
+                            a(href="/") Paint The Town Red
+                        ul.product-item__tags
+                            li.product-item__tag.genres-tag
+                                span Мужской
+                            li.product-item__tag.genres-tag
+                                span Поп
+                            li.product-item__tag.genres-tag
+                                span РнБ
+                        .product-item__bottom 
+                            .product-item__prices 
+                                .product-item__price 34 000 ₽
+                                .product-item__price-old 100 000 ₽
+                            button(type="button").product-item__cart
+                                <img src="@img/cart.svg" alt="cart-icon">
+                    
+                    li.grid-catalog__item.product-item
+                        .product-item__header(data-id="00002", style="background-image: url(@img/catalog/item-2.png)")
+                            .product-item__heart
+                                include icons/_heart
+                            .product-item__options
+                                include icons/_options
+                            .product-item__sale
+                                <img src="@img/fire.svg" alt="icon-sale">
+                                span -30%
+                        h5.product-item__title
+                            a(href="/") 7 Rings
+                        ul.product-item__tags
+                            li.product-item__tag.genres-tag
+                                span Женский
+                            li.product-item__tag.genres-tag
+                                span Поп
+                            li.product-item__tag.genres-tag
+                                span РнБ
+                        .product-item__bottom 
+                            .product-item__prices 
+                                .product-item__price 34 000 ₽
+                                .product-item__price-old 100 000 ₽
+                            button(type="button").product-item__cart
+                                    <img src="@img/cart.svg" alt="cart-icon">
+              
+            button.button._transparent.cart-body__button Оплатить

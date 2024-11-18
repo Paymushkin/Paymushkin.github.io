@@ -32,21 +32,12 @@ $highlightColor-1: #D03FC2; // Цвет акцентов 1
 $highlightColor-2: #00DEC7; // Цвет акцентов 2
 $borderColor: #E5E6E9; // Цвет границы
 $borderColor-2: #DCE4EA; // Цвет границы 2
-$borderColor-3: #ECF1F4; // Цвет границы 3
-$gradient-1: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%); // Основной градиент
-$gradient-2: linear-gradient(126deg, #0A5096 -10.76%, #0BA5F0 93.22%); // Дополнительный градиент
-$gradientHover: linear-gradient(121deg, #00A0DB -41.61%, #86D06C 82.68%); // Ховер градиент
-$gradientHover-2: linear-gradient(188deg, #1663B0 -55.84%, #0BA5F0 94.83%); // Дополнительный ховер градиент
-$gardientCalendar: linear-gradient(180deg, #00A0DB 0%, #78CB79 100%);
 $bgColor: #110716; // Основной цвет фона
 $bgColor-2: #1D1322; // Дополнительный цвет фона
-$headerBg: #FDFDFD; // Цвет фона шапки
-$footerGradient: linear-gradient(151deg, #07498B 6.04%, #309EDD 132.1%);
-
+$bgColor-3: #170A1D;
 $decorColor: #849496; // Цвет деталей
 $decorColor2: #96B2BA;
-$addColor: #e8e8e8;
-$addColorGreen: #f5faf9;
+$addColor: #8A828C;
 
 // Настройки ===========================================================================
 // Минимальная ширина страницы
@@ -111,7 +102,8 @@ html {
 
 body {
     background-color: $bgColor;
-    max-width: 100vw;
+    // max-width: 100vw;
+    // max-height: 100dvh;
 
     // Скролл заблокирован
     ._lock & {
@@ -258,12 +250,14 @@ body {
 // Подключение стилей отдельных блоков
 
 @import "header";
+@import "breadcrumbs";
 @import "hero";
 @import "catalog";
 @import "pagination";
-@import "footer";
+// @import "footer";
 @import "sidebar";
 @import "player-bar";
+@import "cart";
 
 // Подключение стилей отдельных страниц
 // @import "animation";

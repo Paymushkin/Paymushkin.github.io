@@ -1,0 +1,66 @@
+.breadcrumbs {
+    // margin-bottom: 20px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $mainColor;
+        font-size: 16px;
+        line-height: 1.6;
+
+        &:not(:last-child)::after {
+            content: url(../img/icons/arrow-breadcrumbs.svg);
+            line-height: 1;
+            color: #C0BEBE;
+        }
+
+        &:last-child {
+            color: $addColor;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 1;
+            // -webkit-box-orient: vertical;
+            // overflow: hidden;
+
+            a {
+                cursor: inherit;
+            }
+
+        }
+
+        a {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $highlightColor-1;
+                }
+            }
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        transition: 0.3s ease color;
+    }
+}

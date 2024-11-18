@@ -191,10 +191,11 @@ details {
 .wrapper {
     position: relative;
     display: grid;
+    grid-template-columns: 1fr;
 
-    ._player-active & {
-        padding-bottom: 100px;
-    }
+    // ._player-active & {
+    //     padding-bottom: 100px;
+    // }
 
     @media (min-width:$tablet) {
         grid-template-columns: 182px 1fr;

@@ -1,0 +1,103 @@
+.total-price {
+    color: $addColor;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &__currency {
+        font-weight: 500;
+    }
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-body {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    max-height: calc(100vh - 175px);
+    max-height: calc(100dvh - 175px);
+    border-radius: 16px 16px 0 0;
+    background-color: $bgColor-3;
+    overflow: hidden;
+
+    @media (min-width:$mobileSmall) {
+        padding: 36px 0 36px 36px;
+        max-height: calc(100vh - 130px);
+    }
+
+    ._player-active & {
+        @media (min-width:$mobileSmall) {
+            max-height: calc(100vh - 220px);
+        }
+
+        max-height: calc(100vh - 290px);
+        max-height: calc(100dvh - 290px);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        @media (min-width:$mobileSmall) {
+            margin-right: 36px;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        overflow: hidden;
+    }
+
+    &__products {
+        flex: 1 1 auto;
+        overflow: hidden scroll;
+
+        &::-webkit-scrollbar {
+            @media (max-width:$mobileSmall) {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        flex: 0 0 auto;
+        align-self: center;
+        min-width: 196px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.product-cart {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px;
+
+        @media (max-width:$tablet) {
+            // grid-template-columns: repeat(2, 1fr);
+            gap: 48px 24px;
+        }
+
+        @media (min-width:$mobileSmall) {
+            margin-right: 36px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

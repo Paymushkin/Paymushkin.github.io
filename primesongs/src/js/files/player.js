@@ -6,6 +6,11 @@ if (productsItems.length) {
         product.addEventListener("click", () => {
             if (!bodyElement.classList.contains('_player-active')) {
                 bodyElement.classList.add('_player-active')
+
+                window.scrollBy({
+                    top: 100,
+                    behavior: 'smooth'
+                });
             }
             const findSongIndexById = (id) => {
                 return songs.findIndex(song => song.id === id);

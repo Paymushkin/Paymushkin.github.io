@@ -1,0 +1,32 @@
+if cartPage == true
+
+   .breadcrumbs__wrapper 
+        .breadcrumbs.catalog__breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item 
+                    a(href="/cart.html").breadcrumbs__link Корзина
+                li.breadcrumbs__item 
+                    .breadcrumbs__link История покупок
+        
+        .total-price 
+            span.total-price__text Общий чек: 
+            span.total-price__sum 102 000
+            span.total-price__currency ₽
+
+else if equipmentPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/about.html").breadcrumbs__link О компании
+            li.breadcrumbs__item 
+                .breadcrumbs__link ИТ-оборудование
+
+else
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/about.html").breadcrumbs__link О компании
+            li.breadcrumbs__item 
+                .breadcrumbs__link УВЭЖХ система HELICON 1800 UHPLC с бинарным насосом

@@ -4,6 +4,11 @@
     justify-content: center;
     align-self: center;
     margin-bottom: 50px;
+
+    ._player-active & {
+        padding-bottom: 100px;
+    }
+
     // margin: 0 auto;
     // justify-content: space-between;
 
@@ -31,7 +36,7 @@
         border-radius: 50%;
 
         &._current {
-            background: $gradient-1;
+            // background: $gradient-1;
         }
     }
 
