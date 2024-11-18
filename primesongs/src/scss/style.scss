@@ -240,7 +240,7 @@ body {
 @import "base";
 @import "base/swiper";
 // @import "base/popup";
-// @import "base/tabs";
+@import "base/tabs";
 // @import "base/raiting";
 // @import "base/forms/toggle";
 
@@ -258,6 +258,7 @@ body {
 @import "sidebar";
 @import "player-bar";
 @import "cart";
+@import "product";
 
 // Подключение стилей отдельных страниц
 // @import "animation";

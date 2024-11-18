@@ -115,6 +115,17 @@ const songs = [
         webpCover:
             "./img/catalog/item-4.webp",
     },
+    {
+        id: "00005",
+        title: "Like a virgin",
+        name: "Madonna",
+        source:
+            "files/Madonna_-_Like_A_Virgin_48029369.mp3",
+        cover:
+            "./img/catalog/item-5.png",
+        webpCover:
+            "./img/catalog/item-5.webp",
+    },
 ];
 
 const findSongById = (id) => {

@@ -25,3 +25,13 @@ if (productsCards.length) {
         })
     })
 }
+
+const showMoreTextBtn = document.querySelectorAll(".text-product__show-more")
+
+if (showMoreTextBtn.length) {
+    showMoreTextBtn.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.parentNode.classList.toggle("_show-all-text")
+        })
+    })
+}

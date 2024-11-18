@@ -49,6 +49,13 @@
 
 	&._highlight {
 		background-color: $highlightColor-1;
+		border: 1px solid $highlightColor-1;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
 	}
 
 	&._ligth {

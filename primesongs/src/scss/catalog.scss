@@ -204,6 +204,10 @@
         margin-bottom: 8px;
         max-width: 60%;
 
+        .product & {
+            max-width: 100%;
+        }
+
         @media (max-width:$mobile) {
             max-width: 100%;
         }
@@ -260,5 +264,14 @@
             width: 24px;
             height: 24px;
         }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 }

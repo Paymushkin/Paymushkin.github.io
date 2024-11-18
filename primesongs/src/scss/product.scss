@@ -1,0 +1,273 @@
+.product {}
+
+.header-product {
+    margin-bottom: 16px;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+        transition: 0.3s ease color;
+
+        svg path {
+            transition: 0.3s ease stroke;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-1;
+
+                svg path {
+                    stroke: $highlightColor-1;
+                }
+            }
+        }
+    }
+}
+
+.body-product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 36px;
+    border-radius: 16px;
+    background-color: $bgColor-3;
+
+    &__title {
+        margin-bottom: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+}
+
+.text-product {
+    &__block {
+        margin-bottom: 20px;
+
+        &._visible {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(180deg, transparent 0%, $bgColor-3 100%);
+                z-index: 2;
+
+                ._show-all-text & {
+                    display: none;
+                }
+            }
+        }
+
+        &._hidden {
+            display: none;
+
+            ._show-all-text & {
+                display: block;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    &__text {
+        color: $addColor;
+        font-size: 12px;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__show-more {
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 1.5;
+        transition: 0.3s ease color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-1;
+            }
+        }
+
+        span {
+            &:last-child {
+                display: none;
+
+                ._show-all-text & {
+                    display: block;
+                }
+            }
+
+            &:first-child {
+                ._show-all-text & {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
+.parts-payments {
+    padding: 28px 22px;
+    border-radius: 8px;
+    background-color: #160619;
+
+    &__prices {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__price {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 600;
+
+        &-old {
+            color: $addColor;
+            text-decoration: line-through;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+    }
+
+    &__parts {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    &__payment {
+        padding: 2px 8px;
+        background-color: #F1DC5B;
+        border-radius: 6px;
+        color: #160619;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    &__duration {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    &__button {
+        margin-bottom: 32px;
+        border-radius: 8px;
+        height: 35px;
+    }
+
+    &__actions {
+        svg {
+            min-height: 15px;
+            min-width: 20px;
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        transition: color 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-1;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.dolyami-product {
+    border: 1px solid #fff;
+    border-radius: 8px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 17px 22px;
+        border-bottom: 1px solid #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+
+        span {
+            position: relative;
+            margin-left: 22px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -22px;
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 4px;
+                background-color: $highlightColor-1;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__info {
+        padding: 17px 22px;
+    }
+
+    &__parts {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 16px;
+    }
+
+    &__part {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+.product-preferences {
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+}
