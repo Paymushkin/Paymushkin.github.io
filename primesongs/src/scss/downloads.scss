@@ -1,0 +1,23 @@
+.downloads-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        padding: 24px;
+        background-color: $bgColor-3;
+        border-radius: 16px;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__tracks {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+    }
+}

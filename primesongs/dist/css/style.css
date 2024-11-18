@@ -2559,7 +2559,7 @@ select:focus {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  gap: 20px;
+  gap: 10px 20px;
 }
 
 .charts-block__item {
@@ -2626,7 +2626,8 @@ select:focus {
   display: -ms-flexbox;
   display: flex;
   gap: 14px;
-  max-width: calc(100% - 95px);
+  padding: 5px 0;
+  overflow: hidden;
 }
 
 .charts-item__artist {
@@ -3006,6 +3007,33 @@ select:focus {
   background-color: #D03FC2;
 }
 
+.downloads-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 16px;
+}
+
+.downloads-list__item {
+  padding: 24px;
+  background-color: #170A1D;
+  border-radius: 16px;
+}
+
+.downloads-list__title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.downloads-list__tracks {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
 .sidebar {
   position: sticky;
   top: 0;
@@ -3072,12 +3100,22 @@ select:focus {
 }
 
 .sidebar-nav__link span {
+  position: relative;
   color: #CFCDD0;
   font-size: 16px;
   line-height: 1.3;
   -webkit-transition: 0.3s ease color;
   -o-transition: 0.3s ease color;
   transition: 0.3s ease color;
+}
+
+.sidebar-nav__link._active span::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #D03FC2;
 }
 
 .form-sidebar {
