@@ -3820,6 +3820,10 @@ select:focus {
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 @media (min-width: 36.06125em) {
@@ -4719,5 +4723,14 @@ select:focus {
 
   .parts-payments__action:hover {
     color: #D03FC2;
+  }
+
+  .body-account__input:hover {
+    border-color: #D03FC2;
+  }
+
+  .body-account__button:hover {
+    background-color: transparent;
+    border-color: #D03FC2;
   }
 }
