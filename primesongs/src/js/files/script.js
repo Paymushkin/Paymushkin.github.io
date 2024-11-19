@@ -35,3 +35,12 @@ if (showMoreTextBtn.length) {
         })
     })
 }
+
+const phoneInputs = document.querySelectorAll("input[type='tel']")
+
+if (phoneInputs.length) {
+
+    phoneInputs.forEach(input => {
+        Inputmask({ mask: "+7 (999) 999-99-99" }).mask(input);
+    });
+}

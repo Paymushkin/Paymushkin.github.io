@@ -101,6 +101,16 @@ input[type="range"]::-moz-range-track {
     background-color: #454545;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+    filter: invert(100%);
+}
+
+input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
 
 
 /* Специальные правила для браузеров на движках WebKit/Blink */

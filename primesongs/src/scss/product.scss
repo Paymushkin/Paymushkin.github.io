@@ -36,10 +36,42 @@
     border-radius: 16px;
     background-color: $bgColor-3;
 
+    ._player-active & {
+        padding-bottom: 120px;
+    }
+
+    @media (max-width:$mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 16px;
+
+        // ._player-active & {
+        //     padding-bottom: 120px;
+        // }
+    }
+
+    @media (max-width:$mobileSmall) {
+        grid-template-columns: 1fr;
+
+        ._player-active & {
+            padding-bottom: 170px;
+        }
+    }
+
     &__title {
         margin-bottom: 16px;
         line-height: 1.5;
         font-weight: 600;
+    }
+
+    &__payment {
+        @media (max-width:$mobile) {
+            grid-column: span 2;
+        }
+
+        @media (max-width:$mobileSmall) {
+            grid-column: span 1;
+        }
     }
 }
 
