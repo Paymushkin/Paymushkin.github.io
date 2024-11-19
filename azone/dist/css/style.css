@@ -2278,22 +2278,20 @@ details[open] summary:before {
   background-color: unset;
 }
 
-.right-projects__decor {
-  font-family: "Gotham Pro";
-  font-weight: 500;
-  opacity: 0.1;
+.right-projects {
+  max-width: 380px;
+  max-height: 380px;
 }
 
-@supports (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
-  .right-projects__decor {
-    font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem );
-  }
+.right-projects img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@supports not (font-size: clamp( 1.25rem , 0.2722222222rem  +  4.8888888889vw , 4rem )) {
-  .right-projects__decor {
-    font-size: calc(1.25rem + 2.75 * (100vw - 20rem) / 56.25);
-  }
+.right-projects img.hidden {
+  display: none;
 }
 
 .feedback__content {

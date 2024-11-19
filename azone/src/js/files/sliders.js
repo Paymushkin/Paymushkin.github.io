@@ -123,6 +123,29 @@ function initSliders() {
 				el: ".projects-swiper__pagination",
 				type: "progressbar",
 			},
+
+			// События
+			on: {
+				// init: function(swiper) {
+				// 	const allSlides = document.querySelector(".fraction-controll__all");
+				// 	const allSlidesItems = document.querySelectorAll(".slide-main-block:not(.swiper-slide-duplicate)");
+
+				// 	allSlides.textContent = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
+				// },
+				slideChange: function (swiper) {
+					const projectsImages = document.querySelectorAll("#projectsImages img")
+
+					if (projectsImages.length) {
+						projectsImages.forEach((img) => {
+							img.classList.add("hidden")
+						})
+						const currentImageIndex = swiper.realIndex
+						document.querySelector(`img[data-image='${currentImageIndex}']`).classList.remove("hidden")
+					}
+					// const currentSlide = document.querySelector(".fraction-controll__current");
+					// currentSlide.textContent = (swiper.realIndex + 1) < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
+				}
+			}
 		});
 	}
 

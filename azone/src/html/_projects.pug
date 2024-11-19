@@ -10,11 +10,11 @@ section#projects.projects
                     .projects__slider.swiper
                         .projects__wrapper.swiper-wrapper
                             .projects__slide.swiper-slide.projects-slide
-                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                                h3.projects-slide__title 1 Интеграция и настройка IP-телефонии Asterisk
                             .projects__slide.swiper-slide.projects-slide
-                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                                h3.projects-slide__title 2 Интеграция и настройка IP-телефонии Asterisk
                             .projects__slide.swiper-slide.projects-slide
-                                h3.projects-slide__title Интеграция и настройка IP-телефонии Asterisk
+                                h3.projects-slide__title 3 Интеграция и настройка IP-телефонии Asterisk
                         .swiper-pagination.projects-swiper__pagination
                     .swiper__navigation.projects-swiper__navigation 
                         .prev
@@ -22,14 +22,10 @@ section#projects.projects
                         .next
                             include icons/_arrow-next
                 
-                .projects__right.right-projects
-                    p.right-projects__decor 
-                        | 539204920
-                        | 492049202
-                        | 403249202
-                        | 539204920
-                        | 492049202
-                        | 403249202
+                #projectsImages.projects__right.right-projects
+                    img(data-image="0" src="@img/projects/item-1.png", alt="image")
+                    img.hidden(data-image="1" src="@img/projects/item-2.png", alt="image")
+                    img.hidden(data-image="2" src="@img/projects/item-3.png", alt="image")
 
             a(href="/projects.html").see-all.projects__link
                 span Все проекты
