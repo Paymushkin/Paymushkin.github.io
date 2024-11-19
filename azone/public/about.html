@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
-    <link rel="manifest" href="./site.webmanifest"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta property="og:title" content="Системный интегратор &lt;&lt;Азон&gt;&gt;"/>
@@ -20,14 +19,14 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="js/jquery.min.js?_v=20241101132525"></script>
-    <script src="js/jquery.fancybox.min.js?_v=20241101132525"></script>
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css?_v=20241101132525"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241101132525"/>
+    <script src="./js/jquery.min.js?_v=20241119210519"></script>
+    <link rel="stylesheet" href="./css/aos.min.css?_v=20241119210519"/>
+    <link rel="stylesheet" href="./css/style.min.css?_v=20241119210519"/>
+    <link rel="manifest" href="./site.webmanifest"/>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header" id="header">
+      <header class="header" id="header" data-scroll="400" data-scroll-show="0">
         <div class="header__container">
           <div class="header__wrapper"><a class="header__logo" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="118" height="19" viewbox="0 0 118 19" fill="none">
@@ -60,11 +59,30 @@
                 <li class="header-menu__item _contact"><a class="header-menu__link" href="mailto:info@azone-it.ru">info@azone-it.ru</a></li>
               </ul><a class="button header-menu__button _highlight" href="#consultation">Консультация</a>
             </nav>
-            <button class="menu-icon" id="show-hide-menu"> 
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-            </button>
+            <div class="header__mobile-icons header-mobile"><a class="header-mobile__icon" href="tel:+74959026636">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M19.23 15.2598L16.69 14.9698C16.3914 14.9347 16.0886 14.9678 15.8046 15.0665C15.5206 15.1652 15.2626 15.327 15.05 15.5398L13.21 17.3798C10.3714 15.9357 8.0641 13.6284 6.62004 10.7898L8.47004 8.93977C8.90004 8.50977 9.11004 7.90977 9.04004 7.29977L8.75004 4.77977C8.69356 4.29186 8.45951 3.84179 8.0925 3.51536C7.7255 3.18893 7.25121 3.00897 6.76004 3.00977H5.03004C3.90004 3.00977 2.96004 3.94977 3.03004 5.07977C3.56004 13.6198 10.39 20.4398 18.92 20.9698C20.05 21.0398 20.99 20.0998 20.99 18.9698V17.2398C21 16.2298 20.24 15.3798 19.23 15.2598Z" fill="#333333"></path>
+                </svg></a><a class="header-mobile__icon" href="mailto:info@azone-it.ru">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M4 5H20C20.55 5 21 5.45 21 6V18C21 18.55 20.55 19 20 19H4C3.45 19 3 18.55 3 18V6C3 5.45 3.45 5 4 5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M3 6.5L12 12L21 6.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a>
+              <button class="menu-icon" id="show-hide-menu"> 
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+              </button>
+            </div>
+          </div>
+          <div class="header__tags">
+            <nav class="hero__nav nav-hero header-tags">
+              <ul class="nav-hero__list">
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#what-we-do">Что мы делаем</a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#expertise">Экспертиза            </a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#feedback">Отзывы</a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#partners">Партнёры</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
@@ -152,19 +170,19 @@
             <div class="expertise__body">
               <h2 class="section-title expertise__title">Экспертиза</h2>
               <ul class="expertise__grid grid-expertise">
-                <li class="grid-expertise__item _highlight-2">
+                <li class="grid-expertise__item _highlight-2" data-aos="fade-up" data-aos-duration="750">
                   Мы&nbsp;являемся партнёрами и&nbsp;регулярно проходим 
                   обучение и&nbsp;сертификацию у&nbsp;ключевых производителей 
                   программного обеспечения и оборудования: Positive Technologies, 
                   «Код безопасности», «Лаборатория Касперского», UserGate, «ИнфоТеКС» и&nbsp;др.
                 </li>
-                <li class="grid-expertise__item">
+                <li class="grid-expertise__item" data-aos="fade-up" data-aos-duration="750">
                   Наша лаборатория по&nbsp;специальным проверкам и&nbsp;специальным 
                   исследованиям имеет все&nbsp;необходимые допуски, разрешения и&nbsp;лицензии. 
                   Помещение оснащено современным специальным оборудованием 
                   и&nbsp;необходимой степенью защищённости.
                 </li>
-                <li class="grid-expertise__item">
+                <li class="grid-expertise__item" data-aos="fade-up" data-aos-duration="750">
                   <p class="grid-expertise__title">Имеем все необходимые сертификаты и лицензии для нашей деятельности:</p>
                   <ul class="grid-expertise__list"> 
                     <li>Федеральная служба безопасности Российской Федерации.</li>
@@ -265,25 +283,25 @@
                     <div class="feedback__slide swiper-slide">
                       <ul class="feedback-slide"> 
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-1.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-2.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-3.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-4.svg?_v=20241119210519" alt="logo"></li>
                       </ul>
                     </div>
                     <div class="feedback__slide swiper-slide">
                       <ul class="feedback-slide"> 
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-1.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-2.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-3.svg?_v=20241119210519" alt="logo"></li>
                         <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241101132525" alt="logo"></li>
+                           <img src="img/feedback/item-4.svg?_v=20241119210519" alt="logo"></li>
                       </ul>
                     </div>
                   </div>
@@ -314,16 +332,16 @@
               <p class="section-subtitle partners__text">
                 Российские и&nbsp;международные производители программного обеспечения, <br>компьютерного, сетевого и серверного оборудования</p>
               <ul class="partners__grid grid-partners">
-                <li class="grid-partners__item">«ИнфоТеКС»</li>
-                <li class="grid-partners__item">«Код Безопасности»</li>
-                <li class="grid-partners__item">«Киберпротект»</li>
-                <li class="grid-partners__item">«Гарда Технологии»</li>
-                <li class="grid-partners__item">Positive Technologies</li>
-                <li class="grid-partners__item">Aquarius</li>
-                <li class="grid-partners__item">«Лаборатория Касперского»</li>
-                <li class="grid-partners__item">iRU</li>
-                <li class="grid-partners__item">«Аладдин Р.Д.»</li>
-                <li class="grid-partners__item">«Ростелеком-Солар»</li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«ИнфоТеКС»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Код Безопасности»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Киберпротект»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Гарда Технологии»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">Positive Technologies</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">Aquarius</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Лаборатория Касперского»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">iRU</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Аладдин Р.Д.»</a></li>
+                <li class="grid-partners__item"> <a class="grid-partners__link" href="/">«Ростелеком-Солар»</a></li>
               </ul><a class="see-all services__link" href="/partners.html"><span>Все партнёры</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewbox="0 0 15 14" fill="none">
                   <path d="M2.06222 11.9212L0.927067 10.2699L10.8069 3.43974L3.15699 2.02915L3.52015 0.0484885L14.536 2.07973L12.5105 13.1268L10.5355 12.7626L11.9421 5.09104L2.06222 11.9212Z" fill="#95C11F"></path>
@@ -333,10 +351,13 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241101132525" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241119210519" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -407,9 +428,13 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/inputmask.min.js?_v=20241101132525"></script>
-    <script src="js/swiper.min.js?_v=20241101132525"></script>
-    <script src="js/slider.js?_v=20241101132525"></script>
-    <script src="js/script.js?_v=20241101132525"></script>
+    <link rel="stylesheet" href="./css/lightbox.min.css?_v=20241119210519"/>
+    <script src="./js/scroll.js?_v=20241119210519"></script>
+    <script src="./js/lightbox.min.js?_v=20241119210519"></script>
+    <script src="./js/aos.min.js?_v=20241119210519"></script>
+    <script src="./js/inputmask.min.js?_v=20241119210519"></script>
+    <script src="./js/swiper.min.js?_v=20241119210519"></script>
+    <script src="./js/slider.js?_v=20241119210519"></script>
+    <script src="./js/script.js?_v=20241119210519"></script>
   </body>
 </html>

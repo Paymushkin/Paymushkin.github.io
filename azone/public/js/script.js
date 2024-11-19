@@ -1,3 +1,5 @@
+AOS.init();
+
 const showHideMenuBtn = document.getElementById("show-hide-menu")
 
 if (showHideMenuBtn) {
@@ -54,6 +56,9 @@ if (selects.length) {
 
         selectOptions.forEach(option => {
             option.addEventListener("click", () => {
+                selectOptions.forEach(el => {
+                    el.classList.remove("_selected")
+                })
 
                 let currentValue = select.querySelector(".current-value")
                 const currentSelectValue = option.dataset.value
@@ -61,6 +66,7 @@ if (selects.length) {
                 currentValue.dataset.current = currentSelectValue
                 currentValue.textContent = currentSelectValue
                 openSelect.parentNode.classList.remove("_open-select")
+                option.classList.add("_selected")
 
                 if (elementsForFilterWrapper) {
                     const elements = elementsForFilterWrapper.querySelectorAll("[data-category]")
@@ -81,6 +87,13 @@ if (selects.length) {
 
     });
 }
+
+// const filterItems = function(data) {
+//     const elements = document.querySelectorAll("[data-category]")
+//     elements.forEach(element => {
+//         element.style.display.none
+//     });
+// }
 
 // инициализация маски ввода телефона
 
@@ -110,3 +123,97 @@ function isWebp() {
 }
 
 isWebp()
+
+// отображение таблицы тарифов
+
+const plansBlock = document.getElementById("plans")
+const calculatePlan = document.getElementById("calculatePlan")
+
+if (calculatePlan) {
+    calculatePlan.addEventListener("click", function (event) {
+        event.preventDefault()
+        document.documentElement.classList.add("_plans-visible")
+        if (plansBlock) {
+            plans.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    })
+
+    const plansItems = plansBlock.querySelectorAll(".plan")
+
+    if (plansItems.length) {
+        plansItems.forEach(item => {
+            const plansHeader = item.querySelector(".plan__header")
+            plansHeader.addEventListener("click", () => {
+                item.classList.toggle("_plan-open")
+            })
+        })
+    }
+}
+
+
+// скролл наверх
+
+// Получаем элемент кнопки "наверх"
+const toTopButton = document.getElementById('to-top');
+
+// Функция для управления видимостью кнопки
+function toggleButtonVisibility() {
+    if (window.scrollY > 200) {
+        toTopButton.style.display = 'block'; // Показываем кнопку
+    } else {
+        toTopButton.style.display = 'none'; // Скрываем кнопку
+    }
+}
+
+// Добавляем обработчик события прокрутки
+window.addEventListener('scroll', toggleButtonVisibility);
+
+// Обработчик клика по кнопке "наверх"
+toTopButton.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Изначально скрываем кнопку
+toTopButton.style.display = 'none';
+
+// Range Slider Properties.
+
+const sliderProps = {
+    fill: "#95C11F",
+    background: "#DADADA",
+};
+
+const sliders = document.querySelectorAll(".range-wrapper");
+
+sliders.forEach(slider => {
+    const sliderNumber = slider.querySelector(".slider-count");
+    const sliderRangeInput = slider.querySelector("input[type='range']")
+
+    sliderRangeInput.addEventListener("input", event => {
+        sliderNumber.value = event.target.value;
+
+        setRangeLine(sliderRangeInput)
+    });
+
+    sliderNumber.addEventListener("input", event => {
+        sliderRangeInput.value = +event.target.value;
+        setRangeLine(sliderRangeInput)
+    })
+
+    function setRangeLine(slider) {
+        const percentage = (100 * (sliderRangeInput.value - sliderRangeInput.min)) / (sliderRangeInput.max - sliderRangeInput.min);
+        const bg = `linear-gradient(90deg, ${sliderProps.fill} ${percentage}%, ${sliderProps.background} ${percentage + 0.1}%)`;
+        sliderRangeInput.style.background = bg;
+    }
+
+});
+
+const header = document.querySelector('header');
+const body = document.body;
+const headerHeight = header.offsetHeight;
+body.style.paddingTop = `${headerHeight}px`;

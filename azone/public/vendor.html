@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
-    <link rel="manifest" href="./site.webmanifest"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta property="og:title" content="Системный интегратор &lt;&lt;Азон&gt;&gt;"/>
@@ -20,14 +19,17 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="js/jquery.min.js?_v=20241101132525"></script>
-    <script src="js/jquery.fancybox.min.js?_v=20241101132525"></script>
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css?_v=20241101132525"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241101132525"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?_v=20241119210519"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js?_v=20241119210519"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css?_v=20241119210519"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241119210519"/>
+    <link rel="manifest" href="./site.webmanifest"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20241119210519" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20241119210519"></script>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header" id="header">
+      <header class="header" id="header" data-scroll="50" data-scroll-show="0">
         <div class="header__container">
           <div class="header__wrapper"><a class="header__logo" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="118" height="19" viewbox="0 0 118 19" fill="none">
@@ -60,11 +62,20 @@
                 <li class="header-menu__item _contact"><a class="header-menu__link" href="mailto:info@azone-it.ru">info@azone-it.ru</a></li>
               </ul><a class="button header-menu__button _highlight" href="#consultation">Консультация</a>
             </nav>
-            <button class="menu-icon" id="show-hide-menu"> 
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-            </button>
+            <div class="header__mobile-icons header-mobile"><a class="header-mobile__icon" href="tel:+74959026636">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M19.23 15.2598L16.69 14.9698C16.3914 14.9347 16.0886 14.9678 15.8046 15.0665C15.5206 15.1652 15.2626 15.327 15.05 15.5398L13.21 17.3798C10.3714 15.9357 8.0641 13.6284 6.62004 10.7898L8.47004 8.93977C8.90004 8.50977 9.11004 7.90977 9.04004 7.29977L8.75004 4.77977C8.69356 4.29186 8.45951 3.84179 8.0925 3.51536C7.7255 3.18893 7.25121 3.00897 6.76004 3.00977H5.03004C3.90004 3.00977 2.96004 3.94977 3.03004 5.07977C3.56004 13.6198 10.39 20.4398 18.92 20.9698C20.05 21.0398 20.99 20.0998 20.99 18.9698V17.2398C21 16.2298 20.24 15.3798 19.23 15.2598Z" fill="#333333"></path>
+                </svg></a><a class="header-mobile__icon" href="mailto:info@azone-it.ru">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M4 5H20C20.55 5 21 5.45 21 6V18C21 18.55 20.55 19 20 19H4C3.45 19 3 18.55 3 18V6C3 5.45 3.45 5 4 5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M3 6.5L12 12L21 6.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a>
+              <button class="menu-icon" id="show-hide-menu"> 
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -97,7 +108,7 @@
                     </div>
                     <div class="select__hidden-block">
                       <ul class="select__list">
-                        <li class="select__item" data-value="Все предложения" data-category="0">Все предложения</li>
+                        <li class="select__item _selected" data-value="Все предложения" data-category="0">Все предложения</li>
                         <li class="select__item" data-value="Системы хранения данных" data-category="1">Системы хранения данных</li>
                         <li class="select__item" data-value="Серверы" data-category="2">Серверы</li>
                         <li class="select__item" data-value="Программное обеспечение" data-category="3">Программное обеспечение</li>
@@ -465,7 +476,7 @@
                 <div class="consultation__wrapper">
                   <input class="consultation__input" id="consultation-name" type="text" name="consultation-name" placeholder="Ваше имя" required="required"/>
                   <input class="consultation__input" id="consultation-email" type="email" name="consultation-email" placeholder="E-mail" required="required"/>
-                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН Компании" required="required"/>
+                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН" required="required"/>
                   <input class="consultation__input" id="consultation-phone" type="tel" name="consultation-phone" placeholder="+7 (___)___-__-__" required="required"/>
                   <textarea class="consultation__textarea" id="consultation-comment" name="" cols="30" rows="5" placeholder="Комментарий"></textarea>
                 </div>
@@ -476,10 +487,13 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241101132525" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241119210519" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -550,9 +564,6 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/inputmask.min.js?_v=20241101132525"></script>
-    <script src="js/swiper.min.js?_v=20241101132525"></script>
-    <script src="js/slider.js?_v=20241101132525"></script>
-    <script src="js/script.js?_v=20241101132525"></script>
+    <script src="js/app.min.js?_v=20241119210519"></script>
   </body>
 </html>

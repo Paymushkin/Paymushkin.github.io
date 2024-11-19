@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
-    <link rel="manifest" href="./site.webmanifest"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta property="og:title" content="Системный интегратор &lt;&lt;Азон&gt;&gt;"/>
@@ -20,14 +19,14 @@
     <meta property="og:image:width" content="968"/>
     <meta property="og:image:height" content="504"/>
     <title>Системный интегратор «Азон» | ИТ-компания «Азон»</title>
-    <script src="js/jquery.min.js?_v=20241101132525"></script>
-    <script src="js/jquery.fancybox.min.js?_v=20241101132525"></script>
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css?_v=20241101132525"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241101132525"/>
+    <script src="./js/jquery.min.js?_v=20241119210519"></script>
+    <link rel="stylesheet" href="./css/aos.min.css?_v=20241119210519"/>
+    <link rel="stylesheet" href="./css/style.min.css?_v=20241119210519"/>
+    <link rel="manifest" href="./site.webmanifest"/>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header" id="header">
+      <header class="header" id="header" data-scroll="400" data-scroll-show="0">
         <div class="header__container">
           <div class="header__wrapper"><a class="header__logo" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="118" height="19" viewbox="0 0 118 19" fill="none">
@@ -60,11 +59,32 @@
                 <li class="header-menu__item _contact"><a class="header-menu__link" href="mailto:info@azone-it.ru">info@azone-it.ru</a></li>
               </ul><a class="button header-menu__button _highlight" href="#consultation">Консультация</a>
             </nav>
-            <button class="menu-icon" id="show-hide-menu"> 
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-              <div class="menu-icon__line"></div>
-            </button>
+            <div class="header__mobile-icons header-mobile"><a class="header-mobile__icon" href="tel:+74959026636">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M19.23 15.2598L16.69 14.9698C16.3914 14.9347 16.0886 14.9678 15.8046 15.0665C15.5206 15.1652 15.2626 15.327 15.05 15.5398L13.21 17.3798C10.3714 15.9357 8.0641 13.6284 6.62004 10.7898L8.47004 8.93977C8.90004 8.50977 9.11004 7.90977 9.04004 7.29977L8.75004 4.77977C8.69356 4.29186 8.45951 3.84179 8.0925 3.51536C7.7255 3.18893 7.25121 3.00897 6.76004 3.00977H5.03004C3.90004 3.00977 2.96004 3.94977 3.03004 5.07977C3.56004 13.6198 10.39 20.4398 18.92 20.9698C20.05 21.0398 20.99 20.0998 20.99 18.9698V17.2398C21 16.2298 20.24 15.3798 19.23 15.2598Z" fill="#333333"></path>
+                </svg></a><a class="header-mobile__icon" href="mailto:info@azone-it.ru">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                  <path d="M4 5H20C20.55 5 21 5.45 21 6V18C21 18.55 20.55 19 20 19H4C3.45 19 3 18.55 3 18V6C3 5.45 3.45 5 4 5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M3 6.5L12 12L21 6.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a>
+              <button class="menu-icon" id="show-hide-menu"> 
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+                <div class="menu-icon__line"></div>
+              </button>
+            </div>
+          </div>
+          <div class="header__tags">
+            <nav class="hero__nav nav-hero header-tags">
+              <ul class="nav-hero__list">
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#calculator">Калькулятор</a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#components">Состав услуги            </a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#our-way">Наш подход            </a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#why-we">Почему мы</a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#feedback">Отзывы</a></li>
+                <li class="nav-hero__item"><a class="nav-hero__link" href="#faq">F.A.Q</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
@@ -82,11 +102,20 @@
             <div class="page-hero__content">
               <h1 class="main-title page-hero__title">IT&#8209;аутсорсинг</h1>
               <div class="page-hero__text">
-                <p class="main-subtitle">Предоставляем услуги аутсорсинга IT&#8209;инфраструктуры в&nbsp;Москве и&nbsp;области от&nbsp;12 000&nbsp;руб./мес.</p>
+                <p class="main-subtitle">
+                   Предоставляем услуги аутсорсинга IT&#8209;инфраструктуры 
+                  в&nbsp;Москве и&nbsp;области 
+                  <mark>от&nbsp;12 000&nbsp;руб./мес.</mark>
+                </p>
                 <ul class="page-hero__list">
                   <li>Неограниченное количество выездов</li>
-                  <li>Реакция на заявки до&nbsp;15&nbsp;минут</li>
-                  <li>90%&nbsp;заявок решаем в&nbsp;течение часа</li>
+                  <li>Реакция на заявки 
+                    <mark>до&nbsp;15&nbsp;минут</mark>
+                  </li>
+                  <li> 
+                    <mark>90%&nbsp;заявок</mark> 
+                    решаем в&nbsp;течение часа
+                  </li>
                 </ul>
               </div>
               <nav class="hero__nav nav-hero page-hero__nav">
@@ -108,25 +137,53 @@
             <div class="calculator__body">
               <form class="calculator__price price-calculator" action="#" method="post">
                 <div class="price-calculator__field">
-                  <input class="price-calculator__input" id="compQuantity" type="number" name="quantity" min="0" max="99" placeholder="Компьютерное оборудование"/><span class="price-calculator__text">Компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи</span>
+                  <p class="price-calculator__text">
+                     Компьютерное оборудование<br><span>| компьютеры, ноутбуки, моноблоки, тонкие клиенты, пользователи |</span></p>
+                  <div class="range-wrapper">
+                    <div class="length range__slider" data-min="0" data-max="99">
+                      <input class="slider-input" type="range" min="0" max="99" value="0"/>
+                    </div>
+                    <input class="slider-count" id="price-item-1" type="number" min="0" max="99" value="0"/>
+                  </div>
                 </div>
                 <div class="price-calculator__field">
-                  <input class="price-calculator__input" id="serverQuantity" type="number" name="quantity" min="0" max="300" placeholder="Серверное оборудование"/><span class="price-calculator__text">Физические и виртуальные серверы, службы или сервисы</span>
+                  <p class="price-calculator__text">
+                     Серверное оборудование<br><span>| физические и виртуальные серверы, службы или сервисы |</span></p>
+                  <div class="range-wrapper">
+                    <div class="length range__slider" data-min="0" data-max="300">
+                      <input class="slider-input" type="range" min="0" max="300" value="0"/>
+                    </div>
+                    <input class="slider-count" id="price-item-2" type="number" min="0" max="300" value="0"/>
+                  </div>
                 </div>
                 <div class="price-calculator__field">
-                  <input class="price-calculator__input" id="techQuantity" type="number" name="quantity" min="0" max="999" placeholder="Оргтехника и сетевое оборудование"/><span class="price-calculator__text">Принтеры, сканеры, копиры, маршрутизаторы, коммутаторы</span>
+                  <p class="price-calculator__text">
+                     Оргтехника и сетевое оборудование<br><span>| принтеры, сканеры, копиры, маршрутизаторы, коммутаторы |</span></p>
+                  <div class="range-wrapper">
+                    <div class="length range__slider" data-min="0" data-max="999">
+                      <input class="slider-input" type="range" min="0" max="999" value="0"/>
+                    </div>
+                    <input class="slider-count" id="price-item-3" type="number" min="0" max="999" value="0"/>
+                  </div>
                 </div>
                 <div class="price-calculator__field">
-                  <input class="price-calculator__input" id="branchQuantity" type="number" name="quantity" min="0" max="999" placeholder="Количество филиалов"/><span class="price-calculator__text">Филиалы в Москве и Московской области</span>
+                  <p class="price-calculator__text">
+                     Количество филиалов<br><span>| Филиалы в Москве и Московской области |</span></p>
+                  <div class="range-wrapper">
+                    <div class="length range__slider" data-min="0" data-max="999">
+                      <input class="slider-input" type="range" min="0" max="999" value="0"/>
+                    </div>
+                    <input class="slider-count" id="price-item-4" type="number" min="0" max="999" value="0"/>
+                  </div>
                 </div>
-                <div class="price-calculator__field">
+                <div class="price-calculator__field"><span class="price-calculator__text">Режим IT-обслуживания</span>
                   <select class="price-calculator__select" id="MaintenanceMode">
                     <option value="8x5">8x5</option>
                     <option value="12x7">12x7</option>
                     <option value="24x7">24x7</option>
-                  </select><span class="price-calculator__text">Режим IT-обслуживания</span>
+                  </select>
                 </div>
-                <button class="button _standart price-calculator__button" id="inputSubmit" type="submit">Рассчитать</button>
+                <button class="button _standart price-calculator__button" id="calculatePlan">Рассчитать</button>
               </form>
               <p class="calculator__text">
                 Минимальная стоимость комплексного обслуживания IT&#8209;инфраструктуры 
@@ -135,12 +192,12 @@
                 на&nbsp;консультацию, так&nbsp;как в&nbsp;данном случае на&nbsp;цену влияют и&nbsp;другие 
                 факторы, которые не&nbsp;учтены в&nbsp;калькуляторе расчета. 
                 Наши сотрудники оперативно ответят вам в&nbsp;течение рабочего 
-                дня с&nbsp;9 &nbsp;тра до&nbsp;7&nbsp;вечера по&nbsp;Москве.
+                дня с&nbsp;9 &nbsp;утра до&nbsp;7&nbsp;вечера по&nbsp;Москве.
               </p>
             </div>
             <div class="separator separator__our-way"></div>
           </div>
-          <div class="plans__container" id="plans">
+          <div class="plans plans__container" id="plans">
             <h2 class="section-title _with-text plans__title">Выберите тариф</h2>
             <p class="section-subtitle plans__text">
                Мы предлагаем 3 тарифа, с&nbsp;различными 
@@ -178,7 +235,17 @@
               <div class="grid-plans__body">
                 <form class="grid-plans__plan plan" action="#" method="post">
                   <div class="plan__header">
-                    <h4 class="plan__title">Стандартный</h4><span class="plan__price">18694 руб.</span>
+                    <h4 class="plan__title">Стандартный<span class="plan__price">18694 руб.</span></h4>
+                    <div class="plan__icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                        <mask id="mask0_115_1514" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"></rect>
+                        </mask>
+                        <g mask="url(#mask0_115_1514)">
+                          <path d="M10.4249 13.5749H4.1499V10.4249H10.4249V4.1499H13.5749V10.4249H19.8499V13.5749H13.5749V19.8499H10.4249V13.5749Z" fill="#1C1B1F"></path>
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                   <ul class="plan__list"> 
                     <li class="plan__item"><span>Количество выездов</span><span>∞</span></li>
@@ -195,19 +262,29 @@
                     <li class="plan__item"><span>Резервное копирование и восстановление</span><span>+</span></li>
                     <li class="plan__item"><span>Формирование отчётов из Service Desk</span><span>+</span></li>
                     <li class="plan__item"><span>Мониторинг серверного и сетевого оборудования</span><span>+</span></li>
-                    <li class="plan__item"><span>Обеспечение функционирования СУБД</span><span>-</span></li>
-                    <li class="plan__item"><span>Администрирование гипервизора и виртуализации</span><span>-</span></li>
-                    <li class="plan__item"><span>Обслуживание IP АТС</span><span>-</span></li>
-                    <li class="plan__item"><span>Поддержка серверов Unix</span><span>-</span></li>
-                    <li class="plan__item"><span>Поддержка сетевого оборудования уровня Enterprise</span><span>-</span></li>
-                    <li class="plan__item"><span>Поддержка систем хранения данных</span><span>-</span></li>
-                    <li class="plan__item"><span>Доступ к Service Desk</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Обеспечение функционирования СУБД</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Администрирование гипервизора и виртуализации</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Обслуживание IP АТС</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка серверов Unix</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка сетевого оборудования уровня Enterprise</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка систем хранения данных</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Доступ к Service Desk</span><span>-</span></li>
                   </ul>
                   <button class="button plan__button" type="submit"> Отправить заявку </button>
                 </form>
                 <form class="grid-plans__plan plan" action="#" method="post">
                   <div class="plan__header">
-                    <h4 class="plan__title">Эффективный</h4><span class="plan__price">22747 руб.</span>
+                    <h4 class="plan__title">Эффективный<span class="plan__price">22747 руб.</span></h4>
+                    <div class="plan__icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                        <mask id="mask0_115_1514" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"></rect>
+                        </mask>
+                        <g mask="url(#mask0_115_1514)">
+                          <path d="M10.4249 13.5749H4.1499V10.4249H10.4249V4.1499H13.5749V10.4249H19.8499V13.5749H13.5749V19.8499H10.4249V13.5749Z" fill="#1C1B1F"></path>
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                   <ul class="plan__list"> 
                     <li class="plan__item"><span>Количество выездов</span><span>∞</span></li>
@@ -227,16 +304,26 @@
                     <li class="plan__item"><span>Обеспечение функционирования СУБД</span><span>+</span></li>
                     <li class="plan__item"><span>Администрирование гипервизора и виртуализации</span><span>+</span></li>
                     <li class="plan__item"><span>Обслуживание IP АТС</span><span>+</span></li>
-                    <li class="plan__item"><span>Поддержка серверов Unix</span><span>-</span></li>
-                    <li class="plan__item"><span>Поддержка сетевого оборудования уровня Enterprise</span><span>-</span></li>
-                    <li class="plan__item"><span>Поддержка систем хранения данных</span><span>-</span></li>
-                    <li class="plan__item"><span>Доступ к Service Desk</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка серверов Unix</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка сетевого оборудования уровня Enterprise</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Поддержка систем хранения данных</span><span>-</span></li>
+                    <li class="plan__item _not-available"><span>Доступ к Service Desk</span><span>-</span></li>
                   </ul>
                   <button class="button plan__button" type="submit">Отправить заявку </button>
                 </form>
                 <form class="grid-plans__plan plan" action="#" method="post">
                   <div class="plan__header">
-                    <h4 class="plan__title">Максимальный</h4><span class="plan__price">26954 руб.</span>
+                    <h4 class="plan__title">Максимальный<span class="plan__price">26954 руб.</span></h4>
+                    <div class="plan__icon"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                        <mask id="mask0_115_1514" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9"></rect>
+                        </mask>
+                        <g mask="url(#mask0_115_1514)">
+                          <path d="M10.4249 13.5749H4.1499V10.4249H10.4249V4.1499H13.5749V10.4249H19.8499V13.5749H13.5749V19.8499H10.4249V13.5749Z" fill="#1C1B1F"></path>
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                   <ul class="plan__list"> 
                     <li class="plan__item"><span>Количество выездов</span><span>∞</span></li>
@@ -316,34 +403,34 @@
               ИТ&#8209;аутсорсинга основана на&nbsp;ITIL и включает в&nbsp;себя:
             </p>
             <ul class="our-way__grid grid-our-way">
-              <li class="grid-our-way__item _black"> 
+              <li class="grid-our-way__item _black" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Обслуживание по&nbsp;SLA</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система мониторинга 24Х7</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система учёта данных Service Desk</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Неограниченное количество выездов</p>
               </li>
-              <li class="grid-our-way__item _highlight-2"> 
+              <li class="grid-our-way__item _highlight-2" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Система защиты доступов</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Аренда серверов</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">3&nbsp;линии ИТ&#8209;поддержки</p>
               </li>
-              <li class="grid-our-way__item"> 
+              <li class="grid-our-way__item" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Реакция на&nbsp;заявку до&nbsp;15&nbsp;минут</p>
               </li>
-              <li class="grid-our-way__item _highlight"> 
+              <li class="grid-our-way__item _highlight" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">Выделенный менеджер</p>
               </li>
-              <li class="grid-our-way__item _highlight-2"> 
+              <li class="grid-our-way__item _highlight-2" data-aos="fade-up" data-aos-duration="750"> 
                 <p class="grid-our-way__text">NDA</p>
               </li>
             </ul>
@@ -358,30 +445,86 @@
               </div>
               <div class="why-we__right"> 
                 <ul class="why-we__list">
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Штат технической поддержки состоит 
                       из опытных сертифицированных инженеров
                     </p>
                   </li>
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Фиксируем стоимость оказания услуг 
                       в договоре (нет внезапных расходов на обслуживание)
                     </p>
                   </li>
-                  <li class="why-we__item _highlight-2">
+                  <li class="why-we__item _highlight-2" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        90% заявок от пользователей решаем в течение часа</p>
                   </li>
-                  <li class="why-we__item">
+                  <li class="why-we__item" data-aos="fade-up" data-aos-duration="750">
                     <p>
                        Тщательно контролируем качество обслуживания клиентов</p>
                   </li>
-                </ul>
+                </ul><a class="button _standart why-we__button" href="#consultation">Консультация</a>
               </div>
             </div>
             <div class="separator separator__why-we"></div>
+          </div>
+        </section>
+        <section class="feedback" id="feedback">
+          <div class="feedback__container">
+            <div class="feedback__body">
+              <h2 class="section-title _with-text feedback__title">Нас рекомендуют </h2>
+              <p class="section-subtitle feedback__text">
+                Мы работаем с&nbsp;коммерческими и&nbsp;государственными заказчиками 
+                всех отраслей и&nbsp;направлений
+              </p>
+              <div class="feedback__content">
+                <div class="feedback__slider swiper">
+                  <div class="feedback__wrapper swiper-wrapper">
+                    <div class="feedback__slide swiper-slide">
+                      <ul class="feedback-slide"> 
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-1.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-2.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-3.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-4.svg?_v=20241119210519" alt="logo"></li>
+                      </ul>
+                    </div>
+                    <div class="feedback__slide swiper-slide">
+                      <ul class="feedback-slide"> 
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-1.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-2.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-3.svg?_v=20241119210519" alt="logo"></li>
+                        <li class="feedback-slide__item">
+                           <img src="img/feedback/item-4.svg?_v=20241119210519" alt="logo"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper__navigation feedback-swiper__navigation"> 
+                  <div class="prev">
+                    <svg width="74" height="23" viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.93398 10.7438C0.350923 11.3321 0.355337 12.2818 0.943839 12.8651L10.5341 22.3708C11.1226 22.9541 12.0723 22.9501 12.6554 22.3619C13.2384 21.7737 13.234 20.8239 12.6455 20.2406L4.12087 11.7911L12.5666 3.27022C13.1497 2.68197 13.1453 1.73224 12.5568 1.14892C11.9683 0.565602 11.0185 0.569595 10.4355 1.15784L0.93398 10.7438ZM73.3475 10L1.99259 10.3L2.00653 13.3L73.3615 13L73.3475 10Z" fill="#DADADA"></path>
+                    </svg>
+                  </div>
+                  <div class="next">
+                    <svg width="74" height="23" viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M73.0911 12.5607C73.6769 11.9749 73.6769 11.0251 73.0911 10.4393L63.5452 0.893398C62.9594 0.307611 62.0096 0.307611 61.4238 0.893398C60.838 1.47919 60.838 2.42893 61.4238 3.01472L69.9091 11.5L61.4238 19.9853C60.838 20.5711 60.838 21.5208 61.4238 22.1066C62.0096 22.6924 62.9594 22.6924 63.5452 22.1066L73.0911 12.5607ZM0.674805 13H72.0304V10H0.674805V13Z" fill="#DADADA"></path>
+                    </svg>
+                  </div>
+                </div><a class="see-all feedback__link" href="/feedback.html"><span>Все отзывы</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewbox="0 0 15 14" fill="none">
+                    <path d="M2.06222 11.9212L0.927067 10.2699L10.8069 3.43974L3.15699 2.02915L3.52015 0.0484885L14.536 2.07973L12.5105 13.1268L10.5355 12.7626L11.9421 5.09104L2.06222 11.9212Z" fill="#95C11F"></path>
+                  </svg></a>
+              </div>
+            </div>
           </div>
         </section>
         <section class="faq" id="faq">
@@ -389,7 +532,6 @@
             <div class="faq__body">
               <h2 class="section-title faq__title">F.A.Q.</h2>
             </div>
-            <div class="separator faq__separator"></div>
             <div class="accordion faq__accordion">
               <details class="accordion__details" open="open">
                 <summary>У вас есть круглосуточная поддержка?</summary>
@@ -547,62 +689,6 @@
             </div>
           </div>
         </section>
-        <section class="feedback" id="feedback">
-          <div class="feedback__container">
-            <div class="feedback__body">
-              <h2 class="section-title _with-text feedback__title">Нас рекомендуют </h2>
-              <p class="section-subtitle feedback__text">
-                Мы работаем с&nbsp;коммерческими и&nbsp;государственными заказчиками 
-                всех отраслей и&nbsp;направлений
-              </p>
-              <div class="feedback__content">
-                <div class="feedback__slider swiper">
-                  <div class="feedback__wrapper swiper-wrapper">
-                    <div class="feedback__slide swiper-slide">
-                      <ul class="feedback-slide"> 
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241101132525" alt="logo"></li>
-                      </ul>
-                    </div>
-                    <div class="feedback__slide swiper-slide">
-                      <ul class="feedback-slide"> 
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-1.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-2.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-3.svg?_v=20241101132525" alt="logo"></li>
-                        <li class="feedback-slide__item">
-                           <img src="img/feedback/item-4.svg?_v=20241101132525" alt="logo"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper__navigation feedback-swiper__navigation"> 
-                  <div class="prev">
-                    <svg width="74" height="23" viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.93398 10.7438C0.350923 11.3321 0.355337 12.2818 0.943839 12.8651L10.5341 22.3708C11.1226 22.9541 12.0723 22.9501 12.6554 22.3619C13.2384 21.7737 13.234 20.8239 12.6455 20.2406L4.12087 11.7911L12.5666 3.27022C13.1497 2.68197 13.1453 1.73224 12.5568 1.14892C11.9683 0.565602 11.0185 0.569595 10.4355 1.15784L0.93398 10.7438ZM73.3475 10L1.99259 10.3L2.00653 13.3L73.3615 13L73.3475 10Z" fill="#DADADA"></path>
-                    </svg>
-                  </div>
-                  <div class="next">
-                    <svg width="74" height="23" viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M73.0911 12.5607C73.6769 11.9749 73.6769 11.0251 73.0911 10.4393L63.5452 0.893398C62.9594 0.307611 62.0096 0.307611 61.4238 0.893398C60.838 1.47919 60.838 2.42893 61.4238 3.01472L69.9091 11.5L61.4238 19.9853C60.838 20.5711 60.838 21.5208 61.4238 22.1066C62.0096 22.6924 62.9594 22.6924 63.5452 22.1066L73.0911 12.5607ZM0.674805 13H72.0304V10H0.674805V13Z" fill="#DADADA"></path>
-                    </svg>
-                  </div>
-                </div><a class="see-all feedback__link" href="/feedback.html"><span>Все отзывы</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewbox="0 0 15 14" fill="none">
-                    <path d="M2.06222 11.9212L0.927067 10.2699L10.8069 3.43974L3.15699 2.02915L3.52015 0.0484885L14.536 2.07973L12.5105 13.1268L10.5355 12.7626L11.9421 5.09104L2.06222 11.9212Z" fill="#95C11F"></path>
-                  </svg></a>
-              </div>
-            </div>
-          </div>
-        </section>
         <section class="consultation" id="consultation">
           <div class="consultation__container">
             <h2 class="section-title consultation__message">Спасибо за обращение!<br/>Мы <span>скоро </span>с&nbsp;Вами свяжемся.</h2>
@@ -616,7 +702,7 @@
                 <div class="consultation__wrapper">
                   <input class="consultation__input" id="consultation-name" type="text" name="consultation-name" placeholder="Ваше имя" required="required"/>
                   <input class="consultation__input" id="consultation-email" type="email" name="consultation-email" placeholder="E-mail" required="required"/>
-                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН Компании" required="required"/>
+                  <input class="consultation__input" id="consultation-inn" type="number" name="consultation-inn" placeholder="ИНН" required="required"/>
                   <input class="consultation__input" id="consultation-phone" type="tel" name="consultation-phone" placeholder="+7 (___)___-__-__" required="required"/>
                   <textarea class="consultation__textarea" id="consultation-comment" name="" cols="30" rows="5" placeholder="Комментарий"></textarea>
                 </div>
@@ -627,10 +713,13 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container"><a class="footer__to-top" data-text="Наверх" id="to-top"><span class="button__icon"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M18.9999 29.4023C18.9999 29.9546 19.4476 30.4023 19.9999 30.4023C20.5522 30.4023 20.9999 29.9546 20.9999 29.4023L18.9999 29.4023ZM20.707 10.8907C20.3165 10.5002 19.6833 10.5002 19.2928 10.8907L12.9288 17.2547C12.5383 17.6452 12.5383 18.2784 12.9288 18.6689C13.3193 19.0594 13.9525 19.0594 14.343 18.6689L19.9999 13.0121L25.6567 18.6689C26.0473 19.0594 26.6804 19.0594 27.0709 18.6689C27.4615 18.2784 27.4615 17.6452 27.0709 17.2547L20.707 10.8907ZM20.9999 29.4023L20.9999 11.5979L18.9999 11.5979L18.9999 29.4023L20.9999 29.4023Z" fill="white"></path>
+              </svg></span></a>
           <div class="footer__top">
             <div class="footer__top-left">
-              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241101132525" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
+              <div class="footer__logo logo-footer"> <img class="logo-footer__img" src="img/footer/logo.svg?_v=20241119210519" alt="logo"/><span class="logo-footer__text">Системная интеграция</span></div>
               <ul class="footer__social social-icons"> 
                 <li class="social-icons__icon"> <a class="social-icons__link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="39" viewbox="0 0 47 39" fill="none">
@@ -701,9 +790,13 @@
         </ul><a class="button mobile-menu__button" href="#consultation" id="consultation-button">Консультация</a>
       </div>
     </div>
-    <script src="js/inputmask.min.js?_v=20241101132525"></script>
-    <script src="js/swiper.min.js?_v=20241101132525"></script>
-    <script src="js/slider.js?_v=20241101132525"></script>
-    <script src="js/script.js?_v=20241101132525"></script>
+    <link rel="stylesheet" href="./css/lightbox.min.css?_v=20241119210519"/>
+    <script src="./js/scroll.js?_v=20241119210519"></script>
+    <script src="./js/lightbox.min.js?_v=20241119210519"></script>
+    <script src="./js/aos.min.js?_v=20241119210519"></script>
+    <script src="./js/inputmask.min.js?_v=20241119210519"></script>
+    <script src="./js/swiper.min.js?_v=20241119210519"></script>
+    <script src="./js/slider.js?_v=20241119210519"></script>
+    <script src="./js/script.js?_v=20241119210519"></script>
   </body>
 </html>
