@@ -1613,6 +1613,10 @@ input[type=date] {
        appearance: none;
 }
 
+input[type=date]::-webkit-date-and-time-value {
+  text-align: left;
+}
+
 /* Специальные правила для браузеров на движках WebKit/Blink */
 
 input[type=range]::-webkit-slider-thumb {
@@ -2869,8 +2873,6 @@ select:focus {
 }
 
 .sidebar {
-  position: sticky;
-  top: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -3538,6 +3540,7 @@ select:focus {
   background-color: #170A1D;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
 
 .body-account__input::-webkit-input-placeholder {

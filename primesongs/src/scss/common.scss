@@ -112,6 +112,10 @@ input[type="date"] {
     appearance: none;
 }
 
+input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+}
+
 
 /* Специальные правила для браузеров на движках WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
