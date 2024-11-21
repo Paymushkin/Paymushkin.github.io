@@ -5,23 +5,42 @@ section.account
         h3.header-account__name Кристина Лоуренс
     
     .account__body.body-account
-        form(action="#", method="post").body-account__form
-            input(autocomplete="off",type="text", name="account-data", placeholder="Имя").input.body-account__input
-            input(autocomplete="off",type="text", name="account-data", placeholder="Фамилия").input.body-account__input
-            input(autocomplete="off",type="text", name="account-data", placeholder="Отчество").input.body-account__input
-            input(type="tel", name="account-data", placeholder="+7 (999) 999-99-99").input.body-account__input
-            input(type="email", name="account-data", placeholder="info@mail.com").input.body-account__input
-            input(type="date", name="account-data", min="1924-01-01", max="2024-01-01").input.body-account__input
-            input(type="password", name="account-data",  placeholder="Пароль").input.body-account__input
+        .body-account__data
+            form(action="#", method="post").body-account__form
+                input(autocomplete="off",type="text", name="account-data", placeholder="Имя").input.body-account__input
+                input(autocomplete="off",type="text", name="account-data", placeholder="Фамилия").input.body-account__input
+                input(autocomplete="off",type="text", name="account-data", placeholder="Отчество").input.body-account__input
+                input(type="tel", name="account-data", placeholder="+7 (999) 999-99-99").input.body-account__input
+                input(type="email", name="account-data", placeholder="info@mail.com").input.body-account__input
+                input(type="date", name="account-data", min="1924-01-01", max="2024-01-01").input.body-account__input
+                input(type="password", name="account-data",  placeholder="Пароль").input.body-account__input
+                button.body-account__button Изменить пароль
+                button.body-account__button Сохранить изменения
+                button.body-account__button Выйти
+                button.body-account__button Удалить аккаунт
+            .body-account__useful.useful-block
+                .downloads-list__item
+                    h3.downloads-list__title 
+                        span Полезное
+                        a(href="/useful") Все
+                    ul.useful-block__list 
+                        li.useful-block__item 
+                            a(href="/useful").useful-block__link
+                                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur unde cupiditate, explicabo iusto culpa fugit mollitia deserunt, nam sapiente cum eum provident itaque laboriosam! Culpa rem a fuga dicta?
+                        li.useful-block__item 
+                            a(href="/useful").useful-block__link
+                                | Я купил этот трек!. 
+                        li.useful-block__item 
+                            a(href="/useful").useful-block__link
+                                | Я купил этот трек!. 
 
-            button.body-account__button Выйти
-            button.body-account__button Удалить аккаунт
 
         .body-account__pages 
             ul.downloads__list.downloads-list
+
                 .downloads-list__item
                     h3.downloads-list__title 
-                        span Загрузки
+                        span Покупки
                         a(href="/downloads") Все
 
                     ul.downloads-list__tracks
@@ -101,5 +120,112 @@ section.account
                                     .charts-item__about 
                                         h5.charts-item__artist Starboy
                                         p.charts-item__song The Weeknd
+                
+                .downloads-list__item
+                    h3.downloads-list__title 
+                        span Избранное
+                        a(href="/favorites") Все
+                    ul.downloads-list__tracks
+                        li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
 
                         li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
+
+                        li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
+
+                        li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
+
+                        li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
+
+                        li.charts-block__item.charts-item
+                            a(href="").charts-item__link 
+                                .charts-item__track 
+                                    .charts-item__cover(style="background-image: url(@img/hero/chart-1.png)")
+                                        .charts-item__label._crown
+                                    .charts-item__about 
+                                        h5.charts-item__artist Starboy
+                                        p.charts-item__song The Weeknd
+
+                .downloads-list__item
+                    h3.downloads-list__title 
+                        span Мои покупки
+                        a(href="/favorites") Все
+                    ul.download-list__purchases.purchases-list
+                        li.purchases-list__item.purchases-item 
+                            span.purchases-item__name Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            a(href="").purchases-item__link Скачать архив
+                            a(href="").purchases-item__link Скачать договор
+                        li.purchases-list__item.purchases-item 
+                            span.purchases-item__name Starboy
+                            a(href="").purchases-item__link Скачать архив
+                            a(href="").purchases-item__link Скачать договор
+                        li.purchases-list__item.purchases-item 
+                            span.purchases-item__name Starboy
+                            a(href="").purchases-item__link Скачать архив
+                            a(href="").purchases-item__link Скачать договор
+                        li.purchases-list__item.purchases-item 
+                            span.purchases-item__name Starboy
+                            a(href="").purchases-item__link Скачать архив
+                            a(href="").purchases-item__link Скачать договор
+
+                .downloads-list__item
+                    h3.downloads-list__title 
+                        span Частые вопросы
+                    .downloads-list__accordion.accordion
+                        details(open).accordion__item
+                            summary.accordion__title 
+                                span Кто такой Starboy?
+                                include icons/_chevron
+                            p.accordion__text 
+                                | Lorem ipsum dolor sit amet consectetur 
+                                | adipisicing elit. Tempora officiis minima 
+                                | iusto, dignissimos minus consequuntur natus, 
+                                | explicabo enim nulla dolorem ex aperiam magnam 
+                                | a, veritatis qui. Natus mollitia accusamus 
+                                | expedita.
+
+                        details.accordion__item
+                            summary.accordion__title 
+                                span Кто такой Starboy?
+                                include icons/_chevron
+                            p.accordion__text 
+                                | Lorem ipsum dolor sit amet consectetur 
+                                | adipisicing elit. Tempora officiis minima 
+                                | iusto, dignissimos minus consequuntur natus, 
+                                | explicabo enim nulla dolorem ex aperiam magnam 
+                                | a, veritatis qui. Natus mollitia accusamus 
+                                | expedita.

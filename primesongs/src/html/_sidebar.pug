@@ -6,9 +6,13 @@ aside#sidebar.sidebar
                     include icons/_home
                     span Главная
             li.sidebar-nav__item
-                a(href="#").sidebar-nav__link._active
+                a(href="#").sidebar-nav__link
                     include icons/_downloads
-                    span Загрузки
+                    span Личный кабинет
+            li.sidebar-nav__item
+                a(href="#").sidebar-nav__link.sidebar-nav__link-cart._active
+                    include icons/_cart
+                    span Корзина
     
     nav.sidebar__nav.sidebar-nav.nav-links
         h4.sidebar-nav__title Открой новое
@@ -40,7 +44,7 @@ aside#sidebar.sidebar
             li.sidebar-nav__item
                 a(href="#").sidebar-nav__link
                     img(src="@img/icons/settings.svg", alt="settings-icon")
-                    span Настройки
+                    span Полезное
     
     nav.sidebar__nav.sidebar-nav.nav-filters
         h4.sidebar-nav__title.sidebar-nav__title-grey ФИЛЬТРЫ

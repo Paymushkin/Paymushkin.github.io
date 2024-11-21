@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 html(lang="ru")
 	include html/_head
-	body
+	body._small-player
 		.wrapper.wrapper__container._small-sidebar
 			include html/_header
 			include html/_sidebar
 			main.main
-				include html/_product
+				include html/_useful
 			include html/_player-bar
 			include html/_popup
-		//- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script(src="js/app.min.js")

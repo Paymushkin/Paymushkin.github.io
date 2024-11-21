@@ -106,8 +106,8 @@ body {
     // max-height: 100dvh;
 
     // Скролл заблокирован
-    ._lock & {
-        display: flex;
+    .lock & {
+        // display: flex;
         overflow: hidden;
         touch-action: none;
         padding-right: 0 !important;
@@ -239,7 +239,7 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 @import "base/swiper";
-// @import "base/popup";
+@import "base/popup";
 @import "base/tabs";
 // @import "base/raiting";
 // @import "base/forms/toggle";
@@ -260,6 +260,7 @@ body {
 @import "cart";
 @import "product";
 @import "account";
+@import "useful";
 
 // Подключение стилей отдельных страниц
 // @import "animation";

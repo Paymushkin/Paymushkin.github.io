@@ -185,7 +185,7 @@ details {
     &[open] {
         summary {
             svg {
-                transform: rotate(-180deg);
+                transform: rotate(-90deg);
             }
         }
     }
@@ -193,8 +193,39 @@ details {
     summary {
 
         svg {
+            transform-origin: center;
             transition: 0.3s ease transform;
         }
+    }
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-size: 16px;
+        line-height: 1.5;
+        transition: 0.3s ease color;
+        cursor: pointer;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-1;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 8px;
+        color: $addColor;
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
 

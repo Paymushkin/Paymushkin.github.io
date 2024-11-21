@@ -19,11 +19,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
     <link rel="manifest" href="/site.webmanifest"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20241119145329"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241121172418"/>
   </head>
   <body class="_small-player">
     <div class="wrapper wrapper__container _small-sidebar">
-      <header class="header" id="header" itemscope="" itemtype="http://schema.org/WPHeader"><a class="header__logo" href="/"><img src="img/logo.svg?_v=20241119145329" alt="logo"/></a>
+      <header class="header" id="header" itemscope="" itemtype="http://schema.org/WPHeader"><a class="header__logo" href="/"><img src="img/logo.svg?_v=20241121172418" alt="logo"/></a>
         <div class="header__search search-header">
           <form class="search-header__form" action="#" method="post">
             <input class="search-header__input" type="search" placeholder="Search by artist, song or album..."/>
@@ -40,10 +40,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.58066 20.2548C6.35865 20.2548 5.36693 19.2662 5.36307 18.0442V18.0442V18.0442C5.36384 17.4224 5.61203 16.8265 6.05286 16.388L7.5223 14.9174V10.5488C7.52261 8.83161 8.20544 7.185 9.42041 5.97156C10.6354 4.75812 12.2829 4.07737 14 4.07923V4.07923C17.5718 4.08116 20.4666 6.97692 20.4672 10.5488V14.9139L21.9366 16.3845C22.3778 16.8229 22.6264 17.4188 22.6276 18.0407V18.0407V18.0407C22.6237 19.2627 21.632 20.2513 20.41 20.2513L7.58066 20.2548Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M15.7262 23.9207H12.2749" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg></a><a class="nav-header__account" href="">
+            </svg></a>
+          <div class="nav-header__account" data-popup="#auth">
             <div class="nav-header__avatar" style="background-image:url('img/header/avatar.png')">
               <div class="user-status"></div>
-            </div></a>
+            </div>
+          </div>
         </nav>
       </header>
       <aside class="sidebar" id="sidebar"> 
@@ -56,24 +58,40 @@
                   <path d="M16.0002 21.3334V18.6667" stroke="#88838A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M11.3332 21.3333V16" stroke="#88838A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg><span>Главная</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link _active" href="#">
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7.51451 7.51469V7.51469C12.2012 2.82803 19.7985 2.82803 24.4852 7.51469V7.51469C29.1718 12.2014 29.1718 19.7987 24.4852 24.4854V24.4854C19.7985 29.172 12.2012 29.172 7.51451 24.4854V24.4854C2.82785 19.7987 2.82785 12.2014 7.51451 7.51469Z" stroke="#88838A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5387 20.676L12.0534 13.1C12.16 12.572 12.572 12.16 13.1 12.0547L20.676 10.54C21.1427 10.4467 21.5534 10.8573 21.46 11.324L19.9454 18.9C19.84 19.428 19.4267 19.84 18.9 19.9453L11.324 21.46C10.8574 21.5547 10.4454 21.1427 10.5387 20.676Z" stroke="#88838A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M15.9983 15.6667C15.8143 15.6667 15.665 15.816 15.6663 16C15.6663 16.184 15.8157 16.3334 15.9997 16.3334C16.1837 16.3334 16.333 16.184 16.333 16C16.333 15.816 16.1837 15.6667 15.9983 15.6667" stroke="#88838A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg><span>Загрузки</span></a></li>
+                </svg><span>Личный кабинет</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link sidebar-nav__link-cart _active" href="#">
+                <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_31_2404)">
+                    <g>
+                      <path d="M12.4473 20.5175C10.9357 20.5175 9.70605 21.7471 9.70605 23.2587C9.70605 24.7704 10.9357 26 12.4473 26C13.9589 26 15.1886 24.77 15.1886 23.2587C15.1886 21.7474 13.9589 20.5175 12.4473 20.5175ZM12.4473 24.322C11.8613 24.322 11.3844 23.8453 11.3844 23.259C11.3844 22.6727 11.8613 22.1961 12.4473 22.1961C13.0336 22.1961 13.5103 22.6727 13.5103 23.259C13.5103 23.8453 13.0336 24.322 12.4473 24.322Z" fill="#88838A"></path>
+                      <path d="M22.4056 20.5175C20.8937 20.5175 19.6641 21.7472 19.6641 23.2587C19.6641 24.7704 20.8937 26 22.4056 26C23.9169 26 25.1469 24.7703 25.1469 23.2587C25.1469 21.7472 23.9169 20.5175 22.4056 20.5175ZM22.4056 24.3217C21.8193 24.3217 21.3424 23.8448 21.3424 23.2587C21.3424 22.6727 21.8193 22.1961 22.4056 22.1961C22.9916 22.1961 23.4685 22.6724 23.4685 23.2587C23.4685 23.8451 22.9919 24.3217 22.4056 24.3217Z" fill="#88838A"></path>
+                      <path d="M11.2444 19.6786H24.3074C24.7712 19.6786 25.1465 19.303 25.1465 18.8395C25.1465 18.376 24.7709 18.0003 24.3074 18.0003H11.958L9.55545 3.26375C9.49784 2.91073 9.22315 2.63328 8.87098 2.57202L5.65417 2.01256C5.19625 1.93311 4.76298 2.23887 4.68353 2.69534C4.6038 3.15214 4.90984 3.58653 5.36631 3.66599L7.99483 4.12306L10.4161 18.9743C10.4824 19.3807 10.8329 19.6786 11.2444 19.6786Z" fill="#88838A"></path>
+                    </g>
+                    <path d="M27.1678 7.4367C27.0097 7.21991 26.758 7.0918 26.4898 7.0918H9.42676V8.77011H25.3387L23.6125 14.1407H10.6296V15.819H24.2243C24.5885 15.819 24.9116 15.5835 25.0232 15.2367L27.2889 8.18769C27.3709 7.93236 27.3258 7.65322 27.1678 7.4367Z" fill="#88838A"></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_31_2404">
+                      <rect width="24" height="24" fill="white" transform="translate(4 2)"></rect>
+                    </clippath>
+                  </defs>
+                </svg><span>Корзина</span></a></li>
           </ul>
         </nav>
         <nav class="sidebar__nav sidebar-nav nav-links">
           <h4 class="sidebar-nav__title">Открой новое</h4>
           <ul class="sidebar-nav__list">
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241119145329" alt="music-album-icon"/><span>Популярное</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241119145329" alt="music-album-icon"/><span>Discount</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241119145329" alt="music-album-icon"/><span>Альбомы</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/artists.svg?_v=20241119145329" alt="artists-icon"/><span>Артисты</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/recently.svg?_v=20241119145329" alt="recently-icon"/><span>Недавние</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/favorites.svg?_v=20241119145329" alt="favorites-icon"/><span>Любимые</span></a></li>
-            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/settings.svg?_v=20241119145329" alt="settings-icon"/><span>Настройки</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241121172418" alt="music-album-icon"/><span>Популярное</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241121172418" alt="music-album-icon"/><span>Discount</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/music-album.svg?_v=20241121172418" alt="music-album-icon"/><span>Альбомы</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/artists.svg?_v=20241121172418" alt="artists-icon"/><span>Артисты</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/recently.svg?_v=20241121172418" alt="recently-icon"/><span>Недавние</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/favorites.svg?_v=20241121172418" alt="favorites-icon"/><span>Любимые</span></a></li>
+            <li class="sidebar-nav__item"><a class="sidebar-nav__link" href="#"><img src="img/icons/settings.svg?_v=20241121172418" alt="settings-icon"/><span>Полезное</span></a></li>
           </ul>
         </nav>
         <nav class="sidebar__nav sidebar-nav nav-filters">
@@ -171,7 +189,7 @@
                         <div class="product-item__price">34 000 ₽</div>
                         <div class="product-item__price-old">100 000 ₽</div>
                       </div>
-                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241119145329" alt="cart-icon"></button>
+                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241121172418" alt="cart-icon"></button>
                     </div>
                   </li>
                   <li class="grid-catalog__item product-item">
@@ -200,7 +218,7 @@
                         <div class="product-item__price">34 000 ₽</div>
                         <div class="product-item__price-old">100 000 ₽</div>
                       </div>
-                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241119145329" alt="cart-icon"></button>
+                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241121172418" alt="cart-icon"></button>
                     </div>
                   </li>
                   <li class="grid-catalog__item product-item">
@@ -230,7 +248,7 @@
                         <div class="product-item__price">34 000 ₽</div>
                         <div class="product-item__price-old">100 000 ₽</div>
                       </div>
-                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241119145329" alt="cart-icon"></button>
+                      <button class="product-item__cart" type="button"><img src="img/icons/bin.svg?_v=20241121172418" alt="cart-icon"></button>
                     </div>
                   </li>
                 </ul>
@@ -300,7 +318,73 @@
           </div>
         </div>
       </div>
+      <div class="popup popup-tender" id="registration" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+                <path d="M29.634 0.36599C29.3996 0.131647 29.0817 0 28.7502 0C28.4188 0 28.1009 0.131647 27.8665 0.36599L15 13.2325L2.13352 0.36599C1.89911 0.131647 1.58122 0 1.24976 0C0.918294 0 0.600403 0.131647 0.36599 0.36599C0.131647 0.600403 0 0.918294 0 1.24976C0 1.58122 0.131647 1.89911 0.36599 2.13352L13.2325 15L0.36599 27.8665C0.131647 28.1009 0 28.4188 0 28.7502C0 29.0817 0.131647 29.3996 0.36599 29.634C0.600403 29.8684 0.918294 30 1.24976 30C1.58122 30 1.89911 29.8684 2.13352 29.634L15 16.7675L27.8665 29.634C28.1009 29.8684 28.4188 30 28.7502 30C29.0817 30 29.3996 29.8684 29.634 29.634C29.8684 29.3996 30 29.0817 30 28.7502C30 28.4188 29.8684 28.1009 29.634 27.8665L16.7675 15L29.634 2.13352C29.8684 1.89911 30 1.58122 30 1.24976C30 0.918294 29.8684 0.600403 29.634 0.36599Z" fill="white"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Регистрация</h2>
+              <form class="popup__form" action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" type="text" name="registration" placeholder="Имя" required="required"/>
+                  <input class="popup__input" type="text" name="registration" placeholder="Фамилия" required="required"/>
+                  <input class="popup__input" type="email" name="registration" placeholder="E-mail" required="required"/>
+                  <input class="popup__input" type="password" name="registration" placeholder="Введите пароль" required="required"/>
+                  <input class="popup__input" type="password" name="registration" placeholder="Повторите пароль" required="required"/>
+                </div>
+                <div class="popup__button-wrapper">
+                  <button class="button _highlight popup__button" type="submit" data-popup="password">Зарегистрироваться</button>
+                  <p class="popup__policy">Нажимая «Зарегистрироваться», вы принимаете условия <a href="#" target="_blank">политики конфиденциальности</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-tender" id="auth" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+                <path d="M29.634 0.36599C29.3996 0.131647 29.0817 0 28.7502 0C28.4188 0 28.1009 0.131647 27.8665 0.36599L15 13.2325L2.13352 0.36599C1.89911 0.131647 1.58122 0 1.24976 0C0.918294 0 0.600403 0.131647 0.36599 0.36599C0.131647 0.600403 0 0.918294 0 1.24976C0 1.58122 0.131647 1.89911 0.36599 2.13352L13.2325 15L0.36599 27.8665C0.131647 28.1009 0 28.4188 0 28.7502C0 29.0817 0.131647 29.3996 0.36599 29.634C0.600403 29.8684 0.918294 30 1.24976 30C1.58122 30 1.89911 29.8684 2.13352 29.634L15 16.7675L27.8665 29.634C28.1009 29.8684 28.4188 30 28.7502 30C29.0817 30 29.3996 29.8684 29.634 29.634C29.8684 29.3996 30 29.0817 30 28.7502C30 28.4188 29.8684 28.1009 29.634 27.8665L16.7675 15L29.634 2.13352C29.8684 1.89911 30 1.58122 30 1.24976C30 0.918294 29.8684 0.600403 29.634 0.36599Z" fill="white"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Вход</h2>
+              <form class="popup__form" action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" type="email" name="registration" placeholder="E-mail" required="required"/>
+                  <input class="popup__input" type="password" name="registration" placeholder="Пароль" required="required"/>
+                </div>
+                <div class="popup__button-wrapper">
+                  <button class="button _highlight popup__button" type="submit" data-popup="password">Войти</button>
+                </div>
+                <div class="popup__to-registration"> <span>Нет учётной записи?</span><span class="to-registration _highligth" data-popup="#registration">Зарегистрироваться</span></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-tender" id="article" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+                <path d="M29.634 0.36599C29.3996 0.131647 29.0817 0 28.7502 0C28.4188 0 28.1009 0.131647 27.8665 0.36599L15 13.2325L2.13352 0.36599C1.89911 0.131647 1.58122 0 1.24976 0C0.918294 0 0.600403 0.131647 0.36599 0.36599C0.131647 0.600403 0 0.918294 0 1.24976C0 1.58122 0.131647 1.89911 0.36599 2.13352L13.2325 15L0.36599 27.8665C0.131647 28.1009 0 28.4188 0 28.7502C0 29.0817 0.131647 29.3996 0.36599 29.634C0.600403 29.8684 0.918294 30 1.24976 30C1.58122 30 1.89911 29.8684 2.13352 29.634L15 16.7675L27.8665 29.634C28.1009 29.8684 28.4188 30 28.7502 30C29.0817 30 29.3996 29.8684 29.634 29.634C29.8684 29.3996 30 29.0817 30 28.7502C30 28.4188 29.8684 28.1009 29.634 27.8665L16.7675 15L29.634 2.13352C29.8684 1.89911 30 1.58122 30 1.24976C30 0.918294 29.8684 0.600403 29.634 0.36599Z" fill="white"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Статья</h2>
+              <p class="popup__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam rerum maxime aliquid, dolorem odit illo, veritatis sit quae vero, velit possimus doloribus accusantium. Autem ad, quisquam facere optio dolorum nobis?<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis repellendus minima totam porro repellat ipsam iste quia unde! Veritatis iste dolore quos deserunt molestias nemo minima ratione optio rerum.</p><span class="popup__date">20.11.24</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="js/app.min.js?_v=20241119145329"></script>
+    <script src="js/app.min.js?_v=20241121172418"></script>
   </body>
 </html>
