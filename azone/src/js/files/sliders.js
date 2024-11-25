@@ -63,18 +63,18 @@ function initSliders() {
 
 			// Пагинация
 
-			pagination: {
-				el: '.feedback-swiper__pagination',
-				clickable: true,
-				// type: "fraction",
-				renderBullet: function (index, className) {
-					const pageIndex = String(index + 1).padStart(2, '0');
+			// pagination: {
+			// 	el: '.feedback-swiper__pagination',
+			// 	clickable: true,
+			// 	// type: "fraction",
+			// 	renderBullet: function (index, className) {
+			// 		const pageIndex = String(index + 1).padStart(2, '0');
 
-					console.log(pageIndex)
-					return `<span class="${className}"> ${pageIndex}</span>`;
-				},
+			// 		console.log(pageIndex)
+			// 		return `<span class="${className}"> ${pageIndex}</span>`;
+			// 	},
 
-			},
+			// },
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -122,6 +122,13 @@ function initSliders() {
 			pagination: {
 				el: ".projects-swiper__pagination",
 				type: "progressbar",
+				// clickable: true,
+				// renderBullet: function (index, className) {
+				// 	const pageIndex = String(index + 1).padStart(2, '0');
+
+				// 	console.log(pageIndex)
+				// 	return `<span class="${className}"> ${pageIndex}</span>`;
+				// },
 			},
 
 			// События
