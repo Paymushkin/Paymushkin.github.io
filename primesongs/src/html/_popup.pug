@@ -1,35 +1,35 @@
 #registration.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
-			button.popup__close(data-close='data-close' type='button')
+			button.popup__close(data-close='data-close' type='button', title="закрыть", aria-label="закрыть")
 				include icons/_close
 			.popup__body
 				h2.popup__title Регистрация
 				form(action="#", method="post").popup__form
 					.popup__inputs
-						input.popup__input(type="text", name="registration", placeholder="Имя", required)
-						input.popup__input(type="text", name="registration", placeholder="Фамилия", required)
-						input.popup__input(type="email", name="registration", placeholder="E-mail", required)
-						input.popup__input(type="password", name="registration", placeholder="Введите пароль", required)
-						input.popup__input(type="password", name="registration", placeholder="Повторите пароль", required)
+						input.popup__input(type="text", name="registration", placeholder="Имя", autocomplete="on", required)
+						input.popup__input(type="text", name="registration", placeholder="Фамилия", autocomplete="on", required)
+						input.popup__input(type="email", name="registration", placeholder="E-mail", autocomplete="on", required)
+						input.popup__input(type="password", name="registration", placeholder="Введите пароль", autocomplete="on", required)
+						input.popup__input(type="password", name="registration", placeholder="Повторите пароль", autocomplete="on", required)
 					.popup__button-wrapper
-						button(type="submit", data-popup="password").button._highlight.popup__button Зарегистрироваться
+						button(type="submit", data-popup="password", title="Зарегестрироваться", aria-label="Удалить аккаунт").button._highlight.popup__button Зарегистрироваться
 						p.popup__policy Нажимая «Зарегистрироваться», вы принимаете условия 
 							a(href="#", target="_blank") политики конфиденциальности
 
 #auth.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
-			button.popup__close(data-close='data-close' type='button')
+			button.popup__close(data-close='data-close' type='button', title='Закрыть', aria-label="закрыть")
 				include icons/_close
 			.popup__body
 				h2.popup__title Вход
 				form(action="#", method="post").popup__form
 					.popup__inputs
-						input.popup__input(type="email", name="registration", placeholder="E-mail", required)
-						input.popup__input(type="password", name="registration", placeholder="Пароль", required)
+						input.popup__input(type="email", name="registration", placeholder="E-mail", autocomplete="on", required)
+						input.popup__input(type="password", name="registration", placeholder="Пароль", autocomplete="on", required)
 					.popup__button-wrapper
-						button(type="submit", data-popup="password").button._highlight.popup__button Войти
+						button(type="submit", data-popup="password", title="Войти", aria-label="Войти").button._highlight.popup__button Войти
 					.popup__to-registration 
 						span Нет учётной записи?
 						span.to-registration._highligth(data-popup="#registration") Зарегистрироваться
@@ -37,7 +37,7 @@
 #article.popup.popup-tender(aria-hidden='true', data-single="true")
 	.popup__wrapper
 		.popup__content
-			button.popup__close(data-close='data-close' type='button')
+			button.popup__close(data-close='data-close' type='button', title="закрыть", aria-label="закрыть")
 				include icons/_close
 			.popup__body
 				h2.popup__title Статья

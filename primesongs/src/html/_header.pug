@@ -4,12 +4,12 @@ header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
 	.header__search.search-header
 		form(action="#", method="post").search-header__form
 			input.search-header__input(type="search", placeholder="Search by artist, song or album...")
-			button.search-header__submit(type="submit")
+			button.search-header__submit(type="submit", title="Поиск", aria-label="Поиск")
 				svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
 					circle(cx='11.0586' cy='11.0586' r='7.06194' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
 					path(d='M20.0033 20.0033L16.0517 16.0516' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
 	nav.header__nav.nav-header
-		button(type="button")#mobileMenuBtn.mobile-menu__button 
+		button(type="button", title="меню")#mobileMenuBtn.mobile-menu__button 
 			span
 			span 
 			span

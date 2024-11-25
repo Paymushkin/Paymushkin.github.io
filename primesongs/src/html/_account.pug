@@ -7,17 +7,17 @@ section.account
     .account__body.body-account
         .body-account__data
             form(action="#", method="post").body-account__form
-                input(autocomplete="off",type="text", name="account-data", placeholder="Имя").input.body-account__input
-                input(autocomplete="off",type="text", name="account-data", placeholder="Фамилия").input.body-account__input
-                input(autocomplete="off",type="text", name="account-data", placeholder="Отчество").input.body-account__input
-                input(type="tel", name="account-data", placeholder="+7 (999) 999-99-99").input.body-account__input
-                input(type="email", name="account-data", placeholder="info@mail.com").input.body-account__input
-                input(type="date", name="account-data", min="1924-01-01", max="2024-01-01", value="2000-01-01").input.body-account__input
-                input(type="password", name="account-data",  placeholder="Пароль").input.body-account__input
-                button.body-account__button Изменить пароль
-                button.body-account__button Сохранить изменения
-                button.body-account__button Выйти
-                button.body-account__button Удалить аккаунт
+                input(autocomplete="on",type="text", name="account-data", placeholder="Имя").input.body-account__input
+                input(autocomplete="on",type="text", name="account-data", placeholder="Фамилия").input.body-account__input
+                input(autocomplete="on",type="text", name="account-data", placeholder="Отчество").input.body-account__input
+                input(autocomplete="on", type="tel", name="account-data", placeholder="+7 (999) 999-99-99").input.body-account__input
+                input(autocomplete="on", type="email", name="account-data", placeholder="info@mail.com").input.body-account__input
+                input(autocomplete="on", type="date", name="account-data", min="1924-01-01", max="2024-01-01", value="2000-01-01").input.body-account__input
+                input(autocomplete="on", type="password", name="account-data",  placeholder="Пароль").input.body-account__input
+                button(type="button", title="Изменить пароль", aria-label="Изменить пароль").body-account__button Изменить пароль
+                button(type="button", title="Сохранить изменения", aria-label="Сохранить изменения").body-account__button Сохранить изменения
+                button(type="button", title="Выйти", aria-label="Выйти").body-account__button Выйти
+                button(type="button", title="Удалить аккаунт", aria-label="Удалить аккаунт").body-account__button Удалить аккаунт
             .body-account__useful.useful-block
                 .downloads-list__item
                     h3.downloads-list__title 
