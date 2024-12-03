@@ -6,7 +6,8 @@
 .top-banner {
     display: flex;
     padding: 44px 0;
-    height: 650px;
+    aspect-ratio: 1920 / 650;
+    /* height: 650px; */
     background-size: cover;
     background-position: center bottom;
 }
@@ -291,6 +292,8 @@ select:invalid {
 @media (max-width:1024px) {
     .top-banner {
         background-position: center;
+        aspect-ratio: 1024 / 700;
+        max-height: 700px;
     }
     .top-banner__title {
         margin-bottom: 16px;
@@ -344,7 +347,8 @@ select:invalid {
     .top-banner {
         align-items: flex-start;
         padding: 26px 0;
-        height: 700px;
+        aspect-ratio: 768 / 700;
+        /* height: 700px; */
         background-position: bottom center;
     }
 
@@ -400,7 +404,8 @@ select:invalid {
 
     .top-banner {
         padding: 20px 0;
-        height: 528px;
+        aspect-ratio: 320 / 528;
+        min-width: 100%;
         background-position: center;
     }
 
