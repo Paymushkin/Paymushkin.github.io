@@ -1,0 +1,459 @@
+.container-wide {
+    width: 1300px;
+    max-width: 100%;
+}
+
+.top-banner {
+    display: flex;
+    padding: 44px 0;
+    height: 650px;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.top-banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-banner__texts {
+    margin-bottom: 48px;
+    width: 750px;
+    max-width: 70%;
+}
+
+.top-banner__title {
+    font-size: 64px;
+    line-height: 1.05;
+    color: #FFFFFF;
+    margin-bottom: 26px;
+    font-family: "Roboto-Medium";
+}
+
+.top-banner__subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.top-banner__btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.top-banner__button {
+    padding: 20px 40px;
+    max-width: fit-content;
+    height: 56px;
+    font-size: 16px;
+    white-space: pre;
+}
+
+.top-banner__btn {
+    max-height: 42px;
+    max-width: 100%;
+}
+
+.standard-p {
+    margin-bottom: 20px;
+    color: #A9AEB2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.standard-p span {
+    color: #90949A;
+    font-weight: 700;
+}
+
+.standard-p:last-child {
+    margin-bottom: 0;
+}
+
+.direction-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.direction-block:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.direction-block__title {
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-align: left!important;
+}
+
+.direction-block__under {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.direction-block__content {
+    flex: 0 0 calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.direction-block__image {
+    flex: 0 0 calc(50% - 15px);
+}
+
+.direction-block__image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.direction-block__button {
+    height: 56px;
+    font-size: 16px;
+}
+
+.main-banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    aspect-ratio: 1300  / 357;
+    /* height: 357px; */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.main-banner.reverse {
+    justify-content: flex-start;
+}
+
+.main-banner.banner-img-l {
+    background-position: left center;
+}
+
+.main-banner__content {
+    width: 744px;
+    max-width: 57%;
+}
+
+.main-banner__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+    width: 636px;
+    max-width: 100%;
+}
+
+.reverse .main-banner__texts {
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.main-banner__title {
+    color: #FFF;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.main-banner__subtitle {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.demo-block {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.demo-block__title {
+    margin-bottom: 18px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left!important;
+}
+
+.demo-block__text {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #A9AEB2;
+    font-size: 16px;
+    line-height: 1.6;
+    border-bottom: 2px solid #0285CB;;
+}
+
+.demo-block__img {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+.demo-block__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.demo-block__inputs input,
+.demo-block__inputs textarea,
+.demo-block__inputs select {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    border: 1px solid #E6E7EB;
+    border-radius: 5px;
+}
+
+.demo-block__inputs input::placeholder,
+.demo-block__inputs textarea::placeholder,
+.demo-block__inputs select::placeholder {
+    color: #A9AEB2;
+}
+
+.demo-block__inputs select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: 0 0;
+    background-image: url(../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    outline: 0;
+}
+
+select:invalid {
+    color: #A9AEB2;
+}
+
+.demo-block__agreement {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.demo-block__agreement input {
+    margin-top: 3px;
+    border: 1px solid #A9AEB2;
+}
+
+.demo-block__agreement label {
+    color: #A9AEB2;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.demo-block__button {
+    width: 100%;
+    height: 56px;
+    font-size: 14px;
+}
+
+/* MEDIA */
+
+@media (max-width:1140px) {
+
+    .main-banner__title {
+        font-size: 22px;
+    }
+
+    .main-banner__subtitle {
+        font-size: 14px;
+    }
+
+    .main-banner__texts {
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .top-banner {
+        background-position: center;
+    }
+    .top-banner__title {
+        margin-bottom: 16px;
+        font-size: 32px;
+        line-height: 1.1;
+    }
+        
+    .top-banner__subtitle {
+        font-size: 14px;
+    }
+
+    .main-banner {
+        aspect-ratio: 768 / 578;
+    }
+
+    .main-banner__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .main-banner__title {
+        font-size: 30px;
+    }
+
+    .main-banner__btns {
+        margin-top: auto;
+    }
+
+    .direction-block {
+        flex-direction: column-reverse;
+    }
+
+    .direction-block:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    .direction-block__content {
+        flex: 0 0 100%;
+    }
+
+    .direction-block__image {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .top-banner {
+        align-items: flex-start;
+        padding: 26px 0;
+        height: 700px;
+        background-position: bottom center;
+    }
+
+    .top-banner__container {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .top-banner__content {
+        flex: 1 1 auto;
+        justify-content: space-between;
+    }
+
+    .top-banner__texts {
+        margin-bottom: 22px;
+        max-width: 100%;
+    }
+
+    .top-banner__subtitle {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .top-banner__btns {
+        gap: 8px;
+    }
+
+    .top-banner__button {
+        flex: 1 1 auto;
+        max-width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .main-banner {
+        padding: 20px;
+        min-height: 578px;
+    }
+
+    .main-banner.banner-img-l {
+        background-position: center bottom;
+    }
+
+    .demo-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width:576px) {
+
+    .top-banner {
+        padding: 20px 0;
+        height: 528px;
+        background-position: center;
+    }
+
+    .top-banner.banner-3 {
+        height: 675px;
+    }
+
+    .main-banner {
+        aspect-ratio: 320 / 578;
+        max-height: 578px;
+    }
+
+    .main-banner.banner-3 {
+        aspect-ratio: 320 / 700;
+        max-height: 700px;
+    }
+
+    .reverse .main-banner__texts {
+        margin-bottom: 0;
+    }
+
+    .top-banner__link {
+        max-width: calc(50% - 10px);
+    }
+
+    .main-banner.banner-3 .main-banner__btns {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: unset;
+    }
+
+    .direction-block__title {
+        font-size: 30px;
+    }
+
+    .direction-block__under {
+        font-size: 16px;
+    }
+
+    .standard-p {
+        font-size: 14px;
+    }
+
+    .demo-block__text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .demo-block__inputs input,
+    .demo-block__inputs textarea,
+    .demo-block__inputs select {
+        font-size: 16px;
+    }
+
+}

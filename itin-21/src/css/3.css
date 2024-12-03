@@ -1,0 +1,186 @@
+body .modal {
+    top: 0;
+    z-index: 11050;
+}
+.section-news.main .news-block__title{
+	min-width:230px;
+}
+body .modal {
+    top: 0;
+    z-index: 11050;
+}
+body .form-control.input-lg.input:focus{
+	outline:none;
+	outline-offset: 0;
+	box-shadow: none;
+}
+body .upload-button .inputfile .upload-button .input-file-button{
+	//display:none;
+}
+.input__wrap .label {
+    display: block;
+    font-size: 1.125rem;
+    color: #828282;
+}
+body .input__wrap .label {
+    font-family: "Anonymous Pro", Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: #0E0E0E;
+    line-height: normal;
+    text-rendering: auto;
+}
+body .input__wrap {
+    margin-bottom: 2.5rem;
+}
+.apps-portfolio-body {
+    width: 271px;
+    position: relative;
+    margin: 0 auto;
+}
+.apps-portfolio-body::after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: -72px;
+    width: 312px;
+    height: 624px;
+    background: url('../img/phone_new.png') 0 0 no-repeat;
+        background-size: auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+body .dropdown div {
+    right: 1px;
+}
+body .banner-title {
+    font-size: 3.8rem;
+}
+.tariff-price.skidka20{
+	display:none;
+}
+.slider-case__item--inner .d-none.d-lg-block .button.button-big.button-orange{
+	display:none;
+}
+@media screen and (max-width: 991px) {
+	body h1.banner-title{
+		font-size: 2.8rem;
+	}
+	.formn .input__wrap label{
+		color:#828282;
+	}
+	.formn .form-footer .input, .form-footer .textarea {
+		color: #000;
+	}
+	#modal-auth{
+		z-index:1100010;
+	}
+	#modal-consult{
+		z-index:1100010;
+	}
+}
+.readmore p{
+    font-size: 1.125rem;
+    line-height: 150%;
+}
+.readmore ul li{
+    font-size: 1.125rem;
+    line-height: 150%;
+}
+.slider-reviews .slick-slide{
+	max-height:370px;
+}
+.catalog-mob--link2 {
+    font-size: 16px;
+    color: #0E0E0E;
+    margin-bottom: 10px;
+    display: block;
+}
+body .section-news-inner .news-block__item .news-block__img--wrap {
+  //height: auto;
+  //min-width: 386px;
+}
+.section-news-page-inner .news-block__img--wrap {
+  //height: auto;
+  //min-width: 386px;
+}
+@media screen and (max-width: 590px) {
+	.table-tariff_wave .td .button {
+	  min-width: 5rem;
+	  width: 5rem;
+	}
+}
+.td .tariff-type{
+    font-size: 17px;
+}
+.apps-catalog-list__body-list .apps-catalog-list__body-item {
+  flex: 1;
+  max-width: 210px;
+  margin: 20px 3px;
+}
+.apps-catalog-list__body-list .apps-catalog-list__body-item-inner {
+  margin: 0 auto;
+}
+.apps-catalog-list__body-list .apps-catalog-list__body-item-title {
+  display: block;
+  color: #262626;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  display: none;
+}
+.apps-catalog-list__body-list .apps-catalog-list__body-item-picture {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  background-color: #f8f9fa;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: block;
+}
+.container .apps-catalog-list__body-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: unset;
+  min-width: 1000px;
+}
+@media (max-width: 992px){
+	.container .apps-catalog-list__body-list {
+	  justify-content: space-between;
+	  min-width: auto;
+	  flex-wrap: wrap;
+	}
+}
+@media (max-width: 1720px){
+	body .apps-catalog-list__body-list .apps-catalog-list__body-item-picture {
+		position: relative;
+		width: 180px;
+		height: 180px;
+	}
+	.apps-catalog-list__body-list .apps-catalog-list__body-item {
+	  flex: 1;
+	  max-width: 180px;
+	  margin: 20px 3px;
+	}
+}
+@media (max-width: 1410px){
+	body .apps-catalog-list__body-list .apps-catalog-list__body-item-picture {
+		position: relative;
+		width: 160px;
+		height: 160px;
+	}
+	.apps-catalog-list__body-list .apps-catalog-list__body-item {
+	  flex: 1;
+	  max-width: 160px;
+	  margin: 20px 2px;
+	}
+}
+.tariff-price .rash{
+	display:none;
+}
+.b24-form-field-agreement-link.alert{
+	border-bottom: 1px solid red;
+	padding: 0;
+}
+body .alert {
+  margin-bottom: 0;
+}  
