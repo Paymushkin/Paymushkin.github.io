@@ -19,7 +19,7 @@
 				background-image: url(src/img/top-banner/item-1.png);
 			}
 			
-			@media (max-width:768px) {
+			@media (max-width:1024px) {
 				.top-banner-1 {
 					background-image: url(src/img/top-banner/item-1-tablet.png);
 				}
@@ -136,11 +136,11 @@
 				background-image: url(src/img/banners/item-1.png);
 			}
 			
-			/* @media (max-width:768px) {
+			@media (max-width:768px) {
 				.banner-1 {
 					background-image: url(src/img/banners/item-1-tablet.png);
 				}
-			} */
+			}
 			
 			@media (max-width:576px) {
 				.banner-1 {
@@ -221,11 +221,11 @@
 				background-image: url(src/img/banners/item-2.png);
 			}
 			
-			/* @media (max-width:768px) {
-				.banner-1 {
-					background-image: url(src/img/banners/item-1-tablet.png);
+			@media (max-width:768px) {
+				.banner-2 {
+					background-image: url(src/img/banners/item-2-tablet.png);
 				}
-			} */
+			}
 			
 			@media (max-width:576px) {
 				.banner-2 {
@@ -307,15 +307,16 @@
 				background-image: url(src/img/banners/item-3.png);
 			}
 			
-			/* @media (max-width:768px) {
-				.banner-1 {
-					background-image: url(src/img/banners/item-1-tablet.png);
+			@media (max-width:768px) {
+				.banner-3 {
+					background-image: url(src/img/banners/item-3-tablet.png);
 				}
-			} */
+			}
 			
 			@media (max-width:576px) {
 				.banner-3 {
 					background-image: url(src/img/banners/item-3-mobile.png);
+					background-position: center;
 				}
 			}
 			</style>
@@ -382,7 +383,7 @@
 							<input type="text" name="demo" id="demo-form-name", placeholder="Имя", required>
 							<input type="email" name="demo" id="demo-form-email", placeholder="E-mail", required>
 							<input type="tel" name="demo" id="demo-form-phone", placeholder="+7 (___)___-__-__" required>
-							<select name="demo" id="demo-form-solution", placeholder="Готовое решение", required>
+							<select title="Готовое решение" name="demo" id="demo-form-solution", placeholder="Готовое решение", required>
 								<option disabled selected value="Готовое решение">Готовое решение</option>
 								<option value="CRM для проектной компании">CRM для проектной компании</option>
 								<option value="CRM для мебельной компании">CRM для мебельной компании</option>
@@ -428,8 +429,6 @@
 			</div>
 		</section>
 	</div>
-	<script src="src/js/current.js" defer></script>
-	<!-- <script src="src/js/script.js"></script> -->
 </body>
 
 </html>

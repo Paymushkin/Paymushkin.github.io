@@ -39,6 +39,46 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@font-face {
+    font-family: "Futura PT Book";
+    src: url("../fonts/FuturaPT-Book.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futura PT Medium";
+    src: url("../fonts/FuturaPT-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futura PT Demi";
+    src: url("../fonts/FuturaPT-Demi.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futura PT Heavy";
+    src: url("../fonts/FuturaPT-Heavy.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futura PT Light";
+    src: url("../fonts/FuturaPT-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -13318,13 +13358,7 @@ div.scrollableArea {
 
 
 /* Start:/local/templates/rusoftmarket/css/plugins/lightgallery.min.css?167991812417353*/
-@font-face {
-  font-family: lg;
-  src: url(/local/templates/rusoftmarket/css/plugins/../fonts/lg.woff2?io9a6k) format("woff2"), url(/local/templates/rusoftmarket/css/plugins/../fonts/lg.ttf?io9a6k) format("truetype"), url(/local/templates/rusoftmarket/css/plugins/../fonts/lg.woff?io9a6k) format("woff"), url(/local/templates/rusoftmarket/css/plugins/../fonts/lg.svg?io9a6k#lg) format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
+
 .lg-icon {
   font-family: lg !important;
   speak: never;
@@ -15601,53 +15635,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 
 /* Start:/local/templates/rusoftmarket/css/style.css?1719991384238947*/
-@charset "UTF-8";
-/* РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№ transition РґР»СЏ hover-Р°РЅРёРјР°С†РёР№ */
-/* РњРёРєСЃРёРЅ Р·Р°РјРµРЅС‹ С†РІРµС‚Р° placeholder Сѓ input.
-РќСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ РІ СЃС‚РёР»СЏС… СЌР»РµРјРµРЅС‚Р° РєРѕРЅСЃС‚СЂСѓРєС†РёСЋ РІРёРґР° @include placeholder(#000); */
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url("/local/templates/rusoftmarket/css/../fonts/Montserrat-SemiBold.eot");
-  src: url("/local/templates/rusoftmarket/css/../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("/local/templates/rusoftmarket/css/../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/Montserrat-SemiBold.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Futura PT Book";
-  src: url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Book.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Book.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Book.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Futura PT Medium";
-  src: url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Medium.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Medium.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Futura PT Demi";
-  src: url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Demi.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Demi.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Demi.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Futura PT Heavy";
-  src: url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Heavy.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Heavy.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Heavy.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Futura PT Light";
-  src: url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Light.woff2") format("woff2"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Light.woff") format("woff"), url("/local/templates/rusoftmarket/css/../fonts/FuturaPT-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
