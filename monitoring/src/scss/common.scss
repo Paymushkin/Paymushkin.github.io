@@ -419,6 +419,7 @@ select {
     padding: 20px 32px;
     width: 100%;
     background-color: #fff;
+    overflow: auto;
 }
 
 .table-form {
@@ -454,6 +455,11 @@ select {
 
 .table-data {
     // border-collapse: collapse;
+
+    &-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
 
     th,
     td {

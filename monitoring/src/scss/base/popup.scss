@@ -86,7 +86,7 @@ body::after {
 	}
 
 	@media (max-width:$mobileSmall) {
-		padding: 30px 20px;
+		padding: 0;
 	}
 
 	.lock & {

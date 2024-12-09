@@ -381,7 +381,7 @@ body::after {
 }
 @media (max-width: 36.06125em) {
   .popup__content {
-    padding: 30px 20px;
+    padding: 0;
   }
 }
 .lock .popup__content {
@@ -1039,7 +1039,7 @@ body::after {
 }
 @media (max-width: 36.06125em) {
   .popup__content {
-    padding: 30px 20px;
+    padding: 0;
   }
 }
 .lock .popup__content {
@@ -1925,6 +1925,7 @@ select:focus {
   padding: 20px 32px;
   width: 100%;
   background-color: #fff;
+  overflow: auto;
 }
 
 .table-form {
@@ -1965,6 +1966,10 @@ select:focus {
   text-align: center;
 }
 
+.table-data-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
 .table-data th,
 .table-data td {
   padding: 8px 24px;
@@ -1987,6 +1992,9 @@ input[type=file] {
   visibility: hidden;
 }
 
+.general {
+  margin-bottom: 40px;
+}
 .general__body {
   display: -ms-flexbox;
   display: flex;
@@ -2031,6 +2039,14 @@ input[type=file] {
   -ms-flex-align: start;
       align-items: flex-start;
 }
+@media (max-width: 25em) {
+  .charts-block__body {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+  }
+}
 .charts-block__charts {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -2043,6 +2059,8 @@ input[type=file] {
 
 .circle-chart {
   position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .circle-chart__icon {
   position: absolute;
@@ -2135,7 +2153,15 @@ input[type=file] {
   -ms-flex-align: center;
       align-items: center;
   gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+@media (max-width: 25em) {
+  .create-btns__button {
+    width: 100%;
+  }
+}
+
 .media-block__button {
   margin-bottom: 12px;
 }

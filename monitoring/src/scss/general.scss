@@ -1,4 +1,5 @@
 .general {
+    margin-bottom: 40px;
 
     &__body {
         display: flex;
@@ -38,6 +39,11 @@
         display: flex;
         gap: 20px;
         align-items: flex-start;
+
+        @media (max-width: em(400)) {
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
 
     &__charts {
@@ -50,6 +56,7 @@
 
 .circle-chart {
     position: relative;
+    align-self: flex-start;
 
     &__icon {
         position: absolute;
@@ -130,8 +137,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
 
-    &__button {}
+    &__button {
+        @media (max-width: em(400)) {
+            width: 100%;
+        }
+    }
 }
 
 .media-block {
