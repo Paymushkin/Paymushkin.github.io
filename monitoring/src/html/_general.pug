@@ -1,0 +1,172 @@
+section#general.general
+    .general__container
+        .general__body
+            h1.general__title Стандарты Сети 
+            .general__charts
+                .charts-block
+                    h3.general__subtitle Мониторинг офиса (результаты посденей анкеты)
+                    .charts-block__body
+                        .charts-block__circle.circle-chart(data-thickness="30" data-value="0.25") 
+                            .circle-chart__percent 78%
+                            button(type="button").circle-chart__icon
+                                include icons/_eye
+                        ul.charts-block__charts 
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Внешний стандарт
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Внутренний страндарт
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Внутренний страндарт
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Деловой стандарт
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Рекламный стандарт
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+
+                .charts-block
+                    h3.general__subtitle Тайный покупатель (результаты последней анкеты)
+                    .charts-block__body
+                        .charts-block__circle.circle-chart(data-thickness="30" data-value="0.25") 
+                            .circle-chart__percent 78%
+                            button(type="button").circle-chart__icon
+                                include icons/_eye
+                        ul.charts-block__charts 
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Установление контакта
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Стиль общения
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Параметры тура и потребности
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Подбор предложений и консультация
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+                            li.charts-block__chart.chart-item
+                                h4.chart-item__title Завершение звонка
+                                .chart-item__track
+                                    .chart-item__progress(style="width:80%")
+                                        .chart-item__percent 80%
+
+            .general__create
+                h3.general__subtitle Создание анкеты
+                .create-btns
+                    button(type="button", data-popup="#monitoring-office").button.create-btns__button + Мониторинг офиса
+                    button(type="button", data-popup="#secret-customer").button.create-btns__button + Тайный покупатель
+
+            .general__media.media-block
+                h3.general__subtitle Анкеты “Мониторинг офиса”
+                figure
+                    table.table-data
+                        thead
+                            tr
+                                th Дата
+                                th Кем
+                                th Общий результат
+                                th Подробне
+
+                        tbody 
+                            tr
+                                td 2022-05-13
+                                td Александра Черкасова
+                                td 78%
+                                td(data-popup="#monitoring-office") Просмотр
+
+                            tr       
+                                td 2022-05-12
+                                td Ильина Юлия
+                                td 45%
+                                td(data-popup="#monitoring-office") Просмотр
+                            
+
+            .general__media.media-block
+                h3.general__subtitle Анкеты “Тайный покупатель”
+                figure
+                    table.table-data
+                        thead
+                            tr
+                                th Дата
+                                th Кем
+                                th Общий результат
+                                th Подробне
+
+                        tbody 
+                            tr
+                                td 2022-05-13
+                                td Халиллулина Венера
+                                td 78%
+                                td(data-popup="#secret-customer") Просмотр
+
+                            tr       
+                                td 2022-05-12
+                                td Межин Михаил
+                                td 45%
+                                td(data-popup="#secret-customer") Просмотр
+
+            .general__media.media-block
+                h3.general__subtitle Фото и/или  видео внешнего оформления офиса
+                .media-block__button
+                    label(for="download-outside").button Загрузить
+                    input(id="download-outside" type="file", name="download-media", accept="image/*, video/*", multiple)
+                ul.media-block__images.images-block
+                    li.images-block__image 
+                        img(src="@img/item-1.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-1.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13
+
+
+            .general__media.media-block
+                h3.general__subtitle Фото и/или  видео внешнего оформления офиса
+                .media-block__button
+                    label(for="download-outside").button Загрузить
+                    input(id="download-outside" type="file", name="download-media", accept="image/*, video/*", multiple)
+                ul.media-block__images.images-block
+                    li.images-block__image 
+                        img(src="@img/item-1.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-1.png", alt="image")
+                        span 2022-05-13
+                    li.images-block__image 
+                        img(src="@img/item-2.png", alt="image")
+                        span 2022-05-13

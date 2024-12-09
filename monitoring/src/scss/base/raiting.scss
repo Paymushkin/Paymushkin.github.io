@@ -1,0 +1,74 @@
+.raiting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.raiting__caption {
+    padding: 0;
+    margin-bottom: 0.5em;
+}
+
+.raiting__group {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    background-image: url(../img/star.svg);
+    background-size: 2em auto;
+    outline: none;
+}
+
+.raiting__star {
+    font-size: inherit;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+    cursor: pointer;
+}
+
+.raiting__star:focus {
+    outline: none;
+}
+
+.raiting__star:hover,
+.raiting__star:checked {
+    background-image: url(../img/star-fill.svg);
+}
+
+.raiting__star:hover~.raiting__star {
+    background-image: url(../img/star.svg);
+}
+
+.raiting__star:nth-of-type(1) {
+    z-index: 5;
+    width: 2em;
+}
+
+.raiting__star:nth-of-type(2) {
+    z-index: 4;
+    width: 4em;
+}
+
+.raiting__star:nth-of-type(3) {
+    z-index: 3;
+    width: 6em;
+}
+
+.raiting__star:nth-of-type(4) {
+    z-index: 2;
+    width: 8em;
+}
+
+.raiting__star:nth-of-type(5) {
+    z-index: 1;
+    width: 10em;
+}

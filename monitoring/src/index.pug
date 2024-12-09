@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.wrapper
+			include html/_header
+			main.main-content
+				include html/_general
+			//- include html/_footer
+		include html/_popup
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.1.3/circle-progress.min.js')
+		script.
+			$(document).ready(function () {
+				$('.circle-chart').each(function() {
+					$(this).circleProgress({
+						startAngle: 1.5 * Math.PI,
+						lineCap: 'round',
+						// value: $(this).data('value') || .95, // Если вы хотите использовать значение из data-атрибута
+						// thickness: $(this).data('thickness') || 33,
+						// reverse: $(this).data('reverse') || false,
+						size: 200,
+						emptyFill: '#C4C4C4',
+						fill: { 'color': '#6CC6C9' },
+						animation: {
+							duration: 1000, // продолжительность анимации в миллисекундах
+							//- easing: "circleProgressEasing"
+						}
+					});
+				});
+			});
+
+		script(src="js/app.min.js")
