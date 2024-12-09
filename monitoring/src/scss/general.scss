@@ -102,6 +102,14 @@
         border-radius: 10px;
     }
 
+    &__percent {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        color: #fff;
+        transform: translateY(-50%);
+    }
+
     &__progress {
         position: relative;
         height: 22px;
@@ -115,14 +123,6 @@
         @starting-style {
             transform: scaleX(0);
         }
-    }
-
-    &__percent {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        color: #fff;
-        transform: translateY(-50%);
     }
 }
 

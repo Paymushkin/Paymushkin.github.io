@@ -2093,6 +2093,15 @@ input[type=file] {
   background-color: #C4C4C4;
   border-radius: 10px;
 }
+.chart-item__percent {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 .chart-item__progress {
   position: relative;
   height: 22px;
@@ -2118,15 +2127,6 @@ input[type=file] {
         -ms-transform: scaleX(0);
             transform: scaleX(0);
   }
-}
-.chart-item__percent {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  color: #fff;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .create-btns {
