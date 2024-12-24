@@ -18,12 +18,48 @@ if (mobileConsultationBtn) {
 
 const consultationForm = document.getElementById("consultation-form")
 
+// мой вариант скрипта не работает с аякс
 if (consultationForm) {
     consultationForm.addEventListener("submit", function (e) {
         e.preventDefault()
         document.getElementById("consultation").classList.add("_form-sent")
     })
 }
+
+// вариант скрипта от Артура для работы с аякс
+// const selectContainer = document.querySelector(".select.page-hero__select");
+
+// if (selectContainer) {
+//     selectContainer.addEventListener('click', (e) => {
+//         if (e.target.classList.contains('select__item')) {
+//             const selectItems = selectContainer.querySelectorAll('.select__item');
+//             selectItems.forEach(item => {
+//                 item.classList.remove('_selected');
+//             });
+//             const selectedItem = e.target;
+//             const currentValue = selectContainer.querySelector(".current-value");
+//             const articles = e.target.closest('.main-content').querySelectorAll('.articles__item.article-item')
+
+//             for (const article of articles) {
+//                 article.getAttribute('data-category')
+//                 if (article.getAttribute('data-category') !== selectedItem.getAttribute('data-category')) {
+//                     article.classList.add('_hidden')
+//                 } else {
+//                     article.classList.remove('_hidden')
+//                 }
+//                 if (selectedItem.getAttribute('data-category') === '0') {
+//                     article.classList.remove('_hidden')
+//                 }
+//             }
+
+//             currentValue.textContent = selectedItem.textContent;
+//             selectedItem.classList.toggle('_selected')
+//             selectContainer.classList.remove("_open-select");
+//         } else {
+//             selectContainer.classList.toggle("_open-select");
+//         }
+//     });
+// }
 
 const spoilers = document.querySelectorAll(".spoiler")
 
