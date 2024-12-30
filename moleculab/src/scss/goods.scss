@@ -279,17 +279,17 @@
         }
     }
 
-    @media (max-width:$tablet) {
-        &:nth-child(n+5) {
-            display: none;
-        }
-    }
+    // @media (max-width:$tablet) {
+    //     &:nth-child(n+5) {
+    //         display: none;
+    //     }
+    // }
 
-    @media (max-width:$mobileSmall) {
-        &:nth-child(n+3) {
-            display: none;
-        }
-    }
+    // @media (max-width:$mobileSmall) {
+    //     &:nth-child(n+3) {
+    //         display: none;
+    //     }
+    // }
 
     // @media (any-hover: hover) {
     //     &:hover {

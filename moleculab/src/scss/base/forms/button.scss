@@ -69,6 +69,11 @@
 		}
 	}
 
+	&._white {
+		color: $highlightColor-1;
+		background-color: #fff;
+	}
+
 	&._small {
 		font-size: 14px;
 		line-height: 1.4;

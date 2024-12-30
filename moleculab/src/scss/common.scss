@@ -1,26 +1,26 @@
-h1:not(.content-product__title),
-h2,
-h3,
-h4,
-p,
-small,
-button,
-a,
-li:not(.table-point),
-span {
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Old versions of Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
+// h1:not(.content-product__title),
+// h2,
+// h3,
+// h4,
+// p,
+// small,
+// button,
+// a,
+// li:not(.table-point),
+// span {
+//     -webkit-touch-callout: none;
+//     /* iOS Safari */
+//     -webkit-user-select: none;
+//     /* Safari */
+//     -khtml-user-select: none;
+//     /* Konqueror HTML */
+//     -moz-user-select: none;
+//     /* Old versions of Firefox */
+//     -ms-user-select: none;
+//     /* Internet Explorer/Edge */
+//     user-select: none;
+//     /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+// }
 
 span ol,
 ul {
@@ -123,6 +123,15 @@ details {
     @media (max-width:$mobileSmall) {
         padding: 0 15px;
     }
+}
+
+.main-title {
+    margin-bottom: 32px;
+    color: $mainColor;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .section-title {
@@ -981,7 +990,7 @@ details {
     width: 100vw;
     background-color: #fff;
     border-top: 1px solid #ECF1F4;
-    z-index: 3;
+    z-index: 151;
 
     @media (min-width:em(768)) {
         display: none;
@@ -1307,5 +1316,23 @@ table td {
         display: block;
         padding: 8px;
         // border-bottom: 1px solid $borderColor-2;
+    }
+}
+
+._content-active {
+    path {
+        stroke: #F36600;
+    }
+}
+
+._complaint-done {
+    path {
+        stroke: #77C149;
+    }
+}
+
+._complaint-process {
+    path {
+        stroke: #FFD42B;
     }
 }

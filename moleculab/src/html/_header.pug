@@ -48,9 +48,9 @@ header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
 							.location-block__location
 								img(src="@img/location.svg", alt="location-icon")
 							.location-block__city г. Москва
-							//- .location-block__icon
-							//- 	svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
-							//- 		path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8291" stroke-linecap="round" stroke-linejoin="round")
+							.location-block__icon
+								svg(xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none")
+									path(d="M9.75 4.5L6 8.25L2.25 4.5" stroke="#6F8291" stroke-linecap="round" stroke-linejoin="round")
 							.location-block__hidden.hidden-block
 								.hidden-block__body 
 									.hidden-block__title 
@@ -58,7 +58,7 @@ header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
 										span._highligth Краснодар?
 									.hidden-block__buttons
 										button.button.hidden-block__button Все верно
-										span Выбрать другой
+										span(data-popup="select-city") Выбрать другой
 
 				.header-top__right
 					a(href="mailto:pochta@gmail.com").header-top__link._to-mail pochta@gmail.com
@@ -949,6 +949,10 @@ header.header#header(itemscope="" itemtype="http://schema.org/WPHeader")
 								svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 									path(d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round")
 								span(itemprop="name").header-icons__text Войти
+								.header-icons__avatar(style="background-image:url(@img/account/avatar.png)")
+									.header-icons__label CLUB
+								span(itemprop="name").header-icons__text Профиль
+
 						li.header-icons__item
 							a(href="#", data-counter="0", itemprop="url").header-icons__link
 								svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")

@@ -26,11 +26,11 @@ import {
 
 // изменение локации
 
-// const changeLocation = document.getElementById("change-location") || null
+const changeLocation = document.getElementById("change-location") || null
 
-// changeLocation.addEventListener("click", () => {
-//     changeLocation.classList.toggle("_open")
-// })
+changeLocation.addEventListener("click", () => {
+    changeLocation.classList.toggle("_open")
+})
 
 // открытие блока Покупателям
 
@@ -1202,32 +1202,32 @@ if (indexInputs.length) {
     });
 }
 
-const orderTabsContainer = document.getElementById("order-grid")
+const orderTabsContainer = document.querySelectorAll(".order-grid")
 
-if (orderTabsContainer) {
+if (orderTabsContainer.length) {
 
-    const tabsBnts = orderTabsContainer.querySelectorAll("[data-tab-button]") || null
-    const tabsContent = orderTabsContainer.querySelectorAll("[data-tabs-body]") || null
+    orderTabsContainer.forEach(element => {
+        const tabsBnts = element.querySelectorAll("[data-tab-button]") || null
+        const tabsContent = element.querySelectorAll("[data-tabs-body]") || null
 
-    // console.log(orderTabs, tabsContent) 
+        if (tabsBnts.length) {
 
-    if (tabsBnts.length) {
+            tabsBnts.forEach(tab => {
+                const tabID = tab.getAttribute("data-tab-button")
 
-        tabsBnts.forEach(tab => {
-            const tabID = tab.getAttribute("data-tab-button")
-
-            tab.addEventListener("click", () => {
-                tabsContent.forEach(content => {
-                    content.classList.remove("_content-active")
+                tab.addEventListener("click", () => {
+                    tabsContent.forEach(content => {
+                        content.classList.remove("_content-active")
+                    })
+                    tabsBnts.forEach(tab => {
+                        tab.classList.remove("_tab-active")
+                    })
+                    element.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
+                    element.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
                 })
-                tabsBnts.forEach(tab => {
-                    tab.classList.remove("_tab-active")
-                })
-                orderTabsContainer.querySelector(`[data-tabs-body="${tabID}"]`).classList.add("_content-active");
-                orderTabsContainer.querySelector(`[data-tab-button="${tabID}"]`).classList.add("_tab-active")
-            })
-        });
-    }
+            });
+        }
+    });
 }
 
 const paymentsBlock = document.getElementById("payments-block") || null
@@ -1329,6 +1329,30 @@ if (copyButtons.length) {
         })
     });
 }
+
+const selectCityBlock = document.getElementById("select-city") || null
+
+if (selectCityBlock) {
+    const tabsBtns = selectCityBlock.querySelectorAll(".nav-city__tab")
+    const tabsContent = selectCityBlock.querySelectorAll(".select-city__content")
+    console.log(tabsBtns)
+    tabsBtns.forEach(tab => {
+        const tabID = tab.getAttribute("data-tab-region")
+
+        tab.addEventListener("click", () => {
+            tabsContent.forEach(content => {
+                content.classList.remove("_active")
+            })
+            tabsBtns.forEach(tab => {
+                tab.classList.remove("_active")
+            })
+            console.log(tabID)
+            selectCityBlock.querySelector(`[data-tab-city="${tabID}"]`).classList.add("_active");
+            selectCityBlock.querySelector(`[data-tab-region="${tabID}"]`).classList.add("_active")
+        })
+    });
+}
+
 
 // const callMePopup = document.getElementById('call-me') || null;
 // const nameInputCall = document.getElementById('name-for-call') || null;

@@ -651,3 +651,115 @@
 					button(type="submit", disabled).button.popup__button Оставить заявку
 					p.popup__policy Нажимая «Отправить», вы принимаете условия 
 						a(href="#", target="_blank") политики конфиденциальности
+
+#compaint-request.popup-tender.popup(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			button.popup__close(data-close='data-close' type='button')
+				include icons/_close
+
+			.popup__body
+				h2.popup__title Подать рекламацию
+				p.popup__text Укажите свои данные и мы перезвоним вам в ближайшее время
+				form(action="#", method="post")
+					.popup__inputs
+						input.popup__input(type="text", name="name", placeholder="ФИО", required)
+						input.popup__input(type="tel", name="phone", placeholder="+7 (___)___-__-__", required)
+						input.popup__input(type="email", name="email", placeholder="E-mail", required)
+						input.popup__input(type="text", name="complaint-id", placeholder="По заказу №", required)
+						.popup-form__select.select._small
+							.select__title.open-select
+								span.current-value(data-current="") Тип рекламации
+								include icons/_arrow-down
+
+							.select__hidden-block
+								ul.select__list
+									li.select__item(data-value="Рекламация 1") Рекламация 1
+									li.select__item(data-value="Рекламация 2") Рекламация 2
+									li.select__item(data-value="Рекламация 3") Рекламация 3
+									li.select__item(data-value="Рекламация 4") Рекламация 4
+
+
+						select
+							option(value="1") 	111	
+							option(value="2") 	222
+						textarea.popup__textarea(name="comments", placeholder="Укажите, пожалуйста, артикул товара, краткое описание проблемы")
+
+				.popup__button-wrapper
+					button(type="submit", disabled).button.popup__button Отправить
+					p.popup__policy Нажимая «Отправить», вы принимаете условия 
+						a(href="#", target="_blank") политики конфиденциальности
+
+#select-city.popup.popup-tender.popup-city(aria-hidden='true', data-single="true")
+	.popup__wrapper
+		.popup__content
+			//- button.popup__close(data-close='data-close' type='button')
+			//- 	include icons/_close
+
+			.popup__body
+				form(action="post").popup-city__form
+					.popup-city__header
+						input#search-city.popup-city__search(type="search", name="city-search", placeholder="Найдите ваш город...")
+						button.popup__close(data-close='data-close' type='button')
+							include icons/_close
+					#select-city.popup-city__body.select-city
+						.select-city__nav.nav-city 
+							.nav-city__tab._active(data-tab-region="2") Все города
+							.nav-city__tab(data-tab-region="1") По округам
+						.select-city__content.select-city__regions.regions-city(data-tab-city="1")
+							ul.regions-city__top
+								li.regions-city__region
+									span.regions-city__title._highligth Вся Россия
+									span.regions-city__count 639
+								li.regions-city__region
+									span.regions-city__title Москва и область
+									span.regions-city__count 90
+								li.regions-city__region
+									span.regions-city__title СПб и область
+									span.regions-city__count 90
+							ul.regions-city__main
+								li.regions-city__region
+									span.main-city__title Центральный ФО
+									span.regions-city__count 639
+								li.regions-city__region
+									span.main-city__title Дальневосточный ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Северо-Западный ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Приволжский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Северо-Кавказский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Сибирский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Уральский ФО
+									span.regions-city__count 90
+								li.regions-city__region
+									span.main-city__title Южный ФО
+									span.regions-city__count 90
+								li.regions-city__region._active
+									span.main-city__title Центральная Азия
+									span.regions-city__count 90
+
+						.select-city__content.select-city__cities.cities-city._active(data-tab-city="2")
+							ul.cities-city__list
+								li.cities-city__item Москва
+								li.cities-city__item Санкт-Петербург
+								li.cities-city__item Ростов-на-Дону
+								li.cities-city__item Новосибирск
+								li.cities-city__item Краснодар
+								li.cities-city__item Екатеринбург
+								li.cities-city__item Нижний Новгород
+								li.cities-city__item._letter А
+								li.cities-city__item Абакан
+								li.cities-city__item Абинск
+								li.cities-city__item Адлер
+								li.cities-city__item Азнаково
+								li.cities-city__item Азнаково
+								li.cities-city__item._letter Б
+								li.cities-city__item Барнаул

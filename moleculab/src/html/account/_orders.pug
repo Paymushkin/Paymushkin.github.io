@@ -36,14 +36,19 @@ section.account
                         a(href="/account-info.html").aside-pa__link 
                             include ../icons/_file
                             span Информация для клиента
+                    
+                    li.aside-pa__item 
+                        a(href="/account-complaint.html").aside-pa__link 
+                            include ../icons/_complaint
+                            span Рекламации
                 .aside-pa__footer
                     a(href="./logout")
                         include ../icons/_logout
                         span Выйти
             
-            #order-grid.body-pa__main.orders-grid
+            .order-grid.body-pa__main.orders-grid
                 .orders-grid__search.search-orders
-                    h2.search-orders__title(data-popup="raiting") Найти заказ
+                    h2.search-orders__title Найти заказ
                     form(action="#", method="post").search-orders__form
                         .search-orders__field 
                             include ../icons/_search
@@ -106,7 +111,7 @@ section.account
                                             include ../icons/_cancel
                                     .orders-list__right
                                         .orders-list__title
-                                            .orders-list__number № 158111234
+                                            .orders-list__number № 158111235
                                             .orders-list__status Заказ отменен
                                         .orders-list__date от 08.04.2023
                                         .orders-list__price 100 344 ₽
@@ -117,7 +122,7 @@ section.account
                                             include ../icons/_done
                                     .orders-list__right
                                         .orders-list__title
-                                            .orders-list__number № 158111234
+                                            .orders-list__number № 158111236
                                             .orders-list__status Заказ отменен
                                         .orders-list__date от 08.04.2023
                                         .orders-list__price 100 344 ₽
