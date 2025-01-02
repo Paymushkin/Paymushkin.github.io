@@ -4,6 +4,7 @@
     >
         <TimelineHour 
             :hour="timelineItem.hour"
+            @click.prevent="emit('scrollToHour', timelineItem.hour)"
         />
 
         <BaseSelect 
@@ -33,6 +34,7 @@ import {
     isActivityValid, 
     validateActivities
 } from '../validators';
+import { isHourValid } from '../validators';
 
 const props = defineProps({
     timelineItem: {
@@ -53,7 +55,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits({
-    selectActivity:  isActivityValid
+    selectActivity:  isActivityValid,
+    scrollToHour: isHourValid
 })
 
 function selectActivity(id) {

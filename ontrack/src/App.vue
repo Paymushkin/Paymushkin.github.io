@@ -57,9 +57,6 @@ function setActivitySecondsToComplite(activity, secondsToComplete) {
 
 </script>
 
-<style scoped></style>
-
-
 <template>
   <TheHeader @navigate="currentPage = $event"/>
 
