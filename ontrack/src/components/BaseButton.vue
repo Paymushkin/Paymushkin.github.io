@@ -1,6 +1,5 @@
 <template>
-    <button 
-        :class="`${typeClasses[type]} rounded p-3 disabled:cursor-not-allowed disabled:opacity-50 duration-300`">
+    <button :class="classes">
         <slot></slot>
     </button>
 </template>
@@ -9,13 +8,17 @@
 
 import { isButtonTypeValid } from '../validators.js';
 
-defineProps({
+const props = defineProps({
     type: {
         default: BUTTON_TYPE_PRIMARY,
         type: String,
         validator: isButtonTypeValid
     }
 })
+
+const classes = `${
+    typeClasses[props.type]
+    } rounded p-3 disabled:cursor-not-allowed disabled:opacity-50 duration-300`
 
 </script>
 
@@ -36,5 +39,4 @@ const typeClasses = {
     [BUTTON_TYPE_SUCCESS]: 'bg-green-500 enabled:hover:bg-green-600 text-white',
     [BUTTON_TYPE_WARNING]: 'bg-yellow-500 enabled:hover:bg-yellow-600 text-white'
 }
-
 </script>

@@ -1,54 +1,19 @@
 import { 
-    PAGE_TIMELINE,
-    HOURS_IN_DAY,
-    SECONDS_IN_HOUR,
     SECONDS_IN_MINUTE,
     MINUTES_IN_HOUR,
     MILLISECONDS_IN_SECOND 
 } from './constants';
 
-import { 
-  isPageValid, 
+import {
   isNull
 } from './validators';
-
-export function normalizePageHash() {
-  const page = window.location.hash.slice(1)
-
-  if(isPageValid(page)) {
-    return page
-  }
-
-  return window.location.hash = PAGE_TIMELINE
-}
 
 export function normalizeSelectValue(value) {
   return isNull(value) || isNaN(value) ? value : +value
 }
 
-export function generateActivities() {
-  return ['Coding', 'Reading', 'Training'].map((name, hours) => ({
-      id: id(),
-      name,
-      secondsToComplete: hours * SECONDS_IN_HOUR 
-  }))
-}
-
 export function id() {
   return Date.now().toString(36) + Math.random().toString(36).substring(2)
-}
-
-export function generateTimelineItems(activities) {
-  return [...Array(HOURS_IN_DAY).keys()].map((hour) => ({
-    hour,
-    // activityId: null,
-    activityId: getRandomActivity(activities, hour) ,
-    activitySeconds: getRandomSeconds(hour)
-    }))
-}
-
-export function generateActivitySelectOptions(activities) {
-  return activities.map( (activity) => ({ label: activity.name, value: activity.id }) )
 }
 
 export function formatSeconds(seconds) {
@@ -62,10 +27,24 @@ export function formatSeconds(seconds) {
     // return utc.substring(17, 25)
 }
 
-function getRandomActivity(activities, value) {
-  return value % 4 === 0 ? null : activities[value % 2].id
+export function generatePeriodSelectOptions() {
+  const periodsInMinutes = [
+    15, 30, 45, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450, 480
+  ]
+
+  return periodsInMinutes.map((periodInMinutes) => ({
+    value: periodInMinutes * SECONDS_IN_MINUTE,
+    label: generatePeriodSelectOptionsLabel(periodInMinutes)
+  }))
 }
 
-function getRandomSeconds(value) {
-  return value % 4 === 0 ? 0 : (15 * SECONDS_IN_MINUTE * value) % SECONDS_IN_HOUR
+export function currentHour() {
+  return new Date().getHours()
+}
+
+function generatePeriodSelectOptionsLabel(periodInMinutes) {
+  const hours = Math.floor(periodInMinutes / MINUTES_IN_HOUR).toString().padStart(2, 0)
+  const minutes = (periodInMinutes % MINUTES_IN_HOUR).toString().padStart(2, 0)
+
+  return `${hours}:${minutes}`
 }

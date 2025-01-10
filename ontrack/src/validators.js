@@ -1,12 +1,16 @@
 import { 
     NAV_ITEMS, 
     HOURS_IN_DAY,
-    MIDNIGTH_HOUR,
+    MIDNIGHT_HOUR,
     BUTTON_TYPES
  } from './constants';
 
 export function isPageValid(page) {
     return Object.keys(NAV_ITEMS).includes(page)
+}
+
+export function isNavItemValid(navItem) {
+  return NAV_ITEMS.includes(navItem)
 }
 
 export function isButtonTypeValid(type) {
@@ -18,7 +22,7 @@ export function isTimelineItemValid( {hour} ) {
 }
 
 export function isHourValid(hour) {
-    return isNumber(hour) && isBetween(hour, MIDNIGTH_HOUR, HOURS_IN_DAY - 1);
+    return isNumber(hour) && isBetween(hour, MIDNIGHT_HOUR, HOURS_IN_DAY - 1);
 }
 
 export function validateSelectOptions(options) {

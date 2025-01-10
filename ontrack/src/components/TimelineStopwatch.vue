@@ -5,7 +5,7 @@
             :type="BUTTON_TYPE_DANGER"
             @click="reset"
         >
-            <ArrowPathIcon class="h-8"/>
+            <BaseIcon name="ArrowPath" class="h-8"/>
         </BaseButton>
         <div 
             class="flex items-center grow rounded bg-gray-100 px-2 font-mono text-3xl">
@@ -16,25 +16,25 @@
             :type="BUTTON_TYPE_WARNING"
             @click="stop"
         >
-            <PauseIcon class="h-8"/>
+           <BaseIcon name="Pause" class="h-8"/>
         </BaseButton>
         <BaseButton
             v-else
-            :disabled="isStopButtonDisabled"
+            :disabled="isStartButtonDisabled"
             :type="BUTTON_TYPE_SUCCESS"
             @click="start"
         >
-            <PlayIcon class="h-8"/>
+            <BaseIcon name="Play" class="h-8"/>
         </BaseButton>
     </div>
 </template>
 
 <script setup>
 
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
  
 import BaseButton from './BaseButton.vue';
-import { ArrowPathIcon, PauseIcon, PlayIcon } from '@heroicons/vue/24/outline';
+import BaseIcon from './BaseIcon.vue';
 
 import { 
     BUTTON_TYPE_WARNING, 
@@ -43,30 +43,34 @@ import {
     MILLISECONDS_IN_SECOND
 } from '../constants';
 
-import { isNumber } from '../validators'
+import { updateTimelineItem } from '../timeline-items'
 
-import { formatSeconds } from '../functions'
-import { isHourValid } from '@/validators';
+import { currentHour, formatSeconds } from '../functions'
+import { isTimelineItemValid } from '../validators';
 
 const props = defineProps({
-    seconds: {
-        default: 0,
-        type: Number,
-        validator: isNumber
-    },
-    hour: {
+    timelineItem: {
         required: true,
-        type: Number,
-        validator: isHourValid
-    }
+        type: Object,
+        validator: isTimelineItemValid
+    },
+
 })
 
-const seconds = ref(props.seconds)
+const seconds = ref(props.timelineItem.activitySeconds)
 const isRunning = ref(false)
-const isStopButtonDisabled = props.hour !== new Date().getHours()
+const isStartButtonDisabled = props.timelineItem.hour !== currentHour()
+
+watch(
+    () => props.timelineItem.activityId,
+    () => {
+        updateTimelineItem(props.timelineItem, { activitySeconds: seconds.value })
+    }
+)
 
 function start() {
     isRunning.value = setInterval(()=> {
+        updateTimelineItem(props.timelineItem, { activitySeconds: props.timelineItem.activitySeconds + 1 })
         seconds.value++
     }, MILLISECONDS_IN_SECOND)
 }
@@ -77,8 +81,12 @@ function stop() {
 }
 
 function reset() {
-   stop()
-   seconds.value = 0
+    stop()
+    updateTimelineItem(
+        props.timelineItem, 
+        { activitySeconds: props.timelineItem.activitySeconds + 1 - seconds.value }
+    )
+    seconds.value = 0
 }       
 
 </script>
