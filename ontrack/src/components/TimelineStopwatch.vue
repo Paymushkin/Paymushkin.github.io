@@ -1,52 +1,51 @@
 <template>
     <div class="flex w-full gap-2">
         <BaseButton
-            :disabled="!seconds" 
+            :disabled="timelineItem.activitySeconds" 
             :type="BUTTON_TYPE_DANGER"
             @click="reset"
         >
-            <BaseIcon name="ArrowPath" class="h-8"/>
+            <BaseIcon :name="ICON_ARROW_PATH" />
         </BaseButton>
         <div 
             class="flex items-center grow rounded bg-gray-100 px-2 font-mono text-3xl">
-            {{ formatSeconds(seconds) }}
+            {{ formatSeconds(timelineItem.activitySeconds) }}
         </div>
         <BaseButton
             v-if="isRunning"
             :type="BUTTON_TYPE_WARNING"
             @click="stop"
         >
-           <BaseIcon name="Pause" class="h-8"/>
+           <BaseIcon :name="ICON_PAUSE" />
         </BaseButton>
         <BaseButton
             v-else
-            :disabled="isStartButtonDisabled"
+            :disabled="timelineItem.hour !== now.getHours()"
             :type="BUTTON_TYPE_SUCCESS"
             @click="start"
         >
-            <BaseIcon name="Play" class="h-8"/>
+            <BaseIcon :name="ICON_PLAY" />
         </BaseButton>
     </div>
 </template>
 
-<script setup>
-
-import { ref, watch } from 'vue'
- 
+<script setup> 
+import { watchEffect } from 'vue';
 import BaseButton from './BaseButton.vue';
 import BaseIcon from './BaseIcon.vue';
+import { ICON_ARROW_PATH, ICON_PLAY, ICON_PAUSE } from '../icons';
 
 import { 
     BUTTON_TYPE_WARNING, 
     BUTTON_TYPE_DANGER, 
-    BUTTON_TYPE_SUCCESS,
-    MILLISECONDS_IN_SECOND
+    BUTTON_TYPE_SUCCESS
 } from '../constants';
 
-import { updateTimelineItem } from '../timeline-items'
-
-import { currentHour, formatSeconds } from '../functions'
+import { formatSeconds } from '../functions'
 import { isTimelineItemValid } from '../validators';
+import { useStopWatch } from '../composables/stopWatch';
+import { updateTimelineItem } from '../timeline-items';
+import { now } from '../time';
 
 const props = defineProps({
     timelineItem: {
@@ -57,36 +56,18 @@ const props = defineProps({
 
 })
 
-const seconds = ref(props.timelineItem.activitySeconds)
-const isRunning = ref(false)
-const isStartButtonDisabled = props.timelineItem.hour !== currentHour()
-
-watch(
-    () => props.timelineItem.activityId,
-    () => {
-        updateTimelineItem(props.timelineItem, { activitySeconds: seconds.value })
-    }
+const { seconds, isRunning, start, stop, reset } = useStopWatch( 
+    props.timelineItem.activitySeconds
 )
 
-function start() {
-    isRunning.value = setInterval(()=> {
-        updateTimelineItem(props.timelineItem, { activitySeconds: props.timelineItem.activitySeconds + 1 })
-        seconds.value++
-    }, MILLISECONDS_IN_SECOND)
-}
+watchEffect(() => {
+    if ( props.timelineItem.hour !== now.value.getHours() && isRunning.value) {
+        stop()
+    }
+})
 
-function stop() {
-    clearInterval(isRunning.value)
-    isRunning.value = false
-}
-
-function reset() {
-    stop()
-    updateTimelineItem(
-        props.timelineItem, 
-        { activitySeconds: props.timelineItem.activitySeconds + 1 - seconds.value }
-    )
-    seconds.value = 0
-}       
-
+watchEffect(() => 
+    updateTimelineItem(props.timelineItem, { activitySeconds: seconds.value})
+)
+      
 </script>

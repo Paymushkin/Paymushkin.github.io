@@ -1,6 +1,6 @@
 <template>
     <button :class="classes">
-        <slot></slot>
+        <slot/>
     </button>
 </template>
 
@@ -16,9 +16,10 @@ const props = defineProps({
     }
 })
 
-const classes = `${
+const classes = [
+    'rounded p-3 disabled:cursor-not-allowed disabled:opacity-50 duration-300',
     typeClasses[props.type]
-    } rounded p-3 disabled:cursor-not-allowed disabled:opacity-50 duration-300`
+]
 
 </script>
 

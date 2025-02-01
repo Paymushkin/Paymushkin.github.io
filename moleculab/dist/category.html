@@ -71,7 +71,7 @@
                       <div class="hidden-block__body"> 
                         <div class="hidden-block__title"> <span>Ваш город</span><span class="_highligth">Краснодар?</span></div>
                         <div class="hidden-block__buttons">
-                          <button class="button hidden-block__button">Все верно</button><span>Выбрать другой</span>
+                          <button class="button hidden-block__button">Все верно</button><span data-popup="select-city">Выбрать другой</span>
                         </div>
                       </div>
                     </div>
@@ -608,6 +608,9 @@
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5.59511 19.1286C6.17809 17.7551 7.53921 16.7917 9.12533 16.7917H14.8753C16.4614 16.7917 17.8226 17.7551 18.4055 19.1286M15.8337 9.60425C15.8337 11.7213 14.1174 13.4376 12.0003 13.4376C9.88323 13.4376 8.16699 11.7213 8.16699 9.60425C8.16699 7.48716 9.88323 5.77091 12.0003 5.77091C14.1174 5.77091 15.8337 7.48716 15.8337 9.60425ZM21.5837 12.0001C21.5837 17.2928 17.2931 21.5834 12.0003 21.5834C6.7076 21.5834 2.41699 17.2928 2.41699 12.0001C2.41699 6.70735 6.7076 2.41675 12.0003 2.41675C17.2931 2.41675 21.5837 6.70735 21.5837 12.0001Z" stroke="#77C149" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg><span class="header-icons__text" itemprop="name">Войти</span>
+                      <div class="header-icons__avatar" style="background-image:url(img/account/avatar.png)">
+                        <div class="header-icons__label">CLUB</div>
+                      </div><span class="header-icons__text" itemprop="name">Профиль</span>
                     </div>
                   </li>
                   <li class="header-icons__item"><a class="header-icons__link" href="#" data-counter="0" itemprop="url">
@@ -774,8 +777,8 @@
                       background-image: url(img/catalog/banner/genomika-mobile.png)
                   }
               }
-              
             </style>
+            <h1 class="main-title">Геномика</h1>
             <div class="catalog__banner banner-catalog">
               <div class="banner-catalog__content">
                 <h2 class="banner-catalog__title"><span data-section-counter="(321)">Геномика</span></h2>
@@ -6132,6 +6135,116 @@
                 <button class="button popup__button" type="submit" disabled="disabled">Оставить заявку</button>
                 <p class="popup__policy">Нажимая «Отправить», вы принимаете условия <a href="#" target="_blank">политики конфиденциальности</a></p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-tender popup" id="compaint-request" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <button class="popup__close" data-close="data-close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                <path d="M19.3646 19.8637L6.63672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.63927 19.8637L19.3672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="popup__body">
+              <h2 class="popup__title">Подать рекламацию</h2>
+              <p class="popup__text">Укажите свои данные и мы перезвоним вам в ближайшее время</p>
+              <form action="#" method="post">
+                <div class="popup__inputs">
+                  <input class="popup__input" type="text" name="name" placeholder="ФИО" required="required"/>
+                  <input class="popup__input" type="tel" name="phone" placeholder="+7 (___)___-__-__" required="required"/>
+                  <input class="popup__input" type="email" name="email" placeholder="E-mail" required="required"/>
+                  <input class="popup__input" type="text" name="complaint-id" placeholder="По заказу №" required="required"/>
+                  <div class="popup-form__select select _small">
+                    <div class="select__title open-select"><span class="current-value" data-current="">Тип рекламации</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                        <path d="M9 1L5 5L1 1" stroke="#545454" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="select__hidden-block">
+                      <ul class="select__list">
+                        <li class="select__item" data-value="Рекламация 1">Рекламация 1</li>
+                        <li class="select__item" data-value="Рекламация 2">Рекламация 2</li>
+                        <li class="select__item" data-value="Рекламация 3">Рекламация 3</li>
+                        <li class="select__item" data-value="Рекламация 4">Рекламация 4</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <select>
+                    <option value="1">	111	</option>
+                    <option value="2">	222</option>
+                  </select>
+                  <textarea class="popup__textarea" name="comments" placeholder="Укажите, пожалуйста, артикул товара, краткое описание проблемы"></textarea>
+                </div>
+              </form>
+              <div class="popup__button-wrapper">
+                <button class="button popup__button" type="submit" disabled="disabled">Отправить</button>
+                <p class="popup__policy">Нажимая «Отправить», вы принимаете условия <a href="#" target="_blank">политики конфиденциальности</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-tender popup-city" id="select-city" aria-hidden="true" data-single="true">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__body">
+              <form class="popup-city__form" action="post">
+                <div class="popup-city__header">
+                  <input class="popup-city__search" id="search-city" type="search" name="city-search" placeholder="Найдите ваш город..."/>
+                  <button class="popup__close" data-close="data-close" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                      <path d="M19.3646 19.8637L6.63672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M6.63927 19.8637L19.3672 7.13574" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="popup-city__body select-city" id="select-city">
+                  <div class="select-city__nav nav-city"> 
+                    <div class="nav-city__tab _active" data-tab-region="2">Все города</div>
+                    <div class="nav-city__tab" data-tab-region="1">По округам</div>
+                  </div>
+                  <div class="select-city__content select-city__regions regions-city" data-tab-city="1">
+                    <ul class="regions-city__top">
+                      <li class="regions-city__region"><span class="regions-city__title _highligth">Вся Россия</span><span class="regions-city__count">639</span></li>
+                      <li class="regions-city__region"><span class="regions-city__title">Москва и область</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="regions-city__title">СПб и область</span><span class="regions-city__count">90</span></li>
+                    </ul>
+                    <ul class="regions-city__main">
+                      <li class="regions-city__region"><span class="main-city__title">Центральный ФО</span><span class="regions-city__count">639</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Дальневосточный ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Северо-Западный ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Приволжский ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Северо-Кавказский ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Сибирский ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Уральский ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region"><span class="main-city__title">Южный ФО</span><span class="regions-city__count">90</span></li>
+                      <li class="regions-city__region _active"><span class="main-city__title">Центральная Азия</span><span class="regions-city__count">90</span></li>
+                    </ul>
+                  </div>
+                  <div class="select-city__content select-city__cities cities-city _active" data-tab-city="2">
+                    <ul class="cities-city__list">
+                      <li class="cities-city__item">Москва</li>
+                      <li class="cities-city__item">Санкт-Петербург</li>
+                      <li class="cities-city__item">Ростов-на-Дону</li>
+                      <li class="cities-city__item">Новосибирск</li>
+                      <li class="cities-city__item">Краснодар</li>
+                      <li class="cities-city__item">Екатеринбург</li>
+                      <li class="cities-city__item">Нижний Новгород</li>
+                      <li class="cities-city__item _letter">А</li>
+                      <li class="cities-city__item">Абакан</li>
+                      <li class="cities-city__item">Абинск</li>
+                      <li class="cities-city__item">Адлер</li>
+                      <li class="cities-city__item">Азнаково</li>
+                      <li class="cities-city__item">Азнаково</li>
+                      <li class="cities-city__item _letter">Б</li>
+                      <li class="cities-city__item">Барнаул</li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

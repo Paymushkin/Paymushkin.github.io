@@ -1,7 +1,6 @@
 import { ref } from 'vue'
-import { activities } from './activities'
 import { HOURS_IN_DAY, SECONDS_IN_MINUTE, SECONDS_IN_HOUR, MIDNIGHT_HOUR } from './constants'
-import { currentHour } from './functions'
+import { now } from './time'
 
 export const timelineItemRefs = ref()
 
@@ -11,24 +10,23 @@ export function updateTimelineItem(timelineItem, fields) {
   return Object.assign(timelineItem, fields)
 }
 
-export function resetTimelineItemActivities(activity) {
-    timelineItems.value
-      .filter((timelineItem) => hasActivity(timelineItem, activity))
-      .forEach((timelineItem) => updateTimelineItem(timelineItem, {
-        activityId: null,
-        activitySeconds: 0
-      }))
+export function resetTimelineItemActivities(timelineItems, activity) {
+  filterTimelineItemsByActivity(timelineItems, activity).forEach((timelineItem) => 
+    updateTimelineItem(timelineItem, {
+      activityId: null,
+      activitySeconds: timelineItem.hour === now.getHours() ? timelineItem.activitySeconds : 0
+    }))
 }
 
-export function getTotalActivitySeconds(activity) {
-  return(timelineItems.value
-    .filter((timelineItem) => hasActivity(timelineItem, activity))
+export function calculateTrackedActivitySeconds(timelineItems, activity) {
+  return (
+    filterTimelineItemsByActivity(timelineItems, activity)
     .reduce((totalSeconds, timelineItem) => Math.round(timelineItem.activitySeconds + totalSeconds), 0)
   )
 }
 
 export function scrollToCurrentHour(isSmooth = false) {
-  scrollToHour(currentHour(), isSmooth)
+  scrollToHour(now.value.getHours(), isSmooth)
 }
 
 export function scrollToHour(hour, isSmooth = true) {
@@ -38,15 +36,15 @@ export function scrollToHour(hour, isSmooth = true) {
   el.scrollIntoView({ behavior: isSmooth ? 'smooth' : 'instant' })
 }
 
-function hasActivity(timelineItem, activity) {
-  return timelineItem.activityId === activity.id
+function filterTimelineItemsByActivity(timelineItems, activity) {
+  return timelineItems.filter((timelineItem) => timelineItem.activityId === activity.id)
 }
 
 function generateTimelineItems() {
   return [...Array(HOURS_IN_DAY).keys()].map((hour) => ({
     hour,
-    activityId: [0,1,2,3,4].includes(hour) ? getRandomActivity(activities.value, hour) : null,
-    activitySeconds: [0,1,2,3,4].includes(hour) ? getRandomSeconds(hour) : 0
+    activityId: null, //[0,1,2,3,4].includes(hour) ? getRandomActivity(activities.value, hour) : null,
+    activitySeconds: 0, //[0,1,2,3,4].includes(hour) ? getRandomSeconds(hour) : 0
   }))
 }
 

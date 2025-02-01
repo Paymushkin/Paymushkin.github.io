@@ -5,8 +5,14 @@ import {
     BUTTON_TYPES
  } from './constants';
 
+ import { ICONS } from './icons'
+
 export function isPageValid(page) {
     return Object.keys(NAV_ITEMS).includes(page)
+}
+
+export function isIconValid(icon) {
+    return Object.keys(ICONS).includes(icon)
 }
 
 export function isNavItemValid(navItem) {
@@ -27,10 +33,6 @@ export function isHourValid(hour) {
 
 export function validateSelectOptions(options) {
     return options.every(isSelectOptionValue)
-}
-
-function isSelectOptionValue({ value, label}) {
-  return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label)
 }
 
 export function validateTimelineItems(timelineItems) {
@@ -80,6 +82,10 @@ export function isNumber(value) {
 
 function isNotEmptyString(value) {
     return isString(value) && value.length
+}
+
+function isSelectOptionValue({ value, label}) {
+  return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label)
 }
 
 function isString(value) {

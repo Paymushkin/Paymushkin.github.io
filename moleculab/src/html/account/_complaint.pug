@@ -1,0 +1,163 @@
+section.account
+    .account__container 
+        - const accountComplaintPage = true;
+        include ../_breadcrumbs
+
+        .account__body.body-pa
+            aside.body-pa__aside.aside-pa
+                .aside-pa__header 
+                    .aside-pa__avatar
+                        img(src="@img/account/avatar.png", alt="")
+                    .aside-pa__info 
+                        h3.aside-pa__name Наталья Карандашова
+                        .aside-pa__label в клубе
+                ul.aside-pa__list
+                    li.aside-pa__item
+                        a(href="./account-personal.html").aside-pa__link 
+                            include ../icons/_profile
+                            span Учетные данные
+
+                    li.aside-pa__item
+                        a(href="./account-orders.html").aside-pa__link 
+                            include ../icons/_order
+                            span Мои заказы
+
+                    li.aside-pa__item 
+                        a(href="./account-payments.html").aside-pa__link 
+                            include ../icons/_payment
+                            span Платежные профили
+
+                    li.aside-pa__item 
+                        a(href="./account-notifications.html").aside-pa__link 
+                            include ../icons/_bell
+                            span Настройка уведомлений
+
+                    li.aside-pa__item 
+                        a(href="/account-info.html").aside-pa__link 
+                            include ../icons/_file
+                            span Информация для клиента
+                    
+                    li.aside-pa__item._active 
+                        a(href="/account-complaints.html").aside-pa__link 
+                            include ../icons/_complaint
+                            span Рекламации
+                .aside-pa__footer
+                    a(href="./logout")
+                        include ../icons/_logout
+                        span Выйти
+            
+            .body-pa__main.order-block
+                .order-block__header.header-order.header-complaint
+                    .header-order__left._content-active
+                        h2.header-order__title Рекламация №1021
+                        .header-order__status 
+                            span.header-order__icon
+                                include ../icons/_complaint-check
+                                | Новая
+                            span от 15.04.2023
+
+                    .header-order__about
+                        span 
+                            strong Заказ № 1584068240
+                        span 08.04.2023
+
+                .order-block__description.description-order 
+                    h3.description-order__title Описание рекламации
+                    p.description-order__text Товар в заказе оказался не актуален.
+                           
+                .order-block__products.products-order
+
+                    ul.products-order__list
+
+                        li.products-order__item.product-order 
+                            .product-order__image-ibg
+                                img(src="@img/products/item-3.png" alt="Гель-документирующая система ChemiScope", itemprop="image")
+                            .product-order__center
+                                .product-order__content
+                                    .product-order__body
+                                        h4.product-order__title(itemprop="brand") Senova BS-3031
+                                        p.product-order__text(itemprop="description") Гель-документирующая система ChemiScope Гель-документирующая система ChemiScope Гель-документирующая система ChemiScope
+                                    .product-order__count 1шт.
+                                .product-order__mob-prices
+                                    .product-order__mob-price 234 567 ₽
+                                    .product-order__mob-price-old 100 334 ₽
+                            .product-order__prices
+                                .product-order__price 234 567 ₽
+                                .product-order__price-old 100 334 ₽
+
+                        li.products-order__item.product-order 
+                            .product-order__image-ibg
+                                img(src="@img/products/item-3.png" alt="Гель-документирующая система ChemiScope", itemprop="image")
+                            .product-order__center
+                                .product-order__content
+                                    .product-order__body
+                                        h4.product-order__title(itemprop="brand") Senova BS-3031
+                                        p.product-order__text(itemprop="description") Гель-документирующая система ChemiScope
+                                    .product-order__count 1шт.
+                                .product-order__mob-prices
+                                    .product-order__mob-price 234 567 ₽
+                                    .product-order__mob-price-old 100 334 ₽
+                            .product-order__prices
+                                .product-order__price 234 567 ₽
+                                .product-order__price-old 100 334 ₽
+
+                .order-block__footer.footer-order
+                    .footer-order__info.info-order
+                        h3.info-order__title Информация о заказе
+                        ul.info-order__list
+                            li.info-order__item 
+                                .info-order__point Покупатель
+                                .info-order__data
+                                    p Наталья Карандашова
+                                    span +7 (918)325-11-78
+                            li.info-order__item 
+                                .info-order__point Способ оплаты
+                                .info-order__data
+                                    p Безналичная оплата
+                            li.info-order__item 
+                                .info-order__point Дата оформления
+                                .info-order__data
+                                    p 01.04.2023
+                            li.info-order__item 
+                                .info-order__point Способ доставки
+                                .info-order__data
+                                    p Курьерской службой
+                            li.info-order__item 
+                                .info-order__point Адрес доставки
+                                .info-order__data
+                                    p Краснодар, ул. Володи Головатого, д. 313, МТРЦ «Галерея Краснодар»
+                                    span 10:00 - 22:00
+
+                    .footer-order__details.order-details
+                        .cart-bill__body
+                            h3.cart-bill__title Детали заказа
+                            ul.cart-bill__list.order-details__list
+                                li.cart-bill__item 
+                                    span.cart-bill__text 3 товара
+                                    span.cart-bill__price 153 198 ₽
+                                li.cart-bill__item._details
+                                    details(open).cart-bill__details
+                                        summary.cart-bill__summary
+                                            span Скидка
+                                                include ../icons/_chevron-down
+                                            span.cart-bill__discount -3 198 ₽
+                                        
+                                        ul.cart-bill__discounts.discounts-list
+                                            li.discounts-list__item 
+                                                span Скидка по акции
+                                                span -900 ₽
+                                            li.discounts-list__item 
+                                                span Скидка по акции
+                                                span -2 182 ₽
+                                            li.discounts-list__item
+                                                span Управлять скидками вы сможете на шаге выбора способа оплаты
+
+                                li.cart-bill__item._summary 
+                                    span.cart-bill__text Итого
+                                    span.cart-bill__price 150 000 ₽
+
+
+                        .cart-about__files
+                            a(href="", download).cart-about__link
+                                include ../icons/_download-files
+                                p Скачать в  PDF

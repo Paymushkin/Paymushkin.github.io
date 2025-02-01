@@ -143,6 +143,30 @@ else if accountOrderPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Заказ #12345678
 
+else if accountComplaintsPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                .breadcrumbs__link Рекламации
+
+else if accountComplaintPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link Личный кабинет
+            li.breadcrumbs__item 
+                a(href="#").breadcrumbs__link История заказов
+            li.breadcrumbs__item 
+                .breadcrumbs__link Рекламация №1021
+
 else if accountNotificationsPage == true
 
     .breadcrumbs.catalog__breadcrumbs

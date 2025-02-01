@@ -9,6 +9,7 @@ import {
     PauseIcon as Pause,
     PlayIcon as Play,
     PlusIcon as Plus,
+    ArrowLongLeftIcon as ArrowLongLeft
 } from '@heroicons/vue/24/outline';
 
 export const ICON_TRASH = 'Trash'
@@ -21,6 +22,7 @@ export const ICON_X_MARK = 'XMark'
 export const ICON_PAUSE = 'Pause'
 export const ICON_PLAY = 'Play'
 export const ICON_PLUS = 'Plus'
+export const ICON_ARROW_LONG_LEFT = 'ArrowLongLeft'
 
 export const ICONS = {
     [ICON_TRASH]: Trash,
@@ -32,5 +34,6 @@ export const ICONS = {
     [ICON_X_MARK]: XMark,
     [ICON_PAUSE]: Pause,
     [ICON_PLAY]: Play,
-    [ICON_PLUS]: Plus
+    [ICON_PLUS]: Plus,
+    [ICON_ARROW_LONG_LEFT]: ArrowLongLeft,
 }
