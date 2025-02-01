@@ -27,6 +27,7 @@
     }
 
     &__item {
+        display: flex;
         grid-column: span 2;
         padding: 32px 45px;
         background-color: $bgColor-2;
