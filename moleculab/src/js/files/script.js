@@ -1335,38 +1335,22 @@ const selectCityBlock = document.getElementById("select-city") || null
 if (selectCityBlock) {
     const tabsBtns = selectCityBlock.querySelectorAll(".nav-city__tab")
     const tabsContent = selectCityBlock.querySelectorAll(".select-city__content")
-
+    console.log(tabsBtns)
     tabsBtns.forEach(tab => {
         const tabID = tab.getAttribute("data-tab-region")
-        const regionsList = selectCityBlock.querySelectorAll('.regions-city__region')
 
         tab.addEventListener("click", () => {
-            changeRegionListTab(tabID, tabsBtns, tabsContent)
+            tabsContent.forEach(content => {
+                content.classList.remove("_active")
+            })
+            tabsBtns.forEach(tab => {
+                tab.classList.remove("_active")
+            })
+            console.log(tabID)
+            selectCityBlock.querySelector(`[data-tab-city="${tabID}"]`).classList.add("_active");
+            selectCityBlock.querySelector(`[data-tab-region="${tabID}"]`).classList.add("_active")
         })
     });
-
-    if ((Math.min(screen.width, window.innerWidth)) <= 576) {
-        const regionsList = selectCityBlock.querySelectorAll('.regions-city__region')
-
-        if (regionsList.length) {
-            regionsList.forEach(region => {
-                region.addEventListener('click', () => {
-                    changeRegionListTab('2', tabsBtns, tabsContent)
-                })
-            });
-        }
-    }
-}
-
-function changeRegionListTab(tabID, tabsBtns, tabsContent) {
-    tabsContent.forEach(content => {
-        content.classList.remove("_active")
-    })
-    tabsBtns.forEach(tab => {
-        tab.classList.remove("_active")
-    })
-    selectCityBlock.querySelector(`[data-tab-city="${tabID}"]`).classList.add("_active");
-    selectCityBlock.querySelector(`[data-tab-region="${tabID}"]`).classList.add("_active")
 }
 
 

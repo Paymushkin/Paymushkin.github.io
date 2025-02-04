@@ -96,6 +96,17 @@ else if recomendationPage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Отзывы
 
+else if contactsPage == true
+
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item 
+                a(href="/about.html").breadcrumbs__link О компании
+            li.breadcrumbs__item 
+                .breadcrumbs__link Контакты
+
 else
 
     .breadcrumbs.catalog__breadcrumbs

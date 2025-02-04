@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.wrapper
+			include html/contacts/_header
+			main.main-content
+				include html/contacts/_hero
+				include html/contacts/_contacts
+				include html/contacts/_map
+				//- include html/_recognition
+				//- include html/_partners
+				//- include html/_projects
+				//- include html/_feedback
+				//- include html/_consultation
+			include html/_footer
+		include html/_mobile-menu
+		//- include html/_popup
+
+		script(src='https://api-maps.yandex.ru/2.1/?apikey=a0d18d5f-ffdb-41e5-8cc5-86e70d7636e0&lang=ru_RU')
+		script(src="js/app.min.js")
+		script.
+			let center = [55.81, 37.64];
+			function init() {
+			let map = new ymaps.Map('map', {
+			center: center,
+			zoom: 10
+			});
+			// 1. Метка с точкой.
+			var myPlacemark1 = new ymaps.Placemark([55.836236, 37.550783], null, {
+			iconLayout: 'default#image',
+			iconImageHref: "img/point-1.png",
+			iconImageSize: [35, 48],
+			iconImageOffset: [-15, -44]
+			});
+			var myPlacemark2 = new ymaps.Placemark([55.783154, 37.717528], null, {
+			iconLayout: 'default#image',
+			iconImageHref: "img/point-2.png",
+			iconImageSize: [35, 48],
+			iconImageOffset: [-15, -44]
+			});
+			map.geoObjects.add(myPlacemark1).add(myPlacemark2);
+			// map.controls.remove('geolocationControl'); // удаляем геолокацию
+			map.controls.remove('searchControl'); // удаляем поиск
+			map.controls.remove('trafficControl'); // удаляем контроль трафика
+			map.controls.remove('typeSelector'); // удаляем тип
+			// map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+			map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+			map.controls.remove('rulerControl'); // удаляем контрол правил
+			// map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+			}
+			ymaps.ready(init);

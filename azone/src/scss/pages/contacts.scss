@@ -1,0 +1,87 @@
+.contacts {
+
+    &__body {
+        display: flex;
+        gap: 32px;
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+        }
+
+        >div {
+            flex-grow: 1;
+        }
+    }
+}
+
+.block-contacts {
+    padding: 40px;
+    border: 2px solid #dadada;
+    border-radius: 30px;
+
+    @media (max-width:$mobileSmall) {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    &__block {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-family: "Gotham Pro";
+        @include adaptiveValue("font-size", 28, 20);
+        line-height: 1.3;
+        font-weight: 500;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        line-height: 1.3;
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: 1.3;
+    }
+
+
+    &__link {
+        color: $highlightColor;
+        line-height: 1.3;
+        transition: 0.3s ease color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $highlightColor-2;
+            }
+        }
+
+        &:active {
+            color: $highlightColor-2;
+        }
+
+        &:focus {
+            color: $highlightColor-2;
+        }
+
+        &:visited {
+            color: $highlightColor-2;
+        }
+    }
+}
