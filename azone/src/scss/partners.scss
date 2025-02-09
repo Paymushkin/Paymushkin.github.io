@@ -8,52 +8,52 @@
     &__grid {
         margin-bottom: 27px;
     }
-}
 
-.grid-partners {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 31px;
-
-    @media (max-width:$tablet) {
-        gap: 20px;
-    }
-
-    @media (max-width:$mobile) {
-        gap: 12px;
-    }
-
-    &__link {
-        display: block;
-        padding: 14px 30px;
-        @include adaptiveValue("font-size", 16, 12);
-        font-weight: 800;
-        text-transform: uppercase;
-        border: 2px solid $highlightColor-2;
-        border-radius: 60px;
-        transition: 0.3s ease all;
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 31px;
 
         @media (max-width:$tablet) {
-            padding: 12px 20px;
+            gap: 20px;
         }
 
         @media (max-width:$mobile) {
-            padding: 8px 16px;
+            gap: 12px;
         }
 
-        @media (any-hover: hover) {
-            &:hover {
+        a {
+            display: block;
+            padding: 14px 30px;
+            @include adaptiveValue("font-size", 16, 12);
+            font-weight: 800;
+            text-transform: uppercase;
+            border: 2px solid $highlightColor-2;
+            border-radius: 60px;
+            transition: 0.3s ease all;
+
+            @media (max-width:$tablet) {
+                padding: 12px 20px;
+            }
+
+            @media (max-width:$mobile) {
+                padding: 8px 16px;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #fff;
+                    background-color: $highlightColor-2;
+                }
+            }
+
+            &:active {
                 color: #fff;
                 background-color: $highlightColor-2;
             }
-        }
 
-        &:active {
-            color: #fff;
-            background-color: $highlightColor-2;
         }
-
     }
 }

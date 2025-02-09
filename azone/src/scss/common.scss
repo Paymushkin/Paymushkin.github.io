@@ -263,7 +263,7 @@ mark {
 }
 
 .softs-grid {
-	&__list {
+	ul:not(.select__list):not(.nav-hero__list) {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
@@ -280,31 +280,31 @@ mark {
 				margin-bottom: 16px;
 			}
 		}
-	}
 
-	&__item {
-		font-size: 16px;
-		border: 1px solid $highlightColor-2;
-		border-radius: 10px;
-		transition: 0.3s ease all;
+		li {
+			font-size: 16px;
+			border: 1px solid $highlightColor-2;
+			border-radius: 10px;
+			transition: 0.3s ease all;
 
-		@media (max-width:$mobile) {
-			font-size: 12px;
-		}
+			@media (max-width:$mobile) {
+				font-size: 12px;
+			}
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: #fff;
-				background-color: $highlightColor-2;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+					background-color: $highlightColor-2;
+				}
+			}
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 7px 14px;
 			}
 		}
-	}
-
-	&__link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 7px 14px;
 	}
 }
 

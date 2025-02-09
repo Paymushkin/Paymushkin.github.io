@@ -96,44 +96,44 @@
         display: none;
     }
 
-    &__list {
+    ul {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 20px;
-    }
 
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        @include adaptiveValue("padding-left", 38, 16, 1920, 1024, 1);
-        @include adaptiveValue("padding-right", 38, 16, 1920, 1024, 1);
-        min-width: 148px;
-        height: 51px;
-        color: $mainColor;
-        background-color: $bgColor-2;
-        @include adaptiveValue("font-size", 22, 18, 1920, 1024, 1);
-        line-height: 1.2;
-        border-radius: 60px;
-        cursor: pointer;
-        transition: 0.3s ease all;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            @include adaptiveValue("padding-left", 38, 16, 1920, 1024, 1);
+            @include adaptiveValue("padding-right", 38, 16, 1920, 1024, 1);
+            min-width: 148px;
+            height: 51px;
+            color: $mainColor;
+            background-color: $bgColor-2;
+            @include adaptiveValue("font-size", 22, 18, 1920, 1024, 1);
+            line-height: 1.2;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.3s ease all;
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: #fff;
-                background-color: $highlightColor-2;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #fff;
+                    background-color: $highlightColor-2;
+                }
             }
-        }
 
-        .header-tags & {
-            min-width: auto;
-            height: 36px;
-            font-size: 16px;
-            border-radius: 12px;
+            .header-tags & {
+                min-width: auto;
+                height: 36px;
+                font-size: 16px;
+                border-radius: 12px;
+            }
         }
     }
 
