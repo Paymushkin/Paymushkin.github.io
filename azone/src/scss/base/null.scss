@@ -54,9 +54,15 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
-ul li {
-	list-style: none;
+ul {
+	padding-left: 20px;
+	li {
+		&::marker {
+			color: #95C11F;
+		}
+	} 
 }
+
 img {
 	vertical-align: top;
 }

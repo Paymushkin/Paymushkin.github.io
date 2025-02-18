@@ -1,11 +1,16 @@
 .articles {
 
-    &__list {
+    ul {
         display: flex;
         flex-direction: column;
+        padding-left: 0;
 
         @media (max-width:$mobileSmall) {
             gap: 20px;
+        }
+
+        li {
+            list-style: none;
         }
     }
 }

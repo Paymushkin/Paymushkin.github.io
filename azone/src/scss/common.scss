@@ -23,10 +23,10 @@ div {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-ol,
-ul {
-	list-style: none;
-}
+// ol,
+// ul {
+// 	list-style: none;
+// }
 
 input {
 	border-radius: 0;
@@ -263,11 +263,18 @@ mark {
 }
 
 .softs-grid {
+	ul li {
+		list-style: none;
+	}
+	&__item {
+		list-style: none;
+	}
 	ul:not(.select__list):not(.nav-hero__list) {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 16px;
+		padding-left: 0;
 
 		&:not(:last-child) {
 			margin-bottom: 32px;
@@ -286,6 +293,7 @@ mark {
 			border: 1px solid $highlightColor-2;
 			border-radius: 10px;
 			transition: 0.3s ease all;
+			list-style: none;
 
 			@media (max-width:$mobile) {
 				font-size: 12px;

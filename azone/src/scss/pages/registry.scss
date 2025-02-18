@@ -1,13 +1,16 @@
-.registry {}
-
 .grid-registry {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid #DADADA;
     border-bottom: 1px solid #DADADA;
+    padding-left: 0;
 
     @media (max-width:$tablet) {
         grid-template-columns: 1fr;
+    }
+
+    li {
+        list-style: none;
     }
 
     &__item {

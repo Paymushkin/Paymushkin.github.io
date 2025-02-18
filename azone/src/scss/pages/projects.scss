@@ -1,12 +1,15 @@
 .projects-grid {
 
-    &__list {
+    ul {
         display: flex;
         flex-direction: column;
+        padding-left: 0;
         @include adaptiveValue("gap", 64, 20);
-    }
 
-    &__item {}
+        li {
+            list-style: none;
+        }
+    }
 
     &__item {
         display: flex;

@@ -75,7 +75,13 @@
 
 .news-expertise {
 
-    &__list {}
+    ul {
+        padding-left: 0;
+
+        li {
+            list-style: none;
+        }
+    }
 
     &__item {
         display: flex;
