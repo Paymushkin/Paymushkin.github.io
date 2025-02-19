@@ -12,9 +12,9 @@
 </template>
 
 <script setup>
-import { ref, computed, onActivated, onDeactivated } from 'vue'
+import { ref, computed } from 'vue'
 import { HUNDRED_PERCENT } from '../constants';
-import { secondsSinceMidnightInPercentage, startTimer, stopTimer } from '../time'
+import { secondsSinceMidnightInPercentage } from '../time'
 import BaseIcon from './BaseIcon.vue';
 import { ICON_ARROW_LONG_LEFT } from '../icons';
 
@@ -27,9 +27,5 @@ const topOffset = computed(
 function getTimelineHeigth() {
     return indicatorRef.value?.parentNode.getBoundingClientRect().height
 }
-
-onActivated(startTimer)
-
-onDeactivated(stopTimer)
 
 </script>
