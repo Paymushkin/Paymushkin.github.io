@@ -52,12 +52,12 @@
 			display: flex;
 			flex-direction: column;
 			gap: rem(14);
-			color: #9ED6D5;
+			color: #ffffff;
 			font-size: rem(40);
 			line-height: math.div(49, 40);
 			font-weight: 500;
 			@media (max-width:$tablet){
-				color: #73A9A8;
+				color: #fff;
 			}
 			a {
 				cursor: pointer;
@@ -105,7 +105,7 @@
 			
 
 			li {
-				color: #73A9A8;
+				color: #ffffff;
 				font-size: rem(18);
 				line-height: 1;
 				font-weight: 400;
@@ -147,7 +147,7 @@
 				// flex-direction: column;
 				// align-items: flex-start;
 				gap: rem(16);
-				color: #73A9A8;
+				color: #ffffff;
 				font-size: rem(36);
 				line-height: math.div(44, 36);
 			}
@@ -161,11 +161,11 @@
 				font-size: rem(40);
 				line-height: math.div(49, 40);
 				font-weight: 500;
-				color: #9ED6D5;
+				color: #ffffff;
 			}
 
 			p {
-				color: #73A9A8;
+				color: #ffffff;
 				font-size: rem(18);
 				line-height: math.div(22, 18);
 				text-align: right;
@@ -216,7 +216,7 @@
 					}
 				}
 				@media (max-width:$tablet){
-					color: #73A9A8;
+					color: #ffffff;
 					font-size: rem(22);
 					line-height: math.div(24, 22);
 				}

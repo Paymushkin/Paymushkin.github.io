@@ -1,7 +1,7 @@
 header.header#header
 
 	nav(hidden).menu
-		button(type="button").menu__icon.icon-menu
+		button(type="button", aria-label="Menu").menu__icon.icon-menu
 			span
 		.menu__body.mobile-menu 
 			.mobile-menu__contacts
@@ -54,7 +54,7 @@ header.header#header
 							li 
 								a(href="category.html") Контейнерные площадки
 
-			a.mobile-menu__link
+			div.mobile-menu__link
 				span(data-popup="#catalog-request") Запросить каталог
 				svg(width='20' height='20' viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
 					g#download(clip-path='url(#clip0_649_3014)')
@@ -71,7 +71,7 @@ header.header#header
 
 
 	a(href="index.html").header__logo
-		img(src="@img/header/logo.svg", alt="Logo")
+		img(src="@img/header/logo.svg", alt="Logo", loading="lazy")
 
 	nav.header__nav
 		ul(data-da=".menu__body, 1023.98, 2").nav-list
@@ -87,12 +87,12 @@ header.header#header
 				a(href="#" data-goto=".footer") Контакты
 
 	.header__btns
-		button.button(data-popup="#catalog-request")
+		button.button(data-popup="#catalog-request", type="button")
 			span Запросить каталог
-		button.button.button-highlight(data-text="Помогите мне", data-popup="#call-request")
+		button.button.button-highlight(data-text="Помогите мне", data-popup="#call-request", type="button")
 			span Позвоните мне
 
-		a(href="cart.html").header__card.icon-card(data-count="1")
+		a(href="cart.html", class="header__card icon-card", "aria-label"="Перейти в корзину", data-count="1")
 			svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
 				path(d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
 				path(d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")

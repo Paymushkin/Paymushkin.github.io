@@ -232,7 +232,10 @@ function initSliders() {
 window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров
   initSliders();
-  $(document).find(".swiper-slide-duplicate").removeAttr("data-fancybox");
+  // Удаление атрибута data-fancybox у дубликатов слайдов
+  document.querySelectorAll(".swiper-slide-duplicate").forEach(slide => {
+    slide.removeAttribute("data-fancybox");
+  });
   // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
   //initSlidersScroll();
 });

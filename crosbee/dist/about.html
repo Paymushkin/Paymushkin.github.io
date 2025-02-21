@@ -6,15 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="favicon.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png"/>
+    <meta property="og:title" content="Quick follow-up without app"/>
+    <meta property="og:site_name" content="https://paymushkin.github.io/crosbee/dist/"/>
+    <meta property="og:url" content="https://paymushkin.github.io/crosbee/dist/"/>
+    <meta property="og:description" content="Создаем комфортные городские пространства"/>
+    <meta property="og:image" content="https://paymushkin.github.io/crosbee/dist/img/landing/hero-poster-1.png"/>
+    <meta property="og:image:width" content="968"/>
+    <meta property="og:image:height" content="504"/>
+    <link rel="preload" as="image" href="img/landing/hero-poster-1.webp"/>
+    <link rel="preload" as="image" href="img/landing/hero-poster-2.webp"/>
+    <link rel="preload" as="image" href="img/landing/hero-poster-3.webp"/>
     <title>CrosBee</title>
-    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20250222014241"/>
+    <meta name="description" content="Описание вашей страницы для SEO1"/>
+    <meta name="keywords" content="ключевые, слова, для, SEO"/>
+    <meta name="author" content="Ваше имя или название компании"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="My Website Title"/>
+    <meta name="twitter:description" content="Описание вашей страницы для Twitter"/>
+    <meta name="twitter:image" content="path/to/image.jpg"/>
   </head>
   <body>
     <div class="scrollbar-hover"></div>
     <div class="wrapper wrapper__container">
       <header class="header" id="header">
         <nav class="menu" hidden="hidden">
-          <button class="menu__icon icon-menu" type="button"><span></span></button>
+          <button class="menu__icon icon-menu" type="button" aria-label="Menu"><span></span></button>
           <div class="menu__body mobile-menu"> 
             <div class="mobile-menu__contacts"><a class="contacts__tel" href="tel:+74951207776">+7(495) 120 77 76</a><a href="mailto:info@crosbee">info@crosbee.ru</a></div>
             <ul class="mobile-menu__catalog">
@@ -55,7 +72,8 @@
                   </ul>
                 </details>
               </li>
-            </ul><a class="mobile-menu__link"><span data-popup="#catalog-request">Запросить каталог</span>
+            </ul>
+            <div class="mobile-menu__link"><span data-popup="#catalog-request">Запросить каталог</span>
               <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="download" clip-path="url(#clip0_649_3014)">
                   <path id="Vector" d="M19.1668 13.3333V17.2221C19.1668 17.7378 18.9522 18.2324 18.5702 18.5971C18.1882 18.9617 17.67 19.1666 17.1298 19.1666H2.87053C2.33028 19.1666 1.81215 18.9617 1.43013 18.5971C1.04811 18.2324 0.833496 17.7378 0.833496 17.2221V13.3333" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -67,9 +85,10 @@
                     <rect width="20" height="20" fill="white"></rect>
                   </clippath>
                 </defs>
-              </svg></a><span class="mobile-menu__copy">Crosbee 2023. Все права защищены</span>
+              </svg>
+            </div><span class="mobile-menu__copy">Crosbee 2023. Все права защищены</span>
           </div>
-        </nav><a class="header__logo" href="index.html"><img src="img/header/logo.svg" alt="Logo"/></a>
+        </nav><a class="header__logo" href="index.html"><img src="img/header/logo.svg?_v=20250222014241" alt="Logo" loading="lazy"/></a>
         <nav class="header__nav">
           <ul class="nav-list" data-da=".menu__body, 1023.98, 2">
             <li class="active"><a href="catalog.html">Каталог</a></li>
@@ -80,8 +99,8 @@
           </ul>
         </nav>
         <div class="header__btns">
-          <button class="button" data-popup="#catalog-request"><span>Запросить каталог</span></button>
-          <button class="button button-highlight" data-text="Помогите мне" data-popup="#call-request"><span>Позвоните мне</span></button><a class="header__card icon-card" href="cart.html" data-count="1">
+          <button class="button" data-popup="#catalog-request" type="button"><span>Запросить каталог</span></button>
+          <button class="button button-highlight" data-text="Помогите мне" data-popup="#call-request" type="button"><span>Позвоните мне</span></button><a class="header__card icon-card" href="cart.html" aria-label="Перейти в корзину" data-count="1">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -336,13 +355,13 @@
           <nav class="footer-center__nav footer-nav">
             <ul>
               <li> <a href="about.html"> 
-                  <h4>О нас</h4></a></li>
+                  <h3>О нас</h3></a></li>
               <li><a href="cases.html"> 
-                  <h4>Кейсы</h4></a></li>
+                  <h3>Кейсы</h3></a></li>
               <li><a href="how.html"> 
-                  <h4>Как мы работаем</h4></a></li>
+                  <h3>Как мы работаем</h3></a></li>
               <li><a href="#" data-goto=".footer"> 
-                  <h4>Контакты</h4></a></li>
+                  <h3>Контакты</h3></a></li>
             </ul>
           </nav>
         </div>
@@ -400,7 +419,7 @@
               </div>
               <button class="button button-highlight form-aside__button" type="submit"> <span>Отправить запрос</span></button>
               <div class="checkbox form-aside__checkbox">
-                <input class="checkbox__input" id="c_1" type="checkbox" value="1" name="form[]"/>
+                <input class="checkbox__input" id="c_2" type="checkbox" value="1" name="form[]"/>
                 <label class="checkbox__label" for="c_1"> <span> <a class="checkbox__text" href="#" target="_blank">Согласие </a>на обработку персональных данных</span></label>
               </div>
             </form>
@@ -419,9 +438,9 @@
           </button>
           <div class="popup__slider swiper">
             <div class="popup-slider__wrapper swiper-wrapper">
-              <div class="popup__slide swiper-slide"><img src="img/product/k1197-1.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/product/k1197-2.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/product/k1197-3.png" alt="img"/></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/product/k1197-1.webp" type="image/webp"><img src="img/product/k1197-1.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/product/k1197-2.webp" type="image/webp"><img src="img/product/k1197-2.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/product/k1197-3.webp" type="image/webp"><img src="img/product/k1197-3.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
             </div>
             <div class="popup-slider__navigation">
               <svg class="prev" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -450,16 +469,16 @@
           </button>
           <div class="popup__slider swiper">
             <div class="popup-slider__wrapper swiper-wrapper">
-              <div class="popup__slide swiper-slide"><img src="img/case/case-2.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-3.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-4.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-4.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-5.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-6.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-7.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-8.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-9.png" alt="img"/></div>
-              <div class="popup__slide swiper-slide"><img src="img/case/case-10.png" alt="img"/></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-2.webp" type="image/webp"><img src="img/case/case-2.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-3.webp" type="image/webp"><img src="img/case/case-3.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-4.webp" type="image/webp"><img src="img/case/case-4.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-4.webp" type="image/webp"><img src="img/case/case-4.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-5.webp" type="image/webp"><img src="img/case/case-5.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-6.webp" type="image/webp"><img src="img/case/case-6.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-7.webp" type="image/webp"><img src="img/case/case-7.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-8.webp" type="image/webp"><img src="img/case/case-8.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-9.webp" type="image/webp"><img src="img/case/case-9.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
+              <div class="popup__slide swiper-slide"><picture><source srcset="img/case/case-10.webp" type="image/webp"><img src="img/case/case-10.png?_v=20250222014241" alt="img" loading="lazy"/></picture></div>
             </div>
             <div class="popup-slider__navigation">
               <svg class="prev" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,7 +525,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.50082 6.56935C0.189453 9.14304 0.189453 12.5122 0.189453 19.2505V30.5602C0.189453 37.2985 0.189453 40.6676 1.50082 43.2413C2.65432 45.5052 4.49492 47.3458 6.7588 48.4993C9.3325 49.8107 12.7017 49.8107 19.44 49.8107H30.7496C37.4879 49.8107 40.8571 49.8107 43.4308 48.4993C45.6947 47.3458 47.5353 45.5052 48.6888 43.2413C50.0001 40.6676 50.0001 37.2985 50.0001 30.5602V19.2505C50.0001 12.5122 50.0001 9.14304 48.6888 6.56935C47.5353 4.30546 45.6947 2.46487 43.4308 1.31136C40.8571 0 37.4879 0 30.7496 0H19.44C12.7017 0 9.3325 0 6.7588 1.31136C4.49492 2.46487 2.65432 4.30546 1.50082 6.56935ZM26.679 30.7626C28.1207 30.6121 30.3036 30.2126 31.8901 29.2051C33.7777 27.9833 34.6057 27.2711 33.8878 25.7831C33.4535 24.9377 32.2839 24.2313 30.7263 25.453C30.7263 25.453 28.6245 27.1264 25.2314 27.1264C21.8384 27.1264 19.7365 25.453 19.7365 25.453C18.179 24.2255 17.0036 24.9377 16.5751 25.7831C15.8455 27.2711 16.6735 27.9833 18.5611 29.1993C20.165 30.2299 22.3826 30.6063 23.807 30.7568L22.6143 31.9496C21.4385 33.1133 20.3047 34.2518 19.3453 35.2152C18.9252 35.6371 18.5385 36.0254 18.1963 36.3675C16.5635 37.9946 19.1922 40.6059 20.8251 39.0136L25.243 34.5841C26.9337 36.2749 28.555 37.8961 29.6609 39.0194C31.2937 40.6175 33.9225 38.0293 32.307 36.3733L27.8891 31.9554L26.679 30.7626ZM25.2256 9.86582C21.0914 9.86582 17.7157 13.2241 17.7157 17.3757C17.7157 21.5099 21.0914 24.8682 25.2256 24.8682C29.3598 24.8682 32.7355 21.5099 32.7355 17.3757C32.7355 13.2241 29.3598 9.86582 25.2256 9.86582ZM25.2256 21.064C23.1933 21.064 21.5373 19.4081 21.5373 17.3757C21.5373 15.326 23.1933 13.67 25.2256 13.67C27.258 13.67 28.914 15.326 28.914 17.3757C28.914 19.4081 27.258 21.064 25.2256 21.064Z" fill="#383838"></path>
                   </svg></a></li>
             </ul>
-            <button class="sharing-list__button" data-link="https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png"><span>Копировать ссылку</span><img src="img/copy.svg" alt=""/></button>
+            <button class="sharing-list__button" data-link="https://paymushkin.github.io/crosbee/dist/img/product/k1197-scheme.png"><span>Копировать ссылку</span><img src="img/copy.svg?_v=20250222014241" alt=""/></button>
             <div id="info-text"></div>
           </div>
         </div>
@@ -520,10 +539,10 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z" fill="#383838"></path>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z" fill="#383838"></path>
             </svg>
-          </button><img src="img/product/k1197-scheme.png" alt="img"/>
+          </button><picture><source srcset="img/product/k1197-scheme.webp" type="image/webp"><img src="img/product/k1197-scheme.png?_v=20250222014241" alt="img" loading="lazy"/></picture>
         </div>
       </div>
     </div>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.min.js?_v=20250222014241"></script>
   </body>
 </html>
