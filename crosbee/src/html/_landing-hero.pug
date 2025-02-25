@@ -1,6 +1,10 @@
 section.landing-hero
 	.landing-hero__item._big
-		.landing-hero__slider.swiper
+		div#slider-placeholder(style="display: block;")
+			picture
+				source(srcset="@img/landing/hero-poster-1-mob.png 576w", media="(max-width: 576px)")
+				img(src="@img/landing/hero-poster-1.png", alt="Первый слайд")
+		.landing-hero__slider.swiper#slider(style="display: none;")
 			.landing-hero__wrapper.swiper-wrapper
 				.landing-hero__slide.swiper-slide._slide-1
 				.landing-hero__slide.swiper-slide._slide-2
