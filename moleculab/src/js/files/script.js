@@ -254,6 +254,7 @@ function popupShow(element) {
     let popupId = element.getAttribute("data-popup");
     const currentPopup = document.querySelector(`#${popupId}`);
     currentPopup.classList.add('popup_show')
+    console(document.querySelector('html'))
     document.querySelector('html').classList.add('lock');
     document.querySelector('html').classList.add('popup-show');
     const nextPopup = currentPopup.querySelectorAll("[data-popup]") || null

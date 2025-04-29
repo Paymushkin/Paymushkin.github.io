@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT-IN - Разработка и поддержка сайтов на 1С-Битрикс</title>
+    <link rel="stylesheet" href="src/css/plugins/bootstrap.css" />
+    <link rel="stylesheet" href="src/css/plugins/animate.min.css" />
+    <link rel="stylesheet" href="src/css/plugins/jquery.formstyler.css" />
+    <link rel="stylesheet" href="src/css/plugins/jquery.formstyler.theme.css" />
+    <link rel="stylesheet" href="src/css/plugins/slick.css" />
+    <link rel="stylesheet" href="src/css/plugins/slick-theme.css" />
+    <link rel="stylesheet" href="src/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="src/css/plugins/jquery.inputfile.css" />
+    <link rel="stylesheet" href="src/css/plugins/datepicker.min.css" />
+    <link rel="stylesheet" href="src/css/plugins/easydropdown.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style-otraslevye-resheniya.css" />
+
+    <style>
+        .td {
+            position: relative;
+        }
+
+        .column-hover-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            box-shadow: 0px 0px 0px 0px rgba(14, 14, 14, 0);
+            z-index: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .column-hover-container.active {
+            opacity: 1;
+            box-shadow: 0px 0px 30px 0px rgba(14, 14, 14, 0.2);
+        }
+
+        .table-wrapper {
+            position: relative;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const table = document.querySelector('table');
+            if (!table) return;
+
+            // Оборачиваем таблицу в контейнер
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+
+            let currentColumn = null;
+            let hoverContainer = null;
+            let removeTimeout = null;
+
+            table.addEventListener('mouseover', function(e) {
+                const td = e.target.closest('td');
+                if (!td) return;
+
+                const cellIndex = td.cellIndex;
+                // Игнорируем первую колонку (индекс 0) и проверяем остальные условия
+                if (cellIndex === undefined || cellIndex === currentColumn || cellIndex === 0) return;
+
+                // Очищаем таймаут, если он был установлен
+                if (removeTimeout) {
+                    clearTimeout(removeTimeout);
+                    removeTimeout = null;
+                }
+
+                currentColumn = cellIndex;
+
+                // Удаляем предыдущий контейнер
+                if (hoverContainer) {
+                    hoverContainer.remove();
+                }
+
+                // Находим первую и последнюю ячейку в колонке
+                const cells = table.querySelectorAll(`tr td:nth-child(${cellIndex + 1})`);
+                const firstCell = cells[0];
+                const lastCell = cells[cells.length - 1];
+
+                if (!firstCell || !lastCell) return;
+
+                // Создаем и позиционируем контейнер
+                hoverContainer = document.createElement('div');
+                hoverContainer.className = 'column-hover-container';
+                
+                const firstRect = firstCell.getBoundingClientRect();
+                const tableRect = table.getBoundingClientRect();
+                
+                hoverContainer.style.left = (firstRect.left - tableRect.left) + 'px';
+                hoverContainer.style.width = firstRect.width + 'px';
+                
+                wrapper.appendChild(hoverContainer);
+                
+                // Активируем анимацию в следующем кадре
+                requestAnimationFrame(() => {
+                    hoverContainer.classList.add('active');
+                });
+            });
+
+            table.addEventListener('mouseleave', function() {
+                if (!hoverContainer) return;
+                
+                currentColumn = null;
+                hoverContainer.classList.remove('active');
+                
+                removeTimeout = setTimeout(() => {
+                    if (hoverContainer) {
+                        hoverContainer.remove();
+                        hoverContainer = null;
+                    }
+                    removeTimeout = null;
+                }, 400);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header-wrap">
+        <div class="container-custom">
+            <header class="header">
+                <div class="humb"></div>
+
+                <a class="logo-header" href="/" itemscope="" title="Логотип компании IT-IN" itemtype="http://schema.org/ImageObject">
+                    <img class="img-logo" src="https://it-in.ru/local/templates/new-it-in-net/img/logo-header.svg"  alt="Логотип компании IT-IN"  itemprop="contentUrl">
+                </a>
+
+                <a class="header-callback d-block d-lg-none" href="" data-toggle="modal" data-target="#modal-consult" title="Звонок">
+                    <svg class="icon icon-call icon-black">
+                        <use xlink:href="/local/templates/new-it-in-net/img/sprite.svg#call"></use>
+                    </svg>
+                </a>
+
+                <nav class="menu-header d-none d-lg-block">
+                    <ul class="menu-header__list">
+                        <li class="menu-header__item item-active-js ">
+                            <a class="menu-header__link" href="">Компания</a>
+                            <div class="header-dropdown">
+                                <div class="header-dropdown__block">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/blog/news/">Новости</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/events/">Мероприятия</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/about/">О нас</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/team/">Наша команда</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/vacancy/">Вакансии</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/contacts/">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-header__item item-active-js "><a class="menu-header__link" href="">Разработка сайтов</a>
+                            <div class="header-dropdown">
+                                <div class="header-dropdown__block">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix-site-development/">Разработка сайтов на 1С-Битрикс</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix-site-support/">Поддержка сайтов на 1С-Битрикс</a></li>
+                                        <!--<li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="">Разработка лендингов <span class="new">new</span></a></li>-->
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/integration-1c/">Интеграция с 1С</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/integration-online-kassa/">Интеграция с Онлайн-кассами</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix-tech-audit/">Проведение тех.аудита <span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix-site-transfer/">Перенос сайта на 1С-Битрикс</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/apps/">Приложения</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/design/">Дизайн</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/seo/">SEO</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/portfolio/">Портфолио</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/site-safety/">Безопасность</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/razovye-raboty/">Разовые работы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-header__item item-active-js "><a class="menu-header__link" href="">1C-Битрикс24</a>
+                            <div class="header-dropdown">
+                                <div class="header-dropdown__block">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/enterprise-1c-bitrix24-portal/">1С-Битрикс24:Энтерпрайз <span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix24-portal/">Внедрение 1C-Битрикс24</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/1c-bitrix24-support/">Поддержка и сопровождение 1С-Битрикс24</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-header__item item-active-js "><a class="menu-header__link" href="">Битрикс24</a>
+                            <div class="header-dropdown">
+                                <div class="header-dropdown__block">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-crm/">Внедрение CRM Битрикс24</a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-support-crm/">Поддержка и настройка CRM Битрикс24</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-header__item item-active-js "><a class="menu-header__link" target="_blank" href="/bitrix24-otraslevye-resheniya/">Отраслевые решения</a>
+                            <div class="header-dropdown">
+                                <div class="header-dropdown__block">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-stroitelnaya-kompaniya/">Строительная Компания<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-proektnaya-kompaniya/">Проектная Компания<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-mebelnoe-proizvodstvo/">Мебельное производство<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-prodazha-i-proizvodstvo-dverey/">Продажа и производство дверей<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-prodazha-i-proizvodstvo-okon/">Продажа и производство окон<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-prodazha-i-proizvodstvo-kukhon/">Продажа и производство кухонь<span class="new">new</span></a></li>
+                                        <li class="dropdown__item"><a target="_blank" class="dropdown__item-link" href="/bitrix24-otraslevye-resheniya/bitrix24-obsluzhivanie-gazovogo-oborudovaniya/">Обслуживание Газового оборудования<span class="new">new</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li class="menu-header__item item-active-js "><a target="_blank" class="menu-header__link" href="/seo/">SEO</a></li>-->
+                    </ul>
+                </nav>
+
+                <div class="contacts__header d-none d-lg-flex">
+                    <a class="header-tel" href="tel:+74995028023">+7 (499) 502-80-23</a>
+                    <a class="header-callback" href="" data-toggle="modal" data-target="#modal-consult" title="Обратный звонок">
+                        <svg class="icon icon-call icon-black">
+                            <use xlink:href="src/img/sprite.svg#call"></use>
+                        </svg>
+                    </a>
+                    <a class="header-profile" href="" data-toggle="modal" data-target="#modal-auth" title="Личный кабинет">
+                        <svg class="icon icon-profile icon-black">
+                            <use xlink:href="src/img/sprite.svg#profile"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" class="header-calc" href="/1c-bitrix-site-calculator/" title="Калькулятор стоимости">
+                        <svg class="icon icon-calc icon-white">
+                            <use xlink:href="src/img/sprite.svg#calc"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" class="button button-orange-tr d-none d-xl-flex" href="/enterprise-1c-bitrix24-portal/">Продлить Энтерпрайз</a>
+                </div>
+
+            </header>
+        </div>
+    </div>
+
+    <div class="menu-mob-wrap d-block d-lg-none">
+      <div class="menu-mob">
+        <div class="menu__blocks">
+          <ul class="catalog-mob__block-list mb-4">
+			<li class="catalog-mob__block-item accord-wrap--js"><a class="catalog-mob--link accord-title--js" href="" data-hr="/about/">Компания</a>
+              <div class="catalog-mob--sublinks accord-block--js">
+                <a target="_blank" class="catalog-mob--sublink" href="/blog/news/">Новости</a>
+                <a target="_blank" class="catalog-mob--sublink" href="/events/">Мероприятия</a>
+                <a target="_blank" class="catalog-mob--sublink" href="/about/">О нас</a>
+                <a target="_blank" class="catalog-mob--sublink" href="/team/">Наша команда</a>
+                <a target="_blank" class="catalog-mob--sublink" href="/vacancy/">Вакансии</a>
+                <a target="_blank" class="catalog-mob--sublink" href="/contacts/">Контакты</a>
+              </div>
+            </li>
+
+            <li class="catalog-mob__block-item accord-wrap--js"><a "="" class="catalog-mob--link accord-title--js" href="" data-hr="/1c-bitrix-site-development/">Разработка сайтов</a>
+                <div class="catalog-mob--sublinks accord-block--js">
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix-site-development/">Разработка сайтов на 1С-Битрикс</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix-site-support/">Поддержка сайтов на 1С-Битрикс</a>
+                    <!--<a target="_blank" class="catalog-mob--sublink" href="">Разработка лендингов <span class="new">new</span></a>-->
+                    <a target="_blank" class="catalog-mob--sublink" href="/integration-1c/">Интеграция с 1С</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/integration-online-kassa/">Интеграция с Онлайн-кассами</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix-tech-audit/">Проведение тех.аудита <span class="new">new</span></a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix-site-transfer/">Перенос сайта на 1С-Битрикс</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/apps/">Приложения</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/design/">Дизайн</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/seo/">SEO</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/portfolio/">Портфолио</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/site-safety/">Безопасность</a>
+                </div>
+			</li>
+
+            <li class="catalog-mob__block-item accord-wrap--js"><a class="catalog-mob--link accord-title--js" href="" data-hr="/bitrix24-crm/">1C-Битрикс24 </a>
+                <div class="catalog-mob--sublinks accord-block--js">
+                    <a target="_blank" class="catalog-mob--sublink" href="/enterprise-1c-bitrix24-portal/">1С-Битрикс24:Энтерпрайз <span class="new">new</span></a>	
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix24-portal/">Внедрение 1C-Битрикс24</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/1c-bitrix24-support/">Поддержка и сопровождение 1С-Битрикс24</a>
+                </div>
+			</li>
+
+            <li class="catalog-mob__block-item accord-wrap--js"><a class="catalog-mob--link accord-title--js" href="">Битрикс24</a>
+                <div class="catalog-mob--sublinks accord-block--js">
+                    <a target="_blank" class="catalog-mob--sublink" href="/bitrix24-crm/">Внедрение CRM Битрикс24</a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/bitrix24-support-crm/">Поддержка и настройка CRM Битрикс24</a>
+                </div>
+			</li>
+
+            <li class="catalog-mob__block-item accord-wrap--js"><a class="catalog-mob--link accord-title--js" href="">Отраслевые решения</a>
+                <div class="catalog-mob--sublinks accord-block--js">
+                    <a target="_blank" class="catalog-mob--sublink" href="/bitrix24-otraslevye-resheniya/bitrix24-stroitelnaya-kompaniya/">Строительная Компания<span class="new">new</span></a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/bitrix24-otraslevye-resheniya/bitrix24-proektnaya-kompaniya/">Проектная Компания<span class="new">new</span></a>
+                    <a target="_blank" class="catalog-mob--sublink" href="/bitrix24-otraslevye-resheniya/bitrix24-mebelnoe-proizvodstvo/">Мебельное производство<span class="new">new</span></a>
+                    <a class="catalog-mob--sublink" href="">Продажа и производство дверей</a>
+                    <a class="catalog-mob--sublink" href="">Продажа и производство окон</a>
+                    <a class="catalog-mob--sublink" href="">Продажа и производство кухонь</a>
+                    <a class="catalog-mob--sublink" href="">Обслуживание Газового оборудования</a>
+                </div>
+			</li>
+            <!--<li class="catalog-mob__block-item accord-wrap--js"><a target="_blank" class="catalog-mob--link2 accord-title--js" href="/seo/">SEO </a></li>-->
+          </ul>
+
+            <div class="buttons-wrap justify-content-between w-100 mb-4">
+                <a class="button button-orange" href="" data-toggle="modal" data-target="#modal-auth">
+                    <svg class="icon icon-profile icon-white">
+                        <use xlink:href="/local/templates/new-it-in-net/img/sprite.svg#profile"></use>
+                    </svg>войти</a>
+                <a target="_blank" class="button button-orange" href="/1c-bitrix-site-calculator/">
+                    <svg class="icon icon-calc icon-white">
+                        <use xlink:href="/local/templates/new-it-in-net/img/sprite.svg#calc"></use>
+                    </svg>рассчитать
+                </a>
+            </div>
+          <div class="buttons-wrap justify-content-center w-100"><a target="_blank" class="button button-orange-tr" href="/enterprise-1c-bitrix24-portal/">Продлить Энтерпрайз</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper" itemscope="" itemtype="http://schema.org/WebPage">
+        <div class="page-main">
+            <div class="banner-slider__wrap">
+                <div class="banner-slider slick-initialized slick-slider">
+                    <div aria-live="polite" class="slick-list draggable">
+                        <div class="slick-track" role="listbox">
+                            <div
+                                class="banner-slider__item slick-slide slick-current slick-active"
+                                itemscope=""
+                                itemtype="http://schema.org/Product"
+                                data-slick-index="0"
+                                aria-hidden="false"
+                                tabindex="-1"
+                                role="option"
+                                aria-describedby="slick-slide100"
+                                style="width: 100%;"
+                            >
+                                <div class="banner" style="background-color:#004c87;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="breadcrumb-block">
+                                                    <ul class="breadcrumb__list">
+                                                        <li class="breadcrumb__item">
+                                                            <a class="breadcrumb__link" href="/" tabindex="0">Главная</a>
+                                                        </li>
+                                                        <li class="breadcrumb__item">
+                                                            <a class="breadcrumb__link" href="" tabindex="0">Отраслевое решение для Битрикс24</a>
+                                                        </li>
+                                                        <li class="breadcrumb__item">
+                                                            <span class="breadcrumb__span">Новое Отраслевое решение:"Ремонт квартир под ключ"</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="artefact wow animated" data-animation="animate__fadeIn" data-wow-duration="2.5s" style="visibility: visible; animation-duration: 2.5s;"></div>
+                                                <h1 class="banner-title wow d-img-none animated" data-animation="animate__bounceInDown" data-wow-duration="0.7s" itemprop="name" style="visibility: visible; animation-duration: 0.7s;">
+                                                    Проектная<span class="span-br"> компания</span>
+                                                </h1>
+                                                <h2
+                                                    class="banner-title wow d-lg-none animated animate__bounceInDown animated"
+                                                    data-animation="animate__bounceInDown"
+                                                    data-wow-duration="0.7s"
+                                                    itemprop="name"
+                                                    style="visibility: visible; animation-duration: 0.7s; animation-name: bounceInDown;"
+                                                >
+                                                    Проектная компания
+                                                </h2>
+
+                                                <div class="banner-subtitle wow animated" data-animation="animate__fadeInDownBig" data-wow-duration="1s" itemprop="description" style="visibility: visible; animation-duration: 1s;">
+                                                    Программный продукт под любую сферу деятельности, индивидуальная настройка бизнес-процессов, CRM-система, интеграция с "1С:ЗУП" и IP-телефонией.
+                                                </div>
+                                                <div class="more-block wow animated" data-animation="animate__fadeInUpBig" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s;">
+                                                    <a
+                                                        class="button button-big button-orange"
+                                                        href=""
+                                                        data-modal="modal-zakaz"
+                                                        data-title="Отраслевое решение для Битрикс24 Проектная компания Заказать демонстрацию"
+                                                        data-toggle="modal"
+                                                        data-target="#modal-order-otrasl"
+                                                        data-id="2"
+                                                        tabindex="0"
+                                                    >
+                                                        Заказать демонстрацию
+                                                    </a>
+                                                    <a class="button button-big button-white-tr" href="" data-modal="modal-zakaz" data-title="Заказать Консультацию" data-toggle="modal" data-target="#modal-order-otrasl" data-id="2" tabindex="0">
+                                                        Заказать консультацию
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="page-banner-img-wrap justify-content-lg-end align-items-lg-end justify-content-center align-items-start d-img-none" itemscope="" itemtype="http://schema.org/ImageObject">
+                                            <img
+                                                class="page-banner-img wow d-img-none animated"
+                                                src="/src/img/repairPage-MaskGroup.png"
+                                                alt=""
+                                                title=""
+                                                data-animation="animate__slideInRight"
+                                                data-wow-duration="1s"
+                                                itemprop="contentUrl"
+                                                style="visibility: visible; animation-duration: 1s;"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="page-banner-img-wrap justify-content-lg-end align-items-lg-end justify-content-center align-items-start" itemscope="" itemtype="http://schema.org/ImageObject">
+                                        <img
+                                            class="page-banner-img wow d-img-none animated"
+                                            src="/src/img/repairPage-MaskGroup.png"
+                                            alt=""
+                                            title=""
+                                            data-animation="animate__slideInRight"
+                                            data-wow-duration="1s"
+                                            itemprop="contentUrl"
+                                            style="visibility: visible; animation-duration: 1s;"
+                                        />
+                                        <img
+                                            class="page-banner-img wow d-img-lg-none d-lg-none"
+                                            style="padding-left: 60px; visibility: visible; animation-duration: 1s; animation-name: slideInRight;"
+                                            src="/src/img/repairPage-Mask-Group-tablet.png"
+                                            alt=""
+                                            title=""
+                                            data-animation="animate__slideInRight"
+                                            data-wow-duration="1s"
+                                            itemprop="contentUrl"
+                                        />
+                                        <img
+                                            class="page-banner-img wow d-img-sm-none d-sm-none"
+                                            style="padding-left: 20px; visibility: visible; animation-duration: 1s; animation-name: slideInRight;"
+                                            src="/src/img/repairPage-MaskGroup-mob.png"
+                                            alt=""
+                                            title=""
+                                            data-animation="animate__slideInRight"
+                                            data-wow-duration="1s"
+                                            itemprop="contentUrl"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-white position-relative section-padding comparison-section">
+        <div class="container">
+            <h2 class="h2">Сравнение отраслевого решения</h2>
+            <table class="table-tariff  d-none d-lg-table" style="table-layout: fixed;">
+                <colgroup>
+                    <col style="width: 534px;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                </colgroup>
+                <tbody class="tbody">
+                    <tr class="tr">
+                        <td class="td text-left">Наименование</td>
+                        <td class="td">
+                            <img class="smile" src="/src/img/house-repair/standart.png" alt="" title="">
+                            <div class="tariff-type">Стандартное</div>
+                            <a class="button button-orange" href="" data-modal="modal-zakaz" data-title="Заказ Стандартного отраслевого решения" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3" data-vid="1">заказать</a>
+                        </td>
+
+                        <td class="td">
+                            <img class="smile" src="/src/img/house-repair/standart+professional.png" alt="" title="">
+                            <div class="tariff-type">Отраслевое решение: Битрикс24, тариф Профессиональный</div>
+                            <a class="button button-orange prof" href="" data-modal="modal-zakaz" data-title="Заказ отраслевого решения Битрикс24, тариф Профессиональный" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3" data-vid="3">заказать</a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left td-title">Стоимость Отраслевого решения</td>
+                        <td class="td ">
+                        </td>
+
+                        <td class="td diff-width  prof">
+                            <div class="tariff-text">
+                                <div class="tabs__wrap justify-content-center">
+                                    <a class="tabs__item tabs-item--js active  comparison" href="" data-pr="stan" data-price="214 180 ₽" data-thumb="ecommerce-tab-1">Стандартное</a>
+                                    <a class="tabs__item tabs-item--js  comparison" href="" data-pr="rash" data-price="264 180 ₽" data-thumb="ecommerce-tab-2">Расширенное</a>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Стоимость Отраслевого решения для Битрикс</b></td>
+                        <td class="td">
+                            <div class="tariff-price priceotr1">79 900 ₽ </div>
+                        </td>
+
+                        <td class="td">
+                            <div class="tariff-price prof priceotr3">214 180 ₽</div>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Условия оплаты и установки</b></td>
+                        <td class="td">
+                        </td>
+
+                        <td class="td">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Условия оплаты</td>
+                        <td class="td">
+                            Единоразовая </td>
+
+                        <td class="td">
+                            Единоразовая </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Условия установки</td>
+                        <td class="td">
+                            Вручную </td>
+
+                        <td class="td">
+                            Вручную </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Базовый функционал Битрикс24</b></td>
+                        <td class="td">
+                        </td>
+
+                        <td class="td">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка структуры Компании</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка\Подключение Почты</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка телефонии</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка прав доступа сотрудников к CRM</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка внешних коммуникаций (Открытые линии, WhatsApp, Телеграмм)</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Задачи и Проекты</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Базовая настройка CRM-форм и виджетов</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Настройка CRM (Функционал устанавливаемого решения)</b></td>
+                        <td class="td">
+                        </td>
+
+                        <td class="td">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка работы с Лидами</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Интеграция с Бизнес мессенджерами (Wazzup, Whatcrm, i2crm)</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Источники Лидов (Почта, Телефон, Формы, Соц. сети)</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка направлений в воронках продаж</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настрока карточки сделки в воронках прождаж</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка Автоматизированных рабочих мест (Смарт-процессы)<br>
+                            - Отдел реализации<br>
+                            - Проектный отдел<br>
+                            - Производство<br>
+                            - Объекты строительства</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Автоматизация работы CRM (роботы, бизнесс-процессы) в лидах, сделках и автоматизированных рабочих местах</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка смарт-процессов для работы решения</td>
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                        <td class="td">
+                            <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Дополнительный функционал</b></td>
+                        <td class="td">
+                        </td>
+
+                        <td class="td">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Подключение шаблонов документов заказчика в сделках и смарт-процессах</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr dop active" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a><img class="icon dop" data-vid="3" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Журнал ТМЦ</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr dop active" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a><img class="icon dop" data-vid="3" src="/src/img/icon-check-blue.svg" alt="" title="">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Инженерный отдел</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Сервисы HR</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"><b>Складской учет, интеграция с 1С</b></td>
+                        <td class="td">
+                        </td>
+
+                        <td class="td">
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Поставка ПО 1C:УНФ Проф</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="20600" href=""><span class="span-price">20 600 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="20600" href=""><span class="span-price">20 600 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Установка ПО 1C:УНФ</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка Складского учета с перемещением в 1С</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">Настройка Складского учета с перемещением в Битрикс24</td>
+                        <td class="td">
+                            <a class="button-add otr" data-vid="1" data-price="20000" href=""><span class="span-price">20 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button-add otr" data-vid="3" data-price="20000" href=""><span class="span-price">20 000 ₽</span><span class="span-add">Добавить </span></a>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left"></td>
+                        <td class="td">
+                            <div class="tariff-type">Стандартное</div>
+                        </td>
+
+                        <td class="td">
+                            <div class="tariff-type">Отраслевое решение: Битрикс24, тариф Профессиональный</div>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">
+                            <p class="tariff-price">Итого</p>
+                        </td>
+                        <td class="td">
+                            <div class="tariff-type">
+                                <div class="tariff-price priceotr1">79 900 ₽ </div>
+                            </div>
+                        </td>
+
+                        <td class="td">
+                            <div class="tariff-type">
+                                <div class="tariff-price prof priceotr3">214 180 ₽</div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr class="tr">
+                        <td class="td text-left">
+                        </td>
+                        <td class="td">
+                            <a class="button button-orange" href="" data-modal="modal-zakaz" data-title="Заказ Стандартного отраслевого решения Стандартное" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3" data-vid="1">заказать</a>
+                        </td>
+
+                        <td class="td">
+                            <a class="button button-orange" href="" data-modal="modal-zakaz" data-title="Заказ отраслевого решения + Битрикс24, тариф Профессиональный" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3" data-vid="3">заказать</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <div class="tariff-accord d-block d-lg-none">
+                <div class="tariff-accord__item accord-wrap--js">
+                    <div class="tariff-accord__title">
+                        <img class="smile" src="/src/img/house-repair/standart.png" alt="" title="">
+                        <div class="d-block">
+                            <div class="tariff-type">Отраслевое решение Стандартное</div>
+                            <div class="tariff-price priceotr1">79 900 ₽ </div>
+                        </div>
+                    </div>
+                    <div class="tariff-accord__body accord-block--js">
+                        <div class="tariff-accord__body-top">
+                            <a class="button button-orange" href="" data-modal="modal-zakaz" data-title="Отраслевое решение Стандартное" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3">заказать проект</a>
+                        </div>
+                        <div class="tariff-accord__body-bottom">
+                            <div class="tabs__block--js active" data-thumb="apps-tab-1">
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Условия оплаты и установки</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Условия оплаты</div>
+                                    <div class="td td-right">
+                                        Единоразовая </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Условия установки</div>
+                                    <div class="td td-right">
+                                        Вручную </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Базовый функционал Битрикс24</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка структуры Компании</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка\Подключение Почты</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка телефонии</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка прав доступа сотрудников к CRM</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка внешних коммуникаций (Открытые линии, WhatsApp, Телеграмм)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Задачи и Проекты</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Базовая настройка CRM-форм и виджетов</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Настройка CRM (Функционал устанавливаемого решения)</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка работы с Лидами</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Интеграция с Бизнес мессенджерами (Wazzup, Whatcrm, i2crm)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="" />
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Источники Лидов (Почта, Телефон, Формы, Соц. сети)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка направлений в воронках продаж</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настрока карточки сделки в воронках прождаж</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Автоматизированных рабочих мест (Смарт-процессы)<br>
+                                        - Отдел реализации<br>
+                                        - Проектный отдел<br>
+                                        - Производство<br>
+                                        - Объекты строительства</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Автоматизация работы CRM (роботы, бизнесс-процессы) в лидах, сделках и автоматизированных рабочих местах</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка смарт-процессов для работы решения</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Дополнительный функционал</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Подключение шаблонов документов заказчика в сделках и смарт-процессах</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Журнал ТМЦ</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Инженерный отдел</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Сервисы HR</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Складской учет, интеграция с 1С</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Поставка ПО 1C:УНФ Проф</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="20600" href=""><span class="span-price">20 600 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Установка ПО 1C:УНФ</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Складского учета с перемещением в 1С</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Складского учета с перемещением в Битрикс24</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="1" data-price="20000" href=""><span class="span-price">20 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tabs__block--js" data-thumb="apps-tab-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff-accord__button button button-orange-tr">
+                        <span class="show-details">Детали</span>
+                        <span class="hide-details">Свернуть</span>
+                    </div>
+                </div>
+
+
+                <div class="tariff-accord__item accord-wrap--js">
+
+                    <div class="tariff-accord__title">
+                        <img class="smile" src="/src/img/house-repair/standart+professional.png" alt="" title="">
+                        <div class="d-block">
+                            <div class="tariff-type">Отраслевое решение + Битрикс24, тариф Профессиональный</div>
+                            <div class="tariff-price prof  priceotr3">214 180 ₽</div>
+                        </div>
+                    </div>
+                    <div class="tariff-accord__body accord-block--js">
+                        <div class="tariff-accord__body-top"><a class="button button-orange" href="" data-modal="modal-zakaz" data-title="Отраслевое решение Битрикс24, тариф Профессиональный" data-toggle="modal" data-target="#modal-order-otrasl" data-id="3">заказать проект</a>
+                        </div>
+                        <div class="tariff-accord__body-bottom">
+                            <div class="tabs__wrap mobile prof">
+                                <a class="tabs__item tabs-item--js comparison-item mobile active comparison" href="" data-pr="stan" data-price="214 180 ₽" data-thumb="apps-tab-1">Стандартное</a>
+                                <a class="tabs__item tabs-item--js comparison-item mobile comparison" href="" data-pr="rash" data-price="264 180 ₽" data-thumb="apps-tab-2">Расширенное</a>
+                            </div>
+                            <div class="tabs__block--js active" data-thumb="apps-tab-1">
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Условия оплаты и установки</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Условия оплаты</div>
+                                    <div class="td td-right">
+                                        Единоразовая </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Условия установки</div>
+                                    <div class="td td-right">
+                                        Вручную </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Базовый функционал Битрикс24</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка структуры Компании</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка\Подключение Почты</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка телефонии</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка прав доступа сотрудников к CRM</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка внешних коммуникаций (Открытые линии, WhatsApp, Телеграмм)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Задачи и Проекты</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Базовая настройка CRM-форм и виджетов</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Настройка CRM (Функционал устанавливаемого решения)</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка работы с Лидами</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Интеграция с Бизнес мессенджерами (Wazzup, Whatcrm, i2crm)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Источники Лидов (Почта, Телефон, Формы, Соц. сети)</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка направлений в воронках продаж</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настрока карточки сделки в воронках прождаж</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Автоматизированных рабочих мест (Смарт-процессы)<br>
+                                        - Отдел реализации<br>
+                                        - Проектный отдел<br>
+                                        - Производство<br>
+                                        - Объекты строительства</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Автоматизация работы CRM (роботы, бизнесс-процессы) в лидах, сделках и автоматизированных рабочих местах</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка смарт-процессов для работы решения</div>
+                                    <div class="td td-right">
+                                        <img class="icon" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Дополнительный функционал</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Подключение шаблонов документов заказчика в сделках и смарт-процессах</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr dop active" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a><img class="icon dop" data-vid="4" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Журнал ТМЦ</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr dop active" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a><img class="icon dop" data-vid="4" src="/src/img/icon-check-blue.svg" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Инженерный отдел</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Сервисы HR</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="15000" href=""><span class="span-price">15 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title"><b>Складской учет, интеграция с 1С</b></div>
+                                    <div class="td td-right">
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Поставка ПО 1C:УНФ Проф</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="20600" href=""><span class="span-price">20 600 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Установка ПО 1C:УНФ</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Складского учета с перемещением в 1С</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="25000" href=""><span class="span-price">25 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+                                <div class="td-row">
+                                    <div class="td td-left td-title">Настройка Складского учета с перемещением в Битрикс24</div>
+                                    <div class="td td-right">
+                                        <a class="button-add otr" data-vid="3" data-price="20000" href=""><span class="span-price">20 000 ₽</span><span class="span-add">Добавить </span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff-accord__button button button-orange-tr"><span class="show-details">Детали</span><span class="hide-details">Свернуть</span></div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Plugins -->
+    <script src="src/js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="src/js/plugins/popper.min.js"></script>
+    <script src="src/js/plugins/bootstrap.js"></script>
+    <script src="src/js/plugins/jquery.maskedinput.js"></script>
+    <script src="src/js/plugins/jquery.magnific-popup.js"></script>
+    <script src="src/js/plugins/jquery.formstyler.min.js"></script>
+    <script src="src/js/plugins/jquery.inputfile.js"></script>
+    <script src="src/js/plugins/jquery.sticky.js"></script>
+    <script src="src/js/plugins/datepicker.min.js"></script>
+    <script src="src/js/plugins/readmore.min.js"></script>
+    <script src="src/js/plugins/wow.min.js"></script>
+    <script src="src/js/plugins/slick.js"></script>
+
+    <!-- Core Scripts -->
+    <script src="src/js/svgxuse.min.js"></script>
+    <script src="src/js/animate.js"></script>
+    <script src="src/js/map.js"></script>
+    <script src="src/js/script.js"></script>
+    <!-- <script src="src/js/index.js"></script> -->
+
+</body>
+
+</html>
